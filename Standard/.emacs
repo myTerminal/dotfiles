@@ -38,6 +38,9 @@
 
 ;;;;;;;;;;;; Others ;;;;;;;;;;;;
 
+;Add js2-mode as the major mode for JavaScript editing
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
 ;Add team.terminal@gmail as Gtalk account
 (setq jabber-account-list
     '(("team.terminal@gmail.com" 
