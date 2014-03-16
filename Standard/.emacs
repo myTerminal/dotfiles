@@ -16,12 +16,16 @@
 
 ;;;;;;;;;;;; Repositories ;;;;;;;;;;;;
 
-;Add marmalade package repository
 (require 'package)
+
+;Add marmalade package repository
 (add-to-list 'package-archives 
     '("marmalade" .
       "http://marmalade-repo.org/packages/"))
-;(package-initialize)
+
+;Add melpa package repository
+(add-to-list 'package-archives
+  '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 ;;;;;;;;;;;; Libraries ;;;;;;;;;;;;
 
@@ -35,6 +39,12 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+;Load auto-complete
+(add-to-list 'load-path "~/.emacs.d/auto-complete-1.3.1")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete-1.3.1/dict")
+(ac-config-default)
 
 ;;;;;;;;;;;; Others ;;;;;;;;;;;;
 
