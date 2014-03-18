@@ -42,6 +42,11 @@
 ;Add emacs directory
 (add-to-list 'load-path "~/.emacs.d/")
 
+;Start alpha (installed thru ELPA)
+(require 'alpha)
+(global-set-key (kbd "C-}") 'transparency-increase)
+(global-set-key (kbd "C-{") 'transparency-decrease)
+
 ;Load multiple-cursors
 (add-to-list 'load-path "~/.emacs.d/multiple-cursors-master/")
 (require 'multiple-cursors)
