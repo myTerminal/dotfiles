@@ -61,6 +61,10 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete-1.3.1/dict")
 (ac-config-default)
 
+;Start autopair (installed thru ELPA)
+(require 'autopair)
+(autopair-global-mode)
+
 ;;;;;;;;;;;;;;;;;;;;;;;; Others ;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;Add js2-mode as the major mode for JavaScript editing
