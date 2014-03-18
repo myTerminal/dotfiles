@@ -1,3 +1,8 @@
+;;;;;;;;;;;; User Settings ;;;;;;;;;;;;
+
+;Set author-name
+(setq user-full-name "Ismail Ansari")
+
 ;;;;;;;;;;;; Visual Tweaks ;;;;;;;;;;;;
 
 ;Invert colors
