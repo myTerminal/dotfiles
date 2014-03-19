@@ -54,7 +54,7 @@
 		(:keywords quote
 			   ("coffeescript" "major" "mode")))])
  (company .
-	  [(0 7)
+	  [(0 7 2)
 	   nil "Modular in-buffer completion framework" tar
 	   ((:keywords quote
 		       ("abbrev" "convenience" "matching"))
@@ -259,7 +259,7 @@
 	    ((:url . "http://elpa.gnu.org/packages/omn-mode.html")
 	     (:keywords quote nil))])
  (org .
-      [(20140310)
+      [(20140317)
        nil "Outline-based notes management and organizer" tar nil])
  (quarter-plane .
 		[(0 1)

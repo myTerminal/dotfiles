@@ -31,6 +31,7 @@
 
 ;Start zone
 (require 'zone)
+(setq zone-programs [zone-pgm-drip])
 (zone-when-idle 20)
 
 ;;;;;;;;;;;;;;;;;;;;;;;; Interface Tweaks ;;;;;;;;;;;;;;;;;;;;;;;;
