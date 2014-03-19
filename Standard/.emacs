@@ -24,10 +24,14 @@
 ;(invert-face 'default)
 
 ;Load black theme
-(load-theme 'alect-black t)
+(load-theme 'alect-black-alt t)
 
 ;Change font
 (set-frame-font "Inconsolata" nil t)
+
+;Start zone
+(require 'zone)
+(zone-when-idle 20)
 
 ;;;;;;;;;;;;;;;;;;;;;;;; Interface Tweaks ;;;;;;;;;;;;;;;;;;;;;;;;
 
