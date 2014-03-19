@@ -70,6 +70,10 @@
 (require 'autopair)
 (autopair-global-mode)
 
+;Start e2wm
+(require 'e2wm)
+(global-set-key (kbd "C-|") 'e2wm:start-management)
+
 ;;;;;;;;;;;;;;;;;;;;;;;; Others ;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;Add js2-mode as the major mode for JavaScript editing
