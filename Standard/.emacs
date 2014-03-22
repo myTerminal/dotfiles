@@ -23,8 +23,8 @@
 ;Invert colors
 ;(invert-face 'default)
 
-;Load black theme
-(load-theme 'alect-black-alt t)
+;Load wombat theme
+(load-theme 'wombat)
 
 ;Change font
 (set-frame-font "Inconsolata" nil t)
