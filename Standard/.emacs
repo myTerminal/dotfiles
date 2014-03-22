@@ -74,6 +74,11 @@
 (require 'e2wm)
 (global-set-key (kbd "C-|") 'e2wm:start-management)
 
+;Start theme-looper
+(require 'theme-looper)
+(tl:set-theme-set (list 'deeper-blue 'manoj-dark 'tango-dark 'tsdh-dark 'wheatgrass 'wombat))
+(global-set-key (kbd "C-\"") 'tl:enable-next-theme)
+
 ;;;;;;;;;;;;;;;;;;;;;;;; Others ;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;Add js2-mode as the major mode for JavaScript editing
