@@ -41,8 +41,11 @@
 (global-set-key (kbd "C-!")
 		'zone-leave-me-alone)
 
-;Start ido-mode
+;Enable ido-mode
 (ido-mode 1)
+
+;Enable column-number mode
+(column-number-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;; Libraries ;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -86,9 +89,6 @@
 (require 'e2wm)
 (global-set-key (kbd "C-|") 
 		'e2wm:start-management)
-
-;Start desktop-mode
-(desktop-save-mode 1)
 
 ;Load theme-looper, set key-bindings
 (require 'theme-looper)
