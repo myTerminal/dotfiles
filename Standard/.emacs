@@ -87,6 +87,9 @@
 (global-set-key (kbd "C-|") 
 		'e2wm:start-management)
 
+;Start desktop-mode
+(desktop-save-mode 1)
+
 ;Load theme-looper, set key-bindings
 (require 'theme-looper)
 (tl:set-theme-set (list 'deeper-blue 
