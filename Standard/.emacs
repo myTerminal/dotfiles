@@ -47,6 +47,9 @@
 ;Enable column-number mode
 (column-number-mode)
 
+;Enable show-paren-mode
+;(show-paren-mode)
+
 ;;;;;;;;;;;;;;;;;;;;;;;; Libraries ;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;Add emacs directory
@@ -89,6 +92,12 @@
 (require 'e2wm)
 (global-set-key (kbd "C-|") 
 		'e2wm:start-management)
+
+;Start undo-tree, set key-bindings
+(require 'undo-tree)
+(global-undo-tree-mode)
+(global-set-key (kbd "M-/")
+		'undo-tree-visualize)
 
 ;Load theme-looper, set key-bindings
 (require 'theme-looper)
