@@ -17,7 +17,13 @@
 ;Set author-name
 (setq user-full-name "Ismail Ansari")
 
-;;;;;;;;;;;;;;;;;;;;;;;; Visual Tweaks ;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;; Interface Tweaks ;;;;;;;;;;;;;;;;;;;;;;;;
+
+;Disable tool-bar
+(tool-bar-mode -1)
+
+;Disable scroll-bar
+(scroll-bar-mode -1)
 
 ;Invert colors
 ;(invert-face 'default)
@@ -35,18 +41,14 @@
 (global-set-key (kbd "C-!")
 		'zone-leave-me-alone)
 
-;;;;;;;;;;;;;;;;;;;;;;;; Interface Tweaks ;;;;;;;;;;;;;;;;;;;;;;;;
-
-;Disable toolbar
-(tool-bar-mode -1)
-
 ;Start ido-mode
 (ido-mode 1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;; Libraries ;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;Add emacs directory
-(add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path 
+	     "~/.emacs.d/")
 
 ;Load alpha, set key-bindings
 (require 'alpha)
@@ -69,7 +71,8 @@
 		'mc/mark-all-like-this)
 
 ;Load auto-complete, set dictionary
-(add-to-list 'load-path "~/.emacs.d/auto-complete-1.3.1")
+(add-to-list 'load-path 
+	     "~/.emacs.d/auto-complete-1.3.1")
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories 
 	     "~/.emacs.d/auto-complete-1.3.1/dict")
@@ -86,23 +89,20 @@
 
 ;Load theme-looper, set key-bindings
 (require 'theme-looper)
-(tl:set-theme-set 
- (list 
-  'deeper-blue 
-  'manoj-dark 
-  'tango-dark 
-  'tsdh-dark 
-  'wheatgrass 
-  'wombat))
+(tl:set-theme-set (list 'deeper-blue 
+			'manoj-dark 
+			'tango-dark 
+			'tsdh-dark 
+			'wheatgrass 
+			'wombat))
 (global-set-key (kbd "C-\"") 
 		'tl:enable-next-theme)
 
-;;;;;;;;;;;;;;;;;;;;;;;; Others ;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;; Miscellaneous ;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;Add js2-mode as the major mode for JavaScript editing
-(add-to-list 
- 'auto-mode-alist 
- '("\\.js\\'" . js2-mode))
+(add-to-list 'auto-mode-alist 
+	     '("\\.js\\'" . js2-mode))
 
 ;Add team.terminal@gmail as Gtalk account
 (setq jabber-account-list
