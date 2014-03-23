@@ -3,13 +3,12 @@
 (require 'package)
 
 ;Add marmalade package repository
-(add-to-list 'package-archives 
-    '("marmalade" .
-      "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives
+	     '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 ;Add melpa package repository
 (add-to-list 'package-archives
-  '("melpa" . "http://melpa.milkbox.net/packages/") t)
+	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 (package-initialize)
 
@@ -23,16 +22,18 @@
 ;Invert colors
 ;(invert-face 'default)
 
-;Load wombat theme
+;Activate wombat color-theme
 (load-theme 'wombat)
 
-;Change font
+;Set font
 (set-frame-font "Inconsolata" nil t)
 
-;Start zone
+;Set zoning preferences
 (require 'zone)
 (setq zone-programs [zone-pgm-drip])
 (zone-when-idle 20)
+(global-set-key (kbd "C-!")
+		'zone-leave-me-alone)
 
 ;;;;;;;;;;;;;;;;;;;;;;;; Interface Tweaks ;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -47,51 +48,70 @@
 ;Add emacs directory
 (add-to-list 'load-path "~/.emacs.d/")
 
-;Start alpha (installed thru ELPA)
+;Load alpha, set key-bindings
 (require 'alpha)
-(global-set-key (kbd "C-}") 'transparency-increase)
-(global-set-key (kbd "C-{") 'transparency-decrease)
+(global-set-key (kbd "C-}") 
+		'transparency-increase)
+(global-set-key (kbd "C-{") 
+		'transparency-decrease)
 
-;Load multiple-cursors
-(add-to-list 'load-path "~/.emacs.d/multiple-cursors-master/")
+;Load multiple-cursors, set key-bindings
+(add-to-list 'load-path 
+	     "~/.emacs.d/multiple-cursors-master/")
 (require 'multiple-cursors)
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-S-c C-S-c") 
+		'mc/edit-lines)
+(global-set-key (kbd "C->") 
+		'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 
+		'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 
+		'mc/mark-all-like-this)
 
-;Load auto-complete
+;Load auto-complete, set dictionary
 (add-to-list 'load-path "~/.emacs.d/auto-complete-1.3.1")
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete-1.3.1/dict")
+(add-to-list 'ac-dictionary-directories 
+	     "~/.emacs.d/auto-complete-1.3.1/dict")
 (ac-config-default)
 
-;Start autopair (installed thru ELPA)
+;Load autopair, start by default
 (require 'autopair)
 (autopair-global-mode)
 
-;Start e2wm
+;Load e2wm, set key-bindings
 (require 'e2wm)
-(global-set-key (kbd "C-|") 'e2wm:start-management)
+(global-set-key (kbd "C-|") 
+		'e2wm:start-management)
 
-;Start theme-looper
+;Load theme-looper, set key-bindings
 (require 'theme-looper)
-(tl:set-theme-set (list 'deeper-blue 'manoj-dark 'tango-dark 'tsdh-dark 'wheatgrass 'wombat))
-(global-set-key (kbd "C-\"") 'tl:enable-next-theme)
+(tl:set-theme-set 
+ (list 
+  'deeper-blue 
+  'manoj-dark 
+  'tango-dark 
+  'tsdh-dark 
+  'wheatgrass 
+  'wombat))
+(global-set-key (kbd "C-\"") 
+		'tl:enable-next-theme)
 
 ;;;;;;;;;;;;;;;;;;;;;;;; Others ;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;Add js2-mode as the major mode for JavaScript editing
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 
+ 'auto-mode-alist 
+ '("\\.js\\'" . js2-mode))
 
 ;Add team.terminal@gmail as Gtalk account
 (setq jabber-account-list
-    '(("team.terminal@gmail.com" 
-       (:network-server . "talk.google.com")
-       (:connection-type . ssl))))
+      '(("team.terminal@gmail.com" 
+	 (:network-server . "talk.google.com")
+	 (:connection-type . ssl))))
 
 ;Add ismail.ansari@citiustech.com as another account
 (setq jabber-account-list
-    '(("ismaila@citiusim.mumbai1.corp.citiustech.com" 
-       (:network-server . "citiusim.mumbai1.corp.citiustech.com")
-       (:connection-type . ssl))))
+      '(("ismaila@citiusim.mumbai1.corp.citiustech.com" 
+	 (:network-server . "citiusim.mumbai1.corp.citiustech.com")
+	 (:connection-type . ssl))))
