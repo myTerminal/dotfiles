@@ -99,6 +99,9 @@
 (global-set-key (kbd "M-/")
 		'undo-tree-visualize)
 
+;Load dirtree
+(require 'dirtree)
+
 ;Load theme-looper, set key-bindings
 (require 'theme-looper)
 (tl:set-theme-set (list 'deeper-blue 
