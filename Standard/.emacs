@@ -48,7 +48,10 @@
 (column-number-mode)
 
 ;Enable show-paren-mode
-;(show-paren-mode)
+(show-paren-mode)
+
+;Enable highlighting on current line
+(global-hl-line-mode 1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;; Libraries ;;;;;;;;;;;;;;;;;;;;;;;;
 
