@@ -88,6 +88,9 @@
 (require 'autopair)
 (autopair-global-mode)
 
+;Set up linum-mode
+(global-nlinum-mode t)
+
 ;Load e2wm, set key-bindings
 (require 'e2wm)
 (global-set-key (kbd "C-|") 
