@@ -119,6 +119,20 @@
 ;Load dirtree
 (require 'dirtree)
 
+;Set up ace-jump-mode
+(autoload 'ace-jump-mode 
+  "ace-jump-mode" 
+  "Emacs quick move minor mode"
+  t)
+(global-set-key (kbd "C-c SPC") 
+		'ace-jump-mode)
+(autoload 'ace-jump-mode-pop-mark 
+  "ace-jump-mode" 
+  "Ace jump back:-"
+  t)
+(global-set-key (kbd "C-x SPC") 
+		'ace-jump-mode-pop-mark)
+
 ;Load theme-looper, set key-bindings
 (require 'theme-looper)
 (tl:set-theme-set (list 'deeper-blue 
