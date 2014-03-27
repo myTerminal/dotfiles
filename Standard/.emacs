@@ -133,6 +133,12 @@
 (global-set-key (kbd "C-x SPC") 
 		'ace-jump-mode-pop-mark)
 
+;Add hooks for column-enforce-mode
+(add-hook 'emacs-lisp-mode-hook 
+	  'column-enforce-mode)
+(add-hook 'js2-mode-hook
+	  'column-enforce-mode)
+
 ;Load theme-looper, set key-bindings
 (require 'theme-looper)
 (tl:set-theme-set (list 'deeper-blue 
