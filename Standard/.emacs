@@ -140,6 +140,8 @@
 	  'column-enforce-mode)
 
 ;Load theme-looper, set key-bindings
+(add-to-list 'load-path
+	     "~/.emacs.d/theme-looper")
 (require 'theme-looper)
 (tl:set-theme-set (list 'deeper-blue 
 			'manoj-dark 

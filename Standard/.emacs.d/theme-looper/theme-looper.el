@@ -54,62 +54,56 @@
 
 ;;; Code:
 
-;; To set the list of color themes to cycle thru
+(defvar tl:favorite-themes)  
 
 (defun tl:set-theme-set (themes)
-  (setq tl:favorite-themes themes))
-
-;; Determine the currently enabled theme
+  "Sets the list of color-themes to cycle thru"
+  (setq tl:favorite-themes 
+	themes))
 
 (defun tl:get-current-theme ()
+  "Determines the currently enabled theme"
   (car custom-enabled-themes))
 
-;; Find the currently enabled theme in the list of available (or favorite) theme
-
 (defun tl:get-current-theme-index ()
+  "Finds the currently enabled color-theme in the list of color-themes"
   (position (tl:get-current-theme)
 	    tl:favorite-themes :test #'equal))
 
-;; Find the index of the next theme to be moved to, in the list
-
 (defun tl:get-next-theme-index ()
-  (setq tl:current-theme-index (tl:get-current-theme-index))
-  (cond
-   ((equal tl:current-theme-index
-	   'nil)
-    0)
-   ((equal tl:current-theme-index
-	   (- (length tl:favorite-themes)
-	      1))
-    0)
-   ((+ 1
-       tl:current-theme-index))))
-
-;; Determine the next theme to be enabled
+  "Find the index of the next color-theme in the list, to be moved to"
+  (let ((tl:current-theme-index (tl:get-current-theme-index)))
+    (cond
+     ((equal tl:current-theme-index
+	     'nil)
+      0)
+     ((equal tl:current-theme-index
+	     (- (length tl:favorite-themes)
+		1))
+      0)
+     ((+ 1
+	 tl:current-theme-index)))))
 
 (defun tl:get-next-theme ()
+  "Determines the next color-theme to be enabled"
   (nth (tl:get-next-theme-index)
        tl:favorite-themes))
 
-;; To disable all the enabled themes
-
 (defun tl:disable-all-themes ()
+  "Disables all the enabled color-themes"
   (mapcar 'disable-theme
 	  custom-enabled-themes))
 
-;; Enable the next theme in the list
-
 (defun tl:enable-next-theme ()
+  "Enables the next color-theme in the list"
   (interactive)
-  (setq tl:next-theme (tl:get-next-theme))
-  (tl:disable-all-themes)
-  (load-theme tl:next-theme)
-  (message (concatenate 
-	    'string 
-	    "Switched to theme: "
-	    (symbol-name tl:next-theme))))
-
-;; Default the list of themes to all the available color themes
+  (let ((tl:next-theme (tl:get-next-theme)))
+    (tl:disable-all-themes)
+    (load-theme tl:next-theme)
+    (message (concatenate 'string 
+			  "Switched to theme: "
+			  (symbol-name tl:next-theme))))
+  )
 
 (tl:set-theme-set (custom-available-themes))
 
