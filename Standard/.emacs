@@ -148,33 +148,21 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;; Key-bindings ;;;;;;;;;;;;;;;;;;;;;;;;
 
-(global-set-key (kbd "C-!")
-		'zone-leave-me-alone)
+(defvar my-keyboard-bindings (list '("C-!" . zone-leave-me-alone)
+				   '("C-}" . transparency-increase)
+				   '("C-{" . transparency-decrease)
+				   '("C-S-c C-S-c" . mc/edit-lines)
+				   '("C->" . mc/mark-next-like-this)
+				   '("C-<" . mc/mark-previous-like-this)
+				   '("C-c C-<" . mc/mark-all-like-this)
+				   '("C-|" . e2wm:start-management)
+				   '("M-/" . undo-tree-visualize)
+				   '("C-c SPC" . ace-jump-mode)
+				   '("C-x SPC" . ace-jump-mode-pop-mark)
+				   '("C-\"" . tl:enable-next-theme)))
 
-(global-set-key (kbd "C-}") 
-		'transparency-increase)
-(global-set-key (kbd "C-{") 
-		'transparency-decrease)
+(defun apply-keyboard-bindings (pair)
+  (global-set-key (kbd (car pair)) (cdr pair)))
 
-(global-set-key (kbd "C-S-c C-S-c") 
-		'mc/edit-lines)
-(global-set-key (kbd "C->") 
-		'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 
-		'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 
-		'mc/mark-all-like-this)
-
-(global-set-key (kbd "C-|") 
-		'e2wm:start-management)
-
-(global-set-key (kbd "M-/")
-		'undo-tree-visualize)
-
-(global-set-key (kbd "C-c SPC") 
-		'ace-jump-mode)
-(global-set-key (kbd "C-x SPC") 
-		'ace-jump-mode-pop-mark)
-
-(global-set-key (kbd "C-\"") 
-		'tl:enable-next-theme)
+(mapc 'apply-keyboard-bindings
+      my-keyboard-bindings)
