@@ -38,8 +38,6 @@
 (require 'zone)
 (setq zone-programs [zone-pgm-drip])
 (zone-when-idle 20)
-(global-set-key (kbd "C-!")
-		'zone-leave-me-alone)
 
 ;Enable ido-mode
 (ido-mode 1)
@@ -59,25 +57,13 @@
 (add-to-list 'load-path 
 	     "~/.emacs.d/")
 
-;Load alpha, set key-bindings
+;Load alpha
 (require 'alpha)
-(global-set-key (kbd "C-}") 
-		'transparency-increase)
-(global-set-key (kbd "C-{") 
-		'transparency-decrease)
 
-;Load multiple-cursors, set key-bindings
+;Load multiple-cursors
 (add-to-list 'load-path 
 	     "~/.emacs.d/multiple-cursors-master/")
 (require 'multiple-cursors)
-(global-set-key (kbd "C-S-c C-S-c") 
-		'mc/edit-lines)
-(global-set-key (kbd "C->") 
-		'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 
-		'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 
-		'mc/mark-all-like-this)
 
 ;Load auto-complete, set dictionary
 (add-to-list 'load-path 
@@ -94,16 +80,12 @@
 ;Set up linum-mode
 (global-nlinum-mode t)
 
-;Load e2wm, set key-bindings
+;Load e2wm
 (require 'e2wm)
-(global-set-key (kbd "C-|") 
-		'e2wm:start-management)
 
-;Start undo-tree, set key-bindings
+;Start undo-tree
 (require 'undo-tree)
 (global-undo-tree-mode)
-(global-set-key (kbd "M-/")
-		'undo-tree-visualize)
 
 ;Set up markdown mode
 (autoload 'markdown-mode 
@@ -124,14 +106,10 @@
   "ace-jump-mode" 
   "Emacs quick move minor mode"
   t)
-(global-set-key (kbd "C-c SPC") 
-		'ace-jump-mode)
 (autoload 'ace-jump-mode-pop-mark 
   "ace-jump-mode" 
   "Ace jump back:-"
   t)
-(global-set-key (kbd "C-x SPC") 
-		'ace-jump-mode-pop-mark)
 
 ;Add hooks for column-enforce-mode
 (add-hook 'emacs-lisp-mode-hook 
@@ -139,7 +117,7 @@
 (add-hook 'js2-mode-hook
 	  'column-enforce-mode)
 
-;Load theme-looper, set key-bindings
+;Load theme-looper
 (add-to-list 'load-path
 	     "~/.emacs.d/theme-looper")
 (require 'theme-looper)
@@ -149,8 +127,6 @@
 			'tsdh-dark 
 			'wheatgrass 
 			'wombat))
-(global-set-key (kbd "C-\"") 
-		'tl:enable-next-theme)
 
 ;;;;;;;;;;;;;;;;;;;;;;;; Miscellaneous ;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -169,3 +145,36 @@
       '(("ismaila@citiusim.mumbai1.corp.citiustech.com" 
 	 (:network-server . "citiusim.mumbai1.corp.citiustech.com")
 	 (:connection-type . ssl))))
+
+;;;;;;;;;;;;;;;;;;;;;;;; Key-bindings ;;;;;;;;;;;;;;;;;;;;;;;;
+
+(global-set-key (kbd "C-!")
+		'zone-leave-me-alone)
+
+(global-set-key (kbd "C-}") 
+		'transparency-increase)
+(global-set-key (kbd "C-{") 
+		'transparency-decrease)
+
+(global-set-key (kbd "C-S-c C-S-c") 
+		'mc/edit-lines)
+(global-set-key (kbd "C->") 
+		'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 
+		'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 
+		'mc/mark-all-like-this)
+
+(global-set-key (kbd "C-|") 
+		'e2wm:start-management)
+
+(global-set-key (kbd "M-/")
+		'undo-tree-visualize)
+
+(global-set-key (kbd "C-c SPC") 
+		'ace-jump-mode)
+(global-set-key (kbd "C-x SPC") 
+		'ace-jump-mode-pop-mark)
+
+(global-set-key (kbd "C-\"") 
+		'tl:enable-next-theme)
