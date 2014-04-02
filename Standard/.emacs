@@ -28,8 +28,8 @@
 ;Invert colors
 ;(invert-face 'default)
 
-;Activate wombat color-theme
-(load-theme 'wombat)
+;Activate deeper-blue color-theme
+(load-theme 'deeper-blue)
 
 ;Set font
 (set-frame-font "Inconsolata" nil t)
@@ -149,16 +149,16 @@
 ;;;;;;;;;;;;;;;;;;;;;;;; Key-bindings ;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defvar my-keyboard-bindings (list '("C-!" . zone-leave-me-alone)
-				   '("C-}" . transparency-increase)
-				   '("C-{" . transparency-decrease)
-				   '("C-S-c C-S-c" . mc/edit-lines)
-				   '("C->" . mc/mark-next-like-this)
-				   '("C-<" . mc/mark-previous-like-this)
-				   '("C-c C-<" . mc/mark-all-like-this)
-				   '("C-|" . e2wm:start-management)
+				   '("C-)" . transparency-increase)
+				   '("C-(" . transparency-decrease)
+				   '("C-}" . mc/mark-next-like-this)
+				   '("C-{" . mc/mark-previous-like-this)
+				   '("C-|" . mc/mark-all-like-this)
+				   '("C-M-]" . e2wm:start-management)
+				   '("C-M-[" . e2wm:stop-management)
 				   '("M-/" . undo-tree-visualize)
-				   '("C-c SPC" . ace-jump-mode)
-				   '("C-x SPC" . ace-jump-mode-pop-mark)
+				   '("C->" . ace-jump-mode)
+				   '("C-<" . ace-jump-mode-pop-mark)
 				   '("C-\"" . tl:enable-next-theme)))
 
 (defun apply-keyboard-bindings (pair)
