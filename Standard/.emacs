@@ -149,8 +149,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;; Key-bindings ;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defvar my-keyboard-bindings (list '("C-!" . zone-leave-me-alone)
-				   '("C-)" . transparency-increase)
-				   '("C-(" . transparency-decrease)
+				   '("C-M-)" . transparency-increase)
+				   '("C-M-(" . transparency-decrease)
 				   '("C-}" . mc/mark-next-like-this)
 				   '("C-{" . mc/mark-previous-like-this)
 				   '("C-|" . mc/mark-all-like-this)
