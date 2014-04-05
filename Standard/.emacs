@@ -120,6 +120,9 @@
 (add-hook 'js2-mode-hook
 	  'column-enforce-mode)
 
+;Enable anzu-mode
+(global-anzu-mode +1)
+
 ;Load theme-looper
 (add-to-list 'load-path
 	     "~/.emacs.d/theme-looper")
