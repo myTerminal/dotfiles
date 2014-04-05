@@ -73,6 +73,9 @@
 	     "~/.emacs.d/auto-complete-1.3.1/dict")
 (ac-config-default)
 
+;Set hook for ac-js2-mode
+(add-hook 'js2-mode-hook 'ac-js2-mode)
+
 ;Load autopair, start by default
 (require 'autopair)
 (autopair-global-mode)
