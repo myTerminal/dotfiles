@@ -123,6 +123,9 @@
 ;Enable anzu-mode
 (global-anzu-mode +1)
 
+;Enable bar-cursor-mode
+(bar-cursor-mode)
+
 ;Load theme-looper
 (add-to-list 'load-path
 	     "~/.emacs.d/theme-looper")
