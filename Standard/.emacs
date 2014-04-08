@@ -33,10 +33,12 @@
 
 ;Set font
 (set-frame-font "Inconsolata" nil t)
+(set-face-attribute 'default nil 
+		    :height 140)
 
 ;Set zoning preferences
 (require 'zone)
-(setq zone-programs [zone-pgm-drip])
+(setq zone-programs [zone-pgm-putz-with-case])
 (zone-when-idle 20)
 
 ;Enable ido-mode
