@@ -39,6 +39,10 @@
 ;;
 ;;     (tl:set-theme-set (list 'wombat 'tango-dark 'wheatgrass))
 ;;
+;; You can set customization to be applied after every theme switch
+;;
+;;     (tl:set-customizations my-func)
+;;
 
 ;;; Commentary:
 
@@ -54,12 +58,19 @@
 
 ;;; Code:
 
-(defvar tl:favorite-themes)  
+(defvar tl:favorite-themes)
+
+(defun tl:further-customize nil)
 
 (defun tl:set-theme-set (themes)
   "Sets the list of color-themes to cycle thru"
   (setq tl:favorite-themes 
 	themes))
+
+(defun tl:set-customizations (func)
+  "Sets customization to be applied after every theme switch"
+  (fset 'tl:further-customize
+	   func))
 
 (defun tl:get-current-theme ()
   "Determines the currently enabled theme"
@@ -100,6 +111,7 @@
   (let ((tl:next-theme (tl:get-next-theme)))
     (tl:disable-all-themes)
     (load-theme tl:next-theme)
+    (tl:further-customize)
     (message (concatenate 'string 
 			  "Switched to theme: "
 			  (symbol-name tl:next-theme))))
