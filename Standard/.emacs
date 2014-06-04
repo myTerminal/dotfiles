@@ -73,15 +73,15 @@
 
 ;Load multiple-cursors
 (add-to-list 'load-path 
-	     "~/.emacs.d/multiple-cursors-master/")
+	     "~/.emacs.d/other-plugins/multiple-cursors/")
 (require 'multiple-cursors)
 
 ;Load auto-complete, set dictionary
 (add-to-list 'load-path 
-	     "~/.emacs.d/auto-complete-1.3.1")
+	     "~/.emacs.d/other-plugins/auto-complete-1.3.1")
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories 
-	     "~/.emacs.d/auto-complete-1.3.1/dict")
+	     "~/.emacs.d/other-plugins/auto-complete-1.3.1/dict")
 (ac-config-default)
 
 ;Set hook for ac-js2-mode
@@ -136,7 +136,7 @@
 
 ;Load theme-looper
 (add-to-list 'load-path
-	     "~/.emacs.d/theme-looper")
+	     "~/.emacs.d/other-plugins/theme-looper")
 (require 'theme-looper)
 (tl:set-theme-set (list 'deeper-blue 
 			'manoj-dark 
