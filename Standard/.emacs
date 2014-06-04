@@ -17,6 +17,12 @@
 ;Set author-name
 (setq user-full-name "Ismail Ansari")
 
+;Disable backup
+(setq backup-inhibited t)
+
+;Disable auto save
+(setq auto-save-default nil)
+
 ;;;;;;;;;;;;;;;;;;;;;;;; Interface Tweaks ;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;Disable tool-bar
