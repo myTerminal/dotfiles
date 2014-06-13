@@ -87,6 +87,9 @@
 ;Set hook for ac-js2-mode
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 
+;Set inferior program command for js-comint
+(setq inferior-js-program-command "node --interactive")
+
 ;Load autopair, start by default
 (require 'autopair)
 (autopair-global-mode)
