@@ -166,6 +166,19 @@
 	 (:network-server . "citiusim.mumbai1.corp.citiustech.com")
 	 (:connection-type . ssl))))
 
+(defun move-line-up ()
+  "Move the current line up by one step"
+  (interactive)
+  (transpose-lines 1)
+  (forward-line -2))
+
+(defun move-line-down ()
+  "Move the current line down by one step"
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1))
+
 ;;;;;;;;;;;;;;;;;;;;;;;; Key-bindings ;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defvar my-keyboard-bindings (list '("C-!" . zone-leave-me-alone)
@@ -179,7 +192,9 @@
 				   '("M-/" . undo-tree-visualize)
 				   '("C->" . ace-jump-mode)
 				   '("C-<" . ace-jump-mode-pop-mark)
-				   '("C-\"" . tl:enable-next-theme)))
+				   '("C-\"" . tl:enable-next-theme)
+				   '("M-<down>" . move-line-down)
+				   '("M-<up>" . move-line-up)))
 
 (defun apply-keyboard-bindings (pair)
   (global-set-key (kbd (car pair)) (cdr pair)))
