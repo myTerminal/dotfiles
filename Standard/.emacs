@@ -137,6 +137,12 @@
 ;Enable anzu-mode
 (global-anzu-mode +1)
 
+;Set up haskell-mode
+(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+(add-hook 'haskell-mode-hook 'inf-haskell-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+(add-to-list 'completion-ignored-extensions ".hi")
+
 ;Load theme-looper
 (add-to-list 'load-path
 	     "~/.emacs.d/other-plugins/theme-looper")
