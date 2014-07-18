@@ -185,6 +185,13 @@
   (transpose-lines 1)
   (forward-line -1))
 
+(defun eval-and-replace ()
+  "Replace expression to the left with it's value in the current buffer"
+  (interactive)
+  (backward-kill-sexp)
+  (prin1 (eval (read (current-kill 0)))
+	 (current-buffer)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;; Key-bindings ;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defvar my-keyboard-bindings (list '("C-!" . zone-leave-me-alone)
@@ -200,7 +207,8 @@
 				   '("C-<" . ace-jump-mode-pop-mark)
 				   '("C-\"" . tl:enable-next-theme)
 				   '("M-<down>" . move-line-down)
-				   '("M-<up>" . move-line-up)))
+				   '("M-<up>" . move-line-up)
+				   '("C-=" . eval-and-replace)))
 
 (defun apply-keyboard-bindings (pair)
   (global-set-key (kbd (car pair)) (cdr pair)))
