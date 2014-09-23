@@ -156,6 +156,9 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;; Miscellaneous ;;;;;;;;;;;;;;;;;;;;;;;;
 
+;Enforce spaces for indentation, instead of tabs
+(setq-default indent-tabs-mode nil)
+
 ;Add js2-mode as the major mode for JavaScript editing
 (add-to-list 'auto-mode-alist 
 	     '("\\.js\\'" . js2-mode))
