@@ -143,6 +143,9 @@
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 (add-to-list 'completion-ignored-extensions ".hi")
 
+;Enable aggressive-indent-mode
+(global-aggressive-indent-mode 1)
+
 ;Load theme-looper
 (add-to-list 'load-path
 	     "~/.emacs.d/other-plugins/theme-looper")
