@@ -157,6 +157,11 @@
 			'wheatgrass 
 			'wombat))
 
+;Load meta-presenter
+(add-to-list 'load-path
+	     "~/.emacs.d/other-plugins/meta-presenter")
+(require 'meta-presenter)
+
 ;;;;;;;;;;;;;;;;;;;;;;;; Miscellaneous ;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;Enforce spaces for indentation, instead of tabs
