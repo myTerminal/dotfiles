@@ -48,7 +48,11 @@
 ;Set zoning preferences
 (require 'zone)
 (setq zone-programs [zone-pgm-putz-with-case])
-(zone-when-idle 20)
+(defun set-zoning ()
+  "Sets zoning timeout"
+  (interactive)
+  (zone-when-idle 20)
+  (message "Zoning set"))
 
 ;Enable ido-mode
 (ido-mode 1)
@@ -63,10 +67,6 @@
 (global-hl-line-mode 1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;; Libraries ;;;;;;;;;;;;;;;;;;;;;;;;
-
-;Add emacs directory
-(add-to-list 'load-path 
-	     "~/.emacs.d/")
 
 ;Load alpha
 (require 'alpha)
@@ -205,7 +205,8 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;; Key-bindings ;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defvar my-keyboard-bindings (list '("C-!" . zone-leave-me-alone)
+(defvar my-keyboard-bindings (list '("C-~" . set-zoning)
+                                   '("C-!" . zone-leave-me-alone)
 				   '("C-M-)" . transparency-increase)
 				   '("C-M-(" . transparency-decrease)
 				   '("C-}" . mc/mark-next-like-this)
