@@ -23,6 +23,10 @@
 ;Disable auto save
 (setq auto-save-default nil)
 
+;Disable splash message, start *scratch* buffer by default
+(setq initial-buffer-choice t)
+(setq initial-scratch-message "Ready and waiting...\n\n")
+
 ;;;;;;;;;;;;;;;;;;;;;;;; Interface Tweaks ;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;Disable tool-bar
