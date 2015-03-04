@@ -224,7 +224,8 @@
 				   '("C-\"" . tl:enable-next-theme)
 				   '("M-<down>" . move-line-down)
 				   '("M-<up>" . move-line-up)
-				   '("C-=" . eval-and-replace)))
+				   '("C-=" . eval-and-replace)
+                                   '("M-y" . browse-kill-ring)))
 
 (defun apply-keyboard-bindings (pair)
   (global-set-key (kbd (car pair)) (cdr pair)))
