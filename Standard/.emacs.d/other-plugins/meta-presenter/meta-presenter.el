@@ -67,11 +67,13 @@
 
 ;;; Code:
 
-(defvar current-directory)
+(defvar mp:current-directory)
 
-(defvar current-slide-number)
+(defvar mp:current-slide-number)
 
-(defvar index-file)
+(defvar mp:index-file)
+
+(defvar mp:enable-animations nil)
 
 (defun mp:increment (n)
   "Increments a number"
@@ -85,15 +87,15 @@
 (defun mp:start-presentation ()
   "Starts presentation mode"
   (interactive)
-  (setq current-directory
+  (setq mp:current-directory
         (file-name-directory buffer-file-name))
-  (setq index-file
+  (setq mp:index-file
         (file-name-nondirectory buffer-file-name))
-  (setq current-slide-number
+  (setq mp:current-slide-number
         0)
   (switch-to-buffer (find-file-noselect "slide-show.md"))
   (erase-buffer)
-  (insert-file-contents index-file
+  (insert-file-contents mp:index-file
                         nil)
   (beginning-of-buffer)
   )
@@ -107,7 +109,7 @@
   (insert-file-contents (mp:get-next-slide-name) 
                         nil)
   (mp:slide-up)
-  (mp:set-current-slide-number (mp:increment current-slide-number)))
+  (mp:set-current-slide-number (mp:increment mp:current-slide-number)))
 
 (defun mp:move-to-previous-slide ()
   "Moves to the previous slide"
@@ -118,59 +120,59 @@
   (insert-file-contents (mp:get-previous-slide-name) 
                         nil)
   (mp:slide-up)
-  (mp:set-current-slide-number (mp:decrement current-slide-number)))
+  (mp:set-current-slide-number (mp:decrement mp:current-slide-number)))
 
 (defun mp:slide-down ()
   "Slides down the current slide"
   (interactive)
-  (dotimes (y (frame-height))
-    (beginning-of-buffer)
-    (insert (make-string (- (frame-width) 
-                            2)
-                         ?|))
-    (newline 1)
-    (sit-for 0.002)))
+  (cond (mp:enable-animations (dotimes (y (frame-height))
+                                (beginning-of-buffer)
+                                (insert (make-string (- (frame-width)
+                                                        2)
+                                                     ?|))
+                                (newline 1)
+                                (sit-for 0.002)))))
 
 (defun mp:fill-in ()
   "Fills the current screen with fillers"
   (interactive)
-  (dotimes (y (frame-height))
-    (insert (make-string (- (frame-width)
-                            2)
-                         ?|))
-    (newline 1)))
+  (cond (mp:enable-animations (dotimes (y (frame-height))
+                                (insert (make-string (- (frame-width)
+                                                        2)
+                                                     ?|))
+                                (newline 1)))))
 
 (defun mp:slide-up ()
   "Slides up the next slide"
   (interactive)
-  (dotimes (y (frame-height))
-    (beginning-of-buffer)
-    (kill-line)
-    (kill-line)
-    (sit-for 0.002)))
+  (cond (mp:enable-animations (dotimes (y (frame-height))
+                                (beginning-of-buffer)
+                                (kill-line)
+                                (kill-line)
+                                (sit-for 0.002)))))
 
 (defun mp:set-current-slide-number (n)
   "Updates the current slide number"
-  (setq current-slide-number
+  (setq mp:current-slide-number
         n))
 
 (defun mp:get-next-slide-number ()
   "Gets the next slide number"
-  (mp:increment current-slide-number))
+  (mp:increment mp:current-slide-number))
 
 (defun mp:get-previous-slide-number ()
   "Gets the previous slide number"
-  (mp:decrement current-slide-number))
+  (mp:decrement mp:current-slide-number))
 
 (defun mp:get-next-slide-name ()
   "Gets the next slide filename"
-  (car (file-expand-wildcards (concat current-directory
+  (car (file-expand-wildcards (concat mp:current-directory
                                       (number-to-string (mp:get-next-slide-number))
                                       "_*"))))
 
 (defun mp:get-previous-slide-name ()
   "Gets the previous slide filename"
-  (car (file-expand-wildcards (concat current-directory
+  (car (file-expand-wildcards (concat mp:current-directory
                                       (number-to-string (mp:get-previous-slide-number))
                                       "_*"))))
 

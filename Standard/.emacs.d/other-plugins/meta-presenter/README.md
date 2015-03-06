@@ -27,6 +27,10 @@ In order to move to the next slide, run `mp:move-to-next-slide`. Moving back to 
 
 Keys *F5*, *F8* and *F7* have already been assigned to the three functions mentioned above, respectively.
 
+You can also enable animations for slide transitions which is currently experimental and not optimized. To enable animations, just evaluate the below line.
+
+    (setq mp:enable-animations t)
+
 ## Let me know
 Let me know your suggestions on improving 'meta-presenter.el' at ismail@teamfluxion.com
 
