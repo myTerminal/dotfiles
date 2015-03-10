@@ -175,16 +175,12 @@
 (add-to-list 'auto-mode-alist 
 	     '("\\.js\\'" . js2-mode))
 
-;Add team.terminal@gmail as Gtalk account
-(setq jabber-account-list
-      '(("team.terminal@gmail.com" 
-	 (:network-server . "talk.google.com")
-	 (:connection-type . ssl))))
-
-;Add ismail.ansari@citiustech.com as another account
+;Add Jabber accounts
 (setq jabber-account-list
       '(("ismaila@citiusim.mumbai1.corp.citiustech.com" 
-	 (:network-server . "citiusim.mumbai1.corp.citiustech.com")
+	 (:network-server . "citiusim.mumbai1.corp.citiustech.com"))
+        ("team.terminal@gmail.com" 
+	 (:network-server . "talk.google.com")
 	 (:connection-type . ssl))))
 
 (defun move-line-up ()
