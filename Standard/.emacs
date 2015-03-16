@@ -151,13 +151,10 @@
 (add-to-list 'load-path
 	     "~/.emacs.d/other-plugins/theme-looper")
 (require 'theme-looper)
-(tl:set-theme-set (list 'monokai
+(tl:set-theme-set (list 'wombat
+                        'monokai
                         'deeper-blue 
-			'manoj-dark 
-			'tango-dark 
-			'tsdh-dark 
-			'wheatgrass 
-			'wombat))
+			'wheatgrass))
 
 ;Load meta-presenter
 (add-to-list 'load-path
