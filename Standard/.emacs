@@ -42,7 +42,7 @@
 ;(invert-face 'default)
 
 ;Activate deeper-blue color-theme
-(load-theme 'deeper-blue)
+(load-theme 'monokai t)
 
 ;Set font
 (set-frame-font "Inconsolata" nil t)
@@ -151,7 +151,8 @@
 (add-to-list 'load-path
 	     "~/.emacs.d/other-plugins/theme-looper")
 (require 'theme-looper)
-(tl:set-theme-set (list 'deeper-blue 
+(tl:set-theme-set (list 'monokai
+                        'deeper-blue 
 			'manoj-dark 
 			'tango-dark 
 			'tsdh-dark 
