@@ -25,3 +25,4 @@
 (setq mew-imap-user "ismail.ansari@citiustech.com")
 (setq mew-imap-server "secure.emailsrvr.com")
 
+(setq mew-use-cached-passwd t)
