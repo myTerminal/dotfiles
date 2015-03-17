@@ -177,6 +177,12 @@
         ("team.terminal@gmail.com" 
 	 (:network-server . "talk.google.com")
 	 (:connection-type . ssl))))
+(setq jabber-alert-presence-message-function 
+      (lambda (who 
+               oldstatus 
+               newstatus 
+               statustext) 
+        nil))
 
 (defun move-line-up ()
   "Move the current line up by one step"
