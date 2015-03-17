@@ -110,7 +110,7 @@
   (interactive)
   (let ((tl:next-theme (tl:get-next-theme)))
     (tl:disable-all-themes)
-    (load-theme tl:next-theme)
+    (load-theme tl:next-theme t)
     (tl:further-customize)
     (message (concatenate 'string 
 			  "Switched to theme: "
