@@ -70,6 +70,27 @@
 ;Enable highlighting on current line
 (global-hl-line-mode 1)
 
+;Custom notification, dependent on focus
+(defun activate-ring-bell ()
+  (setq visible-bell
+        nil)
+  (setq ring-bell-function
+        (lambda ()
+          (invert-face 'default)
+          (run-at-time 0.25
+                       nil
+                       (lambda (x)
+                         (invert-face 'default))
+                       t))))
+(defun deactivate-ring-bell ()
+  (setq visible-bell
+        t)
+  (setq ring-bell-function
+        nil))
+(activate-ring-bell)
+(add-hook 'focus-in-hook 'activate-ring-bell)
+(add-hook 'focus-out-hook 'deactivate-ring-bell)
+
 ;;;;;;;;;;;;;;;;;;;;;;;; Libraries ;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;Load alpha
@@ -170,7 +191,7 @@
 (add-to-list 'auto-mode-alist 
 	     '("\\.js\\'" . js2-mode))
 
-;Add Jabber accounts
+;Jabber configuration
 (setq jabber-account-list
       '(("ismaila@citiusim.mumbai1.corp.citiustech.com" 
 	 (:network-server . "citiusim.mumbai1.corp.citiustech.com"))
@@ -183,6 +204,14 @@
                newstatus 
                statustext) 
         nil))
+(defun custom-notification (from
+                            buffer
+                            text
+                            propsed-alert)
+  (ding))
+
+(add-hook 'jabber-alert-message-hooks
+          'custom-notification) 
 
 (defun move-line-up ()
   "Move the current line up by one step"
