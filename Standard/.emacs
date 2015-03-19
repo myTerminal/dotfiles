@@ -262,7 +262,9 @@
 				   '("M-<down>" . move-line-down)
 				   '("M-<up>" . move-line-up)
 				   '("C-=" . eval-and-replace)
-                                   '("M-y" . browse-kill-ring)))
+                                   '("M-y" . browse-kill-ring)
+                                   '("M-x" . smex)
+                                   '("C-c C-c M-x" . execute-extended-command)))
 
 (defun apply-keyboard-bindings (pair)
   (global-set-key (kbd (car pair)) (cdr pair)))
