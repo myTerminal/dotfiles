@@ -66,6 +66,9 @@
 ;Enable highlighting on current line
 (global-hl-line-mode 1)
 
+;Enable winner-mode
+(winner-mode t)
+
 ;;;;;;;;;;;;;;;;;;;;;;;; Libraries ;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;Load alpha
