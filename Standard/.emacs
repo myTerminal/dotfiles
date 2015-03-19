@@ -38,16 +38,12 @@
 ;Change cursor-type
 (set-default 'cursor-type 'hbar)
 
-;Invert colors
-;(invert-face 'default)
-
 ;Activate deeper-blue color-theme
 (load-theme 'monokai t)
 
 ;Set font
-(set-frame-font "Inconsolata" nil t)
-(set-face-attribute 'default nil 
-		    :height 140)
+(custom-set-faces
+ '(default ((t (:family "Inconsolata" :height 140)))))
 
 ;Set zoning preferences
 (require 'zone)
