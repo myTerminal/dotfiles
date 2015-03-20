@@ -77,17 +77,7 @@
 ;Load alpha
 (require 'alpha)
 
-;Load multiple-cursors
-(add-to-list 'load-path 
-	     "~/.emacs.d/other-plugins/multiple-cursors/")
-(require 'multiple-cursors)
-
-;Load auto-complete, set dictionary
-(add-to-list 'load-path 
-	     "~/.emacs.d/other-plugins/auto-complete-1.3.1")
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories 
-	     "~/.emacs.d/other-plugins/auto-complete-1.3.1/dict")
+;Load default auto-complete configs
 (ac-config-default)
 
 ;Set hook for ac-js2-mode
