@@ -86,18 +86,13 @@
 ;Set inferior program command for js-comint
 (setq inferior-js-program-command "node --interactive")
 
-;Load autopair, start by default
-(require 'autopair)
+;Start by default
 (autopair-global-mode)
 
 ;Set up linum-mode
 (global-nlinum-mode t)
 
-;Load e2wm
-(require 'e2wm)
-
 ;Start undo-tree
-(require 'undo-tree)
 (global-undo-tree-mode)
 
 ;Set up markdown mode
