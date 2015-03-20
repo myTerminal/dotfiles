@@ -69,6 +69,9 @@
 ;Enable winner-mode
 (winner-mode t)
 
+;Enable windmove
+(windmove-default-keybindings)
+
 ;;;;;;;;;;;;;;;;;;;;;;;; Libraries ;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;Load alpha
@@ -267,7 +270,8 @@
 				   '("C-=" . eval-and-replace)
                                    '("M-y" . browse-kill-ring)
                                    '("M-x" . smex)
-                                   '("C-c C-c M-x" . execute-extended-command)))
+                                   '("C-c C-c M-x" . execute-extended-command)
+                                   '("C-M-z" . switch-window)))
 
 (defun apply-keyboard-bindings (pair)
   (global-set-key (kbd (car pair)) (cdr pair)))
