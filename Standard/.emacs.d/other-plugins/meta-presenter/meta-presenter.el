@@ -69,7 +69,11 @@
 
 (defvar mp:current-directory)
 
+(defvar mp:slide-count)
+
 (defvar mp:current-slide-number)
+
+(defvar mp:progress-percentage)
 
 (defvar mp:index-file)
 
@@ -89,6 +93,9 @@
   (interactive)
   (setq mp:current-directory
         (file-name-directory buffer-file-name))
+  (setq mp:slide-count
+        (length (file-expand-wildcards (concat mp:current-directory
+                                      "*_*.md"))))
   (setq mp:index-file
         (file-name-nondirectory buffer-file-name))
   (setq mp:current-slide-number
@@ -97,37 +104,55 @@
   (erase-buffer)
   (insert-file-contents mp:index-file
                         nil)
-  (beginning-of-buffer)
-  )
+  (beginning-of-buffer))
 
 (defun mp:move-to-next-slide ()
   "Moves to the next slide"
   (interactive)
-  (mp:slide-down)
-  (erase-buffer)
-  (mp:fill-in)
-  (insert-file-contents (mp:get-next-slide-name) 
-                        nil)
-  (mp:slide-up)
-  (mp:set-current-slide-number (mp:increment mp:current-slide-number)))
+  (cond ((not (= mp:current-slide-number
+                 mp:slide-count)) (progn (mp:slide-down)
+                                         (erase-buffer)
+                                         (mp:fill-in)
+                                         (mp:paste-progress 1)
+                                         (insert-file-contents (mp:get-next-slide-name) 
+                                                               nil)
+                                         (mp:slide-up)
+                                         (mp:set-current-slide-number (mp:increment mp:current-slide-number))))
+        (t (progn (message "End of slide-show!")))))
 
 (defun mp:move-to-previous-slide ()
   "Moves to the previous slide"
   (interactive)
-  (mp:slide-down)
-  (erase-buffer)
-  (mp:fill-in)
-  (insert-file-contents (mp:get-previous-slide-name) 
-                        nil)
-  (mp:slide-up)
-  (mp:set-current-slide-number (mp:decrement mp:current-slide-number)))
+  (cond ((not (= mp:current-slide-number 
+                 1)) (progn (mp:slide-down)
+                            (erase-buffer)
+                            (mp:fill-in)
+                            (mp:paste-progress -1)
+                            (insert-file-contents (mp:get-previous-slide-name) 
+                                                  nil)
+                            (mp:slide-up)
+                            (mp:set-current-slide-number (mp:decrement mp:current-slide-number))))
+        (t (progn (message "Already on the first slide!")))))
+
+(defun mp:paste-progress (delta)
+  "Pastes progress-bar on the screen"
+  (setq mp:progress-percentage
+        (/ (* (+ mp:current-slide-number
+                 delta)
+              100)
+           mp:slide-count))
+  (beginning-of-buffer)
+  (insert (make-string (/ (* (window-width) 
+                             mp:progress-percentage)
+                          100)
+                       ?|))
+  (newline 2))
 
 (defun mp:slide-down ()
   "Slides down the current slide"
-  (interactive)
   (cond (mp:enable-animations (dotimes (y (frame-height))
                                 (beginning-of-buffer)
-                                (insert (make-string (- (frame-width)
+                                (insert (make-string (- (window-width)
                                                         2)
                                                      ?|))
                                 (newline 1)
@@ -135,16 +160,14 @@
 
 (defun mp:fill-in ()
   "Fills the current screen with fillers"
-  (interactive)
   (cond (mp:enable-animations (dotimes (y (frame-height))
-                                (insert (make-string (- (frame-width)
+                                (insert (make-string (- (window-width)
                                                         2)
                                                      ?|))
                                 (newline 1)))))
 
 (defun mp:slide-up ()
   "Slides up the next slide"
-  (interactive)
   (cond (mp:enable-animations (dotimes (y (frame-height))
                                 (beginning-of-buffer)
                                 (kill-line)
