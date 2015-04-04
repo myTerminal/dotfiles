@@ -15,17 +15,22 @@
 ;;;;;;;;;;;;;;;;;;;;;;;; User Settings ;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;Set author-name
-(setq user-full-name "Ismail Ansari")
+(setq user-full-name 
+      "Ismail Ansari")
 
 ;Disable backup
-(setq backup-inhibited t)
+(setq backup-inhibited 
+      t)
 
 ;Disable auto save
-(setq auto-save-default nil)
+(setq auto-save-default 
+      nil)
 
 ;Disable splash message, start *scratch* buffer by default
-(setq initial-buffer-choice t)
-(setq initial-scratch-message "Ready and waiting...\n\n")
+(setq initial-buffer-choice 
+      t)
+(setq initial-scratch-message 
+      "Ready and waiting...\n\n")
 
 ;;;;;;;;;;;;;;;;;;;;;;;; Interface Tweaks ;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -36,10 +41,12 @@
 (scroll-bar-mode -1)
 
 ;Change cursor-type
-(set-default 'cursor-type 'hbar)
+(set-default 'cursor-type 
+             'hbar)
 
 ;Activate deeper-blue color-theme
-(load-theme 'monokai t)
+(load-theme 'wheatgrass 
+            t)
 
 ;Set font
 (custom-set-faces
@@ -47,8 +54,9 @@
 
 ;Set zoning preferences
 (require 'zone)
-(setq zone-programs [zone-pgm-putz-with-case])
-(defun set-zoning ()
+(setq zone-programs 
+      [zone-pgm-putz-with-case])
+(defun myTerminal/set-zoning ()
   "Sets zoning timeout"
   (interactive)
   (zone-when-idle 20)
@@ -81,10 +89,12 @@
 (ac-config-default)
 
 ;Set hook for ac-js2-mode
-(add-hook 'js2-mode-hook 'ac-js2-mode)
+(add-hook 'js2-mode-hook 
+          'ac-js2-mode)
 
 ;Set inferior program command for js-comint
-(setq inferior-js-program-command "node --interactive")
+(setq inferior-js-program-command 
+      "node --interactive")
 
 ;Start by default
 (autopair-global-mode)
@@ -129,10 +139,14 @@
 (global-anzu-mode +1)
 
 ;Set up haskell-mode
-(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
-(add-hook 'haskell-mode-hook 'inf-haskell-mode)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
-(add-to-list 'completion-ignored-extensions ".hi")
+(add-hook 'haskell-mode-hook 
+          'turn-on-haskell-doc-mode)
+(add-hook 'haskell-mode-hook 
+          'inf-haskell-mode)
+(add-hook 'haskell-mode-hook 
+          'turn-on-haskell-indentation)
+(add-to-list 'completion-ignored-extensions 
+             ".hi")
 
 ;Load theme-looper
 (add-to-list 'load-path
@@ -164,13 +178,13 @@
                statustext) 
         nil))
 
-(defun custom-notification-for-jabber
-    nil)
+(defun myTerminal/custom-notification-for-jabber
+  nil)
 
 (add-hook 'jabber-alert-message-hooks
-          'custom-notification-for-jabber)
+          'myTerminal/custom-notification-for-jabber)
 
-(defun flash-screen ()
+(defun myTerminal/flash-screen ()
   (invert-face 'default)
   (run-at-time 0.25
                nil
@@ -178,30 +192,32 @@
                  (invert-face 'default))
                t))
 
-(defun switch-to-visual-notification-for-jabber ()
+(defun myTerminal/switch-to-visual-notification-for-jabber ()
   (setq visible-bell
         nil)
-  (fset 'custom-notification-for-jabber
+  (fset 'myTerminal/custom-notification-for-jabber
         (lambda (from
                  buffer
                  text
                  propsed-alert)
-          (flash-screen))))
+          (myTerminal/flash-screen))))
 
-(defun switch-to-taskbar-notification-for-jabber ()
+(defun myTerminal/switch-to-taskbar-notification-for-jabber ()
   (setq visible-bell
         t)
-  (fset 'custom-notification-for-jabber
+  (fset 'myTerminal/custom-notification-for-jabber
         (lambda (from
                  buffer
                  text
                  propsed-alert)
           (ding))))
 
-(switch-to-visual-notification-for-jabber)
+(myTerminal/switch-to-visual-notification-for-jabber)
 
-(add-hook 'focus-in-hook 'switch-to-visual-notification-for-jabber)
-(add-hook 'focus-out-hook 'switch-to-taskbar-notification-for-jabber)
+(add-hook 'focus-in-hook 
+          'myTerminal/switch-to-visual-notification-for-jabber)
+(add-hook 'focus-out-hook 
+          'myTerminal/switch-to-taskbar-notification-for-jabber)
 
 ;;;;;;;;;;;;;;;;;;;;;;;; Miscellaneous ;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -213,14 +229,14 @@
 	     '("\\.js\\'" . js2-mode))
 
 ;Transpose line up
-(defun move-line-up ()
+(defun myTerminal/move-line-up ()
   "Move the current line up by one step"
   (interactive)
   (transpose-lines 1)
   (forward-line -2))
 
 ;Transpose line down
-(defun move-line-down ()
+(defun myTerminal/move-line-down ()
   "Move the current line down by one step"
   (interactive)
   (forward-line 1)
@@ -228,7 +244,7 @@
   (forward-line -1))
 
 ;Evaluate and replace
-(defun eval-and-replace ()
+(defun myTerminal/eval-and-replace ()
   "Replace expression to the left with it's value in the current buffer"
   (interactive)
   (backward-kill-sexp)
@@ -237,29 +253,30 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;; Key-bindings ;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defvar my-keyboard-bindings (list '("C-~" . set-zoning)
-                                   '("C-!" . zone-leave-me-alone)
-				   '("C-M-)" . transparency-increase)
-				   '("C-M-(" . transparency-decrease)
-				   '("C-}" . mc/mark-next-like-this)
-				   '("C-{" . mc/mark-previous-like-this)
-				   '("C-|" . mc/mark-all-like-this)
-				   '("C-M-]" . e2wm:start-management)
-				   '("C-M-[" . e2wm:stop-management)
-				   '("M-/" . undo-tree-visualize)
-				   '("C->" . ace-jump-mode)
-				   '("C-<" . ace-jump-mode-pop-mark)
-				   '("C-\"" . tl:enable-next-theme)
-				   '("M-<down>" . move-line-down)
-				   '("M-<up>" . move-line-up)
-				   '("C-=" . eval-and-replace)
-                                   '("M-y" . browse-kill-ring)
-                                   '("M-x" . smex)
-                                   '("C-c C-c M-x" . execute-extended-command)
-                                   '("C-M-z" . switch-window)))
+(defvar myTerminal/my-keyboard-bindings (list '("C-~" . myTerminal/set-zoning)
+                                              '("C-!" . zone-leave-me-alone)
+                                              '("C-M-)" . transparency-increase)
+                                              '("C-M-(" . transparency-decrease)
+                                              '("C-}" . mc/mark-next-like-this)
+                                              '("C-{" . mc/mark-previous-like-this)
+                                              '("C-|" . mc/mark-all-like-this)
+                                              '("C-M-]" . e2wm:start-management)
+                                              '("C-M-[" . e2wm:stop-management)
+                                              '("M-/" . undo-tree-visualize)
+                                              '("C->" . ace-jump-mode)
+                                              '("C-<" . ace-jump-mode-pop-mark)
+                                              '("C-\"" . tl:enable-next-theme)
+                                              '("M-<down>" . myTerminal/move-line-down)
+                                              '("M-<up>" . myTerminal/move-line-up)
+                                              '("C-=" . myTerminal/eval-and-replace)
+                                              '("M-y" . browse-kill-ring)
+                                              '("M-x" . smex)
+                                              '("C-c C-c M-x" . execute-extended-command)
+                                              '("C-M-z" . switch-window)))
 
-(defun apply-keyboard-bindings (pair)
-  (global-set-key (kbd (car pair)) (cdr pair)))
+(defun myTerminal/apply-keyboard-bindings (pair)
+  (global-set-key (kbd (car pair))
+                  (cdr pair)))
 
-(mapc 'apply-keyboard-bindings
-      my-keyboard-bindings)
+(mapc 'myTerminal/apply-keyboard-bindings
+      myTerminal/my-keyboard-bindings)
