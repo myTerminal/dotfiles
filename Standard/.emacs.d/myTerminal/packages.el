@@ -81,3 +81,7 @@
 (add-to-list 'load-path
 	     "~/.emacs.d/other-plugins/meta-presenter")
 (require 'meta-presenter)
+
+;Add 'replace-colorthemes' to the list of installed color-themes
+(add-to-list 'custom-theme-load-path
+             "~/.emacs.d/other-plugins/replace-colorthemes")
