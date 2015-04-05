@@ -35,8 +35,8 @@
 ;Enable show-paren-mode
 (show-paren-mode)
 
-;Enable highlighting on current line
-(global-hl-line-mode 1)
+;Disable highlighting on current line
+(global-hl-line-mode -1)
 
 ;Enable winner-mode
 (winner-mode t)
