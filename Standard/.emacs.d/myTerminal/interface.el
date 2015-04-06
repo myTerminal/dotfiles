@@ -1,3 +1,6 @@
+;Disable menu-bar
+(menu-bar-mode -1)
+
 ;Disable tool-bar
 (tool-bar-mode -1)
 
@@ -7,6 +10,9 @@
 ;Change cursor-type
 (set-default 'cursor-type 
              'hbar)
+
+;Disable 3D on mode line
+(set-face-attribute 'mode-line nil :box nil)
 
 ;Activate deeper-blue color-theme
 (load-theme 'wheatgrass 
