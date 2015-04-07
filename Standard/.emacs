@@ -5,3 +5,4 @@
 (load-file "~/.emacs.d/myTerminal/jabber-configuration.el")
 (load-file "~/.emacs.d/myTerminal/misc.el")
 (load-file "~/.emacs.d/myTerminal/key-bindings.el")
+(load-file "~/.emacs.d/myTerminal/transitory.el")
