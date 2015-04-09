@@ -1,3 +1,6 @@
+;Change title-bar text
+(setq frame-title-format "emacs")
+
 ;Disable menu-bar
 (menu-bar-mode -1)
 
