@@ -58,6 +58,13 @@
 ;Enable anzu-mode
 (global-anzu-mode +1)
 
+;Enable powerline
+(powerline-center-theme)
+
+;Enable logging of all commands in command-log-mode
+(setq clm/log-command-exceptions*
+      nil)
+
 ;Set up haskell-mode
 (add-hook 'haskell-mode-hook 
           'turn-on-haskell-doc-mode)

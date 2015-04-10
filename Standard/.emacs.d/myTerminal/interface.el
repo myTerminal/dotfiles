@@ -44,6 +44,3 @@
 
 ;Enable windmove
 (windmove-default-keybindings)
-
-;Enable powerline
-(powerline-center-theme)
