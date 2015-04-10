@@ -60,6 +60,8 @@
 
 ;Enable powerline
 (powerline-center-theme)
+(setq powerline-default-separator
+      'wave)
 
 ;Enable logging of all commands in command-log-mode
 (setq clm/log-command-exceptions*
