@@ -85,6 +85,7 @@
                         'monokai
                         'deeper-blue 
 			'wheatgrass))
+(tl:set-customizations 'powerline-reset)
 
 ;Load meta-presenter
 (add-to-list 'load-path
