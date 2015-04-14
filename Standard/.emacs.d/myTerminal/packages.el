@@ -81,10 +81,14 @@
 (add-to-list 'load-path
 	     "~/.emacs.d/other-plugins/theme-looper")
 (require 'theme-looper)
-(tl:set-theme-set (list 'wombat
-                        'monokai
-                        'deeper-blue 
-			'wheatgrass))
+(tl:set-theme-set (list 'deeper-blue
+                        'wheatgrass
+                        'wombat
+                        'arjen
+                        'retro-green
+                        'retro-orange
+                        'julie
+                        'monokai))
 (tl:set-customizations 'powerline-reset)
 
 ;Load meta-presenter
