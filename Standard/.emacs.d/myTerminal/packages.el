@@ -19,9 +19,6 @@
 ;Start by default
 (autopair-global-mode)
 
-;Set up linum-mode
-(global-nlinum-mode t)
-
 ;Start undo-tree
 (global-undo-tree-mode)
 
