@@ -1,5 +1,4 @@
-theme-looper.el
-============
+# theme-looper.el
 
 A color-theme looper for Emacs 24.
 
@@ -30,7 +29,8 @@ Optional: Set your list of favorite color themes:
 
 Set up your key-bindings:
 
-    (global-set-key (kbd "C-\"") 'tl:enable-next-theme)
+    (global-set-key (kbd "C-|") 'tl:enable-next-theme)
+    (global-set-key (kbd "C-\") 'tl:enable-random-theme)
 
 Optional: Set additional customization to be applied after every theme switch:
 

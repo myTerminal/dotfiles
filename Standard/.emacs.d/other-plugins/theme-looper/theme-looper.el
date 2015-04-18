@@ -3,7 +3,7 @@
 ;; This file is not part of Emacs
 
 ;; Author: Ismail Ansari team.terminal@aol.in
-;; Keywords: convinience, color-themes
+;; Keywords: convenience, color-themes
 ;; Maintainer: Ismail Ansari team.terminal@aol.in
 ;; Created: 2014/03/22
 ;; Description: Loop thru the available color-themes with a key-binding
@@ -35,6 +35,10 @@
 ;;
 ;;     (global-set-key (kbd "C-|") 'tl:enable-next-theme)
 ;;
+;; Or you can switch to a random theme
+;;
+;;     (global-set-key (kbd "C-\") 'tl:enable-random-theme)
+;;
 ;; You can also set your list of favorite themes
 ;;
 ;;     (tl:set-theme-set (list 'wombat 'tango-dark 'wheatgrass))
@@ -60,7 +64,8 @@
 
 (defvar tl:favorite-themes)
 
-(defun tl:further-customize nil)
+(defun tl:further-customize
+  nil)
 
 (defun tl:set-theme-set (themes)
   "Sets the list of color-themes to cycle thru"
@@ -114,8 +119,20 @@
     (tl:further-customize)
     (message (concatenate 'string 
 			  "Switched to theme: "
-			  (symbol-name tl:next-theme))))
-  )
+			  (symbol-name tl:next-theme)))))
+
+(defun tl:enable-random-theme ()
+  "Enables a random theme from the list"
+  (interactive)
+  (let ((tl:next-theme (nth (random (length tl:favorite-themes))
+                            tl:favorite-themes)))
+    (tl:disable-all-themes)
+    (load-theme tl:next-theme
+                t)
+    (tl:further-customize)
+    (message (concatenate 'string
+                          "Switched to theme: "
+                          (symbol-name tl:next-theme)))))
 
 (tl:set-theme-set (custom-available-themes))
 
