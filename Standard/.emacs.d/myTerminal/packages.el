@@ -93,6 +93,15 @@
 	     "~/.emacs.d/other-plugins/meta-presenter")
 (require 'meta-presenter)
 
+;Load myTerminal-controls
+(add-to-list 'load-path
+	     "~/.emacs.d/other-plugins/myTerminal-controls")
+(require 'myTerminal-controls)
+(myTerminal-controls:set-controls-data
+ (list '("t" "Change color theme" tl:enable-next-theme)
+       '("[" "Decrease transparency" transparency-decrease)
+       '("]" "Increase transparency" transparency-increase)))
+
 ;Add 'replace-colorthemes' to the list of installed color-themes
 (add-to-list 'custom-theme-load-path
              "~/.emacs.d/other-plugins/replace-colorthemes")

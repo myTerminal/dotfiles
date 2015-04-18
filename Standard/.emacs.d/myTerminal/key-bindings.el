@@ -14,6 +14,7 @@
         '("C-M-]" . e2wm:start-management)
         '("C-M-[" . e2wm:stop-management)
         '("C-\"" . tl:enable-next-theme)
+        '("C-M-'" . myTerminal-controls:open-controls)
         '("M-<down>" . myTerminal/move-line-down)
         '("M-<up>" . myTerminal/move-line-up)
         '("C-=" . myTerminal/eval-and-replace)
