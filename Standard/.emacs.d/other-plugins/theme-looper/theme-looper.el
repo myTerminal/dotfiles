@@ -33,19 +33,19 @@
 ;;
 ;; And set a key-binding for cycling thru themes
 ;;
-;;     (global-set-key (kbd "C-|") 'tl:enable-next-theme)
+;;     (global-set-key (kbd "C-|") 'theme-looper:enable-next-theme)
 ;;
 ;; Or you can switch to a random theme
 ;;
-;;     (global-set-key (kbd "C-\") 'tl:enable-random-theme)
+;;     (global-set-key (kbd "C-\") 'theme-looper:enable-random-theme)
 ;;
 ;; You can also set your list of favorite themes
 ;;
-;;     (tl:set-theme-set (list 'wombat 'tango-dark 'wheatgrass))
+;;     (theme-looper:set-theme-set (list 'wombat 'tango-dark 'wheatgrass))
 ;;
 ;; You can set customization to be applied after every theme switch
 ;;
-;;     (tl:set-customizations my-func)
+;;     (theme-looper:set-customizations my-func)
 ;;
 
 ;;; Commentary:
@@ -62,79 +62,79 @@
 
 ;;; Code:
 
-(defvar tl:favorite-themes)
+(defvar theme-looper:favorite-themes)
 
-(defun tl:further-customize
+(defun theme-looper:further-customize
   nil)
 
-(defun tl:set-theme-set (themes)
+(defun theme-looper:set-theme-set (themes)
   "Sets the list of color-themes to cycle thru"
-  (setq tl:favorite-themes 
+  (setq theme-looper:favorite-themes 
 	themes))
 
-(defun tl:set-customizations (func)
+(defun theme-looper:set-customizations (func)
   "Sets customization to be applied after every theme switch"
-  (fset 'tl:further-customize
+  (fset 'theme-looper:further-customize
 	   func))
 
-(defun tl:get-current-theme ()
+(defun theme-looper:get-current-theme ()
   "Determines the currently enabled theme"
   (car custom-enabled-themes))
 
-(defun tl:get-current-theme-index ()
+(defun theme-looper:get-current-theme-index ()
   "Finds the currently enabled color-theme in the list of color-themes"
-  (position (tl:get-current-theme)
-	    tl:favorite-themes :test #'equal))
+  (position (theme-looper:get-current-theme)
+	    theme-looper:favorite-themes :test #'equal))
 
-(defun tl:get-next-theme-index ()
+(defun theme-looper:get-next-theme-index ()
   "Find the index of the next color-theme in the list, to be moved to"
-  (let ((tl:current-theme-index (tl:get-current-theme-index)))
+  (let ((theme-looper:current-theme-index (theme-looper:get-current-theme-index)))
     (cond
-     ((equal tl:current-theme-index
+     ((equal theme-looper:current-theme-index
 	     'nil)
       0)
-     ((equal tl:current-theme-index
-	     (- (length tl:favorite-themes)
+     ((equal theme-looper:current-theme-index
+	     (- (length theme-looper:favorite-themes)
 		1))
       0)
      ((+ 1
-	 tl:current-theme-index)))))
+	 theme-looper:current-theme-index)))))
 
-(defun tl:get-next-theme ()
+(defun theme-looper:get-next-theme ()
   "Determines the next color-theme to be enabled"
-  (nth (tl:get-next-theme-index)
-       tl:favorite-themes))
+  (nth (theme-looper:get-next-theme-index)
+       theme-looper:favorite-themes))
 
-(defun tl:disable-all-themes ()
+(defun theme-looper:disable-all-themes ()
   "Disables all the enabled color-themes"
   (mapcar 'disable-theme
 	  custom-enabled-themes))
 
-(defun tl:enable-next-theme ()
+(defun theme-looper:enable-next-theme ()
   "Enables the next color-theme in the list"
   (interactive)
-  (let ((tl:next-theme (tl:get-next-theme)))
-    (tl:disable-all-themes)
-    (load-theme tl:next-theme t)
-    (tl:further-customize)
+  (let ((theme-looper:next-theme (theme-looper:get-next-theme)))
+    (theme-looper:disable-all-themes)
+    (load-theme theme-looper:next-theme t)
+    (theme-looper:further-customize)
     (message (concatenate 'string 
 			  "Switched to theme: "
-			  (symbol-name tl:next-theme)))))
+			  (symbol-name theme-looper:next-theme)))))
 
-(defun tl:enable-random-theme ()
+(defun theme-looper:enable-random-theme ()
   "Enables a random theme from the list"
   (interactive)
-  (let ((tl:next-theme (nth (random (length tl:favorite-themes))
-                            tl:favorite-themes)))
-    (tl:disable-all-themes)
-    (load-theme tl:next-theme
+  (let ((theme-looper:next-theme (nth (random (length theme-looper:favorite-themes))
+                            theme-looper:favorite-themes)))
+    (theme-looper:disable-all-themes)
+    (load-theme theme-looper:next-theme
                 t)
-    (tl:further-customize)
+    (theme-looper:further-customize)
     (message (concatenate 'string
                           "Switched to theme: "
-                          (symbol-name tl:next-theme)))))
+                          (symbol-name theme-looper:next-theme)))))
 
-(tl:set-theme-set (custom-available-themes))
+(theme-looper:set-theme-set (custom-available-themes))
 
 (provide 'theme-looper)
 
