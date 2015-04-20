@@ -13,7 +13,7 @@
         '("M-y" . browse-kill-ring)
         '("C-M-]" . e2wm:start-management)
         '("C-M-[" . e2wm:stop-management)
-        '("C-\"" . theme-looper:enable-next-theme)
+        '("C-\"" . theme-looper-enable-next-theme)
         '("C-M-'" . myTerminal-controls:open-controls)
         '("M-<down>" . myTerminal/move-line-down)
         '("M-<up>" . myTerminal/move-line-up)

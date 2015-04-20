@@ -25,16 +25,16 @@ Start the package with:
 
 Optional: Set your list of favorite color themes:
 
-    (theme-looper:set-theme-set (list 'deeper-blue 'tango-dark 'tsdh-dark 'wheatgrass))
+    (theme-looper-set-theme-set (list 'deeper-blue 'tango-dark 'tsdh-dark 'wheatgrass))
 
 Set up your key-bindings:
 
-    (global-set-key (kbd "C-|") 'theme-looper:enable-next-theme)
-    (global-set-key (kbd "C-\") 'theme-looper:enable-random-theme)
+    (global-set-key (kbd "C-|") 'theme-looper-enable-next-theme)
+    (global-set-key (kbd "C-\") 'theme-looper-enable-random-theme)
 
 Optional: Set additional customization to be applied after every theme switch:
 
-    (theme-looper:set-customizations 'my-func)
+    (theme-looper-set-customizations 'my-func)
 
 ## Let me know
 Let me know your suggestions on improving 'theme-looper.el' at ismail@teamfluxion.com

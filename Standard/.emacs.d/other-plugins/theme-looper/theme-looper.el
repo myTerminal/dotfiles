@@ -33,19 +33,19 @@
 ;;
 ;; And set a key-binding for cycling thru themes
 ;;
-;;     (global-set-key (kbd "C-|") 'theme-looper:enable-next-theme)
+;;     (global-set-key (kbd "C-|") 'theme-looper-enable-next-theme)
 ;;
 ;; Or you can switch to a random theme
 ;;
-;;     (global-set-key (kbd "C-\") 'theme-looper:enable-random-theme)
+;;     (global-set-key (kbd "C-\") 'theme-looper-enable-random-theme)
 ;;
 ;; You can also set your list of favorite themes
 ;;
-;;     (theme-looper:set-theme-set (list 'wombat 'tango-dark 'wheatgrass))
+;;     (theme-looper-set-theme-set (list 'wombat 'tango-dark 'wheatgrass))
 ;;
 ;; You can set customization to be applied after every theme switch
 ;;
-;;     (theme-looper:set-customizations my-func)
+;;     (theme-looper-set-customizations my-func)
 ;;
 
 ;;; Commentary:
@@ -62,79 +62,79 @@
 
 ;;; Code:
 
-(defvar theme-looper:favorite-themes)
+(defvar theme-looper--favorite-themes)
 
-(defun theme-looper:further-customize
+(defun theme-looper--further-customize
   nil)
 
-(defun theme-looper:set-theme-set (themes)
+(defun theme-looper-set-theme-set (themes)
   "Sets the list of color-themes to cycle thru"
-  (setq theme-looper:favorite-themes 
+  (setq theme-looper--favorite-themes 
 	themes))
 
-(defun theme-looper:set-customizations (func)
+(defun theme-looper-set-customizations (func)
   "Sets customization to be applied after every theme switch"
-  (fset 'theme-looper:further-customize
+  (fset 'theme-looper--further-customize
 	   func))
 
-(defun theme-looper:get-current-theme ()
+(defun theme-looper--get-current-theme ()
   "Determines the currently enabled theme"
   (car custom-enabled-themes))
 
-(defun theme-looper:get-current-theme-index ()
+(defun theme-looper--get-current-theme-index ()
   "Finds the currently enabled color-theme in the list of color-themes"
-  (position (theme-looper:get-current-theme)
-	    theme-looper:favorite-themes :test #'equal))
+  (position (theme-looper--get-current-theme)
+	    theme-looper--favorite-themes :test #'equal))
 
-(defun theme-looper:get-next-theme-index ()
+(defun theme-looper--get-next-theme-index ()
   "Find the index of the next color-theme in the list, to be moved to"
-  (let ((theme-looper:current-theme-index (theme-looper:get-current-theme-index)))
+  (let ((theme-looper-current-theme-index (theme-looper--get-current-theme-index)))
     (cond
-     ((equal theme-looper:current-theme-index
+     ((equal theme-looper-current-theme-index
 	     'nil)
       0)
-     ((equal theme-looper:current-theme-index
-	     (- (length theme-looper:favorite-themes)
+     ((equal theme-looper-current-theme-index
+	     (- (length theme-looper--favorite-themes)
 		1))
       0)
      ((+ 1
-	 theme-looper:current-theme-index)))))
+	 theme-looper-current-theme-index)))))
 
-(defun theme-looper:get-next-theme ()
+(defun theme-looper--get-next-theme ()
   "Determines the next color-theme to be enabled"
-  (nth (theme-looper:get-next-theme-index)
-       theme-looper:favorite-themes))
+  (nth (theme-looper--get-next-theme-index)
+       theme-looper--favorite-themes))
 
-(defun theme-looper:disable-all-themes ()
+(defun theme-looper--disable-all-themes ()
   "Disables all the enabled color-themes"
   (mapcar 'disable-theme
 	  custom-enabled-themes))
 
-(defun theme-looper:enable-next-theme ()
+(defun theme-looper-enable-next-theme ()
   "Enables the next color-theme in the list"
   (interactive)
-  (let ((theme-looper:next-theme (theme-looper:get-next-theme)))
-    (theme-looper:disable-all-themes)
-    (load-theme theme-looper:next-theme t)
-    (theme-looper:further-customize)
+  (let ((theme-looper-next-theme (theme-looper--get-next-theme)))
+    (theme-looper--disable-all-themes)
+    (load-theme theme-looper-next-theme t)
+    (theme-looper--further-customize)
     (message (concatenate 'string 
 			  "Switched to theme: "
-			  (symbol-name theme-looper:next-theme)))))
+			  (symbol-name theme-looper-next-theme)))))
 
-(defun theme-looper:enable-random-theme ()
+(defun theme-looper-enable-random-theme ()
   "Enables a random theme from the list"
   (interactive)
-  (let ((theme-looper:next-theme (nth (random (length theme-looper:favorite-themes))
-                            theme-looper:favorite-themes)))
-    (theme-looper:disable-all-themes)
-    (load-theme theme-looper:next-theme
+  (let ((theme-looper-next-theme (nth (random (length theme-looper--favorite-themes))
+                            theme-looper--favorite-themes)))
+    (theme-looper--disable-all-themes)
+    (load-theme theme-looper-next-theme
                 t)
-    (theme-looper:further-customize)
+    (theme-looper--further-customize)
     (message (concatenate 'string
                           "Switched to theme: "
-                          (symbol-name theme-looper:next-theme)))))
+                          (symbol-name theme-looper-next-theme)))))
 
-(theme-looper:set-theme-set (custom-available-themes))
+(theme-looper-set-theme-set (custom-available-themes))
 
 (provide 'theme-looper)
 
