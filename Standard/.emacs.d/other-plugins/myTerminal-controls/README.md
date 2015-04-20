@@ -18,11 +18,11 @@ Start the package with:
 
 Set a key-binding to open the quick-toggle controls window anytime
 
-    (global-set-key (kbd "C-M-`") 'myTerminal-controls:open-controls)
+    (global-set-key (kbd "C-M-`") 'myTerminal-controls-open-controls)
 
 You can also set your custom list of quick-toggle controls
 
-    (myTerminal-controls:set-controls-data
+    (myTerminal-controls-set-controls-data
         (list '("1" "Invert colors" (lambda ()
                                         (invert-face 'default)))
               '("2" "Invert mode-line" (lambda ()

@@ -33,11 +33,11 @@
 ;;
 ;; Set a key-binding to open the quick-toggle controls window anytime
 ;;
-;;     (global-set-key (kbd "C-M-`") 'myTerminal-controls:open-controls)
+;;     (global-set-key (kbd "C-M-`") 'myTerminal-controls-open-controls)
 ;;
 ;; You can also set your custom list of quick-toggle controls
 ;;
-;;     (myTerminal-controls:set-controls-data
+;;     (myTerminal-controls-set-controls-data
 ;;         (list '("1" "Invert colors" (lambda ()
 ;;                                         (invert-face 'default)))
 ;;               '("2" "Invert mode-line" (lambda ()
@@ -69,49 +69,49 @@
 
 (require 'cl-lib)
 
-(defvar myTerminal-controls:controls-data
+(defvar myTerminal-controls--controls-data
   nil)
 
-(defvar myTerminal-controls:buffer-name
+(defvar myTerminal-controls--buffer-name
   " *myTerminal-controls*")
 
-(defun myTerminal-controls:set-controls-data (data)
+(defun myTerminal-controls-set-controls-data (data)
   "Sets details of controls required in the controls window"
-  (setq myTerminal-controls:controls-data
+  (setq myTerminal-controls--controls-data
         data)
-  (add-to-list 'myTerminal-controls:controls-data
+  (add-to-list 'myTerminal-controls--controls-data
                '("q" "Close" (lambda ()
-                               (myTerminal-controls:close-controls)))
+                               (myTerminal-controls-close-controls)))
                t))
 
-(defun myTerminal-controls:open-controls ()
+(defun myTerminal-controls-open-controls ()
   "Opens the controls window"
   (interactive)
   (setq my-buffer
-        (get-buffer-create myTerminal-controls:buffer-name))
+        (get-buffer-create myTerminal-controls--buffer-name))
   (setq my-window (split-window-vertically -20))
   (set-window-buffer my-window
                      my-buffer)
   (other-window 1)
-  (myTerminal-controls:prepare-controls myTerminal-controls:controls-data))
+  (myTerminal-controls--prepare-controls myTerminal-controls--controls-data))
 
-(defun myTerminal-controls:close-controls ()
+(defun myTerminal-controls-close-controls ()
   "Closes the controls window"
   (interactive)
-  (let ((my-window (get-buffer-window (get-buffer-create myTerminal-controls:buffer-name))))
+  (let ((my-window (get-buffer-window (get-buffer-create myTerminal-controls--buffer-name))))
     (cond ((windowp my-window) (progn
                                  (delete-window my-window)
-                                 (kill-buffer (get-buffer-create myTerminal-controls:buffer-name)))))))
+                                 (kill-buffer (get-buffer-create myTerminal-controls--buffer-name)))))))
 
-(defun myTerminal-controls:prepare-controls (pairs)
+(defun myTerminal-controls--prepare-controls (pairs)
   "Sets up the controls window"
-  (mapc 'myTerminal-controls:display-controls-bindings
+  (mapc 'myTerminal-controls--display-controls-bindings
         pairs)
   (myTerminal-controls-mode)
-  (mapc 'myTerminal-controls:apply-keyboard-bindings
+  (mapc 'myTerminal-controls--apply-keyboard-bindings
         pairs))
 
-(defun myTerminal-controls:apply-keyboard-bindings (pair)
+(defun myTerminal-controls--apply-keyboard-bindings (pair)
   "Applies key-bindings with a wrapper"
   (lexical-let ((func (nth 2
                            pair)))
@@ -122,7 +122,7 @@
                      (funcall func)
                      (other-window 1)))))
 
-(defun myTerminal-controls:display-controls-bindings (pair)
+(defun myTerminal-controls--display-controls-bindings (pair)
   "Display controls in the controls window"
   (princ (concatenate 'string
                       "["
@@ -132,7 +132,7 @@
                       (nth 1
                            pair)
                       "\n")
-         (get-buffer-create myTerminal-controls:buffer-name)))
+         (get-buffer-create myTerminal-controls--buffer-name)))
 
 (define-derived-mode myTerminal-controls-mode 
   special-mode 
@@ -141,7 +141,7 @@
   :syntax-table nil
   nil)
 
-(myTerminal-controls:set-controls-data 
+(myTerminal-controls-set-controls-data 
  (list '("1" "Toggle menu-bar" (lambda ()
                                  (cond (menu-bar-mode (menu-bar-mode -1))
                                        (t (menu-bar-mode t)))))

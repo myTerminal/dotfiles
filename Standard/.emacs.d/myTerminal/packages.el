@@ -97,7 +97,7 @@
 (add-to-list 'load-path
 	     "~/.emacs.d/other-plugins/myTerminal-controls")
 (require 'myTerminal-controls)
-(myTerminal-controls:set-controls-data
+(myTerminal-controls-set-controls-data
  (list '("t" "Change color theme" theme-looper-enable-next-theme)
        '("[" "Decrease transparency" transparency-decrease)
        '("]" "Increase transparency" transparency-increase)))
