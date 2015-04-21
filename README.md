@@ -1,4 +1,1 @@
-EmacsConfiguration
-==================
-
-My Emacs configuration
+# My Emacs Configuration
