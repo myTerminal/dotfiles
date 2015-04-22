@@ -74,10 +74,7 @@
 (add-to-list 'completion-ignored-extensions 
              ".hi")
 
-;Load theme-looper
-(add-to-list 'load-path
-	     "~/.emacs.d/other-plugins/theme-looper")
-(require 'theme-looper)
+;Configure theme-looper
 (theme-looper-set-theme-set (list 'deeper-blue
                         'wheatgrass
                         'wombat
@@ -88,16 +85,8 @@
                         'monokai))
 (theme-looper-set-customizations 'powerline-reset)
 
-;Load meta-presenter
-(add-to-list 'load-path
-	     "~/.emacs.d/other-plugins/meta-presenter")
-(require 'meta-presenter)
-
-;Load myTerminal-controls
-(add-to-list 'load-path
-	     "~/.emacs.d/other-plugins/myTerminal-controls")
-(require 'myTerminal-controls)
-(myTerminal-controls-set-controls-data
+;Configure myterminal-controls
+(myterminal-controls-set-controls-data
  (list '("t" "Change color theme" theme-looper-enable-next-theme)
        '("[" "Decrease transparency" transparency-decrease)
        '("]" "Increase transparency" transparency-increase)))

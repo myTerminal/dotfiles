@@ -4,10 +4,12 @@
 
 ;; Author: Ismail Ansari team.terminal@aol.in
 ;; Keywords: convenience, color-themes
+;; Package-Version: 20150420.2000
 ;; Maintainer: Ismail Ansari team.terminal@aol.in
 ;; Created: 2014/03/22
+;; Package-Requires: ((cl-lib "0.5"))
 ;; Description: Loop thru the available color-themes with a key-binding
-;; URL: http://ismail.teamfluxion.com, http://www.teamfluxion.com
+;; URL: http://ismail.teamfluxion.com
 ;; Compatibility: Emacs24
 
 
@@ -62,16 +64,20 @@
 
 ;;; Code:
 
+(require 'cl-lib)
+
 (defvar theme-looper--favorite-themes)
 
 (defun theme-looper--further-customize
   nil)
 
+;;;###autoload
 (defun theme-looper-set-theme-set (themes)
   "Sets the list of color-themes to cycle thru"
   (setq theme-looper--favorite-themes 
 	themes))
 
+;;;###autoload
 (defun theme-looper-set-customizations (func)
   "Sets customization to be applied after every theme switch"
   (fset 'theme-looper--further-customize
@@ -83,8 +89,8 @@
 
 (defun theme-looper--get-current-theme-index ()
   "Finds the currently enabled color-theme in the list of color-themes"
-  (position (theme-looper--get-current-theme)
-	    theme-looper--favorite-themes :test #'equal))
+  (cl-position (theme-looper--get-current-theme)
+               theme-looper--favorite-themes :test #'equal))
 
 (defun theme-looper--get-next-theme-index ()
   "Find the index of the next color-theme in the list, to be moved to"
@@ -110,6 +116,7 @@
   (mapcar 'disable-theme
 	  custom-enabled-themes))
 
+;;;###autoload
 (defun theme-looper-enable-next-theme ()
   "Enables the next color-theme in the list"
   (interactive)
@@ -117,10 +124,9 @@
     (theme-looper--disable-all-themes)
     (load-theme theme-looper-next-theme t)
     (theme-looper--further-customize)
-    (message (concatenate 'string 
-			  "Switched to theme: "
-			  (symbol-name theme-looper-next-theme)))))
+    (message "Switched to theme: %s" theme-looper-next-theme)))
 
+;;;###autoload
 (defun theme-looper-enable-random-theme ()
   "Enables a random theme from the list"
   (interactive)
@@ -130,9 +136,7 @@
     (load-theme theme-looper-next-theme
                 t)
     (theme-looper--further-customize)
-    (message (concatenate 'string
-                          "Switched to theme: "
-                          (symbol-name theme-looper-next-theme)))))
+    (message "Switched to theme: %s" theme-looper-next-theme)))
 
 (theme-looper-set-theme-set (custom-available-themes))
 
