@@ -11,8 +11,6 @@
         '("C-<" . ace-jump-mode-pop-mark)
         '("M-/" . undo-tree-visualize)
         '("M-y" . browse-kill-ring)
-        '("C-M-]" . e2wm:start-management)
-        '("C-M-[" . e2wm:stop-management)
         '("C-\"" . theme-looper-enable-next-theme)
         '("C-M-'" . myterminal-controls-open-controls)
         '("M-<down>" . myTerminal/move-line-down)
