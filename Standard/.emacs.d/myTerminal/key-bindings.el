@@ -10,7 +10,6 @@
         '("C->" . ace-jump-mode)
         '("C-<" . ace-jump-mode-pop-mark)
         '("M-/" . undo-tree-visualize)
-        '("M-y" . browse-kill-ring)
         '("C-\"" . theme-looper-enable-next-theme)
         '("C-M-'" . myterminal-controls-open-controls)
         '("M-<down>" . myTerminal/move-line-down)
@@ -23,6 +22,7 @@
         '("C-x C-b" . helm-buffer-list)
         '("C-x C-f" . helm-find-files)
         '("C-x C-r" . helm-recentf)
+        '("M-y" . helm-show-kill-ring)
         '("C-M-z" . switch-window)))
 
 (mapc 'myTerminal/apply-keyboard-bindings
