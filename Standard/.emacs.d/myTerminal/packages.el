@@ -94,3 +94,7 @@
 ;Add 'replace-colorthemes' to the list of installed color-themes
 (add-to-list 'custom-theme-load-path
              "~/.emacs.d/other-plugins/replace-colorthemes")
+
+;Set up helm-mode
+(helm-mode 1)
+(helm-autoresize-mode 1)

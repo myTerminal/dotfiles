@@ -27,9 +27,6 @@
   (zone-when-idle 20)
   (message "Zoning set"))
 
-;Enable ido-mode
-(ido-mode 1)
-
 ;Enable column-number mode
 (column-number-mode)
 
