@@ -19,7 +19,7 @@
         '("C-c M-x" . smex)
         '("M-x" . helm-M-x)
         '("C-x b" . helm-mini)
-        '("C-x C-b" . helm-buffer-list)
+        '("C-x C-b" . helm-buffers-list)
         '("C-x C-f" . helm-find-files)
         '("C-x C-r" . helm-recentf)
         '("M-y" . helm-show-kill-ring)
