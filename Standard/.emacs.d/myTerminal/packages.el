@@ -4,6 +4,12 @@
 ;Load default auto-complete configs
 (ac-config-default)
 
+;Add web-mode as the major mode for HTML editing
+(add-to-list 'auto-mode-alist 
+	     '("\\.htm\\'" . web-mode))
+(add-to-list 'auto-mode-alist 
+	     '("\\.html\\'" . web-mode))
+
 ;Add js2-mode as the major mode for JavaScript editing
 (add-to-list 'auto-mode-alist 
 	     '("\\.js\\'" . js2-mode))
