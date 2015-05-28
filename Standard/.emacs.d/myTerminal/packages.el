@@ -4,16 +4,6 @@
 ;Load default auto-complete configs
 (ac-config-default)
 
-;Add web-mode as the major mode for HTML editing
-(add-to-list 'auto-mode-alist 
-	     '("\\.htm\\'" . web-mode))
-(add-to-list 'auto-mode-alist 
-	     '("\\.html\\'" . web-mode))
-
-;Add js2-mode as the major mode for JavaScript editing
-(add-to-list 'auto-mode-alist 
-	     '("\\.js\\'" . js2-mode))
-
 ;Set hook for ac-js2-mode
 (add-hook 'js2-mode-hook 
           'ac-js2-mode)
@@ -32,12 +22,6 @@
 (autoload 'markdown-mode 
   "markdown-mode"
   "Major mode for editing Markdown files" t)
-(add-to-list 'auto-mode-alist 
-	     '("\\.text\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist 
-	     '("\\.markdown\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist 
-	     '("\\.md\\'" . markdown-mode))
 
 ;Load dirtree
 (require 'dirtree)
