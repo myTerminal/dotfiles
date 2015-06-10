@@ -72,6 +72,7 @@
                         'retro-green
                         'retro-orange
                         'julie
+                        'material
                         'monokai))
 (theme-looper-set-customizations 'powerline-reset)
 
