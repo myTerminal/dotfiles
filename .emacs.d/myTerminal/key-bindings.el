@@ -23,7 +23,8 @@
         '("C-x C-f" . helm-find-files)
         '("C-x C-r" . helm-recentf)
         '("M-y" . helm-show-kill-ring)
-        '("C-M-z" . switch-window)))
+        '("C-M-z" . switch-window)
+        '("<f5>" . myTerminal/reload-current-file)))
 
 (mapc 'myTerminal/apply-keyboard-bindings
       myTerminal/my-keyboard-bindings)
