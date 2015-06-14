@@ -1,1 +1,0 @@
-(define-package "myterminal-controls" "20150427.347" "Quick toggle controls at a key-stroke" '((emacs "24") (cl-lib "0.5")) :url "http://ismail.teamfluxion.com" :keywords '("convenience" "shortcuts"))
