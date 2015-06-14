@@ -1,3 +1,50 @@
+;Create repositories cache, if required
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+;Declare a list of required packages
+(defvar myTerminal/required-packages
+  (list 'helm
+        'multiple-cursors
+        'ace-jump-mode
+        'smex
+        'powerline
+        'switch-window
+        'web-mode
+        'js2-mode
+        'ac-js2
+        'csharp-mode
+        'markdown-mode
+        'less-css-mode
+        'haskell-mode
+        'latex-preview-pane
+        'auto-complete
+        'autopair
+        'column-enforce-mode
+        'rainbow-delimiters
+        'nlinum
+        'undo-tree
+        'anzu
+        'command-log-mode
+        'dirtree
+        'minimap
+        'magit
+        'skewer-mode
+        'restclient
+        'mew
+        'jabber
+        'material-theme
+        'monokai-theme
+        'meta-presenter
+        'myterminal-controls
+        'theme-looper
+        'alpha))
+
+;Install required packages
+(mapc (lambda (p)
+        (package-install p))
+      myTerminal/required-packages)
+
 ;Load alpha
 (require 'alpha)
 
