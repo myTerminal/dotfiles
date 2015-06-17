@@ -19,11 +19,11 @@
           'myTerminal/custom-notification-for-jabber)
 
 (defun myTerminal/flash-screen ()
-  (invert-face 'default)
+  (set-face-background 'fringe "red")
   (run-at-time 0.25
                nil
                (lambda (x)
-                 (invert-face 'default))
+                 (set-face-background 'fringe nil))
                t))
 
 (defun myTerminal/switch-to-visual-notification-for-jabber ()
