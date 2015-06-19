@@ -24,7 +24,8 @@
         '("C-x C-r" . helm-recentf)
         '("M-y" . helm-show-kill-ring)
         '("C-M-z" . switch-window)
-        '("<f5>" . myTerminal/reload-current-file)))
+        '("<f5>" . myTerminal/reload-current-file)
+        '("C-x C-g" . myTerminal/dismiss-jabber-notification)))
 
 (mapc 'myTerminal/apply-keyboard-bindings
       myTerminal/my-keyboard-bindings)

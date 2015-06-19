@@ -22,6 +22,13 @@
 (defvar myTerminal/notification-timer
   nil)
 
+;Set jabber notification colors
+(defvar myTerminal/notification-colors
+  '("Red"
+    "Green"
+    "Yellow"
+    "Blue"))
+
 ;Set jabber alert message hook
 (add-hook 'jabber-alert-message-hooks
           'myTerminal/custom-notification-for-jabber)
@@ -37,16 +44,19 @@
 (defun myTerminal/dismiss-jabber-notification ()
   "Dismiss visual notification"
   (interactive)
-  (when (not (null myTerminal/notification-timer))
-    (cancel-timer myTerminal/notification-timer)))
+  (cond ((null myTerminal/notification-timer) (message "No notifications!"))
+        (t (cancel-timer myTerminal/notification-timer))))
 
 (defun myTerminal/flash-screen ()
   "Flash screen once"
-  (set-face-background 'fringe "red")
+  (set-face-background 'fringe
+                       (nth (random (length myTerminal/notification-colors))
+                            myTerminal/notification-colors))
   (run-at-time 0.5
                nil
                (lambda (x)
-                 (set-face-background 'fringe nil))
+                 (set-face-background 'fringe
+                                      nil))
                t))
 
 (defun myTerminal/switch-to-visual-notification-for-jabber ()
