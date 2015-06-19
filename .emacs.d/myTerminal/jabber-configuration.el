@@ -37,8 +37,8 @@
   "Start timer for visual notification"
   (myTerminal/dismiss-jabber-notification)
   (setq myTerminal/notification-timer
-        (run-at-time 1
-                     1
+        (run-at-time 0
+                     2
                      'myTerminal/flash-screen)))
 
 (defun myTerminal/dismiss-jabber-notification ()
@@ -52,7 +52,7 @@
   (set-face-background 'fringe
                        (nth (random (length myTerminal/notification-colors))
                             myTerminal/notification-colors))
-  (run-at-time 0.5
+  (run-at-time 1
                nil
                (lambda (x)
                  (set-face-background 'fringe
