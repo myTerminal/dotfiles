@@ -38,6 +38,7 @@
         'meta-presenter
         'myterminal-controls
         'theme-looper
+        'marmalade-client
         'alpha))
 
 ;Install required packages
