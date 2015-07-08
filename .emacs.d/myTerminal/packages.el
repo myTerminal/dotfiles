@@ -122,6 +122,7 @@
                         'retro-orange
                         'julie
                         'material
+                        'spacemacs-dark
                         'monokai))
 (theme-looper-set-customizations 'powerline-reset)
 
