@@ -34,6 +34,7 @@
         'mew
         'jabber
         'material-theme
+        'spacemacs-theme
         'monokai-theme
         'meta-presenter
         'myterminal-controls
