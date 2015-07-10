@@ -10,6 +10,7 @@
         'smex
         'powerline
         'switch-window
+        'buffer-move
         'web-mode
         'js2-mode
         'ac-js2
