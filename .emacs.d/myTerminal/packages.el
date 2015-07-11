@@ -17,6 +17,8 @@
         'csharp-mode
         'markdown-mode
         'less-css-mode
+        'sass-mode
+        'scss-mode
         'haskell-mode
         'latex-preview-pane
         'auto-complete
