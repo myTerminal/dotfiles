@@ -30,6 +30,7 @@
         'anzu
         'command-log-mode
         'dirtree
+        'ztree
         'minimap
         'magit
         'skewer-mode
