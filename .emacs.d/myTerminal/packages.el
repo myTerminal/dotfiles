@@ -29,7 +29,6 @@
         'undo-tree
         'anzu
         'command-log-mode
-        'dirtree
         'ztree
         'minimap
         'magit
@@ -39,7 +38,6 @@
         'jabber
         'material-theme
         'spacemacs-theme
-        'monokai-theme
         'meta-presenter
         'myterminal-controls
         'theme-looper
@@ -126,8 +124,7 @@
                         'retro-orange
                         'julie
                         'material
-                        'spacemacs-dark
-                        'monokai))
+                        'spacemacs-dark))
 (theme-looper-set-customizations 'powerline-reset)
 
 ;Configure myterminal-controls
