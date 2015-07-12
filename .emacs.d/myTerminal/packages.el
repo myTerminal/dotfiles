@@ -74,9 +74,6 @@
   "markdown-mode"
   "Major mode for editing Markdown files" t)
 
-;Load dirtree
-(require 'dirtree)
-
 ;Set up ace-jump-mode
 (autoload 'ace-jump-mode 
   "ace-jump-mode" 
