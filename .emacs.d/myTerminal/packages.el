@@ -4,45 +4,45 @@
 
 ;Declare a list of required packages
 (defvar myTerminal/required-packages
-  (list 'helm
-        'multiple-cursors
-        'ace-jump-mode
-        'smex
-        'powerline
-        'switch-window
-        'buffer-move
-        'web-mode
-        'js2-mode
-        'ac-js2
-        'csharp-mode
-        'markdown-mode
-        'less-css-mode
-        'sass-mode
-        'scss-mode
-        'haskell-mode
-        'latex-preview-pane
-        'auto-complete
-        'autopair
-        'column-enforce-mode
-        'rainbow-delimiters
-        'nlinum
-        'undo-tree
-        'anzu
-        'command-log-mode
-        'ztree
-        'minimap
-        'magit
-        'skewer-mode
-        'restclient
-        'mew
-        'jabber
-        'material-theme
-        'spacemacs-theme
-        'meta-presenter
-        'myterminal-controls
-        'theme-looper
-        'marmalade-client
-        'alpha))
+  '(helm
+    multiple-cursors
+    ace-jump-mode
+    smex
+    powerline
+    switch-window
+    buffer-move
+    web-mode
+    js2-mode
+    ac-js2
+    csharp-mode
+    markdown-mode
+    less-css-mode
+    sass-mode
+    scss-mode
+    haskell-mode
+    latex-preview-pane
+    auto-complete
+    autopair
+    column-enforce-mode
+    rainbow-delimiters
+    nlinum
+    undo-tree
+    anzu
+    command-log-mode
+    ztree
+    minimap
+    magit
+    skewer-mode
+    restclient
+    mew
+    jabber
+    material-theme
+    spacemacs-theme
+    meta-presenter
+    myterminal-controls
+    theme-looper
+    marmalade-client
+    alpha))
 
 ;Install required packages
 (mapc (lambda (p)
@@ -63,7 +63,7 @@
 (setq inferior-js-program-command 
       "node --interactive")
 
-;Start by default
+;Start auto-pair by default
 (autopair-global-mode)
 
 ;Start undo-tree
@@ -116,15 +116,15 @@
              ".hi")
 
 ;Configure theme-looper
-(theme-looper-set-theme-set (list 'deeper-blue
-                        'wheatgrass
-                        'wombat
-                        'arjen
-                        'retro-green
-                        'retro-orange
-                        'julie
-                        'material
-                        'spacemacs-dark))
+(theme-looper-set-theme-set '(deeper-blue
+                              wheatgrass
+                              wombat
+                              arjen
+                              retro-green
+                              retro-orange
+                              julie
+                              material
+                              spacemacs-dark))
 (theme-looper-set-customizations 'powerline-reset)
 
 ;Configure myterminal-controls
