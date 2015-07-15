@@ -126,9 +126,10 @@
 
 ;Configure myterminal-controls
 (myterminal-controls-set-controls-data
- (list '("t" "Change color theme" theme-looper-enable-next-theme)
-       '("[" "Decrease transparency" transparency-decrease)
-       '("]" "Increase transparency" transparency-increase)))
+ '(("t" "Change color theme" theme-looper-enable-next-theme)
+   ("j" "Connect Jabber" jabber-connect-all)
+   ("[" "Decrease transparency" transparency-decrease)
+   ("]" "Increase transparency" transparency-increase)))
 
 ;Add 'replace-colorthemes' to the list of installed color-themes
 (add-to-list 'custom-theme-load-path
