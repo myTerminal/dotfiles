@@ -4,7 +4,9 @@
 !.emacs.d/other-plugins
 !.emacs.d/init.el
 
-!/.mew.el
+!.mew.el
+
+!.gitconfig
 
 !/LICENSE
 !/README.md

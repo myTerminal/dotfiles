@@ -1,0 +1,11 @@
+[user]
+	name = myTerminal
+	email = team.terminal@gmail.com
+[alias]
+        st = status
+        lg = log
+        ps = push origin
+        pl = pull origin
+        cm = commit
+        co = checkout
+        df = diff
