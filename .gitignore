@@ -1,12 +1,18 @@
+# *
 *
 
+# Emacs
 !.emacs.d/myTerminal
 !.emacs.d/other-plugins
 !.emacs.d/init.el
-
 !.mew.el
 
+# Git
 !.gitconfig
 
+# Bash
+!.bash_profile
+
+# Misc
 !/LICENSE
 !/README.md
