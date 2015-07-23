@@ -15,7 +15,7 @@
     ("M-<down>" . myTerminal/move-line-down)
     ("M-<up>" . myTerminal/move-line-up)
     ("C-=" . myTerminal/eval-and-replace)
-    ("C-c C-c M-x" . execute-extended-command)
+    ("C-c c M-x" . execute-extended-command)
     ("C-c M-x" . smex)
     ("M-x" . helm-M-x)
     ("C-x b" . helm-mini)
