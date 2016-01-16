@@ -12,6 +12,7 @@
 
 # Bash
 !.bash_profile
+!.setup
 
 # Misc
 !/LICENSE
