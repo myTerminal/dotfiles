@@ -7,6 +7,9 @@
 !.emacs.d/init.el
 !.mew.el
 
+# i3
+!.config/i3
+
 # Git
 !.gitconfig
 
