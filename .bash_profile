@@ -1,5 +1,4 @@
-alias cls="clear"
-alias apt-update="sudo apt-get update"
-alias apt-upgrade="sudo apt-get upgrade"
+alias cl="clear"
 alias gti="git"
+alias gt="git"
 alias nr="sh ~/.scripts/network-reconnect.sh"
