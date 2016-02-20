@@ -30,7 +30,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec konsole # i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -102,7 +102,7 @@ bindsym $mod+a focus parent
 set $workspace1 "1:Terminal"
 set $workspace2 "2:Files"
 set $workspace3 "3:Emacs"
-set $workspace4 "4:Chrome"
+set $workspace4 "4:Web"
 set $workspace5 "5:Music"
 set $workspace6 "6:Misc"
 
@@ -180,7 +180,7 @@ bindsym $mod+shift+x exec i3lock
 # Set program shortcuts
 bindsym $mod+control+e exec emacs
 bindsym $mod+control+w exec google-chrome
-bindsym $mod+control+f exec nautilus
+bindsym $mod+control+f exec dolphin
 
 # Set startup programs
 # exec gnome-terminal
