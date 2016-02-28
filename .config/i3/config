@@ -180,7 +180,7 @@ bindsym $mod+shift+x exec i3lock
 # Set program shortcuts
 bindsym $mod+control+e exec emacs
 bindsym $mod+control+w exec google-chrome
-bindsym $mod+control+f exec nemo
+bindsym $mod+control+f exec pcmanfm
 
 # Set startup programs
 # exec gnome-terminal
