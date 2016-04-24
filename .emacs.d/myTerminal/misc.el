@@ -29,3 +29,9 @@
   (cond (buffer-file-name (progn (find-alternate-file buffer-file-name)
                                  (message "File reloaded")))
         (t (message "You're not editing a file!"))))
+
+(define-minor-mode halal-mode
+  "Toggle halal-mode"
+  :init-value nil
+  :lighter " halal"
+  :keymap nil)

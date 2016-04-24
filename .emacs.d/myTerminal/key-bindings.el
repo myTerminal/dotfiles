@@ -29,7 +29,8 @@
     ("C-S-<left>" . buf-move-left)
     ("C-S-<right>" . buf-move-right)
     ("<f5>" . myTerminal/reload-current-file)
-    ("C-x C-g" . myTerminal/dismiss-jabber-notification)))
+    ("C-x C-g" . myTerminal/dismiss-jabber-notification)
+    ("C-x C-/" . halal-mode)))
 
 (mapc 'myTerminal/apply-keyboard-bindings
       myTerminal/my-keyboard-bindings)
