@@ -1,15 +1,13 @@
-;Load package.el
-(require 'package)
+(defun myTerminal/set-up-repositories ()
 
-;Add melpa to list of repositories
-(add-to-list 'package-archives
-	     '("melpa" . "http://melpa.milkbox.net/packages/") 
-             t)
+  (require 'package)
 
-;Add marmalade to list of repositories
-(add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/")
-             t)
+  (add-to-list 'package-archives
+               '("melpa" . "http://melpa.milkbox.net/packages/") 
+               t)
 
-;Initialize package.el
-(package-initialize)
+  (add-to-list 'package-archives
+               '("marmalade" . "http://marmalade-repo.org/packages/")
+               t)
+
+  (package-initialize))

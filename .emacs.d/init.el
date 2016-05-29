@@ -1,7 +1,6 @@
 (load-file "~/.emacs.d/myTerminal/user.el")
 (load-file "~/.emacs.d/myTerminal/repositories.el")
-(if (y-or-n-p "Install pending packages?")
-    (load-file "~/.emacs.d/myTerminal/setup.el"))
+(load-file "~/.emacs.d/myTerminal/setup.el")
 (load-file "~/.emacs.d/myTerminal/packages.el")
 (load-file "~/.emacs.d/myTerminal/file-associations.el")
 (load-file "~/.emacs.d/myTerminal/interface.el")
@@ -9,3 +8,4 @@
 (load-file "~/.emacs.d/myTerminal/misc.el")
 (load-file "~/.emacs.d/myTerminal/key-bindings.el")
 (load-file "~/.emacs.d/myTerminal/transitory.el")
+(load-file "~/.emacs.d/myTerminal/startup.el")

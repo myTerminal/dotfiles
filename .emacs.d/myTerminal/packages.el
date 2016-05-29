@@ -1,91 +1,76 @@
-;Load alpha
-(require 'alpha)
+(defun myTerminal/configure-packages ()
 
-;Load default auto-complete configs
-(ac-config-default)
+  (require 'alpha)
 
-;Set hook for ac-js2-mode
-(add-hook 'js2-mode-hook 
-          'ac-js2-mode)
+  (ac-config-default)
 
-;Set inferior program command for js-comint
-(setq inferior-js-program-command 
-      "node --interactive")
+  (add-hook 'js2-mode-hook 
+            'ac-js2-mode)
 
-;Start auto-pair by default
-(autopair-global-mode)
+  (setq inferior-js-program-command 
+        "node --interactive")
 
-;Start undo-tree
-(global-undo-tree-mode)
+  (autopair-global-mode)
 
-;Set up markdown mode
-(autoload 'markdown-mode 
-  "markdown-mode"
-  "Major mode for editing Markdown files" t)
+  (global-undo-tree-mode)
 
-;Set up ace-jump-mode
-(autoload 'ace-jump-mode 
-  "ace-jump-mode" 
-  "Emacs quick move minor mode"
-  t)
-(autoload 'ace-jump-mode-pop-mark 
-  "ace-jump-mode" 
-  "Ace jump back:-"
-  t)
+  (autoload 'markdown-mode 
+    "markdown-mode"
+    "Major mode for editing Markdown files" t)
 
-;Add hooks for column-enforce-mode
-(add-hook 'emacs-lisp-mode-hook 
-	  'column-enforce-mode)
-(add-hook 'js2-mode-hook
-	  'column-enforce-mode)
+  (autoload 'ace-jump-mode 
+    "ace-jump-mode" 
+    "Emacs quick move minor mode"
+    t)
+  (autoload 'ace-jump-mode-pop-mark 
+    "ace-jump-mode" 
+    "Ace jump back:-"
+    t)
 
-;Enable anzu-mode
-(global-anzu-mode +1)
+  (add-hook 'emacs-lisp-mode-hook 
+            'column-enforce-mode)
+  (add-hook 'js2-mode-hook
+            'column-enforce-mode)
 
-;Enable powerline
-(powerline-center-theme)
-(setq powerline-default-separator
-      'wave)
+  (global-anzu-mode +1)
 
-;Enable logging of all commands in command-log-mode
-(setq clm/log-command-exceptions*
-      nil)
+  (powerline-center-theme)
+  (setq powerline-default-separator
+        'wave)
 
-;Set up haskell-mode
-(add-hook 'haskell-mode-hook 
-          'turn-on-haskell-doc-mode)
-(add-hook 'haskell-mode-hook 
-          'inf-haskell-mode)
-(add-hook 'haskell-mode-hook 
-          'turn-on-haskell-indentation)
-(add-to-list 'completion-ignored-extensions 
-             ".hi")
+  (setq clm/log-command-exceptions*
+        nil)
 
-;Configure theme-looper
-(theme-looper-set-theme-set '(deeper-blue
-                              wheatgrass
-                              wombat
-                              arjen
-                              retro-green
-                              retro-orange
-                              julie
-                              material
-                              spacemacs-dark))
-(theme-looper-set-customizations 'powerline-reset)
+  (add-hook 'haskell-mode-hook 
+            'turn-on-haskell-doc-mode)
+  (add-hook 'haskell-mode-hook 
+            'inf-haskell-mode)
+  (add-hook 'haskell-mode-hook 
+            'turn-on-haskell-indentation)
+  (add-to-list 'completion-ignored-extensions 
+               ".hi")
 
-;Configure myterminal-controls
-(myterminal-controls-set-controls-data
- '(("t" "Change color theme" theme-looper-enable-next-theme)
-   ("j" "Connect Jabber" jabber-connect-all)
-   ("[" "Decrease transparency" transparency-decrease)
-   ("]" "Increase transparency" transparency-increase)))
+  (theme-looper-set-theme-set '(deeper-blue
+                                wheatgrass
+                                wombat
+                                arjen
+                                retro-green
+                                retro-orange
+                                julie
+                                material
+                                spacemacs-dark))
+  (theme-looper-set-customizations 'powerline-reset)
 
-;Add 'replace-colorthemes' to the list of installed color-themes
-(add-to-list 'custom-theme-load-path
-             "~/.emacs.d/other-plugins/replace-colorthemes")
+  (myterminal-controls-set-controls-data
+   '(("t" "Change color theme" theme-looper-enable-next-theme)
+     ("j" "Connect Jabber" jabber-connect-all)
+     ("[" "Decrease transparency" transparency-decrease)
+     ("]" "Increase transparency" transparency-increase)))
 
-;Set up helm-mode
-(helm-mode 1)
-(helm-autoresize-mode 1)
-(setq helm-split-window-in-side-p
-      t)
+  (add-to-list 'custom-theme-load-path
+               "~/.emacs.d/other-plugins/replace-colorthemes")
+
+  (helm-mode 1)
+  (helm-autoresize-mode 1)
+  (setq helm-split-window-in-side-p
+        t))
