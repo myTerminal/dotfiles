@@ -19,11 +19,6 @@
     (prin1 (eval (read (current-kill 0)))
            (current-buffer)))
 
-  (defun myTerminal/apply-keyboard-bindings (pair)
-    "Apply keyboard-bindings for supplied list of key-pair values"
-    (global-set-key (kbd (car pair))
-                    (cdr pair)))
-
   (defun myTerminal/reload-current-file ()
     "Reloads the file loaded in current buffer from the disk"
     (interactive)

@@ -1,7 +1,4 @@
-(defun myTerminal/configure-packages ()
-
-  (require 'alpha)
-
+(defun myTerminal/configure-basic-mode-packages ()
   (ac-config-default)
 
   (add-hook 'js2-mode-hook 
@@ -27,6 +24,30 @@
     "Ace jump back:-"
     t)
 
+  (theme-looper-set-theme-set '(deeper-blue
+                                wheatgrass
+                                wombat
+                                arjen
+                                retro-green
+                                retro-orange
+                                julie
+                                material
+                                spacemacs-dark))
+  (theme-looper-set-customizations 'powerline-reset)
+
+  (myterminal-controls-set-controls-data
+   '(("t" "Change color theme" theme-looper-enable-next-theme)
+     ("j" "Connect Jabber" jabber-connect-all)
+     ("[" "Decrease transparency" transparency-decrease)
+     ("]" "Increase transparency" transparency-increase)))
+
+  (add-to-list 'custom-theme-load-path
+               "~/.emacs.d/other-plugins/replace-colorthemes"))
+
+
+(defun myTerminal/configure-full-mode-packages ()
+  (require 'alpha)
+  
   (add-hook 'emacs-lisp-mode-hook 
             'column-enforce-mode)
   (add-hook 'js2-mode-hook
@@ -49,26 +70,6 @@
             'turn-on-haskell-indentation)
   (add-to-list 'completion-ignored-extensions 
                ".hi")
-
-  (theme-looper-set-theme-set '(deeper-blue
-                                wheatgrass
-                                wombat
-                                arjen
-                                retro-green
-                                retro-orange
-                                julie
-                                material
-                                spacemacs-dark))
-  (theme-looper-set-customizations 'powerline-reset)
-
-  (myterminal-controls-set-controls-data
-   '(("t" "Change color theme" theme-looper-enable-next-theme)
-     ("j" "Connect Jabber" jabber-connect-all)
-     ("[" "Decrease transparency" transparency-decrease)
-     ("]" "Increase transparency" transparency-increase)))
-
-  (add-to-list 'custom-theme-load-path
-               "~/.emacs.d/other-plugins/replace-colorthemes")
 
   (helm-mode 1)
   (helm-autoresize-mode 1)
