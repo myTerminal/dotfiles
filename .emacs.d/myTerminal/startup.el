@@ -1,8 +1,7 @@
 (defun myTerminal/start-basic-mode ()
   (myTerminal/set-user-preferences)
   (myTerminal/set-up-repositories)
-  (if (y-or-n-p "Install pending packages?")
-      (myTerminal/set-up-package-lists))
+  (myTerminal/set-up-package-lists)
   (myTerminal/configure-basic-mode-packages)
   (myTerminal/set-file-associations)
   (myTerminal/configure-interface)
@@ -17,6 +16,7 @@
 
 (defun myTerminal/progress-to-full-mode ()
   (interactive)
+  (message "Progressing to full-mode...")
   (myTerminal/configure-full-mode-packages)
   (myTerminal/configure-jabber)
   (myTerminal/define-full-mode-keyboard-bindings)
@@ -24,4 +24,3 @@
 
 ;Start in basic-mode, progress to full mode
 (myTerminal/start-basic-mode)
-(myTerminal/progress-to-full-mode)

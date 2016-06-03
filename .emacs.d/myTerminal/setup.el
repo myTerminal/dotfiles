@@ -2,51 +2,47 @@
   (when (not package-archive-contents)
     (package-refresh-contents))
 
-  (defvar myTerminal/basic-mode-packages
-    '(multiple-cursors
-      ace-jump-mode
-      web-mode
-      js2-mode
-      ac-js2
-      csharp-mode
-      markdown-mode
-      less-css-mode
-      scss-mode
-      sass-mode
-      auto-complete
-      autopair
-      nlinum
-      undo-tree
-      ztree
-      material-theme
-      spacemacs-theme
-      meta-presenter
-      myterminal-controls
-      theme-looper
-      ))
-
-  (defvar myTerminal/full-mode-packages
-    '(helm
-      smex
-      powerline
-      switch-window
-      buffer-move
-      haskell-mode
-      latex-preview-pane
-      column-enforce-mode
-      rainbow-delimiters
-      anzu
-      command-log-mode
-      minimap
-      magit
-      skewer-mode
-      restclient
-      mew
-      jabber
-      marmalade-client
-      alpha))
+  (defvar myTerminal/packages
+    '((multiple-cursors nil)
+      (ace-jump-mode nil)
+      (web-mode nil)
+      (js2-mode nil)
+      (ac-js2 nil)
+      (csharp-mode nil)
+      (markdown-mode nil)
+      (less-css-mode nil)
+      (scss-mode nil)
+      (sass-mode nil)
+      (auto-complete nil)
+      (autopair nil)
+      (nlinum nil)
+      (undo-tree nil)
+      (ztree nil)
+      (material-theme nil)
+      (spacemacs-theme nil)
+      (meta-presenter nil)
+      (myterminal-controls nil)
+      (theme-looper nil)
+      (helm t)
+      (smex t)
+      (powerline t)
+      (switch-window t)
+      (buffer-move t)
+      (haskell-mode t)
+      (latex-preview-pane t)
+      (column-enforce-mode t)
+      (rainbow-delimiters t)
+      (anzu t)
+      (command-log-mode t)
+      (minimap t)
+      (magit t)
+      (skewer-mode t)
+      (restclient t)
+      (mew t)
+      (jabber t)
+      (marmalade-client t)
+      (alpha t)))
 
   (mapc (lambda (p)
-          (package-install p))
-        (append myTerminal/basic-mode-packages
-                myTerminal/full-mode-packages)))
+          (package-install (car p)))
+        myTerminal/packages))
