@@ -20,6 +20,7 @@
     ("C-S-<right>" buf-move-right nil)
     ("<f5>" myTerminal/reload-current-file nil)
     ("C-x C-/" halal-mode nil)
+    ("C-x C-\\" myTerminal/progress-to-full-mode)
     ("C-M-)" transparency-increase t)
     ("C-M-(" transparency-decrease t)
     ("C-c M-x" smex t)
