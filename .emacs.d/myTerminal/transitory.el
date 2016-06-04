@@ -1,5 +1,5 @@
 (defun myTerminal/apply-temporary-configurations ()
-  (theme-looper-enable-theme 'material)
+  (theme-looper-enable-theme 'deep-blue)
 
   (custom-set-faces
    '(default ((t (:family "Inconsolata" :height 140)))))

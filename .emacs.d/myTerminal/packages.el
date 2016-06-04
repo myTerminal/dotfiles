@@ -24,15 +24,12 @@
     "Ace jump back:-"
     t)
 
-  (theme-looper-set-theme-set '(deeper-blue
-                                wheatgrass
-                                wombat
-                                arjen
-                                retro-green
-                                retro-orange
-                                julie
-                                material
-                                spacemacs-dark))
+  (theme-looper-set-theme-set '(gnome2
+                                deep-blue
+                                cobalt
+                                railscast
+                                spacemacs-dark
+                                renegade))
   (theme-looper-set-customizations 'powerline-reset)
 
   (myterminal-controls-set-controls-data

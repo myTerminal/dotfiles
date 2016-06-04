@@ -22,5 +22,5 @@
   (myTerminal/define-full-mode-keyboard-bindings)
   (message "Progressed to full-mode"))
 
-;Start in basic-mode, progress to full mode
+;Start in basic-mode
 (myTerminal/start-basic-mode)
