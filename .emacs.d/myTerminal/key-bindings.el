@@ -10,6 +10,7 @@
     ("M-/" undo-tree-visualize nil)
     ("C-\"" theme-looper-enable-next-theme nil)
     ("C-M-'" myterminal-controls-open-controls nil)
+    ("C-x C-|" emacs-profiles-show-menu nil)
     ("M-<down>" myTerminal/move-line-down nil)
     ("M-<up>" myTerminal/move-line-up nil)
     ("C-=" myTerminal/eval-and-replace nil)
