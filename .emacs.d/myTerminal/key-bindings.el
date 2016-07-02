@@ -52,9 +52,8 @@
 
 (defun myTerminal/define-full-mode-keyboard-bindings ()
   (mapc (lambda (item)
-          (if (nth 2 item)
-              (myTerminal/apply-keyboard-bindings (cons (car item)
-                                                        (nth 1 item)))))
+          (myTerminal/apply-keyboard-bindings (cons (car item)
+                                                        (nth 1 item))))
         myTerminal/key-bindings))
 
 (defun myTerminal/apply-keyboard-bindings (pair)
