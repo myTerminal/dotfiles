@@ -183,7 +183,8 @@ bindsym $mod+control+w exec google-chrome
 bindsym $mod+control+f exec pcmanfm
 
 # Set startup programs
-# exec gnome-terminal
+exec terminology
 
 # Set default workspaces for programs
 # assign [class="Gnome-terminal"] $workspace1
+
