@@ -1,3 +1,5 @@
+PS1='\w\$ '
+
 alias cl="clear"
 
 alias gti="git"
