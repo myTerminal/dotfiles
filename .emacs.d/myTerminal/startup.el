@@ -9,6 +9,18 @@
   (myTerminal/define-basic-mode-keyboard-bindings)
   (myTerminal/apply-temporary-configurations))
 
+(defun myTerminal/print-welcome-message ()
+  (princ (cl-concatenate 'string
+                         "Started up in "
+                         (number-to-string (cadr (time-subtract (current-time)
+                                                                myTerminal/invokation-time)))
+                         " seconds\n\n"
+                         "Welcome myTerminal!\n\n"
+                         "Today's "
+                         (format-time-string "%d %B %Y")
+                         " and it looks like a productive day, so make it count!")
+         (get-buffer-create (current-buffer))))
+
 (defun myTerminal/prompt-for-full-mode ()
   (interactive)
   (if (y-or-n-p "Not running in full-mode. Do you want to progress to full-mode?")
@@ -24,3 +36,4 @@
 
 ;Start in basic-mode
 (myTerminal/start-basic-mode)
+(myTerminal/print-welcome-message)

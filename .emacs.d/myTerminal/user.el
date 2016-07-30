@@ -11,7 +11,7 @@
   (setq initial-buffer-choice 
         t)
   (setq initial-scratch-message 
-        "Ready and waiting...\n\n")
+        "Welcome myTerminal!\n\n")
 
   (setq-default indent-tabs-mode 
                 nil))
