@@ -3,6 +3,8 @@ PS1='\w\$ '
 alias cl="clear"
 
 alias gt="git"
+alias git-upload="git push origin master"
+alias git-download="git pull origin master"
 
 alias nr="sh ~/.scripts/network-reconnect.sh"
 alias pg="ping google.com"
