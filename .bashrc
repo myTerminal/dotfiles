@@ -5,6 +5,7 @@ alias cl="clear"
 alias gt="git"
 alias git-upload="git push origin master"
 alias git-download="git pull origin master"
+alias git-update-all-repositories="sh ~/.scripts/update-all-repositories.sh ~/_repositories/"
 
 alias nr="sh ~/.scripts/network-reconnect.sh"
 alias pg="ping google.com"
