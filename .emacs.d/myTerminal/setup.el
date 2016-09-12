@@ -18,6 +18,7 @@
       (nlinum nil)
       (undo-tree nil)
       (ztree nil)
+      (dired-launch nil)
       (material-theme nil)
       (spacemacs-theme nil)
       (theme-looper nil)
