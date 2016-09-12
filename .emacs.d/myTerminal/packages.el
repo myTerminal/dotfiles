@@ -24,7 +24,8 @@
     "Ace jump back:-"
     t)
     
-  (dired-launch-mode)
+  (add-hook 'dired-mode-hook
+            'dired-launch-mode)
 
   (theme-looper-set-theme-set '(gnome2
                                 deep-blue
