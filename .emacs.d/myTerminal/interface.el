@@ -29,4 +29,7 @@
 
   (winner-mode t)
 
-  (windmove-default-keybindings))
+  (windmove-default-keybindings)
+
+  (setq org-hide-leading-stars
+        t))
