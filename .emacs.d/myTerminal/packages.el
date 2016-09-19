@@ -67,7 +67,7 @@
 
   (powerline-center-theme)
   (setq powerline-default-separator
-        'wave)
+        'slant)
 
   (setq clm/log-command-exceptions*
         nil)
