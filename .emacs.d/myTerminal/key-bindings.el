@@ -8,6 +8,7 @@
     ("C->" ace-jump-mode nil)
     ("C-<" ace-jump-mode-pop-mark nil)
     ("M-/" undo-tree-visualize nil)
+    ("C-\," neotree-toggle nil)
     ("C-\"" theme-looper-enable-next-theme nil)
     ("C-M-'" myterminal-controls-open-controls nil)
     ("C-x C-|" emacs-profiles-show-menu nil)

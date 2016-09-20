@@ -54,7 +54,6 @@
   (add-to-list 'custom-theme-load-path
                "~/.emacs.d/other-plugins/replace-colorthemes"))
 
-
 (defun myTerminal/configure-full-mode-packages ()
   (require 'alpha)
   

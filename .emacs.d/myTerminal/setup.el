@@ -17,6 +17,7 @@
       (autopair nil)
       (nlinum nil)
       (undo-tree nil)
+      (neotree nil)
       (ztree nil)
       (dired-launch nil)
       (material-theme nil)
