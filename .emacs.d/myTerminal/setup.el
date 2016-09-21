@@ -26,6 +26,7 @@
       (meta-presenter nil)
       (myterminal-controls nil)
       (emacs-profiles nil)
+      (which-key t)
       (helm t)
       (smex t)
       (powerline t)

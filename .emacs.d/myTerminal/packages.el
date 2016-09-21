@@ -80,6 +80,8 @@
   (add-to-list 'completion-ignored-extensions 
                ".hi")
 
+  (which-key-mode)
+
   (helm-mode 1)
   (helm-autoresize-mode 1)
   (setq helm-split-window-in-side-p
