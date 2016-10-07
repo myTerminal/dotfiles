@@ -82,6 +82,8 @@
 
   (which-key-mode)
 
+  (indent-guide-global-mode)
+
   (helm-mode 1)
   (helm-autoresize-mode 1)
   (setq helm-split-window-in-side-p

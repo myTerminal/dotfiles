@@ -39,6 +39,7 @@
       (anzu t)
       (command-log-mode t)
       (minimap t)
+      (indent-guide t)
       (magit t)
       (skewer-mode t)
       (restclient t)
