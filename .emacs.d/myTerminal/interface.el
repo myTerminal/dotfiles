@@ -12,6 +12,9 @@
 
   (set-face-attribute 'mode-line nil :box nil)
 
+  (custom-set-faces
+   '(default ((t (:family "Liberation Mono")))))
+
   (require 'zone)
   (setq zone-programs 
         [zone-pgm-putz-with-case])

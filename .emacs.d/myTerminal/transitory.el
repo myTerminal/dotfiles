@@ -3,11 +3,11 @@
 
 (defun myTerminal/activate-profile-home ()
   (custom-set-faces
-   '(default ((t (:family "Liberation Mono" :height 120))))))
+   '(default ((t (:height 110))))))
 
 (defun myTerminal/activate-profile-office ()
   (custom-set-faces
-   '(default ((t (:family "Liberation Mono" :height 140)))))
+   '(default ((t (:height 120)))))
   (set-frame-size (selected-frame) 100 30)
   (find-file "~/../../data/to-do.org")
   (myTerminal/progress-to-full-mode))
