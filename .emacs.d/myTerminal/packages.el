@@ -25,6 +25,11 @@
   (add-hook 'dired-mode-hook
             'dired-launch-mode)
 
+  (if (eq system-type
+          'windows-nt)
+      (setq projectile-indexing-method
+            'alien))
+
   (theme-looper-set-theme-set '(gnome2
                                 deep-blue
                                 cobalt
@@ -80,4 +85,5 @@
   (helm-mode 1)
   (helm-autoresize-mode 1)
   (setq helm-split-window-in-side-p
-        t))
+        t)
+  (helm-projectile-on))
