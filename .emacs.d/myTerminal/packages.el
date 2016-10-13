@@ -7,8 +7,6 @@
   (setq inferior-js-program-command 
         "node --interactive")
 
-  (autopair-global-mode)
-
   (global-undo-tree-mode)
 
   (autoload 'markdown-mode 

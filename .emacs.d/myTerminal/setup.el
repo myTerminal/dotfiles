@@ -14,7 +14,6 @@
       (scss-mode nil)
       (sass-mode nil)
       (auto-complete nil)
-      (autopair nil)
       (nlinum nil)
       (undo-tree nil)
       (neotree nil)

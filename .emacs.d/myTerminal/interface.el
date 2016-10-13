@@ -26,6 +26,8 @@
 
   (column-number-mode)
 
+  (electric-pair-mode)
+
   (show-paren-mode)
 
   (global-hl-line-mode -1)
