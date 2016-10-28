@@ -13,6 +13,7 @@
     ("C-\"" theme-looper-enable-next-theme nil)
     ("C-M-'" myterminal-controls-open-controls nil)
     ("C-x C-|" emacs-profiles-show-menu nil)
+    ("C-c C-SPC" outer-spaces-mode nil)
     ("M-<down>" myTerminal/move-line-down nil)
     ("M-<up>" myTerminal/move-line-up nil)
     ("C-=" myTerminal/eval-and-replace nil)

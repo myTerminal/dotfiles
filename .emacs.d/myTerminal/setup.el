@@ -26,6 +26,7 @@
       (meta-presenter nil)
       (myterminal-controls nil)
       (emacs-profiles nil)
+      (outer-spaces nil)
       (which-key t)
       (helm t)
       (helm-projectile t)
