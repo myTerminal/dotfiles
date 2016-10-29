@@ -19,6 +19,7 @@
       (neotree nil)
       (ztree nil)
       (projectile nil)
+      (workgroups2 nil)
       (dired-launch nil)
       (material-theme nil)
       (spacemacs-theme nil)

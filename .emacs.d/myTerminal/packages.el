@@ -30,6 +30,20 @@
       (setq projectile-indexing-method
             'alien))
 
+  (setq wg-prefix-key
+        (kbd "s-x"))
+  (setq wg-session-file
+        "~/.emacs.d/.workgroups2-session-file")
+  (setq wg-session-load-on-start
+        nil)
+  (workgroups-mode 1)
+  (setq wg-emacs-exit-save-behavior
+        'ask)
+  (setq wg-workgroups-mode-exit-save-behavior
+        'ask)
+  (setq wg-mode-line-display-on
+        t)
+
   (theme-looper-set-theme-set '(gnome2
                                 deep-blue
                                 cobalt

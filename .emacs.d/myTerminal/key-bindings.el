@@ -10,6 +10,8 @@
     ("M-/" undo-tree-visualize nil)
     ("C-\," neotree-toggle nil)
     ("C-x p" projectile-mode)
+    ("s-?" wg-reload-session)
+    ("s-/" wg-switch-to-previous-workgroup)
     ("C-\"" theme-looper-enable-next-theme nil)
     ("C-M-'" myterminal-controls-open-controls nil)
     ("C-x C-|" emacs-profiles-show-menu nil)
