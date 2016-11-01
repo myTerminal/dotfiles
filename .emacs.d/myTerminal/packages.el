@@ -22,9 +22,6 @@
     "Ace jump back:-"
     t)
     
-  (add-hook 'dired-mode-hook
-            'dired-launch-mode)
-
   (if (eq system-type
           'windows-nt)
       (setq projectile-indexing-method
