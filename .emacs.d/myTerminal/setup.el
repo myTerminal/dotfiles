@@ -18,6 +18,7 @@
       (undo-tree nil)
       (neotree nil)
       (ztree nil)
+      (ranger nil)
       (projectile nil)
       (workgroups2 nil)
       (dired-launch nil)
