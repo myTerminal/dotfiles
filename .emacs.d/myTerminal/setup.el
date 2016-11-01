@@ -3,49 +3,67 @@
     (package-refresh-contents))
 
   (defvar myTerminal/packages
-    '((multiple-cursors nil)
+    '(;Text-editing
+      (multiple-cursors nil)
+      (auto-complete nil)
       (ace-jump-mode nil)
+      (nlinum nil)
+      (undo-tree nil)
+      ;Navigation
+      (workgroups2 nil)
+      ;Language modes
       (web-mode nil)
       (js2-mode nil)
       (ac-js2 nil)
-      (csharp-mode nil)
-      (markdown-mode nil)
       (less-css-mode nil)
       (scss-mode nil)
       (sass-mode nil)
-      (auto-complete nil)
-      (nlinum nil)
-      (undo-tree nil)
+      (markdown-mode nil)
+      (csharp-mode nil)
+      ;Programming tools
+      (projectile nil)
+      ;File-system
+      (ranger nil)
       (neotree nil)
       (ztree nil)
-      (ranger nil)
-      (projectile nil)
-      (workgroups2 nil)
+      ;Color themes
       (material-theme nil)
       (spacemacs-theme nil)
+      ;myTerminal's packages
       (theme-looper nil)
       (meta-presenter nil)
       (myterminal-controls nil)
       (emacs-profiles nil)
       (outer-spaces nil)
-      (which-key t)
-      (helm t)
-      (helm-projectile t)
-      (smex t)
-      (powerline t)
+      ;
+      ;Full-mode packages
+      ;
+      ;Text-editing
+      (anzu t)
+      ;Navigation
       (switch-window t)
       (buffer-move t)
+      ;Language modes
       (haskell-mode t)
       (latex-preview-pane t)
       (column-enforce-mode t)
-      (anzu t)
       (minimap t)
       (indent-guide t)
+      ;Programming tools
       (magit t)
       (skewer-mode t)
       (restclient t)
+      ;Super powers
+      (which-key t)
+      (smex t)
+      (helm t)
+      (helm-projectile t)
+      ;Visual tweaks
+      (powerline t)
+      ;Networking tools
       (mew t)
       (jabber t)
+      ;Misc
       (marmalade-client t)
       (alpha t)))
 
