@@ -59,7 +59,7 @@
       (helm t)
       (helm-projectile t)
       ;Visual tweaks
-      (powerline t)
+      (telephone-line t)
       ;Networking tools
       (mew t)
       (jabber t)

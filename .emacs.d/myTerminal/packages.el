@@ -47,7 +47,6 @@
                                 railscast
                                 spacemacs-dark
                                 renegade))
-  (theme-looper-set-customizations 'powerline-reset)
 
   (myterminal-controls-set-controls-data
    '(("t" "Change color theme" theme-looper-enable-next-theme)
@@ -78,9 +77,7 @@
 
   (global-anzu-mode +1)
 
-  (powerline-center-theme)
-  (setq powerline-default-separator
-        'slant)
+  (telephone-line-mode t)
 
   (add-hook 'haskell-mode-hook 
             'turn-on-haskell-doc-mode)
