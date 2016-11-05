@@ -26,6 +26,8 @@
 
   (column-number-mode)
 
+  (display-battery-mode)
+
   (electric-pair-mode)
 
   (show-paren-mode)
