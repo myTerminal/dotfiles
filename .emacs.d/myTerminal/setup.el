@@ -28,7 +28,6 @@
       (ztree nil)
       ;Color themes
       (material-theme nil)
-      (spacemacs-theme nil)
       ;myTerminal's packages
       (theme-looper nil)
       (meta-presenter nil)
