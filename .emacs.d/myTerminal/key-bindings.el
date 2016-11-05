@@ -1,7 +1,7 @@
 (defvar myTerminal/key-bindings
   '(("C-~" myTerminal/set-zoning nil)
     ("C-!" zone-leave-me-alone nil)
-    ("C-c C-l" nlinum-mode nil)
+    ("C-x C-;" nlinum-mode nil)
     ("C-}" mc/mark-next-like-this nil)
     ("C-{" mc/mark-previous-like-this nil)
     ("C-|" mc/mark-all-like-this nil)
@@ -10,8 +10,7 @@
     ("M-/" undo-tree-visualize nil)
     ("C-\," neotree-toggle nil)
     ("C-x p" projectile-mode)
-    ("s-?" wg-reload-session)
-    ("s-/" wg-switch-to-previous-workgroup)
+    ("C-\\" wg-switch-to-previous-workgroup)
     ("C-\"" theme-looper-enable-next-theme nil)
     ("C-M-'" myterminal-controls-open-controls nil)
     ("C-x C-|" emacs-profiles-show-menu nil)

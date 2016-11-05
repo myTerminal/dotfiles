@@ -28,7 +28,7 @@
             'alien))
 
   (setq wg-prefix-key
-        (kbd "s-x"))
+        (kbd "M-z"))
   (setq wg-session-file
         "~/.emacs.d/.workgroups2-session-file")
   (setq wg-session-load-on-start
