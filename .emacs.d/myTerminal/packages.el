@@ -78,6 +78,24 @@
   (global-anzu-mode +1)
 
   (telephone-line-mode t)
+  (telephone-line-defsegment telephone-line-workgroups2-segment
+    (wg-mode-line-string))
+  (setq telephone-line-lhs
+        '((evil   . (telephone-line-misc-info-segment))
+          (accent . (telephone-line-buffer-segment
+                     telephone-line-workgroups2-segment))
+          (nil    . (telephone-line-minor-mode-segment))))
+  (setq telephone-line-rhs
+        '((nil    . (telephone-line-process-segment
+                     telephone-line-vc-segment
+                     telephone-line-erc-modified-channels-segment))
+          (accent . (telephone-line-major-mode-segment))
+          (evil   . (telephone-line-airline-position-segment))))
+  (setq telephone-line-primary-left-separator
+        telephone-line-gradient)
+  (setq telephone-line-primary-right-separator
+        telephone-line-gradient)
+  (telephone-line-mode t)
 
   (add-hook 'haskell-mode-hook 
             'turn-on-haskell-doc-mode)
