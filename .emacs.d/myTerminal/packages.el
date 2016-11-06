@@ -41,11 +41,9 @@
   (setq wg-mode-line-display-on
         t)
 
-  (theme-looper-set-theme-set '(gnome2
-                                deep-blue
+  (theme-looper-set-theme-set '(material
                                 cobalt
                                 railscast
-                                spacemacs-dark
                                 renegade))
 
   (myterminal-controls-set-controls-data
