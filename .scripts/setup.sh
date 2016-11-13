@@ -40,9 +40,6 @@ sudo dnf install \
      google-droid-sans-mono-fonts \
      google-roboto-mono-fonts
 
-# Copy i3status.conf
-sudo cp .scripts/resources/i3status.conf /etc/i3status.conf
-
 # Set up group for docker
 sudo groupadd docker
 sudo gpasswd -a ${USERNAME} docker
