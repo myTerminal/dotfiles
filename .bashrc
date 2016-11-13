@@ -2,6 +2,8 @@ PS1='\w\$ '
 
 alias cl="clear"
 
+alias _start-all="emacs & google-chrome &"
+
 alias gt="git"
 alias git-upload="git push origin master"
 alias git-download="git pull origin master"
