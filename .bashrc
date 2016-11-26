@@ -1,8 +1,9 @@
-PS1='\w\$ '
+PS1='\u@\h:\w\$ '
 
 alias cl="clear"
 
 alias _start-all="emacs & google-chrome &"
+alias telegram="~/Apps/Telegram/Telegram &"
 
 alias gt="git"
 alias git-upload="git push origin master"
@@ -12,8 +13,6 @@ alias git-update-all-repositories="sh ~/.scripts/update-all-repositories.sh ~/_r
 alias audio-r="pulseaudio -k && pulseaudio --start"
 
 alias net-r="sh ~/.scripts/network-reconnect.sh"
-alias pg="ping google.com"
-alias nrpg="net-r && pg"
 alias wifi-connect="nmcli d wifi"
 
 alias detach="udisks --detach"
