@@ -34,6 +34,8 @@
       (myterminal-controls nil)
       (emacs-profiles nil)
       (outer-spaces nil)
+      ;Misc
+      (volume nil)
       ;
       ;Full-mode packages
       ;
