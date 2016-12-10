@@ -1,7 +1,7 @@
 (defvar myTerminal/key-bindings
   '(("C-~" myTerminal/set-zoning nil)
     ("C-!" zone-leave-me-alone nil)
-    ("C-x C-;" nlinum-mode nil)
+    ("C-:" nlinum-mode nil)
     ("C-}" mc/mark-next-like-this nil)
     ("C-{" mc/mark-previous-like-this nil)
     ("C-|" mc/mark-all-like-this nil)
@@ -13,7 +13,7 @@
     ("C-\\" wg-switch-to-previous-workgroup)
     ("C-\"" theme-looper-enable-next-theme nil)
     ("C-M-'" myterminal-controls-open-controls nil)
-    ("C-x C-|" emacs-profiles-show-menu nil)
+    ("C-'" emacs-profiles-show-menu nil)
     ("C-c C-SPC" outer-spaces-mode nil)
     ("M-<down>" myTerminal/move-line-down nil)
     ("M-<up>" myTerminal/move-line-up nil)
@@ -36,7 +36,7 @@
     ("C-x C-r" helm-recentf t)
     ("M-y" helm-show-kill-ring t)
     ("C-M-z" switch-window t)
-    ("C-x M-|" indent-guide-mode t)
+    ("C-|" indent-guide-mode t)
     ("C-x C-g" myTerminal/dismiss-jabber-notification t)))
 
 (defvar myTerminal/temp-bindings
