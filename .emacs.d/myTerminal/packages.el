@@ -74,6 +74,9 @@
 (defun myTerminal/configure-basic-mode-packages ()
   (ac-config-default)
 
+  (add-hook 'prog-mode-hook
+            'nlinum-mode)
+
   (add-hook 'js2-mode-hook 
             'ac-js2-mode)
 
@@ -99,6 +102,7 @@
           'windows-nt)
       (setq projectile-indexing-method
             'alien))
+  (projectile-mode)
 
   (setq wg-prefix-key
         (kbd "M-z"))
