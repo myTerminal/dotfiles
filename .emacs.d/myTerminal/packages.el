@@ -64,6 +64,8 @@
       ;Networking tools
       (mew t)
       (jabber t)
+      ;myTerminal's packages
+      (emacs-sounds t)
       ;Misc
       (sound-wav t)
       (marmalade-client t)
@@ -184,6 +186,13 @@
                ".hi")
 
   (which-key-mode)
+
+  (setq emacs-sounds-bell-sound
+        "/home/ismail/.emacs.d/sounds/bell.wav")
+  (setq emacs-sounds-find-file-sound
+        "/home/ismail/.emacs.d/sounds/file-change.wav")
+  (setq emacs-sounds-window-change-sound
+        "/home/ismail/.emacs.d/sounds/window-change.wav")
 
   (helm-mode 1)
   (helm-autoresize-mode 1)
