@@ -1,14 +1,9 @@
-PS1='\u@\h:\w\$ '
+. ~/.scripts/common/.bashrc
 
-alias cl="clear"
+PS1='\u@\h:\w\$ '
 
 alias _start-all="emacs & google-chrome &"
 alias telegram="~/Apps/Telegram/Telegram &"
-
-alias gt="git"
-alias git-upload="git push origin master"
-alias git-download="git pull origin master"
-alias git-update-all-repositories="sh ~/.scripts/fedora/update-all-repositories.sh ~/_repositories/"
 
 alias audio-r="pulseaudio -k && pulseaudio --start"
 
