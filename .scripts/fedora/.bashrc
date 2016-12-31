@@ -8,11 +8,11 @@ alias telegram="~/Apps/Telegram/Telegram &"
 alias gt="git"
 alias git-upload="git push origin master"
 alias git-download="git pull origin master"
-alias git-update-all-repositories="sh ~/.scripts/update-all-repositories.sh ~/_repositories/"
+alias git-update-all-repositories="sh ~/.scripts/fedora/update-all-repositories.sh ~/_repositories/"
 
 alias audio-r="pulseaudio -k && pulseaudio --start"
 
-alias net-r="sh ~/.scripts/network-reconnect.sh"
+alias net-r="sh ~/.scripts/fedora/network-reconnect.sh"
 alias wifi-connect="nmcli d wifi"
 
 alias detach="udisks --detach"
