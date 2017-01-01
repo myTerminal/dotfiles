@@ -24,6 +24,7 @@ brew cask install \
      virtualbox \
      docker \
      iterm2 \
+     diffmerge \
      steam
 
 # Manual steps
