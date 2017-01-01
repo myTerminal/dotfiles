@@ -12,8 +12,10 @@
 
   (set-face-attribute 'mode-line nil :box nil)
 
-  (custom-set-faces
-   '(default ((t (:family "Liberation Mono")))))
+  (cond ((not (eq system-type
+                  'darwin))
+         (custom-set-faces
+          '(default ((t (:family "Liberation Mono")))))))
 
   (require 'zone)
   (setq zone-programs 
