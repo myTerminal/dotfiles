@@ -25,6 +25,8 @@ brew cask install \
      docker \
      iterm2 \
      diffmerge \
+     clementine \
+     vlc \
      steam
 
 # Manual steps
