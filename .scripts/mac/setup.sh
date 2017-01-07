@@ -18,6 +18,7 @@ brew install \
 brew cask install \
      dropbox \
      google-chrome \
+     telegram \
      libreoffice \
      filezilla \
      mounty \
@@ -27,7 +28,8 @@ brew cask install \
      diffmerge \
      clementine \
      vlc \
-     steam
+     steam \
+     origin
 
 # Manual steps
 # - Install Emacs from https://emacsformacosx.com
