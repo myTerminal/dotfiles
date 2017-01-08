@@ -17,6 +17,7 @@ brew install \
 # Install packages from brew cask
 brew cask install \
      dropbox \
+     google-drive \
      google-chrome \
      telegram \
      libreoffice \
