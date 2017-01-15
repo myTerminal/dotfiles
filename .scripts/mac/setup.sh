@@ -12,7 +12,8 @@ brew tap caskroom/cask
 
 # Install packages from brew
 brew install \
-     node
+     node \
+     youtube-dl
 
 # Install packages from brew cask
 brew cask install \
@@ -28,6 +29,7 @@ brew cask install \
      iterm2 \
      diffmerge \
      clementine \
+     kid3 \
      vlc \
      steam \
      origin
