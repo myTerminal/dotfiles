@@ -19,6 +19,7 @@ brew install \
 brew cask install \
      dropbox \
      google-drive \
+     megasync \
      google-chrome \
      telegram \
      libreoffice \
@@ -29,6 +30,7 @@ brew cask install \
      iterm2 \
      diffmerge \
      clementine \
+     gimp \
      kid3 \
      vlc \
      steam \
