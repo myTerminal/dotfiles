@@ -32,6 +32,7 @@ brew cask install \
      clementine \
      gimp \
      kid3 \
+     handbrake \
      vlc \
      steam \
      origin
