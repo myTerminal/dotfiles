@@ -2,6 +2,7 @@
   (myTerminal/set-user-preferences)
   (myTerminal/set-up-repositories)
   (myTerminal/set-up-package-lists)
+  (myTerminal/load-local-packages)
   (myTerminal/configure-basic-mode-packages)
   (myTerminal/set-file-associations)
   (myTerminal/configure-interface)

@@ -32,8 +32,6 @@
       (theme-looper nil)
       (meta-presenter nil)
       (myterminal-controls nil)
-      (emacs-profiles nil)
-      (outer-spaces nil)
       ;Misc
       (volume nil)
       ;
@@ -64,8 +62,6 @@
       ;Networking tools
       (mew t)
       (jabber t)
-      ;myTerminal's packages
-      (emacs-sounds t)
       ;Misc
       (sound-wav t)
       (marmalade-client t)
@@ -74,6 +70,15 @@
   (mapc (lambda (p)
           (package-install (car p)))
         myTerminal/packages))
+
+(defun myTerminal/load-local-packages ()
+  (add-to-list
+   'load-path "~/.emacs.d/local-packages/")
+
+  (require 'prompt-you)
+  (require 'emacs-profiles)
+  (require 'outer-spaces)
+  (require 'emacs-sounds))
 
 (defun myTerminal/configure-basic-mode-packages ()
   (ac-config-default)
