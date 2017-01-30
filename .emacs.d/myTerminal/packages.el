@@ -63,9 +63,7 @@
       (mew t)
       (jabber t)
       ;Misc
-      (sound-wav t)
-      (marmalade-client t)
-      (alpha t)))
+      (marmalade-client t)))
 
   (mapc (lambda (p)
           (package-install (car p)))
@@ -75,6 +73,7 @@
   (add-to-list
    'load-path "~/.emacs.d/local-packages/")
 
+  (require 'alpha)
   (require 'prompt-you)
   (require 'emacs-profiles)
   (require 'outer-spaces)
