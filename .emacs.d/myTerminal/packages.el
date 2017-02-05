@@ -19,6 +19,7 @@
       (scss-mode nil)
       (sass-mode nil)
       (markdown-mode nil)
+      (typescript-mode nil)
       (csharp-mode nil)
       ;Programming tools
       (projectile nil)
