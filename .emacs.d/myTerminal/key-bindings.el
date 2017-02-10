@@ -36,7 +36,7 @@
     ("C-x C-r" helm-recentf t)
     ("M-y" helm-show-kill-ring t)
     ("C-M-z" switch-window t)
-    ("C-|" indent-guide-mode t)
+    ("C-x C-|" indent-guide-mode t)
     ("C-x C-g" myTerminal/dismiss-jabber-notification t)))
 
 (defvar myTerminal/temp-bindings
