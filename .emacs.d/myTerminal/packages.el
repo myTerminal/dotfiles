@@ -130,7 +130,8 @@
   (theme-looper-set-theme-set '(material
                                 cobalt
                                 railscast
-                                renegade))
+                                subtle-hacker
+                                leuven))
 
   (myterminal-controls-set-controls-data
    '(("t" "Change color theme" theme-looper-enable-next-theme)
