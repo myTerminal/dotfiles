@@ -1,9 +1,9 @@
 (defun myTerminal/apply-temporary-configurations ()
-  (theme-looper-enable-theme 'railscast))
+  (theme-looper-enable-theme 'subtle-hacker))
 
 (defun myTerminal/activate-profile-home ()
   (custom-set-faces
-   '(default ((t (:height 110)))))
+   '(default ((t (:height 180)))))
   (myTerminal/progress-to-full-mode))
 
 (defun myTerminal/activate-profile-office ()
