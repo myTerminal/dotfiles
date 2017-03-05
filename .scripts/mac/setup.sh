@@ -34,6 +34,7 @@ brew cask install \
      kid3 \
      handbrake \
      vlc \
+     keycastr \
      steam \
      origin
 
