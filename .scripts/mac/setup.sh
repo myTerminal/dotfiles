@@ -26,6 +26,7 @@ brew cask install \
      filezilla \
      mounty \
      virtualbox \
+     android-file-transfer \
      docker \
      iterm2 \
      diffmerge \
