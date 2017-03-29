@@ -29,6 +29,7 @@ brew cask install \
      android-file-transfer \
      docker \
      iterm2 \
+     fman \
      diffmerge \
      clementine \
      gimp \
