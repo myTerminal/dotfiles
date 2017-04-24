@@ -56,8 +56,9 @@
       ;Super powers
       (which-key t)
       (smex t)
-      (helm t)
-      (helm-projectile t)
+      (counsel t)
+      (counsel-projectile t)
+      (ivy-hydra t)
       ;Visual tweaks
       (telephone-line t)
       ;Networking tools
@@ -200,8 +201,10 @@
   (setq emacs-sounds-window-change-sound
         "/home/ismail/.emacs.d/sounds/window-change.wav")
 
-  (helm-mode 1)
-  (helm-autoresize-mode 1)
-  (setq helm-split-window-in-side-p
+  (ivy-mode 1)
+  (setq ivy-use-virtual-buffers
         t)
-  (helm-projectile-on))
+  (setq projectile-completion-system
+        'ivy)
+  (counsel-projectile-on))
+
