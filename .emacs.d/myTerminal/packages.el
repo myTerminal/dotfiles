@@ -46,10 +46,10 @@
       ;Language modes
       (haskell-mode t)
       (latex-preview-pane t)
+      ;Programming tools
       (column-enforce-mode t)
       (minimap t)
       (indent-guide t)
-      ;Programming tools
       (magit t)
       (skewer-mode t)
       (restclient t)
