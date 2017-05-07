@@ -140,16 +140,6 @@
      ("[" "Decrease transparency" transparency-decrease)
      ("]" "Increase transparency" transparency-increase)))
 
-  (emacs-profiles-set-profiles-data (list '("0"
-                                            "None"
-                                            (lambda ()))
-                                          '("1"
-                                            "Home"
-                                            myTerminal/activate-profile-home)
-                                          '("2"
-                                            "Office"
-                                            myTerminal/activate-profile-office)))
-
   (add-to-list 'custom-theme-load-path
                "~/.emacs.d/other-plugins/replace-colorthemes"))
 

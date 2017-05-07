@@ -7,8 +7,7 @@
   (myTerminal/set-file-associations)
   (myTerminal/configure-interface)
   (myTerminal/define-personal-functions)
-  (myTerminal/define-basic-mode-keyboard-bindings)
-  (myTerminal/apply-temporary-configurations))
+  (myTerminal/define-basic-mode-keyboard-bindings))
 
 (defun myTerminal/print-welcome-message ()
   (princ (cl-concatenate 'string
@@ -38,3 +37,13 @@
 ;Start in basic-mode
 (myTerminal/start-basic-mode)
 (myTerminal/print-welcome-message)
+
+;Load local configuration
+(theme-looper-enable-theme myTerminal/local-configs/color-theme)
+(custom-set-faces
+ `(default ((t (:height ,myTerminal/local-configs/font-height)))))
+(set-frame-size (selected-frame)
+                (car myTerminal/local-configs/frame-dimensions)
+                (cdr myTerminal/local-configs/frame-dimensions))
+(mapc 'find-file
+      myTerminal/local-configs/startup-files)
