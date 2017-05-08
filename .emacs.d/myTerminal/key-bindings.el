@@ -32,7 +32,7 @@
     ("C-x b" ivy-switch-buffer t)
     ("C-x C-r" counsel-recentf t)
     ("C-x C-f" counsel-find-file t)
-    ("C-s" swiper t)
+    ("C-;" swiper t)
     ("M-y" counsel-yank-pop)
     ("C-M-z" switch-window t)
     ("C-x C-|" indent-guide-mode t)
