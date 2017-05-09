@@ -68,7 +68,8 @@
       (marmalade-client t)))
 
   (mapc (lambda (p)
-          (package-install (car p)))
+          (unless (package-installed-p (car p))
+            (package-install (car p))))
         myTerminal/packages))
 
 (defun myTerminal/load-local-packages ()
