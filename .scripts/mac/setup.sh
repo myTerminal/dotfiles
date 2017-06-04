@@ -22,6 +22,7 @@ brew cask install \
      megasync \
      google-chrome \
      telegram \
+     evernote \
      libreoffice \
      filezilla \
      mounty \
