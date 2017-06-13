@@ -155,8 +155,6 @@
   (global-anzu-mode +1)
 
   (telephone-line-mode t)
-  (telephone-line-defsegment telephone-line-workgroups2-segment
-    (wg-mode-line-string))
   (setq telephone-line-lhs
         '((evil   . (telephone-line-misc-info-segment))
           (accent . (telephone-line-buffer-segment
