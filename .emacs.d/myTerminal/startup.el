@@ -37,6 +37,7 @@
 ;Start in basic-mode
 (myTerminal/start-basic-mode)
 (myTerminal/print-welcome-message)
+(myTerminal/progress-to-full-mode)
 
 ;Load local configuration
 (theme-looper-enable-theme myTerminal/local-configs/color-theme)
