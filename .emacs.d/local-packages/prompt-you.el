@@ -108,8 +108,8 @@
     (local-set-key (kbd (car object))
                    (lambda ()
                      (interactive)
-                     (funcall func)
                      (prompt-you--hide-menu)
+                     (funcall func)
                      (message (concat message-prefix
                                       option-text))))))
 
