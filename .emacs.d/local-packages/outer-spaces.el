@@ -4,6 +4,7 @@
 
 ;; Author: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Keywords: programming
+;; Package-Version: 20161029.2230
 ;; Maintainer: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Created: 2016/11/29
 ;; Description: A minimalistic minor-mode to highlight redundant spaces

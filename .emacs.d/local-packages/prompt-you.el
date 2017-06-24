@@ -4,7 +4,7 @@
 
 ;; Author: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Keywords: library
-;; Package-Version: 20161013.1530
+;; Package-Version: 20170620.2315
 ;; Maintainer: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Created: 2016/09/25
 ;; Package-Requires: ((emacs "24") (cl-lib "0.5"))
