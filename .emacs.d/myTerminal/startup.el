@@ -46,5 +46,3 @@
 (set-frame-size (selected-frame)
                 (car myTerminal/local-configs/frame-dimensions)
                 (cdr myTerminal/local-configs/frame-dimensions))
-(mapc 'find-file
-      myTerminal/local-configs/startup-files)

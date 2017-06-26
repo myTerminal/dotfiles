@@ -80,7 +80,8 @@
   (require 'prompt-you)
   (require 'emacs-profiles)
   (require 'outer-spaces)
-  (require 'emacs-sounds))
+  (require 'emacs-sounds)
+  (require 'emacs-home))
 
 (defun myTerminal/configure-basic-mode-packages ()
   (ac-config-default)
@@ -189,6 +190,11 @@
         "/home/ismail/.emacs.d/sounds/file-change.wav")
   (setq emacs-sounds-window-change-sound
         "/home/ismail/.emacs.d/sounds/window-change.wav")
+
+  (emacs-home-set-day-start-time myTerminal/local-configs/day-start-time)
+  (emacs-home-set-day-end-time myTerminal/local-configs/day-end-time)
+  (emacs-home-set-pinned-files myTerminal/local-configs/favorite-files)
+  (emacs-home-set-pinned-functions myTerminal/local-configs/favorite-functions)
 
   (ivy-mode 1)
   (setq ivy-use-virtual-buffers
