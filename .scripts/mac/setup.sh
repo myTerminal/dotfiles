@@ -27,6 +27,7 @@ brew cask install \
      filezilla \
      mounty \
      virtualbox \
+     tunnelbear \
      android-file-transfer \
      docker \
      iterm2 \
