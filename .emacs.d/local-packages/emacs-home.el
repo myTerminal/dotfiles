@@ -4,7 +4,7 @@
 
 ;; Author: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Keywords: convenience, shortcuts
-;; Package-Version: 20170624.1315
+;; Package-Version: 20170712.2135
 ;; Maintainer: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Created: 2017/06/24
 ;; Package-Requires: ((emacs "24") (cl-lib "0.5"))
@@ -52,10 +52,8 @@
 ;; need to be set with numeric values in the format *hhmm*. Refer the below
 ;; example.
 ;; 
-;;     (emacs-home-set-day-start-time
-;;         0800)
-;;     (emacs-home-set-day-end-time
-;;         1700)
+;;     (emacs-home-set-day-start-time 0800)
+;;     (emacs-home-set-day-end-time 1700)
 ;; 
 ;; If the current time is between the above two times, a progress-bar is shown.
 ;; 
@@ -169,7 +167,7 @@
                                    "\n"))
            (insert (cl-concatenate 'string
                                    (propertize (cond ((not (null day-progress-ratio))
-                                                      (make-string (truncate (* 100
+                                                      (make-string (truncate (* (window-width)
                                                                                 day-progress-ratio))
                                                                    ?*))
                                                      (t "Outside working hours"))
