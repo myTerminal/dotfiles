@@ -2,7 +2,7 @@
   'subtle-hacker)
 
 (defvar myTerminal/local-configs/font-height
-  180)
+  170)
 
 (defvar myTerminal/local-configs/frame-dimensions
   (cons 100
