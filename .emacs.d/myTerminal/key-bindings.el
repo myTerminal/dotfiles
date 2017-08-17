@@ -45,7 +45,6 @@
 (defvar myTerminal/temp-bindings
   '(("M-x" execute-extended-command nil)
     ("C-x b" switch-to-buffer nil)
-    ("C-x C-b" list-buffers nil)
     ("C-x C-f" find-file nil)))
 
 (defun myTerminal/define-basic-mode-keyboard-bindings ()
