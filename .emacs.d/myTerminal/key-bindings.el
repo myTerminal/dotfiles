@@ -1,6 +1,7 @@
 (defvar myTerminal/key-bindings
   '(("C-~" myTerminal/set-zoning nil)
     ("C-!" zone-leave-me-alone nil)
+    ("C-x C-b" ibuffer nil)
     ("C-:" nlinum-mode nil)
     ("C-}" mc/mark-next-like-this nil)
     ("C-{" mc/mark-previous-like-this nil)
