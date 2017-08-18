@@ -11,6 +11,7 @@
       (undo-tree nil)
       ;Navigation
       (workgroups2 nil)
+      (ibuffer-vc nil)
       ;Language modes
       (web-mode nil)
       (js2-mode nil)
@@ -192,6 +193,23 @@ With a prefix argument ARG prompts you for a directory on which to run search in
                     (set-mark-command nil)
                     (search-backward text-to-search)
                     (run-hooks 'projectile-find-file-hook))))))
+
+  (setq ibuffer-formats
+        '((mark
+           " "
+           read-only
+           " "
+           modified
+           " "
+           (name 18 18 :left :elide)
+           " "
+           (vc-status 16 16 :left)
+           " "
+           (size 9 -1 :right)
+           " "
+           (mode 16 16 :left :elide)
+           " "
+           filename-and-process)))
 
   (setq wg-prefix-key
         (kbd "M-z"))
