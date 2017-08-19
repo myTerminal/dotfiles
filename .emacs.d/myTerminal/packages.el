@@ -24,6 +24,7 @@
       (csharp-mode nil)
       ;Programming tools
       (projectile nil)
+      (diff-hl nil)
       ;File-system
       (ranger nil)
       (neotree nil)
@@ -210,6 +211,8 @@ With a prefix argument ARG prompts you for a directory on which to run search in
            (mode 16 16 :left :elide)
            " "
            filename-and-process)))
+
+  (global-diff-hl-mode)
 
   (setq wg-prefix-key
         (kbd "M-z"))
