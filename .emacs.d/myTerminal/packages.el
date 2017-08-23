@@ -83,6 +83,7 @@
   (require 'emacs-profiles)
   (require 'outer-spaces)
   (require 'emacs-sounds)
+  (require 'eagle-eye)
   (require 'emacs-home))
 
 (defun myTerminal/configure-basic-mode-packages ()
@@ -237,6 +238,8 @@ With a prefix argument ARG prompts you for a directory on which to run search in
   (myterminal-controls-set-controls-data
    '(("t" "Change color theme" theme-looper-enable-next-theme)
      ("j" "Connect Jabber" jabber-connect-all)
+     ("," "Zoom out" eagle-eye-zoom-out)
+     ("." "Zoom in" eagle-eye-zoom-in)
      ("[" "Decrease transparency" transparency-decrease)
      ("]" "Increase transparency" transparency-increase)))
 
