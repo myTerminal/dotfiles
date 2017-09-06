@@ -36,6 +36,7 @@
       (meta-presenter nil)
       (myterminal-controls nil)
       ;Misc
+      (delight nil)
       (volume nil)
       ;
       ;Full-mode packages
@@ -231,6 +232,19 @@ With a prefix argument ARG prompts you for a directory on which to run search in
         'ask)
   (setq wg-mode-line-display-on
         t)
+
+  (delight '((anzu-mode nil
+                        anzu)
+             (undo-tree-mode nil
+                             undo-tree)
+             (auto-complete-mode nil
+                                 auto-complete)
+             (which-key-mode nil
+                             which-key)
+             (workgroups-mode nil
+                              workgroups2)
+             (outer-spaces-mode " _a_"
+                                outer-spaces)))
 
   (theme-looper-set-theme-set '(material
                                 cobalt
