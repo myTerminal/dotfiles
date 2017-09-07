@@ -1,5 +1,5 @@
 (defvar myTerminal/local-configs/color-theme
-  'subtle-hacker)
+  'gruvbox)
 
 (defvar myTerminal/local-configs/font-height
   170)

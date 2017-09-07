@@ -31,6 +31,8 @@
       (ztree nil)
       ;Color themes
       (material-theme nil)
+      (gruvbox-theme nil)
+      (green-phosphor-theme nil)
       ;myTerminal's packages
       (theme-looper nil)
       (meta-presenter nil)
@@ -247,8 +249,9 @@ With a prefix argument ARG prompts you for a directory on which to run search in
                                 outer-spaces)))
 
   (theme-looper-set-theme-set '(material
-                                cobalt
                                 railscast
+                                gruvbox
+                                green-phosphor
                                 subtle-hacker
                                 leuven))
 
