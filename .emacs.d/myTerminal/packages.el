@@ -314,8 +314,8 @@ With a prefix argument ARG prompts you for a directory on which to run search in
 
   (emacs-home-set-day-start-time myTerminal/local-configs/day-start-time)
   (emacs-home-set-day-end-time myTerminal/local-configs/day-end-time)
-  (emacs-home-set-pinned-files myTerminal/local-configs/favorite-files)
-  (emacs-home-set-pinned-functions myTerminal/local-configs/favorite-functions)
+  (emacs-home-set-favorite-files myTerminal/local-configs/favorite-files)
+  (emacs-home-set-favorite-functions myTerminal/local-configs/favorite-functions)
 
   (ivy-mode 1)
   (setq ivy-use-virtual-buffers
