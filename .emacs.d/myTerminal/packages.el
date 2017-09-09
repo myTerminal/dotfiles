@@ -87,6 +87,7 @@
   (require 'outer-spaces)
   (require 'emacs-sounds)
   (require 'eagle-eye)
+  (require 'emacs-visual-notifications)
   (require 'emacs-home))
 
 (defun myTerminal/configure-basic-mode-packages ()
