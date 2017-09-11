@@ -4,7 +4,7 @@
 
 ;; Author: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Keywords: convenience, shortcuts
-;; Package-Version: 20170908.2045
+;; Package-Version: 20170911.1835
 ;; Maintainer: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Created: 2017/06/24
 ;; Package-Requires: ((emacs "24") (cl-lib "0.5"))
@@ -284,8 +284,13 @@
 
 (defun emacs-home--redraw ()
   (interactive)
-  (emacs-home--hide)
-  (emacs-home-show))
+  (cond ((get-buffer emacs-home--buffer-name)
+         (progn (with-current-buffer (get-buffer-create emacs-home--buffer-name)
+                  (fundamental-mode)
+                  (read-only-mode -1)
+                  (erase-buffer))
+                (emacs-home--render-controls)))
+        (t (emacs-home--stop-timer))))
 
 (defun emacs-home--stop-timer ()
   (cancel-timer emacs-home--refresh-timer))
