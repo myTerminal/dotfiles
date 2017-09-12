@@ -317,8 +317,7 @@ With a prefix argument ARG prompts you for a directory on which to run search in
         "/home/ismail/.emacs.d/sounds/window-change.wav")
 
   (emacs-daily-events-global-mode)
-  (emacs-daily-events-set-events (list '("1155" "Lunch time")
-                                       '("1655" "End of day")))
+  (emacs-daily-events-set-events myTerminal/local-configs/daily-events)
 
   (emacs-home-set-day-start-time myTerminal/local-configs/day-start-time)
   (emacs-home-set-day-end-time myTerminal/local-configs/day-end-time)
