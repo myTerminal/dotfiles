@@ -247,6 +247,8 @@ With a prefix argument ARG prompts you for a directory on which to run search in
                              which-key)
              (workgroups-mode nil
                               workgroups2)
+             (emacs-daily-events-global-mode " (!)"
+                                             emacs-daily-events)
              (outer-spaces-mode " _a_"
                                 outer-spaces)))
 
@@ -314,6 +316,7 @@ With a prefix argument ARG prompts you for a directory on which to run search in
   (setq emacs-sounds-window-change-sound
         "/home/ismail/.emacs.d/sounds/window-change.wav")
 
+  (emacs-daily-events-global-mode)
   (emacs-daily-events-set-events (list '("1155" "Lunch time")
                                        '("1655" "End of day")))
 
