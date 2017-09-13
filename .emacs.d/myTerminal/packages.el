@@ -127,7 +127,11 @@
       (setq projectile-indexing-method
             'alien))
   (setq projectile-switch-project-action
-        'neotree-projectile-action)
+        (lambda ()
+          (cond ((and (fboundp 'neo-global--window-exists-p)
+                      (neo-global--window-exists-p))
+                 (neotree-projectile-action))
+                (t (counsel-projectile)))))
   (projectile-mode)
 
   (defun projectile-find-all-occurrences (&optional arg)
