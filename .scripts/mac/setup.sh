@@ -44,3 +44,4 @@ brew cask install \
 
 # Manual steps
 # - Install Emacs from https://emacsformacosx.com
+# - Install pCloud Drive from https://www.pcloud.com
