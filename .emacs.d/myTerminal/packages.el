@@ -70,6 +70,7 @@
       (mew t)
       (jabber t)
       ;Misc
+      (golden-ratio t)
       (marmalade-client t)))
 
   (mapc (lambda (p)
@@ -310,6 +311,8 @@ With a prefix argument ARG prompts you for a directory on which to run search in
                ".hi")
 
   (which-key-mode)
+  
+  (golden-ratio-mode 1)
 
   (setq emacs-sounds-bell-sound
         "/home/ismail/.emacs.d/sounds/bell.wav")
