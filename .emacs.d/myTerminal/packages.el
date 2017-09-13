@@ -125,6 +125,8 @@
           'windows-nt)
       (setq projectile-indexing-method
             'alien))
+  (setq projectile-switch-project-action
+        'neotree-projectile-action)
   (projectile-mode)
 
   (defun projectile-find-all-occurrences (&optional arg)
