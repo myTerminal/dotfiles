@@ -46,7 +46,7 @@
       ;Text-editing
       (anzu t)
       ;Navigation
-      (switch-window t)
+      (ace-window t)
       (buffer-move t)
       ;Language modes
       (haskell-mode t)

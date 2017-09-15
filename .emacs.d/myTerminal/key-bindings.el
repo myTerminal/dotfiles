@@ -29,7 +29,8 @@
     ("<f5>" myTerminal/reload-current-file nil)
     ("C-x C-/" halal-mode nil)
     ("C-x C-\\" myTerminal/progress-to-full-mode nil)
-    ("C-;" emacs-home-show t)
+    ("C-." emacs-home-show t)
+    ("C-;" ace-window t)
     ("C-M-)" transparency-increase t)
     ("C-M-(" transparency-decrease t)
     ("C-c M-x" smex t)
@@ -39,7 +40,6 @@
     ("C-x C-f" counsel-find-file t)
     ("M-S" swiper t)
     ("M-y" counsel-yank-pop)
-    ("C-M-z" switch-window t)
     ("C-x C-|" indent-guide-mode t)
     ("C-x C-g" myTerminal/dismiss-jabber-notification t)))
 
