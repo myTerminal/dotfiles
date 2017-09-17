@@ -8,9 +8,12 @@
       auto-complete
       ace-jump-mode
       nlinum
+      anzu
       undo-tree
       ;Navigation
+      ace-window
       workgroups2
+      buffer-move
       ibuffer-vc
       ;Language modes
       web-mode
@@ -21,10 +24,18 @@
       sass-mode
       markdown-mode
       typescript-mode
+      haskell-mode
       csharp-mode
+      latex-preview-pane
       ;Programming tools
       projectile
       diff-hl
+      column-enforce-mode
+      indent-guide
+      magit
+      minimap
+      skewer-mode
+      restclient
       ;File-system
       ranger
       neotree
@@ -33,31 +44,6 @@
       material-theme
       gruvbox-theme
       green-phosphor-theme
-      ;myTerminal's packages
-      theme-looper
-      meta-presenter
-      myterminal-controls
-      ;Misc
-      delight
-      volume
-      ;
-      ;Full-mode packages
-      ;
-      ;Text-editing
-      anzu
-      ;Navigation
-      ace-window
-      buffer-move
-      ;Language modes
-      haskell-mode
-      latex-preview-pane
-      ;Programming tools
-      column-enforce-mode
-      minimap
-      indent-guide
-      magit
-      skewer-mode
-      restclient
       ;Super powers
       which-key
       smex
@@ -69,8 +55,14 @@
       ;Networking tools
       mew
       jabber
+      ;myTerminal's packages
+      theme-looper
+      meta-presenter
+      myterminal-controls
       ;Misc
+      delight
       golden-ratio
+      volume
       marmalade-client))
 
   (mapc (lambda (p)
