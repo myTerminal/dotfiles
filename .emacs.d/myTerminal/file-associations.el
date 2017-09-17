@@ -1,4 +1,4 @@
-(defun myTerminal/set-file-associations ()
+(defun myTerminal/file-associations/set-file-associations ()
   (add-to-list 'auto-mode-alist 
                '("\\.htm\\'" . web-mode))
   (add-to-list 'auto-mode-alist 

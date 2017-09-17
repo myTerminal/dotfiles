@@ -1,4 +1,4 @@
-(defun myTerminal/configure-jabber ()
+(defun myTerminal/jabber/configure-jabber ()
   (setq jabber-account-list
         '(("ismaila@citiusim.mumbai1.corp.citiustech.com" 
            (:network-server . "citiusim.mumbai1.corp.citiustech.com"))
@@ -30,13 +30,13 @@
 
   (defun myTerminal/show-jabber-notification ()
     "Start timer for visual notification"
-    (myTerminal/dismiss-jabber-notification)
+    (myTerminal/misc/dismiss-jabber-notification)
     (setq myTerminal/notification-timer
           (run-at-time 0
                        2
                        'myTerminal/flash-screen)))
 
-  (defun myTerminal/dismiss-jabber-notification ()
+  (defun myTerminal/misc/dismiss-jabber-notification ()
     "Dismiss visual notification"
     (interactive)
     (cond ((null myTerminal/notification-timer) (message "No notifications!"))

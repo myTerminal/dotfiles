@@ -1,84 +1,84 @@
-(defun myTerminal/set-up-package-lists ()
+(defun myTerminal/packages/fetch-remote-packages ()
   (when (not package-archive-contents)
     (package-refresh-contents))
 
   (defvar myTerminal/packages
     '(;Text-editing
-      (multiple-cursors nil)
-      (auto-complete nil)
-      (ace-jump-mode nil)
-      (nlinum nil)
-      (undo-tree nil)
+      multiple-cursors
+      auto-complete
+      ace-jump-mode
+      nlinum
+      undo-tree
       ;Navigation
-      (workgroups2 nil)
-      (ibuffer-vc nil)
+      workgroups2
+      ibuffer-vc
       ;Language modes
-      (web-mode nil)
-      (js2-mode nil)
-      (ac-js2 nil)
-      (less-css-mode nil)
-      (scss-mode nil)
-      (sass-mode nil)
-      (markdown-mode nil)
-      (typescript-mode nil)
-      (csharp-mode nil)
+      web-mode
+      js2-mode
+      ac-js2
+      less-css-mode
+      scss-mode
+      sass-mode
+      markdown-mode
+      typescript-mode
+      csharp-mode
       ;Programming tools
-      (projectile nil)
-      (diff-hl nil)
+      projectile
+      diff-hl
       ;File-system
-      (ranger nil)
-      (neotree nil)
-      (ztree nil)
+      ranger
+      neotree
+      ztree
       ;Color themes
-      (material-theme nil)
-      (gruvbox-theme nil)
-      (green-phosphor-theme nil)
+      material-theme
+      gruvbox-theme
+      green-phosphor-theme
       ;myTerminal's packages
-      (theme-looper nil)
-      (meta-presenter nil)
-      (myterminal-controls nil)
+      theme-looper
+      meta-presenter
+      myterminal-controls
       ;Misc
-      (delight nil)
-      (volume nil)
+      delight
+      volume
       ;
       ;Full-mode packages
       ;
       ;Text-editing
-      (anzu t)
+      anzu
       ;Navigation
-      (ace-window t)
-      (buffer-move t)
+      ace-window
+      buffer-move
       ;Language modes
-      (haskell-mode t)
-      (latex-preview-pane t)
+      haskell-mode
+      latex-preview-pane
       ;Programming tools
-      (column-enforce-mode t)
-      (minimap t)
-      (indent-guide t)
-      (magit t)
-      (skewer-mode t)
-      (restclient t)
+      column-enforce-mode
+      minimap
+      indent-guide
+      magit
+      skewer-mode
+      restclient
       ;Super powers
-      (which-key t)
-      (smex t)
-      (counsel t)
-      (counsel-projectile t)
-      (ivy-hydra t)
+      which-key
+      smex
+      counsel
+      counsel-projectile
+      ivy-hydra
       ;Visual tweaks
-      (telephone-line t)
+      telephone-line
       ;Networking tools
-      (mew t)
-      (jabber t)
+      mew
+      jabber
       ;Misc
-      (golden-ratio t)
-      (marmalade-client t)))
+      golden-ratio
+      marmalade-client))
 
   (mapc (lambda (p)
-          (unless (package-installed-p (car p))
-            (package-install (car p))))
+          (unless (package-installed-p p)
+            (package-install p)))
         myTerminal/packages))
 
-(defun myTerminal/load-local-packages ()
+(defun myTerminal/packages/load-local-packages ()
   (add-to-list
    'load-path "~/.emacs.d/local-packages/")
 
@@ -92,7 +92,7 @@
   (require 'emacs-daily-events)
   (require 'emacs-home))
 
-(defun myTerminal/configure-basic-mode-packages ()
+(defun myTerminal/packages/configure-packages ()
   (ac-config-default)
 
   (add-hook 'prog-mode-hook
@@ -121,7 +121,7 @@
     "ace-jump-mode" 
     "Ace jump back:-"
     t)
-    
+
   (if (eq system-type
           'windows-nt)
       (setq projectile-indexing-method
@@ -275,11 +275,8 @@ With a prefix argument ARG prompts you for a directory on which to run search in
      ("]" "Increase transparency" transparency-increase)))
 
   (add-to-list 'custom-theme-load-path
-               "~/.emacs.d/other-plugins/replace-colorthemes"))
+               "~/.emacs.d/other-plugins/replace-colorthemes")
 
-(defun myTerminal/configure-full-mode-packages ()
-  (require 'alpha)
-  
   (add-hook 'emacs-lisp-mode-hook 
             'column-enforce-mode)
   (add-hook 'js2-mode-hook

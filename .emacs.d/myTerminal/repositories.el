@@ -1,4 +1,4 @@
-(defun myTerminal/set-up-repositories ()
+(defun myTerminal/repositories/set-up-repositories ()
   (require 'package)
 
   (add-to-list 'package-archives

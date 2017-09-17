@@ -1,4 +1,4 @@
-(defun myTerminal/configure-interface ()
+(defun myTerminal/interface/configure-interface ()
   (setq frame-title-format "emacs")
 
   (menu-bar-mode -1)
@@ -20,7 +20,7 @@
   (require 'zone)
   (setq zone-programs 
         [zone-pgm-putz-with-case])
-  (defun myTerminal/set-zoning ()
+  (defun myTerminal/interface/set-zoning ()
     "Sets zoning timeout"
     (interactive)
     (zone-when-idle 20)
