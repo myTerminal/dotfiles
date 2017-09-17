@@ -7,7 +7,7 @@
 
   (scroll-bar-mode -1)
 
-  (set-default 'cursor-type 
+  (set-default 'cursor-type
                'hbar)
 
   (set-face-attribute 'mode-line nil :box nil)
@@ -18,7 +18,7 @@
           '(default ((t (:family "Liberation Mono")))))))
 
   (require 'zone)
-  (setq zone-programs 
+  (setq zone-programs
         [zone-pgm-putz-with-case])
   (defun myTerminal/interface/set-zoning ()
     "Sets zoning timeout"

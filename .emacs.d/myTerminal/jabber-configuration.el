@@ -1,16 +1,16 @@
 (defun myTerminal/jabber/configure-jabber ()
   (setq jabber-account-list
-        '(("ismaila@citiusim.mumbai1.corp.citiustech.com" 
+        '(("ismaila@citiusim.mumbai1.corp.citiustech.com"
            (:network-server . "citiusim.mumbai1.corp.citiustech.com"))
-          ("team.terminal@gmail.com" 
+          ("team.terminal@gmail.com"
            (:network-server . "talk.google.com")
            (:connection-type . ssl))))
 
-  (setq jabber-alert-presence-message-function 
-        (lambda (who 
-                 oldstatus 
-                 newstatus 
-                 statustext) 
+  (setq jabber-alert-presence-message-function
+        (lambda (who
+                 oldstatus
+                 newstatus
+                 statustext)
           nil))
 
   (defun myTerminal/custom-notification-for-jabber
@@ -78,7 +78,7 @@
 
   (myTerminal/switch-to-visual-notification-for-jabber)
 
-  (add-hook 'focus-in-hook 
+  (add-hook 'focus-in-hook
             'myTerminal/switch-to-visual-notification-for-jabber)
-  (add-hook 'focus-out-hook 
+  (add-hook 'focus-out-hook
             'myTerminal/switch-to-taskbar-notification-for-jabber))

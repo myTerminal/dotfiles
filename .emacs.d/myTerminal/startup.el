@@ -1,4 +1,4 @@
-;Start in basic-mode
+;Configure Emacs
 (myTerminal/user/set-user-preferences)
 (myTerminal/repositories/set-up-repositories)
 (myTerminal/packages/fetch-remote-packages)

@@ -93,24 +93,24 @@
   (add-hook 'prog-mode-hook
             'outer-spaces-mode)
 
-  (add-hook 'js2-mode-hook 
+  (add-hook 'js2-mode-hook
             'ac-js2-mode)
 
-  (setq inferior-js-program-command 
+  (setq inferior-js-program-command
         "node --interactive")
 
   (global-undo-tree-mode)
 
-  (autoload 'markdown-mode 
+  (autoload 'markdown-mode
     "markdown-mode"
     "Major mode for editing Markdown files" t)
 
-  (autoload 'ace-jump-mode 
-    "ace-jump-mode" 
+  (autoload 'ace-jump-mode
+    "ace-jump-mode"
     "Emacs quick move minor mode"
     t)
-  (autoload 'ace-jump-mode-pop-mark 
-    "ace-jump-mode" 
+  (autoload 'ace-jump-mode-pop-mark
+    "ace-jump-mode"
     "Ace jump back:-"
     t)
 
@@ -269,7 +269,7 @@ With a prefix argument ARG prompts you for a directory on which to run search in
   (add-to-list 'custom-theme-load-path
                "~/.emacs.d/other-plugins/replace-colorthemes")
 
-  (add-hook 'emacs-lisp-mode-hook 
+  (add-hook 'emacs-lisp-mode-hook
             'column-enforce-mode)
   (add-hook 'js2-mode-hook
             'column-enforce-mode)
@@ -294,13 +294,13 @@ With a prefix argument ARG prompts you for a directory on which to run search in
         telephone-line-gradient)
   (telephone-line-mode t)
 
-  (add-hook 'haskell-mode-hook 
+  (add-hook 'haskell-mode-hook
             'turn-on-haskell-doc-mode)
-  (add-hook 'haskell-mode-hook 
+  (add-hook 'haskell-mode-hook
             'inf-haskell-mode)
-  (add-hook 'haskell-mode-hook 
+  (add-hook 'haskell-mode-hook
             'turn-on-haskell-indentation)
-  (add-to-list 'completion-ignored-extensions 
+  (add-to-list 'completion-ignored-extensions
                ".hi")
 
   (which-key-mode)
