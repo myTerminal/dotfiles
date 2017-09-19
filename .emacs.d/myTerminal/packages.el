@@ -82,7 +82,8 @@
   (require 'eagle-eye)
   (require 'emacs-visual-notifications)
   (require 'emacs-daily-events)
-  (require 'emacs-home))
+  (require 'emacs-home)
+  (require 'zone-quotes))
 
 (defun myTerminal/packages/configure-packages ()
   (ac-config-default)
