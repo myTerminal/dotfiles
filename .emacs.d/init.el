@@ -11,3 +11,5 @@
 (load-file "~/.emacs.d/myTerminal/key-bindings.el")
 (load-file "~/.emacs.d/myTerminal/local-configs.el")
 (load-file "~/.emacs.d/myTerminal/startup.el")
+
+(load-file "~/.emacs.d/myTerminal/_zone-quotes-masseffect.el")

@@ -23,8 +23,9 @@
   (defun myTerminal/interface/set-zoning ()
     "Sets zoning timeout"
     (interactive)
-    (zone-when-idle 20)
+    (zone-when-idle 60)
     (message "Zoning set"))
+  (myTerminal/interface/set-zoning)
 
   (column-number-mode)
 
