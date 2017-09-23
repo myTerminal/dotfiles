@@ -34,6 +34,7 @@ brew cask install \
      fman \
      diffmerge \
      clementine \
+     spotify \
      gimp \
      kid3 \
      handbrake \
