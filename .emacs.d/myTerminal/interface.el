@@ -25,7 +25,6 @@
     (interactive)
     (zone-when-idle 60)
     (message "Zoning set"))
-  (myTerminal/interface/set-zoning)
 
   (column-number-mode)
 
