@@ -41,4 +41,7 @@
   (windmove-default-keybindings)
 
   (setq org-hide-leading-stars
-        t))
+        t)
+  (setq org-todo-keywords
+        '((sequence "DEFERRED(r)" "TODO(t)" "BLOCKED(b)" "IN-PROGRESS(p)" "|"
+                    "ALMOST-THERE(a)" "DONE(d)" "CANCELLED(c)" "DELEGATED(g)"))))
