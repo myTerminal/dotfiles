@@ -4,7 +4,7 @@
 
 ;; Author: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Keywords: project, convenience
-;; Package-Version: 20170928.2035
+;; Package-Version: 20171002.1121
 ;; Maintainer: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Created: 2017/09/28
 ;; Package-Requires: ((emacs "24") (cl-lib "0.5"))
@@ -86,15 +86,8 @@ With a prefix argument ARG prompts you for a directory on which to run search in
                                                  lines)))))
                      file-to-search))
      :action `(lambda (item)
-                (let ((file (car (split-string item " => line ")))
-                      (line-number (string-to-number (cadr (split-string item " => line ")))))
-                  (find-file (expand-file-name file ,(projectile-project-root)))
-                  (beginning-of-buffer)
-                  (forward-line (1- line-number))
-                  (search-forward text-to-search)
-                  (set-mark-command nil)
-                  (search-backward text-to-search)
-                  (run-hooks 'projectile-find-file-hook))))))
+                (projectile-extras--move-to-word-in-result-item item
+                                                                ,text-to-search)))))
 
 ;;;###autoload
 (defun projectile-find-all-references (&optional arg)
@@ -125,15 +118,21 @@ With a prefix argument ARG prompts you for a directory on which to run search in
                                                  lines)))))
                      file-to-search))
      :action `(lambda (item)
-                (let ((file (car (split-string item " => line ")))
-                      (line-number (string-to-number (cadr (split-string item " => line ")))))
-                  (find-file (expand-file-name file ,(projectile-project-root)))
-                  (beginning-of-buffer)
-                  (forward-line (1- line-number))
-                  (search-forward text-to-search)
-                  (set-mark-command nil)
-                  (search-backward text-to-search)
-                  (run-hooks 'projectile-find-file-hook))))))
+                (projectile-extras--move-to-word-in-result-item item
+                                                                ,text-to-search)))))
+
+(defun projectile-extras--move-to-word-in-result-item (result-item target-word)
+  (let ((file (car (split-string result-item
+                                 " => line ")))
+        (line-number (string-to-number (cadr (split-string result-item
+                                                           " => line ")))))
+    (find-file (expand-file-name file (projectile-project-root)))
+    (beginning-of-buffer)
+    (forward-line (1- line-number))
+    (search-forward target-word)
+    (set-mark-command nil)
+    (search-backward target-word)
+    (run-hooks 'projectile-find-file-hook)))
 
 (provide 'projectile-extras)
 
