@@ -2,8 +2,8 @@
 
 # Add RPM Fusion repos
 sudo dnf install \
-     https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-25.noarch.rpm \
-     https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-25.noarch.rpm
+     https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-27.noarch.rpm \
+     https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-27.noarch.rpm
 
 # Update installed packages
 sudo dnf update
