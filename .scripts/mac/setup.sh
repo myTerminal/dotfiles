@@ -25,6 +25,7 @@ brew cask install \
      evernote \
      libreoffice \
      filezilla \
+     transmission \
      mounty \
      virtualbox \
      tunnelbear \
