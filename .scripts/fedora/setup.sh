@@ -8,9 +8,11 @@ sudo dnf install \
 # Update installed packages
 sudo dnf update
 
+# Install google-chrome web-browser
+sudo dnf install https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+
 # Install packages
 sudo dnf install \
-     google-chrome \
      i3 \
      i3status \
      i3lock \
