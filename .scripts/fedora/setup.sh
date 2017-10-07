@@ -51,5 +51,5 @@ sudo dnf install \
 
 # Set up group for docker
 sudo groupadd docker
-sudo gpasswd -a ${USERNAME} docker
+sudo gpasswd -a $USER docker
 sudo service docker restart
