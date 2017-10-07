@@ -11,39 +11,60 @@ sudo dnf update
 # Install google-chrome web-browser
 sudo dnf install https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 
-# Install packages
+# Install i3 and depdendencies
 sudo dnf install \
      i3 \
      i3status \
      i3lock \
+     feh
+
+# Install essential packages
+sudo dnf install \
      terminology \
-     pcmanfm \
      emacs \
+     pcmanfm \
      git \
      npm \
      udisks \
-     gstreamer \
-     transmission \
+     gparted
+
+# Install network packages
+sudo dnf install \
      dropbox \
-     gparted \
+     transmission \
+     youtube-dl
+
+# Install multimedia packages
+sudo dnf install \
+     gstreamer \
+     vlc \
+     clementine \
+     audacity \
+     gimp \
+     shotwell \
+     kodi \
+     openshot \
+     easytag
+
+# Install gaming packages
+sudo dnf install \
+     steam
+
+# Install screencast packages
+sudo dnf install \
+     vokoscreen \
+     key-mon
+
+# Install misc packages
+sudo dnf install \
      libreoffice \
      VirtualBox \
-     audacity \
-     vlc \
-     gimp \
-     clementine \
      docker \
-     gource \
-     feh \
-     shotwell \
-     openshot \
-     kodi \
      goldendict \
-     vokoscreen \
-     calibre \
-     easytag \
-     key-mon \
-     youtube-dl \
+     calibre
+
+# Install fonts
+sudo dnf install \
      levien-inconsolata-fonts \
      liberation-mono-fonts \
      google-droid-sans-mono-fonts \
