@@ -4,7 +4,7 @@
 
 ;; Author: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Keywords: fun, sounds
-;; Package-Version: 20161211.1530
+;; Package-Version: 20171017.1215
 ;; Maintainer: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Created: 2016/12/11
 ;; Package-Requires: ((sound-wav "20160725.724"))
@@ -63,6 +63,15 @@
 (defvar emacs-sounds-find-file-sound
   nil)
 
+(defun emacs-sounds-play-ring-bell-sound ()
+  (emacs-sounds--play-sound emacs-sounds-bell-sound))
+
+(defun emacs-sounds-play-window-change-sound ()
+  (emacs-sounds--play-sound emacs-sounds-window-change-sound))
+
+(defun emacs-sounds-play-find-file-sound ()
+  (emacs-sounds--play-sound emacs-sounds-find-file-sound))
+
 ;;;###autoload
 (define-minor-mode emacs-sounds-mode
   "Toggle emacs-sounds-mode"
@@ -71,25 +80,29 @@
   :lighter " emacs-sounds"
   (cond (emacs-sounds-mode (progn
                              (setq ring-bell-function
-                                   (lambda ()
-                                     (emacs-sounds--play-sound emacs-sounds-bell-sound)))
+                                   'emacs-sounds-play-ring-bell-sound)
+
+                             (add-hook 'window-configuration-change-hook
+                                       'emacs-sounds-play-window-change-sound)
+
+                             (add-hook 'find-file-hook
+                                       'emacs-sounds-play-find-file-sound)
+
                              (message "Emacs has just turned a bit noisier :)")))
         (t (progn
              (setq ring-bell-function
                    nil)
-             (message "Emacs is now back to normal")))))
 
-(add-hook 'window-configuration-change-hook
-          (lambda ()
-            (emacs-sounds--play-sound emacs-sounds-window-change-sound)))
+             (remove-hook 'window-configuration-change-hook
+                          'emacs-sounds-play-window-change-sound)
 
-(add-hook 'find-file-hook
-          (lambda ()
-            (emacs-sounds--play-sound emacs-sounds-find-file-sound)))
+             (remove-hook 'find-file-hook
+                          'emacs-sounds-play-find-file-sound)
+
+             (message "Emacs is now quite again!")))))
 
 (defun emacs-sounds--play-sound (sound-file)
-  (cond ((and emacs-sounds-mode
-              (not (null sound-file))) (sound-wav-play sound-file))))
+  (cond ((not (null sound-file)) (sound-wav-play sound-file))))
 
 (provide 'emacs-sounds)
 
