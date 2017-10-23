@@ -5,7 +5,7 @@
 Contains the following:
 
 1. [Git](https://git-scm.com) configuration
-2. Bash configuration for [Linux](https://getfedora.org) and [Mac](https://www.apple.com/macos) including:
+2. [Bash](https://www.gnu.org/software/bash) configuration for [Linux](https://getfedora.org) and [Mac](https://www.apple.com/macos) including:
     - Setup scripts for Linux and Mac
     - A few utility shell scripts
 3. [Emacs](https://www.gnu.org/software/emacs) configuration including:
