@@ -15,34 +15,49 @@ brew install \
      node \
      youtube-dl
 
-# Install packages from brew cask
+# Install essential packages from brew cask
+brew cask install \
+     google-chrome \
+     iterm2 \
+     mounty
+
+# Install network packages from brew cask
 brew cask install \
      dropbox \
      google-drive \
      megasync \
-     google-chrome \
-     telegram \
-     evernote \
-     libreoffice \
      filezilla \
      transmission \
-     mounty \
-     virtualbox \
      tunnelbear \
-     android-file-transfer \
-     docker \
-     iterm2 \
-     fman \
-     diffmerge \
-     clementine \
-     spotify \
-     gimp \
-     kid3 \
-     handbrake \
+     telegram \
+     evernote \
+     spotify
+
+# Install multimedia packages from brew cask
+brew cask install \
      vlc \
-     keycastr \
+     clementine \
+     gimp \
+     handbrake \
+     kid3
+
+# Install gaming packages from brew cask
+brew cask install \
      steam \
      origin
+
+# Install screencast packages from brew cask
+brew cask install \
+     keycastr
+
+# Install misc packages from brew cask
+brew cask install \
+     libreoffice \
+     virtualbox \
+     docker \
+     fman \
+     diffmerge \
+     android-file-transfer
 
 # Manual steps
 # - Install Emacs from https://emacsformacosx.com
