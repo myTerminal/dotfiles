@@ -22,6 +22,8 @@
     ("M-<up>" myTerminal/misc/move-line-up)
     ("C-=" myTerminal/misc/eval-and-replace)
     ("C-x C-!" myTerminal/misc/remove-formatting)
+    ("C-x t" emacs-new-buffer-now)
+    ("C-x y" emacs-new-buffer-as)
     ("C-c c M-x" execute-extended-command)
     ("C-S-<up>" buf-move-up)
     ("C-S-<down>" buf-move-down)
