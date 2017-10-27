@@ -25,6 +25,12 @@
                                  (message "File reloaded")))
         (t (message "You're not editing a file!"))))
 
+(defun myTerminal/misc/remove-formatting (text)
+  "Removes formatting of the supplied text"
+  (interactive "sEnter text: ")
+  (kill-new text)
+  (message "Formatting removed, text copied to clipboard!"))
+
 (defun myTerminal/misc/print-welcome-message ()
   (princ (cl-concatenate 'string
                          "Started up in "

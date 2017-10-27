@@ -21,6 +21,7 @@
     ("M-<down>" myTerminal/misc/move-line-down)
     ("M-<up>" myTerminal/misc/move-line-up)
     ("C-=" myTerminal/misc/eval-and-replace)
+    ("C-x C-!" myTerminal/misc/remove-formatting)
     ("C-c c M-x" execute-extended-command)
     ("C-S-<up>" buf-move-up)
     ("C-S-<down>" buf-move-down)
