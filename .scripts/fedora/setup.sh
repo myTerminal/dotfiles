@@ -31,6 +31,7 @@ sudo dnf install \
 # Install network packages
 sudo dnf install \
      dropbox \
+     filezilla \
      transmission \
      youtube-dl
 
