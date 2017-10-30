@@ -17,6 +17,7 @@ brew install \
 
 # Install essential packages from brew cask
 brew cask install \
+     emacs \
      google-chrome \
      iterm2 \
      mounty
@@ -60,5 +61,4 @@ brew cask install \
      android-file-transfer
 
 # Manual steps
-# - Install Emacs from https://emacsformacosx.com
 # - Install pCloud Drive from https://www.pcloud.com
