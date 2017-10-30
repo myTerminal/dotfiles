@@ -55,6 +55,7 @@ brew cask install \
 brew cask install \
      libreoffice \
      virtualbox \
+     fish \
      docker \
      fman \
      diffmerge \
