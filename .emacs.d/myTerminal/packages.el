@@ -128,6 +128,9 @@
                       (neo-global--window-exists-p))
                  (neotree-projectile-action))
                 (t (counsel-projectile)))))
+  (setq projectile-mode-line
+        '(:eval (format " Project:%s"
+                        (projectile-project-name))))
   (projectile-mode)
 
   (setq ibuffer-formats
