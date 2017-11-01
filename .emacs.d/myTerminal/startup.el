@@ -1,4 +1,4 @@
-;Configure Emacs
+;;Configure session
 (myTerminal/user/set-user-preferences)
 (myTerminal/repositories/set-up-repositories)
 (myTerminal/packages/fetch-remote-packages)
@@ -10,7 +10,7 @@
 (myTerminal/key-bindings/apply-keyboard-bindings)
 (myTerminal/misc/print-welcome-message)
 
-;Load local configuration
+;;Load local configuration
 (theme-looper-enable-theme myTerminal/local-configs/color-theme)
 (custom-set-faces
  `(default ((t (:height ,myTerminal/local-configs/font-height)))))

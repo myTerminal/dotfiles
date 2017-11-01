@@ -3,19 +3,19 @@
     (package-refresh-contents))
 
   (defvar myTerminal/packages
-    '(;Text-editing
+    '(;;Text-editing
       multiple-cursors
       auto-complete
       ace-jump-mode
       nlinum
       anzu
       undo-tree
-      ;Navigation
+      ;;Navigation
       ace-window
       workgroups2
       buffer-move
       ibuffer-vc
-      ;Language modes
+      ;;Language modes
       web-mode
       js2-mode
       rjsx-mode
@@ -28,7 +28,7 @@
       haskell-mode
       csharp-mode
       latex-preview-pane
-      ;Programming tools
+      ;;Programming tools
       projectile
       diff-hl
       column-enforce-mode
@@ -37,30 +37,30 @@
       minimap
       skewer-mode
       restclient
-      ;File-system
+      ;;File-system
       ranger
       neotree
       ztree
-      ;Color themes
+      ;;Color themes
       material-theme
       gruvbox-theme
       green-phosphor-theme
-      ;Super powers
+      ;;Super powers
       which-key
       smex
       counsel
       counsel-projectile
       ivy-hydra
-      ;Visual tweaks
+      ;;Visual tweaks
       telephone-line
-      ;Networking tools
+      ;;Networking tools
       mew
       jabber
-      ;myTerminal's packages
+      ;;myTerminal's packages
       theme-looper
       meta-presenter
       myterminal-controls
-      ;Misc
+      ;;Misc
       delight
       golden-ratio
       volume
