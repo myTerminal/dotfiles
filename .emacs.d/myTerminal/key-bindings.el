@@ -20,6 +20,8 @@
     ("C-*" eagle-eye-mode)
     ("M-<down>" myTerminal/misc/move-line-down)
     ("M-<up>" myTerminal/misc/move-line-up)
+    ("C-<backspace>" myTerminal/misc/delete-word-backward)
+    ("M-<backspace>" myTerminal/misc/delete-word-backward)
     ("C-=" myTerminal/misc/eval-and-replace)
     ("C-x C-!" myTerminal/misc/remove-formatting)
     ("C-x t" emacs-new-buffer-now)
