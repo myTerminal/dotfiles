@@ -63,3 +63,4 @@ brew cask install \
 
 # Manual steps
 # - Install pCloud Drive from https://www.pcloud.com
+# - Install Audacity from https://www.fosshub.com/Audacity.html/audacity-macos-2.2.0.dmg
