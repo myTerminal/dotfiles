@@ -1,3 +1,9 @@
+(defun myTerminal/misc/change-line-endings-to-unix ()
+  "Change line-endings of current file to utf-8-unix."
+  (interactive)
+  (set-buffer-file-coding-system
+    'utf-8-unix))
+
 (defun myTerminal/misc/move-line-up ()
   "Move the current line up by one step."
   (interactive)

@@ -13,5 +13,7 @@
   (setq initial-scratch-message
         "Welcome myTerminal!\n\n")
 
+  (prefer-coding-system 'utf-8-unix)
+
   (setq-default indent-tabs-mode
                 nil))
