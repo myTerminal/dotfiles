@@ -199,11 +199,6 @@
   (add-to-list 'custom-theme-load-path
                "~/.emacs.d/other-plugins/replace-colorthemes")
 
-  (add-hook 'emacs-lisp-mode-hook
-            'column-enforce-mode)
-  (add-hook 'js2-mode-hook
-            'column-enforce-mode)
-
   (global-anzu-mode +1)
 
   (telephone-line-mode t)
