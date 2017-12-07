@@ -1,21 +1,25 @@
 # *
 *
 
+# Config
+!.config
+
 # Emacs
 !.emacs.d/myTerminal
 !.emacs.d/other-plugins
 !.emacs.d/init.el
 !.mew.el
 
-# i3
-!.config/i3
-
 # Git
 !.gitconfig
 
 # Bash
 !.bash_profile
+!.bashrc
 !.scripts
+
+# myterminal
+!myterminal-configs.json
 
 # Misc
 !/LICENSE
