@@ -32,6 +32,7 @@ brew cask install \
      tunnelbear \
      telegram \
      evernote \
+     discord \
      spotify
 
 # Install multimedia packages from brew cask
