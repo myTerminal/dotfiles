@@ -1,0 +1,85 @@
+{
+    "title": "All",
+    "commands": {
+        "m": {
+            "title": "Mac commands",
+            "commands": {
+                "u": {
+                    "title": "Update brew packages",
+                    "task": "brew update"
+                }
+            }
+        },
+        "l": {
+            "title": "Linux commands",
+            "commands": {
+                "u": {
+                    "title": "Update dnf packages",
+                    "task": "sudo dnf update"
+                },
+                "w": {
+                    "title": "Wifi",
+                    "commands": {
+                        "c": {
+                            "title": "Connect",
+                            "task": "nmcli d wifi"
+                        },
+                        "r": {
+                            "title": "Reset",
+                            "task": "sh /home/ismail/.scripts/fedora/network-reconnect.sh"
+                        }
+                    }
+                },
+                "d": {
+                    "title": "Detach",
+                    "commands": {
+                        "u": {
+                            "title": "USB device",
+                            "task": "udisks --detach",
+                            "params": [
+                                "device"
+                            ]
+                        },
+                        "b": {
+                            "title": "/dev/sdb",
+                            "task": "udisks --detach /dev/sdb"
+                        }
+                    }
+                }
+            }
+        },
+        "s": {
+            "title": "System",
+            "commands": {
+                "s": {
+                    "title": "Shutdown (Linux/Mac)",
+                    "task": "sudo shutdown",
+                    "params": [
+                        "time-to-shutdown-in-seconds"
+                    ]
+                },
+                "r": {
+                    "title": "Reboot (Linux/Mac)",
+                    "task": "sudo reboot",
+                    "params": [
+                        "time-to-reboot-in-seconds"
+                    ]
+                },
+                "x": {
+                    "title": "Shutdown (Windows)",
+                    "task": "shutdown -s -t",
+                    "params": [
+                        "time-to-shutdown-in-seconds"
+                    ]
+                },
+                "z": {
+                    "title": "Reboot (Windows)",
+                    "task": "shutdown -r -t",
+                    "params": [
+                        "time-to-reboot-in-seconds"
+                    ]
+                }
+            }
+        }
+    }
+}
