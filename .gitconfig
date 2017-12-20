@@ -1,6 +1,6 @@
 [core]
-        visual = 'emacs' --no-splash -q
-        editor = 'emacs' --no-splash -q
+        visual = 'emacs' --no-splash -q -nw
+        editor = 'emacs' --no-splash -q -nw
 [user]
 	name = myTerminal
 	email = team.terminal@gmail.com
