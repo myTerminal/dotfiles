@@ -250,5 +250,5 @@
         t)
   (setq projectile-completion-system
         'ivy)
-  (counsel-projectile-on))
+  (counsel-projectile-mode))
 
