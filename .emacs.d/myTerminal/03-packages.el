@@ -86,6 +86,7 @@
   (require 'emacs-home)
   (require 'zone-quotes)
   (require 'emacs-new-buffer)
+  (require 'window-shaper)
   (require 'projectile-extras))
 
 (defun myTerminal/packages/configure-packages ()

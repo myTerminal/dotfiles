@@ -26,6 +26,7 @@
     ("C-x C-!" myTerminal/misc/remove-formatting)
     ("C-x t" emacs-new-buffer-now)
     ("C-x y" emacs-new-buffer-as)
+    ("C-x C-%" window-shaper-mode)
     ("C-c c M-x" execute-extended-command)
     ("C-S-<up>" buf-move-up)
     ("C-S-<down>" buf-move-down)
