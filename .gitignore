@@ -6,7 +6,9 @@
 
 # Emacs
 !.emacs.d/myTerminal
+!.emacs.d/local-packages
 !.emacs.d/other-plugins
+!.emacs.d/sounds
 !.emacs.d/init.el
 !.mew.el
 
