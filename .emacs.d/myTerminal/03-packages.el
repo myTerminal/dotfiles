@@ -10,6 +10,7 @@
       nlinum
       anzu
       undo-tree
+      sublimity
       ;;Navigation
       ace-window
       workgroups2
@@ -105,6 +106,9 @@
         "node --interactive")
 
   (global-undo-tree-mode)
+
+  (require 'sublimity-scroll)
+  (sublimity-mode)
 
   (autoload 'markdown-mode
     "markdown-mode"
