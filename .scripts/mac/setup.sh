@@ -56,6 +56,7 @@ brew cask install \
 brew cask install \
      libreoffice \
      virtualbox \
+     crossover \
      fish \
      docker \
      fman \

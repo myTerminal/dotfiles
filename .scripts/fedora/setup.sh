@@ -65,6 +65,9 @@ sudo dnf install \
      goldendict \
      calibre
 
+# Install crossover from URL
+sudo dnf install http://crossover.codeweavers.com/redirect/crossover.rpm
+
 # Install fonts
 sudo dnf install \
      levien-inconsolata-fonts \
