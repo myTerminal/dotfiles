@@ -19,7 +19,6 @@
       ;;Language modes
       web-mode
       js2-mode
-      rjsx-mode
       ac-js2
       less-css-mode
       scss-mode

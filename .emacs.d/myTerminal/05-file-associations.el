@@ -8,9 +8,6 @@
                '("\\.js\\'" . js2-mode))
 
   (add-to-list 'auto-mode-alist
-               '("\\.jsx\\'" . rjsx-mode))
-
-  (add-to-list 'auto-mode-alist
                '("\\.scss\\'" . scss-mode))
   (add-to-list 'auto-mode-alist
                '("\\.sass\\'" . sass-mode))
