@@ -43,6 +43,7 @@
       ztree
       ;;Color themes
       material-theme
+      hemisu-theme
       gruvbox-theme
       green-phosphor-theme
       ;;Super powers
@@ -188,8 +189,9 @@
   (theme-looper-set-theme-set '(material
                                 railscast
                                 gruvbox
-                                green-phosphor
                                 subtle-hacker
+                                green-phosphor
+                                hemisu-dark
                                 leuven))
 
   (myterminal-controls-set-controls-data
