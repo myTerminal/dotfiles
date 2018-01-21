@@ -9,7 +9,11 @@
 (load-file "~/.emacs.d/myTerminal/06-interface.el")
 (load-file "~/.emacs.d/myTerminal/07-misc.el")
 (load-file "~/.emacs.d/myTerminal/08-key-bindings.el")
-(load-file "~/.emacs.d/myTerminal/09-local-configs.el")
+
+(if (file-exists-p "~/.emacs.d/local-configs.el")
+    (load-file "~/.emacs.d/local-configs.el")
+  (load-file "~/.emacs.d/myTerminal/09-default-local-configs.el"))
+
 (load-file "~/.emacs.d/myTerminal/10-startup.el")
 
 (load-file "~/.emacs.d/myTerminal/_zone-quotes-masseffect.el")

@@ -1,8 +1,8 @@
 (defvar myTerminal/local-configs/color-theme
-  'gruvbox)
+  'railscast)
 
 (defvar myTerminal/local-configs/font-height
-  170)
+  150)
 
 (defvar myTerminal/local-configs/frame-dimensions
   (cons 100
