@@ -19,6 +19,7 @@ brew install \
 brew cask install \
      emacs \
      google-chrome \
+     alfred \
      iterm2 \
      mounty
 
@@ -50,6 +51,7 @@ brew cask install \
 
 # Install screencast packages from brew cask
 brew cask install \
+     licecap \
      keycastr
 
 # Install misc packages from brew cask
