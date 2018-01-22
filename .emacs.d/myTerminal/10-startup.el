@@ -1,4 +1,5 @@
 ;;Configure session
+(myTerminal/system/set-system-preferences)
 (myTerminal/user/set-user-preferences)
 (myTerminal/repositories/set-up-repositories)
 (myTerminal/packages/fetch-remote-packages)

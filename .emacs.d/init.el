@@ -1,6 +1,7 @@
 (defvar myTerminal/invokation-time
   (current-time))
 
+(load-file "~/.emacs.d/myTerminal/00-system.el")
 (load-file "~/.emacs.d/myTerminal/01-user.el")
 (load-file "~/.emacs.d/myTerminal/02-repositories.el")
 (load-file "~/.emacs.d/myTerminal/03-packages.el")
