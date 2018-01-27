@@ -79,3 +79,6 @@ sudo dnf install \
 sudo groupadd docker
 sudo gpasswd -a $USER docker
 sudo service docker restart
+
+# Manual steps
+# - Install hyper from https://releases.hyper.is/download/rpm

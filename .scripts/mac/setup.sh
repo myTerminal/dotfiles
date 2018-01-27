@@ -21,6 +21,7 @@ brew cask install \
      google-chrome \
      alfred \
      iterm2 \
+     hyper \
      mounty
 
 # Install network packages from brew cask
