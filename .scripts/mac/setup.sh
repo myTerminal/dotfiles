@@ -65,6 +65,13 @@ brew cask install \
      diffmerge \
      android-file-transfer
 
+# Install fonts
+brew cask install \
+     font-inconsolata \
+     font-liberation-sans \
+     font-roboto-mono \
+     caskroom/fonts/font-fira-code
+
 # Manual steps
 # - Install pCloud Drive from https://www.pcloud.com
 # - Install Audacity from https://www.fosshub.com/Audacity.html/audacity-macos-2.2.0.dmg

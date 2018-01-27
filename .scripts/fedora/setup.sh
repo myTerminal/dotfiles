@@ -72,8 +72,8 @@ sudo dnf install http://crossover.codeweavers.com/redirect/crossover.rpm
 sudo dnf install \
      levien-inconsolata-fonts \
      liberation-mono-fonts \
-     google-droid-sans-mono-fonts \
-     google-roboto-mono-fonts
+     google-roboto-mono-fonts \
+     google-droid-sans-mono-fonts
 
 # Set up group for docker
 sudo groupadd docker
