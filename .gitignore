@@ -1,6 +1,15 @@
 # *
 *
 
+# Git
+!.gitconfig
+!.gitignore_global
+
+# Bash
+!.bash_profile
+!.bashrc
+!.scripts
+
 # Config
 !.config
 
@@ -12,14 +21,8 @@
 !.emacs.d/init.el
 !.mew.el
 
-# Git
-!.gitconfig
-!.gitignore_global
-
-# Bash
-!.bash_profile
-!.bashrc
-!.scripts
+# Hyper
+!.hyper.js
 
 # myterminal
 !myterminal-configs.json
