@@ -1,4 +1,5 @@
 [core]
+        excludesfile = ~/.gitignore_global
         visual = 'emacs' --no-splash -q -nw
         editor = 'emacs' --no-splash -q -nw
 [user]
