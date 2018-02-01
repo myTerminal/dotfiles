@@ -57,25 +57,15 @@ module.exports = {
     },
 
     plugins: [
-        //// Productivity
         // 'hyperline',
-        // 'hypercwd',
+        'hypercwd',
         // 'hyperterm-visor',
-        // 'hyper-statusline',
-        // 'hyper-quit',
-
-        // Customization
-        'hyper-border',
-
-        // Fun
+        'hyper-statusline',
+        'hyper-quit',
         'hyperpower',
-        'hyper-cat',
         'gitrocket'
     ],
-    localPlugins: [],
+    localPlugins: []
 
     // Plugins configuration
-    visor: {
-        hotkey: 'Ctrl+`'
-    }
 };
