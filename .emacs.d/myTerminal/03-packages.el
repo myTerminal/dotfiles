@@ -11,6 +11,7 @@
       anzu
       undo-tree
       sublimity
+      rainbow-mode
       ;;Navigation
       ace-window
       workgroups2
