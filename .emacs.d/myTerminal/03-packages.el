@@ -185,7 +185,9 @@
              (emacs-daily-events-global-mode " (!)"
                                              emacs-daily-events)
              (outer-spaces-mode " _a_"
-                                outer-spaces)))
+                                outer-spaces)
+             (hi-lock-mode nil
+                           hi-lock)))
 
   (theme-looper-set-theme-set '(material
                                 railscast
