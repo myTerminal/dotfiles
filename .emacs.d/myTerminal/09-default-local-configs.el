@@ -1,5 +1,5 @@
 (defvar myTerminal/local-configs/color-theme
-  'railscast)
+  'overcast)
 
 (defvar myTerminal/local-configs/font-height
   150)

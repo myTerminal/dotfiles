@@ -45,8 +45,8 @@
       ;;Color themes
       material-theme
       hemisu-theme
-      gruvbox-theme
       green-phosphor-theme
+      overcast-theme
       ;;Super powers
       which-key
       smex
@@ -189,10 +189,8 @@
              (hi-lock-mode nil
                            hi-lock)))
 
-  (theme-looper-set-theme-set '(material
-                                railscast
-                                gruvbox
-                                subtle-hacker
+  (theme-looper-set-theme-set '(overcast
+                                material
                                 green-phosphor
                                 hemisu-dark
                                 leuven))
