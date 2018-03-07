@@ -57,14 +57,23 @@ module.exports = {
     },
 
     plugins: [
-        // 'hyperline',
+        // --- Productivity ---
         'hypercwd',
-        // 'hyperterm-visor',
+        //'hyperterm-visor',
         'hyper-statusline',
+        'hyperterm-summon',
         'hyper-quit',
+        // --- Customization ---
+        // (none)
+        // --- Development ---
+        // (none)
+        // --- Fun ---
         'hyperpower',
         'gitrocket',
-        'hyperatompunk'
+        'hypergravity',
+        'space-pull',
+        // --- Themes ---
+        'hyper-monokai-deluxe'
     ],
     localPlugins: []
 
