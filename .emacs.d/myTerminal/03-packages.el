@@ -87,6 +87,7 @@
   (require 'emacs-daily-events)
   (require 'emacs-home)
   (require 'zone-quotes)
+  (require 'zone-tunnels)
   (require 'emacs-new-buffer)
   (require 'window-shaper)
   (require 'projectile-extras))
