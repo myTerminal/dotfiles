@@ -4,7 +4,7 @@ module.exports = {
     config: {
         updateChannel: 'stable',
 
-        fontSize: 12,
+        fontSize: 16,
         fontFamily: 'Fira Code, Liberation Mono, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
         cursorColor: 'rgba(248,28,229,0.8)',
@@ -73,7 +73,7 @@ module.exports = {
         'hypergravity',
         'space-pull',
         // --- Themes ---
-        'hyper-monokai-deluxe'
+        'hyper-monokai-vibrancy'
     ],
     localPlugins: []
 
