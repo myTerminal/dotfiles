@@ -14,6 +14,12 @@
 ;;Load local configuration
 (theme-looper-enable-theme myTerminal/local-configs/color-theme)
 (custom-set-faces
+ `(default ((t (:family ,myTerminal/local-configs/font-family-default)))))
+(add-hook 'prog-mode-hook
+          (lambda ()
+            (setq buffer-face-mode-face `(:family ,myTerminal/local-configs/font-family-programming))
+            (buffer-face-mode)))
+(custom-set-faces
  `(default ((t (:height ,myTerminal/local-configs/font-height)))))
 (set-frame-size (selected-frame)
                 (car myTerminal/local-configs/frame-dimensions)

@@ -1,6 +1,12 @@
 (defvar myTerminal/local-configs/color-theme
   'overcast)
 
+(defvar myTerminal/local-configs/font-family-default
+  "Liberation Mono")
+
+(defvar myTerminal/local-configs/font-family-programming
+  "Fira Code")
+
 (defvar myTerminal/local-configs/font-height
   150)
 

@@ -12,8 +12,7 @@
 
   (set-face-attribute 'mode-line nil :box nil)
 
-  (custom-set-faces
-   '(default ((t (:family "Fira Code")))))
+  ;; Setup Fira Code ligatures
   (let ((alist '((33 . ".\\(?:\\(?:==\\|!!\\)\\|[!=]\\)")
                  (35 . ".\\(?:###\\|##\\|_(\\|[#(?[_{]\\)")
                  (36 . ".\\(?:>\\)")
