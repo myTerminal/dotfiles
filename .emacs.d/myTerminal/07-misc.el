@@ -55,9 +55,3 @@
                          (format-time-string "%d %B %Y")
                          " and it looks like a productive day, so make it count!")
          (get-buffer-create (current-buffer))))
-
-(define-minor-mode halal-mode
-  "Toggle halal-mode"
-  :init-value nil
-  :lighter " halal"
-  :keymap nil)

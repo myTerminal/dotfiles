@@ -33,7 +33,6 @@
     ("C-S-<left>" buf-move-left)
     ("C-S-<right>" buf-move-right)
     ("<f5>" myTerminal/misc/reload-current-file)
-    ("C-x C-/" halal-mode)
     ("C-." emacs-home-show)
     ("C-;" ace-window)
     ("C-M-)" transparency-increase)
