@@ -8,6 +8,9 @@
   (setq auto-save-default
         nil)
 
+  (setq kill-whole-line
+        t)
+
   (setq initial-buffer-choice
         t)
   (setq initial-scratch-message
