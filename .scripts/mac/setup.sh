@@ -48,7 +48,8 @@ brew cask install \
 # Install gaming packages from brew cask
 brew cask install \
      steam \
-     origin
+     origin \
+     sony-remoteplay
 
 # Install screencast packages from brew cask
 brew cask install \
