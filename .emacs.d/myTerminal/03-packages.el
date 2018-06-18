@@ -24,6 +24,7 @@
       less-css-mode
       scss-mode
       sass-mode
+      vue-mode
       markdown-mode
       typescript-mode
       haskell-mode
