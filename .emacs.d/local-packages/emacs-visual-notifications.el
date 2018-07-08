@@ -4,7 +4,7 @@
 
 ;; Author: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Keywords: library
-;; Package-Version: 20170908.2035
+;; Package-Version: 20180707.2135
 ;; Maintainer: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Created: 2017/09/07
 ;; Package-Requires: ((emacs "24") (cl-lib "0.5"))
@@ -90,7 +90,7 @@
                        (+ duration-on duration-off)
                        (lambda (x)
                          (emacs-visual-notifications--flash-screen duration-on)
-                         (incf counter)
+                         (cl-incf counter)
                          (cond ((= counter
                                    count) (cancel-timer timer))))
                        t))))
