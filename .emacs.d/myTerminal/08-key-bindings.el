@@ -36,8 +36,8 @@
     ("C-<" ace-jump-mode-pop-mark)
     ("C-\," neotree-toggle)
     ("C-x p" projectile-mode)
-    ("C-c p s o" projectile-find-all-occurrences)
-    ("C-c p s f" projectile-find-all-references)
+    ("C-c C-p s o" projectile-find-all-occurrences)
+    ("C-c C-p s f" projectile-find-all-references)
     ("C-\\" wg-switch-to-previous-workgroup)
     ;;Swanking
     ("C-M-)" transparency-increase)
