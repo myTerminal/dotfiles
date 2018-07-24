@@ -4,6 +4,9 @@ cd $1
 for i in `ls $1`;
 do
     cd $i
-    git pull origin master
+    echo ""
+    echo + $i
+    git pull
     cd ..;
 done
+echo ""
