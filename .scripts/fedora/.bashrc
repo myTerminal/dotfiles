@@ -15,6 +15,8 @@ alias detach-sdb="udisks --detach /dev/sdb"
 
 alias start-keymon="key-mon --key-timeout=1.5 --no-press-fadeout=2 --old-keys=5"
 
-alias shutdown="sudo shutdown 0"
-alias reboot="sudo reboot 0"
-alias suspend="systemctl suspend"
+alias system-update-packages="sudo dnf update"
+
+alias system-shutdown="sudo shutdown 0"
+alias system-reboot="sudo reboot 0"
+alias system-suspend="systemctl suspend"
