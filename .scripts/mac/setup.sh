@@ -41,6 +41,7 @@ brew cask install \
 brew cask install \
      vlc \
      clementine \
+     xnviewmp \
      gimp \
      handbrake \
      kid3
