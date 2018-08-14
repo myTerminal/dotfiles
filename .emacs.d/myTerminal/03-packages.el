@@ -261,5 +261,8 @@
         t)
   (setq projectile-completion-system
         'ivy)
+  ;;Temporary fix for counsel-projectile
+  (setq projectile-keymap-prefix
+        (kbd "C-c C-p"))
   (counsel-projectile-mode))
 
