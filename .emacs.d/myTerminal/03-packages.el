@@ -140,6 +140,9 @@
         '(:eval (format " Project:%s"
                         (projectile-project-name))))
   (projectile-mode)
+  (define-key projectile-mode-map
+              (kbd "C-c C-p")
+              'projectile-command-map)
 
   (setq ibuffer-formats
         '((mark
@@ -261,8 +264,5 @@
         t)
   (setq projectile-completion-system
         'ivy)
-  ;;Temporary fix for counsel-projectile
-  (setq projectile-keymap-prefix
-        (kbd "C-c C-p"))
   (counsel-projectile-mode))
 
