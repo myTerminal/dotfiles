@@ -4,7 +4,7 @@
 
 ;; Author: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Keywords: project, convenience
-;; Package-Version: 20171002.1121
+;; Package-Version: 20181231.1319
 ;; Maintainer: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Created: 2017/09/28
 ;; Package-Requires: ((emacs "24") (cl-lib "0.5"))
@@ -71,20 +71,21 @@ With a prefix argument ARG prompts you for a directory on which to run search in
          (file-to-search (projectile-files-with-string text-to-search directory)))
     (projectile-completing-read
      "All occurrences: "
-     (reduce #'append
+     (seq-reduce #'append
              (mapcar (lambda (file)
                        (with-temp-buffer
                          (insert-file-contents file)
                          (let ((lines (split-string (buffer-string) "\n")))
                            (cl-remove-if nil
                                          (mapcar (lambda (line)
-                                                   (let ((present-in-linep (search text-to-search line)))
+                                                   (let ((present-in-linep (string-match-p (regexp-quote text-to-search) line)))
                                                      (cond (present-in-linep (concat (cadr (split-string file (projectile-project-root)))
                                                                                      " => line "
                                                                                      (number-to-string (1+ (cl-position line lines)))))
                                                            (t nil))))
                                                  lines)))))
-                     file-to-search))
+                     file-to-search)
+             nil)
      :action `(lambda (item)
                 (projectile-extras--move-to-word-in-result-item item
                                                                 ,text-to-search)))))
@@ -103,20 +104,21 @@ With a prefix argument ARG prompts you for a directory on which to run search in
          (file-to-search (projectile-files-with-string text-to-search directory)))
     (projectile-completing-read
      "All references: "
-     (reduce #'append
+     (seq-reduce #'append
              (mapcar (lambda (file)
                        (with-temp-buffer
                          (insert-file-contents file)
                          (let ((lines (split-string (buffer-string) "\n")))
                            (cl-remove-if nil
                                          (mapcar (lambda (line)
-                                                   (let ((present-in-linep (search text-to-search line)))
+                                                   (let ((present-in-linep (string-match-p (regexp-quote text-to-search) line)))
                                                      (cond (present-in-linep (concat (cadr (split-string file (projectile-project-root)))
                                                                                      " => line "
                                                                                      (number-to-string (1+ (cl-position line lines)))))
                                                            (t nil))))
                                                  lines)))))
-                     file-to-search))
+                     file-to-search)
+             nil)
      :action `(lambda (item)
                 (projectile-extras--move-to-word-in-result-item item
                                                                 ,text-to-search)))))
