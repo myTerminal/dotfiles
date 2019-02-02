@@ -53,5 +53,5 @@
                          "Welcome myTerminal!\n\n"
                          "Today's "
                          (format-time-string "%d %B %Y")
-                         " and it looks like a productive day, so make it count!")
+                         " and it looks like a productive day, let's do something exciting today!")
          (get-buffer-create (current-buffer))))
