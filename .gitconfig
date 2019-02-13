@@ -7,9 +7,11 @@
 	email = team.terminal@gmail.com
 [alias]
         st = status
+        df = diff
         lg = log
-        ps = push origin
+        co = checkout
+        rs = reset
+        fc = fetch
         pl = pull origin
         cm = commit
-        co = checkout
-        df = diff
+        ps = push origin
