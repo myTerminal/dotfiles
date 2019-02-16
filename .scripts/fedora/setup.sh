@@ -82,3 +82,4 @@ sudo service docker restart
 
 # Manual steps
 # - Install hyper from https://releases.hyper.is/download/rpm
+# - Install postman from https://www.getpostman.com/downloads

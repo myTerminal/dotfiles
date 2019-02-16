@@ -19,6 +19,7 @@ brew install \
 brew cask install \
      emacs \
      google-chrome \
+     postman \
      alfred \
      hyper \
      mounty
