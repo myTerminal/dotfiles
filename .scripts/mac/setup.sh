@@ -32,6 +32,7 @@ brew cask install \
      filezilla \
      transmission \
      tunnelbear \
+     riot \
      telegram \
      evernote \
      discord \
