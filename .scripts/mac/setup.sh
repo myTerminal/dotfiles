@@ -20,7 +20,6 @@ brew cask install \
      emacs \
      google-chrome \
      alfred \
-     iterm2 \
      hyper \
      mounty
 
