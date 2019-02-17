@@ -11,3 +11,4 @@ Contains configuration for the following:
 3. [Emacs](https://www.gnu.org/software/emacs) including:
     - Confuguration for [mew](https://www.mew.org)
 4. [i3wm](https://i3wm.org)
+5. [myTerminal](https://github.com/myTerminal/myterminal) configuration
