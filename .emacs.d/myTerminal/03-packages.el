@@ -111,7 +111,6 @@
   (global-undo-tree-mode)
 
   (require 'sublimity-scroll)
-  (sublimity-mode)
 
   (autoload 'markdown-mode
     "markdown-mode"

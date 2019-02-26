@@ -42,6 +42,7 @@
     ;;Swanking
     ("C-M-)" transparency-increase)
     ("C-M-(" transparency-decrease)
+    ("C-x ~" sublimity-mode)
     ;;Misc
     ("C-c c M-x" execute-extended-command)
     ("C-c M-x" smex)
