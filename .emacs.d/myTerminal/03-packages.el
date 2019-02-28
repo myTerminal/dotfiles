@@ -114,7 +114,8 @@
 
   (autoload 'markdown-mode
     "markdown-mode"
-    "Major mode for editing Markdown files" t)
+    "Major mode for editing Markdown files"
+    t)
 
   (autoload 'ace-jump-mode
     "ace-jump-mode"
@@ -122,7 +123,7 @@
     t)
   (autoload 'ace-jump-mode-pop-mark
     "ace-jump-mode"
-    "Ace jump back:-"
+    "Ace jump back"
     t)
 
   (if (eq system-type
