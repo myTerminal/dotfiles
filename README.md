@@ -5,10 +5,10 @@
 Contains configuration for the following:
 
 1. [Git](https://git-scm.com)
-2. [Bash](https://www.gnu.org/software/bash) for [Linux](https://getfedora.org) and [Mac](https://www.apple.com/macos) including:
-    - Setup scripts for Linux and Mac
+2. [Bash](https://www.gnu.org/software/bash) for [Fedora](https://getfedora.org) and [Mac](https://www.apple.com/macos) including:
+    - Setup scripts for Fedora and Mac
     - A few utility shell scripts
 3. [Emacs](https://www.gnu.org/software/emacs) including:
-    - Confuguration for [mew](https://www.mew.org)
+    - [mew](https://www.mew.org)
 4. [i3wm](https://i3wm.org)
-5. [myTerminal](https://github.com/myTerminal/myterminal) configuration
+5. [myTerminal](https://github.com/myTerminal/myterminal)
