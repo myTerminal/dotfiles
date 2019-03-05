@@ -204,9 +204,7 @@
 
   (myterminal-controls-set-controls-data
    '(("t" "Change color theme" theme-looper-enable-next-theme)
-     ("j" "Connect Jabber" jabber-connect-all)
-     ("," "Zoom out" eagle-eye-zoom-out)
-     ("." "Zoom in" eagle-eye-zoom-in)
+     ("b" "Create temporary buffer" emacs-new-buffer-now)
      ("[" "Decrease transparency" transparency-decrease)
      ("]" "Increase transparency" transparency-increase)))
 

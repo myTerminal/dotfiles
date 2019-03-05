@@ -7,8 +7,6 @@
     ("C-x b" ivy-switch-buffer)
     ("C-x C-f" counsel-find-file)
     ("C-x C-r" counsel-recentf)
-    ("C-x t" emacs-new-buffer-now)
-    ("C-x y" emacs-new-buffer-as)
     ("C-S-<up>" buf-move-up)
     ("C-S-<down>" buf-move-down)
     ("C-S-<left>" buf-move-left)
