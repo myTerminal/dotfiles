@@ -203,10 +203,15 @@
                                 leuven))
 
   (myterminal-controls-set-controls-data
-   '(("t" "Change color theme" theme-looper-enable-next-theme)
-     ("b" "Create temporary buffer" emacs-new-buffer-now)
-     ("[" "Decrease transparency" transparency-decrease)
-     ("]" "Increase transparency" transparency-increase)))
+   '(("t" "Change color theme"
+      theme-looper-enable-next-theme)
+     ("b" "Create temporary buffer"
+      emacs-new-buffer-now
+      t)
+     ("[" "Decrease transparency"
+      transparency-decrease)
+     ("]" "Increase transparency"
+      transparency-increase)))
 
   (add-to-list 'custom-theme-load-path
                "~/.emacs.d/other-plugins/replace-colorthemes")
