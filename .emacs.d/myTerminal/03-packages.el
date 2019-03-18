@@ -196,11 +196,11 @@
              (hi-lock-mode nil
                            hi-lock)))
 
-  (theme-looper-set-theme-set '(overcast
-                                material
-                                green-phosphor
-                                hemisu-dark
-                                leuven))
+  (theme-looper-set-favorite-themes '(overcast
+                                      material
+                                      green-phosphor
+                                      hemisu-dark
+                                      leuven))
 
   (myterminal-controls-set-controls-data
    '(("t" "Change color theme"
