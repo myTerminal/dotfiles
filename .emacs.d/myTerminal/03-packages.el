@@ -7,7 +7,6 @@
       multiple-cursors
       auto-complete
       ace-jump-mode
-      nlinum
       anzu
       undo-tree
       sublimity
@@ -97,7 +96,7 @@
   (ac-config-default)
 
   (add-hook 'prog-mode-hook
-            'nlinum-mode)
+            'display-line-numbers-mode)
 
   (add-hook 'prog-mode-hook
             'outer-spaces-mode)

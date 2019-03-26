@@ -17,7 +17,7 @@
     ("C-}" mc/mark-next-like-this)
     ("C-{" mc/mark-previous-like-this)
     ("C-|" mc/mark-all-like-this)
-    ("C-#" nlinum-mode)
+    ("C-#" display-line-numbers-mode)
     ("C-c C-SPC" outer-spaces-mode)
     ("C-M-|" indent-guide-mode)
     ("C-*" eagle-eye-mode)
