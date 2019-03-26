@@ -191,6 +191,8 @@
                                              emacs-daily-events)
              (outer-spaces-mode " _a_"
                                 outer-spaces)
+             (eldoc-mode nil
+                         eldoc)
              (buffer-face-mode nil
                                face-remap)
              (hi-lock-mode nil
