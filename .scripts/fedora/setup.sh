@@ -60,7 +60,6 @@ sudo dnf install \
 sudo dnf install \
      libreoffice \
      VirtualBox \
-     fish \
      docker \
      goldendict \
      calibre

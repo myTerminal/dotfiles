@@ -20,7 +20,6 @@ brew cask install \
      emacs \
      google-chrome \
      postman \
-     alfred \
      hyper \
      mounty
 
@@ -34,7 +33,6 @@ brew cask install \
      tunnelbear \
      riot \
      telegram \
-     evernote \
      discord \
      spotify
 
@@ -63,7 +61,6 @@ brew cask install \
      libreoffice \
      virtualbox \
      crossover \
-     fish \
      docker \
      fman \
      diffmerge \
