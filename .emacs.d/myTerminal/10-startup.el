@@ -12,7 +12,8 @@
 (myTerminal/misc/print-welcome-message)
 
 ;;Load local configuration
-(theme-looper-enable-theme myTerminal/local-configs/color-theme)
+(theme-looper-enable-theme myTerminal/local-configs/color-theme
+                           nil)
 (custom-set-faces
  `(default ((t (:family ,myTerminal/local-configs/font-family-default)))))
 (add-hook 'prog-mode-hook
