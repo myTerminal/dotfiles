@@ -204,11 +204,13 @@
                                       leuven))
 
   (myterminal-controls-set-controls-data
-   '(("t" "Change color theme"
-      theme-looper-enable-next-theme)
-     ("b" "Create temporary buffer"
+   '(("b" "Create temporary buffer"
       emacs-new-buffer-now
       t)
+     ("." "Switch to next color-theme"
+      theme-looper-enable-next-theme)
+     ("," "Switch to previous color-theme"
+      theme-looper-enable-previous-theme)
      ("[" "Decrease transparency"
       transparency-decrease)
      ("]" "Increase transparency"
