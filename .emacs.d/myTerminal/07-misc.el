@@ -45,13 +45,13 @@
   (message "Formatting removed, text copied to clipboard!"))
 
 (defun myTerminal/misc/print-welcome-message ()
-  (princ (cl-concatenate 'string
-                         "Started up in "
-                         (number-to-string (cadr (time-subtract (current-time)
-                                                                myTerminal/invokation-time)))
-                         " seconds\n\n"
-                         "Welcome myTerminal!\n\n"
-                         "Today's "
-                         (format-time-string "%d %B %Y")
-                         " and it looks like a productive day, let's do something exciting today!")
+  (princ (concat "Welcome myTerminal!\n\n"
+                 "Today's "
+                 (format-time-string "%B %d %Y")
+                 ", let's make it a productive day!"
+                 "\n\n"
+                 "(Started in "
+                 (number-to-string (cadr (time-subtract (current-time)
+                                                        myTerminal/invokation-time)))
+                 " seconds)")
          (get-buffer-create (current-buffer))))
