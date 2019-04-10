@@ -42,6 +42,7 @@
     ("C-M-(" transparency-decrease)
     ("C-x ~" sublimity-mode)
     ;;Misc
+    ("C-c \\" wdired-change-to-wdired-mode)
     ("C-c c M-x" execute-extended-command)
     ("C-c M-x" smex)
     ("M-x" counsel-M-x)
