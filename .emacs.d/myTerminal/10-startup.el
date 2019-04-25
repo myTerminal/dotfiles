@@ -3,7 +3,7 @@
 (myTerminal/user/set-user-preferences)
 (myTerminal/repositories/set-up-repositories)
 (myTerminal/packages/fetch-remote-packages)
-(myTerminal/packages/load-local-packages)
+(myTerminal/packages/configure-quelpa)
 (myTerminal/packages/configure-packages)
 (myTerminal/jabber/configure-jabber)
 (myTerminal/file-associations/set-file-associations)

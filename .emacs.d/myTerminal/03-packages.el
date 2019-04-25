@@ -74,24 +74,38 @@
             (package-install p)))
         myTerminal/packages))
 
-(defun myTerminal/packages/load-local-packages ()
-  (add-to-list
-   'load-path "~/.emacs.d/local-packages/")
+(defun myTerminal/packages/configure-quelpa ()
+  (setq quelpa-update-melpa-p
+        nil)
 
-  (require 'alpha)
-  (require 'prompt-you)
-  (require 'emacs-profiles)
-  (require 'outer-spaces)
-  (require 'emacs-sounds)
-  (require 'eagle-eye)
-  (require 'emacs-visual-notifications)
-  (require 'emacs-daily-events)
-  (require 'emacs-home)
-  (require 'zone-quotes)
-  (require 'zone-tunnels)
-  (require 'emacs-new-buffer)
-  (require 'window-shaper)
-  (require 'projectile-extras))
+  (quelpa '(alpha :fetcher file
+                  :path "~/.emacs.d/local-packages/alpha.el"))
+  (quelpa '(prompt-you :fetcher github
+                       :repo "myTerminal/prompt-you"))
+  (quelpa '(emacs-visual-notifications :fetcher github
+                                       :repo "myTerminal/emacs-visual-notifications"))
+  (quelpa '(eagle-eye :fetcher github
+                      :repo "myTerminal/eagle-eye"))
+  (quelpa '(outer-spaces :fetcher github
+                         :repo "myTerminal/outer-spaces"))
+  (quelpa '(emacs-sounds :fetcher github
+                         :repo "myTerminal/emacs-sounds"))
+  (quelpa '(emacs-profiles :fetcher github
+                           :repo "myTerminal/emacs-profiles"))
+  (quelpa '(emacs-daily-events :fetcher github
+                               :repo "myTerminal/emacs-daily-events"))
+  (quelpa '(emacs-home :fetcher github
+                       :repo "myTerminal/emacs-home"))
+  (quelpa '(zone-quotes :fetcher github
+                        :repo "myTerminal/zone-quotes"))
+  (quelpa '(zone-tunnels :fetcher github
+                         :repo "myTerminal/zone-tunnels"))
+  (quelpa '(emacs-new-buffer :fetcher github
+                             :repo "myTerminal/emacs-new-buffer"))
+  (quelpa '(window-shaper :fetcher github
+                          :repo "myTerminal/window-shaper"))
+  (quelpa '(projectile-extras :fetcher github
+                              :repo "myTerminal/projectile-extras")))
 
 (defun myTerminal/packages/configure-packages ()
   (ac-config-default)
