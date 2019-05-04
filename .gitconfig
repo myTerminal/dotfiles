@@ -12,6 +12,8 @@
         co = checkout
         rs = reset
         fc = fetch
-        pl = pull origin
         cm = commit
+        pl = pull origin
+        down = pull origin master
         ps = push origin
+        up = push origin master
