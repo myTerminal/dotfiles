@@ -6,8 +6,8 @@
 	name = myTerminal
 	email = team.terminal@gmail.com
 [alias]
-        st = status
-        df = diff
+        st = "! clear && git status"
+        df = "! clear && git diff"
         lg = log
         co = checkout
         rs = reset
@@ -17,3 +17,5 @@
         down = pull origin master
         ps = push origin
         up = push origin master
+        sync = "! sh ~/.scripts/common/update-all-projects.sh"
+        sync-all = "!git sync ~/_repositories/"
