@@ -52,6 +52,9 @@
     ("C-." emacs-home-show)
     ("C-$" myTerminal/misc/remove-formatting)
     ("C-=" myTerminal/misc/eval-and-replace)
+    ("C-c e" quickrun)
+    ("C-c r" quickrun-region)
+    ("C-c w" quickrun-replace-region)
     ("C-x C-g" myTerminal/jabber/dismiss-jabber-notification)))
 
 (defun myTerminal/key-bindings/apply-keyboard-bindings ()

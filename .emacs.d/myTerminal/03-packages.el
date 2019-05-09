@@ -37,6 +37,7 @@
       magit
       minimap
       skewer-mode
+      quickrun
       restclient
       ;;File-system
       ranger
