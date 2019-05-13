@@ -33,6 +33,7 @@ sudo dnf install \
      dropbox \
      filezilla \
      transmission \
+     thunderbird \
      youtube-dl
 
 # Install multimedia packages

@@ -34,6 +34,7 @@ brew cask install \
      riot \
      telegram \
      discord \
+     thunderbird \
      spotify
 
 # Install multimedia packages from brew cask
