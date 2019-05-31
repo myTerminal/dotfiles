@@ -1,21 +1,23 @@
 [core]
-        excludesfile = ~/.gitignore_global
-        visual = 'emacs' --no-splash -q -nw
-        editor = 'emacs' --no-splash -q -nw
+    excludesfile = ~/.gitignore_global
+    visual = 'emacs' --no-splash -q -nw
+    editor = 'emacs' --no-splash -q -nw
 [user]
-	name = myTerminal
-	email = team.terminal@gmail.com
+    name = myTerminal
+    email = team.terminal@gmail.com
 [alias]
-        st = "! clear && git status"
-        df = "! clear && git diff"
-        lg = log
-        co = checkout
-        rs = reset
-        fc = fetch
-        cm = commit
-        pl = pull origin
-        down = pull origin master
-        ps = push origin
-        up = push origin master
-        sync = "! sh ~/.scripts/common/update-all-projects.sh"
-        sync-all = "!git sync ~/_repositories/"
+    fc = fetch
+    st = "! clear && git status"
+    df = "! clear && git diff"
+    co = checkout
+    rs = reset
+    rh = reset --hard
+    ad = "!f() { git add \"$@\"; git st; }; f"
+    cm = commit
+    lg = log
+    pl = pull origin
+    down = pull origin master
+    ps = push origin
+    up = push origin master
+    sync = "! sh ~/.scripts/common/update-all-projects.sh"
+    sync-all = "!git sync ~/_repositories/"
