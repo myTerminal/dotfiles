@@ -2,5 +2,5 @@
 
 # Source global definitions
 if [ -f ~/.bash_profile ]; then
-	. ~/.bash_profile
+    . ~/.bash_profile
 fi

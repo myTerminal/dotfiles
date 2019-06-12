@@ -1,3 +1,3 @@
 if [ -f ~/.scripts/mac/.bashrc ]; then
-	. ~/.scripts/mac/.bashrc
+    . ~/.scripts/mac/.bashrc
 fi

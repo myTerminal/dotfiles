@@ -10,11 +10,11 @@ mkdir hybrid_wl_f23
 cd hybrid_wl_f23
 
 if [ 'x86_64' == `uname -m` ]; then
-	# 64-bit driver files.
-	FILE='hybrid-v35_64-nodebug-pcoem-6_30_223_271.tar.gz'
+    # 64-bit driver files.
+    FILE='hybrid-v35_64-nodebug-pcoem-6_30_223_271.tar.gz'
 else
-	# 32-bit driver files.
-	FILE='hybrid-v35-nodebug-pcoem-6_30_223_271.tar.gz'
+    # 32-bit driver files.
+    FILE='hybrid-v35-nodebug-pcoem-6_30_223_271.tar.gz'
 fi
 
 # Download Broadcom Linux Wi-Fi driver.
