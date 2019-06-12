@@ -7,8 +7,8 @@
     email = team.terminal@gmail.com
 [alias]
     fc = fetch
-    st = "! clear && git status"
-    df = "! clear && git diff"
+    st = status
+    df = diff
     co = checkout
     rs = reset
     rh = reset --hard

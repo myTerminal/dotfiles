@@ -1,4 +1,4 @@
 alias cl="clear"
-alias gt="git"
+alias gt="clear && git"
 
 . ~/.private-keys.sh
