@@ -21,6 +21,7 @@ sudo dnf install \
 # Install essential packages
 sudo dnf install \
      terminology \
+     fish \
      emacs \
      pcmanfm \
      git \

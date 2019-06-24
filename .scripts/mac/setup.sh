@@ -13,14 +13,15 @@ brew tap caskroom/cask
 # Install packages from brew
 brew install \
      node \
+     fish \
      youtube-dl
 
 # Install essential packages from brew cask
 brew cask install \
+     hyper \
      emacs \
      google-chrome \
      postman \
-     hyper \
      mounty
 
 # Install network packages from brew cask
