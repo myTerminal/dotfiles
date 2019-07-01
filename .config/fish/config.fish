@@ -1,1 +1,1 @@
-. ~/.shell/common/.bashrc
+# To be set up

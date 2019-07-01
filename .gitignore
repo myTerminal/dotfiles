@@ -7,10 +7,13 @@
 !/.bash_profile
 !/.bashrc
 
+!/.system
+
 !/.shell
 
 !/.config
 /.config/*
+!/.config/bash
 !/.config/fish
 /.config/fish/*
 !/.config/fish/*.fish

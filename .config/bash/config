@@ -1,0 +1,7 @@
+if [ $(uname) = 'Linux' ]; then
+    . ~/.config/bash/fedora/.bash_profile
+elif [ $(uname) = 'Darwin' ]; then
+    . ~/.config/bash/mac/.bash_profile
+fi
+
+. ~/.shell/config

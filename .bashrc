@@ -1,6 +1,3 @@
-# .bashrc
-
-# Source global definitions
-if [ -f ~/.bash_profile ]; then
-    . ~/.bash_profile
+if [ -f ~/.config/bash/config ]; then
+    . ~/.config/bash/config
 fi

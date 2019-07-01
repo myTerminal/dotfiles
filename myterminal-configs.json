@@ -26,7 +26,7 @@
                         },
                         "r": {
                             "title": "Reset",
-                            "task": "sh /home/ismail/.shell/fedora/network-reconnect.sh"
+                            "task": "sh /home/ismail/.scripts/network-reconnect.sh"
                         }
                     }
                 },
