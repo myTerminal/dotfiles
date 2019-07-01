@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 sudo ifdown wlp1s0
 # sudo iwconfig wlp1s0 mode managed

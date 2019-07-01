@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 
 # Install some pacakages we'll need to compile the driver below.
 sudo dnf install gcc kernel-devel -y

@@ -1,4 +1,6 @@
-# Run setup for the OS
+#!/usr/bin/env bash
+
+# Run setup for the current OS
 if [ $(uname) = 'Linux' ]; then
     . ~/.system/setup/fedora.sh
 elif [ $(uname) = 'Darwin' ]; then

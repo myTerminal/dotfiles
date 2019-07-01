@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Enable showing of hidden files in finder
 defaults write com.apple.Finder AppleShowAllFiles YES
