@@ -1,0 +1,1 @@
+. ~/.shell/mac/aliases.sh
