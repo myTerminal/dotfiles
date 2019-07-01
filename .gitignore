@@ -1,19 +1,16 @@
 # *
 *
 
-# Git
 !.gitconfig
 !.gitignore_global
 
-# Bash
 !.bash_profile
 !.bashrc
-!.scripts
 
-# Config
+!.shell
+
 !.config
 
-# Emacs
 !.emacs.d/myTerminal
 !.emacs.d/local-packages
 !.emacs.d/other-plugins
@@ -21,12 +18,9 @@
 !.emacs.d/init.el
 !.mew.el
 
-# Hyper
 !.hyper.js
 
-# myterminal
 !myterminal-configs.json
 
-# Misc
 !/LICENSE
 !/README.md
