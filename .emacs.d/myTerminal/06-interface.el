@@ -1,5 +1,5 @@
 (defun myTerminal/interface/configure-interface ()
-  (setq frame-title-format "emacs")
+  (setq frame-title-format "%b - emacs")
 
   (menu-bar-mode -1)
 
