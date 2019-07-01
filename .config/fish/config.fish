@@ -1,1 +1,1 @@
-. ~/.scripts/common/.bashrc
+. ~/.shell/common/.bashrc

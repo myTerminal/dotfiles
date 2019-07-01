@@ -1,4 +1,4 @@
-. ~/.scripts/common/.bashrc
+. ~/.shell/common/.bashrc
 
 PS1='\u@\h:\w\$ '
 
@@ -7,7 +7,7 @@ alias telegram="~/Apps/Telegram/Telegram &"
 
 alias audio-r="pulseaudio -k && pulseaudio --start"
 
-alias net-r="sh ~/.scripts/fedora/network-reconnect.sh"
+alias net-r="sh ~/.shell/fedora/network-reconnect.sh"
 alias wifi-connect="nmcli d wifi"
 
 alias detach="udisks --detach"

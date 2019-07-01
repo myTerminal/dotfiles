@@ -1,26 +1,33 @@
-# *
-*
+/*
 
-!.gitconfig
-!.gitignore_global
+!/.gitconfig
+!/.gitignore_global
+!/.gitignore
 
-!.bash_profile
-!.bashrc
+!/.bash_profile
+!/.bashrc
 
-!.shell
+!/.shell
 
-!.config
+!/.config
+/.config/*
+!/.config/fish
+/.config/fish/*
+!/.config/fish/*.fish
+!/.config/i3
 
-!.emacs.d/myTerminal
-!.emacs.d/local-packages
-!.emacs.d/other-plugins
-!.emacs.d/sounds
-!.emacs.d/init.el
-!.mew.el
+!/.emacs.d
+/.emacs.d/*
+!/.emacs.d/myTerminal
+!/.emacs.d/local-packages
+!/.emacs.d/other-plugins
+!/.emacs.d/sounds
+!/.emacs.d/init.el
+!/.mew.el
 
-!.hyper.js
+!/.hyper.js
 
-!myterminal-configs.json
+!/myterminal-configs.json
 
 !/LICENSE
 !/README.md
