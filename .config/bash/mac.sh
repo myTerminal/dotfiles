@@ -1,1 +1,1 @@
-. ~/.shell/mac/aliases.sh
+. ~/.shell/aliases/mac.sh
