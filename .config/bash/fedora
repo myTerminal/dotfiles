@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
+# Configure prompt
 PS1='\u@\h:\w\$ '
 
+# Update PATH
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
 export PATH
 
+# Load aliases for fedora
 . ~/.shell/aliases/fedora

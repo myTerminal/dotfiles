@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
+# Load aliases for mac
 . ~/.shell/aliases/mac

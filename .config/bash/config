@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
+# Load configs for the current OS
 if [ $(uname) = 'Linux' ]; then
     . ~/.config/bash/fedora
 elif [ $(uname) = 'Darwin' ]; then
     . ~/.config/bash/mac
 fi
 
+# Load shell configs
 . ~/.shell/config

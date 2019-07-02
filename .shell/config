@@ -1,4 +1,4 @@
-# Set up aliases
+# Set up common shell aliases
 . ~/.shell/aliases/common
 
 # Use private keys
