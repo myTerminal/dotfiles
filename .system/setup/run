@@ -2,10 +2,10 @@
 
 # Run setup for the current OS
 if [ $(uname) = 'Linux' ]; then
-    . ~/.system/setup/fedora.sh
+    . ~/.system/setup/fedora
 elif [ $(uname) = 'Darwin' ]; then
-    . ~/.system/setup/mac.sh
+    . ~/.system/setup/mac
 fi
 
 # Create Dropbox symlinks
-. ~/.system/setup/create-dropbox-symlinks.sh
+. ~/.system/setup/create-dropbox-symlinks

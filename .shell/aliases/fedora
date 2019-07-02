@@ -3,7 +3,7 @@ alias telegram="~/Apps/Telegram/Telegram &"
 
 alias audio-r="pulseaudio -k && pulseaudio --start"
 
-alias net-r="sh ~/.shell/scripts/network-reconnect.sh"
+alias net-r="sh ~/.shell/scripts/network-reconnect"
 alias wifi-connect="nmcli d wifi"
 
 alias detach="udisks --detach"

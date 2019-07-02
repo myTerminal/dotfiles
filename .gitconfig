@@ -19,5 +19,5 @@
     down = pull origin master
     ps = push origin
     up = push origin master
-    sync = "! sh ~/.shell/scripts/update-all-projects.sh"
+    sync = "! sh ~/.shell/scripts/update-all-projects"
     sync-all = "!git sync ~/_repositories/"

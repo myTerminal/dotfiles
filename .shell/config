@@ -1,5 +1,5 @@
 # Set up aliases
-. ~/.shell/aliases.sh
+. ~/.shell/aliases/common
 
 # Use private keys
-. ~/.private-keys.sh
+. ~/.private-keys

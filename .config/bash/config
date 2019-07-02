@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 if [ $(uname) = 'Linux' ]; then
-    . ~/.config/bash/fedora.sh
+    . ~/.config/bash/fedora
 elif [ $(uname) = 'Darwin' ]; then
-    . ~/.config/bash/mac.sh
+    . ~/.config/bash/mac
 fi
 
 . ~/.shell/config
