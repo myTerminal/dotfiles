@@ -1,6 +1,6 @@
 # myTerminal's dotfiles
 
-[![License](https://img.shields.io/badge/LICENSE-GPL%20v3.0-blue.svg)](https://www.gnu.org/licenses/gpl.html)
+[![License: CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 Built for [Fedora](https://getfedora.org) and [macOs](https://www.apple.com/macos)
 
