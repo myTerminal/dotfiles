@@ -1,2 +1,2 @@
-alias system-update-packages="brew-update"
-alias brew-update="brew update && brew upgrade"
+# System packages
+alias system-update-packages="brew update && brew upgrade"

@@ -1,18 +1,23 @@
+# Basic apps
 alias _start-all="emacs & google-chrome &"
 alias telegram="~/Apps/Telegram/Telegram &"
 
+# Peripherals
 alias audio-r="pulseaudio -k && pulseaudio --start"
-
 alias net-r="sh ~/.shell/scripts/network-reconnect"
 alias wifi-connect="nmcli d wifi"
 
+# External storage
 alias detach="udisks --detach"
 alias detach-sdb="udisks --detach /dev/sdb"
 
+# Screen recording
 alias start-keymon="key-mon --key-timeout=1.5 --no-press-fadeout=2 --old-keys=5"
 
+# System packages
 alias system-update-packages="sudo dnf update"
 
+# Power shortcuts
 alias system-shutdown="sudo shutdown 0"
 alias system-reboot="sudo reboot 0"
 alias system-suspend="systemctl suspend"

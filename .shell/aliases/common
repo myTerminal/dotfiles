@@ -1,2 +1,6 @@
+# Misc
 alias cl="clear"
 alias gt="clear && git"
+
+# System commands
+alias system-setup="~/.system/setup/run"
