@@ -2,10 +2,12 @@
 
 # Run setup for the current OS
 if [ $(uname) = 'Linux' ]; then
-    . ~/.system/setup/fedora
+    . ~/.system/setup/fedora/start
 elif [ $(uname) = 'Darwin' ]; then
-    . ~/.system/setup/mac
+    . ~/.system/setup/mac/start
 fi
 
-# Create Dropbox symlinks
+# Ask user to configure Dropbox and confirm that the directories are present.
+# Once confirmed, proceed with creation of Dropbox symlinks
+read -n1 -r -p "Please make sure Dropbox is configured before proceeding with creation of Symlinks. Press any key one done..."
 . ~/.system/setup/create-dropbox-symlinks

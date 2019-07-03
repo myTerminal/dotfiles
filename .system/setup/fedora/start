@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Install software packages
+. ~/.system/setup/fedora/install-packages
+
+# Set up group for docker
+sudo groupadd docker
+sudo gpasswd -a $USER docker
+sudo service docker restart

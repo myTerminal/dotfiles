@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-# Enable showing of hidden files in finder
-defaults write com.apple.Finder AppleShowAllFiles YES
-killall Finder
-
 # Install brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 

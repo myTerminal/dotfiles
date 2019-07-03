@@ -9,7 +9,8 @@ sudo dnf install \
 sudo dnf update
 
 # Install google-chrome web-browser
-sudo dnf install https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+sudo dnf install \
+     https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 
 # Install i3 and depdendencies
 sudo dnf install \
@@ -67,7 +68,8 @@ sudo dnf install \
      calibre
 
 # Install crossover from URL
-sudo dnf install http://crossover.codeweavers.com/redirect/crossover.rpm
+sudo dnf install \
+     http://crossover.codeweavers.com/redirect/crossover.rpm
 
 # Install fonts
 sudo dnf install \
@@ -75,11 +77,6 @@ sudo dnf install \
      liberation-mono-fonts \
      google-roboto-mono-fonts \
      google-droid-sans-mono-fonts
-
-# Set up group for docker
-sudo groupadd docker
-sudo gpasswd -a $USER docker
-sudo service docker restart
 
 # Manual steps
 # - Install hyper from https://releases.hyper.is/download/rpm
