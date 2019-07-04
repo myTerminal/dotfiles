@@ -1,5 +1,14 @@
+#!/usr/bin/env bash
+
 # Set up common shell aliases
 . ~/.shell/aliases/common
+
+# Load aliases for the current OS
+if [ $(uname) = 'Linux' ]; then
+    . ~/.shell/aliases/fedora
+elif [ $(uname) = 'Darwin' ]; then
+    . ~/.shell/aliases/mac
+fi
 
 # Use private keys
 . ~/.private-keys

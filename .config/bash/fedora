@@ -5,6 +5,3 @@ PS1='\u@\h:\w\$ '
 
 # Update PATH
 export PATH=$PATH:$HOME/.local/bin:$HOME/bin
-
-# Load aliases for fedora
-. ~/.shell/aliases/fedora
