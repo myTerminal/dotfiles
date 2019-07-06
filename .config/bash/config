@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Expose shell scripts as commands
+export PATH=$PATH:~/.shell/scripts
+
 # Load configs for the current OS
 if [ $(uname) = 'Linux' ]; then
     . ~/.config/bash/fedora

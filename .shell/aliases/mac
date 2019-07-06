@@ -1,2 +1,2 @@
 # System packages
-alias system-update-packages="brew update && brew upgrade"
+alias mt-update-packages="brew update && brew upgrade"

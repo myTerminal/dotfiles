@@ -6,7 +6,7 @@
             "commands": {
                 "u": {
                     "title": "Update brew packages",
-                    "task": "brew update"
+                    "task": "mt-update-packages"
                 }
             }
         },
@@ -15,18 +15,18 @@
             "commands": {
                 "u": {
                     "title": "Update dnf packages",
-                    "task": "sudo dnf update"
+                    "task": "mt-update-packages"
                 },
                 "w": {
                     "title": "Wifi",
                     "commands": {
                         "c": {
                             "title": "Connect",
-                            "task": "nmcli d wifi"
+                            "task": "wifi-connect"
                         },
                         "r": {
                             "title": "Reset",
-                            "task": "sh /home/ismail/.scripts/network-reconnect"
+                            "task": "mt-network-reset"
                         }
                     }
                 },
@@ -35,14 +35,14 @@
                     "commands": {
                         "u": {
                             "title": "USB device",
-                            "task": "udisks --detach",
+                            "task": "detach",
                             "params": [
                                 "device"
                             ]
                         },
                         "b": {
                             "title": "/dev/sdb",
-                            "task": "udisks --detach /dev/sdb"
+                            "task": "detach-sdb"
                         }
                     }
                 }
