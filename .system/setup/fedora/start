@@ -7,3 +7,12 @@
 sudo groupadd docker
 sudo gpasswd -a $USER docker
 sudo service docker restart
+
+# Prompt user to install Broadcom wl drivers
+read -n1 -r -p "Would you like to install Broadcom wireless drivers? (y/n) " k
+if [ "$k" == "y" ] || [ "$k" == "Y" ]; then
+    echo ""
+    . ~/.shell/scripts/mt-fedora23_broadcom_wl_install
+else
+    echo -e "\nSkipped installation of Broadcom wireless drivers"
+fi
