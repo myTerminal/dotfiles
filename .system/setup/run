@@ -7,7 +7,14 @@ elif [ $(uname) = 'Darwin' ]; then
     . ~/.system/setup/mac/start
 fi
 
-# Ask user to configure Dropbox and confirm that the directories are present.
+# Prompt user to create Dropbox Symlinks
+# Ask to configure Dropbox first and confirm that the directories are present
 # Once confirmed, proceed with creation of Dropbox symlinks
-read -n1 -r -p "Please make sure Dropbox is configured before proceeding with creation of Symlinks. Press any key one done..."
-. ~/.system/setup/create-dropbox-symlinks
+read -n1 -r -p "Would you like to create Dropbox symlinks? (y/n) " k
+if [ "$k" == "y" ] || [ "$k" == "Y" ]; then
+    echo ""
+    read -n1 -r -p "Please make sure Dropbox is configured before proceeding. Press any key one done..."
+    . ~/.system/setup/create-dropbox-symlinks
+else
+    echo -e "\nSkipped creation of Dropbox Symlinks"
+fi
