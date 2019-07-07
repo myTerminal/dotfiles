@@ -1,26 +1,26 @@
 #!/usr/bin/env bash
 
 # Add RPM Fusion repos
-sudo dnf install \
+sudo dnf install -y \
      https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
      https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # Update installed packages
-sudo dnf update
+sudo dnf update -y
 
 # Install google-chrome web-browser
-sudo dnf install \
+sudo dnf install -y \
      https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 
 # Install i3 and depdendencies
-sudo dnf install \
+sudo dnf install -y \
      i3 \
      i3status \
      i3lock \
      feh
 
 # Install essential packages
-sudo dnf install \
+sudo dnf install -y \
      terminology \
      fish \
      emacs \
@@ -31,7 +31,7 @@ sudo dnf install \
      gparted
 
 # Install network packages
-sudo dnf install \
+sudo dnf install -y \
      dropbox \
      filezilla \
      transmission \
@@ -39,7 +39,7 @@ sudo dnf install \
      youtube-dl
 
 # Install multimedia packages
-sudo dnf install \
+sudo dnf install -y \
      gstreamer \
      vlc \
      clementine \
@@ -51,16 +51,16 @@ sudo dnf install \
      easytag
 
 # Install gaming packages
-sudo dnf install \
+sudo dnf install -y \
      steam
 
 # Install screencast packages
-sudo dnf install \
+sudo dnf install -y \
      vokoscreen \
      key-mon
 
 # Install misc packages
-sudo dnf install \
+sudo dnf install -y \
      libreoffice \
      VirtualBox \
      docker \
@@ -68,11 +68,11 @@ sudo dnf install \
      calibre
 
 # Install crossover from URL
-sudo dnf install \
+sudo dnf install -y \
      http://crossover.codeweavers.com/redirect/crossover.rpm
 
 # Install fonts
-sudo dnf install \
+sudo dnf install -y \
      levien-inconsolata-fonts \
      liberation-mono-fonts \
      google-roboto-mono-fonts \
