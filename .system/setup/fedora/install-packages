@@ -77,6 +77,8 @@ sudo dnf install -y \
      liberation-mono-fonts \
      google-roboto-mono-fonts \
      google-droid-sans-mono-fonts
+sudo dnf copr enable evana/fira-code-fonts -y
+sudo dnf install -y fira-code-fonts
 
 # Manual steps
 # - Install hyper from https://releases.hyper.is/download/rpm
