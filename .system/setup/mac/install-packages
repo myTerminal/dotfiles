@@ -38,6 +38,7 @@ brew cask install \
 brew cask install \
      vlc \
      clementine \
+     kodi \
      xnviewmp \
      gimp \
      handbrake \
@@ -71,7 +72,13 @@ brew cask install \
      font-roboto-mono \
      caskroom/fonts/font-fira-code
 
-# Manual steps
+# Manual packages
 # - Install pCloud Drive from https://www.pcloud.com
 # - Install Audacity from https://www.fosshub.com/Audacity.html/audacity-macos-2.2.0.dmg
 # - Install LAME from https://lame.buanzo.org/#lameosxdl
+
+# Missing packages
+# - Droid Sans
+
+# Inbuilt packages
+# - Git

@@ -64,6 +64,7 @@ sudo dnf install -y \
      libreoffice \
      VirtualBox \
      docker \
+     android-file-transfer \
      goldendict \
      calibre
 
@@ -80,6 +81,23 @@ sudo dnf install -y \
 sudo dnf copr enable evana/fira-code-fonts -y
 sudo dnf install -y fira-code-fonts
 
-# Manual steps
+# Manual packages
+# - Install pCloud Drive from https://www.pcloud.com
+# - Install MegaSync from https://mega.nz/sync
 # - Install hyper from https://releases.hyper.is/download/rpm
 # - Install postman from https://www.getpostman.com/downloads
+# - Install Telegram
+# - Install Discord
+
+# Missing packages / Find alternative
+# - Google Drive
+# - licecap
+# - Riot
+# - Origin
+# - Sony Remote play
+# - TunnerBear
+# - Spotify
+# - Inconsolata
+
+# Inbuilt packages
+# (None yet)
