@@ -20,5 +20,17 @@ Built for [Fedora](https://getfedora.org) and [macOs](https://www.apple.com/maco
 
 ### Scripts
 
-- Workstation setup scripts
-- Few utility scripts
+#### Workstation setup scripts
+
+To start setup, run the following in `~` from a (bash) terminal
+
+    git init
+    git remote add origin https://github.com/myTerminal/dotfiles.git
+    git fetch --all
+    rm .bash*
+    git checkout master
+    ./.system/setup/run
+
+#### Few utility scripts
+
+There is a growing collection of shell utility scripts included to help one with daily command-line based tasks.
