@@ -4,10 +4,10 @@
 
 The 'replicable' heart of my computer(s)
 
-## Supported platforms
+## Platforms
 
 - [Fedora](https://getfedora.org)
-- [macOs](https://www.apple.com/macos)
+- [macOS](https://www.apple.com/macos)
 
 ## Configuration
 
@@ -18,7 +18,7 @@ The 'replicable' heart of my computer(s)
 - [Emacs](https://www.gnu.org/software/emacs)
     - [mew](https://www.mew.org) as the email client
 - [i3wm](https://i3wm.org) as a window manager on Fedora
-- [Hyper](https://hyper.is) as a terminal on macOs
+- [Hyper](https://hyper.is) as a terminal on macOS
 - [myterminal](https://github.com/myTerminal/myterminal) as a command-line companion
 
 ## Scripts
@@ -37,3 +37,8 @@ To start setup, run the following in `~` from a (bash) terminal
 ### Few utility scripts
 
 There is a growing collection of shell utility scripts included to help one with daily command-line based tasks.
+
+## To-Do
+- Add cloning of GitHub projects to setup
+- Figure out alternatives for missing packages on either platforms
+- Automate as many manual steps as possible
