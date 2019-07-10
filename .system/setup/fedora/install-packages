@@ -33,6 +33,7 @@ sudo dnf install -y \
 # Install network packages
 sudo dnf install -y \
      dropbox \
+     syncthing \
      filezilla \
      transmission \
      thunderbird \

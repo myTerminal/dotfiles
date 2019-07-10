@@ -10,6 +10,7 @@ brew tap caskroom/cask
 brew install \
      node \
      fish \
+     syncthing \
      youtube-dl
 
 # Install essential packages from brew cask
