@@ -7,7 +7,7 @@ elif [ $(uname) = 'Darwin' ]; then
     . ~/.system/setup/mac/start
 fi
 
-# Prompt user to create Dropbox Symlinks
+# Prompt to create Dropbox Symlinks
 # Ask to configure Dropbox first and confirm that the directories are present
 # Once confirmed, proceed with creation of Dropbox symlinks
 read -n1 -r -p "Would you like to create Dropbox symlinks? (y/n) " k
@@ -17,4 +17,13 @@ if [ "$k" == "y" ] || [ "$k" == "Y" ]; then
     . ~/.system/setup/create-dropbox-symlinks
 else
     echo -e "\nSkipped creation of Dropbox Symlinks"
+fi
+
+# Prompt to clone GitHub source projects
+read -n1 -r -p "Would you like to clone GitHub source projects? (y/n) " k
+if [ "$k" == "y" ] || [ "$k" == "Y" ]; then
+    echo ""
+    . ~/.system/setup/clone-github-source-projects
+else
+    echo -e "\nSkipped cloning of GitHub source projects"
 fi

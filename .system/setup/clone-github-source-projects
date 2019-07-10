@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+sudo npm install -g git-getter
+mkdir ~/_repositories
+cd ~/_repositories
+git-getter myTerminal
+cd ..
