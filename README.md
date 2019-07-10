@@ -39,6 +39,5 @@ To start setup, run the following in `~` from a (bash) terminal
 There is a growing collection of shell utility scripts included to help one with daily command-line based tasks.
 
 ## To-Do
-- Add cloning of GitHub projects to setup
 - Figure out alternatives for missing packages on either platforms
-- Automate as many manual steps as possible
+- Automate as many left-over manual steps as possible
