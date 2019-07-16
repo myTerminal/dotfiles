@@ -42,7 +42,7 @@ module.exports = {
             lightWhite: '#ffffff'
         },
 
-        shell: '',
+        shell: '/usr/local/bin/fish',
         shellArgs: ['--login'],
 
         env: {},
