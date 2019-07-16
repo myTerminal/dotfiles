@@ -20,3 +20,5 @@ if test (uname) = "Linux"
 else if test (uname) = "Darwin"
     . ~/.shell/aliases/mac
 end
+
+set fish_greeting "Hi myTerminal, the fish is here!"
