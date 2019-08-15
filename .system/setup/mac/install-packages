@@ -24,7 +24,7 @@ brew cask install \
 # Install network packages from brew cask
 brew cask install \
      dropbox \
-     google-drive \
+     google-backup-and-sync \
      megasync \
      filezilla \
      transmission \
