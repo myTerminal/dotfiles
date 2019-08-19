@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-ln -s ~/Dropbox/Workstation/.private-keys ~/.private-keys
-ln -s ~/Dropbox/eDocket ~/Documents/eDocket
-ln -s ~/Dropbox/Islamic-Inventory ~/Documents/Islamic-Inventory
