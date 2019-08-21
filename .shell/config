@@ -1,6 +1,3 @@
 #!/usr/bin/env bash
 
-# Use private keys if present
-if [ -f ~/.private-keys ]; then
-    . ~/.private-keys
-fi
+. ~/.private-keys
