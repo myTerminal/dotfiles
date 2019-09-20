@@ -94,6 +94,7 @@ sudo dnf install -y fira-code-fonts
 # - Google Drive
 # - licecap
 # - Riot
+# - Slack
 # - Origin
 # - Sony Remote play
 # - TunnerBear
