@@ -12,6 +12,7 @@
       sublimity
       rainbow-mode
       ;;Navigation
+      dumb-jump
       ace-window
       workgroups2
       buffer-move
@@ -131,6 +132,8 @@
     "markdown-mode"
     "Major mode for editing Markdown files"
     t)
+
+  (dumb-jump-mode)
 
   (autoload 'ace-jump-mode
     "ace-jump-mode"
