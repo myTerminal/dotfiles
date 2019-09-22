@@ -8,6 +8,7 @@ brew tap caskroom/cask
 
 # Install packages from brew
 brew install \
+     tig \
      node \
      fish \
      syncthing \

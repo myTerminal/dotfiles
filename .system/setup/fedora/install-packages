@@ -26,6 +26,7 @@ sudo dnf install -y \
      emacs \
      pcmanfm \
      git \
+     tig \
      npm \
      udisks \
      gparted
