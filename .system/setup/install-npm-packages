@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+sudo npm install -g \
+     lite-server \
+     nano-server \
+     myterminal \
+     stay-with-me \
+     git-getter \
+     re-write

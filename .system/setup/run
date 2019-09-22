@@ -7,6 +7,9 @@ elif [ $(uname) = 'Darwin' ]; then
     . ~/.system/setup/mac/start
 fi
 
+# Install global packages from NPM
+. ~/.system/setup/install-npm-packages
+
 # Prompt to create cloud symlinks
 # Ask to configure cloud services first and confirm that the directories are present
 # Once confirmed, proceed with creation of cloud symlinks
