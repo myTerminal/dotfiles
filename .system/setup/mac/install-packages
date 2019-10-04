@@ -64,7 +64,6 @@ brew cask install \
      virtualbox \
      crossover \
      docker \
-     fman \
      diffmerge \
      android-file-transfer
 
