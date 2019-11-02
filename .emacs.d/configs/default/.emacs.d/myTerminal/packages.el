@@ -81,7 +81,8 @@
         nil)
 
   (quelpa '(alpha :fetcher file
-                  :path "~/.emacs.d/local-packages/alpha.el"))
+                  :path (concat myTerminal/config-root
+				"local-packages/alpha.el")))
   (quelpa '(prompt-you :fetcher github
                        :repo "myTerminal/prompt-you"))
   (quelpa '(emacs-visual-notifications :fetcher github
@@ -184,7 +185,8 @@
   (setq wg-prefix-key
         (kbd "M-z"))
   (setq wg-session-file
-        "~/.emacs.d/.workgroups2-session-file")
+        (concat myTerminal/config-root
+		"workgroups2-session-file"))
   (setq wg-session-load-on-start
         nil)
   (workgroups-mode 1)
@@ -236,7 +238,8 @@
       transparency-increase)))
 
   (add-to-list 'custom-theme-load-path
-               "~/.emacs.d/other-plugins/replace-colorthemes")
+               (concat myTerminal/config-root
+		       "other-plugins/replace-colorthemes"))
 
   (global-anzu-mode +1)
 
@@ -270,11 +273,14 @@
   (which-key-mode)
 
   (setq emacs-sounds-bell-sound
-        "/home/ismail/.emacs.d/sounds/bell.wav")
+        (concat myTerminal/config-root
+                "sounds/bell.wav"))
   (setq emacs-sounds-find-file-sound
-        "/home/ismail/.emacs.d/sounds/file-change.wav")
+        (concat myTerminal/config-root
+                "sounds/file-change.wav"))
   (setq emacs-sounds-window-change-sound
-        "/home/ismail/.emacs.d/sounds/window-change.wav")
+        (concat myTerminal/config-root
+                "sounds/window-change.wav"))
 
   (emacs-daily-events-global-mode)
   (emacs-daily-events-set-events myTerminal/local-configs/daily-events)

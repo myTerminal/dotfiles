@@ -1,20 +1,8 @@
-(defvar myTerminal/invokation-time
-  (current-time))
-
-(load-file "~/.emacs.d/myTerminal/system.el")
-(load-file "~/.emacs.d/myTerminal/user.el")
-(load-file "~/.emacs.d/myTerminal/repositories.el")
-(load-file "~/.emacs.d/myTerminal/packages.el")
-(load-file "~/.emacs.d/myTerminal/jabber-configuration.el")
-(load-file "~/.emacs.d/myTerminal/file-associations.el")
-(load-file "~/.emacs.d/myTerminal/interface.el")
-(load-file "~/.emacs.d/myTerminal/misc.el")
-(load-file "~/.emacs.d/myTerminal/key-bindings.el")
-
-(load-file "~/.emacs.d/myTerminal/default-local-configs.el")
-(if (file-exists-p "~/.emacs.d/local-configs.el")
-    (load-file "~/.emacs.d/local-configs.el"))
-
-(load-file "~/.emacs.d/myTerminal/startup.el")
-
-(load-file "~/.emacs.d/myTerminal/_zone-quotes-masseffect.el")
+;;Prompt to select a configuration to start Emacs with
+(let ((choices (directory-files "~/.emacs.d/configs"
+                                nil
+                                "^\\([^.]\\|\\.[^.]\\|\\.\\..\\)")))
+  (load (expand-file-name (concat "configs/"
+                                  (ido-completing-read "Select a configuration:" choices)
+                                  "/.emacs.d/init")
+                          (file-name-directory load-file-name))))
