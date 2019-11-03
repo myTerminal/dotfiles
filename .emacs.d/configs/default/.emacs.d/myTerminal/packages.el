@@ -6,13 +6,13 @@
     '(;;Text-editing
       multiple-cursors
       auto-complete
-      ace-jump-mode
-      anzu
       undo-tree
       sublimity
       rainbow-mode
+      anzu
       ;;Navigation
       dumb-jump
+      ace-jump-mode
       ace-window
       workgroups2
       buffer-move
@@ -49,7 +49,7 @@
       hemisu-theme
       green-phosphor-theme
       overcast-theme
-      ;;Super powers
+      ;;Super-powers
       which-key
       smex
       counsel

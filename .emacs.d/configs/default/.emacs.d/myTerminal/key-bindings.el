@@ -13,7 +13,7 @@
     ("C-S-<right>" buf-move-right)
     ("C-%" window-shaper-mode)
     ("C-;" ace-window)
-    ;;Editing
+    ;;Text-editing
     ("C-}" mc/mark-next-like-this)
     ("C-{" mc/mark-previous-like-this)
     ("C-|" mc/mark-all-like-this)
