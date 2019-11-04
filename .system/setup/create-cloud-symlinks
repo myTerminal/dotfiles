@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 ln -s ~/Google\ Drive/.private-keys ~/.private-keys
-ln -s ~/Google\ Drive/[Family]/eDocket ~/Documents/eDocket
+ln -s ~/Google\ Drive/Family/eDocket ~/Documents/eDocket
 ln -s ~/Google\ Drive/Islamic-Inventory ~/Documents/Islamic-Inventory
