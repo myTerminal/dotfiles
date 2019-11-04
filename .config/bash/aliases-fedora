@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Basic apps
 alias mt-start-all="emacs & google-chrome &"
 alias telegram="~/Apps/Telegram/Telegram &"

@@ -10,15 +10,8 @@ elif [ $(uname) = 'Darwin' ]; then
     . ~/.config/bash/config-mac
 fi
 
+# Set up aliases
+. ~/.config/bash/aliases
+
 # Load shell configs
 . ~/.shell/config
-
-# Set up common shell aliases
-. ~/.shell/aliases/common
-
-# Load aliases for the current OS
-if [ $(uname) = 'Linux' ]; then
-    . ~/.shell/aliases/fedora
-elif [ $(uname) = 'Darwin' ]; then
-    . ~/.shell/aliases/mac
-fi

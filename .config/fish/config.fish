@@ -1,5 +1,8 @@
 # Expose shell scripts as commands
-# (Already inherited from bash config)
+set -gx PATH $PATH ~./shell/scripts
+
+# Set a few variables for fish
+set fish_greeting "Hi myTerminal, the fish is here!"
 
 # Load configs for the current OS
 if test (uname) = "Linux"
@@ -8,17 +11,8 @@ else if test (uname) = "Darwin"
     . ~/.config/fish/config-mac.fish
 end
 
+# Set up aliases
+# TODO: Implement
+
 # Load shell configs
 . ~/.shell/config
-
-# Set up common shell aliases
-. ~/.shell/aliases/common
-
-# Load aliases for the current OS
-if test (uname) = "Linux"
-    . ~/.shell/aliases/fedora
-else if test (uname) = "Darwin"
-    . ~/.shell/aliases/mac
-end
-
-set fish_greeting "Hi myTerminal, the fish is here!"

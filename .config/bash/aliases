@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Misc
+alias cl="clear"
+alias gt="clear && git"
+alias mt-sync-github-projects="mt-update-all-projects ~/_repositories/"
+
+# System commands
+alias mt-system-setup="~/.system/setup/run"
+
+# Load aliases for the current OS
+if [ $(uname) = 'Linux' ]; then
+    . ~/.config/bash/aliases-fedora
+elif [ $(uname) = 'Darwin' ]; then
+    . ~/.config/bash/aliases-mac
+fi
