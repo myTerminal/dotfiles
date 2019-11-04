@@ -5,9 +5,9 @@ export PATH=$PATH:~/.shell/scripts
 
 # Load configs for the current OS
 if [ $(uname) = 'Linux' ]; then
-    . ~/.config/bash/fedora
+    . ~/.config/bash/config-fedora
 elif [ $(uname) = 'Darwin' ]; then
-    . ~/.config/bash/mac
+    . ~/.config/bash/config-mac
 fi
 
 # Load shell configs
