@@ -1,5 +1,5 @@
 # Add shell scripts to PATH
-set -gx PATH $PATH ~./shell/scripts
+set -gx PATH $PATH ~/.shell/scripts
 
 # Set a few variables for fish
 set fish_greeting "Hi myTerminal, the fish is here!"
