@@ -1,1 +1,2 @@
-# Nothing here yet
+# Set up aliases
+. ~/.config/fish/aliases-fedora.fish

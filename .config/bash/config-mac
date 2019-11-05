@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-# Nothing here yet
+# Set up aliases
+. ~/.config/bash/aliases-fedora

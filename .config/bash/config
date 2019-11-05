@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
 
-# Expose shell scripts as commands
+# Add shell scripts to PATH
 export PATH=$PATH:~/.shell/scripts
+
+# Load shell configs
+. ~/.shell/config
+
+# Set up common aliases
+. ~/.config/bash/aliases
 
 # Load configs for the current OS
 if [ $(uname) = 'Linux' ]; then
@@ -10,8 +16,3 @@ elif [ $(uname) = 'Darwin' ]; then
     . ~/.config/bash/config-mac
 fi
 
-# Set up aliases
-. ~/.config/bash/aliases
-
-# Load shell configs
-. ~/.shell/config

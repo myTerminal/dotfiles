@@ -1,8 +1,6 @@
-#!/usr/bin/env bash
-
 # Misc
 alias cl="clear"
-alias gt="clear && git"
+alias gt="clear; git"
 alias mt-sync-github-projects="mt-update-all-projects ~/_repositories/"
 
 # System commands
