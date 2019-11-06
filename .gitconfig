@@ -20,3 +20,4 @@
     ps = push origin
     up = push origin master
     sync = "!mt-update-all-projects"
+    overwrite = "!f() { git reset HEAD~\"$@\"; git checkout .; git pull; }; f"
