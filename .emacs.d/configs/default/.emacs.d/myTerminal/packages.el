@@ -1,8 +1,8 @@
-(defun myTerminal/packages/fetch-remote-packages ()
+(defun mt/packages/fetch-remote-packages ()
   (when (not package-archive-contents)
     (package-refresh-contents))
 
-  (defvar myTerminal/packages
+  (defvar mt/packages
     '(;;Text-editing
       multiple-cursors
       auto-complete
@@ -74,14 +74,14 @@
   (mapc (lambda (p)
           (unless (package-installed-p p)
             (package-install p)))
-        myTerminal/packages))
+        mt/packages))
 
-(defun myTerminal/packages/configure-quelpa ()
+(defun mt/packages/configure-quelpa ()
   (setq quelpa-update-melpa-p
         nil)
 
   (quelpa '(alpha :fetcher file
-                  :path (concat myTerminal/config-root
+                  :path (concat mt/config-root
 				"local-packages/alpha.el")))
   (quelpa '(prompt-you :fetcher github
                        :repo "myTerminal/prompt-you"))
@@ -110,7 +110,7 @@
   (quelpa '(projectile-extras :fetcher github
                               :repo "myTerminal/projectile-extras")))
 
-(defun myTerminal/packages/configure-packages ()
+(defun mt/packages/configure-packages ()
   (ac-config-default)
 
   (add-hook 'prog-mode-hook
@@ -185,7 +185,7 @@
   (setq wg-prefix-key
         (kbd "M-z"))
   (setq wg-session-file
-        (concat myTerminal/config-root
+        (concat mt/config-root
 		"workgroups2-session-file"))
   (setq wg-session-load-on-start
         nil)
@@ -238,7 +238,7 @@
       transparency-increase)))
 
   (add-to-list 'custom-theme-load-path
-               (concat myTerminal/config-root
+               (concat mt/config-root
 		       "other-plugins/replace-colorthemes"))
 
   (global-anzu-mode +1)
@@ -273,22 +273,22 @@
   (which-key-mode)
 
   (setq emacs-sounds-bell-sound
-        (concat myTerminal/config-root
+        (concat mt/config-root
                 "sounds/bell.wav"))
   (setq emacs-sounds-find-file-sound
-        (concat myTerminal/config-root
+        (concat mt/config-root
                 "sounds/file-change.wav"))
   (setq emacs-sounds-window-change-sound
-        (concat myTerminal/config-root
+        (concat mt/config-root
                 "sounds/window-change.wav"))
 
   (emacs-daily-events-global-mode)
-  (emacs-daily-events-set-events myTerminal/local-configs/daily-events)
+  (emacs-daily-events-set-events mt/local-configs/daily-events)
 
-  (emacs-home-set-day-start-time myTerminal/local-configs/day-start-time)
-  (emacs-home-set-day-end-time myTerminal/local-configs/day-end-time)
-  (emacs-home-set-favorite-files myTerminal/local-configs/favorite-files)
-  (emacs-home-set-favorite-functions myTerminal/local-configs/favorite-functions)
+  (emacs-home-set-day-start-time mt/local-configs/day-start-time)
+  (emacs-home-set-day-end-time mt/local-configs/day-end-time)
+  (emacs-home-set-favorite-files mt/local-configs/favorite-files)
+  (emacs-home-set-favorite-functions mt/local-configs/favorite-functions)
 
   (ivy-mode 1)
   (setq ivy-use-virtual-buffers

@@ -1,6 +1,6 @@
-(defvar myTerminal/key-bindings/key-bindings
+(defvar mt/key-bindings/key-bindings
   '(;;Zoning
-    ("C-~" myTerminal/interface/set-zoning)
+    ("C-~" mt/interface/set-zoning)
     ("C-!" zone-leave-me-alone)
     ;;Buffer/Window management
     ("C-x C-b" ibuffer)
@@ -23,12 +23,12 @@
     ("C-*" eagle-eye-mode)
     ("M-/" undo-tree-visualize)
     ("M-y" counsel-yank-pop)
-    ("M-<down>" myTerminal/misc/move-line-down)
-    ("M-<up>" myTerminal/misc/move-line-up)
-    ("C-<backspace>" myTerminal/misc/delete-word-backward)
-    ("M-<backspace>" myTerminal/misc/delete-word-backward)
+    ("M-<down>" mt/misc/move-line-down)
+    ("M-<up>" mt/misc/move-line-up)
+    ("C-<backspace>" mt/misc/delete-word-backward)
+    ("M-<backspace>" mt/misc/delete-word-backward)
     ("M-S" swiper)
-    ("<f5>" myTerminal/misc/reload-current-file)
+    ("<f5>" mt/misc/reload-current-file)
     ;;Navigation
     ("C->" ace-jump-mode)
     ("C-<" ace-jump-mode-pop-mark)
@@ -50,15 +50,15 @@
     ("C-(" theme-looper-enable-previous-theme)
     ("C-M-'" myterminal-controls-open-controls)
     ("C-." emacs-home-show)
-    ("C-$" myTerminal/misc/remove-formatting)
-    ("C-=" myTerminal/misc/eval-and-replace)
+    ("C-$" mt/misc/remove-formatting)
+    ("C-=" mt/misc/eval-and-replace)
     ("C-c e" quickrun)
     ("C-c r" quickrun-region)
     ("C-c w" quickrun-replace-region)
-    ("C-x C-g" myTerminal/jabber/dismiss-jabber-notification)))
+    ("C-x C-g" mt/jabber/dismiss-jabber-notification)))
 
-(defun myTerminal/key-bindings/apply-keyboard-bindings ()
+(defun mt/key-bindings/apply-keyboard-bindings ()
   (mapc (lambda (item)
           (global-set-key (kbd (car item))
                           (cadr item)))
-        myTerminal/key-bindings/key-bindings))
+        mt/key-bindings/key-bindings))

@@ -1,4 +1,4 @@
-(defun myTerminal/user/set-user-preferences ()
+(defun mt/user/set-user-preferences ()
   (setq user-full-name
         "Ismail Ansari")
 

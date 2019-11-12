@@ -1,6 +1,6 @@
-(defun myTerminal/system/set-system-preferences ()
+(defun mt/system/set-system-preferences ()
   (setq custom-file
-        (concat myTerminal/config-root
+        (concat mt/config-root
 		"custom.el"))
 
   (setq package--init-file-ensured
