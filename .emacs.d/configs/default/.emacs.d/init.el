@@ -1,34 +1,20 @@
-(defvar mt/invokation-time
-  (current-time))
-
+;;Determine config root path
 (defvar mt/config-root
   (file-name-directory load-file-name))
 
-(defvar mt/base-path
-  (concat mt/config-root
-	  "myTerminal/"))
+;;Load core.el
+(load (expand-file-name "myTerminal/core"
+			mt/config-root))
 
-(defun mt/load-file (file-path)
-  "Loads the specified file from local configuration"
-  (load (concat mt/base-path
-                file-path)))
-
-(mt/load-file "system")
-(mt/load-file "user")
-(mt/load-file "repositories")
-(mt/load-file "packages")
-(mt/load-file "jabber-configuration")
-(mt/load-file "file-associations")
-(mt/load-file "interface")
-(mt/load-file "misc")
-(mt/load-file "key-bindings")
-
-(mt/load-file "default-local-configs")
-(if (file-exists-p (concat mt/config-root
-			   "local-configs.el"))
-    (load-file (concat mt/config-root
-		       "local-configs.el")))
-
-(mt/load-file "startup")
+(mt/load-file "config-system")
+(mt/load-file "config-user")
+(mt/load-file "config-repositories")
+(mt/load-file "config-packages")
+(mt/load-file "config-jabber-configuration")
+(mt/load-file "config-file-associations")
+(mt/load-file "config-interface")
+(mt/load-file "config-key-bindings")
+(mt/load-file "config-local-configs")
+(mt/load-file "config-startup")
 
 (mt/load-file "_zone-quotes-masseffect")

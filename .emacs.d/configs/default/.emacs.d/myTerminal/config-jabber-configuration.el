@@ -30,13 +30,13 @@
 
   (defun mt/show-jabber-notification ()
     "Start timer for visual notification"
-    (mt/misc/dismiss-jabber-notification)
+    (mt/dismiss-jabber-notification)
     (setq mt/notification-timer
           (run-at-time 0
                        2
                        'mt/flash-screen)))
 
-  (defun mt/misc/dismiss-jabber-notification ()
+  (defun mt/dismiss-jabber-notification ()
     "Dismiss visual notification"
     (interactive)
     (cond ((null mt/notification-timer) (message "No notifications!"))

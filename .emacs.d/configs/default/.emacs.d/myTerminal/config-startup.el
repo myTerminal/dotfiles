@@ -9,7 +9,7 @@
 (mt/file-associations/set-file-associations)
 (mt/interface/configure-interface)
 (mt/key-bindings/apply-keyboard-bindings)
-(mt/misc/print-welcome-message)
+(mt/print-welcome-message)
 
 ;;Load local configuration
 (theme-looper-enable-theme mt/local-configs/color-theme)
