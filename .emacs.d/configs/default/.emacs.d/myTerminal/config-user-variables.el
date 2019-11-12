@@ -1,6 +1,6 @@
 (progn
   (setq user-full-name
-        "Ismail Ansari")
+        "Mohammed Ismail Ansari")
 
   (setq backup-inhibited
         t)
