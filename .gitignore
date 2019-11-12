@@ -24,6 +24,14 @@
 !/.emacs.d/configs
 /.emacs.d/configs/*
 !/.emacs.d/configs/default
+/.emacs.d/configs/default/*
+!/.emacs.d/configs/default/.emacs.d
+/.emacs.d/configs/default/.emacs.d/*
+!/.emacs.d/configs/default/.emacs.d/myTerminal
+!/.emacs.d/configs/default/.emacs.d/local-packages
+!/.emacs.d/configs/default/.emacs.d/other-plugins
+!/.emacs.d/configs/default/.emacs.d/sounds
+!/.emacs.d/configs/default/.emacs.d/init.el
 !/.emacs.d/init.el
 !/.mew.el
 
