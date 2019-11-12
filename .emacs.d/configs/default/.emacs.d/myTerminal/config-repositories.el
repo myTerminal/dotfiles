@@ -1,4 +1,4 @@
-(defun mt/repositories/set-up-repositories ()
+(progn
   (require 'package)
 
   (add-to-list 'package-archives

@@ -62,3 +62,18 @@
   (interactive "sEnter text: ")
   (kill-new text)
   (message "Formatting removed, text copied to clipboard!"))
+
+(defun mt/load-personalization-variables ()
+  "Loads personalization for current system"
+  (theme-looper-enable-theme mt/local-configs/color-theme)
+  (custom-set-faces
+   `(default ((t (:family ,mt/local-configs/font-family-default)))))
+  (add-hook 'prog-mode-hook
+            (lambda ()
+              (setq buffer-face-mode-face `(:family ,mt/local-configs/font-family-programming))
+              (buffer-face-mode)))
+  (custom-set-faces
+   `(default ((t (:height ,mt/local-configs/font-height)))))
+  (set-frame-size (selected-frame)
+                  (car mt/local-configs/frame-dimensions)
+                  (cdr mt/local-configs/frame-dimensions)))

@@ -1,4 +1,4 @@
-(defun mt/interface/configure-interface ()
+(progn
   (setq frame-title-format "%b - emacs")
 
   (menu-bar-mode -1)

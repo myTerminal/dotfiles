@@ -1,4 +1,4 @@
-(defun mt/file-associations/set-file-associations ()
+(progn
   (add-to-list 'auto-mode-alist
                '("\\.htm\\'" . web-mode))
   (add-to-list 'auto-mode-alist

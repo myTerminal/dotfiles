@@ -1,4 +1,4 @@
-(defun mt/jabber/configure-jabber ()
+(progn
   (setq jabber-account-list
         '(("ismaila@citiusim.mumbai1.corp.citiustech.com"
            (:network-server . "citiusim.mumbai1.corp.citiustech.com"))

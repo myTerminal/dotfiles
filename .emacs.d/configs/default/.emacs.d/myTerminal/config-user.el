@@ -1,4 +1,4 @@
-(defun mt/user/set-user-preferences ()
+(progn
   (setq user-full-name
         "Ismail Ansari")
 

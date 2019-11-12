@@ -8,13 +8,14 @@
 
 (mt/load-file "config-system")
 (mt/load-file "config-user")
+(mt/load-file "config-local-configs")
 (mt/load-file "config-repositories")
 (mt/load-file "config-packages")
 (mt/load-file "config-jabber-configuration")
 (mt/load-file "config-file-associations")
 (mt/load-file "config-interface")
 (mt/load-file "config-key-bindings")
-(mt/load-file "config-local-configs")
-(mt/load-file "config-startup")
-
 (mt/load-file "_zone-quotes-masseffect")
+
+(mt/print-welcome-message)
+(mt/load-personalization-variables)

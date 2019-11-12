@@ -1,4 +1,4 @@
-(defun mt/packages/fetch-remote-packages ()
+(progn
   (when (not package-archive-contents)
     (package-refresh-contents))
 
@@ -76,7 +76,7 @@
             (package-install p)))
         mt/packages))
 
-(defun mt/packages/configure-quelpa ()
+(progn
   (setq quelpa-update-melpa-p
         nil)
 
@@ -110,7 +110,7 @@
   (quelpa '(projectile-extras :fetcher github
                               :repo "myTerminal/projectile-extras")))
 
-(defun mt/packages/configure-packages ()
+(progn
   (ac-config-default)
 
   (add-hook 'prog-mode-hook

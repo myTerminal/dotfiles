@@ -1,4 +1,4 @@
-(defun mt/system/set-system-preferences ()
+(progn
   (setq custom-file
         (concat mt/config-root
 		"custom.el"))

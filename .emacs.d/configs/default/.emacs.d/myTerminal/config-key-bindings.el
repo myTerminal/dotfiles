@@ -1,4 +1,4 @@
-(defvar mt/key-bindings/key-bindings
+(progn
   '(;;Zoning
     ("C-~" mt/interface/set-zoning)
     ("C-!" zone-leave-me-alone)
