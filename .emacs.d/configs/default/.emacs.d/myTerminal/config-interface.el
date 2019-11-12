@@ -44,11 +44,6 @@
   (require 'zone)
   (setq zone-programs
         [zone-pgm-quotes])
-  (defun mt/interface/set-zoning ()
-    "Sets zoning timeout"
-    (interactive)
-    (zone-when-idle 60)
-    (message "Zoning set"))
 
   (column-number-mode)
 
