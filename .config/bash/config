@@ -3,8 +3,10 @@
 # Add shell scripts to PATH
 export PATH=$PATH:~/.shell/scripts
 
-# Load shell configs
-. ~/.shell/config
+# Load private keys, if they exist
+if [ -f ~/.private-keys ]; then
+    . ~/.private-keys
+fi
 
 # Set up common aliases
 . ~/.config/bash/aliases

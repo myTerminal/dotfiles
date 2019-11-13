@@ -4,8 +4,10 @@ set -gx PATH $PATH ~/.shell/scripts
 # Set a few variables for fish
 set fish_greeting "Hi myTerminal, the fish is here!"
 
-# Load shell configs
-. ~/.shell/config
+# Load private keys, if they exist
+if test -e ~/.private-keys
+   . ~/.private-keys
+end
 
 # Set up common aliases
 . ~/.config/fish/aliases.fish
