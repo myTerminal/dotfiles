@@ -1,29 +1,29 @@
 (progn
-  (defvar mt/local-configs/color-theme
+  (defvar mt/workstation-variables/color-theme
     'overcast)
 
-  (defvar mt/local-configs/font-default
+  (defvar mt/workstation-variables/font-default
     "-outline-Liberation Mono-normal-normal-normal-mono-20-*-*-*-c-*-iso8859-1")
 
-  (defvar mt/local-configs/font-family-for-programming
+  (defvar mt/workstation-variables/font-family-for-programming
     "Fira Code")
 
-  (defvar mt/local-configs/frame-dimensions
+  (defvar mt/workstation-variables/frame-dimensions
     (cons 100
           30))
 
-  (defvar mt/local-configs/daily-events
+  (defvar mt/workstation-variables/daily-events
     (list '("1155" "Lunch time")
           '("1655" "End of day")))
 
-  (defvar mt/local-configs/day-start-time
+  (defvar mt/workstation-variables/day-start-time
     0800)
 
-  (defvar mt/local-configs/day-end-time
+  (defvar mt/workstation-variables/day-end-time
     1700)
 
-  (defvar mt/local-configs/favorite-files
+  (defvar mt/workstation-variables/favorite-files
     (list '("t" "~/to-do.org")))
 
-  (defvar mt/local-configs/favorite-functions
+  (defvar mt/workstation-variables/favorite-functions
     (list '("c" calc))))

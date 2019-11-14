@@ -283,12 +283,12 @@
                 "sounds/window-change.wav"))
 
   (emacs-daily-events-global-mode)
-  (emacs-daily-events-set-events mt/local-configs/daily-events)
+  (emacs-daily-events-set-events mt/workstation-variables/daily-events)
 
-  (emacs-home-set-day-start-time mt/local-configs/day-start-time)
-  (emacs-home-set-day-end-time mt/local-configs/day-end-time)
-  (emacs-home-set-favorite-files mt/local-configs/favorite-files)
-  (emacs-home-set-favorite-functions mt/local-configs/favorite-functions)
+  (emacs-home-set-day-start-time mt/workstation-variables/day-start-time)
+  (emacs-home-set-day-end-time mt/workstation-variables/day-end-time)
+  (emacs-home-set-favorite-files mt/workstation-variables/favorite-files)
+  (emacs-home-set-favorite-functions mt/workstation-variables/favorite-functions)
 
   (ivy-mode 1)
   (setq ivy-use-virtual-buffers

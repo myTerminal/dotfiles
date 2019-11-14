@@ -71,13 +71,13 @@
 
 (defun mt/load-personalization-variables ()
   "Loads personalization for current system"
-  (theme-looper-enable-theme mt/local-configs/color-theme)
+  (theme-looper-enable-theme mt/workstation-variables/color-theme)
   (add-to-list 'default-frame-alist
-               `(font . ,mt/local-configs/font-default))
+               `(font . ,mt/workstation-variables/font-default))
   (add-hook 'prog-mode-hook
             (lambda ()
-              (setq buffer-face-mode-face `(:family ,mt/local-configs/font-family-for-programming))
+              (setq buffer-face-mode-face `(:family ,mt/workstation-variables/font-family-for-programming))
               (buffer-face-mode)))
   (set-frame-size (selected-frame)
-                  (car mt/local-configs/frame-dimensions)
-                  (cdr mt/local-configs/frame-dimensions)))
+                  (car mt/workstation-variables/frame-dimensions)
+                  (cdr mt/workstation-variables/frame-dimensions)))
