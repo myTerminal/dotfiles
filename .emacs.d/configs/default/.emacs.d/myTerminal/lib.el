@@ -73,13 +73,11 @@
   "Loads personalization for current system"
   (theme-looper-enable-theme mt/local-configs/color-theme)
   (add-to-list 'default-frame-alist
-               `(font . ,mt/local-configs/font-family-default))
+               `(font . ,mt/local-configs/font-default))
   (add-hook 'prog-mode-hook
             (lambda ()
-              (setq buffer-face-mode-face `(:family ,mt/local-configs/font-family-programming))
+              (setq buffer-face-mode-face `(:family ,mt/local-configs/font-family-for-programming))
               (buffer-face-mode)))
-  (custom-set-faces
-   `(default ((t (:height ,mt/local-configs/font-height)))))
   (set-frame-size (selected-frame)
                   (car mt/local-configs/frame-dimensions)
                   (cdr mt/local-configs/frame-dimensions)))

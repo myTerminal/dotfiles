@@ -2,14 +2,11 @@
   (defvar mt/local-configs/color-theme
     'overcast)
 
-  (defvar mt/local-configs/font-family-default
-    "Liberation Mono")
+  (defvar mt/local-configs/font-default
+    "-outline-Liberation Mono-normal-normal-normal-mono-20-*-*-*-c-*-iso8859-1")
 
-  (defvar mt/local-configs/font-family-programming
+  (defvar mt/local-configs/font-family-for-programming
     "Fira Code")
-
-  (defvar mt/local-configs/font-height
-    150)
 
   (defvar mt/local-configs/frame-dimensions
     (cons 100
