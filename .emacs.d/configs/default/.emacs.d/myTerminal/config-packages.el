@@ -80,8 +80,8 @@
   (setq quelpa-update-melpa-p
         nil)
 
-  (quelpa '(alpha :fetcher file
-                  :path (concat mt/config-root
+  (quelpa `(alpha :fetcher file
+                  :path ,(concat mt/config-root
 				"local-packages/alpha.el")))
   (quelpa '(prompt-you :fetcher github
                        :repo "myTerminal/prompt-you"))
