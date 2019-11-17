@@ -30,6 +30,8 @@ brew cask install \
      filezilla \
      transmission \
      tunnelbear \
+     remember-the-milk \
+     dynalist \
      riot \
      telegram \
      discord \

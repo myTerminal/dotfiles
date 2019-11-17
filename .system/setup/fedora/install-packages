@@ -90,6 +90,8 @@ sudo dnf install -y fira-code-fonts
 # - Install postman from https://www.getpostman.com/downloads
 # - Install Telegram
 # - Install Discord
+# - Install Remember The Milk
+# - Install Dynalist
 
 # Missing packages / Find alternative
 # - Google Drive
