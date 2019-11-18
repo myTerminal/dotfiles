@@ -14,8 +14,11 @@ The 'replicable' heart of my computer(s)
 - [Git](https://git-scm.com)
 - [Bash](https://www.gnu.org/software/bash) as the default shell
     - Frequently (and not-so-frequently) used aliases
-- [Fish](https://fishshell.com) as an alternate shell (still in progress)
-- [Emacs](https://www.gnu.org/software/emacs)
+    - System setup scripts for Fedora and macOS
+    - A few other shell scripts
+- [Fish](https://fishshell.com) as an alternate shell
+    - All bash aliases re-defined for platform independence
+- [Emacs](https://www.gnu.org/software/emacs) (now moved to a separate repository [.emacs.d](https://github.com/myTerminal/.emacs.d) and supports using more compatible configs like [super-emacs](https://github.com/myTerminal/super-emacs) and [ample-emacs](https://github.com/myTerminal/ample-emacs))
     - [mew](https://www.mew.org) as the email client
 - [i3wm](https://i3wm.org) as a window manager on Fedora
 - [Hyper](https://hyper.is) as a terminal on macOS
@@ -39,5 +42,5 @@ To start setup, run the following in `~` from a (bash) terminal
 There is a growing collection of shell utility scripts included to help one with daily command-line based tasks.
 
 ## To-Do
-- Figure out alternatives for missing packages on either platforms
-- Automate as many left-over manual steps as possible
+
+- Figure out alternatives for missing packages on either platform
