@@ -4,18 +4,17 @@ count=0
 
 cd $1
 
-for i in `ls $1`;
+for i in `ls -A $1`;
 do
-    cd $i
-
-    echo ""
-    echo + $i
-
-    git pull
-
-    ((count++))
-
-    cd ..;
+    if [ -d $i ]
+    then
+        cd $i
+        echo ""
+        echo + $i
+        git pull
+        ((count++))
+        cd ..;
+    fi
 done
 
 echo ""
