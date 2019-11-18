@@ -237,10 +237,6 @@
      ("]" "Increase transparency"
       transparency-increase)))
 
-  (add-to-list 'custom-theme-load-path
-               (concat mt/config-root
-		       "other-plugins/replace-colorthemes"))
-
   (global-anzu-mode +1)
 
   (telephone-line-mode t)
