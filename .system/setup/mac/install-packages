@@ -19,6 +19,7 @@ brew cask install \
      hyper \
      emacs \
      google-chrome \
+     shiftit \
      postman \
      mounty
 
