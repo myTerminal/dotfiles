@@ -68,6 +68,7 @@ sudo dnf install -y \
      docker \
      android-file-transfer \
      goldendict \
+     aspell \
      calibre
 
 # Install crossover from URL
