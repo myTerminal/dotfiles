@@ -69,6 +69,7 @@ sudo dnf install -y \
      android-file-transfer \
      goldendict \
      aspell \
+     aspell-en \
      calibre
 
 # Install crossover from URL
