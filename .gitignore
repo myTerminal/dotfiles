@@ -16,6 +16,7 @@
 !/.config/bash
 !/.config/fish
 /.config/fish/*
+!/.config/fish/functions
 !/.config/fish/*.fish
 !/.config/i3
 

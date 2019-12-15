@@ -1,7 +1,5 @@
-# Add shell scripts to PATH
-if not contains ~/.shell/scripts $PATH
-   set -gx PATH $PATH ~/.shell/scripts
-end
+# Add custom shell scripts to PATH
+add-to-path ~/.shell/scripts
 
 # Set a few variables for fish
 set fish_greeting "Hi myTerminal, the fish is here!"
