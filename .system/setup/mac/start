@@ -5,7 +5,7 @@ defaults write com.apple.Finder AppleShowAllFiles YES
 killall Finder
 
 # Install software packages
-. ~/.system/setup/fedora/install-packages
+. ~/.system/setup/mac/install-packages
 
 # Add fish-shell as a valid shell
 echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
