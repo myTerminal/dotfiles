@@ -1,4 +1,4 @@
-# Add custom shell scripts to PATH
+# Update PATH for custom shell scripts
 add-to-path ~/.shell/scripts
 
 # Set a few variables for fish

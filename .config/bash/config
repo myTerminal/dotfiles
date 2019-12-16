@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Add shell scripts to PATH
+# Update PATH for custom shell scripts
 export PATH=$PATH:~/.shell/scripts
 
 # Load private keys, if they exist

@@ -70,7 +70,8 @@ sudo dnf install -y \
      goldendict \
      aspell \
      aspell-en \
-     calibre
+     calibre \
+     cargo
 
 # Install crossover from URL
 sudo dnf install -y \

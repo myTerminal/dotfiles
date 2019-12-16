@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
+# Update PATH for cargo(rust)
+export PATH=$PATH:$HOME/.cargo/bin
+
 # Set up aliases
 . ~/.config/bash/aliases-fedora

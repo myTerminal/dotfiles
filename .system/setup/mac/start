@@ -12,3 +12,6 @@ echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 
 # Change shell to fish-shell
 chsh -s /usr/local/bin/fish
+
+# Set up cargo for rust
+rustup-init
