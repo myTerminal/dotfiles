@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 
-/* global require process */
+/* global require process console */
 
 const { lstatSync, readdirSync, writeFileSync } = require('fs');
 const { join } = require('path');
 
 const { argv: [program, thisFile, inputDir, outputFile = './list-of-files.txt'] } = process;
+const { log } = console;
 
 const inflateInput = (inputDirs, parentDir = './') =>
       inputDirs.map(
@@ -24,4 +25,9 @@ const inflateInput = (inputDirs, parentDir = './') =>
 const arrayToVerticalList = inputArray =>
       inputArray.reduce((a, c) => `${a}${c}\n`, '');
 
-writeFileSync(outputFile, arrayToVerticalList(inflateInput([inputDir])));
+const listOfFiles = arrayToVerticalList(inflateInput([inputDir]));
+
+writeFileSync(outputFile, listOfFiles);
+
+log(listOfFiles);
+log(`File created: ${outputFile}`);
