@@ -1,5 +1,5 @@
 # Update PATH for custom shell scripts
-add-to-path ~/.shell/scripts
+add-to-path ~/.scripts
 
 # Set a few variables for fish
 set fish_greeting "Hi myTerminal, the fish is here!"
