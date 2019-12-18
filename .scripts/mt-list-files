@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+/* global require process */
+
+const { lstatSync, readdirSync, writeFileSync } = require('fs');
+const { join } = require('path');
+
+const { argv: [program, thisFile, inputDir, outputFile = './list-of-files.txt'] } = process;
+
+const inflateInput = (inputDirs, parentDir = './') =>
+      inputDirs.map(
+          inputDir =>
+              (
+                  item =>
+                      lstatSync(item).isDirectory()
+                      ? inflateInput(readdirSync(item), item)
+                      : [item]
+              )(join(parentDir, inputDir))
+      ).reduce(
+          (a, c) => a.concat(c),
+          []
+      );
+
+const arrayToVerticalList = inputArray =>
+      inputArray.reduce((a, c) => `${a}${c}\n`, '');
+
+writeFileSync(outputFile, arrayToVerticalList(inflateInput([inputDir])));
