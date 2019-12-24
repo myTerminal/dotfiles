@@ -2,13 +2,13 @@
 
 # Run setup for the current OS
 if [ $(uname) = 'Linux' ]; then
-    . ~/.system/setup/fedora/start
+    . ~/.setup/fedora/start
 elif [ $(uname) = 'Darwin' ]; then
-    . ~/.system/setup/mac/start
+    . ~/.setup/mac/start
 fi
 
 # Install global packages from NPM
-. ~/.system/setup/install-npm-packages
+. ~/.setup/install-npm-packages
 
 # Prompt to create cloud symlinks
 # Ask to configure cloud services first and confirm that the directories are present
@@ -17,7 +17,7 @@ read -n1 -r -p "Would you like to create cloud symlinks? (y/n) " k
 if [ "$k" == "y" ] || [ "$k" == "Y" ]; then
     echo ""
     read -n1 -r -p "Please make sure the associated cloud services are configured before proceeding. Press any key one done..."
-    . ~/.system/setup/create-cloud-symlinks
+    . ~/.setup/create-cloud-symlinks
     echo "Symlinks have now been created"
 else
     echo -e "\nSkipped creation of cloud symlinks"
@@ -27,7 +27,7 @@ fi
 read -n1 -r -p "Would you like to clone GitHub source projects? (y/n) " k
 if [ "$k" == "y" ] || [ "$k" == "Y" ]; then
     echo ""
-    . ~/.system/setup/clone-github-source-projects
+    . ~/.setup/clone-github-source-projects
 else
     echo -e "\nSkipped cloning of GitHub source projects"
 fi

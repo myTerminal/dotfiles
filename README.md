@@ -35,7 +35,7 @@ To start setup, run the following in `~` from a (bash) terminal
     git fetch --all
     rm .bash*
     git checkout master
-    ./.system/setup/run
+    ./.setup/run
 
 ### Few utility scripts
 

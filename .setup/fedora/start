@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Install software packages
-. ~/.system/setup/fedora/install-packages
+. ~/.setup/fedora/install-packages
 
 # Change shell to fish-shell
 chsh -s /bin/fish
