@@ -71,6 +71,7 @@ sudo dnf install -y \
      aspell \
      aspell-en \
      calibre \
+     rustfmt \
      cargo
 
 # Install crossover from URL
