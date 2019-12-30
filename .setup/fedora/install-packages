@@ -106,6 +106,7 @@ sudo dnf install -y fira-code-fonts
 # - Sony Remote play
 # - TunnerBear
 # - Spotify
+# - Razer Synapse
 # - Inconsolata
 
 # Inbuilt packages

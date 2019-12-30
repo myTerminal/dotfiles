@@ -70,7 +70,8 @@ brew cask install \
      crossover \
      docker \
      diffmerge \
-     android-file-transfer
+     android-file-transfer \
+     razer-synapse
 
 # Install fonts
 brew cask install \
@@ -83,6 +84,7 @@ brew cask install \
 # - Install pCloud Drive from https://www.pcloud.com
 # - Install Audacity from https://www.fosshub.com/Audacity.html/audacity-macos-2.2.0.dmg
 # - Install LAME and FFMPEG from https://lame.buanzo.org/#lameosx64bitdl
+# - Install Razer Synapse drivers from http://rzr.to/synapse-mac-download
 
 # Missing packages
 # - Droid Sans
