@@ -2,7 +2,7 @@
 
 # Run setup for the current OS
 if [ $(uname) = 'Linux' ]; then
-    . ~/.setup/fedora/start
+    . ~/.setup/linux/start
 elif [ $(uname) = 'Darwin' ]; then
     . ~/.setup/mac/start
 fi

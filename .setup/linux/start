@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# TODO: Implement switching based on available package manager
+# Run setup for fedora
+. ~/.setup/linux/fedora/start
