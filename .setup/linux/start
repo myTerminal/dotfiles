@@ -1,5 +1,30 @@
 #!/usr/bin/env bash
 
-# TODO: Implement switching based on available package manager
-# Run setup for fedora
-. ~/.setup/linux/fedora/start
+# Function to abort on something unexpected
+abort_setup_for () {
+    echo -e "\nFound $1 Linux for which no configuration is created yet.\nAborting now..."
+    exit 0
+}
+
+# Run setup for the appropriate platform
+if [ $(command -v apt) ]
+then
+    abort_setup_for "Debian"
+elif [ $(command -v dnf) ]
+then
+    echo "Found Fedora Linux."
+    . ~/.setup/linux/install-packages-for-fedora
+elif [ $(command -v pacman) ]
+then
+    abort_setup_for "Arch"
+else
+    abort_setup_for "an unknown"
+fi
+
+# Change shell to fish-shell
+chsh -s /bin/fish
+
+# Set up group for docker
+sudo groupadd docker
+sudo gpasswd -a $USER docker
+sudo service docker restart
