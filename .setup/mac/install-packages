@@ -1,32 +1,33 @@
 #!/usr/bin/env bash
 
 # Install brew
+echo "Installing home-brew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install cask
+echo "Installing cask"
 brew tap caskroom/cask
 
-# Install packages from brew
+# Install packages only available on brew
+echo "Installing packages from brew"
 brew install \
-     tig \
-     node \
      fish \
+     node \
+     tig \
      aspell \
      syncthing \
-     youtube-dl \
-     rustup-init
+     rustup-init \
+     youtube-dl
 
-# Install essential packages from brew cask
+# Install rest of the packages from casks
+echo "Installing rest of the packages"
 brew cask install \
      hyper \
      emacs \
      google-chrome \
      shiftit \
      postman \
-     mounty
-
-# Install network packages from brew cask
-brew cask install \
+     mounty \
      dropbox \
      google-backup-and-sync \
      megasync \
@@ -40,41 +41,26 @@ brew cask install \
      discord \
      slack \
      thunderbird \
-     spotify
-
-# Install multimedia packages from brew cask
-brew cask install \
+     spotify \
      vlc \
      clementine \
      kodi \
      xnviewmp \
      gimp \
      handbrake \
-     kid3
-
-# Install gaming packages from brew cask
-brew cask install \
+     kid3 \
      steam \
      origin \
-     sony-remoteplay
-
-# Install screencast packages from brew cask
-brew cask install \
+     sony-remoteplay \
      licecap \
-     keycastr
-
-# Install misc packages from brew cask
-brew cask install \
+     keycastr \
      libreoffice \
      virtualbox \
      crossover \
      docker \
      diffmerge \
      android-file-transfer \
-     razer-synapse
-
-# Install fonts
-brew cask install \
+     razer-synapse \
      font-inconsolata \
      font-liberation-sans \
      font-roboto-mono \

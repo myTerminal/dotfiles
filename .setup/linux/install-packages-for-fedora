@@ -1,26 +1,30 @@
 #!/usr/bin/env bash
 
 # Add RPM Fusion repos
+echo "Adding RPM fusion repos"
 sudo dnf install -y \
      https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
      https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # Update installed packages
+echo "Updating all packages"
 sudo dnf update -y
 
-# Install google-chrome web-browser
+# Install packages from URLs
+echo "Installing google-chrome"
 sudo dnf install -y \
      https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+echo "Installing crossover from URL"
+sudo dnf install -y \
+     http://crossover.codeweavers.com/redirect/crossover.rpm
 
-# Install i3 and depdendencies
+# Install rest of the packages
+echo "Installing rest of the packages"
 sudo dnf install -y \
      i3 \
      i3status \
      i3lock \
-     feh
-
-# Install essential packages
-sudo dnf install -y \
+     feh \
      terminology \
      fish \
      emacs \
@@ -29,19 +33,13 @@ sudo dnf install -y \
      tig \
      npm \
      udisks \
-     gparted
-
-# Install network packages
-sudo dnf install -y \
+     gparted \
      dropbox \
      syncthing \
      filezilla \
      transmission \
      thunderbird \
-     youtube-dl
-
-# Install multimedia packages
-sudo dnf install -y \
+     youtube-dl \
      gstreamer \
      vlc \
      clementine \
@@ -50,19 +48,10 @@ sudo dnf install -y \
      shotwell \
      kodi \
      openshot \
-     easytag
-
-# Install gaming packages
-sudo dnf install -y \
-     steam
-
-# Install screencast packages
-sudo dnf install -y \
+     easytag \
+     steam \
      vokoscreen \
-     key-mon
-
-# Install misc packages
-sudo dnf install -y \
+     key-mon \
      libreoffice \
      VirtualBox \
      docker \
@@ -72,14 +61,7 @@ sudo dnf install -y \
      aspell-en \
      calibre \
      rustfmt \
-     cargo
-
-# Install crossover from URL
-sudo dnf install -y \
-     http://crossover.codeweavers.com/redirect/crossover.rpm
-
-# Install fonts
-sudo dnf install -y \
+     cargo \
      levien-inconsolata-fonts \
      liberation-mono-fonts \
      google-roboto-mono-fonts \
