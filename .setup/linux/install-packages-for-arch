@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# Update all packages
+echo "Updating all packages"
+sudo pacman -Syu --noconfirm
+
+# Install git
+echo "Installing git"
+sudo pacman -S git --noconfirm
+
+# Install yay for AUR packages
+echo "Installing yay for AUR packages"
+mkdir temp
+git clone https://aur.archlinux.org/yay.git ./temp/yay
+cd ./temp/yay
+makepkg -si
+cd ../../
+rm -rf ./temp
+
+# Install google-chrome web-browser
+yay -S google-chrome
+
+# TODO: Implement setup for the rest of the packages
