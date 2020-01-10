@@ -12,11 +12,11 @@ brew tap caskroom/cask
 echo "Installing packages from brew"
 brew install \
      fish \
-     node \
      tig \
      aspell \
-     syncthing \
+     node \
      rustup-init \
+     syncthing \
      youtube-dl
 
 # Install rest of the packages from casks
@@ -28,27 +28,22 @@ brew cask install \
      shiftit \
      postman \
      mounty \
-     dropbox \
      google-backup-and-sync \
-     megasync \
-     filezilla \
      transmission \
      tunnelbear \
      remember-the-milk \
      dynalist \
-     riot \
      telegram \
      discord \
      slack \
      thunderbird \
-     spotify \
-     vlc \
-     clementine \
-     kodi \
-     xnviewmp \
+     kid3 \
      gimp \
      handbrake \
-     kid3 \
+     xnviewmp \
+     clementine \
+     vlc \
+     kodi \
      steam \
      origin \
      sony-remoteplay \

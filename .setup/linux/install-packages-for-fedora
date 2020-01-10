@@ -31,24 +31,26 @@ sudo dnf install -y \
      pcmanfm \
      git \
      tig \
+     aspell \
+     aspell-en \
      npm \
+     rustfmt \
+     cargo \
      udisks \
      gparted \
-     dropbox \
      syncthing \
-     filezilla \
      transmission \
-     thunderbird \
      youtube-dl \
-     gstreamer \
-     vlc \
-     clementine \
+     thunderbird \
      audacity \
+     easytag \
      gimp \
      shotwell \
-     kodi \
      openshot \
-     easytag \
+     clementine \
+     vlc \
+     gstreamer \
+     kodi \
      steam \
      vokoscreen \
      key-mon \
@@ -56,12 +58,6 @@ sudo dnf install -y \
      VirtualBox \
      docker \
      android-file-transfer \
-     goldendict \
-     aspell \
-     aspell-en \
-     calibre \
-     rustfmt \
-     cargo \
      levien-inconsolata-fonts \
      liberation-mono-fonts \
      google-roboto-mono-fonts \
@@ -70,26 +66,22 @@ sudo dnf copr enable evana/fira-code-fonts -y
 sudo dnf install -y fira-code-fonts
 
 # Manual packages
-# - Install pCloud Drive from https://www.pcloud.com
-# - Install MegaSync from https://mega.nz/sync
 # - Install hyper from https://releases.hyper.is/download/rpm
 # - Install postman from https://www.getpostman.com/downloads
-# - Install Telegram
-# - Install Discord
+# - Install pCloud Drive from https://www.pcloud.com
 # - Install Remember The Milk
 # - Install Dynalist
+# - Install Telegram
+# - Install Discord
 
 # Missing packages / Find alternative
 # - Google Drive
-# - licecap
-# - Riot
+# - TunnelBear
 # - Slack
 # - Origin
 # - Sony Remote play
-# - TunnerBear
-# - Spotify
+# - licecap
 # - Razer Synapse
-# - Inconsolata
 
 # Inbuilt packages
 # (None yet)
