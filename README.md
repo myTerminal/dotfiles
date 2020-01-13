@@ -28,14 +28,23 @@ The 'replicable' heart of my computer(s)
 
 ### Workstation setup scripts
 
-To start setup, run the following in `~` from a (bash) terminal
+To get the *dotfiles*, run the below commands in `~`:
 
     git init
     git remote add origin https://github.com/myTerminal/dotfiles.git
     git fetch --all
     rm .bash*
     git checkout master
-    ./.setup/run
+
+To start setup, run the following command in a terminal running bash:
+
+    . ./.setup/run
+
+If you're running a shell different than bash, run something like:
+
+    bash ./.setup/run
+
+The setup scripts should take of the rest except for a couple of prompts for optional setup.
 
 ### Few utility scripts
 
