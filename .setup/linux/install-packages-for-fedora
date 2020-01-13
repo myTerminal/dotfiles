@@ -60,7 +60,7 @@ sudo dnf install -y \
      android-file-transfer \
      levien-inconsolata-fonts \
      liberation-mono-fonts \
-     google-roboto-mono-fonts \
+     google-roboto-fonts \
      google-droid-sans-mono-fonts
 sudo dnf copr enable evana/fira-code-fonts -y
 sudo dnf install -y fira-code-fonts
