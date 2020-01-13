@@ -12,7 +12,7 @@ then
     abort_setup_for "Debian"
 elif [ $(command -v dnf) ]
 then
-    echo "Found Fedora Linux."
+    echo "Installing packages for Fedora."
     . ~/.setup/linux/install-packages-for-fedora
 elif [ $(command -v pacman) ]
 then
@@ -22,9 +22,13 @@ else
 fi
 
 # Change shell to fish-shell
+echo "Changing shell to fish"
 chsh -s /bin/fish
 
 # Set up group for docker
+echo "Setting up docker"
 sudo groupadd docker
 sudo gpasswd -a $USER docker
 sudo service docker restart
+
+echo "Setup complete!"

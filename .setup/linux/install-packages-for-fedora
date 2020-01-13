@@ -6,6 +6,9 @@ sudo dnf install -y \
      https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
      https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
+echo "Adding additional package repos"
+sudo dnf copr enable evana/fira-code-fonts -y
+
 # Update installed packages
 echo "Updating all packages"
 sudo dnf update -y
@@ -61,9 +64,8 @@ sudo dnf install -y \
      levien-inconsolata-fonts \
      liberation-mono-fonts \
      google-roboto-fonts \
-     google-droid-sans-mono-fonts
-sudo dnf copr enable evana/fira-code-fonts -y
-sudo dnf install -y fira-code-fonts
+     google-droid-sans-mono-fonts \
+     fira-code-fonts
 
 # Manual packages
 # - Install hyper from https://releases.hyper.is/download/rpm
@@ -85,3 +87,5 @@ sudo dnf install -y fira-code-fonts
 
 # Inbuilt packages
 # (None yet)
+
+echo "Setup complete for all package"

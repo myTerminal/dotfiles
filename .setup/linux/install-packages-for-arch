@@ -96,3 +96,5 @@ yay -S \
 
 # Install stable toolchain for rust
 rustup toolchain install stable
+
+echo "Setup complete for all package"
