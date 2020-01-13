@@ -16,7 +16,8 @@ then
     . ~/.setup/linux/install-packages-for-fedora
 elif [ $(command -v pacman) ]
 then
-    abort_setup_for "Arch"
+    echo "Installing packages for Arch."
+    . ~/.setup/linux/install-packages-for-arch
 else
     abort_setup_for "an unknown"
 fi
