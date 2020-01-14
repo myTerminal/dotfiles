@@ -192,7 +192,7 @@ bindsym XF86AudioNext exec clementine --next
 bindsym XF86AudioPrev exec clementine --previous
 
 # Set wallpaper
-exec feh --bg-scale ~/Pictures/wallpaper.jpg
+exec feh --bg-scale ~/.assets/teN7.png
 
 # Bind i3lock
 bindsym $mod+shift+x exec i3lock

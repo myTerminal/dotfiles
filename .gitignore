@@ -20,6 +20,8 @@
 !/.config/fish/*.fish
 !/.config/i3
 
+!/.assets
+
 !/.emacs.d
 /.emacs.d/*
 !/.emacs.d/init.el
