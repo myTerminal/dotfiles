@@ -68,6 +68,7 @@ brew cask install \
 # - Install Razer Synapse drivers from http://rzr.to/synapse-mac-download
 
 # Missing packages
+# - GameHub
 # - Droid Sans
 
 # Inbuilt packages

@@ -55,6 +55,7 @@ sudo dnf install -y \
      gstreamer \
      kodi \
      steam \
+     gamehub \
      vokoscreen \
      key-mon \
      libreoffice \
