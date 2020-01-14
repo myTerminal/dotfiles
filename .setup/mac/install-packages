@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 # Install brew
-echo "Installing home-brew"
+echo "Installing home-brew..."
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install cask
-echo "Installing cask"
+echo "Installing cask..."
 brew tap caskroom/cask
 
 # Install packages only available on brew
-echo "Installing packages from brew"
+echo "Installing packages from brew..."
 brew install \
      fish \
      tig \
@@ -20,7 +20,7 @@ brew install \
      youtube-dl
 
 # Install rest of the packages from casks
-echo "Installing rest of the packages"
+echo "Installing rest of the packages..."
 brew cask install \
      hyper \
      emacs \

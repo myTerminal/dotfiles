@@ -1,20 +1,33 @@
 #!/usr/bin/env bash
 
+# Load the functions library
+echo "Loading required assets..."
+. ~/.setup/lib
+
 # Run setup for the current OS
-if [ $(uname) = 'Linux' ]; then
+echo "Detecting platform..."
+if [ $(uname) = 'Linux' ]
+then
+    echo "Starting setup for Linux..."
     . ~/.setup/linux/start
-elif [ $(uname) = 'Darwin' ]; then
+elif [ $(uname) = 'Darwin' ]
+then
+    echo "Starting setup for Mac..."
     . ~/.setup/mac/start
+else
+    abort_setup "Unknown platform found.\nAborting..."
 fi
 
 # Install global packages from NPM
+echo "Installing npm packages..."
 . ~/.setup/install-npm-packages
 
 # Prompt to create cloud symlinks
 # Ask to configure cloud services first and confirm that the directories are present
 # Once confirmed, proceed with creation of cloud symlinks
 read -n1 -r -p "Would you like to create cloud symlinks? (y/n) " k
-if [ "$k" == "y" ] || [ "$k" == "Y" ]; then
+if [ "$k" == "y" ] || [ "$k" == "Y" ]
+then
     echo ""
     read -n1 -r -p "Please make sure the associated cloud services are configured before proceeding. Press any key one done..."
     . ~/.setup/create-cloud-symlinks
@@ -25,9 +38,12 @@ fi
 
 # Prompt to clone GitHub source projects
 read -n1 -r -p "Would you like to clone GitHub source projects? (y/n) " k
-if [ "$k" == "y" ] || [ "$k" == "Y" ]; then
+if [ "$k" == "y" ] || [ "$k" == "Y" ]
+then
     echo ""
     . ~/.setup/clone-github-source-projects
 else
     echo -e "\nSkipped cloning of GitHub source projects"
 fi
+
+echo "Setup is now complete!"

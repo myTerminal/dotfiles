@@ -1,35 +1,28 @@
 #!/usr/bin/env bash
 
-# Function to abort on something unexpected
-abort_setup_for () {
-    echo -e "\nFound $1 Linux for which no configuration is created yet.\nAborting now..."
-    exit 0
-}
-
 # Run setup for the appropriate platform
+echo "Detecting Linux type..."
 if [ $(command -v apt) ]
 then
     abort_setup_for "Debian"
 elif [ $(command -v dnf) ]
 then
-    echo "Installing packages for Fedora."
+    echo "Installing packages for Fedora..."
     . ~/.setup/linux/install-packages-for-fedora
 elif [ $(command -v pacman) ]
 then
-    echo "Installing packages for Arch."
+    echo "Installing packages for Arch..."
     . ~/.setup/linux/install-packages-for-arch
 else
     abort_setup_for "an unknown"
 fi
 
 # Change shell to fish-shell
-echo "Changing shell to fish"
+echo "Changing shell to fish..."
 chsh -s /bin/fish
 
 # Set up group for docker
-echo "Setting up docker"
+echo "Setting up docker..."
 sudo groupadd docker
 sudo gpasswd -a $USER docker
 sudo service docker restart
-
-echo "Setup complete!"
