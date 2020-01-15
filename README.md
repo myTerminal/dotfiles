@@ -38,11 +38,11 @@ To get the *dotfiles*, run the below commands in `~`:
 
 To start setup, run the following command in a terminal running bash:
 
-    . ./.setup/run
+    . ./.setup/start
 
 If you're running a shell different than bash, run something like:
 
-    bash ./.setup/run
+    bash ./.setup/start
 
 The setup scripts should take of the rest except for a couple of prompts for optional setup.
 
