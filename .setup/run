@@ -15,7 +15,7 @@ then
     echo "Starting setup for Mac..."
     . ~/.setup/mac/start
 else
-    abort_setup "Unknown platform found.\nAborting..."
+    mt_abort_setup "Unknown platform found."
 fi
 
 # Install global packages from NPM

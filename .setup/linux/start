@@ -4,7 +4,7 @@
 echo "Detecting Linux type..."
 if [ $(command -v apt) ]
 then
-    abort_setup_for "Debian"
+    mt_abort_setup_for "Debian"
 elif [ $(command -v dnf) ]
 then
     echo "Installing packages for Fedora..."
@@ -14,7 +14,7 @@ then
     echo "Installing packages for Arch..."
     . ~/.setup/linux/install-packages-for-arch
 else
-    abort_setup_for "an unknown"
+    mt_abort_setup_for "an unknown"
 fi
 
 # Change shell to fish-shell

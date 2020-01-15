@@ -1,13 +1,19 @@
 #!/usr/bin/env bash
 
-# Function to abort for an arbitary reason
-abort_setup () {
-    echo -e $1
+# Function to abort with exit-code 0
+mt_abort () {
+    echo "Aborting..."
     exit 0
 }
 
-# Function to abort for an unknown Linux
-abort_setup_for () {
-    echo -e "\nFound $1 Linux for which no configuration is created yet.\nAborting..."
-    exit 0
+# Function to abort setup for an arbitary reason
+mt_abort_setup () {
+    echo -e $1
+    mt_abort
+}
+
+# Function to abort setup for an unknown Linux
+mt_abort_setup_for () {
+    echo -e "\nFound $1 Linux for which no configuration is created yet."
+    mt_abort
 }
