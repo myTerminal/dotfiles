@@ -1,19 +1,44 @@
 #!/usr/bin/env bash
 
+# Function to log text
+mt_log () {
+    echo -e "$1"
+}
+
+# Function to prompt for a value
+mt_prompt () {
+    read -p "$1 " $2
+}
+
+# Function to prompt for a confirmation
+mt_confirm () {
+    read -n1 -r -p "$1 (y/n) " $2
+    echo ""
+}
+
+# Function to load a script after a confirmation
+mt_source_with_confirmation () {
+    mt_confirm "$1" mt_temp
+
+    if [ "$mt_temp" == "y" ] || [ "$mt_temp" == "Y" ]; then
+        . $2
+    fi
+}
+
 # Function to abort with exit-code 0
 mt_abort () {
-    echo "Aborting..."
+    mt_log "Aborting..."
     exit 0
 }
 
 # Function to abort setup for an arbitary reason
 mt_abort_setup () {
-    echo -e $1
+    mt_log "$1"
     mt_abort
 }
 
 # Function to abort setup for an unknown Linux
 mt_abort_setup_for () {
-    echo -e "\nFound $1 Linux for which no configuration is created yet."
+    mt_log "\nFound $1 Linux for which no configuration is created yet."
     mt_abort
 }
