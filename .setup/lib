@@ -16,6 +16,11 @@ mt_confirm () {
     echo ""
 }
 
+# Function to pause for a keypress
+mt_pause () {
+    read -n1 -r -p "$1" mt_temp
+}
+
 # Function to load a script after a confirmation
 mt_source_with_confirmation () {
     mt_confirm "$1" mt_temp
