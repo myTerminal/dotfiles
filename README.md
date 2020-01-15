@@ -6,7 +6,9 @@ The 'replicable' heart of my computer(s)
 
 ## Platforms
 
-- [Fedora](https://getfedora.org)
+- Linux
+  - [Arch Linux](https://www.archlinux.org)
+  - [Fedora](https://getfedora.org)
 - [macOS](https://www.apple.com/macos)
 
 ## Configuration
@@ -38,11 +40,11 @@ To get the *dotfiles*, run the below commands in `~`:
 
 To start setup, run the following command in a terminal running bash:
 
-    . ./.setup/start
+    . .setup/start
 
 If you're running a shell different than bash, run something like:
 
-    bash ./.setup/start
+    bash .setup/start
 
 The setup scripts should take of the rest except for a couple of prompts for optional setup.
 
@@ -52,4 +54,5 @@ There is a growing collection of shell utility scripts included to help one with
 
 ## To-Do
 
-- Figure out alternatives for missing packages on either platform
+- Figure out alternatives for missing packages on all operating platforms
+- Possibly extract workstation setup as a separate package
