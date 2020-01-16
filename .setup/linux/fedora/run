@@ -2,4 +2,7 @@
 
 mt_log "Setting up Fedora..."
 
-. ~/.setup/linux/fedora/install-other-packages
+. ~/.setup/linux/fedora/setup-repos
+. ~/.setup/linux/fedora/install-packages
+. ~/.setup/linux/create-users
+. ~/.setup/linux/fedora/setup-gui

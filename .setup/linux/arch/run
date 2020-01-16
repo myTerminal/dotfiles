@@ -2,4 +2,7 @@
 
 mt_log "Setting up Arch Linux..."
 
-. ~/.setup/linux/arch/install-other-packages
+. ~/.setup/linux/arch/setup-repos
+. ~/.setup/linux/arch/install-packages
+. ~/.setup/linux/create-users
+. ~/.setup/linux/arch/setup-gui

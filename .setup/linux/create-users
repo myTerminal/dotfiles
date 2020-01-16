@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+mt_log "Creating users..."
+
+# TODO: Implement
