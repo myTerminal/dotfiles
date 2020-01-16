@@ -10,23 +10,40 @@ mt_prompt () {
     read -p "$1 " $2
 }
 
-# Function to prompt for a confirmation
-mt_confirm () {
-    read -n1 -r -p "$1 (y/n) " $2
+# Function to prompt for a character
+mt_prompt_for_character () {
+    read -n1 -r -p "$1 " $2
     echo ""
 }
 
 # Function to pause for a keypress
 mt_pause () {
-    read -n1 -r -p "$1" mt_temp
+    mt_prompt_for_character "$1" mt_temp
+}
+
+# Function to prompt for a confirmation
+mt_confirm () {
+    mt_prompt_for_character "$1 (y/n) " mt_temp
+
+    if [ "$mt_temp" == "y" ] || [ "$mt_temp" == "Y" ]; then
+        $2
+    else
+        if [ "$3" ]; then
+            mt_log "$3"
+        fi
+    fi
 }
 
 # Function to load a script after a confirmation
 mt_source_with_confirmation () {
-    mt_confirm "$1" mt_temp
+    mt_prompt_for_character "$1 (y/n) " mt_temp
 
     if [ "$mt_temp" == "y" ] || [ "$mt_temp" == "Y" ]; then
         . $2
+    else
+        if [ "$3" ]; then
+            mt_log "$3"
+        fi
     fi
 }
 
