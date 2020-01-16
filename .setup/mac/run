@@ -6,6 +6,7 @@ mt_log "Taking care of a few things..."
 defaults write com.apple.Finder AppleShowAllFiles YES
 killall Finder
 
+. ~/.setup/mac/setup-repos
 . ~/.setup/mac/install-packages
 
 mt_log "Changing shell to fish..."
