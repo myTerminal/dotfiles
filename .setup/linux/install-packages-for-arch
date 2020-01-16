@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
 
-# Update all packages
-echo "Updating all packages..."
+mt_log "Installing packages for Arch..."
+
+mt_log "Updating all packages..."
 sudo pacman -Syu --noconfirm
 
-# Install git
-echo "Installing git..."
+mt_log "Installing git..."
 sudo pacman -S git --noconfirm
 
-# Install yay for AUR packages
-echo "Installing yay for AUR packages..."
+mt_log "Installing yay for AUR packages..."
 mkdir temp
 git clone https://aur.archlinux.org/yay.git ./temp/yay
 cd ./temp/yay
@@ -17,8 +16,7 @@ makepkg -si
 cd ../../
 rm -rf ./temp
 
-# Install required packages from official repos
-echo "Installing packages from official repos..."
+mt_log "Installing packages from official repos..."
 sudo pacman -S \
      i3-wm \
      i3status \
@@ -62,8 +60,7 @@ sudo pacman -S \
      ttf-fira-code \
      --noconfirm
 
-# Install required packages from AUR
-echo "Installing packages from AUR..."
+mt_log "Installing packages from AUR..."
 yay -S \
     google-chrome \
     postman \
@@ -96,5 +93,5 @@ yay -S \
 ### More ###
 
 # Install stable toolchain for rust
-echo "Taking care of a few final things..."
+mt_log "Taking care of a few final things..."
 rustup toolchain install stable

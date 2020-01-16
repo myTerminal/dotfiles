@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "Loading required assets..."
+
 # Function to log text
 mt_log () {
     echo -e "$1"
@@ -64,3 +66,5 @@ mt_abort_setup_for () {
     mt_log "\nFound $1 Linux for which no configuration is created yet."
     mt_abort
 }
+
+mt_log "All required assets loaded"

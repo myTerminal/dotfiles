@@ -1,28 +1,22 @@
 #!/usr/bin/env bash
 
-# Run setup for the appropriate platform
-echo "Detecting Linux type..."
-if [ $(command -v apt) ]
-then
+mt_log "Setting up Linux..."
+
+mt_log "Detecting Linux type..."
+if [ $(command -v apt) ]; then
     mt_abort_setup_for "Debian"
-elif [ $(command -v dnf) ]
-then
-    echo "Installing packages for Fedora..."
+elif [ $(command -v dnf) ]; then
     . ~/.setup/linux/install-packages-for-fedora
-elif [ $(command -v pacman) ]
-then
-    echo "Installing packages for Arch..."
+elif [ $(command -v pacman) ]; then
     . ~/.setup/linux/install-packages-for-arch
 else
     mt_abort_setup_for "an unknown"
 fi
 
-# Change shell to fish-shell
-echo "Changing shell to fish..."
+mt_log "Changing shell to fish..."
 chsh -s /bin/fish
 
-# Set up group for docker
-echo "Setting up docker..."
+mt_log "Setting up docker..."
 sudo groupadd docker
 sudo gpasswd -a $USER docker
 sudo service docker restart

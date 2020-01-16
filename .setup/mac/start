@@ -1,19 +1,16 @@
 #!/usr/bin/env bash
 
-# Enable showing of hidden files in finder
-echo "Taking care of a few things..."
+mt_log "Setting up Mac..."
+
+mt_log "Taking care of a few things..."
 defaults write com.apple.Finder AppleShowAllFiles YES
 killall Finder
 
-# Install software packages
-echo "Installing packages..."
 . ~/.setup/mac/install-packages
 
-# Change shell to fish-shell
-echo "Changing shell to fish..."
+mt_log "Changing shell to fish..."
 echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
 
-# Set up cargo for rust
-echo "Taking care of a few final things..."
+mt_log "Taking care of a few final things..."
 rustup-init

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+mt_log "Installing global npm packages..."
+
 sudo npm install -g \
      lite-server \
      nano-server \
@@ -7,3 +9,5 @@ sudo npm install -g \
      stay-with-me \
      git-getter \
      re-write
+
+mt_log "All global npm packages installed"

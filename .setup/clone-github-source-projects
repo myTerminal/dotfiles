@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
+mt_log "Cloning GitHub source projects..."
+
 mkdir ~/_repositories
 cd ~/_repositories
 git-getter myTerminal
 cd ..
+
+mt_log "GitHub source projects cloned"

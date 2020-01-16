@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
+mt_pause "Please make sure the associated cloud services are configured before proceeding. Press any key one done..."
+
 ln -s ~/Google\ Drive/.private-keys ~/.private-keys
+
+mt_log "Symlinks have now been created"

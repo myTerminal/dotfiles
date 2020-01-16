@@ -1,28 +1,26 @@
 #!/usr/bin/env bash
 
-# Install RPM Fusion repos
-echo "Installing RPM fusion repos..."
+mt_log "Installing packages for Fedora..."
+
+mt_log "Installing RPM fusion repos..."
 sudo dnf install -y \
      https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
      https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-echo "Adding additional package repos..."
+mt_log "Adding additional package repos..."
 sudo dnf copr enable evana/fira-code-fonts -y
 
-# Update installed packages
-echo "Updating all packages..."
+mt_log "Updating all packages..."
 sudo dnf update -y
 
-# Install packages from URLs
-echo "Installing google-chrome..."
+mt_log "Installing google-chrome..."
 sudo dnf install -y \
      https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-echo "Installing crossover from URL..."
+mt_log "Installing crossover from URL..."
 sudo dnf install -y \
      http://crossover.codeweavers.com/redirect/crossover.rpm
 
-# Install rest of the packages
-echo "Installing rest of the packages..."
+mt_log "Installing rest of the packages..."
 sudo dnf install -y \
      i3 \
      i3status \
