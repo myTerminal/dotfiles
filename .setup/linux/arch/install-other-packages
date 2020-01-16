@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-mt_log "Installing packages for Arch..."
+mt_log "Installing other packages for Arch Linux..."
 
 mt_log "Updating all packages..."
 sudo pacman -Syu --noconfirm

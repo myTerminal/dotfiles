@@ -4,9 +4,9 @@
 
 mt_log "Detecting platform..."
 if [ $(uname) = 'Linux' ]; then
-    . ~/.setup/linux/start
+    . ~/.setup/linux/run
 elif [ $(uname) = 'Darwin' ]; then
-    . ~/.setup/mac/start
+    . ~/.setup/mac/run
 else
     mt_abort_setup "Unknown platform found."
 fi

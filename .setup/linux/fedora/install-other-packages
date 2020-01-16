@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-mt_log "Installing packages for Fedora..."
+mt_log "Installing other packages for Fedora..."
 
 mt_log "Installing RPM fusion repos..."
 sudo dnf install -y \

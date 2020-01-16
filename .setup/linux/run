@@ -6,9 +6,9 @@ mt_log "Detecting Linux type..."
 if [ $(command -v apt) ]; then
     mt_abort_setup_for "Debian"
 elif [ $(command -v dnf) ]; then
-    . ~/.setup/linux/install-packages-for-fedora
+    . ~/.setup/linux/fedora/run
 elif [ $(command -v pacman) ]; then
-    . ~/.setup/linux/install-packages-for-arch
+    . ~/.setup/linux/arch/run
 else
     mt_abort_setup_for "an unknown"
 fi
