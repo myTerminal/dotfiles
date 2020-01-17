@@ -9,7 +9,6 @@ sudo pacman -S \
      i3lock \
      feh \
      terminology \
-     hyper \
      fish \
      emacs \
      pcmanfm \
@@ -48,6 +47,7 @@ sudo pacman -S \
 
 mt_log "Installing packages from AUR..."
 yay -S \
+    hyper \
     google-chrome \
     postman \
     tunnelbear \
