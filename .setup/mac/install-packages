@@ -44,7 +44,6 @@ brew cask install \
      libreoffice \
      virtualbox \
      crossover \
-     docker \
      diffmerge \
      android-file-transfer \
      razer-synapse \

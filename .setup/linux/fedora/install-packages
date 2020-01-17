@@ -47,7 +47,6 @@ sudo dnf install -y \
      key-mon \
      libreoffice \
      VirtualBox \
-     docker \
      android-file-transfer \
      levien-inconsolata-fonts \
      liberation-mono-fonts \

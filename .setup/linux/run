@@ -15,8 +15,3 @@ fi
 
 mt_log "Changing shell to fish..."
 chsh -s /bin/fish
-
-mt_log "Setting up docker..."
-sudo groupadd docker
-sudo gpasswd -a $USER docker
-sudo service docker restart
