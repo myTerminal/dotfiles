@@ -12,6 +12,6 @@ mt_log "Installing yay for AUR packages..."
 mkdir temp
 git clone https://aur.archlinux.org/yay.git ./temp/yay
 cd ./temp/yay
-makepkg -si
+makepkg -si --noconfirm
 cd ../../
 rm -rf ./temp
