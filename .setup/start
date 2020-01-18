@@ -13,12 +13,12 @@ fi
 
 . ~/.setup/install-npm-packages
 
-mt_source_with_confirmation "Create cloud symlinks?" \
-                            ~/.setup/create-cloud-symlinks \
-                            "Skipped creation of cloud symlinks"
+mt_confirm_and_source "Create cloud symlinks?" \
+                      ~/.setup/create-cloud-symlinks \
+                      "Skipped creation of cloud symlinks"
 
-mt_source_with_confirmation "Clone GitHub source projects?" \
-                            ~/.setup/clone-github-source-projects \
-                            "Skipped cloning of GitHub source projects"
+mt_confirm_and_source "Clone GitHub source projects?" \
+                      ~/.setup/clone-github-source-projects \
+                      "Skipped cloning of GitHub source projects"
 
 mt_log "Setup is now complete!"

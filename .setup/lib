@@ -37,7 +37,7 @@ mt_confirm () {
 }
 
 # Function to load a script after a confirmation
-mt_source_with_confirmation () {
+mt_confirm_and_source () {
     mt_prompt_for_character "$1 (y/n) " mt_temp
 
     if [ "$mt_temp" == "y" ] || [ "$mt_temp" == "Y" ]; then
@@ -46,6 +46,17 @@ mt_source_with_confirmation () {
         if [ "$3" ]; then
             mt_log "$3"
         fi
+    fi
+}
+
+# Function to load a script after a confirmation else the other
+mt_confirm_and_source_else () {
+    mt_prompt_for_character "$1 (y/n) " mt_temp
+
+    if [ "$mt_temp" == "y" ] || [ "$mt_temp" == "Y" ]; then
+        . $2
+    else
+        . $3
     fi
 }
 

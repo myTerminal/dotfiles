@@ -5,10 +5,10 @@ mt_log "Setting up Arch Linux..."
 . ~/.setup/linux/arch/setup-repos
 . ~/.setup/linux/arch/install-packages
 
-mt_source_with_confirmation "Create users?" \
-                            ~/.setup/linux/create-users \
-                            "Skipped creation of users"
+mt_confirm_and_source "Create users?" \
+                      ~/.setup/linux/create-users \
+                      "Skipped creation of users"
 
-mt_source_with_confirmation "Setup GUI?" \
-                            ~/.setup/linux/arch/setup-gui \
-                            "Skipped setting up of GUI"
+mt_confirm_and_source "Setup GUI?" \
+                      ~/.setup/linux/arch/setup-gui \
+                      "Skipped setting up of GUI"
