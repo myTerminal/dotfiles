@@ -11,7 +11,9 @@ else
     mt_abort_setup "Unknown platform found."
 fi
 
-. ~/.setup/install-npm-packages
+mt_confirm_and_source "Install NPM packages?" \
+                      ~/.setup/install-npm-packages \
+                      "Skipped installation of NPM packages"
 
 mt_confirm_and_source "Create cloud symlinks?" \
                       ~/.setup/create-cloud-symlinks \

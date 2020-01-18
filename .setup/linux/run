@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
-mt_log "Setting up Linux..."
+mt_log "Please select an action:"
 
-mt_log "Detecting Linux type..."
-if [ $(command -v apt) ]; then
-    mt_abort_setup_for "Debian"
-elif [ $(command -v dnf) ]; then
-    . ~/.setup/linux/fedora/run
-elif [ $(command -v pacman) ]; then
-    . ~/.setup/linux/arch/run
+mt_log "(1): Setup system"
+mt_log "(2): Change shell for current user"
+
+mt_prompt_for_character "" mt_temp
+
+if [ "$mt_temp" == '1' ]; then
+    sudo bash ~/.setup/linux/setup-system
+elif [ "$mt_temp" == '2' ]; then
+    . ~/.setup/linux/change-shell
 else
-    mt_abort_setup_for "an unknown"
+    mt_log "Invalid option selected!"
 fi
-
-. ~/.setup/linux/change-shell
