@@ -13,5 +13,4 @@ else
     mt_abort_setup_for "an unknown"
 fi
 
-mt_log "Changing shell to fish..."
-chsh -s /bin/fish
+. ~/.setup/linux/change-shell
