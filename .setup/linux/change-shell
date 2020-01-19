@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
 mt_log "Changing shell to fish..."
+
 chsh -s /bin/fish

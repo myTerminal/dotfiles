@@ -2,4 +2,39 @@
 
 mt_log "Setting up GUI..."
 
-# TODO: Implement
+mt_log "Installing display server..."
+pacman -S \
+       xorg-server \
+       xorg-apps \
+       xorg-xinit \
+       --noconfirm
+
+mt_log "Installing graphics driver(s)..."
+mt_log "Please choose your graphics card:"
+mt_log "(1): AMD"
+mt_log "(2): Intel"
+mt_log "(3): Nvidia"
+mt_prompt_for_character "" mt_temp
+
+if [ "$mt_temp" == '1' ]; then
+    graphics_driver="xf86-video-amdgpu"
+elif [ "$mt_temp" == '2' ]; then
+    graphics_driver="xf86-video-intel"
+elif [ "$mt_temp" == '3' ]; then
+    graphics_driver="xf86-video-nouveau"
+else
+    mt_log "Invalid option selected!"
+fi
+
+pacman -S \
+       $graphics_driver \
+       --noconfirm
+
+mt_log "Installing a display manager..."
+yay -S \
+    ly-git \
+    --noconfirm
+
+mt_log "Activating display-manager service..."
+systemctl disable display-manager.service
+systemctl enable ly

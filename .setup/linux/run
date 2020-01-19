@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 mt_log "Please select an action:"
-
 mt_log "(1): Setup system"
 mt_log "(2): Change shell for current user"
 
