@@ -2,4 +2,38 @@
 
 mt_log "Setting up GUI..."
 
-# TODO: Implement
+mt_log "Installing display server..."
+dnf install -y \
+       xorg-x11-server-Xorg \
+       xorg-x11-apps \
+       xorg-x11-init
+
+mt_log "Installing graphics driver(s)..."
+mt_log "Please choose your graphics card:"
+mt_log "(1): AMD"
+mt_log "(2): Intel"
+mt_log "(3): Nvidia"
+mt_prompt_for_character "" mt_temp
+
+if [ "$mt_temp" == '1' ]; then
+    graphics_driver="xorg-x11-drv-amdgpu"
+elif [ "$mt_temp" == '2' ]; then
+    graphics_driver="xorg-x11-drv-intel"
+elif [ "$mt_temp" == '3' ]; then
+    graphics_driver="xorg-x11-drv-nouveau"
+else
+    mt_log "Invalid option selected!"
+fi
+
+dnf install -y \
+       $graphics_driver \
+
+mt_log "Installing a display manager..."
+dnf copr enable fnux/ly -y
+dnf install ly -y
+
+mt_log "Activating display-manager service..."
+systemctl disable display-manager.service
+systemctl enable ly
+
+# TODO: Fix or verify
