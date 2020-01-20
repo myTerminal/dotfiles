@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+mt_setup_dir="$1"
+
 echo "Loading required assets..."
 
 # Function to log text

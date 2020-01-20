@@ -1,26 +1,27 @@
 #!/usr/bin/env bash
 
-. ~/.setup/lib
+mt_temp=$(dirname "$0")
+. "$mt_temp/lib" $mt_temp
 
 mt_log "Detecting platform..."
 if [ $(uname) = 'Linux' ]; then
-    . ~/.setup/linux/run
+    . "$mt_setup_dir/linux/run"
 elif [ $(uname) = 'Darwin' ]; then
-    . ~/.setup/mac/run
+    . "$mt_setup_dir/mac/run"
 else
     mt_abort_setup "Unknown platform found."
 fi
 
 mt_confirm_and_source "Install NPM packages?" \
-                      ~/.setup/install-npm-packages \
+                      "$mt_setup_dir/install-npm-packages" \
                       "Skipped installation of NPM packages"
 
 mt_confirm_and_source "Create cloud symlinks?" \
-                      ~/.setup/create-cloud-symlinks \
+                      "$mt_setup_dir/create-cloud-symlinks" \
                       "Skipped creation of cloud symlinks"
 
 mt_confirm_and_source "Clone GitHub source projects?" \
-                      ~/.setup/clone-github-source-projects \
+                      "$mt_setup_dir/clone-github-source-projects" \
                       "Skipped cloning of GitHub source projects"
 
 mt_log "Setup is now complete!"

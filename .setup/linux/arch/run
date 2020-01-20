@@ -2,13 +2,13 @@
 
 mt_log "Setting up Arch Linux..."
 
-. ~/.setup/linux/arch/setup-repos
-. ~/.setup/linux/arch/install-packages
+. "$mt_setup_dir/linux/arch/setup-repos"
+. "$mt_setup_dir/linux/arch/install-packages"
 
 mt_confirm_and_source "Create users?" \
-                      ~/.setup/linux/create-users \
+                      "$mt_setup_dir/linux/create-users" \
                       "Skipped creation of users"
 
 mt_confirm_and_source "Setup GUI?" \
-                      ~/.setup/linux/arch/setup-gui \
+                      "$mt_setup_dir/linux/arch/setup-gui" \
                       "Skipped setting up of GUI"

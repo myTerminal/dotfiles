@@ -6,8 +6,8 @@ mt_log "Taking care of a few things..."
 defaults write com.apple.Finder AppleShowAllFiles YES
 killall Finder
 
-. ~/.setup/mac/setup-repos
-. ~/.setup/mac/install-packages
+. "$mt_setup_dir/mac/setup-repos"
+. "$mt_setup_dir/mac/install-packages"
 
 mt_log "Changing shell to fish..."
 echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
