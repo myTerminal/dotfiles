@@ -15,3 +15,6 @@ chsh -s /usr/local/bin/fish
 
 mt_log "Taking care of a few final things..."
 rustup-init
+
+mt_prompt "Setup is complete, hit any key to reboot..."
+sudo reboot 0
