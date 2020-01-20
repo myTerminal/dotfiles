@@ -7,7 +7,7 @@ mt_log "(2): Change shell for current user"
 mt_prompt_for_character "" mt_temp
 
 if [ "$mt_temp" == '1' ]; then
-    sudo bash "$mt_setup_dir/linux/setup-system" $mt_setup_dir
+    . "$mt_setup_dir/linux/setup-system" $mt_setup_dir
 elif [ "$mt_temp" == '2' ]; then
     . "$mt_setup_dir/linux/change-shell"
 else

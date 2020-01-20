@@ -3,11 +3,11 @@
 mt_log "Setting up GUI..."
 
 mt_log "Installing display server..."
-pacman -S \
-       xorg-server \
-       xorg-apps \
-       xorg-xinit \
-       --noconfirm
+sudo pacman -S \
+     xorg-server \
+     xorg-apps \
+     xorg-xinit \
+     --noconfirm
 
 mt_log "Installing graphics driver(s)..."
 mt_log "Please choose your graphics card:"
@@ -26,9 +26,9 @@ else
     mt_log "Invalid option selected!"
 fi
 
-pacman -S \
-       $graphics_driver \
-       --noconfirm
+sudo pacman -S \
+     $graphics_driver \
+     --noconfirm
 
 mt_log "Installing a display manager..."
 yay -S \
@@ -36,5 +36,5 @@ yay -S \
     --noconfirm
 
 mt_log "Activating display-manager service..."
-systemctl disable display-manager.service
-systemctl enable ly
+sudo systemctl disable display-manager.service
+sudo systemctl enable ly

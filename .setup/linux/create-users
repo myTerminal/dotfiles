@@ -2,7 +2,7 @@
 
 mt_log "Creating users..."
 
-useradd -m -g users -s /bin/fish -c "Mohammed Ismail Ansari" ismail
-passwd ismail
+sudo useradd -m -g users -s /bin/fish -c "Mohammed Ismail Ansari" ismail
+sudo passwd ismail
 
 mt_log "You still need to edit /etc/sudoers with 'visudo' command for this user to be able to run sudo commands."

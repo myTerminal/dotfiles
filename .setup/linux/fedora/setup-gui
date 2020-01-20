@@ -3,10 +3,10 @@
 mt_log "Setting up GUI..."
 
 mt_log "Installing display server..."
-dnf install -y \
-       xorg-x11-server-Xorg \
-       xorg-x11-apps \
-       xorg-x11-init
+sudo dnf install -y \
+     xorg-x11-server-Xorg \
+     xorg-x11-apps \
+     xorg-x11-init
 
 mt_log "Installing graphics driver(s)..."
 mt_log "Please choose your graphics card:"
@@ -25,15 +25,15 @@ else
     mt_log "Invalid option selected!"
 fi
 
-dnf install -y \
-       $graphics_driver \
+sudo dnf install -y \
+     $graphics_driver \
 
 mt_log "Installing a display manager..."
-dnf copr enable fnux/ly -y
-dnf install ly -y
+sudo dnf copr enable fnux/ly -y
+sudo dnf install ly -y
 
 mt_log "Activating display-manager service..."
-systemctl disable display-manager.service
-systemctl enable ly
+sudo systemctl disable display-manager.service
+sudo systemctl enable ly
 
 # TODO: Fix or verify
