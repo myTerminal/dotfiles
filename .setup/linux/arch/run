@@ -2,7 +2,7 @@
 
 mt_log "Setting up Arch Linux..."
 
-. "$mt_setup_dir/linux/arch/setup-repos"
+. "$mt_setup_dir/linux/arch/setup-sources"
 . "$mt_setup_dir/linux/arch/install-packages"
 
 mt_confirm_and_source "Create users?" \

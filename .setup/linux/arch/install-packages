@@ -2,7 +2,7 @@
 
 mt_log "Installing packages..."
 
-mt_log "Installing packages from official repos..."
+mt_log "Installing packages from official sources..."
 sudo pacman -S \
      i3-wm \
      i3status \

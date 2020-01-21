@@ -2,7 +2,7 @@
 
 mt_log "Setting up Fedora..."
 
-. "$mt_setup_dir/linux/fedora/setup-repos"
+. "$mt_setup_dir/linux/fedora/setup-sources"
 . "$mt_setup_dir/linux/fedora/install-packages"
 
 mt_confirm_and_source "Create users?" \
