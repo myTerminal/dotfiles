@@ -14,12 +14,14 @@ mt_log () {
 
 # Function to prompt for a value
 mt_prompt () {
-    read -p "$1 " $2
+    mt_log "$1"
+    read -p "> " $2
 }
 
 # Function to prompt for a character
 mt_prompt_for_character () {
-    read -n1 -r -p "$1 " $2
+    mt_log "$1"
+    read -n1 -r -p "> " $2
     echo ""
 }
 
