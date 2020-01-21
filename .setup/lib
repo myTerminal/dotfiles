@@ -2,11 +2,14 @@
 
 mt_setup_dir="$1"
 
-echo "Loading required assets..."
+mt_color_start="\033[1;34m"
+mt_color_end="\033[0m"
+
+echo -e "${mt_color_start}Loading required assets...${mt_color_end}"
 
 # Function to log text
 mt_log () {
-    echo -e "$1"
+    echo -e "${mt_color_start}$1${mt_color_end}"
 }
 
 # Function to prompt for a value
