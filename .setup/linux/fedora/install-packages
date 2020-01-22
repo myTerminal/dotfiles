@@ -5,9 +5,6 @@ mt_log "Installing packages..."
 mt_log "Installing google-chrome..."
 sudo dnf install -y \
      https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-mt_log "Installing crossover from URL..."
-sudo dnf install -y \
-     http://crossover.codeweavers.com/redirect/crossover.rpm
 
 mt_log "Installing rest of the packages..."
 sudo dnf install -y \

@@ -60,8 +60,6 @@ yay -S \
     gamehub \
     vokoscreen \
     key-mon \
-    crossover \
-    razergenie \
     --noconfirm
 
 # Manual packages
@@ -72,6 +70,7 @@ yay -S \
 # - Origin
 # - Sony Remote play
 # - licecap
+# - Razer Synapse
 
 # Inbuilt packages
 # (None yet)

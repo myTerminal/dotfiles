@@ -43,7 +43,6 @@ brew cask install \
      keycastr \
      libreoffice \
      virtualbox \
-     crossover \
      diffmerge \
      android-file-transfer \
      razer-synapse \
