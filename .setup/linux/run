@@ -17,6 +17,10 @@ mt_confirm_and_source "Set hostname?" \
                       "$mt_setup_dir/linux/set-hostname" \
                       "Skipped setting of hostname"
 
+mt_confirm_and_source "Create users?" \
+                      "$mt_setup_dir/linux/create-users" \
+                      "Skipped creation of users"
+
 mt_confirm_and_source "Change shell?" \
                       "$mt_setup_dir/linux/change-shell" \
                       "Skipped changing of shell"

@@ -5,10 +5,6 @@ mt_log "Setting up Arch Linux..."
 . "$mt_setup_dir/linux/arch/setup-sources"
 . "$mt_setup_dir/linux/arch/install-packages"
 
-mt_confirm_and_source "Create users?" \
-                      "$mt_setup_dir/linux/create-users" \
-                      "Skipped creation of users"
-
 mt_confirm_and_source "Setup GUI?" \
                       "$mt_setup_dir/linux/arch/setup-gui" \
                       "Skipped setting up of GUI"
