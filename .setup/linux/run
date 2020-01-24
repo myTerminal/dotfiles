@@ -13,6 +13,10 @@ else
     mt_abort_setup_for "an unknown"
 fi
 
+mt_confirm_and_source "Set hostname?" \
+                      "$mt_setup_dir/linux/set-hostname" \
+                      "Skipped setting of hostname"
+
 mt_confirm_and_source "Change shell?" \
                       "$mt_setup_dir/linux/change-shell" \
                       "Skipped changing of shell"

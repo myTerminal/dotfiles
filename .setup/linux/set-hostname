@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+mt_log "Setting hostname..."
+
+mt_log "Enter a hostname to set:"
+mt_prompt ":" mt_temp
+hostnamectl set-hostname $mt_temp
+
+mt_log "Hostname set"
