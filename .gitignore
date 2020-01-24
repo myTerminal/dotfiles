@@ -31,5 +31,7 @@
 
 !/myterminal-configs.json
 
+!/.face*
+
 !/LICENSE
 !/README.md

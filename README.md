@@ -25,6 +25,7 @@ The 'replicable' heart of my computer(s)
 - [i3wm](https://i3wm.org) as a window manager on Fedora
 - [Hyper](https://hyper.is) as a terminal on macOS
 - [myterminal](https://github.com/myTerminal/myterminal) as a command-line companion
+- [SDDM](https://github.com/sddm/sddm) (currently only the user avatar)
 
 ## Scripts
 
