@@ -63,6 +63,7 @@ sudo dnf install -y \
 # Missing packages / Find alternative
 # - Google Drive
 # - TunnelBear
+# - Zulip
 # - Slack
 # - Origin
 # - Sony Remote play
