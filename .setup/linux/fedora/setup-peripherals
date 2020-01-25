@@ -2,4 +2,8 @@
 
 mt_log "Setting up peripherals..."
 
-# TODO: Setup Razer devices
+# TODO: Implement setting up Razer peripherals
+mt_log "Installing packages for Razer devices not implemented yet!"
+# Possible steps for installation:
+# - Install kernel-devel with `sudo dnf install kernel-devel` as mention at https://openrazer.github.io/#fedora
+# - Install polychromatic following instructions from https://software.opensuse.org/download.html?project=hardware%3Arazer&package=polychromatic
