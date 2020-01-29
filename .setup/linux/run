@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-mt_log "Setting up Linux..."
+mt_log "Found Linux..."
 
 mt_log "Detecting Linux type..."
 if [ $(command -v apt) ]; then
-    mt_abort_setup_for "Debian"
+    . "$mt_setup_dir/linux/debian/run"
 elif [ $(command -v dnf) ]; then
     . "$mt_setup_dir/linux/fedora/run"
 elif [ $(command -v pacman) ]; then

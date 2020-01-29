@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+mt_log "Setting up Debian/Ubuntu..."
+
+. "$mt_setup_dir/linux/debian/setup-sources"
+. "$mt_setup_dir/linux/debian/install-packages"
+
+mt_confirm_and_source "Setup GUI?" \
+                      "$mt_setup_dir/linux/debian/setup-gui" \
+                      "Skipped setting up of GUI"
+
+mt_confirm_and_source "Setup Peripherals?" \
+                      "$mt_setup_dir/linux/debian/setup-peripherals" \
+                      "Skipped setting up of peripherals"

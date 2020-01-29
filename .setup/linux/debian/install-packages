@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+mt_log "Installing packages..."
+
+# TODO: Implement
+mt_log "Not implemented!"

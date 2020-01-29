@@ -9,6 +9,7 @@ The 'replicable' heart of my computer(s)
 - Linux
   - [Arch Linux](https://www.archlinux.org)
   - [Fedora](https://getfedora.org)
+  - [Debian](https://www.debian.org)/[Ubuntu](https://ubuntu.com)
 - [macOS](https://www.apple.com/macos)
 
 ## Configuration
