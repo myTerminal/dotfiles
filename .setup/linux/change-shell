@@ -2,4 +2,6 @@
 
 mt_log "Changing shell to fish..."
 
-chsh -s /bin/fish
+chsh -s /bin/fish $USER
+
+mt_log "Shell changed for $USER"
