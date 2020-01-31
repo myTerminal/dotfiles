@@ -7,10 +7,10 @@ The 'replicable' heart of my computer(s)
 ## Platforms
 
 - Linux
-  - [Arch Linux](https://www.archlinux.org)
-  - [Fedora](https://getfedora.org)
-  - [Debian](https://www.debian.org)/[Ubuntu](https://ubuntu.com)
-- [macOS](https://www.apple.com/macos)
+  - [Arch Linux](https://www.archlinux.org) (most complete)
+  - [Fedora](https://getfedora.org) (almost complete)
+  - [Debian](https://www.debian.org)/[Ubuntu](https://ubuntu.com) (far from complete)
+- [macOS](https://www.apple.com/macos) (complete)
 
 ## Configuration
 
@@ -56,5 +56,5 @@ There is a growing collection of shell utility scripts included to help one with
 
 ## To-Do
 
+- Fill in missing sections for setups for the rest of the platforms
 - Figure out alternatives for missing packages on all operating platforms
-- Possibly extract workstation setup as a separate package
