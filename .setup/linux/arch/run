@@ -9,6 +9,10 @@ mt_confirm_and_source "Setup GUI?" \
                       "$mt_setup_dir/linux/arch/setup-gui" \
                       "Skipped setting up of GUI"
 
+mt_confirm_and_source "Setup Nvidia graphics drivers?" \
+                      "$mt_setup_dir/linux/arch/setup-nvidia-graphics-driver" \
+                      "Skipped setting up of Nvidia graphics driver"
+
 mt_confirm_and_source "Setup Peripherals?" \
                       "$mt_setup_dir/linux/arch/setup-peripherals" \
                       "Skipped setting up of peripherals"
