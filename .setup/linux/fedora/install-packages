@@ -12,6 +12,7 @@ sudo dnf install -y \
      i3status \
      i3lock \
      feh \
+     budgie-desktop \
      terminology \
      fish \
      emacs \
