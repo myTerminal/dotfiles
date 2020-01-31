@@ -29,11 +29,10 @@ sudo dnf install -y \
      $graphics_driver \
 
 mt_log "Installing a display manager..."
-sudo dnf copr enable fnux/ly -y
-sudo dnf install ly -y
+sudo dnf install sddm -y
 
 mt_log "Activating display-manager service..."
 sudo systemctl disable display-manager.service
-sudo systemctl enable ly
+sudo systemctl enable sddm
 
 # TODO: Fix or verify

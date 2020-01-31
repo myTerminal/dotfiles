@@ -31,10 +31,10 @@ sudo pacman -S \
      --noconfirm
 
 mt_log "Installing a display manager..."
-yay -S \
-    ly-git \
-    --noconfirm
+sudo pacman -S \
+     sddm \
+     --noconfirm
 
 mt_log "Activating display-manager service..."
 sudo systemctl disable display-manager.service
-sudo systemctl enable ly
+sudo systemctl enable sddm
