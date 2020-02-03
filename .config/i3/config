@@ -99,11 +99,11 @@ bindsym $mod+a focus parent
 # set $workspace4 "4:"
 # set $workspace5 "5:"
 # set $workspace6 "6:"
-set $workspace1 "1:Terminal"
-set $workspace2 "2:Files"
-set $workspace3 "3:Emacs"
+set $workspace1 "1:Home"
+set $workspace2 "2:Emacs"
+set $workspace3 "3:People"
 set $workspace4 "4:Web"
-set $workspace5 "5:Music"
+set $workspace5 "5:Files"
 set $workspace6 "6:Misc"
 
 # switch to workspace
