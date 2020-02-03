@@ -24,4 +24,5 @@ mt_confirm_and_source "Clone GitHub source projects?" \
                       "$mt_setup_dir/clone-github-source-projects" \
                       "Skipped cloning of GitHub source projects"
 
-mt_log "Setup is now complete!"
+mt_prompt "Setup is complete, hit any key to reboot..."
+sudo reboot 0
