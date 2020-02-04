@@ -11,7 +11,7 @@ yay -S \
     --noconfirm
 # Install linux headers for dkms
 sudo pacman -Syu \
-     linux-header \
+     linux-headers \
      --noconfirm
 # Add current user to group 'plugdev'
 sudo gpasswd -a $USER plugdev
