@@ -3,8 +3,6 @@
 mt_log "Cloning GitHub source projects..."
 
 mkdir ~/_repositories
-cd ~/_repositories
-git-getter myTerminal
-cd ..
+git-getter --username myTerminal --targetPath ~/_repositories --ssh
 
 mt_log "GitHub source projects cloned"
