@@ -56,5 +56,6 @@ There is a growing collection of shell utility scripts included to help one with
 
 ## To-Do
 
+- Consume [twiner](https://github.com/myTerminal/twiner)
 - Fill in missing sections for setups for the rest of the platforms
 - Figure out alternatives for missing packages on all operating platforms
