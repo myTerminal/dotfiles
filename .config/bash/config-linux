@@ -7,4 +7,4 @@ PS1='\u@\h:\w\$ '
 export PATH=$PATH:$HOME/.local/bin:$HOME/bin
 
 # Set up aliases
-. ~/.config/bash/aliases-fedora
+. ~/.config/bash/aliases-linux

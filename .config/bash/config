@@ -13,7 +13,7 @@ fi
 
 # Load configs for the current OS
 if [ $(uname) = 'Linux' ]; then
-    . ~/.config/bash/config-fedora
+    . ~/.config/bash/config-linux
 elif [ $(uname) = 'Darwin' ]; then
     . ~/.config/bash/config-mac
 fi

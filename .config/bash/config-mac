@@ -4,4 +4,4 @@
 export PATH=$PATH:$HOME/.cargo/bin
 
 # Set up aliases
-. ~/.config/bash/aliases-fedora
+. ~/.config/bash/aliases-mac

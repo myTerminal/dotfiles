@@ -14,7 +14,7 @@ end
 
 # Load configs for the current OS
 if test (uname) = "Linux"
-    . ~/.config/fish/config-fedora.fish
+    . ~/.config/fish/config-linux.fish
 else if test (uname) = "Darwin"
     . ~/.config/fish/config-mac.fish
 end
