@@ -2,7 +2,7 @@
 
 mt_log "Cloning GitHub source projects..."
 
-mkdir ~/_repositories
-git-getter --username myTerminal --targetPath ~/_repositories --ssh
+mkdir "${MT_WORKSPACE_PATH}"
+git-getter --username myTerminal --targetPath "${MT_WORKSPACE_PATH}" --ssh
 
 mt_log "GitHub source projects cloned"

@@ -3,6 +3,9 @@
 # Update PATH for custom shell scripts
 export PATH=$PATH:~/.scripts
 
+# Set custom environment variables
+export MT_WORKSPACE_PATH=~/_workspace
+
 # Load private keys, if they exist
 if [ -f ~/.private-keys ]; then
     . ~/.private-keys

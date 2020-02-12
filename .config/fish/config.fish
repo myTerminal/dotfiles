@@ -1,6 +1,9 @@
 # Update PATH for custom shell scripts
 add-to-path ~/.scripts
 
+# Set custom environment variables
+set -x MT_WORKSPACE_PATH ~/_workspace
+
 # Set a few variables for fish
 set fish_greeting "Hi myTerminal, the fish is here!"
 
