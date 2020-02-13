@@ -11,7 +11,7 @@ elif [ $(command -v dnf) ]; then
     alias mt-system-update-packages="sudo dnf update"
 elif [ $(command -v pacman) ]; then
     alias mt-system-update-packages="sudo pacman -Syu"
-else
+fi
 
 alias mt-shutdown="sudo shutdown 0"
 alias mt-reboot="sudo reboot 0"
