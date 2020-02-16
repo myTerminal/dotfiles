@@ -35,4 +35,5 @@ mt_log "Activating display-manager service..."
 sudo systemctl disable display-manager.service
 sudo systemctl enable sddm
 
-# TODO: Fix or verify
+mt_log "Enabling graphical mode..."
+systemctl set-default graphical.target
