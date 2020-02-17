@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-mt_temp=$(dirname "$0")
-. "$mt_temp/lib" $mt_temp
+. "$(dirname "${BASH_SOURCE[0]}")/lib"
 
 mt_log "Detecting platform..."
 if [ $(uname) = 'Linux' ]; then

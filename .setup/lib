@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-mt_setup_dir="$1"
+mt_setup_dir="$(dirname "${BASH_SOURCE[0]}")"
 
 mt_color_start="\033[1;34m"
 mt_color_end="\033[0m"
