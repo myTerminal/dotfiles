@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-mt_log "Setting up sources..."
-
-# TODO: Implement
-mt_log "Not implemented!"

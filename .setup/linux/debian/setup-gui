@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-mt_log "Setting up GUI..."
-
-# TODO: Implement
-mt_log "Not implemented!"

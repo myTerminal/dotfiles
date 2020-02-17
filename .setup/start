@@ -3,7 +3,7 @@
 . "$(dirname "${BASH_SOURCE[0]}")/lib"
 
 mt_log "Detecting platform..."
-if [ $(uname) = 'Linux' ]; then
+if [ $(uname) = 'Linux' ] && [ $(command -v pacman) ]; then
     . "$mt_setup_dir/linux/run"
 elif [ $(uname) = 'Darwin' ]; then
     . "$mt_setup_dir/mac/run"

@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-mt_log "Setting Nvidia graphics driver..."
-
-# TODO: Implement
-mt_log "Not implemented!"

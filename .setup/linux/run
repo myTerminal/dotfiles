@@ -1,17 +1,6 @@
 #!/usr/bin/env bash
 
-mt_log "Found Linux..."
-
-mt_log "Detecting Linux type..."
-if [ $(command -v apt) ]; then
-    . "$mt_setup_dir/linux/debian/run"
-elif [ $(command -v dnf) ]; then
-    . "$mt_setup_dir/linux/fedora/run"
-elif [ $(command -v pacman) ]; then
-    . "$mt_setup_dir/linux/arch/run"
-else
-    mt_abort_setup_for "an unknown"
-fi
+mt_log "Setting up Arch Linux..."
 
 mt_confirm_and_source "Set hostname?" \
                       "$mt_setup_dir/linux/set-hostname" \
@@ -24,3 +13,18 @@ mt_confirm_and_source "Create users?" \
 mt_confirm_and_source "Change shell?" \
                       "$mt_setup_dir/linux/change-shell" \
                       "Skipped changing of shell"
+
+. "$mt_setup_dir/linux/setup-sources"
+. "$mt_setup_dir/linux/install-packages"
+
+mt_confirm_and_source "Setup GUI?" \
+                      "$mt_setup_dir/linux/setup-gui" \
+                      "Skipped setting up of GUI"
+
+mt_confirm_and_source "Setup Nvidia graphics drivers?" \
+                      "$mt_setup_dir/linux/setup-nvidia-graphics-driver" \
+                      "Skipped setting up of Nvidia graphics driver"
+
+mt_confirm_and_source "Setup Peripherals?" \
+                      "$mt_setup_dir/linux/setup-peripherals" \
+                      "Skipped setting up of peripherals"
