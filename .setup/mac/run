@@ -10,7 +10,7 @@ tw_execute killall Finder
 . "${mt_setup_dir}/mac/install-packages"
 
 tw_log "Changing shell to fish..."
-tw_execute echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+tw_execute_eval "echo \"/usr/local/bin/fish\" | sudo tee -a /etc/shells"
 tw_execute chsh -s /usr/local/bin/fish
 
 tw_log "Setting up Rust..."

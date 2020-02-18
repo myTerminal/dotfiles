@@ -11,7 +11,7 @@ mt_task_generate_ssh_key () {
     tw_handle_last_command_status "${?}" \
                                   "SSH Key generated" \
                                   "There was an error generating an SSH key!"
-    tw_execute cat ~/.ssh/id_rsa.pub | pbcopy
+    tw_execute_eval "cat ~/.ssh/id_rsa.pub | pbcopy"
     tw_handle_last_command_status "${?}" \
                                   "The newly generated SSH key has been copied to clipboard" \
                                   "There was an error copying the newly generated SSH key to clipboard!"
