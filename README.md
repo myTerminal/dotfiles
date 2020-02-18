@@ -6,11 +6,8 @@ The 'replicable' heart of my computer(s)
 
 ## Platforms
 
-- Linux
-  - [Arch Linux](https://www.archlinux.org) (most complete)
-  - [Fedora](https://getfedora.org) (almost complete)
-  - [Debian](https://www.debian.org)/[Ubuntu](https://ubuntu.com) (far from complete)
-- [macOS](https://www.apple.com/macos) (complete)
+- [Arch Linux](https://www.archlinux.org)
+- [macOS](https://www.apple.com/macos)
 
 ## Configuration
 
@@ -23,7 +20,7 @@ The 'replicable' heart of my computer(s)
     - All bash aliases re-defined for platform independence
 - [Emacs](https://www.gnu.org/software/emacs) (now moved to a separate repository [.emacs.d](https://github.com/myTerminal/.emacs.d) and supports using more compatible configs like [super-emacs](https://github.com/myTerminal/super-emacs) and [ample-emacs](https://github.com/myTerminal/ample-emacs))
     - [mew](https://www.mew.org) as the email client
-- [i3wm](https://i3wm.org) as a window manager on Fedora
+- [i3wm](https://i3wm.org) as a window manager on Linux
 - [Hyper](https://hyper.is) as a terminal on macOS
 - [myterminal](https://github.com/myTerminal/myterminal) as a command-line companion
 - [SDDM](https://github.com/sddm/sddm) (currently only the user avatar)
@@ -56,6 +53,4 @@ There is a growing collection of shell utility scripts included to help one with
 
 ## To-Do
 
-- Consume [twiner](https://github.com/myTerminal/twiner)
-- Fill in missing sections for setups for the rest of the platforms
-- Figure out alternatives for missing packages on all operating platforms
+- Figure out alternatives for missing packages
