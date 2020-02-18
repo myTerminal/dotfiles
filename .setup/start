@@ -8,6 +8,7 @@ mt_setup_dir="$(dirname "${BASH_SOURCE[0]}")"
 if [ -d ~/.twiner ]; then
     cd ~/.twiner
     git pull
+    cd ..
 else
     git clone https://github.com/myTerminal/twiner.git ~/.twiner
 fi
