@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-mt_log "Generating SSH key..."
-
-ssh-keygen -t rsa -b 4096 -C "team.terminal@gmail.com"
-pbcopy < cat ~/.ssh/id_rsa.pub
-
-mt_log "The newly generated SSH key has been copied to clipboard."

@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+
+# Function to generate SSH key
+mt_task_generate_ssh_key () {
+    tw_log "Generating SSH key..."
+
+    tw_execute ssh-keygen \
+               -t rsa \
+               -b 4096 \
+               -C "team.terminal@gmail.com"
+    tw_handle_last_command_status "${?}" \
+                                  "SSH Key generated" \
+                                  "There was an error generating an SSH key!"
+    tw_execute pbcopy < cat ~/.ssh/id_rsa.pub
+    tw_handle_last_command_status "${?}" \
+                                  "The newly generated SSH key has been copied to clipboard" \
+                                  "There was an error copying the newly generated SSH key to clipboard!"
+}
+
+# Function to install NPM packages
+mt_task_install_npm_packages () {
+    tw_log "Installing global NPM packages..."
+    tw_execute sudo npm install -g \
+               lite-server \
+               nano-server \
+               myterminal \
+               stay-with-me \
+               git-getter \
+               re-write
+    tw_handle_last_command_status "${?}" \
+                                  "Global NPM packages installed" \
+                                  "There was an error installing NPM packages globally!"
+}
+
+# Function to clone GitHub projects under 'myTerminal'
+mt_task_create_cloud_symlinks () {
+    tw_pause "Please make sure the associated cloud services are configured before proceeding. Press any key one done..."
+    tw_execute ln -s ~/Google\ Drive/.private-keys ~/.private-keys
+    tw_handle_last_command_status "${?}" \
+                                  "Cloud symlinks created" \
+                                  "There was an error creating symlinks!"
+}
+
+# Function to create cloud symlinks
+mt_task_clone_github_source_projects () {
+    tw_log "Cloning GitHub source projects..."
+
+    tw_execute mkdir "${MT_WORKSPACE_PATH}"
+    tw_execute git-getter \
+               --username myTerminal \
+               --targetPath "${MT_WORKSPACE_PATH}" \
+               --ssh
+
+    tw_handle_last_command_status "${?}" \
+                                  "GitHub source projects cloned" \
+                                  "There was an error cloning GitHub source projects!"
+}

@@ -1,31 +1,42 @@
 #!/usr/bin/env bash
 
-. "$(dirname "${BASH_SOURCE[0]}")/lib"
+# Init
+mt_setup_dir="$(dirname "${BASH_SOURCE[0]}")"
+. "${mt_setup_dir}/tasks"
 
-mt_log "Detecting platform..."
+# Prepare twiner
+if [ -d ~/.twiner ]; then
+    cd ~/.twiner
+    git pull
+else
+    git clone https://github.com/myTerminal/twiner.git ~/.twiner
+fi
+. ~/.twiner/load
+
+# Perform platform-specific setup
 if [ $(uname) = 'Linux' ] && [ $(command -v pacman) ]; then
-    . "$mt_setup_dir/linux/run"
+    . "${mt_setup_dir}/linux/run"
 elif [ $(uname) = 'Darwin' ]; then
-    . "$mt_setup_dir/mac/run"
+    . "${mt_setup_dir}/mac/run"
 else
     mt_abort_setup "Unknown platform found."
 fi
 
-mt_confirm_and_source "Generate SSH keys?" \
-                      "$mt_setup_dir/generate-ssh-keys" \
-                      "Skipped generation of SSH keys"
+# Perform platform-independent setup
+tw_confirm "Generate SSH key?" \
+           mt_task_generate_ssh_key \
+           "Generation of SSH key skipped."
+tw_confirm "Install global NPM packages?" \
+           mt_task_install_npm_packages \
+           "Installing NPM packages skipped."
+tw_confirm "Create cloud symlinks?" \
+           mt_task_create_cloud_symlinks \
+           "Creation of cloud symlinks skipped."
+tw_confirm "Clone GitHub source projects?" \
+           mt_task_clone_github_source_projects \
+           "Cloning GitHub source projects skipped."
 
-mt_confirm_and_source "Install NPM packages?" \
-                      "$mt_setup_dir/install-npm-packages" \
-                      "Skipped installation of NPM packages"
-
-mt_confirm_and_source "Create cloud symlinks?" \
-                      "$mt_setup_dir/create-cloud-symlinks" \
-                      "Skipped creation of cloud symlinks"
-
-mt_confirm_and_source "Clone GitHub source projects?" \
-                      "$mt_setup_dir/clone-github-source-projects" \
-                      "Skipped cloning of GitHub source projects"
-
-mt_prompt "Setup is complete, hit any key to reboot..."
-sudo reboot 0
+# Prompt for a reboot
+tw_confirm "Setup is complete, reboot now?" \
+           tw_reboot_now \
+           "Reboot skipped."

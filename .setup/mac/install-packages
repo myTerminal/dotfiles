@@ -1,56 +1,54 @@
 #!/usr/bin/env bash
 
-mt_log "Installing packages for Mac..."
+tw_log "Installing packages from brew..."
+tw_execute brew install \
+           fish \
+           tig \
+           aspell \
+           node \
+           rustup-init \
+           syncthing \
+           youtube-dl
 
-mt_log "Installing packages from brew..."
-brew install \
-     fish \
-     tig \
-     aspell \
-     node \
-     rustup-init \
-     syncthing \
-     youtube-dl
-
-mt_log "Installing rest of the packages..."
-brew cask install \
-     hyper \
-     emacs \
-     google-chrome \
-     shiftit \
-     postman \
-     mounty \
-     google-backup-and-sync \
-     transmission \
-     tunnelbear \
-     remember-the-milk \
-     dynalist \
-     telegram \
-     discord \
-     zulip \
-     slack \
-     thunderbird \
-     kid3 \
-     gimp \
-     handbrake \
-     xnviewmp \
-     clementine \
-     vlc \
-     kodi \
-     steam \
-     origin \
-     sony-remoteplay \
-     licecap \
-     keycastr \
-     libreoffice \
-     virtualbox \
-     diffmerge \
-     android-file-transfer \
-     razer-synapse \
-     font-inconsolata \
-     font-liberation-sans \
-     font-roboto-mono \
-     caskroom/fonts/font-fira-code
+tw_log "Installing rest of the packages..."
+tw_execute brew cask install \
+           hyper \
+           emacs \
+           google-chrome \
+           shiftit \
+           postman \
+           mounty \
+           google-backup-and-sync \
+           transmission \
+           tunnelbear \
+           remember-the-milk \
+           dynalist \
+           telegram \
+           discord \
+           zulip \
+           slack \
+           thunderbird \
+           kid3 \
+           gimp \
+           handbrake \
+           xnviewmp \
+           clementine \
+           vlc \
+           kodi \
+           steam \
+           origin \
+           sony-remoteplay \
+           licecap \
+           keycastr \
+           libreoffice \
+           virtualbox \
+           diffmerge \
+           android-file-transfer \
+           razer-synapse \
+           font-inconsolata \
+           font-liberation-sans \
+           font-roboto-mono \
+           caskroom/fonts/font-fira-code
 
 # Manual packages
 # - Install pCloud Drive from https://www.pcloud.com

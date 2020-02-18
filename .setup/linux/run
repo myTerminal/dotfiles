@@ -1,30 +1,33 @@
 #!/usr/bin/env bash
 
-mt_log "Setting up Arch Linux..."
+. "${mt_setup_dir}/linux/tasks"
 
-mt_confirm_and_source "Set hostname?" \
-                      "$mt_setup_dir/linux/set-hostname" \
-                      "Skipped setting of hostname"
+tw_log "Setting up Arch Linux..."
 
-mt_confirm_and_source "Create users?" \
-                      "$mt_setup_dir/linux/create-users" \
-                      "Skipped creation of users"
+tw_confirm "Set hostname?" \
+           tw_task_set_hostname \
+           "Setting of hostname skipped."
 
-mt_confirm_and_source "Change shell?" \
-                      "$mt_setup_dir/linux/change-shell" \
-                      "Skipped changing of shell"
+tw_confirm "Create users?" \
+           tw_task_create_users \
+           "Creation of users skipped."
 
-. "$mt_setup_dir/linux/setup-sources"
-. "$mt_setup_dir/linux/install-packages"
+tw_confirm "Change user shell?" \
+           tw_task_change_user_shell \
+           "Changing of user shell skipped."
 
-mt_confirm_and_source "Setup GUI?" \
-                      "$mt_setup_dir/linux/setup-gui" \
-                      "Skipped setting up of GUI"
+tw_task_add_additional_software_sources
 
-mt_confirm_and_source "Setup Nvidia graphics drivers?" \
-                      "$mt_setup_dir/linux/setup-nvidia-graphics-driver" \
-                      "Skipped setting up of Nvidia graphics driver"
+. "${mt_setup_dir}/linux/install-packages"
 
-mt_confirm_and_source "Setup Peripherals?" \
-                      "$mt_setup_dir/linux/setup-peripherals" \
-                      "Skipped setting up of peripherals"
+tw_confirm "Setup GUI?" \
+           tw_task_setup_gui \
+           "Setting up of GUI skipped."
+
+tw_confirm "Setup Nvidia graphics drivers?" \
+           mt_task_install_nvidia_graphic_drivers \
+           "Setting up of Nvidia drivers skipped."
+
+tw_confirm "Setup peripherals drivers?" \
+           mt_task_install_peripherals_drivers \
+           "Setting up of periphericals drivers skipped."

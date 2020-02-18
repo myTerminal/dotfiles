@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-mt_log "Cloning GitHub source projects..."
-
-mkdir "${MT_WORKSPACE_PATH}"
-git-getter --username myTerminal --targetPath "${MT_WORKSPACE_PATH}" --ssh
-
-mt_log "GitHub source projects cloned"

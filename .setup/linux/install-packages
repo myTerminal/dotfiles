@@ -1,67 +1,67 @@
 #!/usr/bin/env bash
 
-mt_log "Installing packages..."
+tw_log "Installing packages..."
 
-mt_log "Installing packages from official sources..."
-sudo pacman -S \
-     i3 \
-     dmenu \
-     feh \
-     budgie-desktop \
-     budgie-extras \
-     terminology \
-     fish \
-     emacs \
-     pcmanfm \
-     tig \
-     aspell \
-     aspell-en \
-     npm \
-     rustup \
-     udisks2 \
-     gparted \
-     syncthing-gtk \
-     transmission-gtk \
-     youtube-dl \
-     thunderbird \
-     audacity \
-     easytag \
-     gimp \
-     shotwell \
-     openshot \
-     clementine \
-     vlc \
-     gstreamer \
-     kodi \
-     steam \
-     libreoffice-fresh \
-     virtualbox \
-     android-file-transfer \
-     ttf-inconsolata \
-     ttf-liberation \
-     ttf-roboto \
-     ttf-roboto-mono \
-     ttf-droid \
-     ttf-fira-code \
-     --noconfirm
+tw_log "Installing packages from official sources..."
+tw_execute sudo pacman -S \
+           i3 \
+           dmenu \
+           feh \
+           budgie-desktop \
+           budgie-extras \
+           terminology \
+           fish \
+           emacs \
+           pcmanfm \
+           tig \
+           aspell \
+           aspell-en \
+           npm \
+           rustup \
+           udisks2 \
+           gparted \
+           syncthing-gtk \
+           transmission-gtk \
+           youtube-dl \
+           thunderbird \
+           audacity \
+           easytag \
+           gimp \
+           shotwell \
+           openshot \
+           clementine \
+           vlc \
+           gstreamer \
+           kodi \
+           steam \
+           libreoffice-fresh \
+           virtualbox \
+           android-file-transfer \
+           ttf-inconsolata \
+           ttf-liberation \
+           ttf-roboto \
+           ttf-roboto-mono \
+           ttf-droid \
+           ttf-fira-code \
+           --noconfirm
 
-mt_log "Installing packages from AUR..."
-yay -S \
-    hyper \
-    google-chrome \
-    postman \
-    tunnelbear \
-    rememberthemilk \
-    dynalist-desktop \
-    telegram-desktop \
-    discord \
-    zulip-desktop \
-    slack-desktop \
-    pcloud-drive \
-    gamehub \
-    vokoscreen \
-    key-mon \
-    --noconfirm
+tw_log "Installing packages from AUR..."
+tw_execute yay -S \
+           hyper \
+           google-chrome \
+           postman \
+           tunnelbear \
+           rememberthemilk \
+           dynalist-desktop \
+           telegram-desktop \
+           discord \
+           zulip-desktop \
+           slack-desktop \
+           pcloud-drive \
+           gamehub \
+           vokoscreen \
+           key-mon \
+           --noconfirm
 
 # Manual packages
 # (None yet)
@@ -79,5 +79,5 @@ yay -S \
 ### More ###
 
 # Install stable toolchain for rust
-mt_log "Taking care of a few final things..."
-rustup toolchain install stable
+tw_log "Taking care of a few final things..."
+tw_execute rustup toolchain install stable

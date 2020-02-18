@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
-mt_log "Setting up Mac..."
+tw_log "Setting up macOS..."
 
-mt_log "Taking care of a few things..."
-defaults write com.apple.Finder AppleShowAllFiles YES
-killall Finder
+tw_log "Enabling hidden files in Finder..."
+tw_execute defaults write com.apple.Finder AppleShowAllFiles YES
+tw_execute killall Finder
 
-. "$mt_setup_dir/mac/setup-sources"
-. "$mt_setup_dir/mac/install-packages"
+. "${mt_setup_dir}/mac/setup-sources"
+. "${mt_setup_dir}/mac/install-packages"
 
-mt_log "Changing shell to fish..."
-echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
-chsh -s /usr/local/bin/fish
+tw_log "Changing shell to fish..."
+tw_execute echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+tw_execute chsh -s /usr/local/bin/fish
 
-mt_log "Taking care of a few final things..."
-rustup-init
+tw_log "Setting up Rust..."
+tw_execute rustup-init

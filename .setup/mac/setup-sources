@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-mt_log "Setting up repos for Mac..."
+tw_log "Installing home-brew..."
+tw_execute /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-mt_log "Installing home-brew..."
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-mt_log "Installing cask..."
-brew tap caskroom/cask
+tw_log "Installing cask..."
+tw_execute brew tap caskroom/cask
