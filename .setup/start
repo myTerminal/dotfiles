@@ -12,7 +12,7 @@ if [ -d ~/.twiner ]; then
 else
     git clone https://github.com/myTerminal/twiner.git ~/.twiner
 fi
-. ~/.twiner/load
+. ~/.twiner/load "${1}"
 
 # Perform platform-specific setup
 if [ $(uname) = 'Linux' ] && [ $(command -v pacman) ]; then
