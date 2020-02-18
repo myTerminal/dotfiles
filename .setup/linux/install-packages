@@ -79,5 +79,4 @@ tw_execute yay -S \
 ### More ###
 
 # Install stable toolchain for rust
-tw_log "Taking care of a few final things..."
 tw_execute rustup toolchain install stable

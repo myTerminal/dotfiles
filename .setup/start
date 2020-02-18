@@ -20,7 +20,7 @@ if [ $(uname) = 'Linux' ] && [ $(command -v pacman) ]; then
 elif [ $(uname) = 'Darwin' ]; then
     . "${mt_setup_dir}/mac/run"
 else
-    mt_abort_setup "Unknown platform found."
+    tw_abort_because "Unknown platform found."
 fi
 
 # Perform platform-independent setup
