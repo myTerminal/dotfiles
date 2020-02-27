@@ -2,6 +2,7 @@
 
 tw_log "Installing packages from brew..."
 tw_execute brew install \
+           neofetch \
            fish \
            tig \
            aspell \
