@@ -1,53 +1,6 @@
 {
     "title": "All",
     "commands": {
-        "m": {
-            "title": "Mac commands",
-            "commands": {
-                "u": {
-                    "title": "Update brew packages",
-                    "task": "mt-update-packages"
-                }
-            }
-        },
-        "l": {
-            "title": "Linux commands",
-            "commands": {
-                "u": {
-                    "title": "Update dnf packages",
-                    "task": "mt-update-packages"
-                },
-                "w": {
-                    "title": "Wifi",
-                    "commands": {
-                        "c": {
-                            "title": "Connect",
-                            "task": "wifi-connect"
-                        },
-                        "r": {
-                            "title": "Reset",
-                            "task": "mt-network-reset"
-                        }
-                    }
-                },
-                "d": {
-                    "title": "Detach",
-                    "commands": {
-                        "u": {
-                            "title": "USB device",
-                            "task": "detach",
-                            "params": [
-                                "device"
-                            ]
-                        },
-                        "b": {
-                            "title": "/dev/sdb",
-                            "task": "detach-sdb"
-                        }
-                    }
-                }
-            }
-        },
         "s": {
             "title": "System",
             "commands": {
