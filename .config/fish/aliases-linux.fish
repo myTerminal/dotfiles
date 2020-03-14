@@ -11,6 +11,7 @@ else if type -q pacman
     alias mt-system-update-packages="sudo pacman -Syu"
 end
 
-alias mt-shutdown="sudo shutdown 0"
-alias mt-reboot="sudo reboot 0"
-alias mt-suspend="systemctl suspend"
+alias mt-power-shutdown="sudo shutdown 0"
+alias mt-power-reboot="sudo reboot"
+alias mt-power-suspend="systemctl suspend"
+alias mt-power-hibernate="systemctl hibernate"
