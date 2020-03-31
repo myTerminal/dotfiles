@@ -211,16 +211,28 @@ bar {
         position top
 }
 
-# Set wallpaper
-exec feh --bg-scale ~/.assets/teN7.png
+# Assign programs to workspaces
+assign [class="Remember The Milk"] $ws1
+assign [class="Emacs"] $ws2
+assign [class="TelegramDesktop"] $ws3
+assign [class="Slack"] $ws3
+assign [class="Zulip"] $ws3
+assign [class="Google-chrome"] $ws4
+assign [class="Pcmanfm"] $ws5
+assign [class="vlc"] $ws6
+assign [class="Steam"] $ws6
+assign [class="Gamehub"] $ws6
 
 # Bind i3lock
 bindsym $mod+shift+x exec i3lock
 
-# Set program shortcuts
-bindsym $mod+control+e exec emacs
-bindsym $mod+control+w exec google-chrome
-bindsym $mod+control+f exec pcmanfm
+# Bind mouse events
+bindsym $mod+button1 fullscreen toggle
+bindsym $mod+button2 floating toggle
+bindsym --release $mod+button3 kill
 
-# Set startup programs
-exec terminology
+# Set wallpaper
+exec_always feh --bg-scale ~/.assets/teN7.png
+
+# Set misc key-bindings
+bindsym $mod+shift+control+e exec i3-msg exit
