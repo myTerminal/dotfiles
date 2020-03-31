@@ -236,3 +236,22 @@ exec_always feh --bg-scale ~/.assets/teN7.png
 
 # Set misc key-bindings
 bindsym $mod+shift+control+e exec i3-msg exit
+
+# Set window colors
+set $fc_0 "#00cccc"
+set $fc_3 "#009999"
+set $bg_0 "#001111"
+set $bg_3 "#004444"
+set $fc_sc "#00ff00"
+set $fc_in "#ffff00"
+set $fc_wa "#ff8000"
+set $fc_er "#ff0000"
+set $fc_wh "#ffffff"
+set $fc_bl "#000000"
+# class                 border  bgcolor text    indicator   child_border
+client.focused          $fc_3   $fc_0   $bg_0   $fc_wa      $fc_3
+client.focused_inactive $bg_3   $bg_3   $fc_0   $bg_3       $bg_3
+client.unfocused        $bg_3   $bg_0   $fc_0   $bg_3       $bg_3
+client.urgent           $fc_wh  $fc_er  $fc_wh  $fc_wh      $fc_wh
+client.placeholder      $bg_0   $bg_0   $fc_0   $bg_0       $bg_0
+client.background       $bg_0
