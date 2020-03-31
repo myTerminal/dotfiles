@@ -269,7 +269,7 @@ assign [class="Steam"] $ws6
 assign [class="Gamehub"] $ws6
 
 # Bind i3lock
-bindsym $mod+shift+x exec i3lock
+bindsym $mod+shift+x exec i3lock -c 000000
 
 # Bind mouse events
 bindsym $mod+button1 fullscreen toggle
