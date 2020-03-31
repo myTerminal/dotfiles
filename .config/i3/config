@@ -203,12 +203,52 @@ mode $mode_launcher {
 
 bindsym $mod+shift+a mode $mode_launcher
 
+# Define colors
+set $fc_pr "#00ffff"
+set $fc_l "#00cccc"
+set $fc_d "#009999"
+set $bg_l "#004444"
+set $bg_d "#001111"
+set $fc_sc "#00ff00"
+set $fc_in "#ffff00"
+set $fc_wa "#ff8000"
+set $fc_er "#ff3333"
+set $fc_wh "#ffffff"
+set $fc_bl "#000000"
+
+# Set window colors
+# class                 border  bgcolor text    indicator   child_border
+client.focused          $fc_d   $fc_l   $bg_d   $fc_wa      $fc_d
+client.focused_inactive $bg_l   $bg_l   $fc_l   $bg_l       $bg_l
+client.unfocused        $bg_l   $bg_d   $fc_l   $bg_l       $bg_l
+client.urgent           $fc_bl  $fc_er  $fc_wh  $fc_wh      $fc_wh
+client.placeholder      $bg_d   $bg_d   $fc_l   $bg_d       $bg_d
+client.background       $bg_d
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
         status_command i3status -c ~/.config/i3/i3status.conf
         tray_output primary
         position top
+        separator_symbol " ~ "
+
+        colors {
+                background $fc_bl
+                statusline $fc_l
+                separator $bg_l
+
+                focused_background $bg_d
+                focused_statusline $fc_pr
+                focused_separator $fc_l
+
+                # class             border  background  text
+                focused_workspace   $fc_d   $fc_l       $bg_d
+                active_workspace    $bg_l   $bg_l       $fc_l
+                inactive_workspace  $bg_l   $bg_d       $fc_l
+                urgent_workspace    $fc_bl  $fc_er      $fc_wh
+                binding_mode        $fc_bl  $fc_wa      $fc_bl
+        }
 }
 
 # Set auto back and forth
@@ -239,22 +279,3 @@ exec_always feh --bg-scale ~/.assets/teN7.png
 
 # Set misc key-bindings
 bindsym $mod+shift+control+e exec i3-msg exit
-
-# Set window colors
-set $fc_0 "#00cccc"
-set $fc_3 "#009999"
-set $bg_0 "#001111"
-set $bg_3 "#004444"
-set $fc_sc "#00ff00"
-set $fc_in "#ffff00"
-set $fc_wa "#ff8000"
-set $fc_er "#ff0000"
-set $fc_wh "#ffffff"
-set $fc_bl "#000000"
-# class                 border  bgcolor text    indicator   child_border
-client.focused          $fc_3   $fc_0   $bg_0   $fc_wa      $fc_3
-client.focused_inactive $bg_3   $bg_3   $fc_0   $bg_3       $bg_3
-client.unfocused        $bg_3   $bg_0   $fc_0   $bg_3       $bg_3
-client.urgent           $fc_wh  $fc_er  $fc_wh  $fc_wh      $fc_wh
-client.placeholder      $bg_0   $bg_0   $fc_0   $bg_0       $bg_0
-client.background       $bg_0
