@@ -15,3 +15,5 @@ tw_execute chsh -s /usr/local/bin/fish
 
 tw_log "Setting up Rust..."
 tw_execute rustup-init
+
+. "${mt_setup_dir}/mac/setup-startup-services"
