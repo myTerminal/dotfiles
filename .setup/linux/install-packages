@@ -44,6 +44,7 @@ tw_execute sudo pacman -S \
            ttf-roboto-mono \
            ttf-droid \
            ttf-fira-code \
+           ttf-font-awesome \
            --noconfirm
 
 tw_log "Installing packages from AUR..."

@@ -120,12 +120,12 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:Home"
-set $ws2 "2:Emacs"
-set $ws3 "3:People"
-set $ws4 "4:Web"
-set $ws5 "5:Files"
-set $ws6 "6:Misc"
+set $ws1 "1: Home"
+set $ws2 "2: Code"
+set $ws3 "3: People"
+set $ws4 "4: Web"
+set $ws5 "5: Files"
+set $ws6 "6: Misc"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
@@ -233,7 +233,8 @@ bar {
         status_command i3status -c ~/.config/i3/i3status.conf
         tray_output primary
         position top
-        separator_symbol " ~ "
+        separator_symbol " | "
+        strip_workspace_numbers yes
 
         colors {
                 background $fc_bl
