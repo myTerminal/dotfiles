@@ -193,8 +193,20 @@ bindsym $mod+r mode "resize"
 # Launch mode for program sets
 set $mode_launcher "Launch mode: All / Gaming"
 mode $mode_launcher {
-        bindsym a exec rememberthemilk && emacs && telegram-desktop && slack && zulip && google-chrome-stable && pcmanfm && vlc; mode "default"
-        bindsym g exec steam && gamehub; mode "default"
+        bindsym a \
+                exec rememberthemilk; \
+                exec emacs; \
+                exec telegram-desktop; \
+                exec slack; \
+                exec zulip; \
+                exec google-chrome-stable; \
+                exec pcmanfm; \
+                exec vlc; \
+                mode "default"
+        bindsym g \
+                exec steam; \
+                exec gamehub; \
+                mode "default"
 
         # back to normal: Enter or Escape or q or $mod+shift+a
         bindsym Return mode "default"
