@@ -31,6 +31,7 @@ tw_execute sudo pacman -S \
            gimp \
            shotwell \
            openshot \
+           mpg123 \
            clementine \
            vlc \
            gstreamer \

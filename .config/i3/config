@@ -300,3 +300,6 @@ exec_always feh --bg-scale ~/.assets/teN7.png
 
 # Set misc key-bindings
 bindsym $mod+shift+control+e exec i3-msg exit
+
+# Play startup sound
+exec mpg123 ~/.assets/car-startup-sound.mp3
