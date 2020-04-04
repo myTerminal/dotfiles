@@ -65,6 +65,7 @@ tw_execute yay -S \
            gamehub \
            vokoscreen \
            key-mon \
+           nomachine \
            --noconfirm
 
 # Manual packages
