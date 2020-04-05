@@ -11,6 +11,8 @@ else if type -q pacman
     alias mt-system-update-packages="sudo pacman -Syu"
 end
 
+alias mt-power-prevent-sleep="systemctl mask sleep.target suspend.target"
+alias mt-power-allow-sleep="systemctl unmask sleep.target suspend.target"
 alias mt-power-shutdown="systemctl poweroff"
 alias mt-power-reboot="systemctl reboot"
 alias mt-power-suspend="systemctl suspend"
