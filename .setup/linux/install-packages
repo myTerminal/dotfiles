@@ -17,6 +17,7 @@ tw_execute sudo pacman -S \
            pcmanfm \
            xarchiver \
            tig \
+           fzf \
            aspell \
            aspell-en \
            npm \

@@ -5,6 +5,7 @@ tw_execute brew install \
            neofetch \
            fish \
            tig \
+           fzf \
            aspell \
            node \
            rustup-init \
