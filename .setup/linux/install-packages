@@ -15,6 +15,7 @@ tw_execute sudo pacman -S \
            fish \
            emacs \
            pcmanfm \
+           xarchiver \
            tig \
            aspell \
            aspell-en \
