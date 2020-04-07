@@ -8,6 +8,7 @@ tw_execute sudo pacman -S \
            neofetch \
            i3 \
            dmenu \
+           rofi \
            feh \
            budgie-desktop \
            budgie-extras \

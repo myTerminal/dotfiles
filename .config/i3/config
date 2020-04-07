@@ -87,6 +87,18 @@ bindsym $mod+d exec \
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# Bind rofi 'windows' menu
+bindsym $mod+z exec \
+        rofi \
+        -show window \
+        --opacity 70
+
+# Bind rofi 'run' menu
+bindsym $mod+x exec \
+        rofi \
+        -show run \
+        --opacity 70
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -305,7 +317,7 @@ bindsym --release $mod+button3 kill
 exec_always feh --bg-scale ~/.assets/teN7.png
 
 # Set misc key-bindings
-bindsym $mod+shift+control+e exec i3-msg exit
+bindsym $mod+shift+Control+e exec i3-msg exit
 
 # Play startup sound
 exec mpg123 ~/.assets/car-startup-sound.mp3
