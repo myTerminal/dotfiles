@@ -66,6 +66,7 @@ tw_execute yay -S \
            slack-desktop \
            pcloud-drive \
            gamehub \
+           kazam \
            vokoscreen \
            key-mon \
            nomachine \

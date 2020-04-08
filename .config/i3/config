@@ -316,5 +316,9 @@ exec_always feh --bg-scale ~/.assets/teN7.png
 # Set misc key-bindings
 bindsym $mod+shift+Control+e exec i3-msg exit
 
+# Set key-bindings for kazam
+bindsym $mod+shift+comma exec kazam -f
+bindsym $mod+shift+period exec kazam -w
+
 # Play startup sound
 exec mpg123 ~/.assets/car-startup-sound.mp3
