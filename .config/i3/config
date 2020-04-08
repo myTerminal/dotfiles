@@ -262,7 +262,6 @@ focus_on_window_activation focus
 # finds out, if available)
 bar {
         status_command i3status -c ~/.config/i3/i3status.conf
-        tray_output primary
         position top
         separator_symbol " | "
         strip_workspace_numbers yes
