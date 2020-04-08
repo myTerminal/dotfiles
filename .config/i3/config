@@ -237,14 +237,14 @@ mode $mode_launcher {
                 exec gamehub; \
                 mode "default"
 
-        # back to normal: Enter or Escape or q or $mod+shift+a
+        # back to normal: Enter or Escape or q or $mod+Shift+a
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym q mode "default"
-        bindsym $mod+shift+a mode "default"
+        bindsym $mod+Shift+a mode "default"
 }
 
-bindsym $mod+shift+a mode $mode_launcher
+bindsym $mod+Shift+a mode $mode_launcher
 
 # Set window colors
 # class                 border  bgcolor text    indicator   child_border
@@ -303,7 +303,7 @@ assign [class="Steam"] $ws6
 assign [class="Gamehub"] $ws6
 
 # Bind i3lock
-bindsym $mod+shift+x exec i3lock -c 000000
+bindsym $mod+Shift+x exec i3lock -c 000000
 
 # Bind mouse events
 bindsym $mod+button1 fullscreen toggle
@@ -314,11 +314,11 @@ bindsym --release $mod+button3 kill
 exec_always feh --bg-scale ~/.assets/teN7.png
 
 # Set misc key-bindings
-bindsym $mod+shift+Control+e exec i3-msg exit
+bindsym $mod+Shift+Control+e exec i3-msg exit
 
 # Set key-bindings for kazam
-bindsym $mod+shift+comma exec kazam -f
-bindsym $mod+shift+period exec kazam -w
+bindsym $mod+Shift+comma exec kazam -f
+bindsym $mod+Shift+period exec kazam -w
 
 # Play startup sound
 exec mpg123 ~/.assets/car-startup-sound.mp3
