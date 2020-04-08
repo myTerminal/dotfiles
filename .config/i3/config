@@ -90,14 +90,12 @@ bindsym $mod+d exec \
 # Bind rofi 'windows' menu
 bindsym $mod+z exec \
         rofi \
-        -show window \
-        --opacity 70
+        -show window
 
 # Bind rofi 'run' menu
 bindsym $mod+x exec \
         rofi \
-        -show run \
-        --opacity 70
+        -show run
 
 # change focus
 bindsym $mod+j focus left
