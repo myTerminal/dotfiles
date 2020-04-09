@@ -21,6 +21,7 @@ The 'replicable' heart of my computer(s)
 - [Emacs](https://www.gnu.org/software/emacs) (now moved to a separate repository [.emacs.d](https://github.com/myTerminal/.emacs.d) and supports using more compatible configs like [super-emacs](https://github.com/myTerminal/super-emacs) and [ample-emacs](https://github.com/myTerminal/ample-emacs))
     - [mew](https://www.mew.org) as the email client
 - [i3wm](https://i3wm.org) as a window manager on Linux
+- [Rofi](https://github.com/davatorium/rofi) as a window switcher and application launcher on Linux
 - [Hyper](https://hyper.is) as a terminal on macOS
 - [myterminal](https://github.com/myTerminal/myterminal) as a command-line companion
 - [SDDM](https://github.com/sddm/sddm) (currently only the user avatar)
