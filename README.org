@@ -1,14 +1,12 @@
 #+TITLE: dotfiles
 #+AUTHOR: Mohammed Ismail Ansari <team.terminal@gmail.com>
 
-[[https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png][License: CC BY-NC-SA 4.0]]
-
 The 'replicable' heart of my computer(s)
 
-* Obtaining
+** Obtaining
 
 To get my *dotfiles* (which I don't know why you would), run the below commands 
-at `~`:
+at =~=:
 
 #+BEGIN_EXAMPLE
 git init
@@ -18,9 +16,9 @@ rm .bash*
 git checkout master
 #+END_EXAMPLE
 
-* Contents
+** Contents
 
-** Setup
+*** Setup
 
 *dotfiles* contains software setup for multiple operating platforms and starts
 if it finds a compatible one.
@@ -43,7 +41,7 @@ bash .setup/start
 The setup scripts should take of the rest except for a couple of prompts for
 optional setup.
 
-** Configuration
+*** Configuration
 
 - [[https://git-scm.com][Git]]
 - [[https://www.gnu.org/software/bash][Bash]] as the default shell
@@ -62,12 +60,78 @@ optional setup.
   companion
 - [[https://github.com/sddm/sddm][SDDM]] (currently only the user avatar)
 
-** Utility scripts
+*** Utility scripts
 
 There's a growing collection of utility scripts included to help me with
 my daily computing tasks.
 
-* To-Do
+** Software selection
+
+| Component                | MacOS                                                                                                                                                          | Linux                                                                                                                         |
+|--------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------|
+| Base                     | [[https://en.wikipedia.org/wiki/MacOS][MacOS]]                                                                                                                 | [[https://www.archlinux.org][Arch]] through [[https://arcolinux.info][Arco]]                                                  |
+| Package managers         | (native), [[https://brew.sh][Homebrew]], [[https://github.com/Homebrew/homebrew-cask][Cask]]                                                                   | [[https://www.archlinux.org/pacman][pacman]]*, [[https://github.com/Jguer/yay][yay]] (for [[https://aur.archlinux.org][AUR]]) |
+| Display server           | (native)                                                                                                                                                       | [[https://www.x.org][Xorg]]                                                                                                   |
+| Display drivers          | (stock)                                                                                                                                                        | (depends)                                                                                                                     |
+| Display manager          | (native)                                                                                                                                                       | [[https://github.com/sddm/sddm][sddm]]                                                                                        |
+| Compositor               | (native)                                                                                                                                                       | [[https://github.com/yshui/picom][picom]]                                                                                     |
+| GUI 1                    | (native)                                                                                                                                                       | [[https://github.com/i3/i3][i3]]                                                                                              |
+| GUI 2                    | --                                                                                                                                                             | [[https://github.com/solus-project/budgie-desktop][budgie-desktop]]                                                           |
+| GUI extensions           | [[https://github.com/fikovnik/ShiftIt][ShiftIt]]                                                                                                               | --                                                                                                                            |
+| Wallpaper manager        | (native)                                                                                                                                                       | [[https://feh.finalrewind.org][feh]]                                                                                          |
+| Application launcher     | (native)                                                                                                                                                       | [[https://tools.suckless.org/dmenu][dmenu]], [[https://github.com/davatorium/rofi][Rofi]]                                     |
+| Dock                     | (native)                                                                                                                                                       | --                                                                                                                            |
+| Desktop widgets          | (native)                                                                                                                                                       | [pending]                                                                                                                     |
+| Icon packs               | (native)                                                                                                                                                       | [pending]                                                                                                                     |
+| Mouse cursor             | (native)                                                                                                                                                       | [pending]                                                                                                                     |
+| Lockscreen               | (native)                                                                                                                                                       | [[https://github.com/i3/i3lock][i3lock]]                                                                                      |
+| Terminal                 | [[https://support.apple.com/guide/terminal/welcome/mac][Terminal]] (native), [[https://hyper.is/][Hyper]]                                                       | [[https://github.com/billiob/terminology][Terminology]], [[https://hyper.is/][Hyper]]                                         |
+| Shell                    | [[https://fishshell.com][fish]]                                                                                                                                | [[https://fishshell.com][fish]]                                                                                               |
+| Fuzzy finder             | [[https://github.com/junegunn/fzf][fzf]]                                                                                                                       | [[https://github.com/junegunn/fzf][fzf]]                                                                                      |
+| Text editor              | [[https://www.gnu.org/software/emacs][GNU Emacs]]                                                                                                              | [[https://www.gnu.org/software/emacs][GNU Emacs]]                                                                             |
+| Spell checker            | [[http://aspell.net][Aspell]]                                                                                                                                  | [[http://aspell.net][Aspell]]                                                                                                 |
+| Archive manager          | (native)                                                                                                                                                       | [[https://github.com/ib/xarchiver][xarchiver]]                                                                                |
+| File manager             | [[https://support.apple.com/en-us/HT201732][Finder]] (native)                                                                                                   | [[https://wiki.lxde.org/en/PCManFM][pcmanfm]]                                                                                 |
+| SCM                      | [[https://git-scm.com][Git]]*, [[https://github.com/jonas/tig][Tig]]                                                                                           | [[https://git-scm.com][Git]], [[https://github.com/jonas/tig][Tig]]                                                           |
+| Screenshot tool          | (native)                                                                                                                                                       | [[https://launchpad.net/kazam][Kazam]]                                                                                        |
+| Screencast tool          | [[https://support.apple.com/quicktime][QuickTime]]?, [[https://www.cockos.com/licecap][LICEcap]]                                                               | [[https://linuxecke.volkoh.de/vokoscreen/vokoscreen.html][vokoscreen]]                                                        |
+| Keystroke echoing tool   | [[https://github.com/keycastr/keycastr][keycastr]]                                                                                                             | [[https://github.com/scottkirkwood/key-mon][Key-mon]]                                                                         |
+| Web browser              | [[https://www.google.com/chrome][Google Chrome]]                                                                                                               | [[https://www.google.com/chrome][Google Chrome]]                                                                              |
+| VPN client               | [[https://www.tunnelbear.com][TunnelBear VPN]]                                                                                                                 | [[https://www.tunnelbear.com][TunnelBear VPN]]                                                                                |
+| Remote access manager    | [[https://www.nomachine.com][NoMachine]]                                                                                                                       | [[https://www.nomachine.com][NoMachine]]                                                                                      |
+| To-Do manager            | [[https://www.rememberthemilk.com][Remember The Milk]]                                                                                                         | [[https://www.rememberthemilk.com][Remember The Milk]]                                                                        |
+| List manager             | [[https://dynalist.io][Dynalist]]                                                                                                                              | [[https://dynalist.io][Dynalist]]                                                                                             |
+| Email clients            | [[https://support.apple.com/en-us/HT204093][Mail]] (native), [[https://www.thunderbird.net][Thunderbird]]                                                      | [[https://www.thunderbird.net][Thunderbird]]                                                                                  |
+| Messengers               | [[https://telegram.org][Telegram]], [[https://discordapp.com][Discord]]                                                                                        | [[https://telegram.org][Telegram]], [[https://discordapp.com][Discord]]                                                       |
+| Team messengers          | [[https://slack.com][Slack]], [[https://zulipchat.com][Zulip]]                                                                                                 | [[https://slack.com][Slack]], [[https://zulipchat.com][Zulip]]                                                                |
+| Cloud storage clients    | [[https://www.google.com/drive/download/backup-and-sync][Google Backup And Sync]], [[https://www.pcloud.com][pCloud]]                                          | Google Drive**, [[https://www.pcloud.com][pCloud]]                                                                            |
+| Torrent client           | [[https://transmissionbt.com][Transmission]]                                                                                                                   | [[https://transmissionbt.com][Transmission]]                                                                                  |
+| REST client              | [[https://www.postman.com][Postman]]                                                                                                                           | [[https://www.postman.com][Postman]]                                                                                          |
+| Office suite             | [[https://www.libreoffice.org][LibreOffice]]                                                                                                                   | [[https://www.libreoffice.org][LibreOffice]]                                                                                  |
+| File sync client         | [[https://syncthing.net][Syncthing]]                                                                                                                           | [[https://syncthing.net][Syncthing]]                                                                                          |
+| Virtualization           | [[https://www.virtualbox.org][VirtualBox]]                                                                                                                     | [[https://www.virtualbox.org][VirtualBox]]                                                                                    |
+| Language runtimes        | [[https://nodejs.org][Node.js]], [[https://rustup.rs][rustup]]                                                                                                 | [[https://nodejs.org][Node.js]], [[https://rustup.rs][rustup]]                                                                |
+| File diff tool           | [[https://sourcegear.com/diffmerge][DiffMerge]]                                                                                                                | --                                                                                                                            |
+| Disk management tools    | [[https://support.apple.com/guide/disk-utility/welcome/mac][Disk Utility]] (native), [[https://mounty.app][Mounty]]                                            | [[https://wiki.archlinux.org/index.php/Udisks][Udisks]], [[https://gparted.org][GParted]]                                     |
+| Razer software           | [[https://www.razer.com/synapse-3][Razer Synapse]]                                                                                                             | [[https://openrazer.github.io/][OpenRazer]], [[https://polychromatic.app][polychromatic]]                                     |
+| Picture viewers          | [[https://support.apple.com/guide/preview/welcome/mac][Preview]] (native), [[https://www.xnview.com/en/xnviewmp][XNView MP]]                                   | [[https://github.com/GNOME/shotwell][Shotwell]]                                                                               |
+| Picture editor           | [[https://www.gimp.org][GIMP]]                                                                                                                                 | [[https://www.gimp.org][GIMP]]                                                                                                |
+| Audio player             | [[https://www.clementine-player.org][Clementine]]                                                                                                              | [[https://www.clementine-player.org][Clementine]]                                                                             |
+| Audio editor             | [[https://www.audacityteam.org][Audacity]]                                                                                                                     | [[https://www.audacityteam.org][Audacity]]                                                                                    |
+| Audio backend            | [[https://lame.sourceforge.io][LAME]], [[https://www.ffmpeg.org][FFmpeg]]                                                                                      | [[https://gstreamer.freedesktop.org][GStreamer]]                                                                              |
+| MP3 tag editor           | [[https://kid3.kde.org][Kid3]]                                                                                                                                 | [[https://wiki.gnome.org/Apps/EasyTAG][EasyTAG]]                                                                              |
+| Video player             | [[https://www.videolan.org/vlc/index.html][VLC]]                                                                                                               | [[https://www.videolan.org/vlc/index.html][VLC]]                                                                              |
+| Video editor             | [[https://handbrake.fr][HandBrake]]                                                                                                                            | [[https://www.openshot.org][OpenShot]]                                                                                        |
+| YouTube video downloader | [[https://ytdl-org.github.io/youtube-dl/index.html][youtube-dl]]                                                                                               | [[https://ytdl-org.github.io/youtube-dl/index.html][youtube-dl]]                                                              |
+| Multimedia tool          | [[https://kodi.tv][KODI]]                                                                                                                                      | [[https://kodi.tv][KODI]]                                                                                                     |
+| Gaming clients           | [[https://store.steampowered.com][Steam]], [[https://www.origin.com][Origin]], [[https://www.playstation.com/en-us/explore/ps4/remote-play][Sony Remote Play]] | [[https://store.steampowered.com][Steam]], [[https://www.gamehub.gg][GameHub]]                                                |
+| Mobile device companions | [[https://www.android.com/filetransfer][Android File Transfer]]                                                                                                | [[https://www.android.com/filetransfer][Android File Transfer]]                                                               |
+| Fonts                    | Inconsolata, Liberation, Roboto Mono, Fira Code                                                                                                                | Inconsolata, Liberation, Roboto, Roboto-mono, Droid, Fira Code, Font-awesome                                                  |
+| Misc / Non-essentials    | [[https://github.com/dylanaraps/neofetch][neofetch]]                                                                                                           | [[https://github.com/dylanaraps/neofetch][neofetch]], [[https://www.mpg123.de][mpg123]]                                       |
+
+=*= - in-built, =**= - through web-client
+
+** To-Do
 
 - Fill in missing parts for Linux configuration
 - Figure out alternatives for missing packages
