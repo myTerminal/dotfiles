@@ -24,6 +24,7 @@ tw_execute brew cask install \
            transmission \
            tunnelbear \
            remember-the-milk \
+           keybase \
            dynalist \
            telegram \
            discord \

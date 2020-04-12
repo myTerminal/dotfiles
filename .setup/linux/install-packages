@@ -27,6 +27,7 @@ tw_execute sudo pacman -S \
            gparted \
            syncthing-gtk \
            transmission-gtk \
+           keybase-gui \
            youtube-dl \
            thunderbird \
            audacity \
