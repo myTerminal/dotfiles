@@ -57,6 +57,7 @@ tw_log "Installing packages from AUR..."
 tw_execute yay -S \
            hyper \
            google-chrome \
+           authy \
            postman \
            tunnelbear \
            rememberthemilk \

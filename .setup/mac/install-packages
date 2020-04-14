@@ -17,6 +17,7 @@ tw_execute brew cask install \
            hyper \
            emacs \
            google-chrome \
+           authy \
            shiftit \
            postman \
            mounty \
