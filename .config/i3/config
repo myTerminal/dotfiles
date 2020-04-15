@@ -320,5 +320,8 @@ bindsym $mod+Shift+Control+e exec i3-msg exit
 bindsym $mod+Shift+comma exec kazam -f
 bindsym $mod+Shift+period exec kazam -w
 
+# Start udiskie for auto-mounting of removable media
+exec udiskie
+
 # Play startup sound
 exec mpg123 ~/.assets/car-startup-sound.mp3
