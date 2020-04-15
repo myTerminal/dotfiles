@@ -67,7 +67,6 @@ tw_execute yay -S \
            dynalist-desktop \
            telegram-desktop \
            discord \
-           zulip-desktop \
            slack-desktop \
            pcloud-drive \
            gamehub \

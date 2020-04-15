@@ -31,7 +31,6 @@ tw_execute brew cask install \
            dynalist \
            telegram \
            discord \
-           zulip \
            slack \
            thunderbird \
            kid3 \
