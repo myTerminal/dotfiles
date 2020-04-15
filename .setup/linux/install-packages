@@ -29,6 +29,7 @@ tw_execute sudo pacman -S \
            gparted \
            syncthing-gtk \
            transmission-gtk \
+           keepassxc \
            keybase-gui \
            youtube-dl \
            thunderbird \

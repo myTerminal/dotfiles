@@ -18,6 +18,7 @@ tw_execute brew cask install \
            emacs \
            google-chrome \
            homebrew/cask-versions/firefox-developer-edition \
+           keepassxc \
            authy \
            shiftit \
            postman \
