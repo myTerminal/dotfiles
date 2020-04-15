@@ -17,6 +17,7 @@ tw_execute sudo pacman -S \
            emacs \
            pcmanfm \
            xarchiver \
+           firefox-developer-edition \
            tig \
            fzf \
            aspell \
