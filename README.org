@@ -133,6 +133,14 @@ my daily computing tasks.
 
 =*= - in-built, =**= - through web-client
 
+** For my future self
+
+Simply run the below on a new computer:
+
+#+BEGIN_EXAMPLE
+/bin/bash -c "$(curl https://raw.githubusercontent.com/myTerminal/dotfiles/master/.setup/bootstrap)"
+#+END_EXAMPLE
+
 ** To-Do
 
 - Fill in missing parts for Linux configuration

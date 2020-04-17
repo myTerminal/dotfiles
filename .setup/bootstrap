@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+cd ~
+git init
+git remote add origin https://github.com/myTerminal/dotfiles.git
+git fetch --all
+rm .bash*
+git checkout master
+.setup/start
