@@ -224,11 +224,12 @@ set $mode_launcher "Launch mode: All / Gaming"
 mode $mode_launcher {
         bindsym a \
                 exec rememberthemilk; \
+                exec keepassxc; \
                 exec emacs; \
                 exec telegram-desktop; \
+                exec keybase-gui; \
                 exec slack; \
-                exec zulip; \
-                exec google-chrome-stable; \
+                exec firefox-developer-edition; \
                 exec pcmanfm; \
                 exec vlc; \
                 mode "default"
@@ -292,11 +293,12 @@ workspace_auto_back_and_forth yes
 
 # Assign programs to workspaces
 assign [class="Remember The Milk"] $ws1
+assign [class="KeePassXC"] $ws1
 assign [class="Emacs"] $ws2
 assign [class="TelegramDesktop"] $ws3
+assign [class="Keybase"] $ws3
 assign [class="Slack"] $ws3
-assign [class="Zulip"] $ws3
-assign [class="Google-chrome"] $ws4
+assign [class="firefox"] $ws4
 assign [class="Pcmanfm"] $ws5
 assign [class="vlc"] $ws6
 assign [class="Steam"] $ws6
