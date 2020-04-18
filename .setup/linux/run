@@ -20,9 +20,8 @@ tw_confirm "Change user shell?" \
            tw_task_change_user_shell \
            "Changing of user shell skipped."
 
-tw_confirm "Setup GUI?" \
-           tw_task_setup_gui \
-           "Setting up of GUI skipped."
+tw_log "Setting up GUI..."
+tw_task_setup_gui false
 
 tw_confirm "Setup Nvidia graphics drivers?" \
            mt_task_install_nvidia_graphic_drivers \
