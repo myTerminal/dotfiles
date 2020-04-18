@@ -12,13 +12,13 @@ tw_confirm "Create users?" \
            tw_task_create_users \
            "Creation of users skipped."
 
-tw_confirm "Change user shell?" \
-           tw_task_change_user_shell \
-           "Changing of user shell skipped."
-
 tw_task_add_additional_software_sources
 
 . "${mt_setup_dir}/linux/install-packages"
+
+tw_confirm "Change user shell?" \
+           tw_task_change_user_shell \
+           "Changing of user shell skipped."
 
 tw_confirm "Setup GUI?" \
            tw_task_setup_gui \
