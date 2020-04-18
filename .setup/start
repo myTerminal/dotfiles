@@ -36,6 +36,9 @@ tw_confirm "Create cloud symlinks?" \
 tw_confirm "Clone GitHub source projects?" \
            mt_task_clone_github_source_projects \
            "Cloning GitHub source projects skipped."
+tw_confirm "Link myTerminal/.emacs.d to dotfiles?" \
+           mt_task_link_default_emacs_configs \
+           "Linking default Emacs configs skipped."
 
 # Prompt for a reboot
 tw_confirm "Setup is complete, reboot now?" \
