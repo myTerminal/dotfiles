@@ -10,8 +10,6 @@ tw_execute sudo pacman -S \
            dmenu \
            rofi \
            feh \
-           budgie-desktop \
-           budgie-extras \
            terminology \
            fish \
            emacs \
@@ -65,7 +63,6 @@ tw_execute yay -S \
            tunnelbear \
            rememberthemilk \
            dynalist-desktop \
-           telegram-desktop \
            discord \
            slack-desktop \
            pcloud-drive \

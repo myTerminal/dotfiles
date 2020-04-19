@@ -29,7 +29,6 @@ tw_execute brew cask install \
            remember-the-milk \
            keybase \
            dynalist \
-           telegram \
            discord \
            slack \
            thunderbird \
