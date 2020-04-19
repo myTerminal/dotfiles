@@ -228,12 +228,14 @@ mode $mode_launcher {
                 exec emacs; \
                 exec keybase-gui; \
                 exec slack; \
+                exec discord; \
                 exec firefox-developer-edition; \
                 exec pcmanfm; \
                 exec vlc; \
                 mode "default"
         bindsym g \
                 exec steam; \
+                exec discord; \
                 exec gamehub; \
                 mode "default"
 
@@ -296,6 +298,7 @@ assign [class="KeePassXC"] $ws1
 assign [class="Emacs"] $ws2
 assign [class="Keybase"] $ws3
 assign [class="Slack"] $ws3
+assign [class="discord"] $ws3
 assign [class="firefox"] $ws4
 assign [class="Pcmanfm"] $ws5
 assign [class="vlc"] $ws6
