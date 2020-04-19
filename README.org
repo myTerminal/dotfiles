@@ -16,9 +16,7 @@ rm .bash*
 git checkout master
 #+END_EXAMPLE
 
-** Contents
-
-*** Setup
+** Setup
 
 *dotfiles* contains software setup for multiple operating platforms and starts
 if it finds a compatible one.
@@ -40,30 +38,6 @@ bash .setup/start
 
 The setup scripts should take of the rest except for a couple of prompts for
 optional setup.
-
-*** Configuration
-
-- [[https://git-scm.com][Git]]
-- [[https://www.gnu.org/software/bash][Bash]] as the default shell
-- [[https://fishshell.com][Fish]] as an alternate shell
-- [[https://www.gnu.org/software/emacs][Emacs]] (now moved to a separate 
-  repository [[https://github.com/myTerminal/.emacs.d][.emacs.d]] which 
-  supports using more compatible configs like 
-  [[https://github.com/myTerminal/super-emacs][super-emacs]] and 
-  [[https://github.com/myTerminal/ample-emacs][ample-emacs]])
-  - [[https://www.mew.org][mew]] as the email client
-- [[https://i3wm.org][i3wm]] as a window manager on Linux
-- [[https://github.com/davatorium/rofi][Rofi]] as a window switcher and
-  application launcher on Linux
-- [[https://hyper.is][Hyper]] as a terminal on macOS
-- [[https://github.com/myTerminal/myterminal][myterminal]] as a command-line 
-  companion
-- [[https://github.com/sddm/sddm][SDDM]] (currently only the user avatar)
-
-*** Utility scripts
-
-There's a growing collection of utility scripts included to help me with
-my daily computing tasks.
 
 ** Software selection
 
@@ -132,7 +106,7 @@ my daily computing tasks.
 
 =*= - in-built, =**= - through web-client
 
-** For my future self
+** Note for my future self
 
 Simply run the below on a new computer:
 
