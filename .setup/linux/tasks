@@ -2,7 +2,7 @@
 
 # Function to install proprietary Nvidia drivers
 mt_task_install_nvidia_graphic_drivers () {
-    tw_execute sudo pacman -S \
+    tw_execute yay -S \
                nvidia-390xx \
                nvidia-390xx-utils \
                nvidia-390xx-settings \
