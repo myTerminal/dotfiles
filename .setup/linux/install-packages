@@ -13,6 +13,7 @@ tw_execute sudo pacman -S \
            terminology \
            fish \
            emacs \
+           ranger \
            pcmanfm \
            xarchiver \
            firefox-developer-edition \
