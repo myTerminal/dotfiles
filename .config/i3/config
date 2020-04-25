@@ -13,9 +13,9 @@ set $mod Mod4
 
 # Define colors
 set $fc_pr "#00ffff"
-set $fc_l "#00cccc"
-set $fc_d "#009999"
-set $bg_l "#004444"
+set $fc_l "#00d4d4"
+set $fc_d "#00aaaa"
+set $bg_l "#008080"
 set $bg_d "#001111"
 set $fc_sc "#00ff00"
 set $fc_in "#ffff00"
