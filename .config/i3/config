@@ -305,8 +305,8 @@ assign [class="vlc"] $ws6
 assign [class="Steam"] $ws6
 assign [class="Gamehub"] $ws6
 
-# Bind i3lock
-bindsym $mod+Shift+x exec i3lock -c 000000
+# Bind custom power-menu
+bindsym $mod+Shift+x exec mt-power-mode
 
 # Bind mouse events
 bindsym $mod+button1 fullscreen toggle
