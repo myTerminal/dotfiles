@@ -50,6 +50,7 @@ tw_execute brew cask install \
            diffmerge \
            android-file-transfer \
            razer-synapse \
+           font-open-sans \
            font-inconsolata \
            font-liberation-sans \
            font-roboto-mono \

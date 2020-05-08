@@ -47,6 +47,7 @@ tw_execute sudo pacman -S \
            libreoffice-fresh \
            virtualbox \
            android-file-transfer \
+           ttf-opensans \
            ttf-inconsolata \
            ttf-liberation \
            ttf-roboto \
@@ -59,6 +60,9 @@ tw_execute sudo pacman -S \
 tw_log "Installing packages from AUR..."
 tw_execute yay -S \
            hyper \
+           obsidian-2-theme \
+           obsidian-icon-theme \
+           bibata-cursor-theme \
            google-chrome \
            authy \
            postman \
