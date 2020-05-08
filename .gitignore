@@ -23,12 +23,12 @@
 !/.config/terminology
 !/.config/pcmanfm
 
-!/.assets
-
-!/.emacs.d
-/.emacs.d/*
-!/.emacs.d/init.el
+!/.config/emacs
+/.config/emacs/*
+!/.config/emacs/init.el
 !/.mew.el
+
+!/.assets
 
 !/.hyper.js
 

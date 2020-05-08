@@ -36,6 +36,9 @@ tw_confirm "Create cloud symlinks?" \
 tw_confirm "Clone GitHub source projects?" \
            mt_task_clone_github_source_projects \
            "Cloning GitHub source projects skipped."
+tw_confirm "Create fallback link to ~/.config/emacs?" \
+           mt_task_create_fallback_link_to_emacs_xdg \
+           "Creation of fallback link skipped."
 tw_confirm "Link myTerminal/.emacs.d to dotfiles?" \
            mt_task_link_default_emacs_configs \
            "Linking default Emacs configs skipped."

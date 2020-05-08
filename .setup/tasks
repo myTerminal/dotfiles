@@ -56,12 +56,24 @@ mt_task_clone_github_source_projects () {
                                   "There was an error cloning GitHub source projects!"
 }
 
+# Function to create a fallback link to ~/.config/emacs
+mt_task_create_fallback_link_to_emacs_xdg () {
+    tw_log "Creating a fallback link ~/.emacs.d -> ~/.config/emacs"
+
+    tw_execute ln -s ~/.config/emacs ~/.emacs.d
+
+    tw_handle_last_command_status "${?}" \
+                                  "Fallback link created" \
+                                  "There was an error creating the fallback link!"
+}
+
+
 # Function to link myTerminal/.emacs.d to dotfiles
 mt_task_link_default_emacs_configs () {
     tw_log "Linking myTerminal/.emacs.d to dotfiles"
 
-    tw_execute mkdir ~/.emacs.d/configs
-    tw_execute ln -s ~/_workspace/.emacs.d ~/.emacs.d/configs/_default
+    tw_execute mkdir ~/.config/emacs/configs
+    tw_execute ln -s ~/_workspace/.emacs.d/emacs ~/.config/emacs/configs/_default
 
     tw_handle_last_command_status "${?}" \
                                   "Default Emacs configs linked" \

@@ -1,6 +1,6 @@
 ;;Prompt to select a configuration to start Emacs with
-(let ((available-configs (if (file-directory-p "~/.emacs.d/configs")
-                             (directory-files "~/.emacs.d/configs"
+(let ((available-configs (if (file-directory-p "~/.config/emacs/configs")
+                             (directory-files "~/.config/emacs/configs"
                                               nil
                                               "^\\([^.]\\|\\.[^.]\\|\\.\\..\\)")
                            '()))
@@ -15,5 +15,5 @@
                                           available-configs))))
       (load (expand-file-name (concat "configs/"
 				      selected-config
-				      "/.emacs.d/init")
+				      "/init")
 			      (file-name-directory load-file-name))))))
