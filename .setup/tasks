@@ -54,6 +54,10 @@ mt_task_clone_github_source_projects () {
     tw_handle_last_command_status "${?}" \
                                   "GitHub source projects cloned" \
                                   "There was an error cloning GitHub source projects!"
+
+    tw_log "Converting ~/.git to an SSH based clone..."
+    tw_execute rm -rf ~/.git
+    tw_execute cp -r ~/_workspace/dotfiles/.git ~/.git
 }
 
 # Function to create a fallback link to ~/.config/emacs
