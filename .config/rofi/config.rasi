@@ -31,7 +31,7 @@ configuration {
 /*	cycle: true;*/
 	sidebar-mode: true;
 /*	eh: 1;*/
-	auto-select: true;
+/*	auto-select: true;*/
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
 /*	combi-modi: "window,run";*/
