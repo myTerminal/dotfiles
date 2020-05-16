@@ -1,29 +1,29 @@
 #!/usr/bin/env bash
 
-mt_response=$(echo -e "Lock\nQuit\nSuspend\nHibernate\nShutdown\nRestart" | rofi -dmenu)
+mt_response=$(echo -e "lock\nquit\nsuspend\nhibernate\nshutdown\nrestart" | rofi -dmenu)
 
 case "${mt_response}" in
-    "Lock")
+    "lock")
         i3lock -c 000000
         ;;
 
-    "Quit")
+    "quit")
         i3-msg exit
         ;;
 
-    "Suspend")
+    "suspend")
         systemctl suspend
         ;;
 
-    "Hibernate")
+    "hibernate")
         systemctl hibernate
         ;;
 
-    "Shutdown")
+    "shutdown")
         systemctl poweroff
         ;;
 
-    "Restart")
+    "restart")
         systemctl reboot
         ;;
 
