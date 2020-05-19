@@ -224,6 +224,7 @@ set $mode_launcher "Launch mode: All / Gaming"
 mode $mode_launcher {
         bindsym a \
                 exec rememberthemilk; \
+                exec dynalist; \
                 exec keepassxc; \
                 exec emacs; \
                 exec discord; \
@@ -291,6 +292,7 @@ workspace_auto_back_and_forth yes
 
 # Assign programs to workspaces
 assign [class="Remember The Milk"] $ws1
+assign [class="Dynalist"] $ws1
 assign [class="KeePassXC"] $ws1
 assign [class="Steam"] $ws1
 assign [class="Emacs"] $ws2
