@@ -14,7 +14,7 @@
     rh = reset --hard
     ad = "!f() { git add \"$@\"; git st; }; f"
     cm = commit
-    lg = "log --format=\"%as %Cgreen%h%Creset %Cred%cN%Creset %s %Cblue(%ar)%Creset\""
+    lg = "log --format=\"%as %Cgreen%h%Creset %Cblue%s%Creset (by %Cred%cN%Creset, %ar)\""
     pl = pull origin
     down = pull origin master
     ps = push origin
