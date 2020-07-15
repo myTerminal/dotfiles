@@ -12,6 +12,7 @@ tw_execute sudo pacman -S \
            feh \
            terminology \
            fish \
+           ripgrep \
            emacs \
            ranger \
            pcmanfm \
