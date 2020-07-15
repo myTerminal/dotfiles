@@ -5,6 +5,8 @@
 [user]
     name = myTerminal
     email = team.terminal@gmail.com
+[pull]
+    rebase = true
 [alias]
     fc = fetch
     st = status
