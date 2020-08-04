@@ -8,18 +8,7 @@
 [pull]
     rebase = true
 [alias]
-    fc = fetch
-    st = status
-    df = diff
-    co = checkout
-    rs = reset
-    rh = reset --hard
-    ad = "!f() { git add \"$@\"; git st; }; f"
-    cm = commit
-    lg = "log --format=\"%as %Cgreen%h%Creset %Cblue%s%Creset (by %Cred%cN%Creset, %ar)\""
-    pl = pull origin
-    down = pull origin master
-    ps = push origin
-    up = push origin master
-    sync = "!mt-update-all-projects"
+    st = "!f() { git status; read -n1 -r -p \"Continue to diffs...\"; git diff; }; f"
+    ad = "!f() { git add \"$@\"; git status; }; f"
+    lg = "log --format=\"%as %Cgreen%h%Creset %Cblue%s%Creset (by %Cred%cN%Creset, %ar)\" -n 20"
     overwrite = "!f() { git reset HEAD~\"$@\"; git checkout .; git pull; }; f"
