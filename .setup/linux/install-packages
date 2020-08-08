@@ -30,7 +30,6 @@ tw_execute sudo pacman -S \
            syncthing-gtk \
            transmission-gtk \
            keepassxc \
-           keybase-gui \
            youtube-dl \
            thunderbird \
            audacity \
@@ -71,7 +70,6 @@ tw_execute yay -S \
            rememberthemilk \
            dynalist-desktop \
            discord \
-           slack-desktop \
            pcloud-drive \
            gamehub \
            kazam \

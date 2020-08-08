@@ -29,10 +29,8 @@ tw_execute brew cask install \
            transmission \
            tunnelbear \
            remember-the-milk \
-           keybase \
            dynalist \
            discord \
-           slack \
            thunderbird \
            kid3 \
            gimp \
