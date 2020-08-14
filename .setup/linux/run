@@ -25,6 +25,9 @@ tw_confirm "Change user shell?" \
            tw_task_change_user_shell \
            "Changing of user shell skipped."
 
+tw_log "Installing stable toolchain for Rust..."
+tw_execute rustup toolchain install stable
+
 tw_log "Setting up GUI..."
 tw_task_setup_gui false
 

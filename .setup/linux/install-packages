@@ -90,8 +90,3 @@ tw_execute yay -S \
 
 # Inbuilt packages
 # (None yet)
-
-### More ###
-
-# Install stable toolchain for rust
-tw_execute rustup toolchain install stable
