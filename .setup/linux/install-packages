@@ -46,6 +46,7 @@ tw_execute sudo pacman -S \
            steam \
            libreoffice-fresh \
            virtualbox \
+           docker \
            android-file-transfer \
            ttf-opensans \
            ttf-inconsolata \

@@ -11,6 +11,8 @@ tw_execute brew install \
            aspell \
            node \
            rustup-init \
+           docker \
+           docker-machine \
            syncthing \
            youtube-dl
 

@@ -9,6 +9,10 @@ tw_execute killall Finder
 . "${mt_setup_dir}/mac/setup-sources"
 . "${mt_setup_dir}/mac/install-packages"
 
+tw_log "Setting up Docker..."
+tw_execute docker-machine create --driver virtualbox default
+tw_execute eval $(docker-machine env default)
+
 tw_log "Changing shell to fish..."
 tw_execute_eval "echo \"/usr/local/bin/fish\" | sudo tee -a /etc/shells"
 tw_execute chsh -s /usr/local/bin/fish
