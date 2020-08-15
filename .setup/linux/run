@@ -19,7 +19,7 @@ tw_task_add_additional_software_sources
 tw_log "Setting up Docker..."
 tw_execute sudo groupadd docker
 tw_execute sudo gpasswd -a ${USER} docker
-tw_execute sudo service docker restart
+tw_execute sudo systemctl enable docker
 
 tw_log "Changing shell to fish..."
 if ! [ "$(cat /etc/shells | grep "/usr/local/bin/fish")" ]; then
