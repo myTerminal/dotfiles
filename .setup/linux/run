@@ -22,7 +22,7 @@ tw_execute sudo gpasswd -a ${USER} docker
 tw_execute sudo systemctl enable docker
 
 tw_log "Changing shell to fish..."
-if ! [ "$(cat /etc/shells | grep "/usr/local/bin/fish")" ]; then
+if ! [ "$(cat /etc/shells | grep "/usr/bin/fish")" ]; then
     tw_execute_eval "echo \"/usr/bin/fish\" | sudo tee -a /etc/shells"
 fi
 tw_confirm "Change user shell?" \
