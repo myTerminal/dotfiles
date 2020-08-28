@@ -4,6 +4,7 @@ tw_log "Installing packages..."
 
 tw_log "Installing packages from official sources..."
 tw_execute sudo pacman -S \
+           polkit \
            picom \
            neofetch \
            i3 \
