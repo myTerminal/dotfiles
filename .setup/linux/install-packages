@@ -5,7 +5,6 @@ tw_log "Installing packages..."
 tw_log "Installing packages from official sources..."
 tw_execute sudo pacman -S \
            polkit \
-           archlinux-keyring \
            picom \
            neofetch \
            i3 \
