@@ -43,7 +43,7 @@ optional setup.
 
 | Component                | MacOS                                                      | Linux                                                                                   |
 |--------------------------+------------------------------------------------------------+-----------------------------------------------------------------------------------------|
-| Base                     | [[https://en.wikipedia.org/wiki/MacOS][MacOS]]                                                      | [[https://www.archlinux.org][Arch]] through [[https://arcolinux.info][Arco]]                                                                       |
+| Base                     | [[https://en.wikipedia.org/wiki/MacOS][MacOS]]                                                      | [[https://www.archlinux.org][Arch]]                                                                                    |
 | Package managers         | (native), [[https://brew.sh][Homebrew]], [[https://github.com/Homebrew/homebrew-cask][Cask]]                                   | [[https://www.archlinux.org/pacman][pacman]]*, [[https://github.com/Jguer/yay][yay]] (for [[https://aur.archlinux.org][AUR]])                                                                  |
 | Display server           | (native)                                                   | [[https://www.x.org][Xorg]]                                                                                    |
 | Display drivers          | (stock)                                                    | (depends)                                                                               |
