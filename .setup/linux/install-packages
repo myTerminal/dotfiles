@@ -68,7 +68,6 @@ tw_execute yay -S \
            google-chrome \
            authy \
            postman-bin \
-           tunnelbear \
            rememberthemilk \
            dynalist-desktop \
            discord \
