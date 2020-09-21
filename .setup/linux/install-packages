@@ -67,7 +67,7 @@ tw_execute yay -S \
            bibata-cursor-theme \
            google-chrome \
            authy \
-           postman \
+           postman-bin \
            tunnelbear \
            rememberthemilk \
            dynalist-desktop \
