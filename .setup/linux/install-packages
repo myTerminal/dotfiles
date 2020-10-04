@@ -60,7 +60,7 @@ tw_execute sudo pacman -S \
            --noconfirm
 
 tw_log "Installing packages from AUR..."
-tw_execute yay -S \
+tw_execute yay -S --mflags --skipinteg \
            hyper \
            gtk-theme-shades-of-gray \
            obsidian-icon-theme \
@@ -68,6 +68,7 @@ tw_execute yay -S \
            google-chrome \
            authy \
            postman-bin \
+           tunnelbear \
            rememberthemilk \
            dynalist-desktop \
            discord \
