@@ -310,6 +310,10 @@ bindsym $mod+button1 fullscreen toggle
 bindsym $mod+button2 floating toggle
 bindsym --release $mod+button3 kill
 
+# Bind moving through workspaces
+bindsym $mod+Control+Right workspace next
+bindsym $mod+Control+Left workspace prev
+
 # Set wallpaper
 exec_always feh --bg-scale ~/.assets/teN7.png
 
