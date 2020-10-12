@@ -6,7 +6,7 @@
     name = myTerminal
     email = team.terminal@gmail.com
 [pull]
-    rebase = true
+    rebase = false
 [alias]
     st = status
     sd = "!f() { git status; read -n1 -r -p \"Continue to diffs...\"; git diff; }; f"
