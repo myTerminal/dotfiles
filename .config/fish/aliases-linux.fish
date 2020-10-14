@@ -1,3 +1,6 @@
+alias mt-desktop1="startx ~/.xinitrc"
+alias mt-desktop2="startx ~/.xinitrc secondary"
+
 alias audio-restart="pulseaudio -k; pulseaudio --start"
 alias wifi-connect="nmcli d wifi"
 

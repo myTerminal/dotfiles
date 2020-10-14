@@ -7,6 +7,8 @@
 !/.bash_profile
 !/.bashrc
 
+!/.xinitrc
+
 !/.setup
 
 !/.scripts
