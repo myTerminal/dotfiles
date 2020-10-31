@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+command=$1
+
+run_for_linux () {
+    case "${command}" in
+        "shutdown" | "poweroff" )
+            echo systemctl poweroff
+            ;;
+
+        "restart" | "reboot" )
+            echo systemctl reboot
+            ;;
+
+        "sleep" | "suspend" )
+            echo systemctl suspend
+            ;;
+
+        "hibernate" | "poweroff" )
+            echo systemctl hibernate
+            ;;
+
+        "awake" )
+            echo systemctl mask sleep.target suspend.target
+            ;;
+
+        "sleepy" )
+            echo systemctl unmask sleep.target suspend.target
+            ;;
+
+        *)
+            echo "Not implemented!"
+            ;;
+    esac
+}
+
+run_for_mac () {
+    case "${command}" in
+        "shutdown" | "poweroff" )
+            echo sudo shutdown
+            ;;
+
+        "restart" | "reboot" )
+            echo sudo reboot
+            ;;
+
+        *)
+            echo "Not implemented!"
+            ;;
+    esac
+}
+
+main () {
+    if [ $(uname) = 'Linux' ]; then
+        run_for_linux
+    elif [ $(uname) = 'Darwin' ]; then
+        run_for_mac
+    fi
+}
+
+main
