@@ -303,7 +303,7 @@ assign [class="Gamehub"] $ws6
 assign [class="KeePassXC"] $ws7
 
 # Bind custom power-menu
-bindsym $mod+Shift+x exec ~/.scripts/mt-power-mode
+bindsym $mod+Shift+x exec ~/.scripts/mt-power-interactive
 
 # Bind mouse events
 bindsym $mod+button1 fullscreen toggle
