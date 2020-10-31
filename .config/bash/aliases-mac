@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
 
-alias mt-system-update-packages="brew update && brew upgrade"

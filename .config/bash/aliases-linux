@@ -8,14 +8,6 @@ alias wifi-connect="nmcli d wifi"
 
 alias keymon-start="key-mon --key-timeout=1.5 --no-press-fadeout=2 --old-keys=5"
 
-if [ $(command -v apt) ]; then
-    alias mt-system-update-packages="sudo apt update && sudo apt upgrade"
-elif [ $(command -v dnf) ]; then
-    alias mt-system-update-packages="sudo dnf update"
-elif [ $(command -v pacman) ]; then
-    alias mt-system-update-packages="sudo pacman -Syu"
-fi
-
 alias mt-power-prevent-sleep="systemctl mask sleep.target suspend.target"
 alias mt-power-allow-sleep="systemctl unmask sleep.target suspend.target"
 alias mt-power-shutdown="systemctl poweroff"

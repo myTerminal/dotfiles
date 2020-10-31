@@ -1,1 +1,0 @@
-alias mt-system-update-packages="brew update; brew upgrade"

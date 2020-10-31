@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+update_linux () {
+    if [ $(command -v apt) ]; then
+        sudo apt update && sudo apt upgrade
+    elif [ $(command -v dnf) ]; then
+        sudo dnf update
+    elif [ $(command -v pacman) ]; then
+        sudo pacman -Syu
+    fi
+}
+
+update_mac () {
+    brew update && brew upgrade
+}
+
+main () {
+    if [ $(uname) = 'Linux' ]; then
+        update_linux
+    elif [ $(uname) = 'Darwin' ]; then
+        update_mac
+    fi
+}
+
+main
