@@ -4,7 +4,7 @@
 export PATH=$PATH:~/.scripts
 
 # Set custom environment variables
-export MT_WORKSPACE_PATH=~/_workspace
+export MT_WORKSPACE_GITHUB=~/_github
 
 # Load private keys, if they exist
 if [ -f ~/.private-keys ]; then

@@ -45,10 +45,10 @@ mt_task_create_cloud_symlinks () {
 mt_task_clone_github_source_projects () {
     tw_log "Cloning GitHub source projects..."
 
-    tw_execute mkdir "${MT_WORKSPACE_PATH}"
+    tw_execute mkdir "${MT_WORKSPACE_GITHUB}"
     tw_execute git-getter \
                --username myTerminal \
-               --targetPath "${MT_WORKSPACE_PATH}" \
+               --targetPath "${MT_WORKSPACE_GITHUB}" \
                --ssh
 
     tw_handle_last_command_status "${?}" \
@@ -57,7 +57,7 @@ mt_task_clone_github_source_projects () {
 
     tw_log "Converting ~/.git to an SSH based clone..."
     tw_execute rm -rf ~/.git
-    tw_execute cp -r ~/_workspace/dotfiles/.git ~/.git
+    tw_execute cp -r "${MT_WORKSPACE_GITHUB}/dotfiles/.git" ~/.git
 }
 
 # Function to create a fallback link to ~/.config/emacs
@@ -77,7 +77,7 @@ mt_task_link_default_emacs_configs () {
     tw_log "Linking myTerminal/.emacs.d to dotfiles"
 
     tw_execute mkdir ~/.config/emacs/configs
-    tw_execute ln -s ~/_workspace/.emacs.d/emacs ~/.config/emacs/configs/_default
+    tw_execute ln -s "${MT_WORKSPACE_GITHUB}/.emacs.d/emacs" ~/.config/emacs/configs/_default
 
     tw_handle_last_command_status "${?}" \
                                   "Default Emacs configs linked" \
