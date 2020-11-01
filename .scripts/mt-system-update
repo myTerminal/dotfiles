@@ -2,11 +2,11 @@
 
 update_linux () {
     if [ $(command -v apt) ]; then
-        sudo apt update && sudo apt upgrade
+        sudo apt update -y && sudo apt upgrade -y
     elif [ $(command -v dnf) ]; then
-        sudo dnf update
+        sudo dnf update -y
     elif [ $(command -v pacman) ]; then
-        sudo pacman -Syu
+        sudo pacman -Syu --noconfirm
     fi
 }
 
