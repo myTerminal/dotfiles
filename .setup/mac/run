@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+. "${mt_setup_dir}/mac/tasks"
+
 tw_log "Setting up macOS..."
 
 tw_log "Enabling hidden files in Finder..."
@@ -20,4 +22,7 @@ tw_execute chsh -s /usr/local/bin/fish
 tw_log "Setting up Rust..."
 tw_execute rustup-init
 
-. "${mt_setup_dir}/mac/setup-startup-services"
+tw_confirm "Setup startup services?" \
+           mt_task_setup_startup_services \
+           "Setting up of startup services skipped."
+

@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-tw_log "Setting up startup services..."
-
-# Setup syncthing service
-tw_execute brew services start syncthing
