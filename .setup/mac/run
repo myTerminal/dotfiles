@@ -23,6 +23,6 @@ tw_log "Setting up Rust..."
 tw_execute rustup-init
 
 tw_confirm "Setup startup services?" \
-           mt_task_setup_startup_services \
+           mt_task_mac_setup_startup_services \
            "Setting up of startup services skipped."
 

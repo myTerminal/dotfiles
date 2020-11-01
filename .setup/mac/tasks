@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Function to setup startup services
-mt_task_setup_startup_services () {
+mt_task_mac_setup_startup_services () {
     tw_log "Setting up startup services..."
 
     # Setup syncthing service
