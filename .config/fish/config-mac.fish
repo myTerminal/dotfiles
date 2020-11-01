@@ -2,4 +2,4 @@
 add-to-path ~/.cargo/bin
 
 # Set up aliases
-. ~/.config/fish/aliases-mac.fish
+# (None for now)

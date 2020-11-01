@@ -12,7 +12,9 @@ if [ -f ~/.private-keys ]; then
 fi
 
 # Set up common aliases
-. ~/.config/bash/aliases
+alias cl="clear"
+alias gt="clear && git"
+alias mt-sync-github="mt-sync-projects ${MT_WORKSPACE_GITHUB}"
 
 # Load configs for the current OS
 if [ $(uname) = 'Linux' ]; then

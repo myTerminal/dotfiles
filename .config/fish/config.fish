@@ -13,7 +13,9 @@ if test -e ~/.private-keys
 end
 
 # Set up common aliases
-. ~/.config/fish/aliases.fish
+alias cl="clear"
+alias gt="clear; git"
+alias mt-sync-github="mt-sync-projects $MT_WORKSPACE_GITHUB"
 
 # Load configs for the current OS
 if test (uname) = "Linux"

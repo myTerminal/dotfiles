@@ -4,4 +4,4 @@
 export PATH=$PATH:$HOME/.cargo/bin
 
 # Set up aliases
-. ~/.config/bash/aliases-mac
+# (None for now)
