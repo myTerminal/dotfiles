@@ -32,15 +32,6 @@ mt_task_install_npm_packages () {
                                   "There was an error installing NPM packages globally!"
 }
 
-# Function to create cloud symlinks
-mt_task_create_cloud_symlinks () {
-    tw_pause "Please make sure the associated cloud services are configured before proceeding. Press any key one done..."
-    tw_execute ln -s ~/Google\ Drive/.private-keys ~/.private-keys
-    tw_handle_last_command_status "${?}" \
-                                  "Cloud symlinks created" \
-                                  "There was an error creating symlinks!"
-}
-
 # Function to clone GitHub projects under 'myTerminal'
 mt_task_clone_github_source_projects () {
     tw_log "Cloning GitHub source projects..."

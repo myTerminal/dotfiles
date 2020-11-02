@@ -8,8 +8,8 @@ set -x MT_WORKSPACE_GITHUB ~/_github
 set fish_greeting "Hi myTerminal, the fish is here!"
 
 # Load private keys, if they exist
-if test -e ~/.private-keys
-   . ~/.private-keys
+if test -e ~/Storage/myTerminal/.private-keys
+   . ~/Storage/myTerminal/.private-keys
 end
 
 # Set up common aliases

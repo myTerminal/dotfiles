@@ -7,8 +7,8 @@ export PATH=$PATH:~/.scripts
 export MT_WORKSPACE_GITHUB=~/_github
 
 # Load private keys, if they exist
-if [ -f ~/.private-keys ]; then
-    . ~/.private-keys
+if [ -f ~/Storage/myTerminal/.private-keys ]; then
+    . ~/Storage/myTerminal/.private-keys
 fi
 
 # Set up common aliases
