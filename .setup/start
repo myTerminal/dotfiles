@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
 # Init
+tw_log "Loading resources..."
 mt_setup_dir="$(dirname "${BASH_SOURCE[0]}")"
 . "${mt_setup_dir}/tasks"
 
 # Prepare twiner
+tw_log "Preparing twiner..."
 if [ -d ~/.twiner ]; then
     cd ~/.twiner
     git pull
@@ -16,12 +18,18 @@ fi
 
 # Perform platform-specific setup
 if [ $(uname) = 'Linux' ] && [ $(command -v pacman) ]; then
-    . "${mt_setup_dir}/linux/run"
+    tw_confirm_and_source "Start setup for Linux?" \
+                          "${mt_setup_dir}/linux/run" \
+                          "Skipped setup for Linux!"
 elif [ $(uname) = 'Darwin' ]; then
-    . "${mt_setup_dir}/mac/run"
+    tw_confirm_and_source "Start setup for macOS?" \
+                          "${mt_setup_dir}/mac/run" \
+                          "Skipped setup for macOS!"
 else
     tw_abort_because "Unknown platform found."
 fi
+
+tw_log "Starting with platform independent steps..."
 
 # Perform platform-independent setup
 tw_confirm "Generate SSH key?" \
