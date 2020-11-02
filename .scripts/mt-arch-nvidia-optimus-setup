@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Install latest Nvidia drivers
+. ~/.scripts/mt-arch-nvidia-latest-setup
+
+# TODO: Implement further steps
