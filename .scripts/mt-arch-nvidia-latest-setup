@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+mt_packages=(nvidia \
+                 nvidia-utils \
+                 nvidia-settings)
+
+if [ "${1}" = "uninstall" ]; then
+    pacman -R "${mt_packages[@]}" --noconfirm
+else
+    pacman -S "${mt_packages[@]}" --noconfirm
+fi
