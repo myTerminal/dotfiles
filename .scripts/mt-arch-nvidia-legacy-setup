@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+mt_packages=(nvidia-390xx \
+                 nvidia-390xx-utils \
+                 nvidia-390xx-settings \
+                 lib32-nvidia-390xx-utils \
+                 lib32-opencl-nvidia-390xx \
+                 opencl-nvidia-390xx)
+
+if [ "${1}" = "uninstall" ]; then
+    yay -R "${mt_packages[@]}" --noconfirm
+else
+    yay -S "${mt_packages[@]}" --noconfirm
+fi

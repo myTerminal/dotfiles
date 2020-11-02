@@ -35,10 +35,6 @@ tw_execute rustup toolchain install stable
 tw_log "Setting up GUI..."
 tw_task_setup_gui false
 
-tw_confirm "Setup Nvidia graphics drivers?" \
-           mt_task_linux_install_nvidia_graphic_drivers \
-           "Setting up of Nvidia drivers skipped."
-
 tw_confirm "Setup peripherals drivers?" \
            mt_task_linux_install_peripherals_drivers \
            "Setting up of periphericals drivers skipped."

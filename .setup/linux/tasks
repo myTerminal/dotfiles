@@ -1,17 +1,5 @@
 #!/usr/bin/env bash
 
-# Function to install proprietary Nvidia drivers
-mt_task_linux_install_nvidia_graphic_drivers () {
-    tw_execute yay -S \
-               nvidia-390xx \
-               nvidia-390xx-utils \
-               nvidia-390xx-settings \
-               lib32-nvidia-390xx-utils \
-               lib32-opencl-nvidia-390xx \
-               opencl-nvidia-390xx \
-               --noconfirm
-}
-
 # Function to install peripheral drivers
 mt_task_linux_install_peripherals_drivers () {
     tw_log "Installing packages for Razer devices..."
