@@ -5,27 +5,27 @@ command=$1
 run_for_linux () {
     case "${command}" in
         "shutdown" | "poweroff" )
-            echo systemctl poweroff
+            systemctl poweroff
             ;;
 
         "restart" | "reboot" )
-            echo systemctl reboot
+            systemctl reboot
             ;;
 
         "sleep" | "suspend" )
-            echo systemctl suspend
+            systemctl suspend
             ;;
 
         "hibernate" | "poweroff" )
-            echo systemctl hibernate
+            systemctl hibernate
             ;;
 
         "awake" )
-            echo systemctl mask sleep.target suspend.target
+            systemctl mask sleep.target suspend.target
             ;;
 
         "sleepy" )
-            echo systemctl unmask sleep.target suspend.target
+            systemctl unmask sleep.target suspend.target
             ;;
 
         *)
@@ -37,11 +37,11 @@ run_for_linux () {
 run_for_mac () {
     case "${command}" in
         "shutdown" | "poweroff" )
-            echo sudo shutdown
+            sudo shutdown
             ;;
 
         "restart" | "reboot" )
-            echo sudo reboot
+            sudo reboot
             ;;
 
         *)
