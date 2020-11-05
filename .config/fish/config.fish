@@ -2,7 +2,8 @@
 add-to-path ~/.scripts
 
 # Set custom environment variables
-set -x MT_WORKSPACE_GITHUB ~/_github
+set -x MT_WORKSPACE_ROOT ~/_workspace
+set -x MT_WORKSPACE_GITHUB ~/_workspace/github
 
 # Set a few variables for fish
 set fish_greeting "Hi myTerminal, the fish is here!"

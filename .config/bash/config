@@ -4,7 +4,8 @@
 export PATH=$PATH:~/.scripts
 
 # Set custom environment variables
-export MT_WORKSPACE_GITHUB=~/_github
+export MT_WORKSPACE_ROOT=~/_workspace
+export MT_WORKSPACE_GITHUB=~/_workspace/github
 
 # Load private keys, if they exist
 if [ -f ~/Storage/myTerminal/.private-keys ]; then

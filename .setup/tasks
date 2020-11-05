@@ -36,6 +36,7 @@ mt_task_install_npm_packages () {
 mt_task_clone_github_source_projects () {
     tw_log "Cloning GitHub source projects..."
 
+    tw_execute mkdir "${MT_WORKSPACE_ROOT}"
     tw_execute mkdir "${MT_WORKSPACE_GITHUB}"
     tw_execute git-getter \
                --username myTerminal \
