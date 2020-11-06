@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+command=$1
+
+run_for_linux () {
+    case "${command}" in
+        minimal | console )
+            sudo systemctl disable display-manager.service
+            echo "Switched startup mode to console!"
+            ;;
+
+        *)
+            sudo systemctl enable gdm
+            echo "Switched startup mode to graphical!"
+            ;;
+    esac
+}
+
+run_for_mac () {
+    echo "Not implemented!"
+}
+
+main () {
+    if [ $(uname) = 'Linux' ]; then
+        run_for_linux
+    elif [ $(uname) = 'Darwin' ]; then
+        run_for_mac
+    fi
+}
+
+main
