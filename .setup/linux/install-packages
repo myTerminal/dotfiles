@@ -78,6 +78,7 @@ tw_execute yay -S --mflags --skipinteg \
            vokoscreen \
            key-mon \
            nomachine \
+           edex-ui \
            --noconfirm
 
 # Manual packages

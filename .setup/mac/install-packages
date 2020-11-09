@@ -56,7 +56,8 @@ tw_execute brew cask install \
            font-liberation-sans \
            font-roboto-mono \
            caskroom/fonts/font-fira-code \
-           nomachine
+           nomachine \
+           edex-ui
 
 # Manual packages
 # - Install pCloud Drive from https://www.pcloud.com
