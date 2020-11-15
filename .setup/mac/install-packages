@@ -44,6 +44,7 @@ tw_execute brew cask install \
            steam \
            origin \
            sony-remoteplay \
+           obs \
            licecap \
            keycastr \
            libreoffice \

@@ -38,6 +38,7 @@ tw_execute sudo pacman -S \
            gimp \
            shotwell \
            openshot \
+           obs-studio \
            peek \
            mpg123 \
            clementine \
@@ -75,7 +76,6 @@ tw_execute yay -S --mflags --skipinteg \
            pcloud-drive \
            gamehub \
            kazam \
-           vokoscreen \
            key-mon \
            nomachine \
            edex-ui \
