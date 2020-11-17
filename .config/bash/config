@@ -8,8 +8,8 @@ export MT_WORKSPACE_ROOT=~/_workspace
 export MT_WORKSPACE_GITHUB=~/_workspace/github
 
 # Load private keys, if they exist
-if [ -f ~/Storage/myTerminal/.private-keys ]; then
-    . ~/Storage/myTerminal/.private-keys
+if [ -f ~/_store/myTerminal/.private-keys ]; then
+    . ~/_store/myTerminal/.private-keys
 fi
 
 # Set up common aliases
