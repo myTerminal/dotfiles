@@ -3,4 +3,8 @@
 # Install latest Nvidia drivers
 . ~/.scripts/mt-arch-nvidia-latest-setup
 
-# TODO: Implement further steps
+# Install prime
+sudo pacman -S nvidia-prime --noconfirm
+
+# Install optimus-manager
+yay -S optimus-manager optimus-manager-qt --noconfirm

@@ -4,6 +4,6 @@
 # for 2020 Lenovo ThinkPad X1 Extreme (Excelsior)
 
 # Setup Nvidia optimus for GPU
-. ~/.scripts/mt-arch-nvidia-optimus-setup 
+. ~/.scripts/mt-arch-nvidia-optimus-setup
 
 # TODO: Implement the rest
