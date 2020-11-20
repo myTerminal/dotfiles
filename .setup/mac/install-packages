@@ -27,6 +27,7 @@ tw_execute brew cask install \
            shiftit \
            postman \
            mounty \
+           balenaetcher \
            google-backup-and-sync \
            transmission \
            tunnelbear \
