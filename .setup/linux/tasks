@@ -24,4 +24,8 @@ mt_task_linux_setup_startup_services () {
     # Setup syncthing service
     tw_execute systemctl --user enable syncthing.service
     tw_execute systemctl --user start syncthing.service
+
+    # Start network manager service
+    tw_execute systemctl enable NetworkManager.service
+    tw_execute systemctl start NetworkManager.service
 }
