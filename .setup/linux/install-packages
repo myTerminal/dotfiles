@@ -38,7 +38,7 @@ tw_execute sudo pacman -S \
            easytag \
            gimp \
            shotwell \
-           openshot \
+           blender \
            obs-studio \
            peek \
            mpg123 \
