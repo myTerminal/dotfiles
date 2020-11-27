@@ -324,6 +324,9 @@ bindsym $mod+Shift+Control+e exec i3-msg exit
 bindsym $mod+Shift+comma exec kazam -f
 bindsym $mod+Shift+period exec kazam -w
 
+# Enable pulseeffects
+exec pulseeffects --gapplication-service
+
 # Start udiskie for auto-mounting of removable media
 exec udiskie
 
