@@ -22,4 +22,11 @@ sudo pacman -S pulseeffects
 pulseeffects
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/master/install.sh)"
 
+# Enable microphone noise reduction
+echo "
+### Enable Echo/Noise-Cancellation
+load-module module-echo-cancel use_master_format=1 aec_method=webrtc aec_args=\"beamforming=1 mic_geometry=-0.0257,0,0,0.0257,0,0\" source_name=echoCancel_source sink_name=echoCancel_sink
+set-default-source echoCancel_source
+set-default-sink echoCancel_sink" | sudo tee -a /etc/pulse/default.pa
+
 # TODO: Implement the rest
