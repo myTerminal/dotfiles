@@ -17,4 +17,9 @@ systemctl start bluetooth
 # Fix 'Dummy Output' for audio
 echo "options snd_hda_intel dmic_detect=0" | sudo tee /etc/modprobe.d/disable_dmic.conf
 
+# Enable Dolby Atmos Effect through pulseeffects
+sudo pacman -S pulseeffects
+pulseeffects
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/master/install.sh)"
+
 # TODO: Implement the rest
