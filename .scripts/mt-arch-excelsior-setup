@@ -29,4 +29,7 @@ load-module module-echo-cancel use_master_format=1 aec_method=webrtc aec_args=\"
 set-default-source echoCancel_source
 set-default-sink echoCancel_sink" | sudo tee -a /etc/pulse/default.pa
 
+# Improve touchpad experience
+echo "options psmouse synaptics_intertouch=1" | sudo tee /etc/modprobe.d/psmouse.conf
+
 # TODO: Implement the rest
