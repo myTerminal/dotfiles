@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Uninstall nouveau
+sudo pacman -R xf86-video-nouveau --noconfirm
+
 # Install latest Nvidia drivers
 . ~/.scripts/mt-arch-nvidia-latest-setup
 
