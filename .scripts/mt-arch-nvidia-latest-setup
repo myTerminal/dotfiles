@@ -2,7 +2,8 @@
 
 mt_packages=(nvidia \
                  nvidia-utils \
-                 nvidia-settings)
+                 nvidia-settings \
+                 lib32-nvidia-utils)
 
 if [ "${1}" = "uninstall" ]; then
     sudo pacman -R "${mt_packages[@]}" --noconfirm
