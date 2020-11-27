@@ -6,6 +6,11 @@
 # Set .XResources for HiDPI
 echo "Xft.dpi: 180" > ~/.Xresources
 
+# Enable bluetooth service
+# (This might just be a temporary Arch issue)
+systemctl enable bluetooth
+systemctl start bluetooth
+
 # Setup Nvidia optimus for GPU
 . ~/.scripts/mt-arch-nvidia-optimus-setup
 
