@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+pulseeffects --gapplication-service &
