@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+command=$1
+
+case "${1}" in
+    i | integrated | intel )
+        echo "Switching to integrated GPU..."
+        optimus-manager --switch intel --no-confirm
+        ;;
+
+    o | h | hybrid )
+        echo "Switching to hybrid mode..."
+        optimus-manager --switch hybrid --no-confirm
+        ;;
+
+    p | d | dedicated | n | nvidia )
+        echo "Switching to dedicated GPU..."
+        optimus-manager --switch nvidia --no-confirm
+        ;;
+
+    *)
+        echo "Option not specified"
+        ;;
+esac
