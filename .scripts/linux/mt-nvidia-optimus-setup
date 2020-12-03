@@ -4,7 +4,7 @@
 sudo pacman -R xf86-video-nouveau --noconfirm
 
 # Install latest Nvidia drivers
-. ~/.scripts/linux/mt-arch-nvidia-latest-setup
+. ~/.scripts/linux/mt-nvidia-latest-setup
 
 # Install prime
 sudo pacman -S nvidia-prime --noconfirm
