@@ -12,7 +12,7 @@ systemctl enable bluetooth
 systemctl start bluetooth
 
 # Setup Nvidia optimus for GPU
-. ~/.scripts/mt-arch-nvidia-optimus-setup
+. ~/.scripts/linux/mt-arch-nvidia-optimus-setup
 
 # Fix 'Dummy Output' for audio
 echo "options snd_hda_intel dmic_detect=0" | sudo tee /etc/modprobe.d/disable_dmic.conf
