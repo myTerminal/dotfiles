@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+case "${1}" in
+    "shutdown" | "poweroff" )
+        sudo shutdown
+        ;;
+
+    "restart" | "reboot" )
+        sudo reboot
+        ;;
+
+    *)
+        echo "Not implemented!"
+        ;;
+esac

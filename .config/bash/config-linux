@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Update PATH for custom shell scripts for Linux
+export PATH=$PATH:~/.scripts/linux
+
 # Configure prompt
 PS1='\u@\h:\w\$ '
 

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+if [ $(command -v apt) ]; then
+    sudo apt update -y && sudo apt upgrade -y
+elif [ $(command -v dnf) ]; then
+    sudo dnf update -y
+elif [ $(command -v pacman) ]; then
+    sudo pacman -S archlinux-keyring --noconfirm
+    sudo pacman -Syu --noconfirm
+fi

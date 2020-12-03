@@ -1,3 +1,6 @@
+# Update PATH for custom shell scripts for Linux
+add-to-path ~/.scripts/linux
+
 # Set up aliases
 alias mt-desktop1="startx ~/.xinitrc"
 alias mt-desktop2="startx ~/.xinitrc secondary"

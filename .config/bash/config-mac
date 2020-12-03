@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Update PATH for custom shell scripts for Mac
+export PATH=$PATH:~/.scripts/mac
+
 # Update PATH for cargo(rust)
 export PATH=$PATH:$HOME/.cargo/bin
 
