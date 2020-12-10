@@ -305,6 +305,9 @@ assign [class="KeePassXC"] $ws7
 # Bind custom power-menu
 bindsym $mod+Shift+x exec ~/.scripts/linux/mt-power-interactive
 
+# Bind custom GPU mode switcher
+bindsym $mod+Shift+g exec ~/.scripts/linux/mt-gpu-switch-interactive
+
 # Bind mouse events
 bindsym $mod+button1 fullscreen toggle
 bindsym $mod+button2 floating toggle

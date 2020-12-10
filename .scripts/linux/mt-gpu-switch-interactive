@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+mt_response=$(echo -e "intel\nhybrid\nnvidia" | rofi -dmenu)
+
+case "${mt_response}" in
+    "intel")
+        optimus-manager --switch intel --no-confirm
+        ;;
+
+    "hybrid")
+        optimus-manager --switch hybrid --no-confirm
+        ;;
+
+    "nvidia")
+        optimus-manager --switch nvidia --no-confirm
+        ;;
+
+    *)
+        # Ignore
+        ;;
+esac
