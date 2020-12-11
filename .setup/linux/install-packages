@@ -38,6 +38,7 @@ tw_execute sudo pacman -S \
            audacity \
            easytag \
            gimp \
+           handbrake \
            shotwell \
            blender \
            obs-studio \
