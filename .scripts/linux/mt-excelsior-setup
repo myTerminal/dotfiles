@@ -18,7 +18,7 @@ systemctl start bluetooth
 echo "options snd_hda_intel dmic_detect=0" | sudo tee /etc/modprobe.d/disable_dmic.conf
 
 # Enable Dolby Atmos Effect through pulseeffects
-sudo pacman -S pulseeffects
+sudo pacman -S pulseeffects --no-confirm
 pulseeffects
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/master/install.sh)"
 
@@ -31,5 +31,10 @@ set-default-sink echoCancel_sink" | sudo tee -a /etc/pulse/default.pa
 
 # Improve touchpad experience
 echo "options psmouse synaptics_intertouch=1" | sudo tee /etc/modprobe.d/psmouse.conf
+
+# Set up auto-cpufreq for power optimization
+yay -S auto-cpufreq --no-confirm
+systemctl enable auto-cpufreq
+systemctl start auto-cpufreq
 
 # TODO: Implement the rest
