@@ -337,3 +337,6 @@ exec udiskie
 
 # Play startup sound
 exec mpg123 ~/.assets/car-startup-sound.mp3
+
+# Set default screen brightness
+exec brightnessctl s 20%
