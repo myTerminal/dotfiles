@@ -8,6 +8,7 @@ tw_execute sudo pacman -S \
            blueman \
            brightnessctl \
            polkit \
+           bind \
            picom \
            neofetch \
            i3 \
