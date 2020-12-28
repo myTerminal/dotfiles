@@ -1,6 +1,9 @@
 # Update PATH for custom shell scripts
 add-to-path ~/.scripts
 
+# Update PATH for cargo(rust)
+add-to-path ~/.cargo/bin
+
 # Set custom environment variables
 set -x MT_WORKSPACE_ROOT ~/_workspace
 set -x MT_WORKSPACE_GITHUB ~/_workspace/github
