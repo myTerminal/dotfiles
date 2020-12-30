@@ -36,7 +36,7 @@ tw_execute sudo pacman -S \
            transmission-gtk \
            keepassxc \
            youtube-dl \
-           thunderbird \
+           evolution \
            audacity \
            easytag \
            gimp \

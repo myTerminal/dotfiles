@@ -34,7 +34,6 @@ tw_execute brew cask install \
            remember-the-milk \
            dynalist \
            discord \
-           thunderbird \
            kid3 \
            gimp \
            handbrake \
