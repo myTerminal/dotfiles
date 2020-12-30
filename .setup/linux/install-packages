@@ -16,6 +16,7 @@ tw_execute sudo pacman -S \
            rofi \
            feh \
            terminology \
+           tmux \
            fish \
            ripgrep \
            emacs \

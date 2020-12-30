@@ -52,7 +52,7 @@ optional setup.
 | Compositor               | (native)                                 | [[https://github.com/yshui/picom][picom]]                                    |
 | GUI                      | (native)                                 | [[https://github.com/i3/i3][i3]], [[https://github.com/GNOME/gnome-desktop][gnome-desktop]]                        |
 | GUI extensions           | [[https://github.com/fikovnik/ShiftIt][ShiftIt]]                                  | --                                       |
-| Alternate interfaces     | [[https://github.com/GitSquared/edex-ui][edex-ui]]                                  | [[https://github.com/GitSquared/edex-ui][edex-ui]]                                  |
+| Alternate interfaces     | [[https://github.com/GitSquared/edex-ui][edex-ui]], [[https://github.com/tmux/tmux][tmux]]                            | [[https://github.com/GitSquared/edex-ui][edex-ui]], [[https://github.com/tmux/tmux][tmux]]                            |
 | Wallpaper manager        | (native)                                 | [[https://feh.finalrewind.org][feh]]                                      |
 | Application launcher     | (native)                                 | [[https://tools.suckless.org/dmenu][dmenu]], [[https://github.com/davatorium/rofi][Rofi]]                              |
 | Dock                     | (native)                                 | --                                       |
