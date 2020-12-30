@@ -51,7 +51,6 @@ tw_execute brew cask install \
            libreoffice \
            virtualbox \
            diffmerge \
-           android-file-transfer \
            razer-synapse \
            font-open-sans \
            font-inconsolata \
