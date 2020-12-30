@@ -68,7 +68,6 @@ tw_execute sudo pacman -S \
 
 tw_log "Installing packages from AUR..."
 tw_execute yay -S --mflags --skipinteg \
-           hyper \
            gtk-theme-shades-of-gray \
            obsidian-icon-theme \
            bibata-cursor-theme \
