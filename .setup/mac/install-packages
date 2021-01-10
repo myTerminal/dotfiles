@@ -37,6 +37,7 @@ tw_execute brew cask install \
            discord \
            kid3 \
            gimp \
+           darktable \
            handbrake \
            xnviewmp \
            clementine \

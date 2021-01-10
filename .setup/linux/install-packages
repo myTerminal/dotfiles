@@ -41,6 +41,7 @@ tw_execute sudo pacman -S \
            audacity \
            easytag \
            gimp \
+           darktable \
            handbrake \
            shotwell \
            blender \
