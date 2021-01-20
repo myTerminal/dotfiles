@@ -60,7 +60,7 @@ optional setup.
 | Icon packs               | (native)                                 | [[https://github.com/madmaxms/iconpack-obsidian][Obsidian]]                                 |
 | Mouse cursor             | (native)                                 | [[https://github.com/ful1e5/Bibata_Cursor][Bibata]]                                   |
 | Lockscreen               | (native)                                 | [[https://github.com/i3/i3lock][i3lock]]                                   |
-| Terminal                 | [[https://support.apple.com/guide/terminal/welcome/mac][Terminal]] (native), [[https://hyper.is/][Hyper]]                 | [[https://github.com/billiob/terminology][Terminology]]                              |
+| Terminal                 | [[https://support.apple.com/guide/terminal/welcome/mac][Terminal]] (native), [[https://hyper.is/][Hyper]]                 | [[https://github.com/alacritty/alacritty][Alacritty]]                                |
 | Shell                    | [[https://fishshell.com][fish]]                                     | [[https://fishshell.com][fish]]                                     |
 | Text Searcher            | [[https://github.com/BurntSushi/ripgrep][ripgrep]]                                  | [[https://github.com/BurntSushi/ripgrep][ripgrep]]                                  |
 | Fuzzy finder             | [[https://github.com/junegunn/fzf][fzf]]                                      | [[https://github.com/junegunn/fzf][fzf]]                                      |
