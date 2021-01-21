@@ -9,7 +9,7 @@ set -x MT_WORKSPACE_ROOT ~/_workspace
 set -x MT_WORKSPACE_GITHUB ~/_workspace/github
 
 # Set a few variables for fish
-set fish_greeting "Hi myTerminal, the fish is here!"
+set fish_greeting ""
 
 # Load private keys, if they exist
 if test -e ~/_store/myTerminal/.private-keys
