@@ -21,10 +21,14 @@ alias cl="clear"
 alias gt="clear; git"
 alias mt-sync-github="mt-sync-projects $MT_WORKSPACE_GITHUB"
 
+# Start a tmux session if not started already
+if [ $TERM != "screen" ]
+   exec tmux
+end
+
 # Load configs for the current OS
 if test (uname) = "Linux"
     . ~/.config/fish/config-linux.fish
 else if test (uname) = "Darwin"
     . ~/.config/fish/config-mac.fish
 end
-
