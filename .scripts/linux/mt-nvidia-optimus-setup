@@ -10,4 +10,4 @@ sudo pacman -R xf86-video-nouveau --noconfirm
 sudo pacman -S nvidia-prime --noconfirm
 
 # Install optimus-manager
-yay -S optimus-manager optimus-manager-qt --noconfirm
+paru -S optimus-manager optimus-manager-qt --noconfirm

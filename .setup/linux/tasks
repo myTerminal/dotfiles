@@ -4,7 +4,7 @@
 mt_task_linux_install_peripherals_drivers () {
     tw_log "Installing packages for Razer devices..."
     # Install Razer drivers and polychromatic backend
-    tw_execute yay -S \
+    tw_execute paru -S \
                python-notify2 \
                openrazer-meta \
                polychromatic \

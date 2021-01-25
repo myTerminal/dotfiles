@@ -33,7 +33,7 @@ set-default-sink echoCancel_sink" | sudo tee -a /etc/pulse/default.pa
 echo "options psmouse synaptics_intertouch=1" | sudo tee /etc/modprobe.d/psmouse.conf
 
 # Set up auto-cpufreq for power optimization
-yay -S auto-cpufreq --no-confirm
+paru -S auto-cpufreq --no-confirm
 systemctl enable auto-cpufreq
 systemctl start auto-cpufreq
 

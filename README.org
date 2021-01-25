@@ -45,7 +45,7 @@ optional setup.
 |--------------------------+------------------------------------------+------------------------------------------|
 | Base                     | [[https://en.wikipedia.org/wiki/MacOS][MacOS]]                                    | [[https://www.archlinux.org][Arch]]                                     |
 | OS dependent add-ons     | --                                       | [[https://gitlab.freedesktop.org/polkit/polkit][polkit]], [[https://github.com/Hummer12007/brightnessctl][brightnessctl]], [[https://git.archlinux.org/archlinux-keyring.git][archlinux-keyring]] |
-| Package managers         | (native), [[https://brew.sh][Homebrew]], [[https://github.com/Homebrew/homebrew-cask][Cask]]                 | [[https://www.archlinux.org/pacman][pacman]]*, [[https://github.com/Jguer/yay][yay]] (for [[https://aur.archlinux.org][AUR]])                   |
+| Package managers         | (native), [[https://brew.sh][Homebrew]], [[https://github.com/Homebrew/homebrew-cask][Cask]]                 | [[https://www.archlinux.org/pacman][pacman]]*, [[https://github.com/morganamilo/paru][paru]] (for [[https://aur.archlinux.org][AUR]])                  |
 | Display server           | (native)                                 | [[https://www.x.org][Xorg]]                                     |
 | Display drivers          | (stock)                                  | (depends)                                |
 | Display manager          | (native)                                 | [[https://gitlab.gnome.org/GNOME/gdm][gdm]]                                      |
