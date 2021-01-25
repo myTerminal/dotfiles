@@ -21,8 +21,8 @@ alias cl="clear"
 alias gt="clear; git"
 alias mt-sync-github="mt-sync-projects $MT_WORKSPACE_GITHUB"
 
-# Start a tmux session if not started already
-if [ $TERM != "screen" ]
+# Start a tmux session if appropriate
+if test "$TERM" != "screen"; and test "$TERM" != "eterm-color"
    exec tmux
 end
 
