@@ -22,7 +22,7 @@ alias gt="clear; git"
 alias mt-sync-github="mt-sync-projects $MT_WORKSPACE_GITHUB"
 
 # Start a tmux session if appropriate
-if test "$TERM" != "screen"; and test "$TERM" != "eterm-color"
+if not contains $TERM "screen" "eterm-color" "dumb"
    exec tmux
 end
 
