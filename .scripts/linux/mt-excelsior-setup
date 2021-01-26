@@ -37,4 +37,14 @@ paru -S auto-cpufreq --no-confirm
 systemctl enable auto-cpufreq
 systemctl start auto-cpufreq
 
-# TODO: Implement the rest
+# TODO: Fix display scaling
+
+# TODO: Fix display flickering on integrated mode in Gnome session
+
+# TODO: Improve trackpad sensitivity and performance
+
+# TODO: Utilize fingerprint sensor
+
+# TODO: Fix internal microphone detection
+
+# TODO: Fix multimonitor capability
