@@ -304,11 +304,10 @@ assign [class="vlc"] $ws6
 assign [class="Gamehub"] $ws6
 assign [class="KeePassXC"] $ws7
 
-# Bind custom power-menu
+# Bind custom switch scripts
 bindsym $mod+Shift+x exec ~/.scripts/linux/mt-power-mode-interactive
-
-# Bind custom GPU mode switcher
 bindsym $mod+Shift+g exec ~/.scripts/linux/mt-gpu-mode-interactive
+bindsym $mod+Shift+d exec ~/.scripts/linux/mt-display-mode-interactive
 
 # Bind mouse events
 bindsym $mod+button1 fullscreen toggle
