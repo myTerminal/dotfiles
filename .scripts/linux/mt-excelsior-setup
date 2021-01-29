@@ -4,7 +4,7 @@
 # for 2020 Lenovo ThinkPad X1 Extreme (Excelsior)
 
 # Set .XResources for HiDPI
-echo "Xft.dpi: 180" > ~/.Xresources
+echo "Xft.dpi: 192" > ~/.Xresources
 
 # Enable bluetooth service
 # (This might just be a temporary Arch issue)
