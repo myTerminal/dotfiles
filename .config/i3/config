@@ -287,7 +287,7 @@ bar {
 }
 
 # Use picom as a compositor
-exec picom
+exec picom -i 0.95 -m 1.0
 
 # Set auto back and forth
 workspace_auto_back_and_forth yes
