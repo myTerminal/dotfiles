@@ -304,11 +304,6 @@ assign [class="vlc"] $ws6
 assign [class="Gamehub"] $ws6
 assign [class="KeePassXC"] $ws7
 
-# Bind custom switch scripts
-bindsym $mod+Shift+x exec ~/.scripts/linux/mt-power-mode-interactive
-bindsym $mod+Shift+g exec ~/.scripts/linux/mt-gpu-mode-interactive
-bindsym $mod+Shift+d exec ~/.scripts/linux/mt-display-mode-interactive
-
 # Bind mouse events
 bindsym $mod+button1 fullscreen toggle
 bindsym $mod+button2 floating toggle
@@ -318,15 +313,20 @@ bindsym --release $mod+button3 kill
 bindsym $mod+Control+Right workspace next
 bindsym $mod+Control+Left workspace prev
 
-# Set wallpaper
-exec_always feh --bg-scale ~/.assets/teN7.png
-
-# Set misc key-bindings
+# Set other key-bindings
 bindsym $mod+Shift+Control+e exec i3-msg exit
 
 # Set key-bindings for kazam
 bindsym $mod+Shift+comma exec kazam -f
 bindsym $mod+Shift+period exec kazam -w
+
+# Bind custom switch scripts
+bindsym $mod+Shift+x exec ~/.scripts/linux/mt-power-mode-interactive
+bindsym $mod+Shift+g exec ~/.scripts/linux/mt-gpu-mode-interactive
+bindsym $mod+Shift+d exec ~/.scripts/linux/mt-display-mode-interactive
+
+# Set wallpaper
+exec_always feh --bg-scale ~/.assets/teN7.png
 
 # Enable pulseeffects
 exec pulseeffects --gapplication-service
