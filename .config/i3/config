@@ -154,7 +154,7 @@ bindsym $mod+a focus parent
 set $ws1 "1: Home"
 set $ws2 "2: Code"
 set $ws3 "3: People"
-set $ws4 "4: Web"
+set $ws4 "4: Web"
 set $ws5 "5: Files"
 set $ws6 "6: Misc"
 set $ws7 "7: Auth"
