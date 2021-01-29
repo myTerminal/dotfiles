@@ -53,8 +53,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Bind screen-brightness controls
 #bindsym XF86MonBrightnessUp exec xrandr --output eDP --brightness 1
 #bindsym XF86MonBrightnessDown exec xrandr --output eDP --brightness 0.5
-bindsym XF86MonBrightnessUp exec brightnessctl s +10%
-bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
+bindsym XF86MonBrightnessUp exec brightnessctl s +5%
+bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
 
 # Bind touchpad controls
 exec xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Tap Action" 0, 0, 0, 0, 1, 3, 2
