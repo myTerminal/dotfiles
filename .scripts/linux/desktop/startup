@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Set wallpaper
+feh --bg-scale ~/.assets/teN7.png
+
+# Enable pulseeffects
+pulseeffects --gapplication-service &
+
+# Start udiskie for auto-mounting of removable media
+udiskie &
+
+# Set default screen brightness
+brightnessctl s 15%
+
+# Play startup sound
+mpg123 ~/.assets/car-startup-sound.mp3 &

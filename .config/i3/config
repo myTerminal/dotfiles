@@ -325,17 +325,5 @@ bindsym $mod+Shift+x exec ~/.scripts/linux/mt-power-mode-interactive
 bindsym $mod+Shift+g exec ~/.scripts/linux/mt-gpu-mode-interactive
 bindsym $mod+Shift+d exec ~/.scripts/linux/mt-display-mode-interactive
 
-# Set wallpaper
-exec_always feh --bg-scale ~/.assets/teN7.png
-
-# Enable pulseeffects
-exec pulseeffects --gapplication-service
-
-# Start udiskie for auto-mounting of removable media
-exec udiskie
-
-# Play startup sound
-exec mpg123 ~/.assets/car-startup-sound.mp3
-
-# Set default screen brightness
-exec brightnessctl s 20%
+# Execute startup tasks
+exec ~/.scripts/linux/desktop/startup
