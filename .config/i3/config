@@ -305,10 +305,10 @@ assign [class="Gamehub"] $ws6
 assign [class="KeePassXC"] $ws7
 
 # Bind custom power-menu
-bindsym $mod+Shift+x exec ~/.scripts/linux/mt-power-interactive
+bindsym $mod+Shift+x exec ~/.scripts/linux/mt-power-mode-interactive
 
 # Bind custom GPU mode switcher
-bindsym $mod+Shift+g exec ~/.scripts/linux/mt-gpu-switch-interactive
+bindsym $mod+Shift+g exec ~/.scripts/linux/mt-gpu-mode-interactive
 
 # Bind mouse events
 bindsym $mod+button1 fullscreen toggle
