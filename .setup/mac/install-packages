@@ -6,6 +6,7 @@ tw_execute brew install \
            fish \
            tmux \
            ncdu \
+           htop \
            ripgrep \
            ranger \
            tig \
