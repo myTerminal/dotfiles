@@ -5,6 +5,7 @@ tw_execute brew install \
            neofetch \
            fish \
            tmux \
+           ncdu \
            ripgrep \
            ranger \
            tig \

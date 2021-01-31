@@ -17,6 +17,7 @@ tw_execute sudo pacman -S \
            feh \
            alacritty \
            tmux \
+           ncdu \
            fish \
            ripgrep \
            emacs \
