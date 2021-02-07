@@ -40,12 +40,12 @@ echo "options psmouse synaptics_intertouch=1" | sudo tee /etc/modprobe.d/psmouse
 # Install tlp and more
 sudo pacman -S tlp acpi_call powertop --no-confirm
 echo 75 | sudo tee /sys/class/power_supply/BAT0/charge_start_threshold
-echo 75 | sudo tee /sys/class/power_supply/BAT0/charge_stop_threshold
+echo 80 | sudo tee /sys/class/power_supply/BAT0/charge_stop_threshold
 systemctl enable tlp
 systemctl start tlp
 
 # Set up auto-cpufreq for power optimization
-paru -S auto-cpufreq --no-confirm
+paru -S auto-cpufreq --noconfirm
 systemctl enable auto-cpufreq
 systemctl start auto-cpufreq
 
