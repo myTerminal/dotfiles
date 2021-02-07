@@ -29,3 +29,21 @@ mt_task_linux_setup_startup_services () {
     tw_execute systemctl enable NetworkManager.service
     tw_execute systemctl start NetworkManager.service
 }
+
+mt_task_linux_perform_visual-tweaks () {
+    tw_log "Performing visual tweaks..."
+
+    # Install GRUB Fallout theme
+    tw_execute_eval "wget -O - https://github.com/shvchk/fallout-grub-theme/raw/master/install.sh | bash"
+
+    # Install sddm-slice theme
+    tw_execute sudo pacman -S \
+               qt5-graphicaleffects \
+               ttf-roboto-mono \
+               --noconfirm
+    tw_execute sudo git clone \
+               https://github.com/RadRussianRus/sddm-slice.git \
+               /usr/share/sddm/themes/sddm-slice
+    tw_execute_eval "echo \"[Theme]
+Current=sddm-slice\" | sudo tee /etc/sddm.conf"
+}

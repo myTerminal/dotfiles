@@ -43,4 +43,8 @@ tw_confirm "Setup startup services?" \
            mt_task_linux_setup_startup_services \
            "Setting up of startup services skipped."
 
+tw_confirm "Perform visual tweaks?" \
+           mt_task_linux_perform_visual-tweaks \
+           "Visual tweaks skipped."
+
 tw_log "Steps for Linux complete!"
