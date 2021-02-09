@@ -230,7 +230,7 @@ mode $mode_launcher {
                 exec emacs; \
                 exec discord; \
                 exec firefox-developer-edition; \
-                exec pcmanfm; \
+                exec thunar; \
                 exec keepassxc; \
                 mode "default"
         bindsym g \
@@ -299,7 +299,7 @@ assign [class="Steam"] $ws1
 assign [class="Emacs"] $ws2
 assign [class="discord"] $ws3
 assign [class="firefox"] $ws4
-assign [class="Pcmanfm"] $ws5
+assign [class="Thunar"] $ws5
 assign [class="vlc"] $ws6
 assign [class="Gamehub"] $ws6
 assign [class="KeePassXC"] $ws7

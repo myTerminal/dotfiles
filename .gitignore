@@ -23,7 +23,6 @@
 !/.config/i3
 !/.config/rofi
 !/.config/alacritty
-!/.config/pcmanfm
 
 !/.config/emacs
 /.config/emacs/*
