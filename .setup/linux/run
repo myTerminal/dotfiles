@@ -12,9 +12,13 @@ tw_confirm "Create users?" \
            tw_task_create_users \
            "Creation of users skipped."
 
-tw_task_add_additional_software_sources
+tw_confirm "Add additional software sources?" \
+           tw_task_add_additional_software_sources \
+           "Addition of additional software sources skipped!"
 
-. "${mt_setup_dir}/linux/install-packages"
+tw_confirm_and_source "Install packages?" \
+                      "${mt_setup_dir}/linux/install-packages" \
+                      "Installation of packages skipped!"
 
 tw_log "Setting up Docker..."
 tw_execute sudo groupadd docker
