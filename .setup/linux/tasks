@@ -34,6 +34,9 @@ mt_task_linux_perform_visual-tweaks () {
     tw_log "Performing visual tweaks..."
 
     # Install GRUB Fallout theme
+    tw_execute sudo pacman -S\
+               unzip \
+               --noconfirm
     tw_execute_eval "wget -O - https://github.com/shvchk/fallout-grub-theme/raw/master/install.sh | bash"
 
     # Install sddm-slice theme
