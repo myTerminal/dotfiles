@@ -1,8 +1,8 @@
 xrdb -merge ~/.Xresources
 
 case "${1}" in
-    secondary)
-        exec gnome-session
+    alternate)
+        exec xfce4-session
         ;;
 
     *)
