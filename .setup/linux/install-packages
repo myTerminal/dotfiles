@@ -72,7 +72,7 @@ tw_execute sudo pacman -S \
            ttf-font-awesome
 
 tw_log "Installing packages from AUR..."
-tw_execute paru -S \
+tw_execute paru -S --mflags --skipinteg \
            gtk-theme-shades-of-gray \
            obsidian-icon-theme \
            bibata-cursor-theme \
