@@ -51,7 +51,7 @@ systemctl start auto-cpufreq
 
 # TODO: Fix display scaling
 
-# TODO: Fix display flickering on integrated mode in Gnome session
+# TODO: Fix display flickering on integrated mode
 
 # TODO: Improve trackpad sensitivity and performance
 

@@ -48,9 +48,9 @@ optional setup.
 | Package managers         | (native), [[https://brew.sh][Homebrew]], [[https://github.com/Homebrew/homebrew-cask][Cask]]                 | [[https://www.archlinux.org/pacman][pacman]]*, [[https://github.com/morganamilo/paru][paru]] (for [[https://aur.archlinux.org][AUR]])                  |
 | Display server           | (native)                                 | [[https://www.x.org][Xorg]]                                     |
 | Display drivers          | (stock)                                  | (depends)                                |
-| Display manager          | (native)                                 | [[https://gitlab.gnome.org/GNOME/gdm][gdm]]                                      |
+| Display manager          | (native)                                 | [[https://wiki.archlinux.org/index.php/SDDM][sddm]]                                     |
 | Compositor               | (native)                                 | [[https://github.com/yshui/picom][picom]]                                    |
-| GUI                      | (native)                                 | [[https://github.com/i3/i3][i3]], [[https://github.com/GNOME/gnome-desktop][gnome-desktop]]                        |
+| GUI                      | (native)                                 | [[https://github.com/i3/i3][i3]], [[https://xfce.org][xfce4]]                                |
 | GUI extensions           | [[https://github.com/fikovnik/ShiftIt][ShiftIt]]                                  | --                                       |
 | Alternate interfaces     | [[https://github.com/GitSquared/edex-ui][edex-ui]], [[https://github.com/tmux/tmux][tmux]]                            | [[https://github.com/GitSquared/edex-ui][edex-ui]], [[https://github.com/tmux/tmux][tmux]]                            |
 | Wallpaper manager        | (native)                                 | [[https://feh.finalrewind.org][feh]]                                      |
