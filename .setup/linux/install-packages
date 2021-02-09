@@ -69,11 +69,10 @@ tw_execute sudo pacman -S \
            ttf-roboto-mono \
            ttf-droid \
            ttf-fira-code \
-           ttf-font-awesome \
-           --noconfirm
+           ttf-font-awesome
 
 tw_log "Installing packages from AUR..."
-tw_execute paru -S --mflags --skipinteg \
+tw_execute paru -S \
            gtk-theme-shades-of-gray \
            obsidian-icon-theme \
            bibata-cursor-theme \
@@ -90,8 +89,7 @@ tw_execute paru -S --mflags --skipinteg \
            key-mon \
            balena-etcher \
            nomachine \
-           edex-ui \
-           --noconfirm
+           edex-ui
 
 # Manual packages
 # (None yet)
