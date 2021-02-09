@@ -105,7 +105,7 @@ optional setup.
 | YouTube video downloader | [[https://ytdl-org.github.io/youtube-dl/index.html][youtube-dl]]                               | [[https://ytdl-org.github.io/youtube-dl/index.html][youtube-dl]]                               |
 | Multimedia tool          | [[https://kodi.tv][KODI]]                                     | [[https://kodi.tv][KODI]]                                     |
 | Gaming clients           | [[https://store.steampowered.com][Steam]], [[https://www.origin.com][Origin]], [[https://www.playstation.com/en-us/explore/ps4/remote-play][Sony Remote Play]]          | [[https://store.steampowered.com][Steam]], [[https://www.gamehub.gg][GameHub]]                           |
-| Misc                     | [[https://github.com/dylanaraps/neofetch][neofetch]], [[https://dev.yorhel.nl/ncdu][ncdu]], [[https://htop.dev][htop]], [[https://github.com/sharkdp/fd][fd]]                 | [[https://github.com/dylanaraps/neofetch][neofetch]], [[https://dev.yorhel.nl/ncdu][ncdu]], [[https://htop.dev][htop]], [[https://github.com/sharkdp/fd][fd]]                 |
+| Misc                     | [[https://github.com/dylanaraps/neofetch][neofetch]], [[https://dev.yorhel.nl/ncdu][ncdu]], [[https://htop.dev][htop]], [[https://github.com/sharkdp/fd][fd]]                 | [[https://github.com/dylanaraps/neofetch][neofetch]], [[https://dev.yorhel.nl/ncdu][ncdu]], [[https://htop.dev][htop]], [[https://github.com/sharkdp/fd][fd]], [[https://www.gnu.org/software/wget][wget]], [[https://www.openssh.com][openssh]]  |
 
 *** Fonts
 
