@@ -20,24 +20,21 @@ tw_confirm_and_source "Install packages?" \
                       "${mt_setup_dir}/linux/install-packages" \
                       "Installation of packages skipped!"
 
-tw_log "Setting up Docker..."
-tw_execute sudo groupadd docker
-tw_execute sudo gpasswd -a ${USER} docker
-tw_execute sudo systemctl enable docker
+tw_confirm "Set up Docker?" \
+           mt_task_linux_setup_docker \
+           "Setting up of Docker skipped!"
 
-tw_log "Changing shell to fish..."
-if ! [ "$(cat /etc/shells | grep "/usr/bin/fish")" ]; then
-    tw_execute_eval "echo \"/usr/bin/fish\" | sudo tee -a /etc/shells"
-fi
 tw_confirm "Change user shell?" \
-           tw_task_change_user_shell \
+           mt_task_linux_change_user_shell \
            "Changing of user shell skipped."
 
-tw_log "Installing stable toolchain for Rust..."
-tw_execute rustup toolchain install stable
+tw_confirm "Install Rust toolchain?" \
+           mt_task_linux_install_rust_toolchain \
+           "Installing of Rust toolchain skipped."
 
-tw_log "Setting up GUI..."
-tw_task_setup_gui false
+tw_confirm "Setup GUI?" \
+           mt_task_linux_setup_gui \
+           "Setting up of GUI skipped!"
 
 tw_confirm "Setup peripherals drivers?" \
            mt_task_linux_install_peripherals_drivers \
