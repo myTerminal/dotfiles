@@ -23,7 +23,7 @@ alias mt-sync-github="mt-sync-projects $MT_WORKSPACE_GITHUB"
 
 # Start a tmux session if appropriate
 if not contains $TERM "screen" "eterm-color" "dumb"
-   exec tmux
+   tmux
 end
 
 # Load configs for the current OS
