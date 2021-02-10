@@ -7,8 +7,9 @@ export PATH=$PATH:~/.scripts
 export PATH=$PATH:$HOME/.cargo/bin
 
 # Set custom environment variables
-export MT_WORKSPACE_ROOT=~/_workspace
-export MT_WORKSPACE_GITHUB=~/_workspace/github
+export MT_PATH_STORE=~/_store
+export MT_PATH_WORKSPACE=~/_workspace
+export MT_PATH_WORKSPACE_GITHUB=~/_workspace/github
 
 # Load private keys, if they exist
 if [ -f ~/_store/myTerminal/.private-keys ]; then
@@ -18,7 +19,7 @@ fi
 # Set up common aliases
 alias cl="clear"
 alias gt="clear && git"
-alias mt-sync-github="mt-sync-projects ${MT_WORKSPACE_GITHUB}"
+alias mt-sync-github="mt-sync-projects ${MT_PATH_WORKSPACE_GITHUB}"
 
 # Start a tmux session if appropriate
 if [[ ! "screen eterm-color dumb" =~ "${TERM}" ]]

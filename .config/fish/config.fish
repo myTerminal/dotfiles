@@ -5,8 +5,9 @@ add-to-path ~/.scripts
 add-to-path ~/.cargo/bin
 
 # Set custom environment variables
-set -x MT_WORKSPACE_ROOT ~/_workspace
-set -x MT_WORKSPACE_GITHUB ~/_workspace/github
+set -x MT_PATH_STORE ~/_store
+set -x MT_PATH_WORKSPACE ~/_workspace
+set -x MT_PATH_WORKSPACE_GITHUB ~/_workspace/github
 
 # Set a few variables for fish
 set fish_greeting ""
@@ -19,7 +20,7 @@ end
 # Set up common aliases
 alias cl="clear"
 alias gt="clear; git"
-alias mt-sync-github="mt-sync-projects $MT_WORKSPACE_GITHUB"
+alias mt-sync-github="mt-sync-projects $MT_PATH_WORKSPACE_GITHUB"
 
 # Start a tmux session if appropriate
 if not contains $TERM "screen" "eterm-color" "dumb"
