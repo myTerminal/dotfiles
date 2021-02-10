@@ -12,8 +12,8 @@ export MT_PATH_WORKSPACE=~/_workspace
 export MT_PATH_WORKSPACE_GITHUB=~/_workspace/github
 
 # Load private keys, if they exist
-if [ -f ~/_store/myTerminal/.private-keys ]; then
-    . ~/_store/myTerminal/.private-keys
+if [ -f "${MT_PATH_STORE}/myTerminal/.private-keys" ]; then
+    . "${MT_PATH_STORE}/myTerminal/.private-keys"
 fi
 
 # Set up common aliases

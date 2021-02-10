@@ -75,3 +75,17 @@ mt_task_link_default_emacs_configs () {
                                   "Default Emacs configs linked" \
                                   "There was an error linking default Emacs configs!"
 }
+
+# Function to create convenience soft-links
+mt_task_link_create_convenience_softlinks () {
+    tw_log "Creating convenience soft-links"
+
+    tw_execute ln -s "${MT_PATH_WORKSPACE}/kitchen" ~/_kitchen
+    tw_execute ln -s "${MT_PATH_WORKSPACE_GITHUB}" ~/_github
+    tw_execute ln -s "${MT_PATH_WORKSPACE_GITHUB}/myTerminal.github.io" ~/_portfolio-data
+    tw_execute ln -s "${MT_PATH_WORKSPACE}/all/myterminal-web-lp" ~/_portfolio_lp
+
+    tw_execute ln -s "${MT_PATH_STORE}/YouTube" ~/_youtube
+    tw_execute ln -s "${MT_PATH_STORE}/myTerminal" ~/_myTerminal
+    tw_execute ln -s "${MT_PATH_STORE}/myTerminal/notes" ~/_notes
+}
