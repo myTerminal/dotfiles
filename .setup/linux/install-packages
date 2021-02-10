@@ -53,6 +53,7 @@ tw_execute sudo pacman -S \
            obs-studio \
            peek \
            mpg123 \
+           pulseaudio \
            pulseeffects \
            clementine \
            vlc \
