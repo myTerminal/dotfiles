@@ -23,7 +23,7 @@ systemctl start bluetooth
 echo "options snd_hda_intel dmic_detect=0" | sudo tee /etc/modprobe.d/disable_dmic.conf
 
 # Enable Dolby Atmos Effect through pulseeffects
-sudo pacman -S pulseeffects --no-confirm
+sudo pacman -S pulseeffects --noconfirm
 pulseeffects
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/master/install.sh)"
 
@@ -38,7 +38,7 @@ set-default-sink echoCancel_sink" | sudo tee -a /etc/pulse/default.pa
 echo "options psmouse synaptics_intertouch=1" | sudo tee /etc/modprobe.d/psmouse.conf
 
 # Install tlp and more
-sudo pacman -S tlp acpi_call powertop --no-confirm
+sudo pacman -S tlp acpi_call powertop --noconfirm
 echo 75 | sudo tee /sys/class/power_supply/BAT0/charge_start_threshold
 echo 80 | sudo tee /sys/class/power_supply/BAT0/charge_stop_threshold
 systemctl enable tlp
