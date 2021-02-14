@@ -32,12 +32,20 @@ mt_task_install_npm_packages () {
                                   "There was an error installing NPM packages globally!"
 }
 
+# Function to create required directories
+mt_task_create_required_directories () {
+    tw_log "Creating required directories..."
+
+    tw_execute mkdir "${MT_PATH_WORKSPACE}"
+    tw_execute mkdir "${MT_PATH_WORKSPACE_GITHUB}"
+
+    tw_execute mkdir "${MT_PATH_STORE}"
+}
+
 # Function to clone GitHub projects under 'myTerminal'
 mt_task_clone_github_source_projects () {
     tw_log "Cloning GitHub source projects..."
 
-    tw_execute mkdir "${MT_PATH_WORKSPACE}"
-    tw_execute mkdir "${MT_PATH_WORKSPACE_GITHUB}"
     tw_execute git-getter \
                --username myTerminal \
                --targetPath "${MT_PATH_WORKSPACE_GITHUB}" \
