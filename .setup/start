@@ -53,6 +53,9 @@ tw_confirm "Create fallback link to ~/.config/emacs?" \
 tw_confirm "Link myTerminal/.emacs.d to dotfiles?" \
            mt_task_link_default_emacs_configs \
            "Linking default Emacs configs skipped."
+tw_confirm "Convert dotfiles at '~' from HTTPS to SSH?" \
+           mt_task_convert_dotfiles_to_ssh \
+           "Converting dotfiles at '~' from HTTPS to SSH skipped."
 tw_confirm "Create convenience soft-links?" \
            mt_task_link_create_convenience_softlinks \
            "Creation of convenience soft-links skipped."

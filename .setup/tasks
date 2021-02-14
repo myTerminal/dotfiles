@@ -54,10 +54,6 @@ mt_task_clone_github_source_projects () {
     tw_handle_last_command_status "${?}" \
                                   "GitHub source projects cloned" \
                                   "There was an error cloning GitHub source projects!"
-
-    tw_log "Converting ~/.git to an SSH based clone..."
-    tw_execute rm -rf ~/.git
-    tw_execute cp -r "${MT_PATH_WORKSPACE_GITHUB}/dotfiles/.git" ~/.git
 }
 
 # Function to create a fallback link to ~/.config/emacs
@@ -82,6 +78,18 @@ mt_task_link_default_emacs_configs () {
     tw_handle_last_command_status "${?}" \
                                   "Default Emacs configs linked" \
                                   "There was an error linking default Emacs configs!"
+}
+
+# Function to convert dotfiles to SSH
+mt_task_convert_dotfiles_to_ssh () {
+    tw_log "Converting ~/.git to an SSH based clone..."
+
+    tw_execute rm -rf ~/.git
+    tw_execute cp -r "${MT_PATH_WORKSPACE_GITHUB}/dotfiles/.git" ~/.git
+
+    tw_handle_last_command_status "${?}" \
+                                  "Repository converted" \
+                                  "There was an error converting repository!"
 }
 
 # Function to create convenience soft-links
