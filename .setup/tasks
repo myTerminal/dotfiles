@@ -11,6 +11,7 @@ mt_task_generate_ssh_key () {
     tw_handle_last_command_status "${?}" \
                                   "SSH Key generated" \
                                   "There was an error generating an SSH key!"
+
     tw_execute_eval "cat ~/.ssh/id_rsa.pub | pbcopy"
     tw_handle_last_command_status "${?}" \
                                   "The newly generated SSH key has been copied to clipboard" \
@@ -27,6 +28,7 @@ mt_task_install_npm_packages () {
                stay-with-me \
                git-getter \
                re-write
+
     tw_handle_last_command_status "${?}" \
                                   "Global NPM packages installed" \
                                   "There was an error installing NPM packages globally!"
@@ -40,6 +42,10 @@ mt_task_create_required_directories () {
     tw_execute mkdir "${MT_PATH_WORKSPACE_GITHUB}"
 
     tw_execute mkdir "${MT_PATH_STORE}"
+
+    tw_handle_last_command_status "${?}" \
+                                  "Directories created" \
+                                  "There was an error creating one of more directories!"
 }
 
 # Function to clone GitHub projects under 'myTerminal'
@@ -104,4 +110,8 @@ mt_task_link_create_convenience_softlinks () {
     tw_execute ln -s "${MT_PATH_STORE}/YouTube" ~/_youtube
     tw_execute ln -s "${MT_PATH_STORE}/myTerminal" ~/_myTerminal
     tw_execute ln -s "${MT_PATH_STORE}/myTerminal/notes" ~/_notes
+
+    tw_handle_last_command_status "${?}" \
+                                  "Links created" \
+                                  "There was an error creating one of more links!"
 }
