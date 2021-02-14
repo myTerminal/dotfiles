@@ -7,6 +7,7 @@ tw_execute sudo pacman -S \
            networkmanager \
            blueman \
            brightnessctl \
+           acpi \
            polkit \
            bind \
            picom \
