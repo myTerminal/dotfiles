@@ -16,6 +16,9 @@ else
 fi
 . ~/.twiner/load "${1}"
 
+# Load bash configs to ensure variables have values
+. ~/.config/bash/config
+
 # Perform platform-specific setup
 if [ $(uname) = 'Linux' ] && [ $(command -v pacman) ]; then
     tw_confirm_and_source "Start setup for Linux?" \
