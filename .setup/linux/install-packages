@@ -28,6 +28,7 @@ tw_execute sudo pacman -S \
            emacs \
            ranger \
            thunar \
+           gvfs \
            xarchiver \
            firefox-developer-edition \
            tig \
