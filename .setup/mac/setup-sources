@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
 
 tw_log "Installing home-brew..."
-tw_execute /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-tw_log "Installing cask..."
-tw_execute brew tap caskroom/cask
+tw_execute /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
