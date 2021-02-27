@@ -21,7 +21,7 @@ tw_execute brew install \
            youtube-dl
 
 tw_log "Installing rest of the packages..."
-tw_execute brew cask install \
+tw_execute brew install --cask \
            hyper \
            emacs \
            google-chrome \
