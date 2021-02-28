@@ -47,7 +47,7 @@ tw_execute brew install --cask \
            kodi \
            steam \
            origin \
-           sony-remoteplay \
+           sony-ps4-remote-play \
            blender \
            obs \
            licecap \
@@ -58,9 +58,9 @@ tw_execute brew install --cask \
            razer-synapse \
            font-open-sans \
            font-inconsolata \
-           font-liberation-sans \
+           font-liberation \
            font-roboto-mono \
-           caskroom/fonts/font-fira-code \
+           font-fira-code \
            nomachine \
            edex-ui
 
