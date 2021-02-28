@@ -28,7 +28,6 @@ tw_execute brew install --cask \
            homebrew/cask-versions/firefox-developer-edition \
            keepassxc \
            authy \
-           shiftit \
            postman \
            mounty \
            balenaetcher \
