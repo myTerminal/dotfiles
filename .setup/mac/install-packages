@@ -22,7 +22,7 @@ tw_execute brew install \
 
 tw_log "Installing rest of the packages..."
 tw_execute brew install --cask \
-           hyper \
+           alacritty \
            emacs \
            google-chrome \
            homebrew/cask-versions/firefox-developer-edition \
