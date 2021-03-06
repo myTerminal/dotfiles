@@ -35,7 +35,9 @@ set-default-source echoCancel_source
 set-default-sink echoCancel_sink" | sudo tee -a /etc/pulse/default.pa
 
 # Improve touchpad experience
-echo "options psmouse synaptics_intertouch=1" | sudo tee /etc/modprobe.d/psmouse.conf
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Accel Speed' 0.5
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Click Method Enabled' 0 1
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Enabled' 1
 
 # Install tlp and more
 sudo pacman -S tlp acpi_call powertop --noconfirm
