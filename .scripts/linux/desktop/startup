@@ -14,3 +14,8 @@ brightnessctl s 15%
 
 # Play startup sound
 mpg123 ~/.assets/car-startup-sound.mp3 &
+
+# Perform device-specific startup tweaks, if set
+if [ -f ~/.device-startup-tweaks ]; then
+    . ~/.device-startup-tweaks
+fi
