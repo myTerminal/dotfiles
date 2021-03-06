@@ -7,6 +7,8 @@ tw_execute sudo pacman -S \
            networkmanager \
            blueman \
            brightnessctl \
+           pavucontrol \
+           pavucontrol-qt \
            acpi \
            polkit \
            bind \
