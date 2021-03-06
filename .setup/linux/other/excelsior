@@ -19,8 +19,8 @@ systemctl start bluetooth
 # Setup Nvidia optimus for GPU
 . ~/.setup/linux/other/nvidia-optimus
 
-# Fix 'Dummy Output' for audio
-echo "options snd_hda_intel dmic_detect=0" | sudo tee /etc/modprobe.d/disable_dmic.conf
+# Fix audio input and output
+sudo pacman -S sof-firmware --noconfirm
 
 # Enable Dolby Atmos Effect through pulseeffects
 sudo pacman -S pulseeffects --noconfirm
