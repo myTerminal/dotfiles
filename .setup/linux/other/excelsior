@@ -55,10 +55,4 @@ systemctl start auto-cpufreq
 
 # TODO: Fix display flickering on integrated mode
 
-# TODO: Improve trackpad sensitivity and performance
-
 # TODO: Utilize fingerprint sensor
-
-# TODO: Fix internal microphone detection
-
-# TODO: Fix multimonitor capability
