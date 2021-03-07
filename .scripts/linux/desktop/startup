@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Set wallpaper
-feh --bg-scale ~/.assets/images/teN7.png
+# Pick a random wallpaper from the collection
+fd . ~/.assets/images -t f -e '.png' -0 | shuf -n1 -z | xargs -0 feh --bg-fill
 
 # Enable pulseeffects
 pulseeffects --gapplication-service &
