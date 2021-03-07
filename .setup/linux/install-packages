@@ -55,6 +55,7 @@ tw_execute sudo pacman -S \
            shotwell \
            blender \
            obs-studio \
+           flameshot \
            peek \
            mpg123 \
            pulseaudio \
@@ -91,7 +92,6 @@ tw_execute paru -S --mflags --skipinteg \
            discord \
            pcloud-drive \
            gamehub \
-           kazam \
            key-mon \
            balena-etcher \
            nomachine \

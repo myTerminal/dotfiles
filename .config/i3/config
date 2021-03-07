@@ -316,9 +316,9 @@ bindsym $mod+Control+Left workspace prev
 # Set other key-bindings
 bindsym $mod+Shift+Control+e exec i3-msg exit
 
-# Set key-bindings for kazam
-bindsym $mod+Shift+comma exec kazam -f
-bindsym $mod+Shift+period exec kazam -w
+# Set key-bindings for flameshot
+bindsym $mod+Shift+comma exec flameshot gui
+bindsym $mod+Shift+period exec flameshot full -p ~/Desktop
 
 # Bind custom switch scripts
 bindsym $mod+Shift+x exec ~/.scripts/linux/mt-power-mode-interactive

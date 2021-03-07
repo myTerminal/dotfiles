@@ -70,7 +70,7 @@ optional setup.
 | Archive manager          | [[https://github.com/ib/xarchiver][xarchiver]]                                                    | (native)                                 |
 | File managers            | [[https://www.linuxlinks.com/Thunar][thunar]] (with [[https://wiki.gnome.org/Projects/gvfs][gvfs]]),  [[https://ranger.github.io][ranger]]                                  | [[https://support.apple.com/en-us/HT201732][Finder]] (native), [[https://ranger.github.io][ranger]]                  |
 | SCM                      | [[https://git-scm.com][Git]], [[https://github.com/jonas/tig][Tig]]                                                     | [[https://git-scm.com][Git]]*, [[https://github.com/jonas/tig][Tig]]                                |
-| Screenshot tool          | [[https://launchpad.net/kazam][Kazam]]                                                        | (native)                                 |
+| Screenshot tool          | [[https://flameshot.org][flameshot]]                                                    | (native)                                 |
 | Screencast tool          | [[https://obsproject.com][OBS Studio]], [[https://github.com/phw/peek][peek]]                                             | [[https://obsproject.com][OBS Studio]], [[https://www.cockos.com/licecap][LICEcap]]                      |
 | Password manager         | [[https://keepassxc.org][KeePassXC]]                                                    | [[https://keepassxc.org][KeePassXC]]                                |
 | 2-factor authentication  | [[https://authy.com][Authy]]                                                        | [[https://authy.com][Authy]]                                    |
