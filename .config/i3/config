@@ -226,7 +226,6 @@ set $mode_launcher "Launch mode: All / Gaming"
 mode $mode_launcher {
         bindsym a \
                 exec rememberthemilk; \
-                exec dynalist; \
                 exec emacs; \
                 exec discord; \
                 exec firefox-developer-edition; \
