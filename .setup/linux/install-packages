@@ -24,6 +24,7 @@ tw_execute sudo pacman -S \
            htop \
            fd \
            exa \
+           bat \
            fish \
            ripgrep \
            wget \

@@ -9,6 +9,7 @@ tw_execute brew install \
            htop \
            fd \
            exa \
+           bat \
            ripgrep \
            ranger \
            tig \
