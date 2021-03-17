@@ -21,6 +21,7 @@ end
 alias cl="clear"
 alias gt="clear; git"
 alias mt-sync-github="mt-sync-projects $MT_PATH_WORKSPACE_GITHUB"
+alias ex="exa -la --group-directories-first"
 
 # Start a tmux session if appropriate
 if not contains $TERM "screen" "eterm-color" "dumb"

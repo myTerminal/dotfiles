@@ -23,6 +23,7 @@ tw_execute sudo pacman -S \
            ncdu \
            htop \
            fd \
+           exa \
            fish \
            ripgrep \
            wget \

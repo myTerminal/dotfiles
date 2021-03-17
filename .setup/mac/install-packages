@@ -8,6 +8,7 @@ tw_execute brew install \
            ncdu \
            htop \
            fd \
+           exa \
            ripgrep \
            ranger \
            tig \
