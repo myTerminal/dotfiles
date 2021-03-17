@@ -302,9 +302,10 @@ assign [class="Thunar"] $ws5
 assign [class="vlc"] $ws6
 assign [class="Gamehub"] $ws6
 assign [class="KeePassXC"] $ws7
-assign [class="Blender"] $ws8
-assign [class="obs"] $ws8
+assign [class="Gimp"] $ws8
 assign [class="Audacity"] $ws8
+assign [class="obs"] $ws8
+assign [class="Blender"] $ws8
 
 # Bind mouse events
 bindsym $mod+button1 fullscreen toggle
