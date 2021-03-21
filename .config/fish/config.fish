@@ -13,8 +13,8 @@ set -x MT_PATH_WORKSPACE_GITHUB ~/_workspace/github
 set fish_greeting ""
 
 # Load private keys, if they exist
-if test -e "$MT_PATH_STORE/myTerminal/.private-keys"
-   . "$MT_PATH_STORE/myTerminal/.private-keys"
+if test -e "$MT_PATH_STORE/Documents/.private-keys"
+   . "$MT_PATH_STORE/Documents/.private-keys"
 end
 
 # Set up common aliases
