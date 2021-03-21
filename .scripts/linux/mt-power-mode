@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 case "${1}" in
-    "shutdown" | "poweroff" )
-        systemctl poweroff
+    "lock")
+        i3lock -c 000000
         ;;
 
-    "restart" | "reboot" )
-        systemctl reboot
+    "quit")
+        i3-msg exit
         ;;
 
     "sleep" | "suspend" )
@@ -15,6 +15,14 @@ case "${1}" in
 
     "hibernate" | "poweroff" )
         systemctl hibernate
+        ;;
+
+    "shutdown" | "poweroff" )
+        systemctl poweroff
+        ;;
+
+    "restart" | "reboot" )
+        systemctl reboot
         ;;
 
     "awake" )

@@ -1,33 +1,5 @@
 #!/usr/bin/env bash
 
-mt_response=$(echo -e "lock\nquit\nsuspend\nhibernate\nshutdown\nrestart" | rofi -dmenu)
+mt_response=$(echo -e "lock\nquit\nsuspend\nhibernate\nshutdown\nrestart\nawake\nsleepy" | rofi -dmenu)
 
-case "${mt_response}" in
-    "lock")
-        i3lock -c 000000
-        ;;
-
-    "quit")
-        i3-msg exit
-        ;;
-
-    "suspend")
-        systemctl suspend
-        ;;
-
-    "hibernate")
-        systemctl hibernate
-        ;;
-
-    "shutdown")
-        systemctl poweroff
-        ;;
-
-    "restart")
-        systemctl reboot
-        ;;
-
-    *)
-        # Ignore
-        ;;
-esac
+mt-power-mode ${mt_response}
