@@ -6,5 +6,5 @@ elif [ $(command -v dnf) ]; then
     sudo dnf update -y
 elif [ $(command -v pacman) ]; then
     sudo pacman -S archlinux-keyring --noconfirm
-    sudo pacman -Syu --noconfirm
+    sudo pacman -Syu
 fi
