@@ -25,6 +25,7 @@ tw_execute sudo pacman -S \
            npm \
            rustup \
            brightnessctl \
+           systemd-numlockontty \
            acpi \
            neofetch \
            wget \

@@ -41,28 +41,28 @@ optional setup.
 
 ** Software selection
 
-| Core packages        | Linux                     | MacOS                    |
-|----------------------+---------------------------+--------------------------|
-| Base                 | [[https://www.archlinux.org][Arch]]                      | [[https://en.wikipedia.org/wiki/MacOS][MacOS]]                    |
-| Package managers     | [[https://www.archlinux.org/pacman][pacman]]*, [[https://github.com/morganamilo/paru][paru]] (for [[https://aur.archlinux.org][AUR]])   | (native), [[https://brew.sh][Homebrew]], [[https://github.com/Homebrew/homebrew-cask][Cask]] |
-| OS dependent add-ons | [[https://gitlab.freedesktop.org/polkit/polkit][polkit]], [[https://git.archlinux.org/archlinux-keyring.git][archlinux-keyring]] | --                       |
-| Interface            | [[https://github.com/tmux/tmux][tmux]]                      | [[https://github.com/tmux/tmux][tmux]]                     |
-| Shell                | [[https://fishshell.com][fish]]                      | [[https://fishshell.com][fish]]                     |
-| File system tools    | [[https://github.com/sharkdp/fd][fd]], [[https://the.exa.website][exa]], [[https://github.com/sharkdp/bat][bat]], [[https://dev.yorhel.nl/ncdu][ncdu]]        | [[https://github.com/sharkdp/fd][fd]], [[https://the.exa.website][exa]], [[https://github.com/sharkdp/bat][bat]], [[https://dev.yorhel.nl/ncdu][ncdu]]       |
-| Text Searcher        | [[https://github.com/BurntSushi/ripgrep][ripgrep]]                   | [[https://github.com/BurntSushi/ripgrep][ripgrep]]                  |
-| Fuzzy finder         | [[https://github.com/junegunn/fzf][fzf]]                       | [[https://github.com/junegunn/fzf][fzf]]                      |
-| Text editor          | [[https://www.gnu.org/software/emacs][GNU Emacs]]                 | [[https://www.gnu.org/software/emacs][GNU Emacs]]                |
-| Spell checker        | [[http://aspell.net][Aspell]]                    | [[http://aspell.net][Aspell]]                   |
-| SCM                  | [[https://git-scm.com][Git]], [[https://github.com/jonas/tig][Tig]]                  | [[https://git-scm.com][Git]]*, [[https://github.com/jonas/tig][Tig]]                |
-| File manager         | [[https://ranger.github.io][ranger]]                    | [[https://ranger.github.io][ranger]]                   |
-| Archive manager      | [[https://github.com/ib/xarchiver][xarchiver]]                 | (native)                 |
-| Process management   | [[https://htop.dev][htop]]                      | [[https://htop.dev][htop]]                     |
-| Disk management      | [[https://wiki.archlinux.org/index.php/Udisks][udisks]]                    | [[https://wiki.archlinux.org/index.php/Udisks][udisks]]                   |
-| Network tools        | [[https://wiki.gnome.org/Projects/NetworkManager][networkmanager]], [[https://www.isc.org/bind][bind]]      | --                       |
-| Virtualization       | [[https://www.docker.com][Docker]]                    | [[https://www.docker.com][Docker]]                   |
-| Language runtimes    | [[https://nodejs.org][Node.js]], [[https://rustup.rs][rustup]]           | [[https://nodejs.org][Node.js]], [[https://rustup.rs][rustup]]          |
-| Hardware             | [[https://github.com/Hummer12007/brightnessctl][brightnessctl]], [[https://archlinux.org/packages/community/x86_64/acpi][acpi]]       | --                       |
-| Misc                 | [[https://github.com/dylanaraps/neofetch][neofetch]], [[https://www.gnu.org/software/wget][wget]], [[https://www.openssh.com][openssh]]   | [[https://github.com/dylanaraps/neofetch][neofetch]]                 |
+| Core packages        | Linux                                      | MacOS                    |
+|----------------------+--------------------------------------------+--------------------------|
+| Base                 | [[https://www.archlinux.org][Arch]]                                       | [[https://en.wikipedia.org/wiki/MacOS][MacOS]]                    |
+| Package managers     | [[https://www.archlinux.org/pacman][pacman]]*, [[https://github.com/morganamilo/paru][paru]] (for [[https://aur.archlinux.org][AUR]])                    | (native), [[https://brew.sh][Homebrew]], [[https://github.com/Homebrew/homebrew-cask][Cask]] |
+| OS dependent add-ons | [[https://gitlab.freedesktop.org/polkit/polkit][polkit]], [[https://git.archlinux.org/archlinux-keyring.git][archlinux-keyring]]                  | --                       |
+| Interface            | [[https://github.com/tmux/tmux][tmux]]                                       | [[https://github.com/tmux/tmux][tmux]]                     |
+| Shell                | [[https://fishshell.com][fish]]                                       | [[https://fishshell.com][fish]]                     |
+| File system tools    | [[https://github.com/sharkdp/fd][fd]], [[https://the.exa.website][exa]], [[https://github.com/sharkdp/bat][bat]], [[https://dev.yorhel.nl/ncdu][ncdu]]                         | [[https://github.com/sharkdp/fd][fd]], [[https://the.exa.website][exa]], [[https://github.com/sharkdp/bat][bat]], [[https://dev.yorhel.nl/ncdu][ncdu]]       |
+| Text Searcher        | [[https://github.com/BurntSushi/ripgrep][ripgrep]]                                    | [[https://github.com/BurntSushi/ripgrep][ripgrep]]                  |
+| Fuzzy finder         | [[https://github.com/junegunn/fzf][fzf]]                                        | [[https://github.com/junegunn/fzf][fzf]]                      |
+| Text editor          | [[https://www.gnu.org/software/emacs][GNU Emacs]]                                  | [[https://www.gnu.org/software/emacs][GNU Emacs]]                |
+| Spell checker        | [[http://aspell.net][Aspell]]                                     | [[http://aspell.net][Aspell]]                   |
+| SCM                  | [[https://git-scm.com][Git]], [[https://github.com/jonas/tig][Tig]]                                   | [[https://git-scm.com][Git]]*, [[https://github.com/jonas/tig][Tig]]                |
+| File manager         | [[https://ranger.github.io][ranger]]                                     | [[https://ranger.github.io][ranger]]                   |
+| Archive manager      | [[https://github.com/ib/xarchiver][xarchiver]]                                  | (native)                 |
+| Process management   | [[https://htop.dev][htop]]                                       | [[https://htop.dev][htop]]                     |
+| Disk management      | [[https://wiki.archlinux.org/index.php/Udisks][udisks]]                                     | [[https://wiki.archlinux.org/index.php/Udisks][udisks]]                   |
+| Network tools        | [[https://wiki.gnome.org/Projects/NetworkManager][networkmanager]], [[https://www.isc.org/bind][bind]]                       | --                       |
+| Virtualization       | [[https://www.docker.com][Docker]]                                     | [[https://www.docker.com][Docker]]                   |
+| Language runtimes    | [[https://nodejs.org][Node.js]], [[https://rustup.rs][rustup]]                            | [[https://nodejs.org][Node.js]], [[https://rustup.rs][rustup]]          |
+| Hardware             | [[https://github.com/Hummer12007/brightnessctl][brightnessctl]], [[https://archlinux.org/packages/community/x86_64/acpi][acpi]],  [[http://percival.ybalrid.info/aur/numlockontty.html][systemd-numlockontty]] | --                       |
+| Misc                 | [[https://github.com/dylanaraps/neofetch][neofetch]], [[https://www.gnu.org/software/wget][wget]], [[https://www.openssh.com][openssh]]                    | [[https://github.com/dylanaraps/neofetch][neofetch]]                 |
 
 | Graphical packages       | Linux                                                     | MacOS                                    |
 |--------------------------+-----------------------------------------------------------+------------------------------------------|

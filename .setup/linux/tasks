@@ -50,6 +50,10 @@ mt_task_linux_install_peripherals_drivers () {
 mt_task_linux_setup_startup_services () {
     tw_log "Setting up startup services..."
 
+    # Turn ON Numlock on startup
+    tw_execute systemctl enable numLockOnTty.service
+    tw_execute systemctl start numLockOnTty.service
+
     # Setup syncthing service
     tw_execute systemctl --user enable syncthing.service
     tw_execute systemctl --user start syncthing.service
