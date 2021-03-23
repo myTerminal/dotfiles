@@ -76,6 +76,7 @@ optional setup.
 | Application launcher     | [[https://tools.suckless.org/dmenu][dmenu]], [[https://github.com/davatorium/rofi][Rofi]]                                               | (native)                                 |
 | Dock                     | --                                                        | (native)                                 |
 | Desktop widgets          | [pending]                                                 | (native)                                 |
+| Desktop theme            | [[https://github.com/WernerFP/Shades-of-gray-theme][Shades of gray]]                                            | (native)                                 |
 | Icon packs               | [[https://github.com/madmaxms/iconpack-obsidian][Obsidian]]                                                  | (native)                                 |
 | Mouse cursor             | [[https://github.com/ful1e5/Bibata_Cursor][Bibata]]                                                    | (native)                                 |
 | Lockscreen               | [[https://github.com/i3/i3lock][i3lock]]                                                    | (native)                                 |
