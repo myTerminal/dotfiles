@@ -1,76 +1,78 @@
 #!/usr/bin/env bash
 
-tw_log "Installing packages..."
-
-tw_log "Installing packages from official sources..."
+tw_log "Installing core packages..."
 tw_execute sudo pacman -S \
-           networkmanager \
-           blueman \
-           brightnessctl \
-           pavucontrol \
-           pavucontrol-qt \
-           acpi \
            polkit \
-           bind \
-           picom \
-           neofetch \
-           i3 \
-           dmenu \
-           rofi \
-           feh \
-           alacritty \
            tmux \
-           ncdu \
-           htop \
+           fish \
            fd \
            exa \
            bat \
-           fish \
+           ncdu \
            ripgrep \
-           wget \
-           openssh \
-           emacs \
-           ranger \
-           thunar \
-           gvfs \
-           xarchiver \
-           firefox-developer-edition \
-           tig \
            fzf \
+           emacs \
            aspell \
            aspell-en \
+           tig \
+           ranger \
+           xarchiver \
+           htop \
+           udisks2 \
+           networkmanager \
+           bind \
+           docker \
            npm \
            rustup \
-           udisks2 \
+           brightnessctl \
+           acpi \
+           neofetch \
+           wget \
+           openssh
+
+tw_log "Installing graphical packages..."
+tw_execute sudo pacman -S \
+           picom \
+           i3 \
+           xfce4 \
+           feh \
+           dmenu \
+           rofi \
+           alacritty \
            udiskie \
            gparted \
-           syncthing-gtk \
-           transmission-gtk \
+           thunar \
+           gvfs \
+           firefox-developer-edition \
            keepassxc \
-           youtube-dl \
            evolution \
-           audacity \
-           easytag \
+           transmission-gtk \
+           syncthing-gtk \
+           virtualbox \
+           libreoffice-fresh \
+           blueman \
+           shotwell \
            gimp \
            darktable \
-           handbrake \
-           shotwell \
-           blender \
-           obs-studio \
-           flameshot \
-           peek \
+           clementine \
            mpg123 \
+           pavucontrol \
+           pavucontrol-qt \
+           gstreamer \
            pulseaudio \
            pulseaudio-bluetooth \
            pulseeffects \
-           clementine \
+           audacity \
+           easytag \
            vlc \
-           gstreamer \
+           handbrake \
+           blender \
+           youtube-dl \
            kodi \
+           flameshot \
+           obs-studio \
+           peek \
            steam \
-           libreoffice-fresh \
-           virtualbox \
-           docker \
            ttf-opensans \
            ttf-inconsolata \
            ttf-liberation \
