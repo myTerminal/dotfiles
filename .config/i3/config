@@ -156,11 +156,11 @@ set $ws2 "2: People"
 set $ws3 "3: Code"
 set $ws4 "4: Web"
 set $ws5 "5: Files"
-set $ws6 "6: Misc"
-set $ws7 "7: Auth"
-set $ws8 "8: Studio"
+set $ws6 "6: Play"
+set $ws7 "7: Studio"
+set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
+set $ws10 "10: Auth"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -300,11 +300,11 @@ assign [class="firefox"] $ws4
 assign [class="Thunar"] $ws5
 assign [class="vlc"] $ws6
 assign [class="Gamehub"] $ws6
-assign [class="KeePassXC"] $ws7
-assign [class="Gimp"] $ws8
-assign [class="Audacity"] $ws8
-assign [class="obs"] $ws8
-assign [class="Blender"] $ws8
+assign [class="Gimp"] $ws7
+assign [class="Audacity"] $ws7
+assign [class="obs"] $ws7
+assign [class="Blender"] $ws7
+assign [class="KeePassXC"] $ws10
 
 # Bind mouse events
 bindsym $mod+button1 fullscreen toggle
