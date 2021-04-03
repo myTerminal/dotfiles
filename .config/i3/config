@@ -300,6 +300,7 @@ assign [class="firefox"] $ws4
 assign [class="Thunar"] $ws5
 assign [class="vlc"] $ws6
 assign [class="Gamehub"] $ws6
+assign [class="Darktable"] $ws7
 assign [class="Gimp"] $ws7
 assign [class="Audacity"] $ws7
 assign [class="obs"] $ws7
