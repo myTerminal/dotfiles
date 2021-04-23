@@ -47,7 +47,6 @@ tw_execute sudo pacman -S \
            keepassxc \
            evolution \
            transmission-gtk \
-           syncthing-gtk \
            virtualbox \
            libreoffice-fresh \
            blueman \
@@ -94,6 +93,7 @@ tw_execute paru -S --mflags --skipinteg \
            rememberthemilk \
            dynalist-desktop \
            discord \
+           syncthing-gtk \
            pcloud-drive \
            gamehub \
            key-mon \
