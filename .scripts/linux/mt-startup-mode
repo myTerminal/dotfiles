@@ -10,7 +10,7 @@ run_for_linux () {
             ;;
 
         *)
-            sudo systemctl enable gdm
+            sudo systemctl enable sddm
             echo "Switched startup mode to graphical!"
             ;;
     esac
