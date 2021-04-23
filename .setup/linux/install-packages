@@ -25,7 +25,6 @@ tw_execute sudo pacman -S \
            npm \
            rustup \
            brightnessctl \
-           systemd-numlockontty \
            acpi \
            neofetch \
            wget \
@@ -100,6 +99,7 @@ tw_execute paru -S --mflags --skipinteg \
            key-mon \
            balena-etcher \
            nomachine \
+           systemd-numlockontty \
            edex-ui
 
 # Manual packages
