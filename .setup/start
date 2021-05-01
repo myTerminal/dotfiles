@@ -20,17 +20,23 @@ fi
 . ~/.config/bash/config
 
 # Perform platform-specific setup
-if [ $(uname) = 'Linux' ] && [ $(command -v pacman) ]; then
-    tw_confirm_and_source "Start setup for Linux?" \
-                          "${mt_setup_dir}/linux/run" \
-                          "Skipped setup for Linux!"
-elif [ $(uname) = 'Darwin' ]; then
-    tw_confirm_and_source "Start setup for macOS?" \
-                          "${mt_setup_dir}/mac/run" \
-                          "Skipped setup for macOS!"
-else
-    tw_abort_because "Unknown platform found."
-fi
+case "$(uname)" in
+    Linux )
+        tw_confirm_and_source "Start setup for Linux?" \
+                              "${mt_setup_dir}/linux/run" \
+                              "Skipped setup for Linux!"
+        ;;
+
+    Darwin)
+        tw_confirm_and_source "Start setup for macOS?" \
+                              "${mt_setup_dir}/mac/run" \
+                              "Skipped setup for macOS!"
+        ;;
+
+    *)
+        tw_abort_because "Unknown platform found."
+        ;;
+esac
 
 tw_log "Starting with platform independent steps..."
 
