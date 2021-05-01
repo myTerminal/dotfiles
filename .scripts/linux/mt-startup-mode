@@ -2,38 +2,14 @@
 
 command=$1
 
-run_for_linux () {
-    case "${command}" in
-        minimal | console )
-            sudo systemctl disable display-manager.service
-            echo "Switched startup mode to console!"
-            ;;
+case "${command}" in
+    minimal | console )
+        sudo systemctl disable display-manager.service
+        echo "Switched startup mode to console!"
+        ;;
 
-        *)
-            sudo systemctl enable sddm
-            echo "Switched startup mode to graphical!"
-            ;;
-    esac
-}
-
-run_for_mac () {
-    echo "Not implemented!"
-}
-
-main () {
-    case "$(uname)" in
-        Linux )
-            run_for_linux
-            ;;
-
-        Darwin)
-            run_for_mac
-            ;;
-
-        *)
-            echo "Unknown platform!"
-            ;;
-    esac
-}
-
-main
+    *)
+        sudo systemctl enable sddm
+        echo "Switched startup mode to graphical!"
+        ;;
+esac
