@@ -29,7 +29,7 @@ tw_confirm "Add additional software sources?" \
            "Addition of additional software sources skipped!"
 
 tw_confirm_and_source "Install packages?" \
-                      "${mt_setup_dir}/linux/install-packages" \
+                      "${mt_setup_dir}/linux/packages/install" \
                       "Installation of packages skipped!"
 
 tw_confirm "Set up Docker?" \
