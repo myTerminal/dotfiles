@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+# Function to set up Docker
+mt_task_linux_setup_docker () {
+    tw_log "Setting up Docker..."
+    tw_execute sudo groupadd docker
+    tw_execute sudo gpasswd -a ${USER} docker
+    tw_execute sudo systemctl enable docker
+}
+
+# Function to change user shell
+mt_task_linux_change_user_shell () {
+    tw_log "Changing shell to fish..."
+    if ! [ "$(cat /etc/shells | grep "/usr/bin/fish")" ]; then
+        tw_execute_eval "echo \"/usr/bin/fish\" | sudo tee -a /etc/shells"
+    fi
+    tw_task_change_user_shell
+}
+
+# Function to install toolchain for Rust
+mt_task_linux_install_rust_toolchain() {
+    tw_log "Installing stable toolchain for Rust..."
+    tw_execute rustup toolchain install stable
+}
+
+# Function to set up GUI
+mt_task_linux_setup_gui () {
+    tw_log "Setting up GUI..."
+    tw_task_setup_gui false
+}

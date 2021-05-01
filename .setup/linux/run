@@ -1,8 +1,20 @@
 #!/usr/bin/env bash
 
-. "${mt_setup_dir}/linux/tasks"
+tw_log "Setting up Linux..."
 
-tw_log "Setting up Arch Linux..."
+# Load common tasks
+. "${mt_setup_dir}/linux/tasks/common"
+
+# Load distro specific tasks
+if [ $(command -v pacman) ]; then
+    tw_log "Arch-based Linux found"
+    . "${mt_setup_dir}/linux/tasks/arch"
+elif [ $(command -v apt) ]; then
+    tw_log "Debian-based Linux found"
+    . "${mt_setup_dir}/linux/tasks/debian"
+else
+    tw_abort_because "Unknown Linux!"
+fi
 
 tw_confirm "Set hostname?" \
            tw_task_set_hostname \
