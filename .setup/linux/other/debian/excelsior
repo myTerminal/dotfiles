@@ -4,4 +4,5 @@
 # for 2020 Lenovo ThinkPad X1 Extreme (Excelsior) and mostly follows steps from
 # https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Extreme
 
-# TODO: Implement
+# TODO: Implement for Debian
+tw_log "Not implemented!"

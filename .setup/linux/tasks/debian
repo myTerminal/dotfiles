@@ -2,15 +2,18 @@
 
 # Function to install peripheral drivers
 mt_task_linux_install_peripherals_drivers () {
+    # TODO: Implement for Debian
     tw_log "Not implemented!"
 }
 
 # Function to setup startup services
 mt_task_linux_setup_startup_services () {
+    # TODO: Implement for Debian
     tw_log "Not implemented!"
 }
 
 # Function to perform visual tweaks at GRUB and DM level
 mt_task_linux_perform_visual-tweaks () {
+    # TODO: Implement for Debian
     tw_log "Not implemented!"
 }
