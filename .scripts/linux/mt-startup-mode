@@ -21,11 +21,19 @@ run_for_mac () {
 }
 
 main () {
-    if [ $(uname) = 'Linux' ]; then
-        run_for_linux
-    elif [ $(uname) = 'Darwin' ]; then
-        run_for_mac
-    fi
+    case "$(uname)" in
+        Linux )
+            run_for_linux
+            ;;
+
+        Darwin)
+            run_for_mac
+            ;;
+
+        *)
+            echo "Unknown platform!"
+            ;;
+    esac
 }
 
 main
