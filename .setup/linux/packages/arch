@@ -38,7 +38,7 @@ tw_execute sudo pacman -S \
            feh \
            dmenu \
            rofi \
-           alacritty \
+           kitty \
            udiskie \
            gparted \
            thunar \
