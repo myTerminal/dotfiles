@@ -1,4 +1,94 @@
 #!/usr/bin/env bash
 
-# TODO: Implement for Debian
-tw_log "Not implemented!"
+tw_log "Installing core packages..."
+tw_execute sudo apt install \
+           tmux \
+           fish \
+           fd-find \
+           exa \
+           ncdu \
+           ripgrep \
+           fzf \
+           emacs \
+           aspell \
+           aspell-en \
+           tig \
+           ranger \
+           xarchiver \
+           htop \
+           udisks2 \
+           network-manager \
+           dnsutils \
+           docker \
+           npm \
+           brightnessctl \
+           acpi \
+           neofetch \
+           wget \
+           ssh
+
+# TODO: Fix for Debian: find a way to install the below core packages
+tw_log "The following packages were not found on Debian archives:"
+tw_log "bat, rustup"
+
+tw_log "Installing graphical packages..."
+tw_execute sudo apt install \
+           compton \
+           i3 \
+           xfce4 \
+           feh \
+           rofi \
+           udiskie \
+           gparted \
+           thunar \
+           gvfs \
+           firefox \
+           keepassxc \
+           evolution \
+           transmission \
+           virtualbox \
+           libreoffice \
+           blueman \
+           shotwell \
+           gimp \
+           darktable \
+           clementine \
+           mpg123 \
+           pavucontrol \
+           pavucontrol-qt \
+           pulseaudio \
+           pulseeffects \
+           audacity \
+           easytag \
+           vlc \
+           handbrake \
+           blender \
+           youtube-dl \
+           kodi \
+           flameshot \
+           obs-studio \
+           peek \
+           steam \
+           fonts-inconsolata \
+           fonts-liberation \
+           fonts-roboto \
+           fonts-fira-code \
+           fonts-font-awesome
+
+# TODO: Fix for Debian: find a way to install the below graphical packages
+tw_log "The following packages were not found on Debian archives:"
+tw_log "dmenu, alacritty, gstreamer, pulseaudio-bluetooth, fonts-opensans, fonts-roboto-mono, fonts-droid"
+
+tw_log "Installing more packages..."
+tw_execute sudo apt install \
+           obsidian-icon-theme \
+           syncthing-gtk \
+           key-mon \
+           numlockx
+
+# TODO: Fix for Debian: find a way to install the below graphical packages
+tw_log "The following packages were not found on Debian archives:"
+tw_log "gtk-theme-shades-of-grey, bibata-cursor-theme, google-chrome, authy, postman, tunnelbear, rememberthemilk, dynalist, discord, pcloud, gamehub, balena-etcher, nomachine, edex-ui"
+
+# TODO: Fix for Debian: picom is here compton
+# TODO: Fix for Debian: need to replace firefox with firefox-developer-edition
