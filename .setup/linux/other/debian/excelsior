@@ -5,4 +5,13 @@
 # https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Extreme
 
 # TODO: Implement for Debian
-tw_log "Not implemented!"
+
+# Install wireless drivers
+sudo apt install firmware-iwlwifi -y
+
+# Set display scaling for HiDPI
+echo "Xft.dpi: 192" > ~/.Xresources
+echo "[X11]
+EnableHiDPI=true
+[Wayland]
+EnableHiDPI=true" | sudo tee /etc/sddm.conf
