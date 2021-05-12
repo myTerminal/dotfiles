@@ -4,8 +4,6 @@
 # for 2020 Lenovo ThinkPad X1 Extreme (Excelsior) and mostly follows steps from
 # https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Extreme
 
-# TODO: Implement for Debian
-
 # Install wireless drivers
 sudo apt install firmware-iwlwifi -y
 
@@ -16,6 +14,24 @@ EnableHiDPI=true
 [Wayland]
 EnableHiDPI=true" | sudo tee /etc/sddm.conf
 
+# Setup Nvidia optimus for GPU
+# TODO: Implement for Debian
+
+# Fix audio input and output
+# TODO: Implement for Debian
+
+# Enable Dolby Atmos Effect through pulseeffects
+sudo pacman -S pulseeffects --noconfirm
+pulseeffects
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/master/install.sh)"
+
+# Enable microphone noise reduction
+echo "
+### Enable Echo/Noise-Cancellation
+load-module module-echo-cancel use_master_format=1 aec_method=webrtc aec_args=\"beamforming=1 mic_geometry=-0.0257,0,0,0.0257,0,0\" source_name=echoCancel_source sink_name=echoCancel_sink
+set-default-source echoCancel_source
+set-default-sink echoCancel_sink" | sudo tee -a /etc/pulse/default.pa
+
 # Improve touchpad experience with xinput
 sudo apt install xinput -y
 echo "
@@ -24,3 +40,16 @@ xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Click Method Enabled' 0 1
 xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Enabled' 1
 xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled' 1
 " > ~/.device-startup-tweaks
+
+# Install tlp and more for power management
+sudo apt install tlp acpi-call-dkms powertop -y
+echo 75 | sudo tee /sys/class/power_supply/BAT0/charge_start_threshold
+echo 80 | sudo tee /sys/class/power_supply/BAT0/charge_stop_threshold
+systemctl enable tlp
+systemctl start tlp
+
+# TODO: Fix display scaling
+
+# TODO: Fix display flickering on integrated mode
+
+# TODO: Utilize fingerprint sensor
