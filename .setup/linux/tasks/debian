@@ -24,6 +24,7 @@ mt_task_linux_perform_visual-tweaks () {
     # Install sddm-slice theme
     tw_execute sudo apt install -y \
                qml-module-qtgraphicaleffects \
+               qml-module-qtquick-layouts \
                fonts-roboto
     tw_execute sudo git clone \
                https://github.com/RadRussianRus/sddm-slice.git \
