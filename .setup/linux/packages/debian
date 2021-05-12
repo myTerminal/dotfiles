@@ -42,11 +42,9 @@ tw_execute sudo apt install \
            gparted \
            thunar \
            gvfs \
-           firefox \
            keepassxc \
            evolution \
            transmission \
-           virtualbox \
            libreoffice \
            blueman \
            shotwell \
@@ -68,12 +66,15 @@ tw_execute sudo apt install \
            flameshot \
            obs-studio \
            peek \
-           steam \
            fonts-inconsolata \
            fonts-liberation \
            fonts-roboto \
-           fonts-fira-code \
+           fonts-firacode \
            fonts-font-awesome
+
+# TODO: Fix for Debian: find a way to install the below graphical packages
+tw_log "The following packages might need more attention before install:"
+tw_log "firefox, virtualbox, steam"
 
 # TODO: Fix for Debian: find a way to install the below graphical packages
 tw_log "The following packages were not found on Debian archives:"
@@ -83,12 +84,11 @@ tw_log "Installing more packages..."
 tw_execute sudo apt install \
            obsidian-icon-theme \
            syncthing-gtk \
-           key-mon \
            numlockx
 
 # TODO: Fix for Debian: find a way to install the below graphical packages
 tw_log "The following packages were not found on Debian archives:"
-tw_log "gtk-theme-shades-of-grey, bibata-cursor-theme, google-chrome, authy, postman, tunnelbear, rememberthemilk, dynalist, discord, pcloud, gamehub, balena-etcher, nomachine, edex-ui"
+tw_log "gtk-theme-shades-of-grey, bibata-cursor-theme, google-chrome, authy, postman, tunnelbear, rememberthemilk, dynalist, discord, pcloud, key-mon, gamehub, balena-etcher, nomachine, edex-ui"
 
 # TODO: Fix for Debian: picom is here compton
 # TODO: Fix for Debian: need to replace firefox with firefox-developer-edition
