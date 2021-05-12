@@ -14,6 +14,20 @@ mt_task_linux_setup_startup_services () {
 
 # Function to perform visual tweaks at GRUB and DM level
 mt_task_linux_perform_visual-tweaks () {
-    # TODO: Implement for Debian
-    tw_log "Not implemented!"
+    tw_log "Performing visual tweaks..."
+
+    # Install GRUB Fallout theme
+    tw_execute sudo apt install -y \
+               unzip
+    tw_execute_eval "wget -O - https://github.com/shvchk/fallout-grub-theme/raw/master/install.sh | bash"
+
+    # Install sddm-slice theme
+    tw_execute sudo apt install -y \
+               qml \
+               fonts-roboto
+    tw_execute sudo git clone \
+               https://github.com/RadRussianRus/sddm-slice.git \
+               /usr/share/sddm/themes/sddm-slice
+    tw_execute_eval "echo \"[Theme]
+Current=sddm-slice\" | sudo tee /etc/sddm.conf"
 }
