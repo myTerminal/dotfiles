@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
 
-# TODO: Implement for Debian
-tw_log "Not implemented!"
+mt_packages=(nvidia-driver)
+
+if [ "${1}" = "uninstall" ]; then
+    sudo apt remote "${mt_packages[@]}" -y
+else
+    sudo apt install "${mt_packages[@]}" -y
+fi
