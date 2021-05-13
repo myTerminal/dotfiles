@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+sudo flatpak install -y ${2}
+
+echo "#!/usr/bin/env bash
+flatpak run ${2} & disown" | sudo tee /usr/bin/${1}
+sudo chmod 755 /usr/bin/${1}
+

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+sudo flatpak remove -y ${2}
+
+sudo rm /usr/bin/${1}

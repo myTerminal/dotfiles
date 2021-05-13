@@ -97,8 +97,7 @@ tw_execute sudo snap install rustup --classic
 tw_execute sudo snap install authy --beta
 
 tw_log "Installing packages through flatpak..."
-tw_execute sudo flatpak install -y \
-           org.mozilla.firefox \
-           com.getpostman.Postman \
-           com.discordapp.Discord \
-           com.valvesoftware.Steam
+~/.scripts/linux/mt-flatpak-install firefox org.mozilla.firefox
+~/.scripts/linux/mt-flatpak-install postman com.getpostman.Postman
+~/.scripts/linux/mt-flatpak-install discord com.discordapp.Discord
+~/.scripts/linux/mt-flatpak-install steam com.valvesoftware.Steam
