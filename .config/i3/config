@@ -225,17 +225,18 @@ bindsym $mod+r mode "resize"
 set $mode_launcher "Launch mode: All / Gaming"
 mode $mode_launcher {
         bindsym a \
-                exec rememberthemilk; \
+#                exec rememberthemilk; \ # <<unavailable>>
                 exec emacs; \
                 exec discord; \
-                exec firefox-developer-edition; \
+                exec firefox-developer-edition; \ # <<transition>>
+                exec firefox; \
                 exec thunar; \
                 exec keepassxc; \
                 mode "default"
         bindsym g \
                 exec steam; \
                 exec discord; \
-                exec gamehub; \
+#                exec gamehub; \ # <<unavailable>>
                 mode "default"
 
         # back to normal: Enter or Escape or q or $mod+Shift+a
@@ -292,7 +293,7 @@ exec picom -i 0.95 -m 1.0 -D 0
 workspace_auto_back_and_forth yes
 
 # Assign programs to workspaces
-assign [class="Remember The Milk"] $ws1
+# assign [class="Remember The Milk"] $ws1 # <<unavailable>>
 assign [class="Steam"] $ws1
 assign [class="discord"] $ws2
 assign [class="Emacs"] $ws3
@@ -300,7 +301,7 @@ assign [class="firefox"] $ws4
 assign [class="Thunar"] $ws5
 assign [class="Clementine"] $ws6
 assign [class="vlc"] $ws6
-assign [class="Gamehub"] $ws6
+#assign [class="Gamehub"] $ws6 # <<unavailable>>
 assign [class="Darktable"] $ws7
 assign [class="Gimp"] $ws7
 assign [class="Audacity"] $ws7
