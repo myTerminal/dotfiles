@@ -225,10 +225,9 @@ bindsym $mod+r mode "resize"
 set $mode_launcher "Launch mode: All / Gaming"
 mode $mode_launcher {
         bindsym a \
-#                exec rememberthemilk; \ # <<unavailable>>
                 exec emacs; \
                 exec discord; \
-                exec firefox-developer-edition; \ # <<transition>>
+                exec firefox-developer-edition; \
                 exec firefox; \
                 exec thunar; \
                 exec keepassxc; \
@@ -236,7 +235,6 @@ mode $mode_launcher {
         bindsym g \
                 exec steam; \
                 exec discord; \
-#                exec gamehub; \ # <<unavailable>>
                 mode "default"
 
         # back to normal: Enter or Escape or q or $mod+Shift+a
