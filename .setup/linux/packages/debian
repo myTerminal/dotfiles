@@ -28,10 +28,6 @@ tw_execute sudo apt install \
            wget \
            ssh
 
-# TODO: Fix for Debian: find a way to install the below core packages
-tw_log "The following packages were not found on Debian archives:"
-tw_log "rustup"
-
 tw_log "Installing graphical packages..."
 tw_execute sudo apt install \
            compton \
@@ -76,11 +72,11 @@ tw_execute sudo apt install \
 
 # TODO: Fix for Debian: find a way to install the below graphical packages
 tw_log "The following packages might need more attention before install:"
-tw_log "firefox, virtualbox, steam"
+tw_log "virtualbox"
 
 # TODO: Fix for Debian: find a way to install the below graphical packages
 tw_log "The following packages were not found on Debian archives:"
-tw_log "dmenu, gstreamer, pulseaudio-bluetooth, fonts-opensans, fonts-roboto-mono, fonts-droid"
+tw_log "gstreamer, pulseaudio-bluetooth, fonts-opensans, fonts-roboto-mono, fonts-droid"
 
 tw_log "Installing more packages..."
 tw_execute sudo apt install \
@@ -90,7 +86,19 @@ tw_execute sudo apt install \
 
 # TODO: Fix for Debian: find a way to install the below graphical packages
 tw_log "The following packages were not found on Debian archives:"
-tw_log "gtk-theme-shades-of-grey, bibata-cursor-theme, google-chrome, authy, postman, tunnelbear, rememberthemilk, dynalist, discord, pcloud, key-mon, gamehub, balena-etcher, nomachine, edex-ui"
+tw_log "gtk-theme-shades-of-grey, bibata-cursor-theme, google-chrome, tunnelbear, rememberthemilk, dynalist, pcloud, key-mon, gamehub, balena-etcher, nomachine, edex-ui"
 
 # TODO: Fix for Debian: picom is here compton
+# TODO: Fix for Debian: dmenu is here i3-dmenu-desktop
 # TODO: Fix for Debian: need to replace firefox with firefox-developer-edition
+
+tw_log "Installing packages through snap..."
+tw_execute sudo snap install rustup --classic
+tw_execute sudo snap install authy --beta
+
+tw_log "Installing packages through flatpak..."
+tw_execute sudo flatpak install -y \
+           org.mozilla.firefox \
+           com.getpostman.Postman \
+           com.discordapp.Discord \
+           com.valvesoftware.Steam
