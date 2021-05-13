@@ -21,7 +21,7 @@ EnableHiDPI=true" | sudo tee /etc/sddm.conf
 # TODO: Implement for Debian
 
 # Enable Dolby Atmos Effect through pulseeffects
-sudo pacman -S pulseeffects --noconfirm
+sudo apt install pulseeffects -y
 pulseeffects
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/master/install.sh)"
 
