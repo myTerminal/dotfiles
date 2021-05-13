@@ -6,6 +6,7 @@ tw_execute sudo apt install \
            fish \
            fd-find \
            exa \
+           batcat \
            ncdu \
            ripgrep \
            fzf \
@@ -29,7 +30,7 @@ tw_execute sudo apt install \
 
 # TODO: Fix for Debian: find a way to install the below core packages
 tw_log "The following packages were not found on Debian archives:"
-tw_log "bat, rustup"
+tw_log "rustup"
 
 tw_log "Installing graphical packages..."
 tw_execute sudo apt install \
