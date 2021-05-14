@@ -8,8 +8,13 @@ mt_task_linux_install_peripherals_drivers () {
 
 # Function to setup startup services
 mt_task_linux_setup_startup_services () {
-    # TODO: Implement for Debian
-    tw_log "Not implemented!"
+    # Setup syncthing service
+    tw_execute systemctl --user enable syncthing.service
+    tw_execute systemctl --user start syncthing.service
+
+    # Start network manager service
+    tw_execute systemctl enable NetworkManager.service
+    tw_execute systemctl start NetworkManager.service
 }
 
 # Function to perform visual tweaks at GRUB and DM level
