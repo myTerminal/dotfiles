@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Run update through the primary package manager
 if [ $(command -v apt) ]; then
     sudo apt update -y && sudo apt upgrade -y
 elif [ $(command -v dnf) ]; then
@@ -7,4 +8,14 @@ elif [ $(command -v dnf) ]; then
 elif [ $(command -v pacman) ]; then
     sudo pacman -S archlinux-keyring --noconfirm
     sudo pacman -Syu
+fi
+
+# Update snaps, if available
+if [ $(command -v snap) ]; then
+    sudo snap refresh
+fi
+
+# Update flatpaks, if available
+if [ $(command -v flatpak) ]; then
+    sudo flatpak update
 fi
