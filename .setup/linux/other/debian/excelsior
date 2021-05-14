@@ -18,7 +18,7 @@ EnableHiDPI=true" | sudo tee /etc/sddm.conf
 # TODO: Implement for Debian
 
 # Fix audio input and output
-# TODO: Implement for Debian
+sudo apt install firmware-sof-signed -y
 
 # Enable Dolby Atmos Effect through pulseeffects
 sudo apt install pulseeffects -y
