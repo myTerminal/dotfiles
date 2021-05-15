@@ -93,11 +93,11 @@ tw_log "gtk-theme-shades-of-grey, bibata-cursor-theme, google-chrome, tunnelbear
 # TODO: Fix for Debian: need to replace firefox with firefox-developer-edition
 
 tw_log "Installing packages through snap..."
+tw_execute sudo snap install firefox
 tw_execute sudo snap install rustup --classic
 tw_execute sudo snap install authy --beta
 
 tw_log "Installing packages through flatpak..."
-~/.scripts/linux/mt-flatpak-install firefox org.mozilla.firefox
 ~/.scripts/linux/mt-flatpak-install postman com.getpostman.Postman
 ~/.scripts/linux/mt-flatpak-install discord com.discordapp.Discord
 ~/.scripts/linux/mt-flatpak-install steam com.valvesoftware.Steam
