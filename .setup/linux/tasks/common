@@ -36,17 +36,13 @@ mt_task_linux_apply_graphical_theming () {
     tw_log "Installing GTK theme..."
     mkdir -p ~/.local/share/themes
     git clone https://github.com/WernerFP/Shades-of-gray-theme.git ~/_temp
-    cd ~/_temp
-    mv ./Shades-of* ~/.local/share/themes/
-    cd ~/
+    mv ~/_temp/Shades-of* ~/.local/share/themes/
     rm -rf ~/_temp
 
     tw_log "Installing icon theme..."
     mkdir -p ~/.local/share/icons
     git clone https://github.com/madmaxms/iconpack-obsidian ~/_temp
-    cd ~/_temp
-    mv ./Obsidian* ~/.local/share/icons/
-    cd ~/
+    mv ~/_temp/Obsidian* ~/.local/share/icons/
     rm -rf ~/_temp
 
     tw_log "Installing cursor theme..."
@@ -56,7 +52,7 @@ mt_task_linux_apply_graphical_theming () {
     wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v1.1.1/Bibata.tar.gz
     tar -xvf Bibata.tar.gz
     mv ./Bibata-*  ~/.local/share/icons
-    cd ~
+    cd ~/
     rm -rf ~/_temp
 }
 
@@ -67,8 +63,6 @@ mt_task_linux_install_fonts () {
     tw_log "Installing OpenSans..."
     mkdir -p ~/.local/share/fonts
     git clone https://github.com/googlefonts/opensans ~/_temp
-    cd ~/_temp/fonts
-    mv ./ttf ~/.local/share/fonts/OpenSans
-    cd ~/
+    mv ~/_temp/fonts/ttf ~/.local/share/fonts/OpenSans
     rm -rf ~/_temp
 }
