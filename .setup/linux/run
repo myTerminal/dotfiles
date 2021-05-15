@@ -48,6 +48,10 @@ tw_confirm "Setup GUI?" \
            mt_task_linux_setup_gui \
            "Setting up of GUI skipped!"
 
+tw_confirm "Apply graphical theming?" \
+           mt_task_linux_apply_graphical_theming \
+           "Graphical theming skipped!"
+
 tw_confirm "Setup peripherals drivers?" \
            mt_task_linux_install_peripherals_drivers \
            "Setting up of periphericals drivers skipped."

@@ -28,3 +28,42 @@ mt_task_linux_setup_gui () {
     tw_log "Setting up GUI..."
     tw_task_setup_gui false
 }
+
+# Function to apply graphical theming
+mt_task_linux_apply_graphical_theming () {
+    rm -rf ~/_temp
+
+    tw_log "Installing GTK theme..."
+    mkdir -p ~/.local/share/themes
+    git clone https://github.com/WernerFP/Shades-of-gray-theme.git ~/_temp
+    cd ~/_temp
+    mv ./Shades-of* ~/.local/share/themes/
+    cd ~/
+    rm -rf ~/_temp
+
+    tw_log "Installing icon theme..."
+    mkdir -p ~/.local/share/icons
+    git clone https://github.com/madmaxms/iconpack-obsidian ~/_temp
+    cd ~/_temp
+    mv ./Obsidian* ~/.local/share/icons/
+    cd ~/
+    rm -rf ~/_temp
+
+    tw_log "Installing cursor theme..."
+    mkdir -p ~/.local/share/icons
+    mkdir ~/_temp
+    cd ~/_temp
+    wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v1.1.1/Bibata.tar.gz
+    tar -xvf Bibata.tar.gz
+    mv ./Bibata-*  ~/.local/share/icons
+    cd ~
+    rm -rf ~/_temp
+
+    tw_log "Installing fonts..."
+    mkdir -p ~/.local/share/fonts
+    git clone https://github.com/googlefonts/opensans ~/_temp
+    cd ~/_temp/fonts
+    mv ./ttf ~/.local/share/fonts/OpenSans
+    cd ~/
+    rm -rf ~/_temp
+}
