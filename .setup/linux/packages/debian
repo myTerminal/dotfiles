@@ -77,7 +77,7 @@ tw_log "virtualbox"
 
 # TODO: Fix for Debian: find a way to install the below graphical packages
 tw_log "The following packages were not found on Debian archives:"
-tw_log "gstreamer, pulseaudio-bluetooth, fonts-opensans, fonts-roboto-mono, fonts-droid"
+tw_log "gstreamer, fonts-opensans, fonts-roboto-mono, fonts-droid"
 
 tw_log "Installing more packages..."
 tw_execute sudo apt install \
