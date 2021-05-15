@@ -52,6 +52,10 @@ tw_confirm "Apply graphical theming?" \
            mt_task_linux_apply_graphical_theming \
            "Graphical theming skipped!"
 
+tw_confirm "Install fonts?" \
+           mt_task_linux_install_fonts \
+           "Installation of fonts skipped!"
+
 tw_confirm "Setup peripherals drivers?" \
            mt_task_linux_install_peripherals_drivers \
            "Setting up of periphericals drivers skipped."

@@ -58,8 +58,13 @@ mt_task_linux_apply_graphical_theming () {
     mv ./Bibata-*  ~/.local/share/icons
     cd ~
     rm -rf ~/_temp
+}
 
-    tw_log "Installing fonts..."
+# Function to install fonts
+mt_task_linux_install_fonts () {
+    rm -rf ~/_temp
+
+    tw_log "Installing OpenSans..."
     mkdir -p ~/.local/share/fonts
     git clone https://github.com/googlefonts/opensans ~/_temp
     cd ~/_temp/fonts
