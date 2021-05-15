@@ -65,4 +65,10 @@ mt_task_linux_install_fonts () {
     git clone https://github.com/googlefonts/opensans ~/_temp
     mv ~/_temp/fonts/ttf ~/.local/share/fonts/OpenSans
     rm -rf ~/_temp
+
+    tw_log "Installing FontAwesome..."
+    mkdir -p ~/.local/share/fonts
+    git clone https://github.com/FortAwesome/Font-Awesome ~/_temp
+    mv ~/_temp/otfs ~/.local/share/fonts/FontAwesome
+    rm -rf ~/_temp
 }
