@@ -72,7 +72,6 @@ tw_execute sudo pacman -S \
            obs-studio \
            peek \
            steam \
-           ttf-opensans \
            ttf-inconsolata \
            ttf-liberation \
            ttf-roboto \
@@ -83,9 +82,6 @@ tw_execute sudo pacman -S \
 
 tw_log "Installing packages from AUR..."
 tw_execute paru -S --mflags --skipinteg \
-           gtk-theme-shades-of-gray \
-           obsidian-icon-theme \
-           bibata-cursor-theme \
            google-chrome \
            authy \
            postman-bin \
