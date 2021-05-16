@@ -120,13 +120,13 @@ optional setup.
 
 *** Fonts
 
+- Font-Awesome
 - Open Sans
 - Inconsolata
-- Liberation
-- Roboto
+- Roboto Mono
 - Droid
 - Fira Code
-- Font-Awesome
+- Liberation
 
 *** Legend
 
