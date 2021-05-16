@@ -71,14 +71,7 @@ tw_execute sudo pacman -S \
            flameshot \
            obs-studio \
            peek \
-           steam \
-           ttf-inconsolata \
-           ttf-liberation \
-           ttf-roboto \
-           ttf-roboto-mono \
-           ttf-droid \
-           ttf-fira-code \
-           ttf-font-awesome
+           steam
 
 tw_log "Installing packages from AUR..."
 tw_execute paru -S --mflags --skipinteg \

@@ -51,7 +51,7 @@ mt_task_linux_apply_graphical_theming () {
     cd ~/_temp
     wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v1.1.1/Bibata.tar.gz
     tar -xvf Bibata.tar.gz
-    mv ./Bibata-*  ~/.local/share/icons
+    mv ~/_temp/Bibata-*  ~/.local/share/icons
     cd ~/
     rm -rf ~/_temp
 }
@@ -60,15 +60,50 @@ mt_task_linux_apply_graphical_theming () {
 mt_task_linux_install_fonts () {
     rm -rf ~/_temp
 
+    tw_log "Installing FontAwesome..."
+    mkdir -p ~/.local/share/fonts
+    git clone https://github.com/FortAwesome/Font-Awesome ~/_temp
+    mv ~/_temp/otfs ~/.local/share/fonts/FontAwesome
+    rm -rf ~/_temp
+
     tw_log "Installing OpenSans..."
     mkdir -p ~/.local/share/fonts
     git clone https://github.com/googlefonts/opensans ~/_temp
     mv ~/_temp/fonts/ttf ~/.local/share/fonts/OpenSans
     rm -rf ~/_temp
 
-    tw_log "Installing FontAwesome..."
+    tw_log "Installing Inconsolata..."
     mkdir -p ~/.local/share/fonts
-    git clone https://github.com/FortAwesome/Font-Awesome ~/_temp
-    mv ~/_temp/otfs ~/.local/share/fonts/FontAwesome
+    git clone https://github.com/googlefonts/inconsolata ~/_temp
+    mv ~/_temp/fonts/ttf ~/.local/share/fonts/Inconsolata
+    rm -rf ~/_temp
+
+    tw_log "Installing Roboto Mono..."
+    mkdir -p ~/.local/share/fonts
+    git clone https://github.com/googlefonts/RobotoMono ~/_temp
+    mv ~/_temp/fonts/ttf ~/.local/share/fonts/RobotoMono
+    rm -rf ~/_temp
+
+    tw_log "Installing Droid..."
+    mkdir -p ~/.local/share/fonts
+    git clone https://github.com/grays/droid-fonts ~/_temp
+    mv ~/_temp/droid ~/.local/share/fonts/Droid
+    rm -rf ~/_temp
+
+    tw_log "Installing FiraCode..."
+    mkdir -p ~/.local/share/fonts
+    git clone https://github.com/tonsky/FiraCode ~/_temp
+    mv ~/_temp/distr/ttf ~/.local/share/fonts/FiraCode
+    rm -rf ~/_temp
+
+    tw_log "Installing FiraCode..."
+    mkdir -p ~/.local/share/fonts
+    mkdir ~/_temp
+    cd ~/_temp
+    wget https://github.com/liberationfonts/liberation-fonts/files/6418984/liberation-fonts-ttf-2.1.4.tar.gz
+    tar -xvf liberation-fonts-ttf-2.1.4.tar.gz
+    mkdir ~/.local/share/fonts/Liberation
+    mv ~/_temp/liberation-fonts-ttf-2.1.4/Liberation*  ~/.local/share/fonts/Liberation/
+    cd ~/
     rm -rf ~/_temp
 }
