@@ -89,10 +89,10 @@ tw_log "tunnelbear, rememberthemilk, dynalist, pcloud, key-mon, gamehub, balena-
 
 tw_log "Installing packages through snap..."
 tw_execute sudo snap install firefox
+tw_execute sudo snap install discord
+tw_execute sudo snap install postman
 tw_execute sudo snap install rustup --classic
 tw_execute sudo snap install authy --beta
 
 tw_log "Installing packages through flatpak..."
-~/.scripts/linux/mt-flatpak-install postman com.getpostman.Postman
-~/.scripts/linux/mt-flatpak-install discord com.discordapp.Discord
 ~/.scripts/linux/mt-flatpak-install steam com.valvesoftware.Steam
