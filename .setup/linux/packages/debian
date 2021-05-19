@@ -64,7 +64,9 @@ tw_execute sudo apt install \
            kodi \
            flameshot \
            obs-studio \
-           peek
+           peek \
+           steam \
+           libgl1-nvidia-glvnd-glx:i386
 
 # TODO: Fix for Debian: find a way to install the below graphical packages
 tw_log "The following packages might need more attention before install:"
@@ -95,4 +97,4 @@ tw_execute sudo snap install rustup --classic
 tw_execute sudo snap install authy --beta
 
 tw_log "Installing packages through flatpak..."
-~/.scripts/linux/mt-flatpak-install steam com.valvesoftware.Steam
+# None for now
