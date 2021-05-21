@@ -14,7 +14,7 @@ pulseeffects --gapplication-service &
 udiskie &
 
 # Set default screen brightness
-brightnessctl s 15%
+xrandr --output "DP-2" --brightness 0.3
 
 # Play startup sound
 mpg123 ~/.assets/sounds/car-startup-sound.mp3 &
