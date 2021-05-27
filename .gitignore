@@ -22,7 +22,6 @@
 !/.config/fish/*.fish
 !/.config/i3
 !/.config/rofi
-!/.config/alacritty
 
 !/.config/emacs
 /.config/emacs/*
