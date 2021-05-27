@@ -21,7 +21,11 @@ alias cl="clear"
 alias gt="clear && git"
 alias mt-sync-github="mt-sync-projects ${MT_PATH_WORKSPACE_GITHUB}"
 alias lo="exa -la --group-directories-first"
-alias po="bat"
+if [ $(command -v bat) ]; then
+    alias po="bat"
+else
+    alias po="batcat"
+fi
 
 # Start a tmux session if appropriate
 if [[ ! "screen eterm-color dumb" =~ "${TERM}" ]]
