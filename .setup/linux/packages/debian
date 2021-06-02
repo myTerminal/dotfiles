@@ -52,7 +52,6 @@ tw_execute sudo apt install \
            clementine \
            mpg123 \
            pavucontrol \
-           pavucontrol-qt \
            pulseaudio \
            pulseeffects \
            audacity \

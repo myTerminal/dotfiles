@@ -57,7 +57,6 @@ tw_execute sudo pacman -S \
            clementine \
            mpg123 \
            pavucontrol \
-           pavucontrol-qt \
            gstreamer \
            pulseaudio \
            pulseaudio-bluetooth \
