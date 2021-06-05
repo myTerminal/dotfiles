@@ -3,7 +3,7 @@
 mt_packages=(xserver-xorg-video-nvidia-legacy-390xx)
 
 if [ "${1}" = "uninstall" ]; then
-    sudo apt remote "${mt_packages[@]}" -y
+    sudo apt remove "${mt_packages[@]}" -y
 else
     sudo apt install "${mt_packages[@]}" -y
 fi
