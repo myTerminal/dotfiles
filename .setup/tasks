@@ -24,7 +24,7 @@ mt_task_install_npm_packages () {
     tw_execute sudo npm install -g \
                lite-server \
                nano-server \
-               myterminal \
+               myterminal-cli \
                stay-with-me \
                git-getter \
                re-write
