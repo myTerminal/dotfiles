@@ -15,7 +15,7 @@ EnableHiDPI=true
 EnableHiDPI=true" | sudo tee /etc/sddm.conf
 
 # Setup Nvidia optimus for GPU
-# TODO: Implement for Debian
+. ~/.setup/linux/other/nvidia-optimus
 
 # Fix audio input and output
 sudo apt install firmware-sof-signed -y
