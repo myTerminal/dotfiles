@@ -2,8 +2,19 @@
 
 # Function to install peripheral drivers
 mt_task_linux_install_peripherals_drivers () {
-    # TODO: Implement for Debian
-    tw_log "Not implemented!"
+    tw_log "Installing packages for Razer devices..."
+
+    # Add sources for Razer
+    tw_execute echo 'deb http://download.opensuse.org/repositories/hardware:/razer/Debian_Testing/ /' | sudo tee /etc/apt/sources.list.d/hardware:razer.list
+    tw_execute curl -fsSL https://download.opensuse.org/repositories/hardware:razer/Debian_Testing/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/hardware_razer.gpg > /dev/null
+    tw_execute sudo apt update
+
+    # Install openrazer and razer-genie
+    tw_execute sudo apt install -y \
+               openrazer-meta razergenie
+
+    # Add current user to group 'plugdev'
+    tw_execute sudo gpasswd -a $USER plugdev
 }
 
 # Function to setup startup services

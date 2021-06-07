@@ -120,7 +120,7 @@ optional setup.
 | Keystroke echoing tool   |                          | [[https://github.com/scottkirkwood/key-mon][Key-mon]]                                                   | [[https://github.com/keycastr/keycastr][keycastr]]                                 |
 | Startup disk creator     |                          | [[https://www.balena.io/etcher][balenaEtcher]]                                              | [[https://www.balena.io/etcher][balenaEtcher]]                             |
 | Gaming clients           | [[https://store.steampowered.com][Steam]]                    | [[https://store.steampowered.com][Steam]], [[https://www.gamehub.gg][GameHub]]                                            | [[https://store.steampowered.com][Steam]], [[https://www.origin.com][Origin]], [[https://www.playstation.com/en-us/explore/ps4/remote-play][Sony Remote Play]]          |
-| Razer software           |                          | [[https://openrazer.github.io/][OpenRazer]], [[https://polychromatic.app][polychromatic]]                                  | [[https://www.razer.com/synapse-3][Razer Synapse]]                            |
+| Razer software           | [[https://openrazer.github.io/][OpenRazer]], [[https://github.com/z3ntu/RazerGenie][RazerGenie]]    | [[https://openrazer.github.io/][OpenRazer]], [[https://polychromatic.app][polychromatic]]                                  | [[https://www.razer.com/synapse-3][Razer Synapse]]                            |
 
 *** Fonts
 
