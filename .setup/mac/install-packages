@@ -17,6 +17,7 @@ tw_execute brew install \
            aspell \
            node \
            rustup-init \
+           weechat \
            docker \
            docker-machine \
            syncthing \

@@ -22,6 +22,7 @@ tw_execute sudo pacman -S \
            udisks2 \
            networkmanager \
            bind \
+           weechat \
            docker \
            npm \
            rustup \

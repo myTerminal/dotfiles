@@ -20,6 +20,7 @@ tw_execute sudo apt install \
            udisks2 \
            network-manager \
            dnsutils \
+           weechat \
            docker \
            npm \
            brightnessctl \
