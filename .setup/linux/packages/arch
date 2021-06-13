@@ -72,7 +72,8 @@ tw_execute sudo pacman -S \
            flameshot \
            obs-studio \
            peek \
-           steam
+           steam \
+           barrier
 
 tw_log "Installing packages from AUR..."
 tw_execute paru -S --mflags --skipinteg \

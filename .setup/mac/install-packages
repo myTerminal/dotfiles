@@ -51,6 +51,7 @@ tw_execute brew install --cask \
            steam \
            origin \
            sony-ps4-remote-play \
+           barrier \
            blender \
            obs \
            licecap \

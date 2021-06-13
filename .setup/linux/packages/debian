@@ -66,6 +66,7 @@ tw_execute sudo apt install \
            obs-studio \
            peek \
            steam \
+           barrier \
            libgl1-nvidia-glvnd-glx:i386
 
 # TODO: Fix for Debian: find a way to install the below graphical packages

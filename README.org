@@ -122,6 +122,7 @@ optional setup.
 | Startup disk creator     |                          | [[https://www.balena.io/etcher][balenaEtcher]]                                              | [[https://www.balena.io/etcher][balenaEtcher]]                             |
 | Gaming clients           | [[https://store.steampowered.com][Steam]]                    | [[https://store.steampowered.com][Steam]], [[https://www.gamehub.gg][GameHub]]                                            | [[https://store.steampowered.com][Steam]], [[https://www.origin.com][Origin]], [[https://www.playstation.com/en-us/explore/ps4/remote-play][Sony Remote Play]]          |
 | Razer software           | [[https://openrazer.github.io/][OpenRazer]], [[https://github.com/z3ntu/RazerGenie][RazerGenie]]    | [[https://openrazer.github.io/][OpenRazer]], [[https://polychromatic.app][polychromatic]]                                  | [[https://www.razer.com/synapse-3][Razer Synapse]]                            |
+| Misc                     | [[https://github.com/debauchee/barrier][barrier]]                  | [[https://github.com/debauchee/barrier][barrier]]                                                   | [[https://github.com/debauchee/barrier][barrier]]                                  |
 
 *** Fonts
 
