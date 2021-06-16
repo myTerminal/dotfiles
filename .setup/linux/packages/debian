@@ -73,10 +73,6 @@ tw_execute sudo apt install \
 tw_log "The following packages might need more attention before install:"
 tw_log "virtualbox"
 
-# TODO: Fix for Debian: find a way to install the below graphical packages
-tw_log "The following packages were not found on Debian archives:"
-tw_log "gstreamer"
-
 tw_log "Installing more packages..."
 tw_execute sudo apt install \
            syncthing-gtk \
