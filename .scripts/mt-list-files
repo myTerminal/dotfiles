@@ -8,7 +8,7 @@ const { join } = require('path');
 const { argv: [program, thisFile, inputDir, outputFile = './list-of-files.txt'] } = process;
 const { log } = console;
 
-const inflateInput = (inputDirs, parentDir = './') =>
+const inflateInput = (inputDirs, parentDir = '/') =>
       inputDirs.map(
           inputDir =>
               (
