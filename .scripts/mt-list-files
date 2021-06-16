@@ -5,29 +5,31 @@
 const { lstatSync, readdirSync, writeFileSync } = require('fs');
 const { join } = require('path');
 
-const { argv: [program, thisFile, inputDir, outputFile = './list-of-files.txt'] } = process;
+const { argv: [program, thisFile, inputDir, outputFile] } = process;
 const { log } = console;
 
 const inflateInput = (inputDirs, parentDir = '/') =>
-      inputDirs.map(
-          inputDir =>
-              (
-                  item =>
-                      lstatSync(item).isDirectory()
-                      ? inflateInput(readdirSync(item), item)
-                      : [item]
-              )(join(parentDir, inputDir))
-      ).reduce(
-          (a, c) => a.concat(c),
-          []
-      );
+    inputDirs.map(
+        inputDir =>
+            (
+                item =>
+                lstatSync(item).isDirectory()
+                    ? inflateInput(readdirSync(item), item)
+                    : [item]
+            )(join(parentDir, inputDir))
+    ).reduce(
+        (a, c) => a.concat(c),
+        []
+    );
 
 const arrayToVerticalList = inputArray =>
-      inputArray.reduce((a, c) => `${a}${c}\n`, '');
+    inputArray.reduce((a, c) => a ? `${a}\n${c}` : c, '');
 
 const listOfFiles = arrayToVerticalList(inflateInput([inputDir]));
 
-writeFileSync(outputFile, listOfFiles);
-
 log(listOfFiles);
-log(`File created: ${outputFile}`);
+
+if (outputFile) {
+    writeFileSync(outputFile, listOfFiles);
+    log(`\nList stored in file: ${outputFile}`);
+}
