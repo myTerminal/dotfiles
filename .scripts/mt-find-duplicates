@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+/* global require process console */
+
+const { argv: [program, thisFile, inputDir, outputFile] } = process;
+const { log } = console;
+
+const { inflateInput, getNamePathPair, getVerticalList, writeToFile } = require('../.assets/libs/node');
+
+const files = inflateInput([inputDir]);
+
+const fileMap = {};
+for (let i = 0; i < files.length; i++) {
+    const namePathPair = getNamePathPair(files[i]);
+
+    const entry = fileMap[namePathPair[1]];
+
+    if (entry) {
+        entry.push(namePathPair[0]);
+    } else {
+        fileMap[namePathPair[1]] = [namePathPair[0]];
+    }
+}
+
+const duplicates = Object.keys(fileMap)
+    .filter(k => fileMap[k].length > 1)
+    .map(k => `${k}: ${fileMap[k].join(', ')}`);
+
+const listOfDuplicates = getVerticalList(duplicates);
+
+log(listOfDuplicates);
+
+if (outputFile) {
+    writeToFile(outputFile, listOfDuplicates);
+}
