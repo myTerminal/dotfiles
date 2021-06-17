@@ -2,34 +2,15 @@
 
 /* global require process console */
 
-const { lstatSync, readdirSync, writeFileSync } = require('fs');
-const { join } = require('path');
-
 const { argv: [program, thisFile, inputDir, outputFile] } = process;
 const { log } = console;
 
-const inflateInput = (inputDirs, parentDir = '/') =>
-    inputDirs.map(
-        inputDir =>
-            (
-                item =>
-                lstatSync(item).isDirectory()
-                    ? inflateInput(readdirSync(item), item)
-                    : [item]
-            )(join(parentDir, inputDir))
-    ).reduce(
-        (a, c) => a.concat(c),
-        []
-    );
+const { inflateInput, getVerticalList, writeToFile } = require('../.assets/libs/node');
 
-const arrayToVerticalList = inputArray =>
-    inputArray.reduce((a, c) => a ? `${a}\n${c}` : c, '');
-
-const listOfFiles = arrayToVerticalList(inflateInput([inputDir]));
+const listOfFiles = getVerticalList(inflateInput([inputDir]));
 
 log(listOfFiles);
 
 if (outputFile) {
-    writeFileSync(outputFile, listOfFiles);
-    log(`\nList stored in file: ${outputFile}`);
+    writeToFile(outputFile, listOfFiles);
 }
