@@ -10,6 +10,9 @@ fi
 # Start udiskie for auto-mounting of removable media
 udiskie &
 
+# Start pCloud
+pCloud &
+
 # Play startup sound
 mpg123 ~/.assets/sounds/car-startup-sound.mp3 &
 
