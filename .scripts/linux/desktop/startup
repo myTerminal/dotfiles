@@ -14,7 +14,7 @@ udiskie &
 pCloud &
 
 # Play startup sound
-mpg123 ~/.assets/sounds/car-startup-sound.mp3 &
+mpg123 ~/.assets/sounds/car-revving-sound.mp3 &
 
 # Perform device-specific startup tweaks, if set
 if [ -f ~/.device-startup-tweaks ]; then
