@@ -228,7 +228,7 @@ mode $mode_launcher {
                 exec emacs; \
                 exec discord; \
                 exec firefox-developer-edition; \
-                exec firefox; \
+                exec firefox-esr; \
                 exec thunar; \
                 exec keepassxc; \
                 mode "default"

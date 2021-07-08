@@ -41,6 +41,7 @@ tw_execute sudo apt install \
            gparted \
            thunar \
            gvfs \
+           firefox-esr \
            chromium \
            keepassxc \
            evolution \
@@ -81,10 +82,9 @@ tw_log "tunnelbear, rememberthemilk, dynalist, pcloud, key-mon, gamehub, balena-
 
 # TODO: Fix for Debian: picom is here compton
 # TODO: Fix for Debian: dmenu is here i3-dmenu-desktop
-# TODO: Fix for Debian: need to replace firefox with firefox-developer-edition
+# TODO: Fix for Debian: need to replace firefox-esr with firefox-developer-edition
 
 tw_log "Installing packages through snap..."
-tw_execute sudo snap install firefox
 tw_execute sudo snap install discord
 tw_execute sudo snap install postman
 tw_execute sudo snap install rustup --classic
