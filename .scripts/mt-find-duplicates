@@ -5,25 +5,25 @@
 const { argv: [program, thisFile, inputDir, outputFile] } = process;
 const { log } = console;
 
-const { inflateInput, getNamePathPair, getVerticalList, writeToFile } = require('../.assets/libs/node');
+const { inflateInput, getFileStats, getVerticalList, writeToFile } = require('../.assets/libs/node');
 
 const files = inflateInput([inputDir]);
 
 const fileMap = {};
 for (let i = 0; i < files.length; i++) {
-    const namePathPair = getNamePathPair(files[i]);
+    const [filePath, fileName, fileSize] = getFileStats(files[i]);
 
-    const entry = fileMap[namePathPair[1]];
+    const entry = fileMap[fileName];
 
-    if (entry) {
-        entry.push(namePathPair[0]);
+    if (entry && entry[0] === fileSize) {
+        entry.push(filePath);
     } else {
-        fileMap[namePathPair[1]] = [namePathPair[0]];
+        fileMap[fileName] = [fileSize, filePath];
     }
 }
 
 const duplicates = Object.keys(fileMap)
-    .filter(k => fileMap[k].length > 1)
+    .filter(k => fileMap[k].length > 2)
     .map(k => `${k}: ${fileMap[k].join(', ')}`);
 
 const listOfDuplicates = getVerticalList(duplicates);

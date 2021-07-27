@@ -17,12 +17,13 @@ const inflateInput = (inputDirs, parentDir = '/') =>
         []
     );
 
-const getNamePathPair = filePath => {
+const getFileStats = filePath => {
     const elements = filePath.split('/');
 
     return [
         elements.slice(0, elements.length - 1).join('/'),
-        elements[elements.length - 1]
+        elements[elements.length - 1],
+        lstatSync(filePath).size
     ];
 };
 
@@ -35,6 +36,6 @@ const writeToFile = (filePath, text) => {
 };
 
 module.exports.inflateInput = inflateInput;
-module.exports.getNamePathPair = getNamePathPair;
+module.exports.getFileStats = getFileStats;
 module.exports.getVerticalList = getVerticalList;
 module.exports.writeToFile = writeToFile;
