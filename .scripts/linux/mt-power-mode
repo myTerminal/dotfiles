@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# TODO: (entering-the-void) Implement alternate scripts in-place of systemd
 case "${1}" in
     "lock")
         i3lock -c 000000

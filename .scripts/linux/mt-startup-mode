@@ -2,6 +2,7 @@
 
 command=$1
 
+# TODO: (entering-the-void) Implement alternate scripts in-place of systemd
 case "${command}" in
     minimal | console )
         sudo systemctl disable display-manager.service
