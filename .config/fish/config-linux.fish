@@ -2,6 +2,7 @@
 add-to-path ~/.scripts/linux
 
 # Add rest of the distro specific scripts
+# TODO: (entering-the-void) Implement a branch for Void
 if test (command -v pacman)
     add-to-path ~/.scripts/linux/arch
 else if test (command -v apt)

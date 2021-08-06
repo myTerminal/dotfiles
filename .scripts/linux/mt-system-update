@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # Run update through the primary package manager
+# TODO: (entering-the-void) Implement a branch for Void
 if [ $(command -v apt) ]; then
     sudo apt update -y && sudo apt upgrade -y
 elif [ $(command -v dnf) ]; then
