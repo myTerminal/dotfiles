@@ -3,7 +3,7 @@
 # Init
 echo "Loading resources..."
 mt_setup_dir="$(dirname "${BASH_SOURCE[0]}")"
-. "${mt_setup_dir}/tasks"
+. "${mt_setup_dir}/common/tasks"
 
 # Prepare twiner
 echo "Preparing twiner..."

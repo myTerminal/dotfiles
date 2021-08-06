@@ -2,20 +2,6 @@
 
 tw_log "Setting up Linux..."
 
-# Load common tasks
-. "${mt_setup_dir}/linux/tasks/common"
-
-# Load distro specific tasks
-if [ $(command -v pacman) ]; then
-    tw_log "Arch-based Linux found"
-    . "${mt_setup_dir}/linux/tasks/arch"
-elif [ $(command -v apt) ]; then
-    tw_log "Debian-based Linux found"
-    . "${mt_setup_dir}/linux/tasks/debian"
-else
-    tw_abort_because "Unknown Linux!"
-fi
-
 tw_confirm "Set hostname?" \
            tw_task_set_hostname \
            "Setting of hostname skipped."
@@ -28,9 +14,16 @@ tw_confirm "Add additional software sources?" \
            tw_task_add_additional_software_sources \
            "Addition of additional software sources skipped!"
 
-tw_confirm_and_source "Install packages?" \
-                      "${mt_setup_dir}/linux/packages/install" \
-                      "Installation of packages skipped!"
+# Run distro-specific setup, quit for unknown distro
+if [ $(command -v pacman) ]; then
+    tw_log "Arch-based Linux found"
+    . "${mt_setup_dir}/linux/arch/run"
+elif [ $(command -v apt) ]; then
+    tw_log "Debian-based Linux found"
+    . "${mt_setup_dir}/linux/debian/run"
+else
+    tw_abort_because "Unknown Linux!"
+fi
 
 tw_confirm "Set up Docker?" \
            mt_task_linux_setup_docker \

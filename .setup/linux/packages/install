@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-# Install distro specific packages
-if [ $(command -v pacman) ]; then
-    . "${mt_setup_dir}/linux/packages/arch"
-elif [ $(command -v apt) ]; then
-    . "${mt_setup_dir}/linux/packages/debian"
-fi

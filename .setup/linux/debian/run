@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+tw_log "Loading Common tasks..."
+. "${mt_setup_dir}/linux/common/tasks"
+
+tw_log "Loading tasks for Debian..."
+. "${mt_setup_dir}/linux/debian/tasks"
+
+tw_confirm_and_source "Install packages?" \
+                      "${mt_setup_dir}/linux/debian/install-packages" \
+                      "Installation of packages skipped!"
