@@ -2,11 +2,12 @@
 add-to-path ~/.scripts/linux
 
 # Add rest of the distro specific scripts
-# TODO: (entering-the-void) Implement a branch for Void
 if test (command -v pacman)
     add-to-path ~/.scripts/linux/arch
 else if test (command -v apt)
     add-to-path ~/.scripts/linux/debian
+else if test (command -v xbps-query)
+    add-to-path ~/.scripts/linux/void
 end
 
 # Set up aliases

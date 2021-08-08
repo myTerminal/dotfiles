@@ -4,11 +4,12 @@
 export PATH=$PATH:~/.scripts/linux
 
 # Add rest of the distro specific scripts
-# TODO: (entering-the-void) Implement a branch for Void
 if [ $(command -v pacman) ]; then
     export PATH=$PATH:~/.scripts/linux/arch
 elif [ $(command -v apt) ]; then
     export PATH=$PATH:~/.scripts/linux/debian
+elif [ $(command -v xbps-query) ]; then
+    export PATH=$PATH:~/.scripts/linux/void
 fi
 
 # Configure prompt
