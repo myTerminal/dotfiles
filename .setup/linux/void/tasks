@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Function to install peripheral drivers
+mt_task_linux_install_peripherals_drivers () {
+    # TODO: (entering-the-void) Implement installing peripheral drivers
+    tw_log "Not implemented!"
+}
+
+# Function to setup startup services
+mt_task_linux_setup_startup_services () {
+    # TODO: (entering-the-void) Implement setting up startup services
+    tw_log "Not implemented!"
+}
+
+# Function to perform visual tweaks at GRUB and DM level
+mt_task_linux_perform_visual-tweaks () {
+    # TODO: (entering-the-void) Implement visual tweaks for GRUB
+    tw_log "Not implemented!"
+}

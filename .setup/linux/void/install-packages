@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+tw_log "Installing core packages..."
+# TODO: (entering-the-void) Implement installing core packages
+
+tw_log "Installing graphical packages..."
+# TODO: (entering-the-void) Implement installing graphical packages
+
+tw_log "Installing more packages..."
+# TODO: (entering-the-void) Implement installing "more" packages
+
+tw_log "Installing packages through flatpak..."
+# TODO: (entering-the-void) Implement installing packages through flathub
+
+tw_log "Performing a few package-dependent configs..."
+# TODO: (entering-the-void) Implement performing package-dependent configs
