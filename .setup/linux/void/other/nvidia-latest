@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-# TODO: (entering-the-void) Add Nvidia packages to the list
-mt_packages=()
+mt_packages=(nvidia nvidia-libs-32bit)
 
 if [ "${1}" = "uninstall" ]; then
     sudo xbps-remove -Ry "${mt_packages[@]}"

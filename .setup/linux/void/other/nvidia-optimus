@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-# TODO: (entering-the-void) Implement setting up Nvidia Optimus
+# TODO: Implement for Void
 tw_log "Not implemented!"
