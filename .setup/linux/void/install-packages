@@ -1,16 +1,87 @@
 #!/usr/bin/env bash
 
 tw_log "Installing core packages..."
-# TODO: (entering-the-void) Implement installing core packages
+tw_execute xbps-install -S \
+           tmux \
+           fish-shell \
+           fd \
+           exa \
+           bat \
+           ncdu \
+           ripgrep \
+           fzf \
+           emacs \
+           aspell \
+           aspell-en \
+           tig \
+           ranger \
+           xarchiver \
+           htop \
+           udisks2 \
+           NetworkManager \
+           bind-utils \
+           weechat \
+           docker \
+           nodejs \
+           rustup \
+           brightnessctl \
+           acpi \
+           numlockx \
+           neofetch \
+           wget \
+           openssh
 
 tw_log "Installing graphical packages..."
-# TODO: (entering-the-void) Implement installing graphical packages
+tw_execute xbps-install -S \
+           picom \
+           i3 \
+           i3-lock \
+           xfce4 \
+           feh \
+           dmenu \
+           rofi \
+           kitty \
+           udiskie \
+           gparted \
+           Thunar \
+           gvfs \
+           syncthing-gtk \
+           firefox \
+           chromium \
+           keepassxc \
+           evolution \
+           transmission \
+           virt-manager \
+           libreoffice \
+           blueman \
+           shotwell \
+           gimp \
+           darktable \
+           clementine \
+           mpg123 \
+           pavucontrol \
+           gstreamer1 \
+           pulseaudio \
+           pulseeffects \
+           audacity \
+           easytag \
+           vlc \
+           handbrake \
+           blender \
+           youtube-dl \
+           kodi \
+           flameshot \
+           obs \
+           peek \
+           steam \
+           gamehub \
+           barrier
 
-tw_log "Installing more packages..."
-# TODO: (entering-the-void) Implement installing "more" packages
+tw_log "The following packages are absent on Void repos:"
+tw_log "authy, postman, tunnelbear, rememberthemilk, dynalist, pcloud, balena-etcher, nomachine, edex-ui"
 
 tw_log "Installing packages through flatpak..."
-# TODO: (entering-the-void) Implement installing packages through flathub
+tw_execute ~/.scripts/linux/mt-flatpak-install discord com.discordapp.Discord
 
 tw_log "Performing a few package-dependent configs..."
-# TODO: (entering-the-void) Implement performing package-dependent configs
+tw_execute sudo usermod -aG libvirt ismail
