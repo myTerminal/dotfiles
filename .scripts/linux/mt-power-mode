@@ -1,40 +1,93 @@
 #!/usr/bin/env bash
 
-# TODO: (entering-the-void) Implement alternate scripts in-place of systemd
-case "${1}" in
-    "lock")
-        i3lock -c 000000
-        ;;
+command=$1
 
-    "quit")
-        i3-msg exit
-        ;;
+# Function to switch power using systemd
+switch-power-mode-with-systemd () {
+    case "${command}" in
+        "lock")
+            i3lock -c 000000
+            ;;
 
-    "sleep" | "suspend" )
-        systemctl suspend
-        ;;
+        "quit")
+            i3-msg exit
+            ;;
 
-    "hibernate" | "poweroff" )
-        systemctl hibernate
-        ;;
+        "sleep" | "suspend" )
+            systemctl suspend
+            ;;
 
-    "shutdown" | "poweroff" )
-        systemctl poweroff
-        ;;
+        "hibernate" | "poweroff" )
+            systemctl hibernate
+            ;;
 
-    "restart" | "reboot" )
-        systemctl reboot
-        ;;
+        "shutdown" | "poweroff" )
+            systemctl poweroff
+            ;;
 
-    "awake" )
-        systemctl mask sleep.target suspend.target
-        ;;
+        "restart" | "reboot" )
+            systemctl reboot
+            ;;
 
-    "sleepy" )
-        systemctl unmask sleep.target suspend.target
-        ;;
+        "awake" )
+            systemctl mask sleep.target suspend.target
+            ;;
 
-    *)
-        echo "Not implemented!"
-        ;;
-esac
+        "sleepy" )
+            systemctl unmask sleep.target suspend.target
+            ;;
+
+        *)
+            echo "Not implemented!"
+            ;;
+    esac
+}
+
+# Function to switch power using runit
+switch-power-mode-with-runit () {
+    case "${command}" in
+        "lock")
+            i3lock -c 000000
+            ;;
+
+        "quit")
+            i3-msg exit
+            ;;
+
+        "sleep" | "suspend" )
+            loginctl suspend
+            ;;
+
+        "hibernate" | "poweroff" )
+            loginctl hibernate
+            ;;
+
+        "shutdown" | "poweroff" )
+            loginctl poweroff
+            ;;
+
+        "restart" | "reboot" )
+            loginctl reboot
+            ;;
+
+        "awake" )
+            echo "Not implemented!"
+            ;;
+
+        "sleepy" )
+            echo "Not implemented!"
+            ;;
+
+        *)
+            echo "Not implemented!"
+            ;;
+    esac
+}
+
+if [ $(command -v systemctl) ]; then
+    switch-power-mode-with-systemd
+elif [ $(command -v sv) ]; then
+    switch-power-mode-with-runit
+else
+    echo "Not implemented!"
+fi

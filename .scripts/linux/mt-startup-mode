@@ -2,15 +2,40 @@
 
 command=$1
 
-# TODO: (entering-the-void) Implement alternate scripts in-place of systemd
-case "${command}" in
-    minimal | console )
-        sudo systemctl disable display-manager.service
-        echo "Switched startup mode to console!"
-        ;;
+# Function to switch startup mode using systemd
+switch-startup-mode-with-systemd () {
+    case "${command}" in
+        minimal | console )
+            sudo systemctl disable display-manager.service
+            echo "Switched startup mode to console!"
+            ;;
 
-    *)
-        sudo systemctl enable sddm
-        echo "Switched startup mode to graphical!"
-        ;;
-esac
+        *)
+            sudo systemctl enable sddm
+            echo "Switched startup mode to graphical!"
+            ;;
+    esac
+}
+
+# Function to switch startup mode using runit
+switch-startup-mode-with-runit () {
+    case "${command}" in
+        minimal | console )
+            sudo rm /var/service/sddm
+            echo "Switched startup mode to console!"
+            ;;
+
+        *)
+            sudo ln -s /etc/sv/sddm /var/service
+            echo "Switched startup mode to graphical!"
+            ;;
+    esac
+}
+
+if [ $(command -v systemctl) ]; then
+    switch-startup-mode-with-systemd
+elif [ $(command -v sv) ]; then
+    switch-startup-mode-with-runit
+else
+    echo "Not implemented!"
+fi

@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 
 # Run update through the primary package manager
-# TODO: (entering-the-void) Implement a branch for Void
 if [ $(command -v apt) ]; then
     sudo apt update -y && sudo apt upgrade -y
 elif [ $(command -v dnf) ]; then
     sudo dnf update -y
 elif [ $(command -v pacman) ]; then
     sudo pacman -Syu
+elif [ $(command -v xbps-query) ]; then
+    sudo xbps-install -Syu
 fi
 
 # Update snaps, if available
