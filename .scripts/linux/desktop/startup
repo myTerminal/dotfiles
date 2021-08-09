@@ -13,6 +13,9 @@ udiskie &
 # Start pCloud
 pCloud &
 
+# Start syncthing, if not started as a service
+syncthing 1>/dev/null &
+
 # Play startup sound
 mpg123 ~/.assets/sounds/car-revving-sound.mp3 &
 
