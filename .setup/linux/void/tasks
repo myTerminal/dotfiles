@@ -12,7 +12,7 @@ mt_task_linux_setup_startup_services () {
     # Taken care of my the script ~/.scripts/linux/desktop/startup
 
     # Start network manager service
-    tw_execute ln -s /etc/sv/NetworkManager /var/service
+    tw_execute sudo ln -s /etc/sv/NetworkManager /var/service
 }
 
 # Function to perform visual tweaks at GRUB and DM level
