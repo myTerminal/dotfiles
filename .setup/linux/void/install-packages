@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 tw_log "Installing core packages..."
-tw_execute xbps-install -S \
+tw_execute sudo xbps-install -S \
            tmux \
            fish-shell \
            fd \
@@ -32,7 +32,7 @@ tw_execute xbps-install -S \
            openssh
 
 tw_log "Installing graphical packages..."
-tw_execute xbps-install -S \
+tw_execute sudo xbps-install -S \
            picom \
            i3 \
            i3-lock \
