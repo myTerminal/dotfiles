@@ -25,7 +25,11 @@ mt_task_linux_change_user_shell () {
 # Function to install toolchain for Rust
 mt_task_linux_install_rust_toolchain() {
     tw_log "Installing stable toolchain for Rust..."
-    tw_execute rustup toolchain install stable
+    if [ $(command -v rustup-init) ]; then
+        tw_execute rustup-init --default-toolchain stable --profile default -y
+    else
+        tw_execute rustup toolchain install stable
+    fi
 }
 
 # Function to set up GUI
