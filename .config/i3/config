@@ -227,6 +227,7 @@ mode $mode_launcher {
         bindsym a \
                 exec emacs; \
                 exec discord; \
+                exec firefox; \
                 exec firefox-developer-edition; \
                 exec firefox-esr; \
                 exec thunar; \
