@@ -85,4 +85,13 @@ tw_log "Installing packages through flatpak..."
 tw_execute ~/.scripts/linux/mt-flatpak-install discord com.discordapp.Discord
 
 tw_log "Performing a few package-dependent configs..."
+tw_log "Adding user to group 'libvirt' for virt-manager..."
 tw_execute sudo usermod -aG libvirt ismail
+tw_log "Installing 32bit libraries for steam..."
+tw_execute sudo xbps-install -S \
+           vulkan-loader \
+           vulkan-loader-32bit \
+           libgcc-32bit \
+           libstdc++-32bit \
+           libdrm-32bit \
+           libglvnd-32bit
