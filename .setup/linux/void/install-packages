@@ -10,7 +10,7 @@ tw_execute sudo xbps-install -S \
            ncdu \
            ripgrep \
            fzf \
-           emacs \
+           emacs-gtk3 \
            aspell \
            aspell-en \
            tig \
