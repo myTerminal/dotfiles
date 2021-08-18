@@ -95,3 +95,4 @@ tw_log "Installing packages through flatpak..."
 
 tw_log "Performing a few package-dependent configs..."
 tw_execute sudo usermod -aG libvirt ismail
+tw_execute xdg-settings set default-web-browser firefox-esr.desktop
