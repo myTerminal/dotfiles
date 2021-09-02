@@ -51,7 +51,7 @@ tw_execute sudo xbps-install -S \
            chromium \
            keepassxc \
            evolution \
-           transmission \
+           transmission-gtk \
            virt-manager \
            libreoffice \
            blueman \
