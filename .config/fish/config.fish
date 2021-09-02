@@ -3,6 +3,7 @@ add-to-path ~/.scripts
 
 # Update PATH for cargo(rust)
 add-to-path ~/.cargo/bin
+add-to-path ~/.cargo/env
 
 # Set custom environment variables
 set -x MT_PATH_STORE ~/_store
