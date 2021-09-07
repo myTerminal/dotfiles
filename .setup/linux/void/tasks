@@ -11,6 +11,10 @@ mt_task_linux_setup_startup_services () {
     # Setup syncthing service
     # Taken care of my the script ~/.scripts/linux/desktop/startup
 
+    # Start libvirtd and virtlogd for virt-manager
+    tw_execute sudo ln -s /etc/sv/libvirtd /var/service/
+    tw_execute sudo ln -s /etc/sv/virtlogd /var/service/
+
     # Start network manager service
     tw_execute sudo ln -s /etc/sv/NetworkManager /var/service
 
