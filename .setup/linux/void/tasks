@@ -13,6 +13,9 @@ mt_task_linux_setup_startup_services () {
 
     # Start network manager service
     tw_execute sudo ln -s /etc/sv/NetworkManager /var/service
+
+    # Start ssh service
+    tw_execute sudo ln -s /etc/sv/sshd /var/service
 }
 
 # Function to perform visual tweaks at GRUB and DM level
