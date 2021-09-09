@@ -18,6 +18,9 @@ mt_task_linux_setup_startup_services () {
     # Start network manager service
     tw_execute sudo ln -s /etc/sv/NetworkManager /var/service
 
+    # Start bluetooth service
+    tw_execute sudo ln -s /etc/sv/bluetoothd /var/service
+
     # Start ssh service
     tw_execute sudo ln -s /etc/sv/sshd /var/service
 }

@@ -27,6 +27,10 @@ mt_task_linux_setup_startup_services () {
     tw_execute systemctl enable NetworkManager.service
     tw_execute systemctl start NetworkManager.service
 
+    # Start bluetooth service
+    tw_execute systemctl enable bluetooth
+    tw_execute systemctl start bluetooth
+
     # Start ssh service
     tw_execute systemctl enable ssh
     tw_execute systemctl start ssh
