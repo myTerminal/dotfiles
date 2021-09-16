@@ -4,23 +4,23 @@ mt_response=$(echo -e "Auto (3840x2160)\nMedium (2560x1440)\nLow (1920x1080)\nPr
 
 case "${mt_response}" in
     "Auto (3840x2160)")
-        xrandr --output "DP-2" --auto --output "HDMI-0" --off
+        xrandr --output "eDP-1" --auto --output "HDMI-0" --off
         ;;
 
     "Medium (2560x1440)")
-        xrandr --output "DP-2" --mode 2560x1440 --output "HDMI-0" --off
+        xrandr --output "eDP-1" --mode 2560x1440 --output "HDMI-0" --off
         ;;
 
     "Low (1920x1080)")
-        xrandr --output "DP-2" --mode 1920x1080 --output "HDMI-0" --off
+        xrandr --output "eDP-1" --mode 1920x1080 --output "HDMI-0" --off
         ;;
 
     "Primary => External")
-        xrandr --output "DP-2" --auto --output "HDMI-0" --auto --right-of "DP-2"
+        xrandr --output "eDP-1" --auto --output "HDMI-0" --auto --right-of "eDP-1"
         ;;
 
     "External <= Primary")
-        xrandr --output "DP-2" --auto --output "HDMI-0" --auto --left-of "DP-2"
+        xrandr --output "eDP-1" --auto --output "HDMI-0" --auto --left-of "eDP-1"
         ;;
 
     *)
