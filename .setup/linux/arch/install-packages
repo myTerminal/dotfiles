@@ -41,6 +41,7 @@ tw_execute sudo pacman -S \
            dmenu \
            rofi \
            kitty \
+           xsel \
            udiskie \
            gparted \
            thunar \

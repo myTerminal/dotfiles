@@ -37,6 +37,7 @@ tw_execute sudo apt install \
            feh \
            rofi \
            kitty \
+           xsel \
            udiskie \
            gparted \
            thunar \

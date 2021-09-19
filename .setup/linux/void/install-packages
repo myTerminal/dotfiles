@@ -42,6 +42,7 @@ tw_execute sudo xbps-install -S \
            dmenu \
            rofi \
            kitty \
+           xsel \
            udiskie \
            gparted \
            Thunar \
