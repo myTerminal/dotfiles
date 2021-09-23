@@ -40,6 +40,7 @@ tw_execute brew install --cask \
            remember-the-milk \
            dynalist \
            discord \
+           element \
            kid3 \
            gimp \
            darktable \

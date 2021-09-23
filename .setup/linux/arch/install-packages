@@ -85,6 +85,7 @@ tw_execute paru -S --mflags --skipinteg \
            rememberthemilk \
            dynalist-desktop \
            discord \
+           element-desktop \
            syncthing-gtk \
            pcloud-drive \
            gamehub \

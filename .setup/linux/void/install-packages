@@ -86,6 +86,7 @@ tw_log "authy, postman, tunnelbear, rememberthemilk, dynalist, pcloud, balena-et
 tw_log "Installing packages through flatpak..."
 # Discord still won't work and will need to run inside a web-browser
 tw_execute ~/.scripts/linux/mt-flatpak-install discord com.discordapp.Discord
+tw_execute ~/.scripts/linux/mt-flatpak-install element im.riot.Riot
 
 tw_log "Performing a few package-dependent configs..."
 tw_log "Adding user to group 'libvirt' for virt-manager..."

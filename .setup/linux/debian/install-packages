@@ -92,7 +92,7 @@ tw_execute sudo snap install rustup --classic
 tw_execute sudo snap install authy --beta
 
 tw_log "Installing packages through flatpak..."
-# None for now
+tw_execute ~/.scripts/linux/mt-flatpak-install element im.riot.Riot
 
 tw_log "Performing a few package-dependent configs..."
 tw_execute sudo usermod -aG libvirt ismail
