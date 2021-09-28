@@ -45,7 +45,7 @@ tw_execute sudo apt install \
            firefox-esr \
            chromium \
            keepassxc \
-           evolution \
+           thunderbird \
            transmission \
            virt-manager \
            libreoffice \

@@ -48,7 +48,7 @@ tw_execute sudo pacman -S \
            gvfs \
            firefox-developer-edition \
            keepassxc \
-           evolution \
+           thunderbird \
            transmission-gtk \
            virtualbox \
            libreoffice-fresh \
