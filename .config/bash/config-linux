@@ -3,15 +3,6 @@
 # Add generic Linux scripts
 export PATH=$PATH:~/.scripts/linux
 
-# Add rest of the distro specific scripts
-if [ $(command -v pacman) ]; then
-    export PATH=$PATH:~/.scripts/linux/arch
-elif [ $(command -v apt) ]; then
-    export PATH=$PATH:~/.scripts/linux/debian
-elif [ $(command -v xbps-query) ]; then
-    export PATH=$PATH:~/.scripts/linux/void
-fi
-
 # Configure prompt
 PS1='\u@\h:\w\$ '
 
