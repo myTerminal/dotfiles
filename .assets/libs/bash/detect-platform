@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+tw_platform="Unknown"
+
+if [[ -f /bedrock/etc/bedrock-release ]]; then
+    tw_platform="Bedrock"
+elif [ $(command -v xbps-query) ]; then
+    tw_platform="Void"
+elif [ $(command -v pacman) ]; then
+    tw_platform="Arch"
+elif [ $(command -v dnf) ]; then
+    tw_platform="Fedora"
+elif [ $(command -v apt) ]; then
+    tw_platform="Debian"
+fi
