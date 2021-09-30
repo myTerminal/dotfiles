@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+tw_init_system="Unknown"
+
+if [ $(command -v systemctl) ]; then
+    tw_init_system="SystemD"
+elif [ $(command -v sv) ]; then
+    tw_init_system="Runit"
+fi
