@@ -1,15 +1,20 @@
 #!/usr/bin/env bash
 
 # Run update through the primary package manager
-if [ $(command -v apt) ]; then
-    sudo apt update -y && sudo apt upgrade -y
-elif [ $(command -v dnf) ]; then
-    sudo dnf update -y
-elif [ $(command -v pacman) ]; then
-    sudo pacman -Syu
-elif [ $(command -v xbps-query) ]; then
-    sudo xbps-install -Syu
-fi
+. ~/.assets/libs/bash/detect-platform
+case "${tw_platform}" in
+    Arch)
+        sudo pacman -Syu
+        ;;
+
+    Debian)
+        sudo apt update -y && sudo apt upgrade -y
+        ;;
+
+    Void)
+        sudo xbps-install -Syu
+        ;;
+esac
 
 # Update snaps, if available
 if [ $(command -v snap) ]; then

@@ -15,18 +15,27 @@ tw_confirm "Add additional software sources?" \
            "Addition of additional software sources skipped!"
 
 # Run distro-specific setup, quit for unknown distro
-if [ $(command -v pacman) ]; then
-    tw_log "Arch-based Linux found"
-    . "${mt_setup_dir}/linux/arch/run"
-elif [ $(command -v apt) ]; then
-    tw_log "Debian-based Linux found"
-    . "${mt_setup_dir}/linux/debian/run"
-elif [ $(command -v xbps-query) ]; then
-    tw_log "Void Linux found"
-    . "${mt_setup_dir}/linux/void/run"
-else
-    tw_abort_because "Unknown Linux!"
-fi
+. ~/.assets/libs/bash/detect-platform
+case "${tw_platform}" in
+    Arch)
+        tw_log "Arch-based Linux found"
+        . "${mt_setup_dir}/linux/arch/run"
+        ;;
+
+    Debian)
+        tw_log "Debian-based Linux found"
+        . "${mt_setup_dir}/linux/debian/run"
+        ;;
+
+    Void)
+        tw_log "Void Linux found"
+        . "${mt_setup_dir}/linux/void/run"
+        ;;
+
+    *)
+        tw_abort_because "Unknown Linux!"
+        ;;
+esac
 
 tw_confirm "Set up Docker?" \
            mt_task_linux_setup_docker \
