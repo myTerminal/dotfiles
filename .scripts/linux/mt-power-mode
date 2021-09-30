@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+. ~/.assets/libs/bash/detect-init-system
+
 command=$1
 
 # Function to switch power using systemd
@@ -84,10 +86,16 @@ switch-power-mode-with-runit () {
     esac
 }
 
-if [ $(command -v systemctl) ]; then
-    switch-power-mode-with-systemd
-elif [ $(command -v sv) ]; then
-    switch-power-mode-with-runit
-else
-    echo "Not implemented!"
-fi
+case "${tw_init_system}" in
+    SystemD)
+        switch-power-mode-with-systemd
+        ;;
+
+    Runit)
+        switch-power-mode-with-runit
+        ;;
+
+    *)
+        echo "Not implemented!"
+        ;;
+esac

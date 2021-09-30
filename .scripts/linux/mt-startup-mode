@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+. ~/.assets/libs/bash/detect-init-system
+
 command=$1
 
 # Function to switch startup mode using systemd
@@ -32,10 +34,16 @@ switch-startup-mode-with-runit () {
     esac
 }
 
-if [ $(command -v systemctl) ]; then
-    switch-startup-mode-with-systemd
-elif [ $(command -v sv) ]; then
-    switch-startup-mode-with-runit
-else
-    echo "Not implemented!"
-fi
+case "${tw_init_system}" in
+    SystemD)
+        switch-startup-mode-with-systemd
+        ;;
+
+    Runit)
+        switch-startup-mode-with-runit
+        ;;
+
+    *)
+        echo "Not implemented!"
+        ;;
+esac

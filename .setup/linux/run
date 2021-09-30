@@ -2,6 +2,10 @@
 
 tw_log "Setting up Linux..."
 
+tw_log "Detecting distro and init system..."
+. ~/.assets/libs/bash/detect-platform
+. ~/.assets/libs/bash/detect-init-system
+
 tw_confirm "Set hostname?" \
            tw_task_set_hostname \
            "Setting of hostname skipped."
@@ -15,7 +19,6 @@ tw_confirm "Add additional software sources?" \
            "Addition of additional software sources skipped!"
 
 # Run distro-specific setup, quit for unknown distro
-. ~/.assets/libs/bash/detect-platform
 case "${tw_platform}" in
     Arch)
         tw_log "Arch-based Linux found"

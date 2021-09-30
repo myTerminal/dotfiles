@@ -6,11 +6,15 @@ mt_task_linux_setup_docker () {
     tw_execute sudo groupadd docker
     tw_execute sudo gpasswd -a ${USER} docker
 
-    if [ $(command -v systemctl) ]; then
-        tw_execute sudo systemctl enable docker
-    elif [ $(command -v sv) ]; then
-        tw_execute sudo ln -s /etc/sv/docker /var/service
-    fi
+    case "${tw_init_system}" in
+        SystemD)
+            tw_execute sudo systemctl enable docker
+            ;;
+
+        Runit)
+            tw_execute sudo ln -s /etc/sv/docker /var/service
+            ;;
+    esac
 }
 
 # Function to change user shell
