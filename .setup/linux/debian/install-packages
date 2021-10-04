@@ -23,6 +23,7 @@ tw_execute sudo apt install \
            weechat \
            docker \
            npm \
+           cargo \
            brightnessctl \
            acpi \
            neofetch \
@@ -79,19 +80,15 @@ tw_execute sudo apt install \
 
 # TODO: Fix for Debian: find a way to install the below graphical packages
 tw_log "The following packages were not found on Debian archives:"
-tw_log "tunnelbear, rememberthemilk, dynalist, pcloud, key-mon, gamehub, balena-etcher, nomachine, edex-ui"
+tw_log "authy, tunnelbear, rememberthemilk, dynalist, pcloud, key-mon, gamehub, balena-etcher, nomachine, edex-ui"
 
 # TODO: Fix for Debian: picom is here compton
 # TODO: Fix for Debian: dmenu is here i3-dmenu-desktop
 # TODO: Fix for Debian: need to replace firefox-esr with firefox-developer-edition
 
-tw_log "Installing packages through snap..."
-tw_execute sudo snap install discord
-tw_execute sudo snap install postman
-tw_execute sudo snap install rustup --classic
-tw_execute sudo snap install authy --beta
-
 tw_log "Installing packages through flatpak..."
+tw_execute ~/.scripts/linux/mt-flatpak-install postman com.getpostman.Postman
+tw_execute ~/.scripts/linux/mt-flatpak-install discord com.discordapp.Discord
 tw_execute ~/.scripts/linux/mt-flatpak-install element im.riot.Riot
 
 tw_log "Performing a few package-dependent configs..."
