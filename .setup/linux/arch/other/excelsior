@@ -48,11 +48,6 @@ sudo pacman -S tlp acpi_call powertop --noconfirm
 systemctl enable tlp
 systemctl start tlp
 
-# Set up auto-cpufreq for power optimization
-paru -S auto-cpufreq --noconfirm
-systemctl enable auto-cpufreq
-systemctl start auto-cpufreq
-
 # TODO: Fix display scaling
 
 # TODO: Fix display flickering on integrated mode
