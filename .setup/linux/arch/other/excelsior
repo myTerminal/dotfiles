@@ -16,8 +16,8 @@ EnableHiDPI=true" | sudo tee /etc/sddm.conf
 systemctl enable bluetooth
 systemctl start bluetooth
 
-# Setup Nvidia optimus for GPU
-. ~/.setup/linux/other/nvidia-optimus
+# Install Nvidia drivers
+. ~/.setup/linux/other/nvidia-latest
 
 # Fix audio input and output
 sudo pacman -S sof-firmware --noconfirm

@@ -11,8 +11,8 @@ EnableHiDPI=true
 [Wayland]
 EnableHiDPI=true" | sudo tee /etc/sddm.conf
 
-# Setup Nvidia optimus for GPU
-. ~/.setup/linux/other/nvidia-optimus
+# Install Nvidia drivers
+. ~/.setup/linux/other/nvidia-latest
 
 # Fix audio input and output
 sudo xbps-install -Sy alsa-firmware sof-firmware
