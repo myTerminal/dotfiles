@@ -15,7 +15,7 @@ EnableHiDPI=true" | sudo tee /etc/sddm.conf
 . ~/.setup/linux/other/nvidia-optimus
 
 # Fix audio input and output
-sudo xbps-install -Sy sof-firmware
+sudo xbps-install -Sy alsa-firmware sof-firmware
 echo "
 pcm.!default {
   type hw
@@ -39,12 +39,12 @@ echo "
 Section \"InputClass\"
     Identifier \"libinput touchpad catchall\"
     MatchIsTouchpad \"on\"
-    MatchDevicePath \"/dev/input/event19\"
+    MatchDevicePath \"/dev/input/event*\"
     Driver \"libinput\"
 EndSection
 " | sudo tee /etc/X11/xorg.conf.d/40-libinput.conf
 echo "
-xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Accel Speed' 0.5
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Accel Speed' 1.0
 xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Click Method Enabled' 0 1
 xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Enabled' 1
 xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled' 1
@@ -53,7 +53,7 @@ xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled
 # Install tlp and more for power management
 sudo xbps-install -Sy tlp acpi_call-dkms powertop
 ~/.scripts/linux/mt-resume-battery-charge-thresholds
-ln -s /etc/sv/tlp /var/service
+sudo ln -s /etc/sv/tlp /var/service
 
 # TODO: Fix display scaling
 
