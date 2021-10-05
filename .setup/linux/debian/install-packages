@@ -17,6 +17,7 @@ tw_execute sudo apt install \
            ranger \
            xarchiver \
            htop \
+           psmisc \
            udisks2 \
            network-manager \
            dnsutils \

@@ -17,6 +17,7 @@ tw_execute sudo xbps-install -S \
            ranger \
            xarchiver \
            htop \
+           psmisc \
            udisks2 \
            NetworkManager \
            bind-utils \

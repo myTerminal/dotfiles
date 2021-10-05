@@ -19,6 +19,7 @@ tw_execute sudo pacman -S \
            ranger \
            xarchiver \
            htop \
+           psmisc \
            udisks2 \
            networkmanager \
            bind \
