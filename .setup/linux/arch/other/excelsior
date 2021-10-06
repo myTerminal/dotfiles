@@ -20,7 +20,7 @@ systemctl start bluetooth
 . ~/.setup/linux/other/nvidia-latest
 
 # Fix audio input and output
-sudo pacman -S sof-firmware --noconfirm
+sudo pacman -S alsa-firmware sof-firmware --noconfirm
 
 # Enable Dolby Atmos Effect through pulseeffects
 sudo pacman -S pulseeffects --noconfirm
