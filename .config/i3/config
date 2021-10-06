@@ -331,6 +331,3 @@ bindsym $mod+Shift+x exec ~/.scripts/linux/mt-power-mode-interactive
 bindsym $mod+Shift+g exec ~/.scripts/linux/mt-gpu-mode-interactive
 bindsym $mod+Shift+d exec ~/.scripts/linux/mt-display-mode-interactive
 bindsym $mod+Shift+b exec ~/.scripts/linux/mt-brightness-mode-interactive
-
-# Execute startup tasks
-exec ~/.scripts/linux/desktop/startup
