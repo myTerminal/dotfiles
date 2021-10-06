@@ -51,7 +51,7 @@ tw_execute sudo pacman -S \
            keepassxc \
            thunderbird \
            transmission-gtk \
-           virtualbox \
+           virt-manager \
            libreoffice-fresh \
            blueman \
            shotwell \
@@ -108,3 +108,10 @@ tw_execute paru -S --mflags --skipinteg \
 
 # Inbuilt packages
 # (None yet)
+
+tw_log "Performing a few package-dependent configs..."
+tw_log "Adding user to group 'libvirt' for virt-manager..."
+tw_execute sudo usermod -aG libvirt ismail
+# TODO: Implement setting the default web-browser
+tw_log "Installing 32bit libraries for steam..."
+# TODO: Implement installing additional 32-bit libraries for Nvidia/steam
