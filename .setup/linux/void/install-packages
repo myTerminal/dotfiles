@@ -93,7 +93,7 @@ tw_log "Performing a few package-dependent configs..."
 tw_log "Adding user to group 'libvirt' for virt-manager..."
 tw_execute sudo usermod -aG libvirt ismail
 tw_execute xdg-settings set default-web-browser firefox.desktop
-tw_log "Installing 32bit libraries for steam..."
+tw_log "Installing 32-bit libraries for Nvidia..."
 tw_execute sudo xbps-install -S \
            vulkan-loader \
            vulkan-loader-32bit \

@@ -95,6 +95,6 @@ tw_log "Performing a few package-dependent configs..."
 tw_log "Adding user to group 'libvirt' for virt-manager..."
 tw_execute sudo usermod -aG libvirt ismail
 tw_execute xdg-settings set default-web-browser firefox-esr.desktop
-tw_log "Installing 32bit libraries for steam..."
+tw_log "Installing 32-bit libraries for Nvidia..."
 tw_execute sudo apt install \
            libgl1-nvidia-glvnd-glx:i386
