@@ -109,7 +109,7 @@ mt_task_linux_install_fonts () {
     tw_execute mv ~/_temp/distr/ttf ~/.local/share/fonts/FiraCode
     tw_execute rm -rf ~/_temp
 
-    tw_log "Installing FiraCode..."
+    tw_log "Installing Liberation..."
     tw_execute mkdir -p ~/.local/share/fonts
     tw_execute mkdir ~/_temp
     tw_execute cd ~/_temp
