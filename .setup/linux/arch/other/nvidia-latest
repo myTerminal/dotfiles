@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 
-mt_packages=(nvidia \
-                 nvidia-utils \
-                 nvidia-settings \
-                 lib32-nvidia-utils)
+mt_nvidia_packages=(nvidia \
+                        nvidia-utils \
+                        nvidia-settings \
+                        lib32-nvidia-utils)
 
 if [ "${1}" = "uninstall" ]; then
-    sudo pacman -R "${mt_packages[@]}" --noconfirm
+    sudo pacman -R "${mt_nvidia_packages[@]}" --noconfirm
 else
-    sudo pacman -S "${mt_packages[@]}" --noconfirm
+    sudo pacman -S "${mt_nvidia_packages[@]}" --noconfirm
 fi
+
+# TODO: Implement installing additional 32-bit libraries for Nvidia

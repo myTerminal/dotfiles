@@ -113,5 +113,3 @@ tw_log "Performing a few package-dependent configs..."
 tw_log "Adding user to group 'libvirt' for virt-manager..."
 tw_execute sudo usermod -aG libvirt ismail
 # TODO: Implement setting the default web-browser
-tw_log "Installing 32-bit libraries for Nvidia..."
-# TODO: Implement installing additional 32-bit libraries for Nvidia
