@@ -21,7 +21,7 @@ mt_task_linux_setup_docker () {
 mt_task_linux_change_user_shell () {
     tw_log "Changing shell to fish..."
     if ! [ "$(cat /etc/shells | grep "/fish")" ]; then
-        tw_execute_eval "echo \"/usr/bin/fish\" | sudo tee -a /etc/shells"
+        tw_execute_eval "echo \"$(which fish)\" | sudo tee -a /etc/shells"
     fi
     tw_task_change_user_shell
 }
