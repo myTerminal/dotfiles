@@ -7,7 +7,10 @@ mt_more_packages=(vulkan-loader \
                       libgcc-32bit \
                       libstdc++-32bit \
                       libdrm-32bit \
-                      libglvnd-32bit)
+                      libglvnd-32bit \
+                      nvidia-gtklibs \
+                      nvidia-gtklibs-32bit \
+                      mesa-dri-32bit)
 
 if [ "${1}" = "uninstall" ]; then
     sudo xbps-remove -Ry "${mt_nvidia_packages[@]}"
