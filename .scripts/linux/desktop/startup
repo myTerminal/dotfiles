@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# TODO: Figure out a way to separate split this file between: term and X
+
 # Execute device-specific startup scripts
 case "${HOSTNAME}" in
     excelsior)
