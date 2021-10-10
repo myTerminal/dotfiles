@@ -33,5 +33,10 @@ if [ -f ~/.device-startup-tweaks ]; then
     . ~/.device-startup-tweaks
 fi
 
+# Turn ON the Numlock
+if [ $(command -v numlockx) ]; then
+    numlockx
+fi
+
 # Play startup sound
 mpg123 ~/.assets/sounds/car-revving-sound.mp3 &
