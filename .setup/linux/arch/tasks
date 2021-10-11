@@ -3,16 +3,19 @@
 # Function to install peripheral drivers
 mt_task_linux_install_peripherals_drivers () {
     tw_log "Installing packages for Razer devices..."
-    # Install Razer drivers and polychromatic backend
+
+    # Install Razer drivers and polychromatic frontend
     tw_execute paru -S \
                python-notify2 \
                openrazer-meta \
                polychromatic \
                --noconfirm
+
     # Install linux headers for dkms
     tw_execute sudo pacman -Syu \
                linux-headers \
                --noconfirm
+
     # Add current user to group 'plugdev'
     tw_execute sudo gpasswd -a $USER plugdev
 }

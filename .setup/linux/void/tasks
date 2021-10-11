@@ -2,8 +2,15 @@
 
 # Function to install peripheral drivers
 mt_task_linux_install_peripherals_drivers () {
-    # TODO: Implement for Void
-    tw_log "Not implemented!"
+    tw_log "Installing packages for Razer devices..."
+
+    # openrazer and razer-genie
+    tw_execute sudo xbps-install -Sy \
+               razergenie \
+               openrazer-meta
+
+    # Add current user to group 'plugdev'
+    tw_execute sudo gpasswd -a $USER plugdev
 }
 
 # Function to setup startup services
