@@ -3,17 +3,12 @@
 
 The 'replicable' heart of my computer(s)
 
-** Obtaining
+** Init (Note for my future self)
 
-To get my *dotfiles* (which I don't know why you would), run the below commands 
-at =~=:
+Simply run the below on a new computer:
 
 #+BEGIN_EXAMPLE
-git init
-git remote add origin https://github.com/myTerminal/dotfiles.git
-git fetch --all
-rm .bash*
-git checkout master
+/bin/bash -c "$(curl https://raw.githubusercontent.com/myTerminal/dotfiles/master/.setup/bootstrap)"
 #+END_EXAMPLE
 
 ** Setup
@@ -139,18 +134,9 @@ optional setup.
 
 =*= - in-built, =**= - through web-client
 
-** Note for my future self
-
-Simply run the below on a new computer:
-
-#+BEGIN_EXAMPLE
-/bin/bash -c "$(curl https://raw.githubusercontent.com/myTerminal/dotfiles/master/.setup/bootstrap)"
-#+END_EXAMPLE
-
 ** To-Do
 
 - Fill in missing parts for Linux configuration
-- Figure out alternatives for missing packages
 - Highlight errors during setup and pause execution
 
 # Local Variables:
