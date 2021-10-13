@@ -15,6 +15,7 @@ tw_execute sudo xbps-install -S \
            aspell-en \
            tig \
            ranger \
+           rsync \
            xarchiver \
            htop \
            psmisc \

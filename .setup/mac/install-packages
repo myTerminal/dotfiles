@@ -20,6 +20,7 @@ tw_execute brew install \
            weechat \
            docker \
            docker-machine \
+           rsync \
            syncthing \
            youtube-dl
 

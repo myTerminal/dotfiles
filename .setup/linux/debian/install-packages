@@ -15,6 +15,7 @@ tw_execute sudo apt install \
            aspell-en \
            tig \
            ranger \
+           rsync \
            xarchiver \
            htop \
            psmisc \

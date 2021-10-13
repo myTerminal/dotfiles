@@ -17,6 +17,7 @@ tw_execute sudo pacman -S \
            aspell-en \
            tig \
            ranger \
+           rsync \
            xarchiver \
            htop \
            psmisc \
