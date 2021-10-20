@@ -222,9 +222,15 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Launch mode for program sets
-set $mode_launcher "Launch mode: All / Gaming"
+set $mode_launcher "Launch mode: (E)xpress / (F)ull / (G)aming"
 mode $mode_launcher {
-        bindsym a \
+        bindsym e \
+                exec emacs; \
+                exec firefox; \
+                exec firefox-developer-edition; \
+                exec firefox-esr; \
+                mode "default"
+        bindsym f \
                 exec emacs; \
                 exec discord; \
                 exec element; \
