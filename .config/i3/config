@@ -225,24 +225,13 @@ bindsym $mod+r mode "resize"
 set $mode_launcher "Launch mode: (E)xpress / (F)ull / (G)aming"
 mode $mode_launcher {
         bindsym e \
-                exec emacs; \
-                exec firefox; \
-                exec firefox-developer-edition; \
-                exec firefox-esr; \
+                exec ~/.scripts/linux/desktop/launch express; \
                 mode "default"
         bindsym f \
-                exec emacs; \
-                exec discord; \
-                exec element; \
-                exec firefox; \
-                exec firefox-developer-edition; \
-                exec firefox-esr; \
-                exec thunar; \
-                exec keepassxc; \
+                exec ~/.scripts/linux/desktop/launch full; \
                 mode "default"
         bindsym g \
-                exec steam; \
-                exec discord; \
+                exec ~/.scripts/linux/desktop/launch gaming; \
                 mode "default"
 
         # back to normal: Enter or Escape or q or $mod+Shift+a

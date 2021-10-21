@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+command=$1
+
+case "${1}" in
+    e | express )
+        exec emacs & disown
+        exec firefox & disown
+        exec firefox-developer-edition & disown
+        exec firefox-esr & disown
+        ;;
+
+    g | gaming )
+        exec steam & disown
+        exec discord & disown
+        ;;
+
+    *)
+        exec emacs & disown
+        exec discord & disown
+        exec element & disown
+        exec firefox & disown
+        exec firefox-developer-edition & disown
+        exec firefox-esr & disown
+        exec thunar & disown
+        exec keepassxc & disown
+        ;;
+esac
