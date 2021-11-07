@@ -12,15 +12,15 @@
 set $mod Mod4
 
 # Define colors
-set $c_primary_default "#00ffff"
-set $c_primary_light "#00d4d4"
-set $c_primary_dark "#00aaaa"
-set $c_secondary_light "#008080"
-set $c_secondary_dark "#001111"
-set $c_warning "#ff8000"
-set $color_error "#ff3333"
-set $color_white "#ffffff"
-set $c_black "#000000"
+set $c_primary_lightest "#00ffff"
+set $c_primary_light "#00aaaa"
+set $c_primary_dark "#005555"
+set $c_mono_lightest "#ffffff"
+set $c_mono_light "#cccccc"
+set $c_mono_dark "#555555"
+set $c_darkest "#000000"
+set $c_warning "#ff8800"
+set $c_error "#ff3333"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -78,9 +78,9 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec \
         dmenu_run \
         -nf $c_primary_light \
-        -nb $c_black \
-        -sf $c_secondary_dark \
-        -sb $c_primary_default \
+        -nb $c_darkest \
+        -sf $c_darkest \
+        -sb $c_primary_lightest \
         -fn "LiberationMono:pixelsize=48"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -242,13 +242,13 @@ mode $mode_launcher {
 bindsym $mod+Shift+a mode $mode_launcher
 
 # Set window colors
-# class                 border  bgcolor text    indicator           child_border
-client.focused          $c_primary_dark         $c_primary_light    $c_secondary_dark   $c_warning          $c_primary_dark
-client.focused_inactive $c_secondary_light      $c_secondary_light  $c_primary_light    $c_secondary_light  $c_secondary_light
-client.unfocused        $c_secondary_light      $c_secondary_dark   $c_primary_light    $c_secondary_light  $c_secondary_light
-client.urgent           $c_black                $color_error        $color_white        $color_white        $color_white
-client.placeholder      $c_secondary_dark       $c_secondary_dark   $c_primary_light    $c_secondary_dark   $c_secondary_dark
-client.background       $c_secondary_dark
+# class                 border                 bgcolor                text               indicator     child_border
+client.focused          $c_primary_lightest    $c_primary_lightest    $c_darkest         $c_warning    $c_primary_lightest
+client.focused_inactive $c_mono_dark           $c_primary_dark        $c_darkest         $c_darkest    $c_mono_dark
+client.unfocused        $c_darkest             $c_mono_dark           $c_darkest         $c_darkest    $c_darkest
+client.urgent           $c_darkest             $c_error               $c_mono_lighest    $c_darkest    $c_mono_lighest
+client.placeholder      $c_darkest             $c_darkest             $c_primary_light   $c_darkest    $c_darkest
+client.background       $c_darkest
 
 # Enable focus warping when a window opens, regardless of the workspace
 focus_on_window_activation focus
@@ -262,20 +262,16 @@ bar {
         strip_workspace_numbers yes
 
         colors {
-                background $c_black
-                statusline $c_primary_light
-                separator $c_secondary_light
+                background $c_darkest
+                statusline $c_mono_light
+                separator $c_mono_dark
 
-                focused_background $c_secondary_dark
-                focused_statusline $c_primary_default
-                focused_separator $c_primary_light
-
-                # class             border  background  text
-                focused_workspace   $c_primary_dark     $c_primary_light    $c_secondary_dark
-                active_workspace    $c_secondary_light  $c_secondary_light  $c_primary_light
-                inactive_workspace  $c_secondary_light  $c_secondary_dark   $c_primary_light
-                urgent_workspace    $c_black            $color_error        $color_white
-                binding_mode        $c_black            $c_warning          $c_black
+                # class               border                 background             text
+                focused_workspace     $c_primary_lightest    $c_primary_lightest    $c_darkest
+                active_workspace      $c_mono_dark           $c_primary_dark        $c_darkest
+                inactive_workspace    $c_mono_dark           $c_darkest             $c_mono_light
+                urgent_workspace      $c_darkest             $c_error               $c_mono_lighest
+                binding_mode          $c_darkest             $c_warning             $c_darkest
         }
 }
 
