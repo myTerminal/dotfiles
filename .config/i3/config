@@ -12,17 +12,15 @@
 set $mod Mod4
 
 # Define colors
-set $fc_pr "#00ffff"
-set $fc_l "#00d4d4"
-set $fc_d "#00aaaa"
-set $bg_l "#008080"
-set $bg_d "#001111"
-set $fc_sc "#00ff00"
-set $fc_in "#ffff00"
-set $fc_wa "#ff8000"
-set $fc_er "#ff3333"
-set $fc_wh "#ffffff"
-set $fc_bl "#000000"
+set $c_primary_default "#00ffff"
+set $c_primary_light "#00d4d4"
+set $c_primary_dark "#00aaaa"
+set $c_secondary_light "#008080"
+set $c_secondary_dark "#001111"
+set $c_warning "#ff8000"
+set $color_error "#ff3333"
+set $color_white "#ffffff"
+set $c_black "#000000"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -79,10 +77,10 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec \
         dmenu_run \
-        -nf $fc_l \
-        -nb $fc_bl \
-        -sf $bg_d \
-        -sb $fc_pr \
+        -nf $c_primary_light \
+        -nb $c_black \
+        -sf $c_secondary_dark \
+        -sb $c_primary_default \
         -fn "LiberationMono:pixelsize=48"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -244,13 +242,13 @@ mode $mode_launcher {
 bindsym $mod+Shift+a mode $mode_launcher
 
 # Set window colors
-# class                 border  bgcolor text    indicator   child_border
-client.focused          $fc_d   $fc_l   $bg_d   $fc_wa      $fc_d
-client.focused_inactive $bg_l   $bg_l   $fc_l   $bg_l       $bg_l
-client.unfocused        $bg_l   $bg_d   $fc_l   $bg_l       $bg_l
-client.urgent           $fc_bl  $fc_er  $fc_wh  $fc_wh      $fc_wh
-client.placeholder      $bg_d   $bg_d   $fc_l   $bg_d       $bg_d
-client.background       $bg_d
+# class                 border  bgcolor text    indicator           child_border
+client.focused          $c_primary_dark         $c_primary_light    $c_secondary_dark   $c_warning          $c_primary_dark
+client.focused_inactive $c_secondary_light      $c_secondary_light  $c_primary_light    $c_secondary_light  $c_secondary_light
+client.unfocused        $c_secondary_light      $c_secondary_dark   $c_primary_light    $c_secondary_light  $c_secondary_light
+client.urgent           $c_black                $color_error        $color_white        $color_white        $color_white
+client.placeholder      $c_secondary_dark       $c_secondary_dark   $c_primary_light    $c_secondary_dark   $c_secondary_dark
+client.background       $c_secondary_dark
 
 # Enable focus warping when a window opens, regardless of the workspace
 focus_on_window_activation focus
@@ -264,20 +262,20 @@ bar {
         strip_workspace_numbers yes
 
         colors {
-                background $fc_bl
-                statusline $fc_l
-                separator $bg_l
+                background $c_black
+                statusline $c_primary_light
+                separator $c_secondary_light
 
-                focused_background $bg_d
-                focused_statusline $fc_pr
-                focused_separator $fc_l
+                focused_background $c_secondary_dark
+                focused_statusline $c_primary_default
+                focused_separator $c_primary_light
 
                 # class             border  background  text
-                focused_workspace   $fc_d   $fc_l       $bg_d
-                active_workspace    $bg_l   $bg_l       $fc_l
-                inactive_workspace  $bg_l   $bg_d       $fc_l
-                urgent_workspace    $fc_bl  $fc_er      $fc_wh
-                binding_mode        $fc_bl  $fc_wa      $fc_bl
+                focused_workspace   $c_primary_dark     $c_primary_light    $c_secondary_dark
+                active_workspace    $c_secondary_light  $c_secondary_light  $c_primary_light
+                inactive_workspace  $c_secondary_light  $c_secondary_dark   $c_primary_light
+                urgent_workspace    $c_black            $color_error        $color_white
+                binding_mode        $c_black            $c_warning          $c_black
         }
 }
 
