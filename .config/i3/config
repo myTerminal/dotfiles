@@ -77,7 +77,7 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec \
         dmenu_run \
-        -nf $c_primary_light \
+        -nf $c_mono_light \
         -nb $c_darkest \
         -sf $c_darkest \
         -sb $c_primary_lightest \
@@ -244,9 +244,9 @@ bindsym $mod+Shift+a mode $mode_launcher
 # Set window colors
 # class                 border                 bgcolor                text               indicator     child_border
 client.focused          $c_primary_lightest    $c_primary_lightest    $c_darkest         $c_warning    $c_primary_lightest
-client.focused_inactive $c_mono_dark           $c_primary_dark        $c_darkest         $c_darkest    $c_mono_dark
-client.unfocused        $c_darkest             $c_mono_dark           $c_darkest         $c_darkest    $c_darkest
-client.urgent           $c_darkest             $c_error               $c_mono_lighest    $c_darkest    $c_mono_lighest
+client.focused_inactive $c_primary_light       $c_primary_light       $c_darkest         $c_darkest    $c_primary_light
+client.unfocused        $c_darkest             $c_mono_light          $c_darkest         $c_darkest    $c_darkest
+client.urgent           $c_darkest             $c_error               $c_mono_lightest   $c_darkest    $c_mono_lightest
 client.placeholder      $c_darkest             $c_darkest             $c_primary_light   $c_darkest    $c_darkest
 client.background       $c_darkest
 
@@ -268,9 +268,9 @@ bar {
 
                 # class               border                 background             text
                 focused_workspace     $c_primary_lightest    $c_primary_lightest    $c_darkest
-                active_workspace      $c_mono_dark           $c_primary_dark        $c_darkest
+                active_workspace      $c_primary_light       $c_primary_light       $c_darkest
                 inactive_workspace    $c_mono_dark           $c_darkest             $c_mono_light
-                urgent_workspace      $c_darkest             $c_error               $c_mono_lighest
+                urgent_workspace      $c_mono_lightest       $c_error               $c_mono_lightest
                 binding_mode          $c_darkest             $c_warning             $c_darkest
         }
 }
