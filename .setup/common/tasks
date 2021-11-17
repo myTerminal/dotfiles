@@ -107,9 +107,10 @@ mt_task_link_create_convenience_softlinks () {
     tw_execute ln -s "${MT_PATH_WORKSPACE_GITHUB}/myTerminal.github.io" ~/_portfolio-data
     tw_execute ln -s "${MT_PATH_WORKSPACE}/all/myterminal-web-lp" ~/_portfolio-lp
 
-    tw_execute ln -s "${MT_PATH_STORE}/YouTube" ~/_youtube
     tw_execute ln -s "${MT_PATH_STORE}/Documents" ~/_documents
     tw_execute ln -s "${MT_PATH_STORE}/Documents/notes" ~/_notes
+    tw_execute ln -s "${MT_PATH_STORE}/Mobile-Media" ~/_mobile-media
+    tw_execute ln -s "${MT_PATH_STORE}/YouTube" ~/_youtube
 
     tw_handle_last_command_status "${?}" \
                                   "Links created" \
