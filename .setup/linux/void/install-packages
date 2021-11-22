@@ -16,7 +16,8 @@ tw_execute sudo xbps-install -S \
            tig \
            ranger \
            rsync \
-           xarchiver \
+           zip \
+           unzip \
            htop \
            psmisc \
            udisks2 \
