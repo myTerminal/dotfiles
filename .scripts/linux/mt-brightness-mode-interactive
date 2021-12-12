@@ -4,46 +4,48 @@ mt_response=$(echo -e "Brightness 100%\nBrightness 90%\nBrightness 80%\nBrightne
 
 case "${mt_response}" in
     "Brightness 100%")
-        xrandr --output "eDP-1" --brightness 1.0
+        mt_temp=1.0
         ;;
 
     "Brightness 90%")
-        xrandr --output "eDP-1" --brightness 0.9
+        mt_temp=0.9
         ;;
 
     "Brightness 80%")
-        xrandr --output "eDP-1" --brightness 0.8
+        mt_temp=0.8
         ;;
 
     "Brightness 70%")
-        xrandr --output "eDP-1" --brightness 0.7
+        mt_temp=0.7
         ;;
 
     "Brightness 60%")
-        xrandr --output "eDP-1" --brightness 0.6
+        mt_temp=0.6
         ;;
 
     "Brightness 50%")
-        xrandr --output "eDP-1" --brightness 0.5
+        mt_temp=0.5
         ;;
 
     "Brightness 40%")
-        xrandr --output "eDP-1" --brightness 0.4
+        mt_temp=0.4
         ;;
 
     "Brightness 30%")
-        xrandr --output "eDP-1" --brightness 0.3
+        mt_temp=0.3
         ;;
 
     "Brightness 20%")
-        xrandr --output "eDP-1" --brightness 0.2
+        mt_temp=0.2
         ;;
 
     "Brightness 10%")
-        xrandr --output "eDP-1" --brightness 0.1
+        mt_temp=0.1
         ;;
 
     *)
         # Ignore
         ;;
 esac
+
+xrandr --output "eDP-1" --brightness ${mt_temp}
