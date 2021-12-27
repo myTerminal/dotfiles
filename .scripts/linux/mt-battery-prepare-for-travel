@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+sudo tlp fullcharge
+read -n1 -r -p "Press any key when ready to stop charging..."
+mt-battery-resume-charge-thresholds
