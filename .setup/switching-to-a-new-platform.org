@@ -1,0 +1,23 @@
+#+TITLE: Switching to a new platform
+#+AUTHOR: Mohammed Ismail Ansari
+
+- Create installation instructions as [[https://gist.github.com/myTerminal][a GitHub Gist]]
+- Extend [[https://github.com/myTerminal/twiner][twiner]] for the new platform
+- Add a switch in [[https://github.com/myTerminal/dotfiles/tree/master/.setup][.setup]], create stubs for the new platform
+- Extend platform dependent scripts under [[../.scripts][~/.scripts]] to cover the new platform
+- Create alternate scripts for elements like a new init system, if applicable
+- Create package install scripts
+- Implement rest of the installation scripts
+- Create other utility scripts for the new platform
+- Run a test installation through virtualization
+- Run lots of tests and fix the identified issues
+- Install the new platform on bare metal alongside the primary system
+- Run lots of tests and fix the identified issues
+- Create a script for add-on setup for the new platform for respective hardware
+- Switch to the new platform as the primary system
+- Run a final set of tests to conclude the migration
+- Remove obsolete BTRFS subvolumes
+
+# Local Variables:
+# eval: (visual-line-mode)
+# End:
