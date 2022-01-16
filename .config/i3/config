@@ -316,7 +316,7 @@ bindsym $mod+Shift+comma exec flameshot gui
 bindsym $mod+Shift+period exec flameshot full -p ~/Desktop
 
 # Bind custom switch scripts
-bindsym $mod+Shift+x exec ~/.scripts/linux/mt-power-mode-interactive
-bindsym $mod+Shift+g exec ~/.scripts/linux/mt-gpu-mode-interactive
-bindsym $mod+Shift+d exec ~/.scripts/linux/mt-display-mode-interactive
-bindsym $mod+Shift+b exec ~/.scripts/linux/mt-brightness-mode-interactive
+bindsym $mod+Shift+x exec ~/.scripts/linux/mt-power-mode
+bindsym $mod+Shift+g exec ~/.scripts/linux/mt-gpu-mode
+bindsym $mod+Shift+d exec ~/.scripts/linux/mt-display-mode
+bindsym $mod+Shift+b exec ~/.scripts/linux/mt-brightness-mode
