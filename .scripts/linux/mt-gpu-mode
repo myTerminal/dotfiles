@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 
-command=$1
+if [ "${1}" ]; then
+    mt_mode="${1}"
+else
+    mt_mode=$(echo -e "intel\nhybrid\nnvidia" | rofi -dmenu)
+fi
 
-case "${1}" in
+case "${mt_mode}" in
     i | integrated | intel )
         echo "Switching to integrated GPU..."
         optimus-manager --switch intel --no-confirm

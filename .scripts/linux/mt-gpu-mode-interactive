@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-mt_response=$(echo -e "intel\nhybrid\nnvidia" | rofi -dmenu)
-
-mt-gpu-mode ${mt_response}
