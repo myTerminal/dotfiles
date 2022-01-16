@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-mt_response=$(echo -e "lock\nquit\nsuspend\nhibernate\nshutdown\nrestart\nawake\nsleepy" | rofi -dmenu)
-
-mt-power-mode ${mt_response}

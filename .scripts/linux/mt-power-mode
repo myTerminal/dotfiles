@@ -2,11 +2,15 @@
 
 . ~/.assets/libs/bash/detect-init-system
 
-command=$1
+if [ "${1}" ]; then
+    mt_mode="${1}"
+else
+    mt_mode=$(echo -e "lock\nquit\nsuspend\nhibernate\nshutdown\nrestart\nawake\nsleepy" | rofi -dmenu)
+fi
 
 # Function to switch power using systemd
 switch-power-mode-with-systemd () {
-    case "${command}" in
+    case "${mt_mode}" in
         "lock")
             i3lock -c 000000
             ;;
@@ -47,7 +51,7 @@ switch-power-mode-with-systemd () {
 
 # Function to switch power using runit
 switch-power-mode-with-runit () {
-    case "${command}" in
+    case "${mt_mode}" in
         "lock")
             i3lock -c 000000
             ;;
