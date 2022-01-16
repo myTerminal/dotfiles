@@ -6,7 +6,7 @@
 case "${HOSTNAME}" in
     excelsior)
         # Set default screen brightness
-        xrandr --output "eDP-1" --brightness 0.3
+        mt-brightness-mode 30
         ;;
 
     precision)
