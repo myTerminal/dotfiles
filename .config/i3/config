@@ -241,6 +241,26 @@ mode $mode_launcher {
 
 bindsym $mod+Shift+a mode $mode_launcher
 
+# Launch mode for quick adjustments
+set $mode_adjust "Adjust mode: Sound (Left/Right), Brightness (Down/Up)"
+mode $mode_adjust {
+        # Bindings for sound volume
+        bindsym Left exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+        bindsym Right exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+
+        # Bindings for screen brightness
+        bindsym Down exec brightnessctl s 5%-
+        bindsym Up exec brightnessctl s +5%
+
+        # back to normal: Enter or Escape or q or $mod+Shift+a
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym q mode "default"
+        bindsym $mod+Shift+p mode "default"
+}
+
+bindsym $mod+Shift+p mode $mode_adjust
+
 # Set window colors
 # class                 border                 bgcolor                text               indicator     child_border
 client.focused          $c_primary_lightest    $c_primary_lightest    $c_darkest         $c_warning    $c_primary_lightest
