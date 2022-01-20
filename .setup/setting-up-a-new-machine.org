@@ -30,6 +30,7 @@
   - Thunar
   - Darktable
   - Steam
+  - pCloud
   - Bluetooth
 - Verify software packages
 - Test/Improve scripts under [[../.scripts][~/.scripts]]
