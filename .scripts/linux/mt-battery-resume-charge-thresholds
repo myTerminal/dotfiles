@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
-echo 75 | sudo tee /sys/class/power_supply/BAT0/charge_start_threshold
-echo 80 | sudo tee /sys/class/power_supply/BAT0/charge_stop_threshold
+for b in `fd BAT /sys/class/power_supply`;
+do
+    echo 75 | sudo tee /sys/class/power_supply/$(basename $b)/charge_start_threshold
+    echo 80 | sudo tee /sys/class/power_supply/$(basename $b)/charge_stop_threshold
+done
