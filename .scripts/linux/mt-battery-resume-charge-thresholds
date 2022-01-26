@@ -1,8 +1,25 @@
 #!/usr/bin/env bash
 
-# TODO: Extend for tlp-legacy
-for b in `fd BAT /sys/class/power_supply`;
-do
-    echo 75 | sudo tee /sys/class/power_supply/$(basename $b)/charge_start_threshold
-    echo 80 | sudo tee /sys/class/power_supply/$(basename $b)/charge_stop_threshold
-done
+# Function to set battery thresholds for newer systems
+set-battery-thresholds-for-newer-systems () {
+    for b in `fd BAT /sys/class/power_supply`;
+    do
+        echo 75 | sudo tee /sys/class/power_supply/$(basename $b)/charge_start_threshold
+        echo 80 | sudo tee /sys/class/power_supply/$(basename $b)/charge_stop_threshold
+    done
+}
+
+# Function to set battery thresholds for legacy systems
+set-battery-thresholds-for-legacy-systems () {
+    for b in `fd BAT /sys/devices/platform/smapi`;
+    do
+        echo 75 | sudo tee /sys/devices/platform/smapi/$(basename $b)/start_charge_thresh
+        echo 80 | sudo tee /sys/devices/platform/smapi/$(basename $b)/stop_charge_thresh
+    done
+}
+
+if [[ -d /sys/devices/platform/smapi ]]; then
+    set-battery-thresholds-for-legacy-systems
+else
+    set-battery-thresholds-for-newer-systems
+fi
