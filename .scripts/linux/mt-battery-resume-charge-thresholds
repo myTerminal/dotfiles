@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# TODO: Extend for tlp-legacy
 for b in `fd BAT /sys/class/power_supply`;
 do
     echo 75 | sudo tee /sys/class/power_supply/$(basename $b)/charge_start_threshold
