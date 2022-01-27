@@ -9,7 +9,7 @@ case "${HOSTNAME}" in
         mt-brightness-mode 30
         ;;
 
-    precision)
+    *)
         # Nothing here yet
         ;;
 esac
