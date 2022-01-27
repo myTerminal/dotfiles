@@ -44,7 +44,7 @@ xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled
 
 # Install tlp and more for power management
 sudo pacman -S tlp acpi_call powertop --noconfirm
-~/.scripts/linux/mt-battery-resume-charge-thresholds
+~/.scripts/linux/mt-battery-set-charge-thresholds
 systemctl enable tlp
 systemctl start tlp
 

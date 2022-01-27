@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+start="${1:-75}"
+stop="${2:-80}"
+
+# Function to set battery thresholds for newer systems
+set-battery-thresholds-for-newer-systems () {
+    basepath=/sys/class/power_supply
+    for b in `fd BAT /sys/class/power_supply`;
+    do
+        echo 20 | sudo tee ${basepath}/$(basename $b)/charge_start_threshold
+        echo 100 | sudo tee ${basepath}/$(basename $b)/charge_stop_threshold
+        echo $start | sudo tee ${basepath}/$(basename $b)/charge_start_threshold
+        echo $stop | sudo tee ${basepath}/$(basename $b)/charge_stop_threshold
+    done
+}
+
+# Function to set battery thresholds for legacy systems
+set-battery-thresholds-for-legacy-systems () {
+    basepath=/sys/devices/platform/smapi
+    for b in `fd BAT /sys/devices/platform/smapi`;
+    do
+        echo 20 | sudo tee ${basepath}/$(basename $b)/start_charge_thresh
+        echo 100 | sudo tee ${basepath}/$(basename $b)/stop_charge_thresh
+        echo $start | sudo tee ${basepath}/$(basename $b)/start_charge_thresh
+        echo $stop | sudo tee ${basepath}/$(basename $b)/stop_charge_thresh
+    done
+}
+
+if [[ -d /sys/devices/platform/smapi ]]; then
+    set-battery-thresholds-for-legacy-systems
+else
+    set-battery-thresholds-for-newer-systems
+fi
