@@ -25,14 +25,14 @@ alias mt-sync-github="mt-sync-projects $MT_PATH_WORKSPACE_GITHUB"
 alias lo="exa -la --group-directories-first"
 alias po="bat"
 
-# Start a tmux session if appropriate
-if not contains $TERM "screen" "eterm-color" "dumb"
-   tmux
-end
-
 # Load configs for the current OS
 if test (uname) = "Linux"
     . ~/.config/fish/config-linux.fish
 else if test (uname) = "Darwin"
     . ~/.config/fish/config-mac.fish
+end
+
+# Start a tmux session if appropriate
+if not contains $TERM "screen" "eterm-color" "dumb"
+   tmux
 end

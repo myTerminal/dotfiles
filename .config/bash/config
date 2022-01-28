@@ -23,14 +23,14 @@ alias mt-sync-github="mt-sync-projects ${MT_PATH_WORKSPACE_GITHUB}"
 alias lo="exa -la --group-directories-first"
 alias po="bat"
 
-# Start a tmux session if appropriate
-if [[ ! "screen eterm-color dumb" =~ "${TERM}" ]]; then
-    tmux
-fi
-
 # Load configs for the current OS
 if [ $(uname) = 'Linux' ]; then
     . ~/.config/bash/config-linux
 elif [ $(uname) = 'Darwin' ]; then
     . ~/.config/bash/config-mac
+fi
+
+# Start a tmux session if appropriate
+if [[ ! "screen eterm-color dumb" =~ "${TERM}" ]]; then
+    tmux
 fi
