@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Unmute sound, set volume to 70%
+pactl set-sink-mute @DEFAULT_SINK@ false
+pactl set-sink-volume @DEFAULT_SINK@ 70%
+
+# Start applications
+udiskie &
+syncthing 1>/dev/null &

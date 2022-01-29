@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
-# TODO: Figure out a way to separate split this file between: term and X
-
 # Execute device-specific startup scripts
 case "${HOSTNAME}" in
     excelsior)
-        # Set default screen brightness
+        # Set default screen brightness for the AMOLED screen
         mt-brightness-mode 30
         ;;
 
@@ -17,14 +15,8 @@ esac
 # Pick a random wallpaper from the collection
 fd . ~/_mobile-media -t f -e '.png' -0 | shuf -n1 -z | xargs -0 feh --bg-fill
 
-# Unmute sound, set volume to 70%
-pactl set-sink-mute @DEFAULT_SINK@ false
-pactl set-sink-volume @DEFAULT_SINK@ 70%
-
 # Start applications
-udiskie &
 pCloud &
-syncthing 1>/dev/null &
 
 # Perform device-specific startup tweaks, if set
 if [ -f ~/.device-startup-tweaks ]; then
