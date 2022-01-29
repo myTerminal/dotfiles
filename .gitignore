@@ -4,15 +4,6 @@
 !/.gitignore_global
 !/.gitignore
 
-!/.bash_profile
-!/.bashrc
-
-!/.xinitrc
-
-!/.setup
-
-!/.scripts
-
 !/.config
 /.config/*
 !/.config/bash
@@ -22,20 +13,22 @@
 !/.config/fish/*.fish
 !/.config/i3
 !/.config/rofi
-
 !/.config/emacs
 /.config/emacs/*
 !/.config/emacs/init.el
-!/.mew.el
-
 !/.config/gtk-3.0
 /.config/gtk-3.0/*
 !/.config/gtk-3.0/settings.ini
 !/.gtkrc-2.0
-
-!/.assets
-
+!/.xinitrc
+!/.bash_profile
+!/.bashrc
+!/.mew.el
 !/myterminal-configs.json
+
+!/.setup
+!/.scripts
+!/.assets
 
 !/.face*
 
