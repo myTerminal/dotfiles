@@ -1,6 +1,6 @@
 xrdb -merge ~/.Xresources
 
-~/.scripts/linux/desktop/startup
+~/.scripts/linux/startup/desktop
 
 case "${1}" in
     alternate)

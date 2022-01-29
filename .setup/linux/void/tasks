@@ -16,7 +16,7 @@ mt_task_linux_install_peripherals_drivers () {
 # Function to setup startup services
 mt_task_linux_setup_startup_services () {
     # Setup syncthing service
-    # Taken care of by the script ~/.scripts/linux/desktop/startup
+    # Taken care of by the script ~/.scripts/linux/startup/desktop
 
     # Start libvirtd and virtlogd for virt-manager
     tw_execute sudo ln -s /etc/sv/libvirtd /var/service/
