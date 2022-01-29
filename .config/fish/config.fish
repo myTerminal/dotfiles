@@ -36,3 +36,8 @@ end
 if not contains $TERM "screen" "eterm-color" "dumb"
    tmux
 end
+
+# Run startup script(s)
+status is-login
+and test -f ~/.mt-tag
+and echo "TODO: Execute startup scripts from fish"
