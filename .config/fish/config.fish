@@ -40,4 +40,4 @@ end
 # Run startup script(s)
 status is-login
 and test -f ~/.mt-tag
-and echo "TODO: Execute startup scripts from fish"
+and . ~/.scripts/linux/startup/cli

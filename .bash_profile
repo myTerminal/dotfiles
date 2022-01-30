@@ -4,5 +4,5 @@ if [ -f ~/.bashrc ]; then
 fi
 
 if [ -f ~/.mt-tag ]; then
-    echo "TODO: Execute startup scripts from bash"
+    . ~/.scripts/linux/startup/cli
 fi
