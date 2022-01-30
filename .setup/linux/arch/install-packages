@@ -81,6 +81,7 @@ tw_execute sudo pacman -S \
 
 tw_log "Installing packages from AUR..."
 tw_execute paru -S --mflags --skipinteg \
+           sct \
            google-chrome \
            authy \
            postman-bin \

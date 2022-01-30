@@ -35,6 +35,7 @@ tw_execute sudo apt install \
 
 tw_log "Installing graphical packages..."
 tw_execute sudo apt install \
+           sct \
            compton \
            i3 \
            xfce4 \
