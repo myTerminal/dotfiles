@@ -37,6 +37,7 @@ tw_execute sudo pacman -S \
 
 tw_log "Installing graphical packages..."
 tw_execute sudo pacman -S \
+           onboard \
            picom \
            i3 \
            xfce4 \

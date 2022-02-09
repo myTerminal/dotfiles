@@ -37,6 +37,7 @@ tw_execute sudo xbps-install -S \
 tw_log "Installing graphical packages..."
 tw_execute sudo xbps-install -S \
            sct \
+           onboard \
            picom \
            i3 \
            i3status \
