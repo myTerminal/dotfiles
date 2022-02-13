@@ -116,3 +116,10 @@ mt_task_link_create_convenience_softlinks () {
                                   "Links created" \
                                   "There was an error creating one of more links!"
 }
+
+# Function to tag machine as configured
+mt_task_tag_machine_as_configured () {
+    tw_log "Tagging machine with ~/.mt-tag"
+
+    tw_execute touch ~/.mt-tag
+}
