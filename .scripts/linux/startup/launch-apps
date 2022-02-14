@@ -8,6 +8,7 @@ case "${1}" in
         exec firefox & disown
         exec firefox-developer-edition & disown
         exec firefox-esr & disown
+        exec keepassxc & disown
         ;;
 
     g | gaming )
