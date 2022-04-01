@@ -9,16 +9,6 @@ echo "Xft.dpi: 144" > ~/.Xresources
 
 # Fix audio input and output
 sudo xbps-install -Sy alsa-firmware sof-firmware
-echo "
-pcm.!default {
-  type hw
-  card 1
-}
-ctl.!default {
-  type hw
-  card 1
-}
-" > .asoundrc
 
 # Improve touchpad experience with xinput
 sudo xbps-install -Sy xinput # (Just in case)
