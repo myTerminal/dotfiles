@@ -23,9 +23,9 @@ systemctl start bluetooth
 sudo pacman -S alsa-firmware sof-firmware --noconfirm
 
 # Enable Dolby Atmos Effect through pulseeffects
-sudo pacman -S pulseeffects --noconfirm
+sudo paru -S pulseeffects-legacy --noconfirm
 pulseeffects
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/master/install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/pulseeffects/install.sh)"
 
 # Enable microphone noise reduction
 echo "

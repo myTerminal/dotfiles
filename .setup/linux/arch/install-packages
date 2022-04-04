@@ -66,7 +66,6 @@ tw_execute sudo pacman -S \
            gstreamer \
            pulseaudio \
            pulseaudio-bluetooth \
-           pulseeffects \
            audacity \
            easytag \
            vlc \
@@ -83,6 +82,7 @@ tw_execute sudo pacman -S \
 tw_log "Installing packages from AUR..."
 tw_execute paru -S --mflags --skipinteg \
            sct \
+           pulseeffects-legacy \
            google-chrome \
            authy \
            postman-bin \

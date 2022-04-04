@@ -28,9 +28,9 @@ ctl.!default {
 " > .asoundrc
 
 # Enable Dolby Atmos Effect through pulseeffects
-sudo xbps-install -Sy pulseeffects
+sudo xbps-install -Sy pulseeffects-legacy
 pulseeffects
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/master/install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/pulseeffects/install.sh)"
 
 # Improve touchpad experience with xinput
 sudo xbps-install -Sy xinput # (Just in case)
