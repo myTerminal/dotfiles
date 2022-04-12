@@ -8,10 +8,11 @@
   4) /(Optional)/ MSFT Reserved
   5) /(Optional)/ Windows NTFS
 - /(Optional)/ Install Windows with absolute basic settings and minimal software, run updates a few tens of times
+  - Install and configure Firefox
+  - Install and configure Authy
 - Install Linux
   - If installing from within a LIVE environment, create an SSH key and add it to my GitHub and GitLab account
 - Init [[https://github.com/myTerminal/dotfiles][dotfiles]] using [[bootstrap][the bootstrap script]], in turn run [[start][.setup/start]]
-- Copy over the binaries at `~/Applications` and create symlinks under `/bin` or `/usr/bin`
 - Create an add-on setup script for the specific hardware:
   - Test/Fix display scaling
   - Install graphics drivers
@@ -21,8 +22,9 @@
   - Test/Fix mouse and trackpad
   - Test/Fix camera
   - Configure power management
+- Configure Syncthing and fetch data
+- Create symlinks from `~/_store/Applications` under `/usr/bin`
 - Configure software and services
-  - Syncthing
   - Firefox
   - Discord
   - Element/Schildi
