@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # This script is an add-on to `~/.setup/start` containing device-specific setup
-# for 2017 Lenovo ThinkPad T470 (Falcon) and mostly follows steps from
+# for 2017 Lenovo ThinkPad T470 and mostly follows steps from
 # https://wiki.archlinux.org/title/Laptop/Lenovo
 
 # Improve touchpad experience with xinput

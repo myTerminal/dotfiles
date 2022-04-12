@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # This script is an add-on to `~/.setup/start` containing device-specific setup
-# for 2008 Lenovo ThinkPad T61p (Prothean) and mostly follows steps from
+# for 2008 Lenovo ThinkPad T61p and mostly follows steps from
 # https://wiki.archlinux.org/title/Laptop/Lenovo
 
 # Improve touchpad experience with xinput
