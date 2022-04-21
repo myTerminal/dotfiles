@@ -1,0 +1,21 @@
+#+TITLE: Releasing a machine
+#+AUTHOR: Mohammed Ismail Ansari
+
+- Delete EFI variables from the firmware interface
+
+ #+BEGIN_SRC CLI
+efibootmgr -Bb <four-digit-numeric-identifier>
+ #+END_SRC
+
+- Remove references from the following:
+  - GitHub and GitLab (SSH keys)
+  - Firefox account as a known device
+  - Element/Schildi for Matrix
+  - Syncthing as a node
+  - Remember The Milk for maintenance tasks
+  - KeePass database as a key
+  - Authy as a known device
+
+# Local Variables:
+# eval: (visual-line-mode)
+# End:
