@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Console setup
+dpkg-reconfigure console-setup
+
+# Install wireless drivers
+apt install firmware-iwlwifi
+
+# Enabling network-related services
+systemctl enable dhcpcd
+systemctl enable NetworkManager

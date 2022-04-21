@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Enabling network-related services
+systemctl enable dhcpcd
+systemctl enable NetworkManager

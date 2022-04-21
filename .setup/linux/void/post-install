@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Enable RTC service
+ln -s /etc/sv/chronyd /var/service
+
+# Enabling network-related services
+ln -s /etc/sv/{dhcpcd,NetworkManager} /var/service
+
+# Enable services for seat
+ln -srf /etc/sv/{dbus,polkitd,elogind} /var/service
