@@ -37,6 +37,7 @@
 - Verify software packages
 - Test/Improve scripts under [[../.scripts][~/.scripts]]
 - Verify reference of the machine at/under the following:
+  - Home network as a new device
   - GitHub and GitLab (SSH keys)
   - Firefox account as a known device
   - Element/Schildi for Matrix

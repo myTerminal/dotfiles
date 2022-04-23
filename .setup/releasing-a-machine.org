@@ -1,6 +1,7 @@
 #+TITLE: Releasing a machine
 #+AUTHOR: Mohammed Ismail Ansari
 
+- Disable battery charge thresholds
 - Delete EFI variables from the firmware interface
 
  #+BEGIN_SRC CLI
@@ -15,6 +16,7 @@ efibootmgr -Bb <four-digit-numeric-identifier>
   - Remember The Milk for maintenance tasks
   - KeePass database as a key
   - Authy as a known device
+  - Home network as a known device
 
 # Local Variables:
 # eval: (visual-line-mode)
