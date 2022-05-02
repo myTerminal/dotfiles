@@ -5,10 +5,16 @@ The 'replicable' heart of my computer(s)
 
 ** Init (Note for my future self)
 
-Simply run the below on a new computer:
+Simply run the below on the new computer to be "adopted":
 
 #+BEGIN_EXAMPLE
 /bin/bash -c "$(curl https://raw.githubusercontent.com/myTerminal/dotfiles/master/.setup/bootstrap)"
+#+END_EXAMPLE
+
+OR
+
+#+BEGIN_EXAMPLE
+/bin/bash -c "$(curl https://gh.myterminal.me/setup)"
 #+END_EXAMPLE
 
 ** Setup
