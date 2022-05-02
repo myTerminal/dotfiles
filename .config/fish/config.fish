@@ -1,3 +1,8 @@
+# Run startup script(s), for a login shell
+status is-login
+and test -f ~/.mt-tag
+and . ~/.scripts/linux/startup/cli
+
 # Update PATH for custom shell scripts
 add-to-path ~/.scripts
 
@@ -36,8 +41,3 @@ end
 if not contains $TERM "screen" "eterm-color" "dumb"
    tmux
 end
-
-# Run startup script(s)
-status is-login
-and test -f ~/.mt-tag
-and . ~/.scripts/linux/startup/cli
