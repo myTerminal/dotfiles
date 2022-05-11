@@ -1,0 +1,49 @@
+#!/usr/bin/env node
+
+/* global process require */
+
+const { argv: [p, f, outputFile] } = process;
+const { execSync } = require('child_process');
+const fs = require('fs');
+
+const getGUID = device => {
+    const blkidOutput = execSync(`blkid ${device}`).toString();
+
+    return blkidOutput.split('UUID="')[1].split('"')[0];
+};
+
+if (!outputFile) {
+    console.log('ERROR: Please specify an output file!');
+    process.exit();
+}
+
+fs.writeFile(
+    outputFile,
+    `
+#
+# See fstab(5).
+#
+# <file system>					<dir>	<type>	<options>									<dump>	<pass>
+
+tmpfs						/tmp	tmpfs	defaults,nosuid,nodev   								0 0
+
+# /dev/mapper/mirage
+UUID=${getGUID('/dev/mapper/mirage')}	/	btrfs	rw,noatime,nodiratime,compress=lzo,ssd,space_cache,subvolid=259,subvol=/@void-root	0 1
+
+# /dev/nvme0n1p1
+UUID=${getGUID('/dev/nvme0n1p1')}				/boot/efi	vfat	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro	0 0
+
+# /dev/mapper/mirage
+UUID=${getGUID('/dev/mapper/mirage')}	/var	btrfs	rw,noatime,nodiratime,compress=lzo,ssd,space_cache,subvolid=258,subvol=/@void-var	0 0
+UUID=${getGUID('/dev/mapper/mirage')}	/home	btrfs	rw,noatime,nodiratime,compress=lzo,ssd,space_cache,subvolid=257,subvol=/@void-home	0 0
+UUID=${getGUID('/dev/mapper/mirage')}  /.snapshots	btrfs	rw,noatime,nodiratime,compress=lzo,ssd,space_cache,subvolid=256,subvol=/@snapshots	0 0
+
+# SWAP
+UUID=${getGUID('/dev/nvme0n1p2')}	swap	swap	rw,noatime,discard									0 0
+`,
+    err => {
+        if (err) {
+            console.log(err);
+        }
+    }
+);
