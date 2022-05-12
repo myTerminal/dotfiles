@@ -122,7 +122,7 @@ mt_task_linux_install_fonts () {
 }
 
 # Function to configure event tweaks
-mt_task_linux_configure_event-tweaks () {
+mt_task_linux_configure_event_tweaks () {
     tw_log "Enabling touch scrolling for Firefox..."
     tw_execute echo "
 MOZ_USE_XINPUT2 DEFAULT=1

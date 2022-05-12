@@ -73,11 +73,11 @@ tw_confirm "Setup startup services?" \
            "Setting up of startup services skipped."
 
 tw_confirm "Perform visual tweaks?" \
-           mt_task_linux_perform_visual-tweaks \
+           mt_task_linux_perform_visual_tweaks \
            "Visual tweaks skipped."
 
 tw_confirm "Configure event tweaks?" \
-           mt_task_linux_configure_event-tweaks \
+           mt_task_linux_configure_event_tweaks \
            "Event tweaks skipped."
 
 tw_log "Steps for Linux complete!"

@@ -30,7 +30,7 @@ mt_task_linux_setup_startup_services () {
 }
 
 # Function to perform visual tweaks at GRUB and DM level
-mt_task_linux_perform_visual-tweaks () {
+mt_task_linux_perform_visual_tweaks () {
     tw_log "Performing visual tweaks..."
 
     # Install GRUB Fallout theme
