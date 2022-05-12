@@ -120,3 +120,11 @@ mt_task_linux_install_fonts () {
     tw_execute cd ~/
     tw_execute rm -rf ~/_temp
 }
+
+# Function to configure event tweaks
+mt_task_linux_configure_event-tweaks () {
+    tw_log "Enabling touch scrolling for Firefox..."
+    tw_execute echo "
+MOZ_USE_XINPUT2 DEFAULT=1
+" | sudo tee -a /etc/security/pam_env.conf
+}

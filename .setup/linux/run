@@ -76,4 +76,8 @@ tw_confirm "Perform visual tweaks?" \
            mt_task_linux_perform_visual-tweaks \
            "Visual tweaks skipped."
 
+tw_confirm "Configure event tweaks?" \
+           mt_task_linux_configure_event-tweaks \
+           "Event tweaks skipped."
+
 tw_log "Steps for Linux complete!"
