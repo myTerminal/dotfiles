@@ -47,6 +47,9 @@ tw_confirm "Generate SSH key?" \
 tw_confirm "Install global NPM packages?" \
            mt_task_install_npm_packages \
            "Installing NPM packages skipped."
+tw_confirm "Create custom Lisp parser?" \
+           mt_task_create_lisp_parser \
+           "Creation of custom Lisp parser skipped."
 tw_confirm "Create required directories?" \
            mt_task_create_required_directories \
            "Creating of required directories skipped."

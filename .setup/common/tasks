@@ -34,6 +34,17 @@ mt_task_install_npm_packages () {
                                   "There was an error installing NPM packages globally!"
 }
 
+# Function to create custom Lisp parser
+mt_task_create_lisp_parser () {
+    tw_log "Creating custom Lisp parser..."
+
+    tw_execute sudo cp ~/.assets/cl /usr/bin/cl
+
+    tw_handle_last_command_status "${?}" \
+                                  "Custom Lisp parser created" \
+                                  "There was an error creating Custom Lisp parser!"
+}
+
 # Function to create required directories
 mt_task_create_required_directories () {
     tw_log "Creating required directories..."

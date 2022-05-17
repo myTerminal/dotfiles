@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+sbcl --script $(readlink -f ${1} | xargs realpath)
+echo ""
