@@ -2,15 +2,11 @@
 
 /* global require process console */
 
-const { argv: [program, thisFile, inputDir, outputFile] } = process;
+const { argv: [program, thisFile, inputDir] } = process;
 const { log } = console;
 
-const { inflateInput, getVerticalList, writeToFile } = require('../.assets/libs/node');
+const { inflateInput, getVerticalList } = require('../.assets/libs/node');
 
 const listOfFiles = getVerticalList(inflateInput([inputDir]));
 
 log(listOfFiles);
-
-if (outputFile) {
-    writeToFile(outputFile, listOfFiles);
-}

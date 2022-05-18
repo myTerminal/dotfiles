@@ -30,6 +30,7 @@ const getFileStats = filePath => {
 const getVerticalList = inputArray =>
     inputArray.reduce((a, c) => a ? `${a}\n${c}` : c, '');
 
+// TODO: Remove unused function
 const writeToFile = (filePath, text) => {
     writeFileSync(filePath, text);
     console.log(`\nList stored in file: ${filePath}`);

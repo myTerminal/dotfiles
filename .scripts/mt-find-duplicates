@@ -2,10 +2,10 @@
 
 /* global require process console */
 
-const { argv: [program, thisFile, inputDir, outputFile] } = process;
+const { argv: [program, thisFile, inputDir] } = process;
 const { log } = console;
 
-const { inflateInput, getFileStats, getVerticalList, writeToFile } = require('../.assets/libs/node');
+const { inflateInput, getFileStats, getVerticalList } = require('../.assets/libs/node');
 
 const files = inflateInput([inputDir]);
 
@@ -29,7 +29,3 @@ const duplicates = Object.keys(fileMap)
 const listOfDuplicates = getVerticalList(duplicates);
 
 log(listOfDuplicates);
-
-if (outputFile) {
-    writeToFile(outputFile, listOfDuplicates);
-}
