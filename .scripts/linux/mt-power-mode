@@ -23,7 +23,7 @@ switch-power-mode-with-systemd () {
             systemctl suspend
             ;;
 
-        "hibernate" | "poweroff" )
+        "hibernate" )
             systemctl hibernate
             ;;
 
@@ -64,7 +64,7 @@ switch-power-mode-with-runit () {
             loginctl suspend
             ;;
 
-        "hibernate" | "poweroff" )
+        "hibernate" )
             loginctl hibernate
             ;;
 
