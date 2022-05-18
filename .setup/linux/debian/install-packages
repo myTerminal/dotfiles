@@ -26,6 +26,7 @@ tw_execute sudo apt install \
            weechat \
            docker \
            npm \
+           sbcl \
            cargo \
            brightnessctl \
            acpi \

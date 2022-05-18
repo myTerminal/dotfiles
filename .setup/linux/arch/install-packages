@@ -28,6 +28,7 @@ tw_execute sudo pacman -S \
            weechat \
            docker \
            npm \
+           sbcl \
            rustup \
            brightnessctl \
            acpi \

@@ -16,6 +16,7 @@ tw_execute brew install \
            fzf \
            aspell \
            node \
+           sbcl \
            rustup-init \
            weechat \
            docker \
