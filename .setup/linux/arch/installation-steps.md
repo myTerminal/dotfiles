@@ -81,7 +81,7 @@ Unmount the partition
 
 ### Bootstrapping a base-system
 
-    pacstrap /mnt base base-devel linux linux-firmware linux-headers vim git wget intel-ucode archlinux-keyring polkit
+    pacstrap /mnt base base-devel linux linux-firmware linux-headers intel-ucode archlinux-keyring polkit vim git wget
 
 ### Generating file-system table
 
