@@ -19,27 +19,27 @@ switch-power-mode-with-systemd () {
             i3-msg exit
             ;;
 
-        "sleep" | "suspend" )
+        "sleep" | "suspend")
             systemctl suspend
             ;;
 
-        "hibernate" )
+        "hibernate")
             systemctl hibernate
             ;;
 
-        "shutdown" | "poweroff" )
+        "shutdown" | "poweroff")
             systemctl poweroff
             ;;
 
-        "restart" | "reboot" )
+        "restart" | "reboot")
             systemctl reboot
             ;;
 
-        "awake" )
+        "awake")
             systemctl mask sleep.target suspend.target
             ;;
 
-        "sleepy" )
+        "sleepy")
             systemctl unmask sleep.target suspend.target
             ;;
 
@@ -60,27 +60,27 @@ switch-power-mode-with-runit () {
             i3-msg exit
             ;;
 
-        "sleep" | "suspend" )
+        "sleep" | "suspend")
             loginctl suspend
             ;;
 
-        "hibernate" )
+        "hibernate")
             loginctl hibernate
             ;;
 
-        "shutdown" | "poweroff" )
+        "shutdown" | "poweroff")
             loginctl poweroff
             ;;
 
-        "restart" | "reboot" )
+        "restart" | "reboot")
             loginctl reboot
             ;;
 
-        "awake" )
+        "awake")
             echo "Not implemented!"
             ;;
 
-        "sleepy" )
+        "sleepy")
             echo "Not implemented!"
             ;;
 
