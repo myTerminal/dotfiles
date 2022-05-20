@@ -3,6 +3,7 @@
 tw_log "Installing core packages..."
 tw_execute sudo pacman -S \
            archlinux-keyring \
+           cryptsetup \
            polkit \
            tmux \
            fish \
