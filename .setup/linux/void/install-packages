@@ -37,6 +37,7 @@ tw_execute sudo xbps-install -S \
            brightnessctl \
            acpi \
            numlockx \
+           chrony \
            btrfs-progs \
            ntfs-3g \
            mtools \
