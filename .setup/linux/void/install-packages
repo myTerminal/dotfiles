@@ -4,6 +4,7 @@ tw_log "Installing core packages..."
 tw_execute sudo xbps-install -S \
            cryptsetup \
            efibootmgr \
+           polkit \
            tmux \
            fish-shell \
            fd \
