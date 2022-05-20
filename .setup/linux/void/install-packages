@@ -10,9 +10,11 @@ tw_execute sudo xbps-install -S \
            ncdu \
            ripgrep \
            fzf \
+           vim \
            emacs-gtk3 \
            aspell \
            aspell-en \
+           git \
            tig \
            ranger \
            rsync \

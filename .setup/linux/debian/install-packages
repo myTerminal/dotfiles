@@ -10,9 +10,11 @@ tw_execute sudo apt install \
            ncdu \
            ripgrep \
            fzf \
+           vim \
            emacs \
            aspell \
            aspell-en \
+           git \
            tig \
            ranger \
            rsync \

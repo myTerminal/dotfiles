@@ -12,9 +12,11 @@ tw_execute sudo pacman -S \
            ncdu \
            ripgrep \
            fzf \
+           vim \
            emacs \
            aspell \
            aspell-en \
+           git \
            tig \
            ranger \
            rsync \
