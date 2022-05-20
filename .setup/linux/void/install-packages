@@ -33,6 +33,7 @@ tw_execute sudo xbps-install -S \
            numlockx \
            neofetch \
            wget \
+           curl \
            openssh
 
 tw_log "Installing graphical packages..."

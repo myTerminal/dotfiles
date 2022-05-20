@@ -34,6 +34,7 @@ tw_execute sudo pacman -S \
            acpi \
            neofetch \
            wget \
+           curl \
            openssh
 
 tw_log "Installing graphical packages..."
