@@ -189,7 +189,7 @@ Add user to sudo group
 
 ### Installing bootloader utils
 
-    apt install efibootmgr btrfs-progs os-prober cryptsetup ntfs-3g mtools dosfstools
+    apt install os-prober
 
 ### Setting up encryption parameters
 

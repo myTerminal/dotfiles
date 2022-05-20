@@ -153,7 +153,7 @@ Configure sudo for 'wheel' group
 
 Install grub and company
 
-    pacman -S grub efibootmgr btrfs-progs os-prober ntfs-3g mtools dosfstools
+    pacman -S grub os-prober
 
 ## Setting up bootloader
 
