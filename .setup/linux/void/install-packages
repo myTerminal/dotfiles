@@ -5,6 +5,7 @@ tw_execute sudo xbps-install -S \
            cryptsetup \
            efibootmgr \
            polkit \
+           dbus \
            tmux \
            fish-shell \
            fd \
