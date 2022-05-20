@@ -3,6 +3,7 @@
 tw_log "Installing core packages..."
 tw_execute sudo apt install \
            cryptsetup \
+           efibootmgr \
            tmux \
            fish \
            fd-find \
