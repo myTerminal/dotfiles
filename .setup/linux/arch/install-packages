@@ -37,6 +37,10 @@ tw_execute sudo pacman -S \
            brightnessctl \
            acpi \
            neofetch \
+           btrfs-progs \
+           ntfs-3g \
+           mtools \
+           dosfstools \
            wget \
            curl \
            openssh

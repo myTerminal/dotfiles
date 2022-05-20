@@ -35,6 +35,10 @@ tw_execute sudo apt install \
            brightnessctl \
            acpi \
            neofetch \
+           btrfs-progs \
+           ntfs-3g \
+           mtools \
+           dosfstools \
            wget \
            curl \
            ssh

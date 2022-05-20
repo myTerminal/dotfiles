@@ -35,6 +35,10 @@ tw_execute sudo xbps-install -S \
            brightnessctl \
            acpi \
            numlockx \
+           btrfs-progs \
+           ntfs-3g \
+           mtools \
+           dosfstools \
            neofetch \
            wget \
            curl \
