@@ -20,6 +20,7 @@ tw_execute brew install \
            node \
            sbcl \
            rustup-init \
+           rlwrap \
            weechat \
            docker \
            docker-machine \

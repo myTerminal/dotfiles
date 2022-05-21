@@ -34,11 +34,12 @@ tw_execute sudo apt install \
            cargo \
            brightnessctl \
            acpi \
-           neofetch \
            btrfs-progs \
            ntfs-3g \
            mtools \
            dosfstools \
+           rlwrap \
+           neofetch \
            wget \
            curl \
            ssh

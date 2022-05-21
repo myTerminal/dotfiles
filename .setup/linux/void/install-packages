@@ -42,6 +42,7 @@ tw_execute sudo xbps-install -S \
            ntfs-3g \
            mtools \
            dosfstools \
+           rlwrap \
            neofetch \
            wget \
            curl \

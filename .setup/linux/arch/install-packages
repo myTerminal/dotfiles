@@ -36,11 +36,12 @@ tw_execute sudo pacman -S \
            rustup \
            brightnessctl \
            acpi \
-           neofetch \
            btrfs-progs \
            ntfs-3g \
            mtools \
            dosfstools \
+           rlwrap \
+           neofetch \
            wget \
            curl \
            openssh
