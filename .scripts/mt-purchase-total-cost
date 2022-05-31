@@ -1,0 +1,11 @@
+#!/usr/bin/env cl
+
+(let ((args (cdr *posix-argv*)))
+  (if (= (length args)
+         2)
+      (let ((selling-price (parse-integer (car args) :junk-allowed t))
+            (shipping-cost (parse-integer (cadr args) :junk-allowed t))
+            (sales-tax 0.07))
+        (princ (round (* (+ selling-price shipping-cost)
+                         (+ 1 sales-tax)))))
+      (princ "Need item price and shipping cost!")))
