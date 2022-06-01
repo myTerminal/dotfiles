@@ -12,6 +12,7 @@ case "${tw_platform}" in
         ;;
 
     Void)
+        sudo xbps-install -Syu xbps
         sudo xbps-install -Syu
         ;;
 esac
