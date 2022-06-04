@@ -21,6 +21,7 @@ tw_execute sudo xbps-install -S \
            git \
            tig \
            ranger \
+           cryfs \
            rsync \
            zip \
            unzip \

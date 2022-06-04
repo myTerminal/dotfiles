@@ -19,6 +19,7 @@ tw_execute sudo apt install \
            git \
            tig \
            ranger \
+           cryfs \
            rsync \
            zip \
            unzip \
