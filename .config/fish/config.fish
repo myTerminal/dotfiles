@@ -38,6 +38,6 @@ else if test (uname) = "Darwin"
 end
 
 # Start a tmux session if appropriate
-if not contains $TERM "screen" "eterm-color" "dumb"
+if not contains $TERM "screen" "screen-256color" "eterm-color" "dumb"
    tmux
 end
