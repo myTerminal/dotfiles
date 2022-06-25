@@ -4,6 +4,8 @@ mt_nvidia_packages=(nvidia390 \
                         nvidia390-libs-32bit)
 mt_more_packages=(vulkan-loader \
                       vulkan-loader-32bit \
+                      vkd3d \
+                      vkd3d-32bit \
                       libgcc-32bit \
                       libstdc++-32bit \
                       libdrm-32bit \
