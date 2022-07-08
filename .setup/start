@@ -8,9 +8,7 @@ mt_setup_dir="$(readlink -f "${BASH_SOURCE[0]}" | xargs realpath | xargs dirname
 # Prepare twiner
 echo "Preparing twiner..."
 if [ -d ~/.twiner ]; then
-    cd ~/.twiner
-    git pull
-    cd ..
+    git -C ~/.twiner pull
 else
     git clone https://github.com/myTerminal/twiner.git ~/.twiner
 fi
