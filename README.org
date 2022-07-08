@@ -8,7 +8,7 @@ The 'replicable' heart of my computer(s)
 Simply run the below on the new computer to be "adopted":
 
 #+BEGIN_EXAMPLE
-/bin/bash -c "$(curl https://raw.githubusercontent.com/myTerminal/dotfiles/master/.setup/bootstrap)"
+/bin/bash -c "$(curl https://raw.githubusercontent.com/myTerminal/dotfiles/master/bootstrap)"
 #+END_EXAMPLE
 
 OR
