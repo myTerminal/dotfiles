@@ -1,9 +1,17 @@
 #!/usr/bin/env bash
 
+# Init and fetch the git project
 cd ~
 git init
 git remote add origin https://github.com/myTerminal/dotfiles.git
 git fetch --all
 rm .bash*
 git checkout master
+
+# Fetch/update and start forge-legacy
+if [ -d ~/.forge-legacy ]; then
+    git -C ~/.forge-legacy pull
+else
+    git clone https://github.com/myTerminal/forge-legacy.git ~/.forge-legacy
+fi
 .forge-legacy/start
