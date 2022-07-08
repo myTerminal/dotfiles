@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-tw_log "Installing home-brew..."
-tw_execute /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-tw_log "Installing svn as a dependency for a few packages"
-tw_execute brew install svn
