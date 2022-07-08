@@ -6,4 +6,4 @@ git remote add origin https://github.com/myTerminal/dotfiles.git
 git fetch --all
 rm .bash*
 git checkout master
-.setup/start
+.forge-legacy/start

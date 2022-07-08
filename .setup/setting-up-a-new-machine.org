@@ -12,7 +12,7 @@
   - Install and configure Authy
 - Install Linux
   - If installing from within a LIVE environment, create an SSH key and add it to my GitHub and GitLab account
-- Init [[https://github.com/myTerminal/dotfiles][dotfiles]] using [[../bootstrap][the bootstrap script]], in turn run [[start][.setup/start]]
+- Init [[https://github.com/myTerminal/dotfiles][dotfiles]] using [[../bootstrap][the bootstrap script]] and trigger forge-legacy
 - Create an add-on setup script for the specific hardware:
   - Test/Fix display scaling
   - Install graphics drivers
