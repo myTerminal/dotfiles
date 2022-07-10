@@ -8,7 +8,7 @@
   4) /(Optional)/ MSFT Reserved
   5) /(Optional)/ Windows NTFS
 - /(Optional)/ Install Windows with absolute basic settings and minimal software, run updates a few tens of times
-  - Install and configure Firefox
+  - Install and configure Brave
   - Install and configure Authy
 - Install Linux
   - If installing from within a LIVE environment, create an SSH key and add it to my GitHub and GitLab account
@@ -25,7 +25,7 @@
 - Configure Syncthing and fetch data
 - Create symlinks from `~/_store/Applications` under `/usr/bin`
 - Configure software and services
-  - Firefox
+  - Brave
   - Discord
   - Element/Schildi
   - Keepass
@@ -39,7 +39,7 @@
 - Verify reference of the machine at/under the following:
   - Home network as a new device
   - GitHub and GitLab (SSH keys)
-  - Firefox account as a known device
+  - Sync device for Brave
   - Element/Schildi for Matrix
   - Syncthing as a node
   - Remember The Milk for maintenance tasks

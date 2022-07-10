@@ -10,7 +10,7 @@ efibootmgr -Bb <four-digit-numeric-identifier>
 
 - Remove references from the following:
   - GitHub and GitLab (SSH keys)
-  - Firefox account as a known device
+  - Sync device in Brave
   - Element/Schildi for Matrix
   - Syncthing as a node
   - Remember The Milk for maintenance tasks
