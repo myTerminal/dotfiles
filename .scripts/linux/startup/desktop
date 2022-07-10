@@ -28,5 +28,6 @@ if [ $(command -v numlockx) ]; then
     numlockx
 fi
 
+# TODO: Fix and uncomment
 # Play startup sound
-mpg123 ~/.assets/sounds/car-revving-sound.mp3 &
+# mpg123 ~/.assets/sounds/car-revving-sound.mp3 &
