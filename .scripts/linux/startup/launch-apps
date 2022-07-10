@@ -5,9 +5,8 @@ command=$1
 case "${1}" in
     e | express )
         exec emacs & disown
-        exec firefox & disown
-        exec firefox-developer-edition & disown
-        exec firefox-esr & disown
+        exec brave & disown
+        exec brave-browser & disown
         exec keepassxc & disown
         ;;
 
@@ -20,9 +19,8 @@ case "${1}" in
         exec emacs & disown
         exec discord & disown
         exec element & disown
-        exec firefox & disown
-        exec firefox-developer-edition & disown
-        exec firefox-esr & disown
+        exec brave & disown
+        exec brave-browser & disown
         exec thunar & disown
         exec keepassxc & disown
         ;;
