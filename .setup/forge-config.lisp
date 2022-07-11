@@ -1,0 +1,125 @@
+(
+ (:void :arch :debian :mac)
+ (
+  ("archlinux-keyring" (:void) (:debian) (:mac))
+  ("cryptsetup" (:mac))
+  "cryfs"
+  ("efibootmgr" (:mac))
+  ("polkit" (:debian) (:mac))
+  ("dbus" (:arch) (:debian) (:mac))
+  "tmux"
+  ("fish" (:xbps "fish-shell"))
+  ("fd" (:apt "fd-find"))
+  "exa"
+  "bat"
+  "ncdu"
+  "ripgrep"
+  "fzf"
+  ("vim" (:mac))
+  ("emacs" (:xbps "emacs-gtk3") (:cask "emacs"))
+  "aspell"
+  ("aspell-en" (:mac))
+  "git"
+  "tig"
+  "make"
+  "ranger"
+  "rsync"
+  ("diffmerge" (:void) (:arch) (:debian) (:cask "diffmerge"))
+  ("zip" (:mac))
+  ("unzip" (:mac))
+  "htop"
+  ("psmisc" (:mac))
+  ("udisks2" (:cask "mounty"))
+  ("network-manager" (:xbps "NetworkManager") (:pacman "networkmanager") (:mac))
+  ("bind-utils" (:pacman "bind") (:apt "dnsutils") (:mac))
+  "weechat"
+  ("docker" (:brew "docker" "docker-machine"))
+  ("nodejs" (:pacman "npm") (:apt "npm") (:brew "node"))
+  "sbcl"
+  ("rustup" (:apt "cargo") (:brew "rustup-init"))
+  ("brightnessctl" (:mac))
+  ("acpi" (:mac))
+  ("numlockx" (:paru "systemd-numlockontty") (:mac))
+  ("chrony" (:arch) (:mac))
+  ("btrfs-progs" (:mac))
+  ("ntfs-3g" (:mac))
+  ("mtools" (:mac))
+  ("dosfstools" (:mac))
+  "rlwrap"
+  "neofetch"
+  "wget"
+  "curl"
+  ("openssh" (:apt "ssh") (:mac))
+  ("xorg" (:xbps "xorg-server") (:mac))
+  ("sct" (:paru "sct") (:mac))
+  ("onboard" (:mac))
+  ("picom" (:apt "compton") (:mac))
+  ("i3" (:xbps "i3" "i3status" "i3lock") (:mac))
+  ("xfce4" (:mac))
+  ("feh" (:mac))
+  ("dmenu" (:debian) (:mac))
+  ("rofi" (:mac))
+  ("kitty" (:cask "alacritty"))
+  ("xsel" (:mac))
+  ("udiskie" (:mac))
+  ("gparted" (:mac))
+  ("thunar" (:xbps "Thunar") (:mac))
+  ("gvfs" (:mac))
+  ("syncthing" (:xbps "syncthing-gtk") (:paru "syncthing-gtk") (:apt "syncthing-gtk"))
+  ("firefox" (:pacman "firefox-developer-edition") (:apt "firefox-esr") (:cask "homebrew/cask-versions/firefox-developer-edition"))
+  ("chromium" (:cask "chromium"))
+  ("brave" (:void) (:debian) (:cask "brave-browser"))
+  ("keepassxc" (:cask "keepasxc"))
+  ("authy" (:void) (:paru "authy") (:debian) (:cask "authy"))
+  ("tunnelbear" (:void) (:paru "tunnelbear") (:debian) (:cask "tunnelbear"))
+  ("thunderbird" (:mac))
+  ("discord" (:flatpak "com.discordapp.Discord") (:paru "discord") (:cask "discord"))
+  ("element" (:flatpak "im.riot.Riot") (:paru "element-desktop") (:cask "element"))
+  ("pcloud" (:void) (:paru "pcloud-drive") (:debian) (:mac))
+  ("google-backup-and-sync" (:void) (:arch) (:debian) (:cask "google-backup-and-sync"))
+  ("transmission" (:xbps "transmission-gtk") (:pacman "transmission-gtk") (:cask "transmission"))
+  ("postman" (:void) (:paru "postman-bin") (:flatpak "com.getpostman.Postman") (:cask "postman"))
+  ("nomachine" (:void) (:paru "nomachine") (:debian) (:cask "nomachine"))
+  ("virt-manager" (:xbps "qemu" "virt-manager"))
+  ("libreoffice" (:pacman "libreoffice-fresh") (:cask "libreoffice"))
+  ("blueman" (:mac))
+  ("shotwell" (:cask "xnviewmp"))
+  ("gimp" (:cask "gimp"))
+  ("darktable" (:cask "darktable"))
+  ("clementine" (:cask "clementine"))
+  ("mpg123" (:mac))
+  ("pavucontrol" (:mac))
+  ("gstreamer" (:xbps "gstreamer1") (:debian) (:mac))
+  ("pulseaudio" (:pacman "pulseaudio" "pulseaudio-bluetooth") (:mac))
+  ("pulseeffects-legacy" (:paru "pulseeffects-legacy") (:apt "pulseeffects") (:mac))
+  ("audacity" (:mac))
+  ("easytag" (:cask "kid3"))
+  ("vlc" (:cask "vlc"))
+  ("handbrake" (:cask "handbrake"))
+  ("blender" (:cask "blender"))
+  "youtube-dl"
+  ("yt-dlp" (:void) (:arch) (:debian) (:mac))
+  ("kodi" (:cask "kodi"))
+  ("flameshot" (:mac))
+  ("obs" (:pacman "obs-studio") (:apt "obs-studio") (:cask "obs"))
+  ("peek" (:cask "licecap"))
+  ("keymon" (:void) (:paru "key-mon") (:debian) (:cask "keycastr"))
+  ("balena-etcher" (:void) (:paru "balena-etcher") (:debian) (:cask "balenaetcher"))
+  ("steam" (:flatpak "com.valvesoftware.Steam") (:pacman "steam") (:apt "steam") (:cask "steam"))
+  ("origin" (:void) (:arch) (:debian) (:cask "origin"))
+  ("gamehub" (:paru "gamehub") (:debian) (:mac))
+  ("sony-remote-play" (:void) (:arch) (:debian) (:cask "sony-ps4-remote-play"))
+  ("barrier" (:cask "barrier"))
+  ("rememberthemilk" (:void) (:paru "rememberthemilk") (:debian) (:cask "remember-the-milk"))
+  ("dynalist" (:void) (:paru "dynalist-desktop") (:debian) (:cask "dynalist"))
+  ("edex-ui" (:void) (:paru "edex-ui") (:debian) (:cask "edex-ui"))
+  ("razer-synapse" (:void) (:arch) (:debian) (:cask "razer-synapse"))
+  ("font-open-sans" (:void) (:arch) (:debian) (:cask "font-open-sans"))
+  ("font-inconsolata" (:void) (:arch) (:debian) (:cask "font-inconsolata"))
+  ("font-liberation" (:void) (:arch) (:debian) (:cask "font-liberation"))
+  ("font-roboto-mono" (:void) (:arch) (:debian) (:cask "font-roboto-mono"))
+  ("font-fira-code" (:void) (:arch) (:debian) (:cask "font-fira-code"))
+  )
+ (
+  )
+ )
