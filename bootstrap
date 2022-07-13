@@ -15,6 +15,9 @@ else
     git clone https://github.com/myTerminal/twiner.git ~/.twiner
 fi
 
+# Start twiner in debug mode
+~/.twiner/start debug
+
 # Fetch/update forge-legacy
 if [ -d ~/.forge-legacy ]; then
     git -C ~/.forge-legacy pull
