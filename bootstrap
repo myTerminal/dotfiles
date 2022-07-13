@@ -8,10 +8,19 @@ git fetch --all
 rm .bash*
 git checkout master
 
-# Fetch/update and start forge-legacy
+# Fetch/update twiner
+if [ -d ~/.twiner ]; then
+    git -C ~/.twiner pull
+else
+    git clone https://github.com/myTerminal/twiner.git ~/.twiner
+fi
+
+# Fetch/update forge-legacy
 if [ -d ~/.forge-legacy ]; then
     git -C ~/.forge-legacy pull
 else
     git clone https://github.com/myTerminal/forge-legacy.git ~/.forge-legacy
 fi
+
+# Start forge-legacy
 .forge-legacy/start
