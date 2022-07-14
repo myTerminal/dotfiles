@@ -121,5 +121,214 @@
   ("font-fira-code" (:void) (:arch) (:debian) (:cask "font-fira-code"))
   )
  (
+  "Install flatpak packages the conventional way"
+  nil
+  (:void ("~/.scripts/linux/mt-flatpak-install postman com.getpostman.Postman"
+          "~/.scripts/linux/mt-flatpak-install discord com.discordapp.Discord"
+          "~/.scripts/linux/mt-flatpak-install element im.riot.Riot"))
+  (:debian ("~/.scripts/linux/mt-flatpak-install postman com.getpostman.Postman"
+            "~/.scripts/linux/mt-flatpak-install discord com.discordapp.Discord"
+            "~/.scripts/linux/mt-flatpak-install element im.riot.Riot"))
+  )
+ (
+  "Perform a few package-dependent config"
+  nil
+  (:void ("sudo usermod -aG libvirt ismail"
+          "xdg-settings set default-web-browser firefox.desktop"))
+  (:arch ("sudo usermod -aG libvirt ismail"))
+  (:debian ("sudo usermod -aG libvirt ismail"
+            "xdg-settings set default-web-browser firefox-esr.desktop"
+            "sudo ln -s \"$(which fdfind)\" \"$(which fdfind | xargs readlink -f | xargs dirname)/fd\""
+            "sudo ln -s \"$(which batcat)\" \"$(which batcat | xargs readlink -f | xargs dirname)/bat\""))
+  )
+ (
+  "Set up Docker"
+  t
+  (:all ("sudo groupadd docker"
+         "sudo gpasswd -a ${USER} docker"))
+  (:void ("sudo ln -s /etc/sv/docker /var/service"))
+  (:arch ("sudo systemctl enable docker"))
+  (:debian ("sudo systemctl enable docker"))
+  )
+ (
+  "Change user shell"
+  t
+  (:all ("sudo usermod -s /bin/fish ismail"))
+  )
+ (
+  "Install Rust Toolchain"
+  t
+  (:void ("rustup-init --default-toolchain stable --profile default -y"))
+  (:arch ("rustup toolchain install stable"))
+  (:debian ("rustup toolchain install stable"))
+  )
+ (
+  "Install Graphical Theming: GTK theme"
+  t
+  (:all ("mkdir -p ~/.local/share/themes"
+         "git clone https://github.com/WernerFP/Shades-of-gray-theme.git ~/_temp"
+         "mv ~/_temp/Shades-of* ~/.local/share/themes/"
+         "rm -rf ~/_temp"))
+  )
+ (
+  "Install Graphical Theming: Icon theme"
+  t
+  (:all ("mkdir -p ~/.local/share/icons"
+         "git clone https://github.com/madmaxms/iconpack-obsidian ~/_temp"
+         "mv ~/_temp/Obsidian* ~/.local/share/icons/"
+         "rm -rf ~/_temp"))
+  )
+ (
+  "Install Graphical Theming: Cursor theme"
+  t
+  (:all ("mkdir -p ~/.local/share/icons"
+         "mkdir ~/_temp"
+         "cd ~/_temp"
+         "wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v1.1.1/Bibata.tar.gz"
+         "tar -xvf Bibata.tar.gz"
+         "mv ~/_temp/Bibata-*  ~/.local/share/icons"
+         "cd ~/"
+         "rm -rf ~/_temp"))
+  )
+ (
+  "Install Fonts"
+  t
+  (:all ("mkdir -p ~/.local/share/fonts"
+         "git clone https://github.com/FortAwesome/Font-Awesome ~/_temp"
+         "mv ~/_temp/otfs ~/.local/share/fonts/FontAwesome"
+         "rm -rf ~/_temp"
+         "mkdir -p ~/.local/share/fonts"
+         "git clone https://github.com/googlefonts/opensans ~/_temp"
+         "mv ~/_temp/fonts/ttf ~/.local/share/fonts/OpenSans"
+         "rm -rf ~/_temp"
+         "mkdir -p ~/.local/share/fonts"
+         "git clone https://github.com/googlefonts/inconsolata ~/_temp"
+         "mv ~/_temp/fonts/ttf ~/.local/share/fonts/Inconsolata"
+         "rm -rf ~/_temp"
+         "mkdir -p ~/.local/share/fonts"
+         "git clone https://github.com/googlefonts/RobotoMono ~/_temp"
+         "mv ~/_temp/fonts/ttf ~/.local/share/fonts/RobotoMono"
+         "rm -rf ~/_temp"
+         "mkdir -p ~/.local/share/fonts"
+         "git clone https://github.com/grays/droid-fonts ~/_temp"
+         "mv ~/_temp/droid ~/.local/share/fonts/Droid"
+         "rm -rf ~/_temp"
+         "mkdir -p ~/.local/share/fonts"
+         "git clone https://github.com/tonsky/FiraCode ~/_temp"
+         "mv ~/_temp/distr/ttf ~/.local/share/fonts/FiraCode"
+         "rm -rf ~/_temp"
+         "mkdir -p ~/.local/share/fonts"
+         "mkdir ~/_temp"
+         "cd ~/_temp"
+         "wget https://github.com/liberationfonts/liberation-fonts/files/6418984/liberation-fonts-ttf-2.1.4.tar.gz"
+         "tar -xvf liberation-fonts-ttf-2.1.4.tar.gz"
+         "mkdir ~/.local/share/fonts/Liberation"
+         "mv ~/_temp/liberation-fonts-ttf-2.1.4/Liberation*  ~/.local/share/fonts/Liberation/"
+         "cd ~/"
+         "rm -rf ~/_temp"))
+  )
+ (
+  "Set up peripheral drivers"
+  t
+  (:void ("sudo xbps-install -Sy razergenie openrazer-meta"
+          "sudo gpasswd -a $USER plugdev"))
+  (:arch ("paru -S python-notify2 openrazer-meta polychromatic --noconfirm"
+          "sudo pacman -Syu linux-headers --noconfirm"
+          "sudo gpasswd -a $USER plugdev"))
+  (:debian ("echo 'deb http://download.opensuse.org/repositories/hardware:/razer/Debian_Testing/ /' | sudo tee /etc/apt/sources.list.d/hardware:razer.list"
+            "curl -fsSL https://download.opensuse.org/repositories/hardware:razer/Debian_Testing/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/hardware_razer.gpg > /dev/null"
+            "sudo apt update"
+            "sudo apt install -y openrazer-meta razergenie"
+            "sudo gpasswd -a $USER plugdev"))
+  )
+ (
+  "Set up startup services"
+  t
+  (:void ("sudo ln -s /etc/sv/libvirtd /var/service"
+          "sudo ln -s /etc/sv/virtlogd /var/service"
+          "sudo ln -s /etc/sv/bluetoothd /var/service"
+          "sudo ln -s /etc/sv/sshd /var/service"))
+  (:arch ("systemctl enable numLockOnTty.service"
+          "systemctl start numLockOnTty.service"
+          "systemctl --user enable syncthing.service"
+          "systemctl --user start syncthing.service"
+          "systemctl enable bluetooth"
+          "systemctl start bluetooth"
+          "systemctl enable ssh"
+          "systemctl start ssh"))
+  (:debian ("systemctl --user enable syncthing.service"
+            "systemctl --user start syncthing.service"
+            "systemctl enable bluetooth"
+            "systemctl start bluetooth"
+            "systemctl enable ssh"
+            "systemctl start ssh"))
+  )
+ (
+  "Perform visual tweaks"
+  t
+  (:all ("wget -O - https://github.com/shvchk/fallout-grub-theme/raw/master/install.sh | bash"))
+  )
+ (
+  "Enable touch scrolling for Firefox"
+  t
+  (:all ("echo \"
+MOZ_USE_XINPUT2 DEFAULT=1
+\" | sudo tee -a /etc/security/pam_env.conf"))
+  )
+ (
+  "Install global NPM packages"
+  t
+  (:all ("sudo npm install -g lite-server nano-server myterminal-cli stay-with-me git-getter re-write"))
+  )
+ (
+  "Create custom Lisp parser"
+  t
+  (:all ("sudo cp /home/ismail/.assets/cl /usr/bin/cl"))
+  )
+ (
+  "Create required directories"
+  t
+  (:all ("mkdir \"${MT_PATH_WORKSPACE}\""
+         "mkdir \"${MT_PATH_WORKSPACE_GITHUB}\""
+         "mkdir \"${MT_PATH_STORE}\""))
+  )
+ (
+  "Clone public GitHub source projects for myTerminal"
+  t
+  (:all ("git-getter --username myTerminal --targetPath \"${MT_PATH_WORKSPACE_GITHUB}\" --ssh"))
+  )
+ (
+  "Create fallback link to .emacs.d"
+  t
+  (:all ("ln -s /home/ismail/.config/emacs /home/ismail/.emacs.d"))
+  )
+ (
+  "Link myTerminal/.emacs.d to myterminal/dotfiles"
+  t
+  (:all ("mkdir /home/ismail/.config/emacs/configs"
+         "ln -s \"${MT_PATH_WORKSPACE_GITHUB}/.emacs.d/emacs\" ~/.config/emacs/configs/_default"))
+  )
+ (
+  "Convert dotfiles at '~' from HTTPS to SSH"
+  t
+  (:all ("rm -rf ~/.git"
+         "cp -r \"${MT_PATH_WORKSPACE_GITHUB}/dotfiles/.git\" ~/.git"))
+  )
+ (
+  "Create convenience soft-links"
+  t
+  (:all ("ln -s \"${MT_PATH_WORKSPACE}/kitchen\" ~/_kitchen"
+         "ln -s \"${MT_PATH_WORKSPACE_GITHUB}\" ~/_github"
+         "ln -s \"${MT_PATH_WORKSPACE_GITHUB}/myTerminal.github.io\" ~/_portfolio-data"
+         "ln -s \"${MT_PATH_WORKSPACE}/all/myterminal-web-lp\" ~/_portfolio-lp"
+         "ln -s \"${MT_PATH_STORE}/Documents\" ~/_documents"
+         "ln -s \"${MT_PATH_STORE}/Documents/notes\" ~/_notes"
+         "ln -s \"${MT_PATH_STORE}/Mobile-Media\" ~/_mobile-media"
+         "ln -s \"${MT_PATH_STORE}/YouTube\" ~/_youtube"))
+  )
+ (
+  "Tag machine with ~/.mt-tag"
+  t
+  (:all ("touch ~/.mt-tag"))
   )
  )
