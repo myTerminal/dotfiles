@@ -131,6 +131,12 @@
             "~/.scripts/linux/mt-flatpak-install element im.riot.Riot"))
   )
  (
+  "Enable hidden items in Finder"
+  nil
+  (:mac ("defaults write com.apple.Finder AppleShowAllFiles YES"
+         "killall Finder"))
+  )
+ (
   "Perform a few package-dependent config"
   nil
   (:void ("sudo usermod -aG libvirt ismail"
@@ -144,16 +150,26 @@
  (
   "Set up Docker"
   t
-  (:all ("sudo groupadd docker"
-         "sudo gpasswd -a ${USER} docker"))
-  (:void ("sudo ln -s /etc/sv/docker /var/service"))
-  (:arch ("sudo systemctl enable docker"))
-  (:debian ("sudo systemctl enable docker"))
+  (:void ("sudo groupadd docker"
+          "sudo gpasswd -a ${USER} docker"
+          "sudo ln -s /etc/sv/docker /var/service"))
+  (:arch ("sudo groupadd docker"
+          "sudo gpasswd -a ${USER} docker"
+          "sudo systemctl enable docker"))
+  (:debian ("sudo groupadd docker"
+            "sudo gpasswd -a ${USER} docker"
+            "sudo systemctl enable docker"))
+  (:mac ("docker-machine create --driver virtualbox default"
+         "eval ${docker-machine env default}"))
   )
  (
   "Change user shell"
   t
-  (:all ("sudo usermod -s /bin/fish ismail"))
+  (:void ("sudo usermod -s /bin/fish ismail"))
+  (:arch ("sudo usermod -s /bin/fish ismail"))
+  (:debian ("sudo usermod -s /bin/fish ismail"))
+  (:mac ("echo \"/usr/local/bin/fish\" | sudo tee -a /etc/shells"
+         "chsh -s /usr/local/bin/fish"))
   )
  (
   "Install Rust Toolchain"
@@ -161,6 +177,7 @@
   (:void ("rustup-init --default-toolchain stable --profile default -y"))
   (:arch ("rustup toolchain install stable"))
   (:debian ("rustup toolchain install stable"))
+  (:mac ("rustup-init"))
   )
  (
   "Install Graphical Theming: GTK theme"
@@ -262,6 +279,7 @@
             "systemctl start bluetooth"
             "systemctl enable ssh"
             "systemctl start ssh"))
+  (:mac ("brew services start syncthing"))
   )
  (
   "Perform visual tweaks"
