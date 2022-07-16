@@ -10,7 +10,7 @@
   "tmux"
   ("fish" (:xbps "fish-shell"))
   ("fd" (:apt "fd-find"))
-  "exa"
+  ("lsd" (:apt "exa"))
   "bat"
   "ncdu"
   "ripgrep"
