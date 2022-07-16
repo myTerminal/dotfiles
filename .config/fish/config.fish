@@ -13,7 +13,7 @@ add-to-path ~/.cargo/env
 # Set custom environment variables
 set -x MT_PATH_STORE ~/_store
 set -x MT_PATH_WORKSPACE ~/_workspace
-set -x MT_PATH_WORKSPACE_GITHUB ~/_workspace/github
+set -x MT_PATH_WORKSPACE_GITHUB $MT_PATH_WORKSPACE/github
 
 # Set a few variables for fish
 set fish_greeting ""

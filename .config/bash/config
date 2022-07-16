@@ -9,7 +9,7 @@ export PATH=$PATH:$HOME/.cargo/bin:$HOME/.cargo/env
 # Set custom environment variables
 export MT_PATH_STORE=~/_store
 export MT_PATH_WORKSPACE=~/_workspace
-export MT_PATH_WORKSPACE_GITHUB=~/_workspace/github
+export MT_PATH_WORKSPACE_GITHUB=$MT_PATH_WORKSPACE/github
 
 # Load private keys, if they exist
 if [ -f "${MT_PATH_STORE}/Documents/.private-keys" ]; then
