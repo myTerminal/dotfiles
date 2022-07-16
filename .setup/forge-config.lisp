@@ -306,14 +306,14 @@ MOZ_USE_XINPUT2 DEFAULT=1
  (
   "Create required directories"
   t
-  (:all ("mkdir \"${MT_PATH_WORKSPACE}\""
-         "mkdir \"${MT_PATH_WORKSPACE_GITHUB}\""
-         "mkdir \"${MT_PATH_STORE}\""))
+  (:all ("mkdir ~/_workspace"
+         "mkdir ~/_workspace/github"
+         "mkdir ~/_store"))
   )
  (
   "Clone public GitHub source projects for myTerminal"
   t
-  (:all ("git-getter --username myTerminal --targetPath \"${MT_PATH_WORKSPACE_GITHUB}\" --ssh"))
+  (:all ("git-getter --username myTerminal --targetPath ~/_workspace/github --ssh"))
   )
  (
   "Create fallback link to .emacs.d"
@@ -324,25 +324,25 @@ MOZ_USE_XINPUT2 DEFAULT=1
   "Link myTerminal/.emacs.d to myterminal/dotfiles"
   t
   (:all ("mkdir /home/ismail/.config/emacs/configs"
-         "ln -s \"${MT_PATH_WORKSPACE_GITHUB}/.emacs.d/emacs\" ~/.config/emacs/configs/_default"))
+         "ln -s ~/_workspace/github/.emacs.d/emacs ~/.config/emacs/configs/_default"))
   )
  (
   "Convert dotfiles at '~' from HTTPS to SSH"
   t
   (:all ("rm -rf ~/.git"
-         "cp -r \"${MT_PATH_WORKSPACE_GITHUB}/dotfiles/.git\" ~/.git"))
+         "cp -r ~/_workspace/github/dotfiles/.git ~/.git"))
   )
  (
   "Create convenience soft-links"
   t
-  (:all ("ln -s \"${MT_PATH_WORKSPACE}/kitchen\" ~/_kitchen"
-         "ln -s \"${MT_PATH_WORKSPACE_GITHUB}\" ~/_github"
-         "ln -s \"${MT_PATH_WORKSPACE_GITHUB}/myTerminal.github.io\" ~/_portfolio-data"
-         "ln -s \"${MT_PATH_WORKSPACE}/all/myterminal-web-lp\" ~/_portfolio-lp"
-         "ln -s \"${MT_PATH_STORE}/Documents\" ~/_documents"
-         "ln -s \"${MT_PATH_STORE}/Documents/notes\" ~/_notes"
-         "ln -s \"${MT_PATH_STORE}/Mobile-Media\" ~/_mobile-media"
-         "ln -s \"${MT_PATH_STORE}/YouTube\" ~/_youtube"))
+  (:all ("ln -s ~/_workspace/kitchen ~/_kitchen"
+         "ln -s ~/_workspace/github ~/_github"
+         "ln -s ~/_workspace/github/myTerminal.github.io ~/_portfolio-data"
+         "ln -s ~/_workspace/all/myterminal-web-lp ~/_portfolio-lp"
+         "ln -s ~/_store/Documents ~/_documents"
+         "ln -s ~/_store/Documents/notes ~/_notes"
+         "ln -s ~/_store/Mobile-Media ~/_mobile-media"
+         "ln -s ~/_store/YouTube ~/_youtube"))
   )
  (
   "Tag machine with ~/.mt-tag"
