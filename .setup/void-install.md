@@ -92,7 +92,7 @@ Unmount the partition
 
 ### Bootstrapping a base-system
 
-    XBPS_ARCH=$ARCH xbps-install -S -r /mnt -R "$REPO" base-system elogind polkit dbus chrony grub-x86_64-efi cryptsetup vim git wget
+    XBPS_ARCH=$ARCH xbps-install -S -r /mnt -R "$REPO" base-system elogind polkit dbus chrony grub-x86_64-efi cryptsetup vim git wget curl make
 
 ### Mounting the pseudo-filesystems for chroot
 

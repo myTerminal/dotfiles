@@ -124,7 +124,7 @@ Update packages list
 
 ### Installing core packages
 
-    apt install firmware-linux firmware-linux-nonfree sudo vim git wget
+    apt install firmware-linux firmware-linux-nonfree sudo vim git wget curl make
 
 ### Setting timezone
 
