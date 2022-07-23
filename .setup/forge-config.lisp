@@ -66,8 +66,6 @@
   ("thunar" (:xbps "Thunar") (:mac))
   ("gvfs" (:mac))
   ("syncthing" (:xbps "syncthing-gtk") (:paru "syncthing-gtk") (:apt "syncthing-gtk"))
-  ("firefox" (:pacman "firefox-developer-edition") (:apt "firefox-esr") (:cask "homebrew/cask-versions/firefox-developer-edition"))
-  ("chromium" (:cask "chromium"))
   ("brave" (:void) (:debian) (:cask "brave-browser"))
   ("keepassxc" (:cask "keepasxc"))
   ("authy" (:void) (:paru "authy") (:debian) (:cask "authy"))
@@ -139,11 +137,9 @@
  (
   "Perform a few package-dependent config"
   nil
-  (:void ("sudo usermod -aG libvirt ismail"
-          "xdg-settings set default-web-browser firefox.desktop"))
+  (:void ("sudo usermod -aG libvirt ismail"))
   (:arch ("sudo usermod -aG libvirt ismail"))
   (:debian ("sudo usermod -aG libvirt ismail"
-            "xdg-settings set default-web-browser firefox-esr.desktop"
             "sudo ln -s \"$(which fdfind)\" \"$(which fdfind | xargs readlink -f | xargs dirname)/fd\""
             "sudo ln -s \"$(which batcat)\" \"$(which batcat | xargs readlink -f | xargs dirname)/bat\""))
   )
