@@ -106,6 +106,7 @@
   ("steam" (:flatpak ("com.valvesoftware.Steam" "steam")) (:pacman "steam") (:apt "steam") (:cask "steam"))
   ("origin" (:void) (:arch) (:debian) (:cask "origin"))
   ("gamehub" (:paru "gamehub") (:debian) (:mac))
+  ("android-tools" (:apt "android-platform-system-core") (:cask "android-platform-tools"))
   ("sony-remote-play" (:void) (:arch) (:debian) (:cask "sony-ps4-remote-play"))
   ("barrier" (:cask "barrier"))
   ("rememberthemilk" (:void) (:paru "rememberthemilk") (:debian) (:cask "remember-the-milk"))
