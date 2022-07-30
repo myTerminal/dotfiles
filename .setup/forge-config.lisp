@@ -342,6 +342,11 @@ MOZ_USE_XINPUT2 DEFAULT=1
          "ln -s ~/_store/YouTube ~/_youtube"))
   )
  (
+  "Re-generate symlinks for binaries"
+  t
+  (:all ("~/.setup/regenerate-binary-symlinks"))
+  )
+ (
   "Tag machine with ~/.mt-tag"
   t
   (:all ("touch ~/.mt-tag"))
