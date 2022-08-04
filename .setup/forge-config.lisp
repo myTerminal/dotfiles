@@ -17,6 +17,7 @@
   "fzf"
   ("vim" (:mac))
   ("emacs" (:xbps "emacs-gtk3") (:cask "emacs"))
+  ("mpv")
   "aspell"
   ("aspell-en" (:mac))
   "git"
@@ -85,7 +86,6 @@
   ("gimp" (:cask "gimp"))
   ("darktable" (:cask "darktable"))
   ("clementine" (:cask "clementine"))
-  ("mpg123" (:mac))
   ("pavucontrol" (:mac))
   ("gstreamer" (:xbps "gstreamer1") (:debian) (:mac))
   ("pulseaudio" (:pacman "pulseaudio" "pulseaudio-bluetooth") (:mac))
