@@ -3,5 +3,8 @@
 # Update PATH for custom shell scripts for Mac
 export PATH=$PATH:~/.scripts/mac
 
+# Update PATH
+export PATH=$PATH:/opt/homebrew/bin
+
 # Set up aliases
 # (None for now)
