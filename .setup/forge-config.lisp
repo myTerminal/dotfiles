@@ -165,8 +165,8 @@
   (:void ("sudo usermod -s /bin/fish ismail"))
   (:arch ("sudo usermod -s /bin/fish ismail"))
   (:debian ("sudo usermod -s /bin/fish ismail"))
-  (:mac ("echo \"/usr/local/bin/fish\" | sudo tee -a /etc/shells"
-         "chsh -s /usr/local/bin/fish"))
+  (:mac ("echo \"/opt/homebrew/bin/fish\" | sudo tee -a /etc/shells"
+         "chsh -s /opt/homebrew/bin/fish"))
   )
  (
   "Install Rust Toolchain"
