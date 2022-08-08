@@ -17,6 +17,8 @@ OR
 /bin/bash -c "$(curl https://gh.myterminal.me/setup)"
 #+END_EXAMPLE
 
+/For macOS, the shell needs to be changed from Zsh to Bash and there needs to be a `sudo xcode-select --install` before anything else./
+
 ** Setup
 
 *dotfiles* contains software setup for multiple operating platforms and starts
