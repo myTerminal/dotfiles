@@ -103,7 +103,7 @@
   ("peek" (:cask "licecap"))
   ("keymon" (:void) (:paru "key-mon") (:debian) (:cask "keycastr"))
   ("balena-etcher" (:void) (:paru "balena-etcher") (:debian) (:cask "balenaetcher"))
-  ("steam" (:flatpak ("com.valvesoftware.Steam" "steam")) (:pacman "steam") (:apt "steam") (:cask "steam"))
+  ("steam" (:cask "steam"))
   ("origin" (:void) (:arch) (:debian) (:cask "origin"))
   ("gamehub" (:paru "gamehub") (:debian) (:mac))
   ("android-tools" (:apt "android-platform-system-core") (:cask "android-platform-tools"))
