@@ -28,7 +28,7 @@
   ("diffmerge" (:void) (:arch) (:debian) (:cask "diffmerge"))
   ("zip" (:mac))
   ("unzip" (:mac))
-  "htop"
+  "btop"
   ("psmisc" (:mac))
   ("udisks2" (:cask "mounty"))
   ("network-manager" (:xbps "NetworkManager") (:pacman "networkmanager") (:mac))
