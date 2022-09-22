@@ -46,6 +46,7 @@
   ("ntfs-3g" (:mac))
   ("mtools" (:mac))
   ("dosfstools" (:mac))
+  ("exfat-utils" (:mac))
   "rlwrap"
   "neofetch"
   "wget"
