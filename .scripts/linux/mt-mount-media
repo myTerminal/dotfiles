@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+sudo mkdir /run/media/${USER}/$2
+sudo chown ${USER}:${USER}  /run/media/${USER}/$2
+sudo mount $1 /run/media/${USER}/$2

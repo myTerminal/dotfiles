@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+sudo umount $1
+sudo rm -rf /run/media/${USER}/$2
