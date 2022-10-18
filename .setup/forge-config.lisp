@@ -292,6 +292,22 @@ MOZ_USE_XINPUT2 DEFAULT=1
 \" | sudo tee -a /etc/security/pam_env.conf"))
   )
  (
+  "Install power-guard"
+  t
+  (:void ("git clone https://github.com/myTerminal/power-guard.git /tmp/power-guard"
+          "cd /tmp/power-guard"
+          "make install"
+          "cd ~"))
+  (:arch ("git clone https://github.com/myTerminal/power-guard.git /tmp/power-guard"
+          "cd /tmp/power-guard"
+          "make install"
+          "cd ~"))
+  (:debian ("git clone https://github.com/myTerminal/power-guard.git /tmp/power-guard"
+            "cd /tmp/power-guard"
+            "make install"
+            "cd ~"))
+  )
+ (
   "Install global NPM packages"
   t
   (:all ("sudo npm install -g lite-server nano-server myterminal-cli stay-with-me git-getter re-write"))
