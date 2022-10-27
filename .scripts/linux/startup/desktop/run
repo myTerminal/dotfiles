@@ -3,33 +3,11 @@
 # Set base path for all modules
 BASE_PATH=~/.scripts/linux/startup/desktop
 
-# Execute device-specific startup scripts
-case "${HOSTNAME}" in
-    excelsior)
-        # Set default screen brightness for the AMOLED screen
-        mt-brightness-mode 30
-        ;;
+${BASE_PATH}/display &
+${BASE_PATH}/input &
+${BASE_PATH}/audio &
+${BASE_PATH}/apps &
 
-    *)
-        # Nothing here yet
-        ;;
-esac
-
-# Pick a random wallpaper from the collection
-fd . ~/_mobile-media -t f -e '.png' -0 | shuf -n1 -z | xargs -0 feh --bg-fill
-
-# Start applications
-pCloud &
-
-# Perform device-specific startup tweaks, if set
 if [ -f ~/.device-startup-tweaks ]; then
     . ~/.device-startup-tweaks
 fi
-
-# Turn ON the Numlock
-if [ $(command -v numlockx) ]; then
-    numlockx
-fi
-
-# Set audio
-${BASE_PATH}/audio &

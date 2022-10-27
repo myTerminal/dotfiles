@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Turn ON the Numlock
+if [ $(command -v numlockx) ]; then
+    numlockx
+fi
