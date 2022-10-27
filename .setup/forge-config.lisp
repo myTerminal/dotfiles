@@ -4,9 +4,9 @@
   ("archlinux-keyring" (:void) (:debian) (:mac))
   ("cryptsetup" (:mac))
   "cryfs"
-  ("efibootmgr" (:mac))
   ("polkit" (:debian) (:mac))
   ("dbus" (:arch) (:debian) (:mac))
+  ("efibootmgr" (:mac))
   "tmux"
   ("fish" (:xbps "fish-shell"))
   ("fd" (:apt "fd-find"))
@@ -20,12 +20,11 @@
   ("mpv")
   "aspell"
   ("aspell-en" (:mac))
+  "make"
   "git"
   "tig"
-  "make"
   "ranger"
   "rsync"
-  ("diffmerge" (:void) (:arch) (:debian) (:cask "diffmerge"))
   ("zip" (:mac))
   ("unzip" (:mac))
   "btop"
@@ -44,9 +43,10 @@
   ("chrony" (:arch) (:mac))
   ("btrfs-progs" (:mac))
   ("ntfs-3g" (:mac))
-  ("mtools" (:mac))
   ("dosfstools" (:mac))
+  ("mtools" (:mac))
   ("exfat-utils" (:mac))
+  ("android-tools" (:apt "android-platform-system-core") (:cask "android-platform-tools"))
   "rlwrap"
   "neofetch"
   "wget"
@@ -58,6 +58,7 @@
   ("picom" (:apt "compton") (:mac))
   ("i3" (:xbps "i3" "i3status" "i3lock") (:mac))
   ("xfce4" (:mac))
+  ("edex-ui" (:void) (:paru "edex-ui") (:debian) (:cask "edex-ui"))
   ("feh" (:mac))
   ("dmenu" (:debian) (:mac))
   ("rofi" (:mac))
@@ -69,17 +70,20 @@
   ("gvfs" (:mac))
   ("syncthing" (:xbps "syncthing-gtk") (:paru "syncthing-gtk") (:apt "syncthing-gtk"))
   ("brave" (:void) (:debian) (:cask "brave-browser"))
+  ("rememberthemilk" (:void) (:paru "rememberthemilk") (:debian) (:cask "remember-the-milk"))
+  ("dynalist" (:void) (:paru "dynalist-desktop") (:debian) (:cask "dynalist"))
   ("keepassxc" (:cask "keepasxc"))
   ("authy" (:void) (:paru "authy") (:debian) (:cask "authy"))
   ("tunnelbear" (:void) (:paru "tunnelbear") (:debian) (:cask "tunnelbear"))
   ("thunderbird" (:mac))
   ("discord" (:flatpak ("com.discordapp.Discord" "discord")) (:paru "discord") (:cask "discord"))
   ("element" (:flatpak ("im.riot.Riot" "element")) (:paru "element-desktop") (:cask "element"))
-  ("pcloud" (:void) (:paru "pcloud-drive") (:debian) (:mac))
   ("google-backup-and-sync" (:void) (:arch) (:debian) (:cask "google-backup-and-sync"))
+  ("pcloud" (:void) (:paru "pcloud-drive") (:debian) (:mac))
   ("transmission" (:xbps "transmission-gtk") (:pacman "transmission-gtk") (:cask "transmission"))
   ("postman" (:void) (:paru "postman-bin") (:flatpak ("com.getpostman.Postman" "postman")) (:cask "postman"))
   ("nomachine" (:void) (:paru "nomachine") (:debian) (:cask "nomachine"))
+  ("diffmerge" (:void) (:arch) (:debian) (:cask "diffmerge"))
   ("virt-manager" (:xbps "qemu" "virt-manager"))
   ("libreoffice" (:pacman "libreoffice-fresh") (:cask "libreoffice"))
   ("blueman" (:mac))
@@ -107,13 +111,9 @@
   ("steam" (:cask "steam"))
   ("origin" (:void) (:arch) (:debian) (:cask "origin"))
   ("gamehub" (:paru "gamehub") (:debian) (:mac))
-  ("android-tools" (:apt "android-platform-system-core") (:cask "android-platform-tools"))
   ("sony-remote-play" (:void) (:arch) (:debian) (:cask "sony-ps4-remote-play"))
-  ("barrier" (:cask "barrier"))
-  ("rememberthemilk" (:void) (:paru "rememberthemilk") (:debian) (:cask "remember-the-milk"))
-  ("dynalist" (:void) (:paru "dynalist-desktop") (:debian) (:cask "dynalist"))
-  ("edex-ui" (:void) (:paru "edex-ui") (:debian) (:cask "edex-ui"))
   ("razer-synapse" (:void) (:arch) (:debian) (:cask "razer-synapse"))
+  ("barrier" (:cask "barrier"))
   ("font-open-sans" (:void) (:arch) (:debian) (:cask "font-open-sans"))
   ("font-inconsolata" (:void) (:arch) (:debian) (:cask "font-inconsolata"))
   ("font-liberation" (:void) (:arch) (:debian) (:cask "font-liberation"))
