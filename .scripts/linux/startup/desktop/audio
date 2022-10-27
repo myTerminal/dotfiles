@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Start pipewire if not already running
+if [[ ! $(pgrep pipewire) ]]; then
+    pipewire & pipewire-pulse &
+    sleep 5
+fi
+
+# Set volume to 70%
+pactl set-sink-volume @DEFAULT_SINK@ 70%
+
+# Play startup sound
+mpv ~/.assets/sounds/car-revving-sound.mp3 &

@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Set base path for all modules
+BASE_PATH=~/.scripts/linux/startup/desktop
+
 # Execute device-specific startup scripts
 case "${HOSTNAME}" in
     excelsior)
@@ -28,5 +31,5 @@ if [ $(command -v numlockx) ]; then
     numlockx
 fi
 
-# Play startup sound
-mpv ~/.assets/sounds/car-revving-sound.mp3 &
+# Set audio
+${BASE_PATH}/audio &
