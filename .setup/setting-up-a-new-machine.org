@@ -29,6 +29,7 @@
   - Discord
   - Element/Schildi
   - Keepass
+  - Thunderbird
   - Thunar
   - Darktable
   - Steam
