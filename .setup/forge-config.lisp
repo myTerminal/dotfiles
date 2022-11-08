@@ -109,6 +109,7 @@
   ("keymon" (:void) (:paru "key-mon") (:debian) (:cask "keycastr"))
   ("balena-etcher" (:void) (:paru "balena-etcher") (:debian) (:cask "balenaetcher"))
   ("steam" (:cask "steam"))
+  ("lutris" (:mac))
   ("origin" (:void) (:arch) (:debian) (:cask "origin"))
   ("gamehub" (:paru "gamehub") (:debian) (:mac))
   ("sony-remote-play" (:void) (:arch) (:debian) (:cask "sony-ps4-remote-play"))
