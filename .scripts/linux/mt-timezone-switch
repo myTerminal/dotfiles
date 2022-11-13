@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sudo ln -sf $(find /usr/share/zoneinfo | fzf --prompt "Choose a location: ") /etc/localtime
