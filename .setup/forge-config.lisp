@@ -125,6 +125,8 @@
   nil
   (:void ("~/.scripts/linux/mt-flatpak-install postman com.getpostman.Postman"
           "~/.scripts/linux/mt-flatpak-install element im.riot.Riot"))
+  (:arch ("~/.scripts/linux/mt-flatpak-install postman com.getpostman.Postman"
+          "~/.scripts/linux/mt-flatpak-install element im.riot.Riot"))
   (:debian ("~/.scripts/linux/mt-flatpak-install postman com.getpostman.Postman"
             "~/.scripts/linux/mt-flatpak-install element im.riot.Riot"))
   )
