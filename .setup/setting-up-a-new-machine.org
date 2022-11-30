@@ -26,7 +26,6 @@
 - Create symlinks from `~/_store/Applications` under `/usr/bin`
 - Configure software and services
   - Brave
-  - Discord
   - Element/Schildi
   - Keepass
   - Thunderbird

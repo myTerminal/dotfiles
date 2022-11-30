@@ -76,7 +76,6 @@
   ("authy" (:void) (:paru "authy") (:debian) (:cask "authy"))
   ("tunnelbear" (:void) (:paru "tunnelbear") (:debian) (:cask "tunnelbear"))
   ("thunderbird" (:mac))
-  ("discord" (:flatpak ("com.discordapp.Discord" "discord")) (:paru "discord") (:cask "discord"))
   ("element" (:flatpak ("im.riot.Riot" "element")) (:cask "element"))
   ("google-backup-and-sync" (:void) (:arch) (:debian) (:cask "google-backup-and-sync"))
   ("pcloud" (:void) (:paru "pcloud-drive") (:debian) (:mac))
@@ -125,10 +124,8 @@
   "Install flatpak packages the conventional way"
   nil
   (:void ("~/.scripts/linux/mt-flatpak-install postman com.getpostman.Postman"
-          "~/.scripts/linux/mt-flatpak-install discord com.discordapp.Discord"
           "~/.scripts/linux/mt-flatpak-install element im.riot.Riot"))
   (:debian ("~/.scripts/linux/mt-flatpak-install postman com.getpostman.Postman"
-            "~/.scripts/linux/mt-flatpak-install discord com.discordapp.Discord"
             "~/.scripts/linux/mt-flatpak-install element im.riot.Riot"))
   )
  (

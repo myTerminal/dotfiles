@@ -12,12 +12,10 @@ case "${1}" in
 
     g | gaming )
         exec steam & disown
-        exec discord & disown
         ;;
 
     *)
         exec emacs & disown
-        exec discord & disown
         exec element & disown
         exec brave & disown
         exec brave-browser & disown
