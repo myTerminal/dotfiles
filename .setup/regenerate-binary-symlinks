@@ -4,20 +4,24 @@
 (load "~/quicklisp/setup.lisp")
 (ql:quickload "asdf")
 
-;; Define binary<>link pairs
-(defvar *links*
-  '(("pCloud" . "~/_store/Applications/pCloud")
-    ("ytdlp" . "~/_store/Applications/yt-dlp")
-    ("balena-etcher" . "~/_store/Applications/balenaEtcher-1.5.122-x64.AppImage")
-    ("unetbootin" . "~/_store/Applications/unetbootin-linux64-702.bin")
-    ("brave-browser" . "~/_store/Applications/brave-browser/brave")
-    ("zulip-desktop" . "~/_store/Applications/Zulip-5.9.1-x86_64.AppImage")
-    ("wire-desktop" . "~/_store/Applications/Wire-3.26.2941_x86_64.AppImage")
-    ("session-desktop" . "~/_store/Applications/session-desktop-linux-x86_64-1.7.0.AppImage")
-    ("urserver" . "~/_store/Applications/urserver-3.10.0.2467/urserver")
-    ("vtm" . "~/_store/Applications/vtm")
-    ("Textreme2" . "~/_store/Applications/Textreme2/Textreme2.x86_64")
-    ("coolie" . "~/_store/Applications/Cool-Retro-Term-1.1.1-x86_64.AppImage")))
+;; Define constants
+(defconstant root-path
+  "~/_store/Applications")
+
+;; Define application info
+(defvar *apps-info*
+  '(("pCloud" . "*pCloud")
+    ("ytdlp" . "*yt-dlp")
+    ("balena-etcher" . "*balenaEtcher-*-x64.AppImage")
+    ("unetbootin" . "*unetbootin-linux64-*.bin")
+    ("brave-browser" . "*brave-browser/brave")
+    ("zulip-desktop" . "*Zulip-*-x86_64.AppImage")
+    ("wire-desktop" . "*Wire-*_x86_64.AppImage")
+    ("session-desktop" . "*session-desktop-linux-x86_64-*.AppImage")
+    ("urserver" . "*urserver-*/urserver")
+    ("vtm" . "*vtm")
+    ("Textreme2" . "*Textreme2/Textreme2.x86_64")
+    ("coolie" . "*Cool-Retro-Term-*-x86_64.AppImage")))
 
 (defun execute-in-system (command-string)
   "Runs the supplied command in the system."
@@ -37,12 +41,16 @@
                                           (car pair)))
           (execute-in-system (concatenate 'string
                                           "sudo ln -s "
+                                          "$(find "
+                                          root-path
+                                          " -iwholename "
                                           (cdr pair)
+                                          ")"
                                           " "
                                           target-bin
                                           "/"
                                           (car pair))))
-        *links*))
+        *apps-info*))
 
 ;; Start
 (main (or (car (uiop:command-line-arguments))
