@@ -1,5 +1,5 @@
 # Add generic Linux scripts
-add-to-path ~/.scripts/linux
+add-to-path ~/.bin/linux
 
 # Update PATH
 add-to-path $HOME/bin

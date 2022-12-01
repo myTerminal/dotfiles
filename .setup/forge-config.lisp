@@ -123,12 +123,12 @@
  (
   "Install flatpak packages the conventional way"
   nil
-  (:void ("~/.scripts/linux/mt-flatpak-install postman com.getpostman.Postman"
-          "~/.scripts/linux/mt-flatpak-install element im.riot.Riot"))
-  (:arch ("~/.scripts/linux/mt-flatpak-install postman com.getpostman.Postman"
-          "~/.scripts/linux/mt-flatpak-install element im.riot.Riot"))
-  (:debian ("~/.scripts/linux/mt-flatpak-install postman com.getpostman.Postman"
-            "~/.scripts/linux/mt-flatpak-install element im.riot.Riot"))
+  (:void ("~/.bin/linux/mt-flatpak-install postman com.getpostman.Postman"
+          "~/.bin/linux/mt-flatpak-install element im.riot.Riot"))
+  (:arch ("~/.bin/linux/mt-flatpak-install postman com.getpostman.Postman"
+          "~/.bin/linux/mt-flatpak-install element im.riot.Riot"))
+  (:debian ("~/.bin/linux/mt-flatpak-install postman com.getpostman.Postman"
+            "~/.bin/linux/mt-flatpak-install element im.riot.Riot"))
   )
  (
   "Enable hidden items in Finder"

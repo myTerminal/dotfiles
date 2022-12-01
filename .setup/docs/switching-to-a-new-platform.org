@@ -4,7 +4,7 @@
 - Create installation instructions as [[https://gist.github.com/myTerminal][a GitHub Gist]]
 - Extend [[https://github.com/myTerminal/twiner][twiner]] for the new platform
 - Add a switch in [[https://github.com/myTerminal/forge-legacy][setup]], create stubs for the new platform
-- Extend platform dependent scripts under [[../.scripts][~/.scripts]] to cover the new platform
+- Extend platform dependent scripts under [[../.scripts][~/.scripts]] and [[../.bin][~/.bin]] to cover the new platform
 - Create alternate scripts for elements like a new init system, if applicable
 - Create package install scripts
 - Implement rest of the installation scripts

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Update PATH for custom shell scripts
-export PATH=$PATH:~/.scripts
+export PATH=$PATH:~/.bin
 
 # Update PATH for cargo(rust)
 export PATH=$PATH:$HOME/.cargo/bin:$HOME/.cargo/env

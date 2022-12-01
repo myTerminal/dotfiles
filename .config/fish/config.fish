@@ -4,7 +4,7 @@ and test -f ~/.mt-tag
 and . ~/.scripts/linux/startup/cli
 
 # Update PATH for custom shell scripts
-add-to-path ~/.scripts
+add-to-path ~/.bin
 
 # Update PATH for cargo(rust)
 add-to-path ~/.cargo/bin

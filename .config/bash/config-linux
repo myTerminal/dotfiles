@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Add generic Linux scripts
-export PATH=$PATH:~/.scripts/linux
+export PATH=$PATH:~/.bin/linux
 
 # Configure prompt
 PS1='\u@\h:\w\$ '

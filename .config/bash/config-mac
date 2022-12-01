@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Update PATH for custom shell scripts for Mac
-export PATH=$PATH:~/.scripts/mac
+export PATH=$PATH:~/.bin/mac
 
 # Update PATH
 export PATH=$PATH:/opt/homebrew/bin

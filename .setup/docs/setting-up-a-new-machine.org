@@ -35,7 +35,7 @@
   - pCloud
   - Bluetooth
 - Verify software packages
-- Test/Improve scripts under [[../.scripts][~/.scripts]]
+- Test/Improve scripts under [[../.scripts][~/.scripts]] and [[../.bin][~/.bin]]
 - Verify reference of the machine at/under the following:
   - Home network as a new device
   - GitHub and GitLab (SSH keys)
