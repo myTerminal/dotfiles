@@ -1,7 +1,7 @@
 #+TITLE: dotfiles
 #+AUTHOR: Mohammed Ismail Ansari <team.terminal@gmail.com>
 
-The 'replicable' heart of my computer(s)
+The "replicable" heart of my personal computers
 
 ** Init (Note for my future self)
 
