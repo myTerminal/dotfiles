@@ -76,7 +76,7 @@
   ("authy" (:void) (:paru "authy") (:debian) (:cask "authy"))
   ("tunnelbear" (:void) (:paru "tunnelbear") (:debian) (:cask "tunnelbear"))
   ("thunderbird" (:mac))
-  ("element" (:flatpak ("im.riot.Riot" "element")) (:cask "element"))
+  ("schildi" (:flatpak ("chat.schildi.desktop" "schildi")) (:cask "schildichat"))
   ("google-backup-and-sync" (:void) (:arch) (:debian) (:cask "google-backup-and-sync"))
   ("pcloud" (:void) (:paru "pcloud-drive") (:debian) (:mac))
   ("transmission" (:xbps "transmission-gtk") (:pacman "transmission-gtk") (:cask "transmission"))
@@ -124,11 +124,11 @@
   "Install flatpak packages the conventional way"
   nil
   (:void ("~/.bin/linux/mt-flatpak-install postman com.getpostman.Postman"
-          "~/.bin/linux/mt-flatpak-install element im.riot.Riot"))
+          "~/.bin/linux/mt-flatpak-install schildi chat.schildi.desktop"))
   (:arch ("~/.bin/linux/mt-flatpak-install postman com.getpostman.Postman"
-          "~/.bin/linux/mt-flatpak-install element im.riot.Riot"))
+          "~/.bin/linux/mt-flatpak-install schildi chat.schildi.desktop"))
   (:debian ("~/.bin/linux/mt-flatpak-install postman com.getpostman.Postman"
-            "~/.bin/linux/mt-flatpak-install element im.riot.Riot"))
+            "~/.bin/linux/mt-flatpak-install schildi chat.schildi.desktop"))
   )
  (
   "Enable hidden items in Finder"

@@ -16,7 +16,7 @@ case "${1}" in
 
     *)
         exec emacs & disown
-        exec element & disown
+        exec schildi & disown
         exec brave & disown
         exec brave-browser & disown
         exec thunar & disown
