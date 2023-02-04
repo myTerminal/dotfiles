@@ -20,6 +20,7 @@ case "${1}" in
         exec brave & disown
         exec brave-browser & disown
         exec thunar & disown
+        exec thunderbird & disown
         exec keepassxc & disown
         ;;
 esac

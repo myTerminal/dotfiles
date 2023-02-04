@@ -157,7 +157,7 @@ set $ws5 "5: Files"
 set $ws6 "6: Play"
 set $ws7 "7: Studio"
 set $ws8 "8"
-set $ws9 "9"
+set $ws9 "9: Emails"
 set $ws10 "10: Auth"
 
 # switch to workspace
@@ -325,7 +325,7 @@ workspace_auto_back_and_forth yes
 # Assign programs to workspaces
 # assign [class="Remember The Milk"] $ws1 # <<unavailable>>
 assign [class="Steam"] $ws1
-assign [class="Element"] $ws2
+assign [class="SchildiChat"] $ws2
 assign [class="Emacs"] $ws3
 assign [class="Brave-browser"] $ws4
 assign [class="Thunar"] $ws5
@@ -337,6 +337,7 @@ assign [class="Gimp"] $ws7
 assign [class="Audacity"] $ws7
 assign [class="obs"] $ws7
 assign [class="Blender"] $ws7
+assign [class="Thunderbird"] $ws9
 assign [class="KeePassXC"] $ws10
 
 # Bind mouse events
