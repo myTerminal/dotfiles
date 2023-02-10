@@ -274,7 +274,7 @@
   (:mac ("brew services start syncthing"))
   )
  (
-  "Perform visual tweaks"
+  "Perform visual tweaks (non-working)"
   t
   (:all ("wget -O - https://github.com/shvchk/fallout-grub-theme/raw/master/install.sh | bash"))
   )
