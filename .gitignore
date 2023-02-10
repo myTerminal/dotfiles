@@ -26,6 +26,7 @@
 !/.bash_profile
 !/.bashrc
 !/.mew.el
+!/bootstrap-legacy
 !/bootstrap
 !/myterminal-configs.json
 

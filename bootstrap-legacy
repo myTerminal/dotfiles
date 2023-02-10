@@ -18,12 +18,12 @@ fi
 # Start twiner in debug mode
 ~/.twiner/start debug
 
-# Fetch/update forge
-if [ -d ~/.forge ]; then
-    git -C ~/.forge pull
+# Fetch/update forge-legacy
+if [ -d ~/.forge-legacy ]; then
+    git -C ~/.forge-legacy pull
 else
-    git clone https://github.com/myTerminal/forge.git ~/.forge
+    git clone https://github.com/myTerminal/forge-legacy.git ~/.forge-legacy
 fi
 
-# Start forge
-( cd ~/.forge; ./start debug ~/.setup/forge-config.lisp )
+# Start forge-legacy
+.forge-legacy/start
