@@ -32,22 +32,11 @@ For legacy mode (soon to be deprecated), run the below:
 if it finds a compatible one.
 
 To start setup, run the following command in a terminal running bash:
+(provided [[https://github.com/myTerminal/forge][forge]] was fetched as a part of the init)
 
 #+BEGIN_EXAMPLE
-. .forge-legacy/start
+( cd ~/.forge; ./start )
 #+END_EXAMPLE
-
-On start, [[https://github/myTerminal/twiner][twiner]] is fetched as a
-dependency which provides most of the underlying features.
-
-If you're running a shell different than bash, run something like:
-
-#+BEGIN_EXAMPLE
-bash .forge-legacy/start
-#+END_EXAMPLE
-
-The setup scripts should take of the rest except for a couple of prompts for
-optional setup.
 
 ** Software selection
 
