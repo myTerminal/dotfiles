@@ -198,11 +198,8 @@
   t
   (:all ("mkdir -p ~/.local/share/icons"
          "mkdir ~/_temp"
-         "cd ~/_temp"
-         "wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v1.1.1/Bibata.tar.gz"
-         "tar -xvf Bibata.tar.gz"
+         "( cd ~/_temp; wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v1.1.1/Bibata.tar.gz; tar -xvf Bibata.tar.gz )"
          "mv ~/_temp/Bibata-*  ~/.local/share/icons"
-         "cd ~/"
          "rm -rf ~/_temp"))
   )
  (
@@ -234,12 +231,9 @@
          "rm -rf ~/_temp"
          "mkdir -p ~/.local/share/fonts"
          "mkdir ~/_temp"
-         "cd ~/_temp"
-         "wget https://github.com/liberationfonts/liberation-fonts/files/6418984/liberation-fonts-ttf-2.1.4.tar.gz"
-         "tar -xvf liberation-fonts-ttf-2.1.4.tar.gz"
+         "( cd ~/_temp; wget https://github.com/liberationfonts/liberation-fonts/files/6418984/liberation-fonts-ttf-2.1.4.tar.gz; tar -xvf liberation-fonts-ttf-2.1.4.tar.gz )"
          "mkdir ~/.local/share/fonts/Liberation"
          "mv ~/_temp/liberation-fonts-ttf-2.1.4/Liberation*  ~/.local/share/fonts/Liberation/"
-         "cd ~/"
          "rm -rf ~/_temp"))
   )
  (
@@ -295,17 +289,11 @@ MOZ_USE_XINPUT2 DEFAULT=1
   "Install power-guard"
   t
   (:void ("git clone https://github.com/myTerminal/power-guard.git /tmp/power-guard"
-          "cd /tmp/power-guard"
-          "make install"
-          "cd ~"))
+          "( cd /tmp/power-guard; make install )"))
   (:arch ("git clone https://github.com/myTerminal/power-guard.git /tmp/power-guard"
-          "cd /tmp/power-guard"
-          "make install"
-          "cd ~"))
+          "( cd /tmp/power-guard; make install )"))
   (:debian ("git clone https://github.com/myTerminal/power-guard.git /tmp/power-guard"
-            "cd /tmp/power-guard"
-            "make install"
-            "cd ~"))
+          "( cd /tmp/power-guard; make install )"))
   )
  (
   "Install global NPM packages"
