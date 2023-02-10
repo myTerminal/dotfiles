@@ -199,7 +199,7 @@
   (:all ("mkdir -p ~/.local/share/icons"
          "mkdir ~/_temp"
          "( cd ~/_temp; wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v1.1.1/Bibata.tar.gz; tar -xvf Bibata.tar.gz )"
-         "mv ~/_temp/Bibata-*  ~/.local/share/icons"
+         "mv ~/_temp/Bibata-* ~/.local/share/icons"
          "rm -rf ~/_temp"))
   )
  (
