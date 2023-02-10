@@ -52,7 +52,7 @@
   "wget"
   "curl"
   ("openssh" (:apt "ssh") (:mac))
-  ("xorg" (:xbps "xorg-server") (:mac))
+  ("xorg" (:mac))
   ("sct" (:paru "sct") (:mac))
   ("onboard" (:mac))
   ("picom" (:apt "compton") (:mac))
