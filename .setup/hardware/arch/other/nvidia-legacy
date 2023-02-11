@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+mt_nvidia_packages=(nvidia-390xx \
+                        nvidia-390xx-utils \
+                        nvidia-390xx-settings \
+                        lib32-nvidia-390xx-utils \
+                        lib32-opencl-nvidia-390xx \
+                        opencl-nvidia-390xx)
+
+if [ "${1}" = "uninstall" ]; then
+    paru -R "${mt_nvidia_packages[@]}" --noconfirm
+else
+    paru -S "${mt_nvidia_packages[@]}" --noconfirm
+fi
+
+# TODO: Implement installing additional 32-bit libraries for Nvidia

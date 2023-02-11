@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+mt_nvidia_packages=(xserver-xorg-video-nvidia-legacy-390xx)
+mt_more_packages=(libgl1-nvidia-glvnd-glx:i386)
+
+if [ "${1}" = "uninstall" ]; then
+    sudo apt remove "${mt_nvidia_packages[@]}" -y
+    sudo apt remove "${mt_more_packages[@]}" -y
+else
+    sudo apt install "${mt_nvidia_packages[@]}" -y
+    sudo apt install "${mt_more_packages[@]}" -y
+fi
