@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# This script is an add-on to `~/.setup/start` containing device-specific setup
-# for 2017 Lenovo ThinkPad X1 Carbon and mostly follows steps from
-# https://wiki.archlinux.org/title/Laptop/Lenovo
+# This script is an add-on to `~/.setup/forge-config.lisp` containing
+# device-specific setup for 2017 Lenovo ThinkPad X1 Carbon and mostly follows
+# steps from https://wiki.archlinux.org/title/Laptop/Lenovo
 
 # Improve touchpad experience with xinput
 sudo xbps-install -Sy xinput # (Just in case)

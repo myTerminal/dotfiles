@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-# This script is an add-on to `~/.setup/start` containing device-specific setup
-# for 2016 Lenovo ThinkPad X1 Yoga Gen 1 and mostly follows steps from
+# This script is an add-on to `~/.setup/forge-config.lisp` containing
+# device-specific setup for 2016 Lenovo ThinkPad X1 Yoga Gen 1 and mostly
+# follows steps from
 # https://wiki.archlinux.org/title/Lenovo_ThinkPad_X1_Yoga_(Gen_1)
 
 # Set display scaling

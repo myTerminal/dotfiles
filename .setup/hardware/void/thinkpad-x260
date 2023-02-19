@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# This script is an add-on to `~/.setup/start` containing device-specific setup
-# for 2016 Lenovo ThinkPad X260 and mostly follows steps from
-# https://wiki.archlinux.org/title/Laptop/Lenovo
+# This script is an add-on to `~/.setup/forge-config.lisp ` containing
+# device-specific setup for 2016 Lenovo ThinkPad X260 and mostly follows steps
+# from https://wiki.archlinux.org/title/Laptop/Lenovo
 
 # Set display scaling for the smaller screen
 # The below line is useless as it places the default value '96'

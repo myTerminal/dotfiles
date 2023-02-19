@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# This script is an add-on to `~/.setup/start` containing device-specific setup
-# for 2019 Lenovo ThinkPad X1 Carbon and mostly follows steps from
-# https://wiki.archlinux.org/title/Laptop/Lenovo
+# This script is an add-on to `~/.setup/forge-config.lisp` containing
+# device-specific setup for 2019 Lenovo ThinkPad X1 Carbon and mostly follows
+# steps from https://wiki.archlinux.org/title/Laptop/Lenovo
 
 # Fix audio input and output
 sudo xbps-install -Sy sof-firmware

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# This script is an add-on to `~/.setup/start` containing device-specific setup
-# for 2020 Lenovo ThinkPad X1 Extreme and mostly follows steps from
-# https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Extreme
+# This script is an add-on to `~/.setup/forge-config.lisp` containing
+# device-specific setup for 2020 Lenovo ThinkPad X1 Extreme and mostly follows
+# steps from https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Extreme
 
 # Install wireless drivers
 sudo apt install firmware-iwlwifi -y
