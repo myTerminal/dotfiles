@@ -5,11 +5,7 @@
 # steps from https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Extreme
 
 # Set display scaling for HiDPI
-echo "Xft.dpi: 192" > ~/.Xresources
-echo "[X11]
-EnableHiDPI=true
-[Wayland]
-EnableHiDPI=true" | sudo tee /etc/sddm.conf
+. ~/.setup/hardware/enable-hidpi 192
 
 # Enable bluetooth service
 # (This might just be a temporary Arch issue)
@@ -35,12 +31,7 @@ set-default-source echoCancel_source
 set-default-sink echoCancel_sink" | sudo tee -a /etc/pulse/default.pa
 
 # Improve touchpad experience
-echo "
-xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Accel Speed' 0.5
-xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Click Method Enabled' 0 1
-xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Enabled' 1
-xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled' 1
-" > ~/.device-startup-tweaks
+. ~/.setup/hardware/configure-touchpad "SynPS/2 Synaptics TouchPad" 0.5
 
 # Install tlp and more for power management
 sudo pacman -S tlp acpi_call powertop --noconfirm

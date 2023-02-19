@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+echo "
+Section \"InputClass\"
+    Identifier \"libinput touchpad catchall\"
+    MatchIsTouchpad \"on\"
+    MatchDevicePath \"/dev/input/event*\"
+    Driver \"libinput\"
+EndSection
+" | sudo tee /etc/X11/xorg.conf.d/40-libinput.conf

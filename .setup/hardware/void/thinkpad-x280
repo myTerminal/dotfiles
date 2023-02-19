@@ -6,21 +6,8 @@
 
 # Improve touchpad experience with xinput
 sudo xbps-install -Sy xinput # (Just in case)
-sudo mkdir /etc/X11/xorg.conf.d # (Just in case)
-echo "
-Section \"InputClass\"
-    Identifier \"libinput touchpad catchall\"
-    MatchIsTouchpad \"on\"
-    MatchDevicePath \"/dev/input/event*\"
-    Driver \"libinput\"
-EndSection
-" | sudo tee /etc/X11/xorg.conf.d/40-libinput.conf
-echo "
-xinput set-prop 'Synaptics TM3381-002' 'libinput Accel Speed' 0.75
-xinput set-prop 'Synaptics TM3381-002' 'libinput Click Method Enabled' 0 1
-xinput set-prop 'Synaptics TM3381-002' 'libinput Tapping Enabled' 1
-xinput set-prop 'Synaptics TM3381-002' 'libinput Natural Scrolling Enabled' 1
-" > ~/.device-startup-tweaks
+. ~/.setup/hardware/enable-libinput-events-for-touchpad
+. ~/.setup/hardware/configure-touchpad "Synaptics TM3381-002" 0.75
 
 # Install tlp and more for power management
 sudo xbps-install -Sy tlp acpi_call-dkms powertop
