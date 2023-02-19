@@ -12,7 +12,7 @@ EnableHiDPI=true
 EnableHiDPI=true" | sudo tee /etc/sddm.conf
 
 # Install Nvidia drivers
-. ~/.setup/linux/other/nvidia-latest
+. ~/.setup/hardware/void/other/nvidia-latest
 
 # Fix audio input and output
 sudo xbps-install -Sy alsa-firmware sof-firmware

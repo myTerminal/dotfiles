@@ -15,7 +15,7 @@ EnableHiDPI=true
 EnableHiDPI=true" | sudo tee /etc/sddm.conf
 
 # Install Nvidia drivers
-. ~/.setup/linux/other/nvidia-latest
+. ~/.setup/hardware/arch/debian/nvidia-latest
 
 # Fix audio input and output
 sudo apt install firmware-sof-signed -y

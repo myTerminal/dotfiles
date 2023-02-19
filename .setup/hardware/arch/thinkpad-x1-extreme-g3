@@ -17,7 +17,7 @@ systemctl enable bluetooth
 systemctl start bluetooth
 
 # Install Nvidia drivers
-. ~/.setup/linux/other/nvidia-latest
+. ~/.setup/hardware/arch/other/nvidia-latest
 
 # Fix audio input and output
 sudo pacman -S alsa-firmware sof-firmware --noconfirm
