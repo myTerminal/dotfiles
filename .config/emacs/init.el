@@ -17,3 +17,7 @@
 				      selected-config
 				      "/init")
 			      (file-name-directory load-file-name))))))
+
+;; Load user-specific config
+(load (concat (file-name-directory user-init-file)
+              "user"))
