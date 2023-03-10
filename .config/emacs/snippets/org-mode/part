@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: mt-tex-part
+# key: /mt-tex-part
+# --
+#+LATEX: \part{${1:Part Name}}

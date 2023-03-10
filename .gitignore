@@ -19,6 +19,7 @@
 !/.config/emacs/init.el
 !/.config/emacs/user.el
 !/.config/emacs/zone-quotes-masseffect.el
+!/.config/emacs/snippets
 !/.config/gtk-3.0
 /.config/gtk-3.0/*
 !/.config/gtk-3.0/settings.ini

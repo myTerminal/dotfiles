@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: mt-tex-chapter
+# key: /mt-tex-chapter
+# --
+#+LATEX: \chapter{${1:Chapter Name}}

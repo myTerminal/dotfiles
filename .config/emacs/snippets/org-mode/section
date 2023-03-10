@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: mt-tex-section
+# key: /mt-tex-section
+# --
+#+LATEX: \section{${1:Section Name}}
