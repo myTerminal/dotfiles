@@ -20,4 +20,5 @@
 
 ;; Load user-specific config
 (load (concat (file-name-directory user-init-file)
-              "user"))
+              "user")
+      t)
