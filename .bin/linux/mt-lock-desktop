@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+fd . ~/_store/Mobile-Media/Lockscreens/ -t f -0 | shuf -n1 -z | xargs -0 i3lock -t -i
