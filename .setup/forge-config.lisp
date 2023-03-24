@@ -57,6 +57,7 @@
   ("onboard" (:mac))
   ("picom" (:apt "compton") (:mac))
   ("i3" (:xbps "i3" "i3status" "i3lock") (:mac))
+  ("xss-lock" (:mac))
   ("xfce4" (:mac))
   ("edex-ui" (:void) (:paru "edex-ui") (:debian) (:cask "edex-ui"))
   ("feh" (:mac))
