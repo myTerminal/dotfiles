@@ -1,7 +1,3 @@
 #!/usr/bin/env bash
 
 echo "Xft.dpi: ${1}" > ~/.Xresources
-echo "[X11]
-EnableHiDPI=true
-[Wayland]
-EnableHiDPI=true" | sudo tee /etc/sddm.conf
