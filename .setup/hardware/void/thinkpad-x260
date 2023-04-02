@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# This script is an add-on to `~/.setup/forge-config.lisp ` containing
+# This script is an add-on to `~/.setup/forge-config.lisp` containing
 # device-specific setup for 2016 Lenovo ThinkPad X260 and mostly follows steps
 # from https://wiki.archlinux.org/title/Laptop/Lenovo
 
