@@ -69,12 +69,12 @@ Unmount the partition
     
 ### Re-mounting subvolumes as partitions
 
-    mount -o noatime,nodiratime,compress=lzo,space_cache,subvol=@ /dev/mapper/enc /mnt
+    mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@ /dev/mapper/enc /mnt
     mkdir -p /mnt/{boot,home,var,.snapshots}
     mount /dev/nvme0n1p1 /mnt/boot
-    mount -o noatime,nodiratime,compress=lzo,space_cache,subvol=@home /dev/mapper/enc /mnt/home
-    mount -o noatime,nodiratime,compress=lzo,space_cache,subvol=@var /dev/mapper/enc /mnt/var
-    mount -o noatime,nodiratime,compress=lzo,space_cache,subvol=@snapshots /dev/mapper/enc /mnt/.snapshots
+    mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@home /dev/mapper/enc /mnt/home
+    mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@var /dev/mapper/enc /mnt/var
+    mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@snapshots /dev/mapper/enc /mnt/.snapshots
     swapon /dev/nvme0n1p2
 
 ## Base installation
