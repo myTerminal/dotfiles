@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+sudo mkdir /etc/X11/xorg.conf.d
 echo "
 Section \"InputClass\"
     Identifier \"libinput touchpad catchall\"
