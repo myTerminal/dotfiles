@@ -326,10 +326,10 @@ MOZ_USE_XINPUT2 DEFAULT=1
   (:all ("ln -s /home/ismail/.config/emacs /home/ismail/.emacs.d"))
   )
  (
-  "Link myTerminal/.emacs.d to myterminal/dotfiles"
+  "Link myTerminal/super-emacs to myterminal/dotfiles"
   t
   (:all ("mkdir /home/ismail/.config/emacs/configs"
-         "ln -s ~/_workspace/github/.emacs.d/emacs ~/.config/emacs/configs/_default"))
+         "ln -s ~/_workspace/github/super-emacs/.emacs.d ~/.config/emacs/configs/super-emacs"))
   )
  (
   "Convert dotfiles at '~' from HTTPS to SSH"
