@@ -51,6 +51,7 @@
   "neofetch"
   "wget"
   "curl"
+  ("avahi" (:apt "avahi-daemon"))
   ("openssh" (:apt "ssh") (:mac))
   ("xorg" (:mac))
   ("sct" (:paru "sct") (:mac))
