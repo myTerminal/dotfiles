@@ -260,7 +260,8 @@
   (:void ("sudo ln -s /etc/sv/libvirtd /var/service"
           "sudo ln -s /etc/sv/virtlogd /var/service"
           "sudo ln -s /etc/sv/bluetoothd /var/service"
-          "sudo ln -s /etc/sv/sshd /var/service"))
+          "sudo ln -s /etc/sv/sshd /var/service"
+          "sudo ln -s /etc/sv/avahi-daemon /var/service"))
   (:arch ("systemctl enable numLockOnTty.service"
           "systemctl start numLockOnTty.service"
           "systemctl --user enable syncthing.service"
@@ -268,14 +269,19 @@
           "systemctl enable bluetooth"
           "systemctl start bluetooth"
           "systemctl enable ssh"
-          "systemctl start ssh"))
+          "systemctl start ssh"
+          "systemctl enable avahi-daemon"
+          "systemctl start avahi-daemon"))
   (:debian ("systemctl --user enable syncthing.service"
             "systemctl --user start syncthing.service"
             "systemctl enable bluetooth"
             "systemctl start bluetooth"
             "systemctl enable ssh"
-            "systemctl start ssh"))
-  (:mac ("brew services start syncthing"))
+            "systemctl start ssh"
+            "systemctl enable avahi-daemon"
+            "systemctl start avahi-daemon"))
+  (:mac ("brew services start syncthing"
+         "brew servies start avahi-daemon"))
   )
  (
   "Perform visual tweaks (non-working)"
