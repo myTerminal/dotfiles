@@ -1,0 +1,95 @@
+#!/usr/bin/env cl
+
+(load "~/quicklisp/setup.lisp")
+(ql:quickload "uiop")
+
+(defun string-to-list (input-string char)
+  "Converts a string containing NewLine characters into a list of strings."
+  (let* ((temp-chars '())
+         (items '()))
+    (labels ((to-string (chars)
+               (coerce (reverse chars) 'string))
+             (collect-item ()
+               (push (to-string temp-chars) items)
+               (setf temp-chars '())))
+      (mapc (lambda (c)
+              (cond ((eql c char) (collect-item))
+                    (t (push c temp-chars))))
+            (coerce input-string 'list))
+      (collect-item)
+      (reverse items))))
+
+(defun get-result-from-system (command-string)
+  "Gets the result of execution of the supplied command string in the
+underlying system."
+  (uiop:run-program command-string
+                    :output '(:string :stripped t)
+                    :error-output t
+                    :ignore-error-status t))
+
+(defun get-list-from-system (command-string)
+  "Executes the supplied command string in the underlying system and returns
+a list."
+  (string-to-list (get-result-from-system command-string)
+                  #\Newline))
+
+(defun execute-in-system (command-string)
+  "Executes the supplied command string in the underlying system."
+  (uiop:run-program command-string
+                    :input :interactive
+                    :output :interactive
+                    :error-output t
+                    :ignore-error-status t))
+
+(defun get-orientation (position)
+  "Gets direction string for xrandr."
+  (if (string-equal position "left")
+      "--left-of"
+      "--right-of"))
+
+(defun connect-external-displays (primary-device external-devices position)
+  "Connects all supplied connected displays."
+  (if (not (member position '("left" "right") :test #'string-equal))
+      (princ "Please specify \"left/right\"!")
+      (execute-in-system (concatenate 'string
+                                      "xrandr --output "
+                                      "\"" primary-device "\""
+                                      " --auto "
+                                      (apply #'concatenate 'string
+                                             (mapcar (lambda (d)
+                                                       (concatenate 'string
+                                                                    "--output "
+                                                                    "\"" d "\""
+                                                                    " --auto " (get-orientation position) " "
+                                                                    "\"" primary-device "\" "))
+                                                     external-devices))))))
+
+(defun disconnect-external-displays (primary-device external-devices)
+  "Connects all supplied connected displays."
+  (execute-in-system (concatenate 'string
+                                  "xrandr --output "
+                                  "\"" primary-device "\""
+                                  " --auto "
+                                  (apply #'concatenate 'string
+                                         (mapcar (lambda (d)
+                                                   (concatenate 'string
+                                                                "--output "
+                                                                "\"" d "\""
+                                                                " --off "))
+                                                 external-devices)))))
+
+(let* ((args (uiop:command-line-arguments)))
+  (if (not (member (first args) '("connect" "disconnect") :test #'string-equal))
+      (princ "Please specify \"connect/disconnect\"!")
+      (Let* ((connected-devices (concatenate 'list
+                                             (mapcar (lambda (x)
+                                                       (car (string-to-list x #\ )))
+                                                     (remove-if-not (lambda (x)
+                                                                      (string-equal (cadr (string-to-list x #\ )) "connected"))
+                                                                    (get-list-from-system "xrandr")))))
+             (primary-device (car connected-devices))
+             (external-devices (cdr connected-devices))
+             (orientation (second args)))
+        (if (string-equal (car args) "connect")
+            (connect-external-displays primary-device external-devices orientation)
+            (disconnect-external-displays primary-device external-devices)))))
