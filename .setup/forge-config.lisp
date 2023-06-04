@@ -1,23 +1,22 @@
 (
- (:void :arch :debian :mac)
+ (:void :mac)
  (
-  ("archlinux-keyring" (:void) (:debian) (:mac))
   ("cryptsetup" (:mac))
   "cryfs"
-  ("polkit" (:debian) (:mac))
-  ("dbus" (:arch) (:debian) (:mac))
+  ("polkit" (:mac))
+  ("dbus" (:mac))
   ("efibootmgr" (:mac))
   "tmux"
   ("fish" (:xbps "fish-shell"))
-  ("fd" (:apt "fd-find"))
-  ("lsd" (:apt "exa"))
+  "fd"
+  "lsd"
   "bat"
   "ncdu"
   "ripgrep"
   "fzf"
   ("vim" (:mac))
   ("emacs" (:xbps "emacs-gtk3") (:cask "emacs"))
-  ("mpv")
+  "mpv"
   "aspell"
   ("aspell-en" (:mac))
   "make"
@@ -30,39 +29,39 @@
   "btop"
   ("psmisc" (:mac))
   ("udisks2" (:cask "mounty"))
-  ("network-manager" (:xbps "NetworkManager") (:pacman "networkmanager") (:mac))
-  ("bind-utils" (:pacman "bind") (:apt "dnsutils") (:mac))
+  ("network-manager" (:xbps "NetworkManager") (:mac))
+  ("bind-utils" (:mac))
   "weechat"
   ("docker" (:brew "docker" "docker-machine"))
-  ("nodejs" (:pacman "npm") (:apt "npm") (:brew "node"))
+  ("nodejs" (:brew "node"))
   "sbcl"
-  ("rustup" (:apt "cargo") (:brew "rustup-init"))
+  ("rustup" (:brew "rustup-init"))
   ("brightnessctl" (:mac))
   ("acpi" (:mac))
-  ("numlockx" (:paru "systemd-numlockontty") (:mac))
-  ("chrony" (:arch) (:mac))
+  ("numlockx" (:mac))
+  ("chrony" (:mac))
   ("btrfs-progs" (:mac))
   ("ntfs-3g" (:mac))
   ("dosfstools" (:mac))
   ("mtools" (:mac))
   ("exfat-utils" (:mac))
-  ("android-tools" (:apt "android-platform-system-core") (:cask "android-platform-tools"))
+  ("android-tools" (:cask "android-platform-tools"))
   "rlwrap"
   "neofetch"
   "wget"
   "curl"
-  ("avahi" (:apt "avahi-daemon"))
-  ("openssh" (:apt "ssh") (:mac))
+  "avahi"
+  ("openssh" (:mac))
   ("xorg" (:mac))
-  ("sct" (:paru "sct") (:mac))
+  ("sct" (:mac))
   ("onboard" (:mac))
-  ("picom" (:apt "compton") (:mac))
+  ("picom" (:mac))
   ("i3" (:xbps "i3" "i3status" "i3lock") (:mac))
   ("xss-lock" (:mac))
   ("xfce4" (:mac))
-  ("edex-ui" (:void) (:paru "edex-ui") (:debian) (:cask "edex-ui"))
+  ("edex-ui" (:void) (:cask "edex-ui"))
   ("feh" (:mac))
-  ("dmenu" (:debian) (:mac))
+  ("dmenu" (:mac))
   ("rofi" (:mac))
   ("kitty" (:cask "alacritty"))
   ("xsel" (:mac))
@@ -70,31 +69,31 @@
   ("gparted" (:mac))
   ("thunar" (:xbps "Thunar") (:mac))
   ("gvfs" (:mac))
-  ("syncthing" (:xbps "syncthing-gtk") (:paru "syncthing-gtk") (:apt "syncthing-gtk"))
-  ("brave" (:void) (:debian) (:cask "brave-browser"))
-  ("rememberthemilk" (:void) (:paru "rememberthemilk") (:debian) (:cask "remember-the-milk"))
-  ("dynalist" (:void) (:paru "dynalist-desktop") (:debian) (:cask "dynalist"))
+  ("syncthing" (:xbps "syncthing-gtk"))
+  ("brave" (:void) (:cask "brave-browser"))
+  ("rememberthemilk" (:void) (:cask "remember-the-milk"))
+  ("dynalist" (:void) (:cask "dynalist"))
   ("keepassxc" (:cask "keepasxc"))
-  ("authy" (:void) (:paru "authy") (:debian) (:cask "authy"))
-  ("tunnelbear" (:void) (:paru "tunnelbear") (:debian) (:cask "tunnelbear"))
+  ("authy" (:void) (:cask "authy"))
+  ("tunnelbear" (:void) (:cask "tunnelbear"))
   ("thunderbird" (:mac))
   ("schildi" (:flatpak ("chat.schildi.desktop" "schildi")) (:cask "schildichat"))
-  ("google-backup-and-sync" (:void) (:arch) (:debian) (:cask "google-backup-and-sync"))
-  ("pcloud" (:void) (:paru "pcloud-drive") (:debian) (:mac))
-  ("transmission" (:xbps "transmission-gtk") (:pacman "transmission-gtk") (:cask "transmission"))
+  ("google-backup-and-sync" (:void) (:cask "google-backup-and-sync"))
+  ("pcloud" (:void) (:mac))
+  ("transmission" (:xbps "transmission-gtk") (:cask "transmission"))
   ("postman" (:flatpak ("com.getpostman.Postman" "postman")) (:cask "postman"))
-  ("nomachine" (:void) (:paru "nomachine") (:debian) (:cask "nomachine"))
-  ("diffmerge" (:void) (:arch) (:debian) (:cask "diffmerge"))
+  ("nomachine" (:void) (:cask "nomachine"))
+  ("diffmerge" (:void) (:cask "diffmerge"))
   ("virt-manager" (:xbps "qemu" "virt-manager"))
-  ("libreoffice" (:pacman "libreoffice-fresh") (:cask "libreoffice"))
+  ("libreoffice" (:cask "libreoffice"))
   ("blueman" (:mac))
   ("shotwell" (:cask "xnviewmp"))
   ("gimp" (:cask "gimp"))
   ("darktable" (:cask "darktable"))
   ("clementine" (:cask "clementine"))
   ("pavucontrol" (:mac))
-  ("gstreamer" (:xbps "gstreamer1") (:debian) (:mac))
-  ("pipewire" (:xbps "pipewire" "alsa-pipewire" "libspa-bluetooth") (:pacman "pipewire" "pipewire-pulse" "pipewire-alsa") (:apt "pipewire" "pipewire-pulse" "pipewire-alsa") (:mac))
+  ("gstreamer" (:xbps "gstreamer1") (:mac))
+  ("pipewire" (:xbps "pipewire" "alsa-pipewire" "libspa-bluetooth") (:mac))
   ("easyeffects" (:mac))
   ("audacity" (:mac))
   ("easytag" (:cask "kid3"))
@@ -102,35 +101,31 @@
   ("handbrake" (:cask "handbrake"))
   ("blender" (:cask "blender"))
   "youtube-dl"
-  ("yt-dlp" (:void) (:arch) (:debian) (:mac))
+  ("yt-dlp" (:void) (:mac))
   ("kodi" (:cask "kodi"))
   ("flameshot" (:mac))
-  ("obs" (:pacman "obs-studio") (:apt "obs-studio") (:cask "obs"))
+  ("obs" (:cask "obs"))
   ("peek" (:cask "licecap"))
-  ("keymon" (:void) (:paru "key-mon") (:debian) (:cask "keycastr"))
-  ("balena-etcher" (:void) (:paru "balena-etcher") (:debian) (:cask "balenaetcher"))
+  ("keymon" (:void) (:cask "keycastr"))
+  ("balena-etcher" (:void) (:cask "balenaetcher"))
   ("steam" (:cask "steam"))
   ("lutris" (:mac))
-  ("origin" (:void) (:arch) (:debian) (:cask "origin"))
-  ("gamehub" (:paru "gamehub") (:debian) (:mac))
-  ("sony-remote-play" (:void) (:arch) (:debian) (:cask "sony-ps4-remote-play"))
-  ("razer-synapse" (:void) (:arch) (:debian) (:cask "razer-synapse"))
+  ("origin" (:void) (:cask "origin"))
+  ("gamehub" (:mac))
+  ("sony-remote-play" (:void) (:cask "sony-ps4-remote-play"))
+  ("razer-synapse" (:void) (:cask "razer-synapse"))
   ("barrier" (:cask "barrier"))
-  ("font-open-sans" (:void) (:arch) (:debian) (:cask "font-open-sans"))
-  ("font-inconsolata" (:void) (:arch) (:debian) (:cask "font-inconsolata"))
-  ("font-liberation" (:void) (:arch) (:debian) (:cask "font-liberation"))
-  ("font-roboto-mono" (:void) (:arch) (:debian) (:cask "font-roboto-mono"))
-  ("font-fira-code" (:void) (:arch) (:debian) (:cask "font-fira-code"))
+  ("font-open-sans" (:void) (:cask "font-open-sans"))
+  ("font-inconsolata" (:void) (:cask "font-inconsolata"))
+  ("font-liberation" (:void) (:cask "font-liberation"))
+  ("font-roboto-mono" (:void) (:cask "font-roboto-mono"))
+  ("font-fira-code" (:void) (:cask "font-fira-code"))
   )
  (
   "Install flatpak packages the conventional way"
   nil
   (:void ("~/.bin/linux/mt-flatpak-install postman com.getpostman.Postman"
           "~/.bin/linux/mt-flatpak-install schildi chat.schildi.desktop"))
-  (:arch ("~/.bin/linux/mt-flatpak-install postman com.getpostman.Postman"
-          "~/.bin/linux/mt-flatpak-install schildi chat.schildi.desktop"))
-  (:debian ("~/.bin/linux/mt-flatpak-install postman com.getpostman.Postman"
-            "~/.bin/linux/mt-flatpak-install schildi chat.schildi.desktop"))
   )
  (
   "Enable hidden items in Finder"
@@ -142,10 +137,6 @@
   "Perform a few package-dependent config"
   nil
   (:void ("sudo usermod -aG libvirt ismail"))
-  (:arch ("sudo usermod -aG libvirt ismail"))
-  (:debian ("sudo usermod -aG libvirt ismail"
-            "sudo ln -s \"$(which fdfind)\" \"$(which fdfind | xargs readlink -f | xargs dirname)/fd\""
-            "sudo ln -s \"$(which batcat)\" \"$(which batcat | xargs readlink -f | xargs dirname)/bat\""))
   )
  (
   "Set up Docker"
@@ -153,12 +144,6 @@
   (:void ("sudo groupadd docker"
           "sudo gpasswd -a ${USER} docker"
           "sudo ln -s /etc/sv/docker /var/service"))
-  (:arch ("sudo groupadd docker"
-          "sudo gpasswd -a ${USER} docker"
-          "sudo systemctl enable docker"))
-  (:debian ("sudo groupadd docker"
-            "sudo gpasswd -a ${USER} docker"
-            "sudo systemctl enable docker"))
   (:mac ("docker-machine create --driver virtualbox default"
          "eval ${docker-machine env default}"))
   )
@@ -166,8 +151,6 @@
   "Change user shell"
   t
   (:void ("sudo usermod -s /bin/fish ismail"))
-  (:arch ("sudo usermod -s /bin/fish ismail"))
-  (:debian ("sudo usermod -s /bin/fish ismail"))
   (:mac ("echo \"/opt/homebrew/bin/fish\" | sudo tee -a /etc/shells"
          "chsh -s /opt/homebrew/bin/fish"))
   )
@@ -175,8 +158,6 @@
   "Install Rust Toolchain"
   t
   (:void ("rustup-init --default-toolchain stable --profile default -y"))
-  (:arch ("rustup toolchain install stable"))
-  (:debian ("rustup toolchain install stable"))
   (:mac ("rustup-init"))
   )
  (
@@ -245,14 +226,6 @@
   t
   (:void ("sudo xbps-install -Sy razergenie openrazer-meta"
           "sudo gpasswd -a $USER plugdev"))
-  (:arch ("paru -S python-notify2 openrazer-meta polychromatic --noconfirm"
-          "sudo pacman -Syu linux-headers --noconfirm"
-          "sudo gpasswd -a $USER plugdev"))
-  (:debian ("echo 'deb http://download.opensuse.org/repositories/hardware:/razer/Debian_Testing/ /' | sudo tee /etc/apt/sources.list.d/hardware:razer.list"
-            "curl -fsSL https://download.opensuse.org/repositories/hardware:razer/Debian_Testing/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/hardware_razer.gpg > /dev/null"
-            "sudo apt update"
-            "sudo apt install -y openrazer-meta razergenie"
-            "sudo gpasswd -a $USER plugdev"))
   )
  (
   "Set up startup services"
@@ -262,24 +235,6 @@
           "sudo ln -s /etc/sv/bluetoothd /var/service"
           "sudo ln -s /etc/sv/sshd /var/service"
           "sudo ln -s /etc/sv/avahi-daemon /var/service"))
-  (:arch ("systemctl enable numLockOnTty.service"
-          "systemctl start numLockOnTty.service"
-          "systemctl --user enable syncthing.service"
-          "systemctl --user start syncthing.service"
-          "systemctl enable bluetooth"
-          "systemctl start bluetooth"
-          "systemctl enable ssh"
-          "systemctl start ssh"
-          "systemctl enable avahi-daemon"
-          "systemctl start avahi-daemon"))
-  (:debian ("systemctl --user enable syncthing.service"
-            "systemctl --user start syncthing.service"
-            "systemctl enable bluetooth"
-            "systemctl start bluetooth"
-            "systemctl enable ssh"
-            "systemctl start ssh"
-            "systemctl enable avahi-daemon"
-            "systemctl start avahi-daemon"))
   (:mac ("brew services start syncthing"
          "brew servies start avahi-daemon"))
   )
@@ -305,10 +260,6 @@ MOZ_USE_XINPUT2 DEFAULT=1
   "Install power-guard"
   t
   (:void ("git clone https://github.com/myTerminal/power-guard.git /tmp/power-guard"
-          "( cd /tmp/power-guard; make install )"))
-  (:arch ("git clone https://github.com/myTerminal/power-guard.git /tmp/power-guard"
-          "( cd /tmp/power-guard; make install )"))
-  (:debian ("git clone https://github.com/myTerminal/power-guard.git /tmp/power-guard"
           "( cd /tmp/power-guard; make install )"))
   )
  (
