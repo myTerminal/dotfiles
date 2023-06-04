@@ -150,6 +150,14 @@ To start setup, run the following command in a terminal running bash:
 
 =*= - in-built, =**= - through web-client
 
+** History
+
+What started as [[https://github.com/myTerminal/dotfiles/tree/b384107562817ef181111c8c27bccaaa47614975][a home for my Emacs config]], [[https://github.com/myTerminal/dotfiles/tree/6bec073e40d7a1065b8c871f2158afb5b2a3debc][started to shift its shape]], soon turning into a comprehensive *dotfiles* project to host configuration for much more than just Emacs. The majority of it [[https://github.com/myTerminal/dotfiles/tree/v1.0.0][still mostly comprised of Emacs configuration]], so I eventually extracted it into [[https://github.com/myTerminal/.emacs.d][a separate project of its own]] to make things simple. I even pulled the setup scripts into their separate projects [[https://github.com/myTerminal/forge-legacy][here]] and then later [[https://github.com/myTerminal/forge][here]], but maintaining it was still tricky with its [[https://github.com/myTerminal/dotfiles/tree/v2.0.0][complex arrangement of configuration files for four operating platforms]] at once.
+
+What you see now is an attempt to keep only what is relevant to my primary configuration across all my active workstations so that updates are less painful and effortless. There is more than one reason to keep configuration for macOS around, one of them is to use them on my work computers that stand out from my personal machines, and the other is to compare my "custom" setup with a fully-fledged family of macOS.
+
+There still is some inseparable residue related to other platforms that might eventually disappear, or otherwise bring in more complexity in the future.
+
 ** To-Do
 
 - Fill in missing parts for Linux configuration
