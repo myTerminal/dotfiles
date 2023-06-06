@@ -17,8 +17,7 @@
   ("vim" (:mac))
   ("emacs" (:xbps "emacs-gtk3") (:cask "emacs"))
   "mpv"
-  "aspell"
-  ("aspell-en" (:mac))
+  ("aspell" (:xbps "aspell" "aspell-en") (:mac))
   "make"
   "git"
   "tig"
