@@ -52,6 +52,7 @@
   "avahi"
   ("openssh" (:mac))
   ("xorg" (:mac))
+  ("xdg-utils" (:mac))
   ("sct" (:mac))
   ("onboard" (:mac))
   ("picom" (:mac))
