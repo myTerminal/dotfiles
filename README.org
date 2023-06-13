@@ -32,7 +32,7 @@ Software setup for multiple operating platforms is included and it is performed 
 To start the setup, run the following command in a terminal running bash: (provided [[https://github.com/myTerminal/forge][forge]] was fetched as a part of the init)
 
 #+BEGIN_EXAMPLE
-( cd ~/.forge; ./start )
+( cd ~/.forge; ./start debug ~/.setup/forge-config.lisp )
 #+END_EXAMPLE
 
 ** Software selection
