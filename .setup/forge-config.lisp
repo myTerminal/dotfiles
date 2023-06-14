@@ -222,6 +222,13 @@
          "rm -rf ~/_temp"))
   )
  (
+  "Set up pipewire with wireplumber and pipewire-pulse"
+  t
+  (:void ("sudo mkdir -p /etc/pipewire/pipewire.conf.d"
+          "sudo ln -s /usr/share/examples/wireplumber/10-wireplumber.conf /etc/pipewire/pipewire.conf.d/"
+          "sudo ln -s /usr/share/examples/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/"))
+  )
+ (
   "Set up peripheral drivers"
   t
   (:void ("sudo xbps-install -Sy razergenie openrazer-meta"
