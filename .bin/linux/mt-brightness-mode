@@ -52,5 +52,5 @@ case "${mt_value=}" in
         ;;
 esac
 
-xrandr --output "eDP-1" --brightness ${mt_brightness}
+xrandr --output "eDP1" --brightness ${mt_brightness}
 echo "Brightness set to ${mt_brightness}"
