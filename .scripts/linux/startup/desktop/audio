@@ -2,8 +2,7 @@
 
 # Start pipewire if not already running
 if [[ ! $(pgrep pipewire) ]]; then
-    pipewire & pipewire-pulse & wireplumber &
-    sleep 5
+    dbus-run-session pipewire &
 fi
 
 # Set volume to 70%
