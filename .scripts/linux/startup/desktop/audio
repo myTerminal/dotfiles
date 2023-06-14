@@ -2,7 +2,7 @@
 
 # Start pipewire if not already running
 if [[ ! $(pgrep pipewire) ]]; then
-    pipewire & pipewire-pulse &
+    pipewire & pipewire-pulse & wireplumber &
     sleep 5
 fi
 
