@@ -12,7 +12,7 @@ fi
 switch-power-mode-with-systemd () {
     case "${mt_mode}" in
         "lock")
-            i3lock -c 000000
+            mt-lock-desktop
             ;;
 
         "quit")
@@ -53,7 +53,7 @@ switch-power-mode-with-systemd () {
 switch-power-mode-with-runit () {
     case "${mt_mode}" in
         "lock")
-            i3lock -c 000000
+            mt-lock-desktop
             ;;
 
         "quit")
