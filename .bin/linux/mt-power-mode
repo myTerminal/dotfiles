@@ -5,7 +5,7 @@
 if [ "${1}" ]; then
     mt_mode="${1}"
 else
-    mt_mode=$(echo -e "lock\nquit\nsuspend\nhibernate\nshutdown\nrestart\nawake\nsleepy" | rofi -dmenu)
+    mt_mode=$(echo -e "lock\nindoor\noutdoor\nquit\nsuspend\nhibernate\nshutdown\nrestart\nawake\nsleepy" | rofi -dmenu)
 fi
 
 # Function to switch power using systemd
@@ -13,6 +13,14 @@ switch-power-mode-with-systemd () {
     case "${mt_mode}" in
         "lock")
             mt-lock-desktop
+            ;;
+
+        "indoor")
+            mt-lock-disable
+            ;;
+
+        "outdoor")
+            mt-lock-enable
             ;;
 
         "quit")
@@ -54,6 +62,14 @@ switch-power-mode-with-runit () {
     case "${mt_mode}" in
         "lock")
             mt-lock-desktop
+            ;;
+
+        "indoor")
+            mt-lock-disable
+            ;;
+
+        "outdoor")
+            mt-lock-enable
             ;;
 
         "quit")
