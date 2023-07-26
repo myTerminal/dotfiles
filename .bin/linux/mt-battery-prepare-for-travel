@@ -2,4 +2,4 @@
 
 mt-battery-set-charge-thresholds 96 100
 read -n1 -r -p "Press any key when ready to stop charging..."
-mt-battery-set-charge-thresholds
+mt-battery-set-charge-thresholds $1 $2
