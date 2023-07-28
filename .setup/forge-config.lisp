@@ -323,8 +323,7 @@ MOZ_USE_XINPUT2 DEFAULT=1
          "ln -s ~/_workspace/all/myterminal-web-lp ~/_portfolio-lp"
          "ln -s ~/_store/Documents ~/_documents"
          "ln -s ~/_store/Documents/notes ~/_notes"
-         "ln -s ~/_store/Mobile-Media ~/_mobile-media"
-         "ln -s ~/_store/YouTube ~/_youtube"))
+         "ln -s ~/_store/Mobile-Media ~/_mobile-media"))
   )
  (
   "Re-generate symlinks for binaries"
