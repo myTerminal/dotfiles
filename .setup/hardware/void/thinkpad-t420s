@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# This script is an add-on to `~/.setup/forge-config.lisp` containing
+# device-specific setup for 2011 Lenovo ThinkPad X420s and mostly follows steps
+# from https://wiki.archlinux.org/title/Lenovo_ThinkPad_T420s
+
+# Set display scaling for the smaller screen
+. ~/.setup/hardware/enable-hidpi 82
+
+# Improve touchpad experience with xinput
+sudo xbps-install -Sy xinput # (Just in case)
+. ~/.setup/hardware/enable-libinput-events-for-touchpad
+. ~/.setup/hardware/configure-touchpad "SynPS/2 Synaptics TouchPad" 0.5
+
+# Install tlp and more for power management
+sudo xbps-install -Sy tlp acpi_call-dkms tp_smapi-dkms powertop
+~/.bin/linux/mt-battery-set-charge-thresholds
+sudo ln -s /etc/sv/tlp /var/service
+
+# Install Mesa Intel drivers
+sudo xbps-install -Sy mesa-intel-dri mesa-dri-32bit mesa-vulkan-intel-32bit
+
+# TODO: Utilize fingerprint sensor
