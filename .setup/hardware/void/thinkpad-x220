@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # This script is an add-on to `~/.setup/forge-config.lisp` containing
-# device-specific setup for 2012 Lenovo ThinkPad X220 and mostly follows steps
+# device-specific setup for 2011 Lenovo ThinkPad X220 and mostly follows steps
 # from https://wiki.archlinux.org/title/Lenovo_ThinkPad_X220
 
 # Set display scaling for the smaller screen
