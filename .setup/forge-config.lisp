@@ -258,12 +258,6 @@ MOZ_USE_XINPUT2 DEFAULT=1
 \" | sudo tee -a /etc/security/pam_env.conf"))
   )
  (
-  "Set Brave as the default web-browser"
-  t
-  (:all ("sudo cp ~/.assets/brave.desktop /usr/share/applications"
-         "xdg-settings set default-web-browser brave.desktop"))
-  )
- (
   "Install power-guard"
   t
   (:void ("git clone https://github.com/myTerminal/power-guard.git /tmp/power-guard"
@@ -329,6 +323,12 @@ MOZ_USE_XINPUT2 DEFAULT=1
   "Re-generate symlinks for binaries"
   t
   (:all ("~/.setup/regenerate-binary-symlinks"))
+  )
+ (
+  "Set Brave as the default web-browser"
+  t
+  (:all ("sudo cp ~/.assets/brave.desktop /usr/share/applications"
+         "xdg-settings set default-web-browser brave.desktop"))
   )
  (
   "Tag machine with ~/.mt-tag"
