@@ -287,6 +287,11 @@ MOZ_USE_XINPUT2 DEFAULT=1
          "mkdir ~/_store"))
   )
  (
+  "Next steps depend on SSH keys and Syncthing setup."
+  t
+  (:all ("echo \"Continuing...\""))
+  )
+ (
   "Clone public GitHub source projects for myTerminal"
   t
   (:all ("git-getter --username myTerminal --targetPath ~/_workspace/github --ssh"))
