@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+mt_mesa_packages=(mesa-intel-dri \
+                      mesa-dri-32bit \
+                      mesa-vulkan-intel-32bit)
+
+sudo xbps-install -Sy "${mt_mesa_packages[@]}"

@@ -15,6 +15,6 @@ sudo xbps-install -Sy tlp acpi_call-dkms powertop
 sudo ln -s /etc/sv/tlp /var/service
 
 # Install Mesa Intel drivers
-sudo xbps-install -Sy mesa-intel-dri mesa-dri-32bit mesa-vulkan-intel-32bit
+. ~/.setup/hardware/void/other/mesa
 
 # TODO: Utilize fingerprint sensor
