@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+mt_menu=$(echo -e "brightness\ndisplay\ngpu" | rofi -dmenu)
+
+case "${mt_menu}" in
+    "brightness")
+        mt-brightness-mode
+        ;;
+
+    "display")
+        mt-display-mode
+        ;;
+
+    "gpu")
+        mt-gpu-mode
+        ;;
+
+    *)
+        echo "Not implemented!"
+        ;;
+esac
