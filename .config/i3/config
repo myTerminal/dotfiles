@@ -352,4 +352,5 @@ bindsym $mod+Shift+period exec flameshot full -p ~/Desktop
 bindsym $mod+Shift+x exec ~/.bin/linux/mt-power-mode
 bindsym $mod+Shift+z exec ~/.bin/linux/mt-hardware
 
+# Bind session lock
 bindsym Control+Shift+l exec mt-lock-desktop
