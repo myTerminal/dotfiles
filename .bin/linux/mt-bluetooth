@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# Query the list of known devices
+devices_result=$(bluetoothctl devices)
+
+# Get parsed options
+parsed_result=$(sbcl --script ~/.assets/bt-parser.lisp ${devices_result})
+
+# Prompt for selection
+result=$(echo -e ${parsed_result}\\n[Disconnect] | rofi -dmenu)
+
+# Check whether it's a connect or disconnect
+if [ "${result}" == "[Disconnect]" ]; then
+    # Disconnect from the connected device
+    bluetoothctl disconnect
+else
+    # Split id and name
+    result_id=$(echo ${result} | cut -d ' ' -f 1)
+
+    # Connect to the selected device using id
+    bluetoothctl connect ${result_id}
+fi
