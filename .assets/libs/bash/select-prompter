@@ -2,6 +2,6 @@
 
 mt_prompter="fzf"
 
-if [[ $DISPLAY ]]; then 
+if [[ $DISPLAY ]]; then
     mt_prompter="rofi -dmenu"
 fi
