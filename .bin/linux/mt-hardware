@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-mt_menu=$(echo -e "brightness\ndisplay\ngpu" | rofi -dmenu)
+mt_menu=$(echo -e "brightness\ndisplay\ngpu\nbluetooth" | rofi -dmenu)
 
 case "${mt_menu}" in
     "brightness")
@@ -13,6 +13,10 @@ case "${mt_menu}" in
 
     "gpu")
         mt-gpu-mode
+        ;;
+
+    "bluetooth")
+        mt-bluetooth
         ;;
 
     *)
