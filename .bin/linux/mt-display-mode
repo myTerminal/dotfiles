@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-mt_response=$(echo -e "Auto (3840x2160)\nMedium (2560x1440)\nLow (1920x1080)\nPrimary => External\nExternal <= Primary" | rofi -dmenu)
+# Detect display and set prompter
+. ~/.assets/libs/bash/select-prompter
+
+mt_response=$(echo -e "Auto (3840x2160)\nMedium (2560x1440)\nLow (1920x1080)\nPrimary => External\nExternal <= Primary" | ${mt_prompter})
 
 case "${mt_response}" in
     "Auto (3840x2160)")

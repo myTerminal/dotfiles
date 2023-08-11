@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
+# Detect display and set prompter
+. ~/.assets/libs/bash/select-prompter
+
 if [ "${1}" ]; then
     mt_mode="${1}"
 else
-    mt_mode=$(echo -e "intel\nhybrid\nnvidia" | rofi -dmenu)
+    mt_mode=$(echo -e "intel\nhybrid\nnvidia" | ${mt_prompter})
 fi
 
 case "${mt_mode}" in

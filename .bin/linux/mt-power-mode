@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 
+# Detect display and set prompter
+. ~/.assets/libs/bash/select-prompter
+
 . ~/.assets/libs/bash/detect-init-system
 
 if [ "${1}" ]; then
     mt_mode="${1}"
 else
-    mt_mode=$(echo -e "lock\nindoor\noutdoor\nquit\nsuspend\nhibernate\nshutdown\nrestart\nawake\nsleepy" | rofi -dmenu)
+    mt_mode=$(echo -e "lock\nindoor\noutdoor\nquit\nsuspend\nhibernate\nshutdown\nrestart\nawake\nsleepy" | ${mt_prompter})
 fi
 
 # Function to switch power using systemd

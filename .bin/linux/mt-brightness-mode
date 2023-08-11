@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
+# Detect display and set prompter
+. ~/.assets/libs/bash/select-prompter
+
 if [ "${1}" ]; then
     mt_value="${1}"
 else
-    mt_value=$(echo -e "100\n90\n80\n70\n60\n50\n40\n30\n20\n10" | rofi -dmenu)
+    mt_value=$(echo -e "100\n90\n80\n70\n60\n50\n40\n30\n20\n10" | ${mt_prompter})
 fi
 
 case "${mt_value=}" in
