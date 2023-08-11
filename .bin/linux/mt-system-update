@@ -2,7 +2,7 @@
 
 # Run update through the primary package manager
 . ~/.assets/libs/bash/detect-platform
-case "${tw_platform}" in
+case "${mt_platform}" in
     Arch)
         sudo pacman -Syu
         ;;

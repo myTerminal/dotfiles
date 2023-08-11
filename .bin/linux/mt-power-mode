@@ -114,7 +114,7 @@ switch-power-mode-with-runit () {
 }
 
 # Use the appropriate implement based on the active init system
-case "${tw_init_system}" in
+case "${mt_init_system}" in
     SystemD)
         switch-power-mode-with-systemd
         ;;

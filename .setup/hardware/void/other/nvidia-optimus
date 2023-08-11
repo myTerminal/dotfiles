@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 # TODO: Implement for Void
-tw_log "Not implemented!"
+echo "Not implemented!"
