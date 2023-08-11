@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Detect display and set prompter
+. ~/.assets/libs/bash/select-prompter
+
 # Query the list of known devices
 devices_result=$(bluetoothctl devices)
 
@@ -7,7 +10,7 @@ devices_result=$(bluetoothctl devices)
 parsed_result=$(sbcl --script ~/.assets/bt-parser.lisp ${devices_result})
 
 # Prompt for selection
-result=$(echo -e ${parsed_result}\\n[Disconnect] | rofi -dmenu)
+result=$(echo -e ${parsed_result}\\n[Disconnect] | ${mt_prompter})
 
 # Check whether it's a connect or disconnect
 if [ "${result}" == "[Disconnect]" ]; then
