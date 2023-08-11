@@ -27,6 +27,7 @@ set-battery-thresholds-for-legacy-systems () {
     done
 }
 
+# Use the appropriate power interface depending on the system
 if [[ -d /sys/devices/platform/smapi ]]; then
     set-battery-thresholds-for-legacy-systems
 else

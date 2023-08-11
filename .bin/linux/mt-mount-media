@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Create media directory for user
 sudo mkdir /run/media/${USER}/$2
+
+# Grant permission to user
 sudo chown ${USER}:${USER}  /run/media/${USER}/$2
+
+# Mount the media
 sudo mount $1 /run/media/${USER}/$2

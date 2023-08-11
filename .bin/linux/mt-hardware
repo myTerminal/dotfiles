@@ -3,8 +3,11 @@
 # Detect display and set prompter
 . ~/.assets/libs/bash/select-prompter
 
+# Prompt for a choice
 mt_menu=$(echo -e "brightness\ndisplay\ngpu\nbluetooth" | ${mt_prompter})
 
+
+# Spawn the appropriate menu based on choice
 case "${mt_menu}" in
     "brightness")
         mt-brightness-mode

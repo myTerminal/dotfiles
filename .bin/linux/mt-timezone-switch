@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
+# Prompt for a timezone and set it
 sudo ln -sf $(find /usr/share/zoneinfo | fzf --prompt "Choose a location: ") /etc/localtime

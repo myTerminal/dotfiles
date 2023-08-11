@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Disable charge thresholds temporarily
 mt-battery-set-charge-thresholds 96 100
+
+# Wait for user input
 read -n1 -r -p "Press any key when ready to stop charging..."
+
+# Set charge thresholds again
 mt-battery-set-charge-thresholds $1 $2

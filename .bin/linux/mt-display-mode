@@ -3,8 +3,10 @@
 # Detect display and set prompter
 . ~/.assets/libs/bash/select-prompter
 
+# Prompt for a choice
 mt_response=$(echo -e "Auto (3840x2160)\nMedium (2560x1440)\nLow (1920x1080)\nPrimary => External\nExternal <= Primary" | ${mt_prompter})
 
+# Execute the appropriate command based on choice
 case "${mt_response}" in
     "Auto (3840x2160)")
         xrandr --output "eDP-1" --auto --output "HDMI-0" --off

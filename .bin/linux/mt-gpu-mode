@@ -3,12 +3,16 @@
 # Detect display and set prompter
 . ~/.assets/libs/bash/select-prompter
 
+# Check for supplied argument
 if [ "${1}" ]; then
+    # Use the supplied argument
     mt_mode="${1}"
 else
+    # Prompt for a value
     mt_mode=$(echo -e "intel\nhybrid\nnvidia" | ${mt_prompter})
 fi
 
+# Execute the appropriate command based on choice
 case "${mt_mode}" in
     i | integrated | intel )
         echo "Switching to integrated GPU..."

@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
+# Install flatpak
 sudo flatpak install -y ${2}
 
+# Create symlink for direct launch
 echo "#!/usr/bin/env bash
 dbus-run-session flatpak run ${2} & disown" | sudo tee /usr/bin/${1}
 sudo chmod 755 /usr/bin/${1}
-

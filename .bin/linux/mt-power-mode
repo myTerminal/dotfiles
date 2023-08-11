@@ -3,11 +3,15 @@
 # Detect display and set prompter
 . ~/.assets/libs/bash/select-prompter
 
+# Detect init system
 . ~/.assets/libs/bash/detect-init-system
 
+# Check for supplied argument
 if [ "${1}" ]; then
+    # Use the supplied argument
     mt_mode="${1}"
 else
+    # Prompt for a choice
     mt_mode=$(echo -e "lock\nindoor\noutdoor\nquit\nsuspend\nhibernate\nshutdown\nrestart\nawake\nsleepy" | ${mt_prompter})
 fi
 
@@ -109,6 +113,7 @@ switch-power-mode-with-runit () {
     esac
 }
 
+# Use the appropriate implement based on the active init system
 case "${tw_init_system}" in
     SystemD)
         switch-power-mode-with-systemd
