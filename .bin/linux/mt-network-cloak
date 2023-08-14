@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+if [ "${1}" = "start" ]; then
+    sudo mkdir -p /etc/NetworkManager/conf.d
+    echo "
+[connection-mac-randomization]
+ethernet.cloned-mac-address=random
+wifi.cloned-mac-address=random
+" | sudo tee /etc/NetworkManager/conf.d/network_rand_mac.conf
+else
+    sudo rm /etc/NetworkManager/conf.d/network_rand_mac.conf
+fi
+
+sudo sv restart NetworkManager
