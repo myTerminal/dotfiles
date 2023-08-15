@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+case "${1}" in
+    m | mount)
+        # Create media directory for user
+        sudo mkdir /run/media/${USER}/$3
+
+        # Grant permission to user
+        sudo chown ${USER}:${USER}  /run/media/${USER}/$3
+
+        # Mount the media
+        sudo mount $2 /run/media/${USER}/$3
+        ;;
+
+    u | unmount)
+        # Unmount media
+        sudo umount $2
+
+        # Remove user directory
+        sudo rm -rf /run/media/${USER}/$3
+        ;;
+
+    *)
+        echo "Not implemented!"
+        ;;
+esac

@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-# Unmount media
-sudo umount $1
-
-# Remove user directory
-sudo rm -rf /run/media/${USER}/$2
