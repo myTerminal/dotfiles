@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+case "${1}" in
+    i | install | a | add)
+        # Install flatpak
+        sudo flatpak install -y ${3}
+
+        # Create symlink for direct launch
+        echo "#!/usr/bin/env bash
+dbus-run-session flatpak run ${3} & disown" | sudo tee /usr/bin/${2}
+        sudo chmod 755 /usr/bin/${2}
+
+        ;;
+
+    u | uninstall | r | remove)
+        # Remove flatpak
+        sudo flatpak remove -y ${3}
+
+        # Remove symlink
+        sudo rm /usr/bin/${2}
+        ;;
+
+    *)
+        echo "Not implemented!"
+        ;;
+esac
+

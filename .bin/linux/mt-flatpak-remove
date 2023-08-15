@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-# Remove flatpak
-sudo flatpak remove -y ${2}
-
-# Remove symlink
-sudo rm /usr/bin/${1}

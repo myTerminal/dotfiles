@@ -124,8 +124,8 @@
  (
   "Install flatpak packages the conventional way"
   nil
-  (:void ("~/.bin/linux/mt-flatpak-install postman com.getpostman.Postman"
-          "~/.bin/linux/mt-flatpak-install schildi chat.schildi.desktop"))
+  (:void ("~/.bin/linux/mt-flatpak install postman com.getpostman.Postman"
+          "~/.bin/linux/mt-flatpak install schildi chat.schildi.desktop"))
   )
  (
   "Enable hidden items in Finder"
