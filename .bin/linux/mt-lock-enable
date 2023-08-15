@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-# Start xss-lock
-xss-lock --transfer-sleep-lock -- mt-lock-desktop --nofork &

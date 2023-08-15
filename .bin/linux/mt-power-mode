@@ -19,15 +19,15 @@ fi
 switch-power-mode-with-systemd () {
     case "${mt_mode}" in
         "lock")
-            mt-lock-desktop
+            mt-session-lock-desktop
             ;;
 
         "indoor")
-            mt-lock-disable
+            mt-session-lock disable
             ;;
 
         "outdoor")
-            mt-lock-enable
+            mt-session-lock enable
             ;;
 
         "quit")
@@ -68,15 +68,15 @@ switch-power-mode-with-systemd () {
 switch-power-mode-with-runit () {
     case "${mt_mode}" in
         "lock")
-            mt-lock-desktop
+            mt-session-lock-desktop
             ;;
 
         "indoor")
-            mt-lock-disable
+            mt-session-lock disable
             ;;
 
         "outdoor")
-            mt-lock-enable
+            mt-session-lock enable
             ;;
 
         "quit")

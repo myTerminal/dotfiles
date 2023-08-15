@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+case "${1}" in
+    enable | activate)
+        # Start xss-lock
+        xss-lock --transfer-sleep-lock -- mt-session-lock-desktop --nofork &
+        ;;
+
+    disable | deactivate)
+        # Disable session lock
+        killall xss-lock
+        ;;
+
+    *)
+        echo "Not implemented!"
+        ;;
+esac

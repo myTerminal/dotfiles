@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 # Enable session lock and lock instantly
-mt-lock-enable &
+mt-session-lock enable &
 fd . ~/_store/Mobile-Media/Lockscreens/ -t f -0 | shuf -n1 -z | xargs -0 i3lock -t -i

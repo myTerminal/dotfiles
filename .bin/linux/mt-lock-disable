@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-# Disable session lock
-killall xss-lock
