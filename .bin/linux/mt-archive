@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+command=${1}
+arguments=${@:2}
+
+case "${command}" in
+    zip)
+        zip -r "${2}.zip" $arguments
+        ;;
+
+    unzip)
+        unzip "${arguments}"
+        ;;
+
+    *)
+        echo "Not implemented!"
+        ;;
+esac

@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-command=$@
-
-# TODO: Make smarter
-zip -r "${@}.zip" "$@"
