@@ -15,7 +15,6 @@ efibootmgr -Bb <four-digit-numeric-identifier>
   - Syncthing as a node
   - Remember The Milk for maintenance tasks
   - KeePass database as a key
-  - Authy as a known device
   - Home network as a known device
 
 # Local Variables:

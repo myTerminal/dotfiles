@@ -9,7 +9,6 @@
   5) /(Optional)/ Windows NTFS
 - /(Optional)/ Install Windows with absolute basic settings and minimal software, run updates a few tens of times
   - Install and configure Brave
-  - Install and configure Authy
 - Install Linux
   - If installing from within a LIVE environment, create an SSH key and add it to my GitHub and GitLab account
 - Init [[https://github.com/myTerminal/dotfiles][dotfiles]] using [[../../bootstrap][the bootstrap script]] and trigger forge
@@ -44,7 +43,6 @@
   - Syncthing as a node
   - Remember The Milk for maintenance tasks
   - KeePass database as a key
-  - Authy as a known device
 
 # Local Variables:
 # eval: (visual-line-mode)

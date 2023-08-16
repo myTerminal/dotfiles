@@ -103,7 +103,6 @@ To start the setup, run the following command in a terminal running bash: (provi
 | To-Do manager            |                                  | [[https://www.rememberthemilk.com][Remember The Milk]]               |
 | List manager             |                                  | [[https://dynalist.io][Dynalist]]                        |
 | Password manager         | [[https://keepassxc.org][KeePassXC]]                        | [[https://keepassxc.org][KeePassXC]]                       |
-| 2-factor authentication  |                                  | [[https://authy.com][Authy]]                           |
 | VPN client               |                                  | [[https://www.tunnelbear.com][TunnelBear VPN]]                  |
 | Email clients            | [[https://www.thunderbird.net][Thunderbird]]                      | [[https://support.apple.com/en-us/HT204093][Mail]] (native)                   |
 | Messengers               | [[https://schildi.chat][Schildi]]                          | [[https://schildi.chat][Schildi]]                         |
