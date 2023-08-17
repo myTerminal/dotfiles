@@ -12,6 +12,14 @@ case "${command}" in
         unzip "${arguments}"
         ;;
 
+    tar)
+        tar -cvzf "${2}.tar.gz" $arguments
+        ;;
+
+    untar)
+        tar -xvzf "${arguments}"
+        ;;
+
     *)
         echo "Not implemented!"
         ;;
