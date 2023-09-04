@@ -114,6 +114,7 @@ To start the setup, run the following command in a terminal running bash: (provi
 | Virtualization           | [[https://virt-manager.org][Virt-Manager]]                     | [[https://www.virtualbox.org][VirtualBox]]                      |
 | Office suite             | [[https://www.libreoffice.org][LibreOffice]]                      | [[https://www.libreoffice.org][LibreOffice]]                     |
 | Bluetooth interface      | [[https://github.com/blueman-project/blueman][blueman]]                          | (native)                        |
+| Drawing tool             | [[https://krita.org][krita]]                            | [[https://krita.org][krita]]                           |
 | Picture viewers          | [[https://github.com/GNOME/shotwell][Shotwell]]                         | [[https://support.apple.com/guide/preview/welcome/mac][Preview]] (native), [[https://www.xnview.com/en/xnviewmp][XNView MP]]     |
 | Picture editor           | [[https://www.gimp.org][GIMP]], [[https://www.darktable.org][darktable]]                  | [[https://www.gimp.org][GIMP]], [[https://www.darktable.org][darktable]]                 |
 | Audio player             | [[https://www.clementine-player.org][Clementine]]                       | [[https://www.clementine-player.org][Clementine]]                      |

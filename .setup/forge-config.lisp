@@ -87,6 +87,7 @@
   ("virt-manager" (:xbps "qemu" "virt-manager"))
   ("libreoffice" (:cask "libreoffice"))
   ("blueman" (:mac))
+  ("krita" (:cask "krita"))
   ("shotwell" (:cask "xnviewmp"))
   ("gimp" (:cask "gimp"))
   ("darktable" (:cask "darktable"))
