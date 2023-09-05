@@ -7,7 +7,7 @@
 # Set display scaling for the smaller screen
 # The below line is useless as it places the default value '96'
 # but a slightly better value could be '72'
-. ~/.setup/hardware/enable-hidpi 96
+. ~/.setup/hardware/configure-dpi 96
 
 # Improve touchpad experience with xinput
 sudo xbps-install -Sy xinput # (Just in case)

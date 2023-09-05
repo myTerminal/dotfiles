@@ -5,7 +5,7 @@
 # from https://wiki.archlinux.org/title/Lenovo_ThinkPad_T420s
 
 # Set display scaling for the smaller screen
-. ~/.setup/hardware/enable-hidpi 82
+. ~/.setup/hardware/configure-dpi 82
 
 # Improve touchpad experience with xinput
 sudo xbps-install -Sy xinput # (Just in case)

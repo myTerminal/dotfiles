@@ -6,7 +6,7 @@
 # https://wiki.archlinux.org/title/Lenovo_ThinkPad_X1_Yoga_(Gen_1)
 
 # Set display scaling
-. ~/.setup/hardware/enable-hidpi 144
+. ~/.setup/hardware/configure-dpi 144
 
 # Fix audio input and output
 sudo xbps-install -Sy alsa-firmware sof-firmware
