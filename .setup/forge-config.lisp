@@ -38,6 +38,7 @@
   ("brightnessctl" (:mac))
   ("acpi" (:mac))
   ("numlockx" (:mac))
+  ("fprintd" (:mac))
   ("chrony" (:mac))
   ("btrfs-progs" (:mac))
   ("ntfs-3g" (:mac))
