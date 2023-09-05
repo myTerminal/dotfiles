@@ -42,4 +42,5 @@ sudo ln -s /etc/sv/tlp /var/service
 
 # TODO: Fix display flickering on integrated mode
 
-# TODO: Utilize fingerprint sensor
+# Configure fingerprint sensor
+. ~/.setup/hardware/configure-fingerprints

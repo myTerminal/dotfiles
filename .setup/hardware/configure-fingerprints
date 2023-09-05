@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+# Function to augment a particular PAM file
+augment_file () {
+    # Check if the backup file exists
+    if [ -f /etc/pam.d/${1}.old ]; then
+        echo /etc/pam.d/${1}.old exists!
+    else
+        # Make backup of current file
+        sudo mv /etc/pam.d/${1} /etc/pam.d/${1}.old
+
+        # Create a new file for fprintd
+        echo "
+#%PAM-1.0
+
+auth    required        pam_env.so
+auth    sufficient      pam_fprintd.so
+auth    sufficient      pam_unix.so try_first_pass likeauth nullok
+auth    required        pam_deny.so
+" | sudo tee /etc/pam.d/${1}
+    fi
+}
+
+# Function to register fingerprints
+register_fingerprints () {
+    sudo fprintd-enroll ${USER}
+}
+
+# The main entry-point to the script
+main () {
+    register_fingerprints
+    augment_file vlock
+    augment_file i3lock
+    augment_file sudo
+}
+
+# Start
+main

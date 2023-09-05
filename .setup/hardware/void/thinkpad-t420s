@@ -20,4 +20,5 @@ sudo ln -s /etc/sv/tlp /var/service
 # Install Mesa Intel drivers
 . ~/.setup/hardware/void/other/mesa
 
-# TODO: Utilize fingerprint sensor
+# Configure fingerprint sensor
+. ~/.setup/hardware/configure-fingerprints
