@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-startx ~/.xinitrc "${1}"
+startx ~/.xinitrc $@

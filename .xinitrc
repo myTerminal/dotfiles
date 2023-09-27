@@ -2,7 +2,7 @@ xrdb -merge ~/.Xresources
 
 ~/.scripts/linux/startup/desktop/run
 
-case "${1}" in
+case ${2} in
     alternate)
         exec xfce4-session
         ;;
