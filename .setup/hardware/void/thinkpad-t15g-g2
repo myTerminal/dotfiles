@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# This script is an add-on to `~/.setup/forge-config.lisp` containing
+# device-specific setup for 2021 Lenovo ThinkPad T15g Gen 2 and mostly follows
+# steps from https://wiki.archlinux.org/title/Laptop/Lenovo
+
+# Install Nvidia drivers
+. ~/.setup/hardware/void/other/nvidia-latest
+
+# Fix audio input and output
+sudo xbps-install -Sy sof-firmware
+
+# Enable Dolby Atmos Effect through pulseeffects
+sudo xbps-install -Sy pulseeffects-legacy
+pulseeffects
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/pulseeffects/install.sh)"
+
+# Improve touchpad experience with xinput
+sudo xbps-install -Sy xinput # (Just in case)
+. ~/.setup/hardware/enable-libinput-events-for-touchpad
+. ~/.setup/hardware/configure-touchpad "SynPS/2 Synaptics TouchPad" 1.0
+
+# Install tlp and more for power management
+sudo xbps-install -Sy tlp acpi_call-dkms powertop
+~/.bin/linux/mt-battery-set-charge-thresholds
+sudo ln -s /etc/sv/tlp /var/service
+
+# Configure fingerprint sensor
+. ~/.setup/hardware/configure-fingerprints
