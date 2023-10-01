@@ -12,8 +12,8 @@
 set $mod Mod4
 
 # Define colors
-set $c_primary_lightest "#00ffff"
-set $c_primary_light "#00aaaa"
+set $c_primary_lightest "#83d0c9"
+set $c_primary_light "#009688"
 set $c_primary_dark "#005555"
 set $c_mono_lightest "#ffffff"
 set $c_mono_light "#cccccc"
@@ -259,7 +259,7 @@ bindsym $mod+Shift+p mode $mode_adjust
 # class                 border                 bgcolor                text               indicator     child_border
 client.focused          $c_primary_lightest    $c_primary_lightest    $c_darkest         $c_warning    $c_primary_lightest
 client.focused_inactive $c_primary_light       $c_primary_light       $c_darkest         $c_darkest    $c_primary_light
-client.unfocused        $c_darkest             $c_mono_light          $c_darkest         $c_darkest    $c_darkest
+client.unfocused        $c_darkest             $c_mono_dark           $c_mono_light      $c_darkest    $c_darkest
 client.urgent           $c_darkest             $c_error               $c_mono_lightest   $c_darkest    $c_mono_lightest
 client.placeholder      $c_darkest             $c_darkest             $c_primary_light   $c_darkest    $c_darkest
 client.background       $c_darkest
