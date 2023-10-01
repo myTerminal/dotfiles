@@ -166,8 +166,8 @@
   "Install Graphical Theming: GTK theme"
   t
   (:all ("mkdir -p ~/.local/share/themes"
-         "git clone https://github.com/WernerFP/Shades-of-gray-theme.git ~/_temp"
-         "mv ~/_temp/Shades-of* ~/.local/share/themes/"
+         "git clone https://www.opencode.net/ju1464/Bazik.git ~/_temp"
+         "mv ~/_temp/GTK-Gnome/Bazik* ~/.local/share/themes/"
          "rm -rf ~/_temp"))
   )
  (
