@@ -4,10 +4,10 @@ xrdb -merge ~/.Xresources
 
 case ${2} in
     alternate)
-        exec xfce4-session
+        exec dbus-run-session xfce4-session
         ;;
 
     *)
-        exec i3
+        exec dbus-run-session i3
         ;;
 esac
