@@ -2,9 +2,8 @@
 
 # Execute device-specific scripts
 case "${HOSTNAME}" in
-    excelsior)
-        # Set default screen brightness for the AMOLED screen
-        mt-brightness-mode 30
+    polaris)
+        brightnessctl s 30%
         ;;
 
     *)
