@@ -126,7 +126,7 @@ Generate locales
 
 ### Setting `HOSTNAME`
 
-    echo "excelsior" > /etc/hostname
+    echo "titan" > /etc/hostname
 
 ### Configuring hosts file
 
@@ -134,7 +134,7 @@ Place below content in the file `/etc/hosts`
 
     127.0.0.1    localhost
     ::1          localhost
-    127.0.1.1    excelsior.localdomain excelsior
+    127.0.1.1    titan.localdomain titan
 
 ### Installing network-related packages
 
