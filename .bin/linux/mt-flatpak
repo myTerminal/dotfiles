@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# TODO: Evaluate retiring in favor of /var/lib/flatpak/exports/bin/
+
 case "${1}" in
     i | install | a | add)
         # Install flatpak
@@ -7,8 +9,8 @@ case "${1}" in
 
         # Create symlink for direct launch
         echo "#!/usr/bin/env bash
-dbus-run-session flatpak run ${3} & disown" | sudo tee /usr/bin/${2}
-        sudo chmod 755 /usr/bin/${2}
+dbus-run-session flatpak run ${3} & disown" | sudo tee /usr/local/bin/${2}
+        sudo chmod 755 /usr/local/bin/${2}
 
         ;;
 
@@ -17,7 +19,7 @@ dbus-run-session flatpak run ${3} & disown" | sudo tee /usr/bin/${2}
         sudo flatpak remove -y ${3}
 
         # Remove symlink
-        sudo rm /usr/bin/${2}
+        sudo rm /usr/local/bin/${2}
         ;;
 
     *)
