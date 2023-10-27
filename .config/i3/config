@@ -349,6 +349,7 @@ bindsym $mod+Shift+comma exec flameshot gui
 bindsym $mod+Shift+period exec flameshot full -p ~/Desktop
 
 # Bind custom switch scripts
+bindsym $mod+Shift+w exec ~/.bin/linux/mt-set-random-wallpaper
 bindsym $mod+Shift+x exec ~/.bin/linux/mt-power-mode
 bindsym $mod+Shift+z exec ~/.bin/linux/mt-hardware
 
