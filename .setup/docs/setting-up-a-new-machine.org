@@ -43,6 +43,7 @@
   - Element/Schildi for Matrix
   - KeePass database as a key
 - Create maintenance tasks in Remember The Milk
+- Add entry in *machines* spreadsheet
 
 # Local Variables:
 # eval: (visual-line-mode)
