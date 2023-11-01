@@ -38,11 +38,11 @@
 - Verify reference of the machine at/under the following:
   - Home network as a new device
   - GitHub and GitLab (SSH keys)
+  - Syncthing as a node
   - Sync device for Brave
   - Element/Schildi for Matrix
-  - Syncthing as a node
-  - Remember The Milk for maintenance tasks
   - KeePass database as a key
+- Create maintenance tasks in Remember The Milk
 
 # Local Variables:
 # eval: (visual-line-mode)
