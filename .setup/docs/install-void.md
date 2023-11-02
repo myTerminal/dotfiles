@@ -87,7 +87,7 @@ Unmount the partition
 
 ### Setting `REPO` and `ARCH`
 
-    REPO=https://alpha.de.repo.voidlinux.org/current
+    REPO=https://repo-default.voidlinux.org/current
     ARCH=x86_64
 
 ### Bootstrapping a base-system
