@@ -14,6 +14,11 @@ sudo xbps-install -Sy tlp acpi_call-dkms powertop
 ~/.bin/linux/mt-battery-set-charge-thresholds
 sudo ln -s /etc/sv/tlp /var/service
 
+# Set up orientation sensors
+# TODO: Fix
+sudo xbps-install -Sy iio-sensor-proxy
+sudo ln -s /etv/sv/iio-sensor-proxy /var/service
+
 # Install Mesa Intel drivers
 . ~/.setup/hardware/void/other/mesa
 
