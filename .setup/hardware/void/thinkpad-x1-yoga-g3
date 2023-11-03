@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# This script is an add-on to `~/.setup/forge-config.lisp` containing
+# device-specific setup for 2018 Lenovo ThinkPad X1 Yoga Gen 3 and mostly follows
+# steps from https://wiki.archlinux.org/title/Lenovo_ThinkPad_X1_Yoga_(Gen_3)
+
+# Improve touchpad experience with xinput
+sudo xbps-install -Sy xinput # (Just in case)
+. ~/.setup/hardware/enable-libinput-events-for-touchpad
+. ~/.setup/hardware/configure-touchpad "SynPS/2 Synaptics TouchPad" 0.75
+
+# Install tlp and more for power management
+sudo xbps-install -Sy tlp acpi_call-dkms powertop
+~/.bin/linux/mt-battery-set-charge-thresholds
+sudo ln -s /etc/sv/tlp /var/service
+
+# Install Mesa Intel drivers
+. ~/.setup/hardware/void/other/mesa
+
+# Configure fingerprint sensor
+# TODO: Fix this
+. ~/.setup/hardware/configure-fingerprints
