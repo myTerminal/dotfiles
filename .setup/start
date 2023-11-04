@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+## Start forge with logs, using local config
+( cd ~/.forge; ./start debug ~/.setup/forge-config.lisp )
