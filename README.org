@@ -19,12 +19,6 @@ OR the lazy version
 
 For macOS, the shell needs to be changed from Zsh to Bash and there needs to be a ~sudo xcode-select --install~ before anything else.
 
-For legacy mode (soon to be deprecated), run the below:
-
-#+BEGIN_EXAMPLE
-/bin/bash -c "$(curl https://raw.githubusercontent.com/myTerminal/dotfiles/master/bootstrap-legacy)"
-#+END_EXAMPLE
-
 ** Setup
 
 Software setup for multiple operating platforms is included and it is performed if a known OS is detected.
