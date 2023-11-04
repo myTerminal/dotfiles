@@ -289,7 +289,12 @@ MOZ_USE_XINPUT2 DEFAULT=1
          "mkdir ~/_store"))
   )
  (
-  "Next steps depend on SSH keys and Syncthing setup."
+  "Start X11 to configure SSH keys and Syncthing"
+  t
+  (:all ("~/.scripts/linux/startup/cli && startx"))
+  )
+ (
+  "Next steps depend on SSH keys and Syncthing setup"
   t
   (:all ("echo \"Continuing...\""))
   )
