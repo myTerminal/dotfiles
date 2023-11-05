@@ -6,26 +6,32 @@
 # Prompt for a choice
 mt_response=$(echo -e "Auto (3840x2160)\nMedium (2560x1440)\nLow (1920x1080)\nPrimary => External\nExternal <= Primary" | ${mt_prompter})
 
+# Gather devices info
+xrandr_devices=$(xrandr)
+
+# Detect primary display
+primary_display=$(sbcl --script ~/.assets/parsers/xrandr-parser.lisp primary $(xrandr))
+
 # Execute the appropriate command based on choice
 case "${mt_response}" in
     "Auto (3840x2160)")
-        xrandr --output "eDP-1" --auto --output "HDMI-0" --off
+        xrandr --output "${primary_display}" --auto --output "HDMI-0" --off
         ;;
 
     "Medium (2560x1440)")
-        xrandr --output "eDP-1" --mode 2560x1440 --output "HDMI-0" --off
+        xrandr --output "${primary_display}" --mode 2560x1440 --output "HDMI-0" --off
         ;;
 
     "Low (1920x1080)")
-        xrandr --output "eDP-1" --mode 1920x1080 --output "HDMI-0" --off
+        xrandr --output "${primary_display}" --mode 1920x1080 --output "HDMI-0" --off
         ;;
 
     "Primary => External")
-        xrandr --output "eDP-1" --auto --output "HDMI-0" --auto --right-of "eDP-1"
+        xrandr --output "${primary_display}" --auto --output "HDMI-0" --auto --right-of "${primary_display}"
         ;;
 
     "External <= Primary")
-        xrandr --output "eDP-1" --auto --output "HDMI-0" --auto --left-of "eDP-1"
+        xrandr --output "${primary_display}" --auto --output "HDMI-0" --auto --left-of "${primary_display}"
         ;;
 
     *)
