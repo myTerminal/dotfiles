@@ -59,6 +59,12 @@ case "${mt_value=}" in
         ;;
 esac
 
+# Gather devices info
+xrandr_devices=$(xrandr)
+
+# Detect primary display
+primary_display=$(sbcl --script ~/.assets/parsers/xrandr-parser.lisp primary $(xrandr))
+
 # Set brightness
-xrandr --output "eDP1" --brightness ${mt_brightness}
+xrandr --output "${primary_display}" --brightness ${mt_brightness}
 echo "Brightness set to ${mt_brightness}"
