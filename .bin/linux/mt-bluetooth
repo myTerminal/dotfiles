@@ -7,7 +7,7 @@
 devices_result=$(bluetoothctl devices)
 
 # Get parsed options
-parsed_result=$(sbcl --script ~/.assets/bt-parser.lisp ${devices_result})
+parsed_result=$(sbcl --script ~/.assets/parsers/bt-parser.lisp ${devices_result})
 
 # Prompt for selection
 result=$(echo -e ${parsed_result}\\n[Disconnect] | ${mt_prompter})
