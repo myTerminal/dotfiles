@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Detect display and set prompter
+. ~/.assets/libs/bash/select-prompter
+
+# Prompt for a choice
+mt_response=$(echo -e "normal\nleft\nright\ninverted" | ${mt_prompter})
+
+# Gather devices info
+xrandr_devices=$(xrandr)
+
+# Detect primary display
+primary_display=$(sbcl --script ~/.assets/parsers/xrandr-parser.lisp primary $(xrandr))
+
+# Rotate the screen based on selection
+xrandr --output "${primary_display}" --rotate "${mt_response}"
