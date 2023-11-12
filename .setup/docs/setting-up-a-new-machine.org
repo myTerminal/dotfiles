@@ -42,7 +42,7 @@
   - Sync device for Brave
   - Element/Schildi for Matrix
   - KeePass database as a key
-- Create maintenance tasks in Remember The Milk
+- Create maintenance tasks in TickTick
 - Add entry in *machines* spreadsheet
 
 # Local Variables:

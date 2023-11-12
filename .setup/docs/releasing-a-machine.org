@@ -15,7 +15,7 @@ efibootmgr -Bb <four-digit-numeric-identifier>
   - Syncthing as a node
   - GitHub and GitLab (SSH keys)
   - Home network as a known device
-- Remove maintenance tasks from Remember The Milk
+- Remove maintenance tasks from TickTick
 - Update entry in *machines* spreadsheet
 
 # Local Variables:
