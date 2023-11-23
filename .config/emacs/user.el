@@ -11,4 +11,7 @@
                                         leuven)))
 (if (featurep 'zone-quotes) ; TODO: Fix
     (load "zone-quotes-masseffect"))
-
+(if (featurep 'perspective)
+    (customize-set-variable 'persp-state-default-file
+                            (concat "~/_store/Documents/"
+                                    "super-emacs-persp-session-file")))
