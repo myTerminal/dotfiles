@@ -9,6 +9,6 @@
                                         green-phosphor
                                         hemisu-dark
                                         leuven)))
-(if (featurep 'zone-quotes)
+(if (featurep 'zone-quotes) ; TODO: Fix
     (load "zone-quotes-masseffect"))
 
