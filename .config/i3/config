@@ -67,7 +67,7 @@ bindsym XF86AudioPrev exec clementine --previous
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty #i3-sensible-terminal
+bindsym $mod+Return exec qterminal
 
 # kill focused window
 bindsym $mod+Shift+q kill

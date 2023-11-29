@@ -11,7 +11,7 @@
 /.config/fish/*
 !/.config/fish/functions
 !/.config/fish/*.fish
-!/.config/kitty
+!/.config/qterminal.org
 !/.config/i3
 !/.config/rofi
 !/.config/emacs

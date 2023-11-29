@@ -64,7 +64,7 @@
   ("feh" (:mac))
   ("dmenu" (:mac))
   ("rofi" (:mac))
-  ("kitty" (:cask "alacritty"))
+  ("qterminal" (:cask "alacritty"))
   ("xsel" (:mac))
   ("udiskie" (:mac))
   ("gparted" (:mac))

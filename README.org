@@ -88,7 +88,7 @@ To start the setup, run the following command in a terminal running bash: (provi
 | Icon packs               | [[https://github.com/madmaxms/iconpack-obsidian][Obsidian]]                         | (native)                        |
 | Mouse cursor             | [[https://github.com/ful1e5/Bibata_Cursor][Bibata]]                           | (native)                        |
 | Lockscreen               | [[https://github.com/i3/i3lock][i3lock]], [[https://bitbucket.org/raymonad/xss-lock][xs-lock]]                  | (native)                        |
-| Terminal                 | [[https://github.com/kovidgoyal/kitty][kitty]]                            | [[https://support.apple.com/guide/terminal/welcome/mac][Terminal]] (native), [[https://github.com/alacritty/alacritty][Alacritty]]    |
+| Terminal                 | [[https://github.com/lxqt/qterminal][qterminal]]                        | [[https://support.apple.com/guide/terminal/welcome/mac][Terminal]] (native), [[https://github.com/alacritty/alacritty][Alacritty]]    |
 | Clipboard helper         | [[http://www.vergenet.net/~conrad/software/xsel][xsel]]                             | pbcopy/pbpaste (native)         |
 | Disk management          | [[https://github.com/coldfix/udiskie][udiskie]], [[https://gparted.org][GParted]]                 | [[https://support.apple.com/guide/disk-utility/welcome/mac][Disk Utility]] (native), [[https://mounty.app][Mounty]]   |
 | File managers            | [[https://www.linuxlinks.com/Thunar][thunar]] (with [[https://wiki.gnome.org/Projects/gvfs][gvfs]])               | [[https://support.apple.com/en-us/HT201732][Finder]] (native)                 |
