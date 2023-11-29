@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# This script is an add-on to `~/.setup/forge-config.lisp` containing
+# device-specific setup for 2007 Lenovo ThinkPad X61s and mostly follows steps
+# from https://wiki.archlinux.org/title/Laptop/Lenovo
+
+# Set display scaling for the smaller screen
+. ~/.setup/hardware/configure-dpi 72
+
+# Install tlp and more for power management
+sudo xbps-install -Sy tlp acpi_call-dkms tp_smapi-dkms powertop
+~/.bin/linux/mt-battery-set-charge-thresholds
+sudo ln -s /etc/sv/tlp /var/service
+
+# Install Mesa Intel drivers
+. ~/.setup/hardware/void/other/mesa
+
+# Configure fingerprint sensor
+. ~/.setup/hardware/configure-fingerprints
