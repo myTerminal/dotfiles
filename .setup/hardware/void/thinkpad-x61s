@@ -13,4 +13,5 @@ sudo xbps-install -Sy tlp acpi_call-dkms tp_smapi-dkms powertop
 sudo ln -s /etc/sv/tlp /var/service
 
 # Configure fingerprint sensor
+# TODO: Fix
 . ~/.setup/hardware/configure-fingerprints

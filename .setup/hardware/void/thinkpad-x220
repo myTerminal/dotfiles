@@ -21,4 +21,5 @@ sudo ln -s /etc/sv/tlp /var/service
 . ~/.setup/hardware/void/other/mesa
 
 # Configure fingerprint sensor
+# TODO: Fix
 . ~/.setup/hardware/configure-fingerprints
