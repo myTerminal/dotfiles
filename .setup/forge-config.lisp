@@ -64,7 +64,7 @@
   ("feh" (:mac))
   ("dmenu" (:mac))
   ("rofi" (:mac))
-  ("qterminal" (:cask "alacritty"))
+  ("rxvt-unicode" (:cask "alacritty"))
   ("xsel" (:mac))
   ("udiskie" (:mac))
   ("gparted" (:mac))
