@@ -1,4 +1,5 @@
 xrdb -merge ~/.Xresources
+xrdb -merge ~/.Xresources_custom
 
 ~/.scripts/linux/startup/desktop/run
 
