@@ -165,63 +165,63 @@
  (
   "Install Graphical Theming: GTK theme"
   t
-  (:all ("mkdir -p ~/.local/share/themes"
-         "git clone https://www.opencode.net/ju1464/Bazik.git ~/_temp"
-         "mv ~/_temp/GTK-Gnome/Bazik* ~/.local/share/themes/"
-         "rm -rf ~/_temp"))
+  (:void ("mkdir -p ~/.local/share/themes"
+          "git clone https://www.opencode.net/ju1464/Bazik.git ~/_temp"
+          "mv ~/_temp/GTK-Gnome/Bazik* ~/.local/share/themes/"
+          "rm -rf ~/_temp"))
   )
  (
   "Install Graphical Theming: Icon theme"
   t
-  (:all ("mkdir -p ~/.local/share/icons"
-         "git clone https://github.com/madmaxms/iconpack-obsidian ~/_temp"
-         "mv ~/_temp/Obsidian* ~/.local/share/icons/"
-         "rm -rf ~/_temp"))
+  (:void ("mkdir -p ~/.local/share/icons"
+          "git clone https://github.com/madmaxms/iconpack-obsidian ~/_temp"
+          "mv ~/_temp/Obsidian* ~/.local/share/icons/"
+          "rm -rf ~/_temp"))
   )
  (
   "Install Graphical Theming: Cursor theme"
   t
-  (:all ("mkdir -p ~/.local/share/icons"
-         "mkdir ~/_temp"
-         "( cd ~/_temp; wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v1.1.1/Bibata.tar.gz; tar -xvf Bibata.tar.gz )"
-         "mv ~/_temp/Bibata-* ~/.local/share/icons"
-         "rm -rf ~/_temp"))
+  (:void ("mkdir -p ~/.local/share/icons"
+          "mkdir ~/_temp"
+          "( cd ~/_temp; wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v1.1.1/Bibata.tar.gz; tar -xvf Bibata.tar.gz )"
+          "mv ~/_temp/Bibata-* ~/.local/share/icons"
+          "rm -rf ~/_temp"))
   )
  (
   "Install Fonts"
   t
-  (:all ("mkdir -p ~/.local/share/fonts"
-         "git clone https://github.com/FortAwesome/Font-Awesome ~/_temp"
-         "mv ~/_temp/otfs ~/.local/share/fonts/FontAwesome"
-         "rm -rf ~/_temp"
-         "mkdir -p ~/.local/share/fonts"
-         "git clone https://github.com/googlefonts/opensans ~/_temp"
-         "mv ~/_temp/fonts/ttf ~/.local/share/fonts/OpenSans"
-         "rm -rf ~/_temp"
-         "mkdir -p ~/.local/share/fonts"
-         "git clone https://github.com/googlefonts/inconsolata ~/_temp"
-         "mv ~/_temp/fonts/ttf ~/.local/share/fonts/Inconsolata"
-         "rm -rf ~/_temp"
-         "mkdir -p ~/.local/share/fonts"
-         "git clone https://github.com/googlefonts/RobotoMono ~/_temp"
-         "mv ~/_temp/fonts/ttf ~/.local/share/fonts/RobotoMono"
-         "rm -rf ~/_temp"
-         "mkdir -p ~/.local/share/fonts"
-         "git clone https://github.com/grays/droid-fonts ~/_temp"
-         "mv ~/_temp/droid ~/.local/share/fonts/Droid"
-         "rm -rf ~/_temp"
-         "mkdir -p ~/.local/share/fonts"
-         "mkdir ~/_temp"
-         "curl --fail --location --show-error https://github.com/tonsky/FiraCode/releases/download/5.2/Fira_Code_v5.2.zip --output ~/_temp/Fira_Code_v5.2.zip"
-         "unzip -o -q -d ~/_temp ~/_temp/Fira_Code_v5.2.zip"
-         "mv ~/_temp/ttf ~/.local/share/fonts/FiraCode"
-         "rm -rf ~/_temp"
-         "mkdir -p ~/.local/share/fonts"
-         "mkdir ~/_temp"
-         "( cd ~/_temp; wget https://github.com/liberationfonts/liberation-fonts/files/6418984/liberation-fonts-ttf-2.1.4.tar.gz; tar -xvf liberation-fonts-ttf-2.1.4.tar.gz )"
-         "mkdir ~/.local/share/fonts/Liberation"
-         "mv ~/_temp/liberation-fonts-ttf-2.1.4/Liberation*  ~/.local/share/fonts/Liberation/"
-         "rm -rf ~/_temp"))
+  (:void ("mkdir -p ~/.local/share/fonts"
+          "git clone https://github.com/FortAwesome/Font-Awesome ~/_temp"
+          "mv ~/_temp/otfs ~/.local/share/fonts/FontAwesome"
+          "rm -rf ~/_temp"
+          "mkdir -p ~/.local/share/fonts"
+          "git clone https://github.com/googlefonts/opensans ~/_temp"
+          "mv ~/_temp/fonts/ttf ~/.local/share/fonts/OpenSans"
+          "rm -rf ~/_temp"
+          "mkdir -p ~/.local/share/fonts"
+          "git clone https://github.com/googlefonts/inconsolata ~/_temp"
+          "mv ~/_temp/fonts/ttf ~/.local/share/fonts/Inconsolata"
+          "rm -rf ~/_temp"
+          "mkdir -p ~/.local/share/fonts"
+          "git clone https://github.com/googlefonts/RobotoMono ~/_temp"
+          "mv ~/_temp/fonts/ttf ~/.local/share/fonts/RobotoMono"
+          "rm -rf ~/_temp"
+          "mkdir -p ~/.local/share/fonts"
+          "git clone https://github.com/grays/droid-fonts ~/_temp"
+          "mv ~/_temp/droid ~/.local/share/fonts/Droid"
+          "rm -rf ~/_temp"
+          "mkdir -p ~/.local/share/fonts"
+          "mkdir ~/_temp"
+          "curl --fail --location --show-error https://github.com/tonsky/FiraCode/releases/download/5.2/Fira_Code_v5.2.zip --output ~/_temp/Fira_Code_v5.2.zip"
+          "unzip -o -q -d ~/_temp ~/_temp/Fira_Code_v5.2.zip"
+          "mv ~/_temp/ttf ~/.local/share/fonts/FiraCode"
+          "rm -rf ~/_temp"
+          "mkdir -p ~/.local/share/fonts"
+          "mkdir ~/_temp"
+          "( cd ~/_temp; wget https://github.com/liberationfonts/liberation-fonts/files/6418984/liberation-fonts-ttf-2.1.4.tar.gz; tar -xvf liberation-fonts-ttf-2.1.4.tar.gz )"
+          "mkdir ~/.local/share/fonts/Liberation"
+          "mv ~/_temp/liberation-fonts-ttf-2.1.4/Liberation*  ~/.local/share/fonts/Liberation/"
+          "rm -rf ~/_temp"))
   )
  (
   "Set up pipewire with wireplumber and pipewire-pulse"
@@ -257,12 +257,12 @@
  (
   "Perform visual tweaks (non-working)"
   t
-  (:all ("wget -O - https://github.com/shvchk/fallout-grub-theme/raw/master/install.sh | bash"))
+  (:void ("wget -O - https://github.com/shvchk/fallout-grub-theme/raw/master/install.sh | bash"))
   )
  (
   "Enable touch scrolling for Firefox"
   t
-  (:all ("echo \"
+  (:void ("echo \"
 MOZ_USE_XINPUT2 DEFAULT=1
 \" | sudo tee -a /etc/security/pam_env.conf"))
   )
@@ -298,7 +298,7 @@ MOZ_USE_XINPUT2 DEFAULT=1
  (
   "Start X11 to configure SSH keys and Syncthing"
   t
-  (:all ("~/.scripts/linux/startup/cli && startx"))
+  (:void ("~/.scripts/linux/startup/cli && startx"))
   )
  (
   "Next steps depend on SSH keys and Syncthing setup"
@@ -346,8 +346,8 @@ MOZ_USE_XINPUT2 DEFAULT=1
  (
   "Set Brave as the default web-browser"
   t
-  (:all ("sudo cp ~/.assets/brave.desktop /usr/share/applications"
-         "xdg-settings set default-web-browser brave.desktop"))
+  (:void ("sudo cp ~/.assets/brave.desktop /usr/share/applications"
+          "xdg-settings set default-web-browser brave.desktop"))
   )
  (
   "Tag machine with ~/.mt-tag"
