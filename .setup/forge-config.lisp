@@ -231,6 +231,12 @@
           "sudo ln -s /usr/share/examples/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/"))
   )
  (
+  "Set up clipboard extension for rxvt"
+  t
+  (:void ("sudo xbps-install -Sy xclip"
+          "sudo wget \"https://pastebin.com/raw/QHk1NyPS\" -O /usr/lib/urxvt/perl/clipboard"))
+  )
+ (
   "Set up peripheral drivers"
   t
   (:void ("sudo xbps-install -Sy razergenie openrazer-meta"
