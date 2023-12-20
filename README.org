@@ -126,7 +126,7 @@ To start the setup, run the following command in a terminal running bash: (provi
 | Startup disk creators    | [[https://www.balena.io/etcher][balenaEtcher]]                     | [[https://www.balena.io/etcher][balenaEtcher]]                    |
 | Gaming clients           | [[https://store.steampowered.com][Steam]], [[https://lutris.net][lutris]], [[https://www.gamehub.gg][GameHub]]           | [[https://store.steampowered.com][Steam]], [[https://www.origin.com][Origin]], [[https://www.playstation.com/en-us/explore/ps4/remote-play][Sony Remote Play]] |
 | Razer software           | [[https://openrazer.github.io/][OpenRazer]], [[https://github.com/z3ntu/RazerGenie][RazerGenie]]            | [[https://www.razer.com/synapse-3][Razer Synapse]]                   |
-| Misc                     | [[https://github.com/debauchee/barrier][barrier]]                          | [[https://github.com/debauchee/barrier][barrier]]                         |
+| Misc                     | [[https://github.com/debauchee/barrier][barrier]], [[https://github.com/flipperdevices/qFlipper][qFlipper]]                | [[https://github.com/debauchee/barrier][barrier]], [[https://github.com/flipperdevices/qFlipper][qFlipper]]               |
 
 *** Fonts
 

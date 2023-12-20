@@ -117,6 +117,7 @@
   ("sony-remote-play" (:void) (:cask "sony-ps4-remote-play"))
   ("razer-synapse" (:void) (:cask "razer-synapse"))
   ("barrier" (:cask "barrier"))
+  ("qFlipper" (:flatpak ("one.flipperzero.qFlipper" "qFlipper")) (:cask "qflipper"))
   ("font-open-sans" (:void) (:cask "font-open-sans"))
   ("font-inconsolata" (:void) (:cask "font-inconsolata"))
   ("font-liberation" (:void) (:cask "font-liberation"))
@@ -127,7 +128,8 @@
   "Install flatpak packages the conventional way"
   nil
   (:void ("~/.bin/linux/mt-flatpak install postman com.getpostman.Postman"
-          "~/.bin/linux/mt-flatpak install schildi chat.schildi.desktop"))
+          "~/.bin/linux/mt-flatpak install schildi chat.schildi.desktop"
+          "~/.bin/linux/mt-flatpak install qFlipper one.flipperzero.qFlipper"))
   )
  (
   "Enable hidden items in Finder"
