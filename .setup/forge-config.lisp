@@ -21,7 +21,6 @@
   "make"
   "git"
   "tig"
-  "ranger"
   "rsync"
   ("zip" (:mac))
   ("unzip" (:mac))

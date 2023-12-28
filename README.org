@@ -52,7 +52,7 @@ To start the setup, run the following command in a terminal running bash: (provi
 | Spell checker         | [[http://aspell.net][Aspell]]                                                | [[http://aspell.net][Aspell]]                        |
 | GNU Make              | [[https://www.gnu.org/software/make][make]]                                                  | [[https://www.gnu.org/software/make][make]]                          |
 | SCM                   | [[https://git-scm.com][Git]], [[https://github.com/jonas/tig][Tig]]                                              | [[https://git-scm.com][Git]]*, [[https://github.com/jonas/tig][Tig]]                     |
-| File manager          | [[https://ranger.github.io][ranger]]                                                | [[https://ranger.github.io][ranger]]                        |
+| File manager          | --                                                    | --                            |
 | File sync             | [[https://rsync.samba.org][rsync]]                                                 | [[https://rsync.samba.org][rsync]]                         |
 | Archive manager       | [[http://infozip.sourceforge.net/Zip.html][zip]], [[http://infozip.sourceforge.net/UnZip.html][unzip]]                                            | (native)                      |
 | Process management    | [[https://github.com/aristocratos/btop][btop]], [[https://gitlab.com/psmisc/psmisc][psmisc]]                                          | [[https://github.com/aristocratos/btop][btop]]                          |
