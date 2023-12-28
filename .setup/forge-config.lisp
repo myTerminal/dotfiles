@@ -35,7 +35,6 @@
   ("rustup" (:brew "rustup-init"))
   ("brightnessctl" (:mac))
   ("acpi" (:mac))
-  ("numlockx" (:mac))
   ("fprintd" (:mac))
   ("chrony" (:mac))
   ("btrfs-progs" (:mac))
@@ -50,8 +49,9 @@
   "curl"
   "avahi"
   ("openssh" (:mac))
-  ("xorg" (:mac))
   ("xdg-utils" (:mac))
+  ("xorg" (:mac))
+  ("numlockx" (:mac))
   ("sct" (:mac))
   ("onboard" (:mac))
   ("picom" (:mac))
