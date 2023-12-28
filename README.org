@@ -53,7 +53,6 @@ To start the setup, run the following command in a terminal running bash: (provi
 | GNU Make              | [[https://www.gnu.org/software/make][make]]                                                  | [[https://www.gnu.org/software/make][make]]                          |
 | SCM                   | [[https://git-scm.com][Git]], [[https://github.com/jonas/tig][Tig]]                                              | [[https://git-scm.com][Git]]*, [[https://github.com/jonas/tig][Tig]]                     |
 | File manager          | --                                                    | --                            |
-| File sync             | [[https://rsync.samba.org][rsync]]                                                 | [[https://rsync.samba.org][rsync]]                         |
 | Archive manager       | [[http://infozip.sourceforge.net/Zip.html][zip]], [[http://infozip.sourceforge.net/UnZip.html][unzip]]                                            | (native)                      |
 | Process management    | [[https://github.com/aristocratos/btop][btop]], [[https://gitlab.com/psmisc/psmisc][psmisc]]                                          | [[https://github.com/aristocratos/btop][btop]]                          |
 | Disk management       | [[https://wiki.archlinux.org/index.php/Udisks][udisks]]                                                | [[https://wiki.archlinux.org/index.php/Udisks][udisks]]                        |

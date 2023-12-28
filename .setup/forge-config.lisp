@@ -21,7 +21,6 @@
   "make"
   "git"
   "tig"
-  "rsync"
   ("zip" (:mac))
   ("unzip" (:mac))
   "btop"
