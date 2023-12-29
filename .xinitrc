@@ -5,7 +5,8 @@ xrdb -merge ~/.Xresources_custom
 
 case ${2} in
     alternate)
-        exec dbus-run-session xfce4-session
+        # TODO: Use for alternate desktop
+        echo "Not implemented!"
         ;;
 
     *)
