@@ -58,7 +58,6 @@
   ("i3" (:xbps "i3" "i3status" "i3lock") (:mac))
   ("xss-lock" (:mac))
   ("feh" (:mac))
-  ("dmenu" (:mac))
   ("rofi" (:mac))
   ("rxvt-unicode" (:cask "alacritty"))
   ("xsel" (:mac))
