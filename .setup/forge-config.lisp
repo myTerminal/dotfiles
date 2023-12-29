@@ -74,7 +74,6 @@
   ("pcloud" (:void) (:mac))
   ("transmission" (:xbps "transmission-gtk") (:cask "transmission"))
   ("postman" (:flatpak ("com.getpostman.Postman" "postman")) (:cask "postman"))
-  ("nomachine" (:void) (:cask "nomachine"))
   ("virt-manager" (:xbps "qemu" "virt-manager"))
   ("libreoffice" (:cask "libreoffice"))
   ("blueman" (:mac))
