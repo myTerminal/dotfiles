@@ -110,7 +110,6 @@
   ("origin" (:void) (:cask "origin"))
   ("gamehub" (:mac))
   ("sony-remote-play" (:void) (:cask "sony-ps4-remote-play"))
-  ("razer-synapse" (:void) (:cask "razer-synapse"))
   ("barrier" (:cask "barrier"))
   ("qFlipper" (:flatpak ("one.flipperzero.qFlipper" "qFlipper")) (:cask "qflipper"))
   ("font-open-sans" (:void) (:cask "font-open-sans"))
@@ -233,12 +232,6 @@
   (:void ("sudo xbps-install -Sy xclip"
           "sudo wget \"https://pastebin.com/raw/QHk1NyPS\" -O /usr/lib/urxvt/perl/clipboard"
           "sudo wget \"https://raw.githubusercontent.com/simmel/urxvt-resize-font/master/resize-font\" -O /usr/lib/urxvt/perl/resize-font"))
-  )
- (
-  "Set up peripheral drivers"
-  t
-  (:void ("sudo xbps-install -Sy razergenie openrazer-meta"
-          "sudo gpasswd -a $USER plugdev"))
   )
  (
   "Set up startup services"
