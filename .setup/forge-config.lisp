@@ -75,7 +75,6 @@
   ("transmission" (:xbps "transmission-gtk") (:cask "transmission"))
   ("postman" (:flatpak ("com.getpostman.Postman" "postman")) (:cask "postman"))
   ("nomachine" (:void) (:cask "nomachine"))
-  ("diffmerge" (:void) (:cask "diffmerge"))
   ("virt-manager" (:xbps "qemu" "virt-manager"))
   ("libreoffice" (:cask "libreoffice"))
   ("blueman" (:mac))
