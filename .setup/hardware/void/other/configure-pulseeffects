@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+sudo xbps-install -Sy pulseeffects-legacy
+pulseeffects
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/pulseeffects/install.sh)"

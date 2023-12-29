@@ -24,9 +24,7 @@ ctl.!default {
 " > .asoundrc
 
 # Enable Dolby Atmos Effect through pulseeffects
-sudo xbps-install -Sy pulseeffects-legacy
-pulseeffects
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/pulseeffects/install.sh)"
+. ~/.setup/hardware/void/other/configure-pulseeffects
 
 # Improve touchpad experience for xorg
 . ~/.setup/hardware/configure-touchpad-for-xorg "Synaptics TM3625-010" 1.0
