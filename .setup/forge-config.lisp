@@ -102,7 +102,6 @@
   ("origin" (:void) (:cask "origin"))
   ("gamehub" (:mac))
   ("sony-remote-play" (:void) (:cask "sony-ps4-remote-play"))
-  ("barrier" (:cask "barrier"))
   ("qFlipper" (:flatpak ("one.flipperzero.qFlipper" "qFlipper")) (:cask "qflipper"))
   ("font-open-sans" (:void) (:cask "font-open-sans"))
   ("font-inconsolata" (:void) (:cask "font-inconsolata"))

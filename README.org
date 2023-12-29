@@ -117,7 +117,7 @@ To start the setup, run the following command in a terminal running bash: (provi
 | Keystroke echoing tool   | [[https://github.com/scottkirkwood/key-mon][Key-mon]]                          | [[https://github.com/keycastr/keycastr][keycastr]]                        |
 | Startup disk creators    | [[https://www.balena.io/etcher][balenaEtcher]]                     | [[https://www.balena.io/etcher][balenaEtcher]]                    |
 | Gaming clients           | [[https://store.steampowered.com][Steam]], [[https://lutris.net][lutris]], [[https://www.gamehub.gg][GameHub]]           | [[https://store.steampowered.com][Steam]], [[https://www.origin.com][Origin]], [[https://www.playstation.com/en-us/explore/ps4/remote-play][Sony Remote Play]] |
-| Misc                     | [[https://github.com/debauchee/barrier][barrier]], [[https://github.com/flipperdevices/qFlipper][qFlipper]]                | [[https://github.com/debauchee/barrier][barrier]], [[https://github.com/flipperdevices/qFlipper][qFlipper]]               |
+| Misc                     | [[https://github.com/flipperdevices/qFlipper][qFlipper]]                         | [[https://github.com/flipperdevices/qFlipper][qFlipper]]                        |
 
 *** Fonts
 
