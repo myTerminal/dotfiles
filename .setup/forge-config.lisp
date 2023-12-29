@@ -97,7 +97,6 @@
   ("vlc" (:cask "vlc"))
   ("handbrake" (:cask "handbrake"))
   ("blender" (:cask "blender"))
-  "youtube-dl"
   ("yt-dlp" (:void) (:mac))
   ("kodi" (:cask "kodi"))
   ("flameshot" (:mac))
