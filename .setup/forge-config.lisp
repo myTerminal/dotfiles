@@ -260,7 +260,7 @@
  (
   "Install global NPM packages"
   t
-  (:all ("sudo npm install -g lite-server nano-server myterminal-cli stay-with-me git-getter re-write"))
+  (:all ("sudo npm install -g lite-server nano-server stay-with-me git-getter re-write"))
   )
  (
   "Create custom Lisp parser"
