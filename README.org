@@ -98,7 +98,7 @@ To start the setup, run the following command in a terminal running bash: (provi
 | VPN client               |                                  | [[https://www.tunnelbear.com][TunnelBear VPN]]                  |
 | Email clients            | [[https://www.thunderbird.net][Thunderbird]]                      | [[https://support.apple.com/en-us/HT204093][Mail]] (native)                   |
 | Messengers               | [[https://schildi.chat][Schildi]]                          | [[https://schildi.chat][Schildi]]                         |
-| Cloud storage clients    | [[https://www.pcloud.com][pCloud]]                           | [[https://www.google.com/drive/download/backup-and-sync][Google Backup And Sync]], [[https://www.pcloud.com][pCloud]]  |
+| Cloud storage clients    | [[https://www.pcloud.com][pCloud]]                           | [[https://www.pcloud.com][pCloud]]                          |
 | Torrent client           | [[https://transmissionbt.com][Transmission]]                     | [[https://transmissionbt.com][Transmission]]                    |
 | REST client              |                                  | [[https://www.postman.com][Postman]]                         |
 | Remote access manager    |                                  | [[https://www.nomachine.com][NoMachine]]                       |

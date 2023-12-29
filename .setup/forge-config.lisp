@@ -75,7 +75,6 @@
   ("tunnelbear" (:void) (:cask "tunnelbear"))
   ("thunderbird" (:mac))
   ("schildi" (:flatpak ("chat.schildi.desktop" "schildi")) (:cask "schildichat"))
-  ("google-backup-and-sync" (:void) (:cask "google-backup-and-sync"))
   ("pcloud" (:void) (:mac))
   ("transmission" (:xbps "transmission-gtk") (:cask "transmission"))
   ("postman" (:flatpak ("com.getpostman.Postman" "postman")) (:cask "postman"))
