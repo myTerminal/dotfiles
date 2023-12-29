@@ -67,8 +67,6 @@
   ("gvfs" (:mac))
   ("syncthing" (:xbps "syncthing-gtk"))
   ("brave" (:void) (:cask "brave-browser"))
-  ("ticktick" (:void) (:cask "ticktick"))
-  ("dynalist" (:void) (:cask "dynalist"))
   ("keepassxc" (:cask "keepasxc"))
   ("authy" (:void) (:cask "authy"))
   ("tunnelbear" (:void) (:cask "tunnelbear"))
