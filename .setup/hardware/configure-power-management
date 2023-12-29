@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Install required packages
+sudo xbps-install -Sy $@
+
+# Set battery charge/discharge thresholds
+~/.bin/linux/mt-battery-set-charge-thresholds
+
+# Start tlp service
+sudo ln -s /etc/sv/tlp /var/service

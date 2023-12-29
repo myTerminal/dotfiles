@@ -8,9 +8,7 @@
 . ~/.setup/hardware/configure-dpi 72
 
 # Install tlp and more for power management
-sudo xbps-install -Sy tlp acpi_call-dkms tp_smapi-dkms powertop
-~/.bin/linux/mt-battery-set-charge-thresholds
-sudo ln -s /etc/sv/tlp /var/service
+. ~/.setup/hardware/configure-power-management tlp acpi_call-dkms tp_smapi-dkms powertop
 
 # Configure fingerprint sensor
 # TODO: Fix

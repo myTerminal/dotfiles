@@ -32,9 +32,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-
 . ~/.setup/hardware/configure-touchpad-for-xorg "Synaptics TM3625-010" 1.0
 
 # Install tlp and more for power management
-sudo xbps-install -Sy tlp acpi_call-dkms powertop
-~/.bin/linux/mt-battery-set-charge-thresholds
-sudo ln -s /etc/sv/tlp /var/service
+. ~/.setup/hardware/configure-power-management tlp acpi_call-dkms powertop
 
 # TODO: Fix display scaling
 
