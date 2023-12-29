@@ -7,9 +7,7 @@
 # Set display scaling for the smaller screen
 . ~/.setup/hardware/configure-dpi 82
 
-# Improve touchpad experience with xinput
-sudo xbps-install -Sy xinput # (Just in case)
-. ~/.setup/hardware/enable-libinput-events-for-touchpad
+# Improve touchpad experience for xorg
 . ~/.setup/hardware/configure-touchpad-for-xorg "SynPS/2 Synaptics TouchPad" 0.5
 
 # Install tlp and more for power management

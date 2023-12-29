@@ -1,5 +1,20 @@
 #!/usr/bin/env bash
 
+# Install xinput (just in case)
+sudo xbps-install -Sy xinput
+
+# Enable libinput events for touchpad
+sudo mkdir /etc/X11/xorg.conf.d
+echo "
+Section \"InputClass\"
+    Identifier \"libinput touchpad catchall\"
+    MatchIsTouchpad \"on\"
+    MatchDevicePath \"/dev/input/event*\"
+    Driver \"libinput\"
+EndSection
+" | sudo tee /etc/X11/xorg.conf.d/40-libinput.conf
+
+# Generate tweaks script
 echo "
 xinput set-prop '${1}' 'libinput Accel Speed' ${2}
 xinput set-prop '${1}' 'libinput Click Method Enabled' 0 1

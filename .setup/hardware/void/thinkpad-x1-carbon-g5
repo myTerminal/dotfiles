@@ -4,9 +4,7 @@
 # device-specific setup for 2017 Lenovo ThinkPad X1 Carbon and mostly follows
 # steps from https://wiki.archlinux.org/title/Laptop/Lenovo
 
-# Improve touchpad experience with xinput
-sudo xbps-install -Sy xinput # (Just in case)
-. ~/.setup/hardware/enable-libinput-events-for-touchpad
+# Improve touchpad experience for xorg
 . ~/.setup/hardware/configure-touchpad-for-xorg "Synaptics TM3289-002" 0.75
 
 # Install tlp and more for power management
