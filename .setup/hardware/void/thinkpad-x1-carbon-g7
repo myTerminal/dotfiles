@@ -11,7 +11,7 @@ sudo xbps-install -Sy sof-firmware
 . ~/.setup/hardware/configure-touchpad-for-xorg "SYNA8004:00 06CB:CD8B Touchpad" 0.75
 
 # Install tlp and more for power management
-. ~/.setup/hardware/configure-power-management tlp acpi_call-dkms powertop
+. ~/.setup/hardware/void/other/configure-power-management tlp acpi_call-dkms powertop
 
 # Configure fingerprint sensor
 . ~/.setup/hardware/configure-fingerprints

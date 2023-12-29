@@ -8,7 +8,7 @@
 . ~/.setup/hardware/configure-dpi 72
 
 # Install tlp and more for power management
-. ~/.setup/hardware/configure-power-management tlp acpi_call-dkms tp_smapi-dkms powertop
+. ~/.setup/hardware/void/other/configure-power-management tlp acpi_call-dkms tp_smapi-dkms powertop
 
 # Configure fingerprint sensor
 # TODO: Fix

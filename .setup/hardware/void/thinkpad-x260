@@ -13,7 +13,7 @@
 . ~/.setup/hardware/configure-touchpad-for-xorg "SynPS/2 Synaptics TouchPad" 0.5
 
 # Install tlp and more for power management
-. ~/.setup/hardware/configure-power-management tlp acpi_call-dkms powertop
+. ~/.setup/hardware/void/other/configure-power-management tlp acpi_call-dkms powertop
 
 # Configure fingerprint sensor
 . ~/.setup/hardware/configure-fingerprints
