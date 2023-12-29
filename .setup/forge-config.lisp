@@ -93,7 +93,6 @@
   ("pipewire" (:xbps "pipewire" "alsa-pipewire" "libspa-bluetooth") (:mac))
   ("easyeffects" (:mac))
   ("audacity" (:mac))
-  ("easytag" (:cask "kid3"))
   ("vlc" (:cask "vlc"))
   ("handbrake" (:cask "handbrake"))
   ("blender" (:cask "blender"))
