@@ -55,6 +55,10 @@ bindsym XF86AudioPrev exec clementine --previous
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# move tiling windows via drag & drop by left-clicking into the title bar,
+# or left-clicking anywhere into the window while holding the floating modifier.
+tiling_drag modifier titlebar
+
 # start a terminal
 bindsym $mod+Return exec urxvt
 
