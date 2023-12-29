@@ -100,7 +100,7 @@ To start the setup, run the following command in a terminal running bash: (provi
 | Messengers               | [[https://schildi.chat][Schildi]]                          | [[https://schildi.chat][Schildi]]                         |
 | Cloud storage clients    | [[https://www.pcloud.com][pCloud]]                           | [[https://www.pcloud.com][pCloud]]                          |
 | Torrent client           | [[https://transmissionbt.com][Transmission]]                     | [[https://transmissionbt.com][Transmission]]                    |
-| REST client              |                                  | [[https://www.postman.com][Postman]]                         |
+| REST client              | [[https://www.postman.com][Postman]]                          | [[https://www.postman.com][Postman]]                         |
 | Remote access manager    |                                  | [[https://www.nomachine.com][NoMachine]]                       |
 | File diff tool           |                                  | [[https://sourcegear.com/diffmerge][DiffMerge]]                       |
 | Virtualization           | [[https://virt-manager.org][Virt-Manager]]                     | [[https://www.virtualbox.org][VirtualBox]]                      |
