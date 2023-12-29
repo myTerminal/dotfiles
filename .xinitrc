@@ -10,6 +10,6 @@ case ${2} in
         ;;
 
     *)
-        exec dbus-run-session i3
+        exec dbus-run-session i3 -c ~/.config/wm/i3
         ;;
 esac

@@ -13,7 +13,7 @@
 /.config/fish/*
 !/.config/fish/functions
 !/.config/fish/*.fish
-!/.config/i3
+!/.config/wm
 !/.config/rofi
 !/.config/emacs
 /.config/emacs/*
