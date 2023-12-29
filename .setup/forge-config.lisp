@@ -57,7 +57,6 @@
   ("picom" (:mac))
   ("i3" (:xbps "i3" "i3status" "i3lock") (:mac))
   ("xss-lock" (:mac))
-  ("edex-ui" (:void) (:cask "edex-ui"))
   ("feh" (:mac))
   ("dmenu" (:mac))
   ("rofi" (:mac))
