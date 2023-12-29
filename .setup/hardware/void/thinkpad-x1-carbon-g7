@@ -10,7 +10,7 @@ sudo xbps-install -Sy sof-firmware
 # Improve touchpad experience with xinput
 sudo xbps-install -Sy xinput # (Just in case)
 . ~/.setup/hardware/enable-libinput-events-for-touchpad
-. ~/.setup/hardware/configure-touchpad "SYNA8004:00 06CB:CD8B Touchpad" 0.75
+. ~/.setup/hardware/configure-touchpad-for-xorg "SYNA8004:00 06CB:CD8B Touchpad" 0.75
 
 # Install tlp and more for power management
 sudo xbps-install -Sy tlp acpi_call-dkms powertop

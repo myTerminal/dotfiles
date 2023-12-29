@@ -12,7 +12,7 @@
 # Improve touchpad experience with xinput
 sudo xbps-install -Sy xinput # (Just in case)
 . ~/.setup/hardware/enable-libinput-events-for-touchpad
-. ~/.setup/hardware/configure-touchpad "SynPS/2 Synaptics TouchPad" 0.5
+. ~/.setup/hardware/configure-touchpad-for-xorg "SynPS/2 Synaptics TouchPad" 0.5
 
 # Install tlp and more for power management
 sudo xbps-install -Sy tlp acpi_call-dkms powertop
