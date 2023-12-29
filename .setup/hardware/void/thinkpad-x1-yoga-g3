@@ -4,6 +4,9 @@
 # device-specific setup for 2018 Lenovo ThinkPad X1 Yoga Gen 3 and mostly follows
 # steps from https://wiki.archlinux.org/title/Lenovo_ThinkPad_X1_Yoga_(Gen_3)
 
+# Fix audio input and output
+sudo xbps-install -Sy alsa-firmware sof-firmware
+
 # Improve touchpad experience for xorg
 . ~/.setup/hardware/configure-touchpad-for-xorg "SynPS/2 Synaptics TouchPad" 0.75
 
