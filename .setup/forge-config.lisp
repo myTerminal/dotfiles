@@ -242,13 +242,6 @@
   (:void ("wget -O - https://github.com/shvchk/fallout-grub-theme/raw/master/install.sh | bash"))
   )
  (
-  "Enable touch scrolling for Firefox"
-  t
-  (:void ("echo \"
-MOZ_USE_XINPUT2 DEFAULT=1
-\" | sudo tee -a /etc/security/pam_env.conf"))
-  )
- (
   "Install power-guard"
   t
   (:void ("git clone https://github.com/myTerminal/power-guard.git /tmp/power-guard"
