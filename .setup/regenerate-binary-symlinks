@@ -16,8 +16,6 @@
     ("unetbootin" . "*unetbootin-linux64-*.bin")
     ("brave-browser" . "*brave-browser/brave")
     ("zulip-desktop" . "*Zulip-*-x86_64.AppImage")
-    ("wire-desktop" . "*Wire-*_x86_64.AppImage")
-    ("session-desktop" . "*session-desktop-linux-x86_64-*.AppImage")
     ("urserver" . "*urserver-*/urserver")
     ("vtm" . "*vtm")
     ("Textreme2" . "*Textreme2/Textreme2.x86_64")
