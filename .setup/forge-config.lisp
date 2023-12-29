@@ -151,6 +151,11 @@
   (:mac ("rustup-init"))
   )
  (
+  "Install Mesa Drivers"
+  t
+  (:void ("~/.setup/hardware/void/other/mesa"))
+  )
+ (
   "Install Graphical Theming: GTK theme"
   t
   (:void ("mkdir -p ~/.local/share/themes"

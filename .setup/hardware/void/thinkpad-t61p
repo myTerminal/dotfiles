@@ -14,8 +14,5 @@ sudo xbps-install -Sy tlp tp_smapi-dkms powertop
 ~/.bin/linux/mt-battery-set-charge-thresholds
 sudo ln -s /etc/sv/tlp /var/service
 
-# Install Mesa Intel drivers
-. ~/.setup/hardware/void/other/mesa
-
 # Configure fingerprint sensor
 . ~/.setup/hardware/configure-fingerprints

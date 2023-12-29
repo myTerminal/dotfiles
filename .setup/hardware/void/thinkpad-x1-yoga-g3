@@ -19,9 +19,6 @@ sudo ln -s /etc/sv/tlp /var/service
 sudo xbps-install -Sy iio-sensor-proxy
 sudo ln -s /etv/sv/iio-sensor-proxy /var/service
 
-# Install Mesa Intel drivers
-. ~/.setup/hardware/void/other/mesa
-
 # Configure fingerprint sensor
 # TODO: Fix this
 . ~/.setup/hardware/configure-fingerprints
