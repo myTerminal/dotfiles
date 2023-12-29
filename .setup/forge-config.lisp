@@ -69,7 +69,6 @@
   ("brave" (:void) (:cask "brave-browser"))
   ("keepassxc" (:cask "keepasxc"))
   ("authy" (:void) (:cask "authy"))
-  ("tunnelbear" (:void) (:cask "tunnelbear"))
   ("thunderbird" (:mac))
   ("schildi" (:flatpak ("chat.schildi.desktop" "schildi")) (:cask "schildichat"))
   ("pcloud" (:void) (:mac))
