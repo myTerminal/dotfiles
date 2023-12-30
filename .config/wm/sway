@@ -22,9 +22,9 @@ client.urgent           $c_darkest             $c_error               $c_mono_li
 client.placeholder      $c_darkest             $c_darkest             $c_primary_light   $c_darkest    $c_darkest
 client.background       $c_darkest
 
-# TODO: Configure top bar
-
-# TODO: Configure bottom bar
+bar {
+    swaybar_command waybar
+}
 
 # start a terminal
 bindsym $mod+Return exec foot

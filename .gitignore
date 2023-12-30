@@ -17,6 +17,7 @@
 /.config/foot/*
 !/.config/foot/foot.ini
 !/.config/wm
+!/.config/waybar
 !/.config/rofi
 !/.config/emacs
 /.config/emacs/*
