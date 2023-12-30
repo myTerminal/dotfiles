@@ -56,6 +56,7 @@
   ("onboard" (:mac))
   ("picom" (:mac))
   ("i3" (:xbps "i3" "i3status" "i3lock") (:mac))
+  ("sway" (:mac))
   ("xss-lock" (:mac))
   ("feh" (:mac))
   ("rofi" (:mac))
