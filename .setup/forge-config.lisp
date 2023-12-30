@@ -59,6 +59,7 @@
   ("xss-lock" (:mac))
   ("feh" (:mac))
   ("rofi" (:mac))
+  ("fuzzel" (:mac))
   ("rxvt-unicode" (:cask "alacritty"))
   ("foot" (:mac))
   ("xsel" (:mac))

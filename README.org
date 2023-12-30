@@ -79,7 +79,7 @@ To start the setup, run the following command in a terminal running bash: (provi
 | Compositor               | [[https://github.com/yshui/picom][picom]]                            |                | (native)                        |
 | Graphical environments   | [[https://github.com/i3/i3][i3]]                               |                | (native)                        |
 | Wallpaper manager        | [[https://feh.finalrewind.org][feh]]                              |                | (native)                        |
-| Application launcher     | [[https://github.com/davatorium/rofi][Rofi]]                             |                | (native)                        |
+| Application launcher     | [[https://github.com/davatorium/rofi][Rofi]]                             | [[https://codeberg.org/dnkl/fuzzel][fuzzel]]         | (native)                        |
 | Dock                     | --                               |                | (native)                        |
 | Desktop widgets          | [pending]                        |                | (native)                        |
 | Desktop theme            | [[https://www.opencode.net/ju1464/Bazik][Bazik]]                            |                | (native)                        |
