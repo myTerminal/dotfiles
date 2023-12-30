@@ -60,6 +60,7 @@
   ("feh" (:mac))
   ("rofi" (:mac))
   ("rxvt-unicode" (:cask "alacritty"))
+  ("foot" (:mac))
   ("xsel" (:mac))
   ("udiskie" (:mac))
   ("gparted" (:mac))
