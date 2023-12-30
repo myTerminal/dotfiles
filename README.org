@@ -47,7 +47,7 @@ To start the setup, run the following command in a terminal running bash: (provi
 | File system tools     | [[https://github.com/sharkdp/fd][fd]], [[https://github.com/Peltoche/lsd][lsd]], [[https://github.com/sharkdp/bat][bat]], [[https://dev.yorhel.nl/ncdu][ncdu]]                                    | [[https://github.com/sharkdp/fd][fd]], [[https://github.com/Peltoche/lsd][lsd]], [[https://github.com/sharkdp/bat][bat]], [[https://dev.yorhel.nl/ncdu][ncdu]]            |
 | Text Searcher         | [[https://github.com/BurntSushi/ripgrep][ripgrep]]                                               | [[https://github.com/BurntSushi/ripgrep][ripgrep]]                       |
 | Fuzzy finder          | [[https://github.com/junegunn/fzf][fzf]]                                                   | [[https://github.com/junegunn/fzf][fzf]]                           |
-| Text editor           | [[https://www.gnu.org/software/emacs][GNU Emacs]], [[https://www.vim.org][vim]]                                        | [[https://www.gnu.org/software/emacs][GNU Emacs]]                     |
+| Text editor           | [[https://www.gnu.org/software/emacs][GNU Emacs]], [[https://www.vim.org][vim]]                                        | [[https://www.gnu.org/software/emacs][GNU Emacs]]^                    |
 | Audio player          | [[https://mpv.io][mpv]]                                                   | [[https://mpv.io][mpv]]                           |
 | Spell checker         | [[http://aspell.net][Aspell]]                                                | [[http://aspell.net][Aspell]]                        |
 | GNU Make              | [[https://www.gnu.org/software/make][make]]                                                  | [[https://www.gnu.org/software/make][make]]                          |
@@ -68,57 +68,57 @@ To start the setup, run the following command in a terminal running bash: (provi
 
 *** Graphical packages
 
-|                          | Void (Xorg)                      | Void (Wayland) | MacOS                           |
-|--------------------------+----------------------------------+----------------+---------------------------------|
-| Desktop utils            | [[https://www.freedesktop.org/wiki/Software/xdg-utils][xdg-utils]]                        |                | --                              |
-| Display server           | [[https://www.x.org][Xorg]]                             |                | (native)                        |
-| Display drivers          | (machine-dependent)              |                | (stock)                         |
-| Display manager          | --                               |                | (native)                        |
-| Screen color temperature | [[https://flak.tedunangst.com/post/sct-set-color-temperature][sct]]                              |                | (native)                        |
-| Onscreen keyboard        | [[https://launchpad.net/onboard][onboard]]                          |                | --                              |
-| Compositor               | [[https://github.com/yshui/picom][picom]]                            |                | (native)                        |
-| Graphical environments   | [[https://github.com/i3/i3][i3]]                               | [[https://swaywm.org][sway]]           | (native)                        |
-| Status bar               | [[https://i3wm.org/i3status][i3status]]                         | [[https://github.com/Alexays/Waybar][waybar]]         | (native)                        |
-| Wallpaper manager        | [[https://feh.finalrewind.org][feh]]                              |                | (native)                        |
-| Application launcher     | [[https://github.com/davatorium/rofi][Rofi]]                             | [[https://codeberg.org/dnkl/fuzzel][fuzzel]]         | (native)                        |
-| Dock                     | --                               |                | (native)                        |
-| Desktop widgets          | [pending]                        |                | (native)                        |
-| Desktop theme            | [[https://www.opencode.net/ju1464/Bazik][Bazik]]                            |                | (native)                        |
-| Icon packs               | [[https://github.com/madmaxms/iconpack-obsidian][Obsidian]]                         |                | (native)                        |
-| Mouse cursor             | [[https://github.com/ful1e5/Bibata_Cursor][Bibata]]                           |                | (native)                        |
-| Lockscreen               | [[https://github.com/i3/i3lock][i3lock]], [[https://bitbucket.org/raymonad/xss-lock][xs-lock]]                  |                | (native)                        |
-| Terminal                 | [[https://rxvt.sourceforge.net][rxvt]]                             | [[https://codeberg.org/dnkl/foot][foot]]           | [[https://support.apple.com/guide/terminal/welcome/mac][Terminal]] (native), [[https://github.com/alacritty/alacritty][Alacritty]]    |
-| Clipboard helper         | [[http://www.vergenet.net/~conrad/software/xsel][xsel]]                             |                | pbcopy/pbpaste (native)         |
-| Disk management          | [[https://github.com/coldfix/udiskie][udiskie]], [[https://gparted.org][GParted]]                 |                | [[https://support.apple.com/guide/disk-utility/welcome/mac][Disk Utility]] (native), [[https://mounty.app][Mounty]]   |
-| File managers            | [[https://www.linuxlinks.com/Thunar][thunar]] (with [[https://wiki.gnome.org/Projects/gvfs][gvfs]])               |                | [[https://support.apple.com/en-us/HT201732][Finder]] (native)                 |
-| File sync client         | [[https://syncthing.net][Syncthing]]                        |                | [[https://syncthing.net][Syncthing]]                       |
-| Web browsers             | [[https://brave.com][Brave]]                            |                | [[https://brave.com][Brave]]                           |
-| Password manager         | [[https://keepassxc.org][KeePassXC]]                        |                | [[https://keepassxc.org][KeePassXC]]                       |
-| Email clients            | [[https://www.thunderbird.net][Thunderbird]]                      |                | [[https://support.apple.com/en-us/HT204093][Mail]] (native)                   |
-| Messengers               | [[https://schildi.chat][Schildi]]                          |                | [[https://schildi.chat][Schildi]]                         |
-| Cloud storage clients    | [[https://www.pcloud.com][pCloud]]                           |                | [[https://www.pcloud.com][pCloud]]                          |
-| Torrent client           | [[https://transmissionbt.com][Transmission]]                     |                | [[https://transmissionbt.com][Transmission]]                    |
-| REST client              | [[https://www.postman.com][Postman]]                          |                | [[https://www.postman.com][Postman]]                         |
-| Virtualization           | [[https://virt-manager.org][Virt-Manager]]                     |                | [[https://www.virtualbox.org][VirtualBox]]                      |
-| Office suite             | [[https://www.libreoffice.org][LibreOffice]]                      |                | [[https://www.libreoffice.org][LibreOffice]]                     |
-| Bluetooth interface      | [[https://github.com/blueman-project/blueman][blueman]]                          |                | (native)                        |
-| Drawing tool             | [[https://krita.org][krita]]                            |                | [[https://krita.org][krita]]                           |
-| Picture viewers          | [[https://github.com/GNOME/shotwell][Shotwell]]                         |                | [[https://support.apple.com/guide/preview/welcome/mac][Preview]] (native), [[https://www.xnview.com/en/xnviewmp][XNView MP]]     |
-| Picture editor           | [[https://www.gimp.org][GIMP]], [[https://www.darktable.org][darktable]]                  |                | [[https://www.gimp.org][GIMP]], [[https://www.darktable.org][darktable]]                 |
-| Audio player             | [[https://www.clementine-player.org][Clementine]]                       |                | [[https://www.clementine-player.org][Clementine]]                      |
-| Audio frontend           | [[https://freedesktop.org/software/pulseaudio/pavucontrol][pavucontrol]]                      |                | (native)                        |
-| Audio backend            | [[https://gstreamer.freedesktop.org][GStreamer]], [[https://pipewire.org][pipewire]], [[https://github.com/wwmm/easyeffects][easyeffects]] |                | [[https://lame.sourceforge.io][LAME]], [[https://www.ffmpeg.org][FFmpeg]]                    |
-| Audio editor             | [[https://www.audacityteam.org][Audacity]]                         |                | [[https://www.audacityteam.org][Audacity]]                        |
-| Video player             | [[https://www.videolan.org/vlc/index.html][VLC]]                              |                | [[https://www.videolan.org/vlc/index.html][VLC]]                             |
-| Video editor             | [[https://handbrake.fr][HandBrake]], [[https://www.blender.org][Blender]]               |                | [[https://handbrake.fr][HandBrake]], [[https://www.blender.org][Blender]]              |
-| YouTube video downloader | [[https://github.com/yt-dlp/yt-dlp][yt-dlp]]                           |                | [[https://github.com/yt-dlp/yt-dlp][yt-dlp]]                          |
-| Multimedia tool          | [[https://kodi.tv][KODI]]                             |                | [[https://kodi.tv][KODI]]                            |
-| Screenshot tool          | [[https://flameshot.org][flameshot]]                        |                | (native)                        |
-| Screencast tool          | [[https://obsproject.com][OBS Studio]], [[https://github.com/phw/peek][peek]]                 |                | [[https://obsproject.com][OBS Studio]], [[https://www.cockos.com/licecap][LICEcap]]             |
-| Keystroke echoing tool   | [[https://github.com/scottkirkwood/key-mon][Key-mon]]                          |                | [[https://github.com/keycastr/keycastr][keycastr]]                        |
-| Startup disk creators    | [[https://www.balena.io/etcher][balenaEtcher]]                     |                | [[https://www.balena.io/etcher][balenaEtcher]]                    |
-| Gaming clients           | [[https://store.steampowered.com][Steam]], [[https://lutris.net][lutris]], [[https://www.gamehub.gg][GameHub]]           |                | [[https://store.steampowered.com][Steam]], [[https://www.origin.com][Origin]], [[https://www.playstation.com/en-us/explore/ps4/remote-play][Sony Remote Play]] |
-| Misc                     | [[https://github.com/flipperdevices/qFlipper][qFlipper]]                         |                | [[https://github.com/flipperdevices/qFlipper][qFlipper]]                        |
+|                          | Void (Xorg)                      | Void (Wayland)                   | MacOS                           |
+|--------------------------+----------------------------------+----------------------------------+---------------------------------|
+| Desktop utils            | [[https://www.freedesktop.org/wiki/Software/xdg-utils][xdg-utils]]                        | [[https://www.freedesktop.org/wiki/Software/xdg-utils][xdg-utils]]                        | --                              |
+| Display server           | [[https://www.x.org][Xorg]]                             | --                               | (native)                        |
+| Display drivers          | (machine-dependent)              | (machine-dependent)              | (stock)                         |
+| Display manager          | --                               | --                               | (native)                        |
+| Screen color temperature | [[https://flak.tedunangst.com/post/sct-set-color-temperature][sct]]                              | ??                               | (native)                        |
+| Onscreen keyboard        | [[https://launchpad.net/onboard][onboard]]                          | ??                               | --                              |
+| Compositor               | [[https://github.com/yshui/picom][picom]]                            | --                               | (native)                        |
+| Graphical environments   | [[https://github.com/i3/i3][i3]]                               | [[https://swaywm.org][sway]]                             | (native)                        |
+| Status bar               | [[https://i3wm.org/i3status][i3status]]                         | [[https://github.com/Alexays/Waybar][waybar]]                           | (native)                        |
+| Wallpaper manager        | [[https://feh.finalrewind.org][feh]]                              | ??                               | (native)                        |
+| Application launcher     | [[https://github.com/davatorium/rofi][Rofi]]                             | [[https://codeberg.org/dnkl/fuzzel][fuzzel]]                           | (native)                        |
+| Dock                     | --                               | --                               | (native)                        |
+| Desktop widgets          | [pending]                        | [pending]                        | (native)                        |
+| Desktop theme            | [[https://www.opencode.net/ju1464/Bazik][Bazik]]                            | [[https://www.opencode.net/ju1464/Bazik][Bazik]]                            | (native)                        |
+| Icon packs               | [[https://github.com/madmaxms/iconpack-obsidian][Obsidian]]                         | [[https://github.com/madmaxms/iconpack-obsidian][Obsidian]]                         | (native)                        |
+| Mouse cursor             | [[https://github.com/ful1e5/Bibata_Cursor][Bibata]]                           | [[https://github.com/ful1e5/Bibata_Cursor][Bibata]]                           | (native)                        |
+| Lockscreen               | [[https://github.com/i3/i3lock][i3lock]], [[https://bitbucket.org/raymonad/xss-lock][xs-lock]]                  | ??                               | (native)                        |
+| Terminal                 | [[https://rxvt.sourceforge.net][rxvt]]                             | [[https://codeberg.org/dnkl/foot][foot]]                             | [[https://support.apple.com/guide/terminal/welcome/mac][Terminal]] (native), [[https://github.com/alacritty/alacritty][Alacritty]]    |
+| Clipboard helper         | [[http://www.vergenet.net/~conrad/software/xsel][xsel]]                             | ??                               | pbcopy/pbpaste (native)         |
+| Disk management          | [[https://github.com/coldfix/udiskie][udiskie]], [[https://gparted.org][GParted]]                 | [[https://github.com/coldfix/udiskie][udiskie]], [[https://gparted.org][GParted]]^                | [[https://support.apple.com/guide/disk-utility/welcome/mac][Disk Utility]] (native), [[https://mounty.app][Mounty]]   |
+| File managers            | [[https://www.linuxlinks.com/Thunar][thunar]] (with [[https://wiki.gnome.org/Projects/gvfs][gvfs]])               | [[https://www.linuxlinks.com/Thunar][thunar]] (with [[https://wiki.gnome.org/Projects/gvfs][gvfs]])               | [[https://support.apple.com/en-us/HT201732][Finder]] (native)                 |
+| File sync client         | [[https://syncthing.net][Syncthing]]                        | [[https://syncthing.net][Syncthing]]                        | [[https://syncthing.net][Syncthing]]                       |
+| Web browsers             | [[https://brave.com][Brave]]                            | [[https://brave.com][Brave]]^                           | [[https://brave.com][Brave]]                           |
+| Password manager         | [[https://keepassxc.org][KeePassXC]]                        | [[https://keepassxc.org][KeePassXC]]                        | [[https://keepassxc.org][KeePassXC]]                       |
+| Email clients            | [[https://www.thunderbird.net][Thunderbird]]                      | [[https://www.thunderbird.net][Thunderbird]]^                     | [[https://support.apple.com/en-us/HT204093][Mail]] (native)                   |
+| Messengers               | [[https://schildi.chat][Schildi]]                          | [[https://schildi.chat][Schildi]]^                         | [[https://schildi.chat][Schildi]]                         |
+| Cloud storage clients    | [[https://www.pcloud.com][pCloud]]                           | [[https://www.pcloud.com][pCloud]]^                          | [[https://www.pcloud.com][pCloud]]                          |
+| Torrent client           | [[https://transmissionbt.com][Transmission]]                     | [[https://transmissionbt.com][Transmission]]                     | [[https://transmissionbt.com][Transmission]]                    |
+| REST client              | [[https://www.postman.com][Postman]]                          | [[https://www.postman.com][Postman]]^                         | [[https://www.postman.com][Postman]]                         |
+| Virtualization           | [[https://virt-manager.org][Virt-Manager]]                     | [[https://virt-manager.org][Virt-Manager]]                     | [[https://www.virtualbox.org][VirtualBox]]                      |
+| Office suite             | [[https://www.libreoffice.org][LibreOffice]]                      | [[https://www.libreoffice.org][LibreOffice]]                      | [[https://www.libreoffice.org][LibreOffice]]                     |
+| Bluetooth interface      | [[https://github.com/blueman-project/blueman][blueman]]                          | ??                               | (native)                        |
+| Drawing tool             | [[https://krita.org][krita]]                            | [[https://krita.org][krita]]                            | [[https://krita.org][krita]]                           |
+| Picture viewers          | [[https://github.com/GNOME/shotwell][Shotwell]]                         | [[https://github.com/GNOME/shotwell][Shotwell]]                         | [[https://support.apple.com/guide/preview/welcome/mac][Preview]] (native), [[https://www.xnview.com/en/xnviewmp][XNView MP]]     |
+| Picture editor           | [[https://www.gimp.org][GIMP]], [[https://www.darktable.org][darktable]]                  | [[https://www.gimp.org][GIMP]], [[https://www.darktable.org][darktable]]^                 | [[https://www.gimp.org][GIMP]], [[https://www.darktable.org][darktable]]                 |
+| Audio player             | [[https://www.clementine-player.org][Clementine]]                       | [[https://www.clementine-player.org][Clementine]]                       | [[https://www.clementine-player.org][Clementine]]                      |
+| Audio frontend           | [[https://freedesktop.org/software/pulseaudio/pavucontrol][pavucontrol]]                      | ??                               | (native)                        |
+| Audio backend            | [[https://gstreamer.freedesktop.org][GStreamer]], [[https://pipewire.org][pipewire]], [[https://github.com/wwmm/easyeffects][easyeffects]] | [[https://gstreamer.freedesktop.org][GStreamer]], [[https://pipewire.org][pipewire]], [[https://github.com/wwmm/easyeffects][easyeffects]] | [[https://lame.sourceforge.io][LAME]], [[https://www.ffmpeg.org][FFmpeg]]                    |
+| Audio editor             | [[https://www.audacityteam.org][Audacity]]                         | [[https://www.audacityteam.org][Audacity]]                         | [[https://www.audacityteam.org][Audacity]]                        |
+| Video player             | [[https://www.videolan.org/vlc/index.html][VLC]]                              | [[https://www.videolan.org/vlc/index.html][VLC]]^                             | [[https://www.videolan.org/vlc/index.html][VLC]]                             |
+| Video editor             | [[https://handbrake.fr][HandBrake]], [[https://www.blender.org][Blender]]               | [[https://handbrake.fr][HandBrake]], [[https://www.blender.org][Blender]]               | [[https://handbrake.fr][HandBrake]], [[https://www.blender.org][Blender]]              |
+| YouTube video downloader | [[https://github.com/yt-dlp/yt-dlp][yt-dlp]]                           | [[https://github.com/yt-dlp/yt-dlp][yt-dlp]]                           | [[https://github.com/yt-dlp/yt-dlp][yt-dlp]]                          |
+| Multimedia tool          | [[https://kodi.tv][KODI]]                             | [[https://kodi.tv][KODI]]                             | [[https://kodi.tv][KODI]]                            |
+| Screenshot tool          | [[https://flameshot.org][flameshot]]                        | ??                               | (native)                        |
+| Screencast tool          | [[https://obsproject.com][OBS Studio]], [[https://github.com/phw/peek][peek]]                 | [[https://obsproject.com][OBS Studio]]^, ??                  | [[https://obsproject.com][OBS Studio]], [[https://www.cockos.com/licecap][LICEcap]]             |
+| Keystroke echoing tool   | [[https://github.com/scottkirkwood/key-mon][Key-mon]]                          | ??                               | [[https://github.com/keycastr/keycastr][keycastr]]                        |
+| Startup disk creators    | [[https://www.balena.io/etcher][balenaEtcher]]                     | [[https://www.balena.io/etcher][balenaEtcher]]^                    | [[https://www.balena.io/etcher][balenaEtcher]]                    |
+| Gaming clients           | [[https://store.steampowered.com][Steam]], [[https://lutris.net][lutris]], [[https://www.gamehub.gg][GameHub]]           | [[https://store.steampowered.com][Steam]]^, [[https://lutris.net][lutris]], [[https://www.gamehub.gg][GameHub]]          | [[https://store.steampowered.com][Steam]], [[https://www.origin.com][Origin]], [[https://www.playstation.com/en-us/explore/ps4/remote-play][Sony Remote Play]] |
+| Misc                     | [[https://github.com/flipperdevices/qFlipper][qFlipper]]                         | [[https://github.com/flipperdevices/qFlipper][qFlipper]]^                        | [[https://github.com/flipperdevices/qFlipper][qFlipper]]                        |
 
 *** Fonts
 
@@ -132,7 +132,7 @@ To start the setup, run the following command in a terminal running bash: (provi
 
 *** Legend
 
-=*= - in-built, =**= - through web-client
+=*= - in-built, =**= - through web-client, ^ - through XWayland
 
 ** History
 
