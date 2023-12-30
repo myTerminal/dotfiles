@@ -13,6 +13,9 @@
 /.config/fish/*
 !/.config/fish/functions
 !/.config/fish/*.fish
+!/.config/foot
+/.config/foot/*
+!/.config/foot/foot.ini
 !/.config/wm
 !/.config/rofi
 !/.config/emacs
