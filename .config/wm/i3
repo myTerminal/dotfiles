@@ -65,15 +65,6 @@ bindsym $mod+Return exec urxvt
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec \
-        dmenu_run \
-        -nf $c_mono_light \
-        -nb $c_darkest \
-        -sf $c_darkest \
-        -sb $c_primary_lightest \
-        -fn "LiberationMono:pixelsize=48"
-
 # Bind rofi 'windows' menu
 bindsym $mod+z exec \
         rofi \
