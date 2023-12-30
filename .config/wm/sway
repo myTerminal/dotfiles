@@ -1,0 +1,46 @@
+include ~/.config/wm/common
+
+set $mod Mod4
+
+# Define colors
+set $c_primary_lightest "#83d0c9"
+set $c_primary_light "#009688"
+set $c_primary_dark "#005555"
+set $c_mono_lightest "#ffffff"
+set $c_mono_light "#cccccc"
+set $c_mono_dark "#555555"
+set $c_darkest "#000000"
+set $c_warning "#ff8800"
+set $c_error "#ff3333"
+
+# Set window colors
+# class                 border                 bgcolor                text               indicator     child_border
+client.focused          $c_primary_light       $c_primary_lightest    $c_darkest         $c_warning    $c_primary_lightest
+client.focused_inactive $c_primary_light       $c_primary_light       $c_darkest         $c_darkest    $c_primary_light
+client.unfocused        $c_darkest             $c_mono_dark           $c_mono_light      $c_darkest    $c_darkest
+client.urgent           $c_darkest             $c_error               $c_mono_lightest   $c_darkest    $c_mono_lightest
+client.placeholder      $c_darkest             $c_darkest             $c_primary_light   $c_darkest    $c_darkest
+client.background       $c_darkest
+
+# TODO: Configure top bar
+
+# TODO: Configure bottom bar
+
+# start a terminal
+bindsym $mod+Return exec foot
+
+# Bind fuzzel 'run' menu
+bindsym $mod+x exec \
+        fuzzel
+
+# Set key-bindings for flameshot
+# TODO: Fix flameshot
+# bindsym $mod+Shift+comma exec flameshot gui
+# bindsym $mod+Shift+period exec flameshot full -p ~/Desktop
+
+# exit i3 (logs you out of your Wayland session)
+# TODO: Fix
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# Set other key-bindings
+bindsym $mod+Shift+Control+e exec sway exit
