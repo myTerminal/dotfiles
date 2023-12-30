@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
-startx ~/.xinitrc $@
+if [ "${1}" = "wayland" ]; then
+    XDG_SESSION_TYPE=wayland dbus-run-session sway -c ~/.config/wm/sway
+else
+    startx ~/.xinitrc
+fi
