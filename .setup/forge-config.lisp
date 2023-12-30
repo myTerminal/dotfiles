@@ -57,6 +57,7 @@
   ("picom" (:mac))
   ("i3" (:xbps "i3" "i3status" "i3lock") (:mac))
   ("sway" (:mac))
+  ("waybar" (:mac))
   ("xss-lock" (:mac))
   ("feh" (:mac))
   ("rofi" (:mac))
