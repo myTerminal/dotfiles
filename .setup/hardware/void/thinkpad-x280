@@ -4,8 +4,9 @@
 # device-specific setup for 2018 Lenovo ThinkPad X280 and mostly follows steps
 # from https://wiki.archlinux.org/title/Laptop/Lenovo
 
-# Improve touchpad experience for xorg
+# Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "Synaptics TM3381-002" 0.75
+. ~/.setup/hardware/configure-touchpad-for-wayland "2:7:Synaptics TM3381-002"
 
 # Install tlp and more for power management
 . ~/.setup/hardware/void/other/configure-power-management tlp acpi_call-dkms powertop

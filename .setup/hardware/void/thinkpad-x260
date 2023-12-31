@@ -9,8 +9,9 @@
 # but a slightly better value could be '72'
 . ~/.setup/hardware/configure-dpi 96
 
-# Improve touchpad experience for xorg
+# Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "SynPS/2 Synaptics TouchPad" 0.5
+. ~/.setup/hardware/configure-touchpad-for-wayland "2:7:SynPS/2_Synaptics_TouchPad"
 
 # Install tlp and more for power management
 . ~/.setup/hardware/void/other/configure-power-management tlp acpi_call-dkms powertop
