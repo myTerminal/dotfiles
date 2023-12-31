@@ -5,7 +5,7 @@
 # from https://wiki.archlinux.org/title/Lenovo_ThinkPad_X220
 
 # Set display scaling for the smaller screen
-. ~/.setup/hardware/configure-dpi 72
+. ~/.setup/hardware/configure-dpi-for-xorg 72
 
 # Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "SynPS/2 Synaptics TouchPad" 0.5

@@ -5,7 +5,7 @@
 # steps from https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Extreme
 
 # Set display scaling for HiDPI
-. ~/.setup/hardware/configure-dpi 192
+. ~/.setup/hardware/configure-dpi-for-xorg 192
 
 # Install Nvidia drivers
 . ~/.setup/hardware/void/other/nvidia-latest

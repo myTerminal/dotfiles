@@ -5,7 +5,7 @@
 # from https://wiki.archlinux.org/title/Laptop/Lenovo
 
 # Set display scaling for the smaller screen
-. ~/.setup/hardware/configure-dpi 72
+. ~/.setup/hardware/configure-dpi-for-xorg 72
 
 # Install tlp and more for power management
 . ~/.setup/hardware/void/other/configure-power-management tlp acpi_call-dkms tp_smapi-dkms powertop
