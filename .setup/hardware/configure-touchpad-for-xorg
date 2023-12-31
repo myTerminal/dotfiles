@@ -20,4 +20,4 @@ xinput set-prop '${1}' 'libinput Accel Speed' ${2}
 xinput set-prop '${1}' 'libinput Click Method Enabled' 0 1
 xinput set-prop '${1}' 'libinput Tapping Enabled' 1
 xinput set-prop '${1}' 'libinput Natural Scrolling Enabled' 1
-" > ~/.device-startup-tweaks
+" > ~/.configure-input-devices
