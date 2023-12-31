@@ -45,5 +45,5 @@ bindsym $mod+x exec \
 # Set other key-bindings
 bindsym $mod+Shift+Control+e exec sway exit
 
-# Configure input devices for Wayland
+# Run desktop startup scripts
 exec_always bash ~/.scripts/linux/startup/desktop/run
