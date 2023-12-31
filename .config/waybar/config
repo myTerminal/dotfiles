@@ -1,6 +1,6 @@
 [
     {
-	"layer": "top",
+	"layer": "bottom",
 	"position": "top",
 	"height": 30,
 	"spacing": 4,
@@ -57,7 +57,7 @@
 	}
     },
     {
-	"layer": "top",
+	"layer": "bottom",
 	"position": "bottom",
 	"height": 30,
 	"spacing": 4,
