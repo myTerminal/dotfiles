@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+echo "
+swaymsg output 'LVDS-1' scale ${1}
+" >> ~/.configure-output-devices
