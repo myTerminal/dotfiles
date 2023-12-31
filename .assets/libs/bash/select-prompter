@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
-mt_prompter="fzf"
+if ! [[ $DISPLAY ]]; then
+    mt_prompter="fzf"
+    exit
+fi
 
-if [[ $DISPLAY ]]; then
+if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+    mt_prompter="fuzzel -d"
+else
     mt_prompter="rofi -dmenu"
 fi
