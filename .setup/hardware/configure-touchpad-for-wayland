@@ -5,6 +5,6 @@ echo "
 swaymsg input '${1}' accel_profile adaptive
 swaymsg input '${1}' pointer_accel 1
 swaymsg input '${1}' tap_button_map lrm
-swaymsg input '${1}' tap enabled      
+swaymsg input '${1}' tap enabled
 swaymsg input '${1}' natural_scroll enabled
 " >> ~/.configure-input-devices
