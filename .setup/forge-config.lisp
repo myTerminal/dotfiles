@@ -60,6 +60,7 @@
   ("waybar" (:mac))
   ("xss-lock" (:mac))
   ("feh" (:mac))
+  ("swaybg" (:mac))
   ("rofi" (:mac))
   ("fuzzel" (:mac))
   ("rxvt-unicode" (:cask "alacritty"))

@@ -79,7 +79,7 @@ To start the setup, run the following command in a terminal running bash: (provi
 | Compositor               | [[https://github.com/yshui/picom][picom]]                            | --                               | (native)                        |
 | Graphical environments   | [[https://github.com/i3/i3][i3]]                               | [[https://swaywm.org][sway]]                             | (native)                        |
 | Status bar               | [[https://i3wm.org/i3status][i3status]]                         | [[https://github.com/Alexays/Waybar][waybar]]                           | (native)                        |
-| Wallpaper manager        | [[https://feh.finalrewind.org][feh]]                              | ??                               | (native)                        |
+| Wallpaper manager        | [[https://feh.finalrewind.org][feh]]                              | [[https://github.com/swaywm/swaybg][swaybg]]                           | (native)                        |
 | Application launcher     | [[https://github.com/davatorium/rofi][Rofi]]                             | [[https://codeberg.org/dnkl/fuzzel][fuzzel]]                           | (native)                        |
 | Dock                     | --                               | --                               | (native)                        |
 | Desktop widgets          | [pending]                        | [pending]                        | (native)                        |
