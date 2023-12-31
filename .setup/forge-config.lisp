@@ -59,6 +59,7 @@
   ("sway" (:mac))
   ("waybar" (:mac))
   ("xss-lock" (:mac))
+  ("swaylock" (:mac))
   ("feh" (:mac))
   ("swaybg" (:mac))
   ("rofi" (:mac))
