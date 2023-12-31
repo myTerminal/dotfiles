@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Install xinput (just in case)
-sudo xbps-install -Sy xinput
-
 # Enable libinput events for touchpad
 sudo mkdir /etc/X11/xorg.conf.d
 echo "
