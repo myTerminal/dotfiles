@@ -6,6 +6,7 @@
 
 # Set display scaling for HiDPI
 . ~/.setup/hardware/configure-dpi-for-xorg 192
+. ~/.setup/hardware/configure-dpi-for-wayland 2
 
 # Install Nvidia drivers
 . ~/.setup/hardware/void/other/nvidia-latest

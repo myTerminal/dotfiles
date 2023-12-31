@@ -6,6 +6,7 @@
 
 # Set display scaling for the smaller screen
 . ~/.setup/hardware/configure-dpi-for-xorg 82
+. ~/.setup/hardware/configure-dpi-for-wayland 0.85
 
 # Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "SynPS/2 Synaptics TouchPad" 0.5
