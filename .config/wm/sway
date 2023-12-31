@@ -46,4 +46,4 @@ bindsym $mod+x exec \
 bindsym $mod+Shift+Control+e exec sway exit
 
 # Configure input devices for Wayland
-exec_always bash ~/.configure-input-devices
+exec_always bash ~/.scripts/linux/startup/desktop/run
