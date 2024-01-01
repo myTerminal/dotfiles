@@ -33,10 +33,9 @@ bindsym $mod+Return exec foot
 bindsym $mod+x exec \
         fuzzel
 
-# Set key-bindings for flameshot
-# TODO: Fix flameshot
-# bindsym $mod+Shift+comma exec flameshot gui
-# bindsym $mod+Shift+period exec flameshot full -p ~/Desktop
+# Set key-bindings for screenshots
+bindsym $mod+Shift+comma exec grim -g "$(slurp)" - | swappy -f -
+bindsym $mod+Shift+period exec grim - | swappy -f -
 
 # exit i3 (logs you out of your Wayland session)
 # TODO: Fix
