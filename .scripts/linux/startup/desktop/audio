@@ -6,6 +6,11 @@ if [[ ! $(pgrep pipewire) ]]; then
     sleep 1
 fi
 
+# Start bluetooth applet for Wayland
+if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+    blueman-applet &
+fi
+
 # Set volume to 70%
 pactl set-sink-volume @DEFAULT_SINK@ 70%
 
