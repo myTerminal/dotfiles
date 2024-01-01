@@ -69,6 +69,7 @@
   ("rxvt-unicode" (:cask "alacritty"))
   ("foot" (:mac))
   ("xsel" (:mac))
+  ("wl-clipboard" (:mac))
   ("udiskie" (:mac))
   ("gparted" (:mac))
   ("thunar" (:xbps "Thunar") (:mac))
