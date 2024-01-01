@@ -45,6 +45,7 @@
   ("android-tools" (:cask "android-platform-tools"))
   "rlwrap"
   ("sed" (:brew "gnu-sed"))
+  "jq"
   "neofetch"
   "wget"
   "curl"
