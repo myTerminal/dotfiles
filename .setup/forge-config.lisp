@@ -44,6 +44,7 @@
   ("exfat-utils" (:mac))
   ("android-tools" (:cask "android-platform-tools"))
   "rlwrap"
+  ("sed" (:brew "gnu-sed"))
   "neofetch"
   "wget"
   "curl"
