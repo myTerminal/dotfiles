@@ -60,6 +60,8 @@
   ("i3" (:xbps "i3" "i3status" "i3lock") (:mac))
   ("sway" (:mac))
   ("Waybar" (:mac))
+  ("xrandr" (:mac))
+  ("wlr-randr" (:mac))
   ("xss-lock" (:mac))
   ("swaylock" (:mac))
   ("feh" (:mac))
