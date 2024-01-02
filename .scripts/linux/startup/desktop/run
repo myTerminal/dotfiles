@@ -11,3 +11,7 @@ ${BASE_PATH}/apps &
 if [ -f ~/.configure-input-devices ]; then
     . ~/.configure-input-devices
 fi
+
+if [ -f ~/.configure-output-devices ]; then
+    . ~/.configure-output-devices
+fi
