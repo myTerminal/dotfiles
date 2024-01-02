@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
 pCloud &
+
+if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+    mako &
+fi
