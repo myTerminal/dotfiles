@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+# Abort for Wayland
+if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+    notify-send "Not implemented for Wayland!"
+    echo "Not implemented for Wayland!"
+    exit 1
+fi
+
 # Detect display and set prompter
 . ~/.assets/libs/bash/select-prompter
 
