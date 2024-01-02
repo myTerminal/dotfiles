@@ -2,8 +2,9 @@
 
 # Abort for Wayland
 if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
-    notify-send "Not implemented for Wayland!"
-    echo "Not implemented for Wayland!"
+    mt_message="Not implemented for Wayland!"
+    notify-send "${mt_message}"
+    echo ${mt_message}
     exit 1
 fi
 
