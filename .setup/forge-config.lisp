@@ -70,6 +70,8 @@
   ("foot" (:mac))
   ("xsel" (:mac))
   ("wl-clipboard" (:mac))
+  ("dunst" (:mac))
+  ("mako" (:mac))
   ("udiskie" (:mac))
   ("gparted" (:mac))
   ("thunar" (:xbps "Thunar") (:mac))
