@@ -1,156 +1,156 @@
 [
     {
-	"layer": "bottom",
-	"position": "top",
-	"height": 30,
-	"spacing": 4,
-	"modules-left": [
-	    "sway/workspaces",
-	    "sway/mode"
-	],
-	"modules-center": [
-	    "sway/window"
-	],
-	"modules-right": [
-	    "idle_inhibitor",
-	    "network",
-	    "clock",
-	    "tray"
-	],
-	"sway/mode": {
-	    "format": "<span style=\"italic\">{}</span>"
-	},
-	"idle_inhibitor": {
-	    "format": "{icon}",
-	    "format-icons": {
-		"activated": "",
-		"deactivated": ""
-	    }
-	},
-	"network": {
-	    "format-wifi": "{essid} ({signalStrength}%) ",
-	    "format-ethernet": "{ipaddr}/{cidr} ",
-	    "tooltip-format": "{ifname} via {gwaddr} ",
-	    "format-linked": "{ifname} (No IP) ",
-	    "format-disconnected": "Disconnected ⚠",
-	    "format-alt": "{ifname}: {ipaddr}/{cidr}"
-	},
-	"clock": {
-	    // "timezone": "America/New_York",
-	    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-	    "format-alt": "{:%Y-%m-%d}"
-	},
-	"tray": {
-	    // "icon-size": 21,
-	    "spacing": 10
-	}
+        "layer": "bottom",
+        "position": "top",
+        "height": 30,
+        "spacing": 4,
+        "modules-left": [
+            "sway/workspaces",
+            "sway/mode"
+        ],
+        "modules-center": [
+            "sway/window"
+        ],
+        "modules-right": [
+            "idle_inhibitor",
+            "network",
+            "clock",
+            "tray"
+        ],
+        "sway/mode": {
+            "format": "<span style=\"italic\">{}</span>"
+        },
+        "idle_inhibitor": {
+            "format": "{icon}",
+            "format-icons": {
+                "activated": "",
+                "deactivated": ""
+            }
+        },
+        "network": {
+            "format-wifi": "{essid} ({signalStrength}%) ",
+            "format-ethernet": "{ipaddr}/{cidr} ",
+            "tooltip-format": "{ifname} via {gwaddr} ",
+            "format-linked": "{ifname} (No IP) ",
+            "format-disconnected": "Disconnected ⚠",
+            "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        },
+        "clock": {
+            // "timezone": "America/New_York",
+            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+            "format-alt": "{:%Y-%m-%d}"
+        },
+        "tray": {
+            // "icon-size": 21,
+            "spacing": 10
+        }
     },
     {
-	"layer": "bottom",
-	"position": "bottom",
-	"height": 30,
-	"spacing": 4,
-	"modules-left": [
-	    "user"
-	],
-	"modules-center": [
-	    "wlr/taskbar"
-	],
-	"modules-right": [
-	    "cpu",
-	    "temperature",
-	    "memory",
-	    "disk",
-	    "backlight",
-	    "keyboard-state",
-	    "pulseaudio",
-	    "battery",
-	    "battery#bat1",
-	    "battery#bat2"
-	],
-	"wlr/taskbar": {
-	    "format": "{icon}",
-	    "icon-size": 14,
-	    "icon-theme": "Numix-Circle",
-	    "tooltip-format": "{title}",
-	    "on-click": "activate",
-	    "on-click-middle": "close",
-	    "ignore-list": [
-		"foot"
-	    ]
-	},
-	"cpu": {
-	    "format": "{usage}% ",
-	    "tooltip": false
-	},
-	"temperature": {
-	    // "thermal-zone": 2,
-	    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-	    "critical-threshold": 80,
-	    // "format-critical": "{temperatureC}°C {icon}",
-	    "format": "{temperatureC}°C {icon}",
-	    "format-icons": ["", "", ""]
-	},
-	"memory": {
-	    "format": "{}% "
-	},
-	"disk": {
-	    "interval": 30,
-	    "format": "Only {percentage_free}% remaining on {path}",
-	    "path": "/"
-	},
-	"backlight": {
-	    // "device": "acpi_video1",
-	    "format": "{percent}% {icon}",
-	    "format-icons": ["", "", "", "", "", "", "", "", ""]
-	},
-	"keyboard-state": {
-	    "numlock": true,
-	    "capslock": true,
-	    "format": "{name} {icon}",
-	    "format-icons": {
-		"locked": "",
-		"unlocked": ""
-	    }
-	},
-	"pulseaudio": {
-	    // "scroll-step": 1, // %, can be a float
-	    "format": "{volume}% {icon} {format_source}",
-	    "format-bluetooth": "{volume}% {icon} {format_source}",
-	    "format-bluetooth-muted": " {icon} {format_source}",
-	    "format-muted": " {format_source}",
-	    "format-source": "{volume}% ",
-	    "format-source-muted": "",
-	    "format-icons": {
-		"headphone": "",
-		"hands-free": "",
-		"headset": "",
-		"phone": "",
-		"portable": "",
-		"car": "",
-		"default": ["", "", ""]
-	    },
-	    "on-click": "pavucontrol"
-	},
-	"battery": {
-	    "states": {
-		// "good": 95,
-		"warning": 30,
-		"critical": 15
-	    },
-	    "format": "{capacity}% {icon}",
-	    "format-charging": "{capacity}% ",
-	    "format-plugged": "{capacity}% ",
-	    "format-alt": "{time} {icon}",
-	    // "format-good": "", // An empty format will hide the module
-	    // "format-full": "",
-	    "format-icons": ["", "", "", "", ""]
-	},
-	"battery#bat1": {
-	    "bat": "BAT1"
-	},
-	"battery#bat2": {
-	    "bat": "BAT2"
-	}
+        "layer": "bottom",
+        "position": "bottom",
+        "height": 30,
+        "spacing": 4,
+        "modules-left": [
+            "user"
+        ],
+        "modules-center": [
+            "wlr/taskbar"
+        ],
+        "modules-right": [
+            "cpu",
+            "temperature",
+            "memory",
+            "disk",
+            "backlight",
+            "keyboard-state",
+            "pulseaudio",
+            "battery",
+            "battery#bat1",
+            "battery#bat2"
+        ],
+        "wlr/taskbar": {
+            "format": "{icon}",
+            "icon-size": 14,
+            "icon-theme": "Numix-Circle",
+            "tooltip-format": "{title}",
+            "on-click": "activate",
+            "on-click-middle": "close",
+            "ignore-list": [
+                "foot"
+            ]
+        },
+        "cpu": {
+            "format": "{usage}% ",
+            "tooltip": false
+        },
+        "temperature": {
+            // "thermal-zone": 2,
+            // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+            "critical-threshold": 80,
+            // "format-critical": "{temperatureC}°C {icon}",
+            "format": "{temperatureC}°C {icon}",
+            "format-icons": ["", "", ""]
+        },
+        "memory": {
+            "format": "{}% "
+        },
+        "disk": {
+            "interval": 30,
+            "format": "Only {percentage_free}% remaining on {path}",
+            "path": "/"
+        },
+        "backlight": {
+            // "device": "acpi_video1",
+            "format": "{percent}% {icon}",
+            "format-icons": ["", "", "", "", "", "", "", "", ""]
+        },
+        "keyboard-state": {
+            "numlock": true,
+            "capslock": true,
+            "format": "{name} {icon}",
+            "format-icons": {
+                "locked": "",
+                "unlocked": ""
+            }
+        },
+        "pulseaudio": {
+            // "scroll-step": 1, // %, can be a float
+            "format": "{volume}% {icon} {format_source}",
+            "format-bluetooth": "{volume}% {icon} {format_source}",
+            "format-bluetooth-muted": " {icon} {format_source}",
+            "format-muted": " {format_source}",
+            "format-source": "{volume}% ",
+            "format-source-muted": "",
+            "format-icons": {
+                "headphone": "",
+                "hands-free": "",
+                "headset": "",
+                "phone": "",
+                "portable": "",
+                "car": "",
+                "default": ["", "", ""]
+            },
+            "on-click": "pavucontrol"
+        },
+        "battery": {
+            "states": {
+                // "good": 95,
+                "warning": 30,
+                "critical": 15
+            },
+            "format": "{capacity}% {icon}",
+            "format-charging": "{capacity}% ",
+            "format-plugged": "{capacity}% ",
+            "format-alt": "{time} {icon}",
+            // "format-good": "", // An empty format will hide the module
+            // "format-full": "",
+            "format-icons": ["", "", "", "", ""]
+        },
+        "battery#bat1": {
+            "bat": "BAT1"
+        },
+        "battery#bat2": {
+            "bat": "BAT2"
+        }
     }
 ]
