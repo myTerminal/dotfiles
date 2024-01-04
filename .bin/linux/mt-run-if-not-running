@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+exists_p=$(pgrep ${1})
+
+if ! [ ${exists_p} ]; then
+    ${1}
+fi
