@@ -3,5 +3,5 @@
 exists_p=$(pgrep ${1})
 
 if ! [ ${exists_p} ]; then
-    ${1}
+    ${1} &
 fi

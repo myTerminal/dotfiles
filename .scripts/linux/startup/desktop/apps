@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-~/.bin/linux/mt-run-if-not-running pCloud &
+~/.bin/linux/mt-run-if-not-running pCloud
 
 if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
-    ~/.bin/linux/mt-run-if-not-running mako &
+    ~/.bin/linux/mt-run-if-not-running mako
 fi
