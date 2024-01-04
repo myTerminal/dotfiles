@@ -46,6 +46,10 @@
     border-right: 2px solid #323232;
 }
 
+#window {
+    padding: 0 10px;
+}
+
 #idle_inhibitor,
 #network,
 #clock,
