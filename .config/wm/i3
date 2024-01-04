@@ -2,6 +2,58 @@ include ~/.config/wm/common
 
 set $mod Mod4
 
+# Define names for default workspaces for which we configure key bindings later on
+set $ws1 "1: Home"
+set $ws2 "2: People"
+set $ws3 "3: Code"
+set $ws4 "4: Web"
+set $ws5 "5: Files"
+set $ws6 "6: Play"
+set $ws7 "7: Studio"
+set $ws8 "8: Misc"
+set $ws9 "9: Emails"
+set $ws10 "10: Auth"
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# Assign programs to workspaces
+assign [class="Steam"] $ws1
+assign [class="SchildiChat"] $ws2
+assign [class="Emacs"] $ws3
+assign [class="Brave-browser"] $ws4
+assign [class="Thunar"] $ws5
+assign [class="Clementine"] $ws6
+assign [class="vlc"] $ws6
+assign [class="Darktable"] $ws7
+assign [class="Gimp"] $ws7
+assign [class="Audacity"] $ws7
+assign [class="obs"] $ws7
+assign [class="Blender"] $ws7
+assign [class="Thunderbird"] $ws9
+assign [class="keepassxc"] $ws10
+
 # Define colors
 set $c_primary_lightest "#83d0c9"
 set $c_primary_light "#009688"
