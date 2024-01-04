@@ -70,7 +70,7 @@
         ],
         "wlr/taskbar": {
             "format": "{icon}",
-            "icon-size": 14,
+            "icon-size": 20,
             "icon-theme": "Numix-Circle",
             "tooltip-format": "{title}",
             "on-click": "activate",
