@@ -1,3 +1,4 @@
+
 @keyframes blink-warning {
     70% {
         color: white;
@@ -36,10 +37,16 @@
 }
 
 #user {
-    padding: 0 10px;
+    padding-left: 10px;
 }
 
-#mode,
+#custom-hostname {
+    margin: 3px 0;
+    padding: 0 10px;
+    border-right: 2px solid #323232;
+}
+
+#idle_inhibitor,
 #network,
 #clock,
 #tray,
@@ -53,7 +60,7 @@
     border-left: 2px solid #323232;
 }
 
-#mode,
+#idle_inhibitor,
 #network,
 #clock,
 #tray,
@@ -73,8 +80,8 @@
     background: #ff8800;
     color: #ffffff;
     font-weight: bold;
-    border-top: 2px solid white;
-    padding-bottom: 2px;
+    border: 2px solid white;
+    padding: 0 10px;
 }
 
 #window {
@@ -104,10 +111,6 @@
 
 #network.disconnected {
     color: orange;
-}
-
-#clock {
-    font-weight: bold;
 }
 
 #cpu.warning {
