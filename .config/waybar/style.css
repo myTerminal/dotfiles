@@ -35,17 +35,25 @@
     font-size: 13pt;
 }
 
+#user {
+    padding: 0 10px;
+}
+
 #mode,
 #network,
 #clock,
-#cpu,
+#tray,
+#taskbar,
 #temperature,
+#cpu,
 #memory,
+#disk,
+#backlight,
 #pulseaudio,
-#battery,
-#tray {
-    padding-left: 10px;
-    padding-right: 10px;
+#battery {
+    margin: 3px 0;
+    padding: 0 10px;
+    border-left: 2px solid #323232;
 }
 
 #mode {
