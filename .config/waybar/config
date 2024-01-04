@@ -57,8 +57,8 @@
             "wlr/taskbar"
         ],
         "modules-right": [
-            "cpu",
             "temperature",
+            "cpu",
             "memory",
             "disk",
             "backlight",
@@ -79,10 +79,6 @@
                 "foot"
             ]
         },
-        "cpu": {
-            "format": " {usage}%",
-            "tooltip": false
-        },
         "temperature": {
             // "thermal-zone": 2,
             // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
@@ -91,8 +87,12 @@
             "format": "{icon} {temperatureC}°C",
             "format-icons": ["", "", ""]
         },
+        "cpu": {
+            "format": " {usage}%",
+            "tooltip": false
+        },
         "memory": {
-            "format": " {}%"
+            "format": " {}%"
         },
         "disk": {
             "interval": 30,
