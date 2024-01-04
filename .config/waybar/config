@@ -96,8 +96,8 @@
         },
         "disk": {
             "interval": 30,
-            "format": "Only {percentage_free}% remaining on {path}",
-            "path": "/"
+            "format": " {path}: {percentage_used}% (Free: {free})",
+	    "path": "/"
         },
         "backlight": {
             // "device": "acpi_video1",
