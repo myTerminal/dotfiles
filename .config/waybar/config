@@ -28,10 +28,10 @@
             }
         },
         "network": {
-            "format-wifi": "{essid} ({signalStrength}%) ",
-            "format-ethernet": "{ipaddr}/{cidr} ",
-            "tooltip-format": "{ifname} via {gwaddr} ",
-            "format-linked": "{ifname} (No IP) ",
+            "format-wifi": " {essid} ({signalStrength}%)",
+            "format-ethernet": " {ipaddr}/{cidr}",
+            "tooltip-format": " {ifname} via {gwaddr}",
+            "format-linked": " {ifname} (No IP)",
             "format-disconnected": "Disconnected ⚠",
             "format-alt": "{ifname}: {ipaddr}/{cidr}"
         },
@@ -80,19 +80,19 @@
             ]
         },
         "cpu": {
-            "format": "{usage}% ",
+            "format": " {usage}%",
             "tooltip": false
         },
         "temperature": {
             // "thermal-zone": 2,
             // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
             "critical-threshold": 80,
-            // "format-critical": "{temperatureC}°C {icon}",
-            "format": "{temperatureC}°C {icon}",
+            // "format-critical": "{icon} {temperatureC}°C",
+            "format": "{icon} {temperatureC}°C",
             "format-icons": ["", "", ""]
         },
         "memory": {
-            "format": "{}% "
+            "format": " {}%"
         },
         "disk": {
             "interval": 30,
@@ -101,13 +101,13 @@
         },
         "backlight": {
             // "device": "acpi_video1",
-            "format": "{percent}% {icon}",
+            "format": "{icon} {percent}%",
             "format-icons": ["", "", "", "", "", "", "", "", ""]
         },
         "keyboard-state": {
             "numlock": true,
             "capslock": true,
-            "format": "{name} {icon}",
+            "format": "{icon} {name}",
             "format-icons": {
                 "locked": "",
                 "unlocked": ""
@@ -115,11 +115,11 @@
         },
         "pulseaudio": {
             // "scroll-step": 1, // %, can be a float
-            "format": "{volume}% {icon} {format_source}",
-            "format-bluetooth": "{volume}% {icon} {format_source}",
-            "format-bluetooth-muted": " {icon} {format_source}",
+            "format": "{icon} {volume}% {format_source}",
+            "format-bluetooth": "{icon} {volume}%  {format_source}",
+            "format-bluetooth-muted": " {icon}  {format_source}",
             "format-muted": " {format_source}",
-            "format-source": "{volume}% ",
+            "format-source": " {volume}%",
             "format-source-muted": "",
             "format-icons": {
                 "headphone": "",
@@ -138,10 +138,10 @@
                 "warning": 30,
                 "critical": 15
             },
-            "format": "{capacity}% {icon}",
-            "format-charging": "{capacity}% ",
-            "format-plugged": "{capacity}% ",
-            "format-alt": "{time} {icon}",
+            "format": "{icon} {capacity}%",
+            "format-charging": " {capacity}%",
+            "format-plugged": " {capacity}%",
+            "format-alt": "{icon} {time}",
             // "format-good": "", // An empty format will hide the module
             // "format-full": "",
             "format-icons": ["", "", "", "", ""]
