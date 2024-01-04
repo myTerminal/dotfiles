@@ -8,7 +8,7 @@ fi
 
 # Start bluetooth applet for Wayland
 if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
-    blueman-applet &
+    ~/.bin/linux/mt-run-if-not-running blueman-applet &
 fi
 
 # Set volume to 70%
