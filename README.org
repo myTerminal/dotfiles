@@ -136,7 +136,7 @@ To start the setup, run the following command in a terminal running bash: (provi
 
 *** Legend
 
-=*= - in-built, =**= - through web-client, ^ - through XWayland
+=*= - in-built, =**= - through web-client, =^= - through XWayland
 
 ** Background
 
