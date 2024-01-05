@@ -124,13 +124,15 @@ To start the setup, run the following command in a terminal running bash: (provi
 
 *** Fonts
 
-- Font-Awesome
-- Open Sans
-- Inconsolata
-- Roboto Mono
-- Droid
-- Fira Code
-- Liberation
+| Font         |
+|--------------|
+| [[https://github.com/FortAwesome/Font-Awesome][Font Awesome]] |
+| [[https://github.com/googlefonts/opensans][Open Sans]]    |
+| [[https://github.com/googlefonts/inconsolata][Inconsolata]]  |
+| [[https://github.com/googlefonts/RobotoMono][Roboto Mono]]  |
+| [[https://github.com/grays/droid-fonts][Droid]]        |
+| [[https://github.com/tonsky/FiraCode/releases/download/5.2/Fira_Code_v5.2.zip][Fira Code]]    |
+| [[https://github.com/liberationfonts/liberation-fonts/files/6418984/liberation-fonts-ttf-2.1.4.tar.gz][Liberation]]   |
 
 *** Legend
 
