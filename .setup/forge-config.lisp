@@ -141,7 +141,10 @@
  (
   "Perform a few package-dependent config"
   nil
-  (:void ("sudo usermod -aG libvirt ismail"))
+  (:void ("sudo usermod -aG libvirt ismail"
+          "xfconf-query --channel thunar -p /default-view -s ThunarDetailsView"
+          "xfconf-query --channel thunar -p /last-location-bar -s ThunarLocationButtons"
+          "xfconf-query --channel thunar -p /last-show-hidden -s true"))
   )
  (
   "Set up Docker"
