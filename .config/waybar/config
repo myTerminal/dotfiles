@@ -1,0 +1,171 @@
+[
+    {
+        "layer": "bottom",
+        "position": "top",
+        "height": 30,
+        "spacing": 4,
+        "modules-left": [
+            "sway/workspaces",
+            "sway/mode"
+        ],
+        "modules-center": [
+            "sway/window"
+        ],
+        "modules-right": [
+            "idle_inhibitor",
+            "network",
+            "clock#kolkata",
+            "clock",
+            "tray"
+        ],
+        "sway/mode": {
+            "format": "<span style=\"italic\">{}</span>"
+        },
+        "idle_inhibitor": {
+            "format": "{icon}",
+            "format-icons": {
+                "activated": "",
+                "deactivated": ""
+            }
+        },
+        "network": {
+            "format-wifi": " {essid} ({signalStrength}%)   {bandwidthUpBytes},  {bandwidthDownBytes}",
+            "format-ethernet": " {ipaddr}/{cidr}   {bandwidthUpBytes},  {bandwidthDownBytes}",
+            "tooltip-format": " {ifname} via {gwaddr}",
+            "format-linked": " {ifname} (No IP)",
+            "format-disconnected": "⚠ Disconnected",
+            "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        },
+        "clock": {
+            "format": "Local  {:%H:%M}",
+            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+            "format-alt": "Local  {:%Y-%m-%d}"
+        },
+        "clock#kolkata": {
+            "timezone": "Asia/Kolkata",
+            "format": "Kolkata  {:%H:%M}"
+        },
+        "tray": {
+            "icon-size": 24,
+            "spacing": 10
+        }
+    },
+    {
+        "layer": "bottom",
+        "position": "bottom",
+        "height": 30,
+        "spacing": 4,
+        "modules-left": [
+            "user",
+            "custom/hostname",
+            "wlr/taskbar"
+        ],
+        "modules-center": [],
+        "modules-right": [
+            "temperature",
+            "cpu#load",
+            "cpu#usage",
+            "memory",
+            "disk",
+            "backlight",
+            "keyboard-state",
+            "pulseaudio",
+            "battery",
+            "battery#bat1",
+            "battery#bat2"
+        ],
+        "user": {
+            "format": "{user}"
+        },
+        "custom/hostname": {
+            "exec": "cat /etc/hostname",
+            "format": "@ {}"
+        },
+        "wlr/taskbar": {
+            "format": "{icon}",
+            "icon-size": 20,
+            "icon-theme": "Numix-Circle",
+            "tooltip-format": "{title}",
+            "on-click": "activate",
+            "on-click-middle": "close",
+            "ignore-list": [
+                "foot"
+            ]
+        },
+        "temperature": {
+            "critical-threshold": 70,
+            "format": "{icon} {temperatureC}°C",
+            "format-critical": " {temperatureC}°C",
+            "format-icons": ["", "", ""]
+        },
+        "cpu#load": {
+            "format": " {load}",
+            "tooltip": false
+        },
+        "cpu#usage": {
+            "format": " {usage}% @ {avg_frequency}GHz",
+            "tooltip": false
+        },
+        "memory": {
+            "format": " {}%"
+        },
+        "disk": {
+            "interval": 30,
+            "format": " {path}: {percentage_used}% (Free: {free})",
+	    "path": "/"
+        },
+        "backlight": {
+            // "device": "acpi_video1",
+            "format": "{icon} {percent}%",
+            "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+        },
+        "keyboard-state": {
+            "numlock": true,
+            "capslock": true,
+            "format": "{icon} {name}",
+            "format-icons": {
+                "locked": "",
+                "unlocked": ""
+            }
+        },
+        "pulseaudio": {
+            // "scroll-step": 1, // %, can be a float
+            "format": "{icon} {volume}% {format_source}",
+            "format-bluetooth": "{icon} {volume}%  {format_source}",
+            "format-bluetooth-muted": " {icon}  {format_source}",
+            "format-muted": " {format_source}",
+            "format-source": " {volume}%",
+            "format-source-muted": "",
+            "format-icons": {
+                "headphone": "",
+                "hands-free": "",
+                "headset": "",
+                "phone": "",
+                "portable": "",
+                "car": "",
+                "default": ["", "", ""]
+            },
+            "on-click": "pavucontrol"
+        },
+        "battery": {
+            "states": {
+                // "good": 95,
+                "warning": 30,
+                "critical": 15
+            },
+            "format": "{icon} {capacity}% ({power}W)",
+            "format-charging": " {capacity}% ({power}W)",
+            "format-plugged": " {capacity}%",
+            "format-alt": "{icon} {time}",
+            // "format-good": "", // An empty format will hide the module
+            // "format-full": "",
+            "format-icons": ["", "", "", "", ""]
+        },
+        "battery#bat1": {
+            "bat": "BAT1"
+        },
+        "battery#bat2": {
+            "bat": "BAT2"
+        }
+    }
+]

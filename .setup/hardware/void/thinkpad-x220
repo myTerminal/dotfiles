@@ -5,10 +5,15 @@
 # from https://wiki.archlinux.org/title/Lenovo_ThinkPad_X220
 
 # Set display scaling for the smaller screen
-. ~/.setup/hardware/configure-dpi 72
+. ~/.setup/hardware/configure-dpi-for-xorg 72
+. ~/.setup/hardware/configure-dpi-for-wayland 0.75
 
-# Improve touchpad experience for xorg
+# Configure default screen brightness
+. ~/.setup/hardware/configure-default-display-brightness 30%
+
+# Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "SynPS/2 Synaptics TouchPad" 0.5
+. ~/.setup/hardware/configure-touchpad-for-wayland "2:7:SynPS/2_Synaptics_TouchPad"
 
 # Install tlp and more for power management
 . ~/.setup/hardware/void/other/configure-power-management tlp acpi_call-dkms tp_smapi-dkms powertop

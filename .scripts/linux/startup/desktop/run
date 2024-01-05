@@ -8,6 +8,10 @@ ${BASE_PATH}/input &
 ${BASE_PATH}/audio &
 ${BASE_PATH}/apps &
 
-if [ -f ~/.device-startup-tweaks ]; then
-    . ~/.device-startup-tweaks
+if [ -f ~/.configure-input-devices ]; then
+    . ~/.configure-input-devices
+fi
+
+if [ -f ~/.configure-output-devices ]; then
+    . ~/.configure-output-devices
 fi

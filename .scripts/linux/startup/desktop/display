@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
 
-# Execute device-specific scripts
-case "${HOSTNAME}" in
-    polaris)
-        brightnessctl s 30%
-        ;;
-
-    *)
-        # Nothing here yet
-        ;;
-esac
-
 ~/.bin/linux/mt-set-random-wallpaper
+
+if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+    gsettings set org.gnome.desktop.interface gtk-theme 'Bazik_Dark_Red'
+    gsettings set org.gnome.desktop.interface icon-theme 'Obsidian-Teal'
+    gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Original-Classic'
+    gsettings set org.gnome.desktop.interface font-name 'Open Sans 10'
+fi

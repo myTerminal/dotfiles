@@ -13,8 +13,9 @@ sudo xbps-install -Sy sof-firmware
 # Enable Dolby Atmos Effect through pulseeffects
 . ~/.setup/hardware/void/other/configure-pulseeffects
 
-# Improve touchpad experience for xorg
+# Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "SynPS/2 Synaptics TouchPad" 1.0
+. ~/.setup/hardware/configure-touchpad-for-wayland "2:7:SynPS/2_Synaptics_TouchPad"
 
 # Install tlp and more for power management
 . ~/.setup/hardware/void/other/configure-power-management tlp acpi_call-dkms powertop

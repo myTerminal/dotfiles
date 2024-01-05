@@ -11,17 +11,6 @@
 
 set $mod Mod4
 
-# Define colors
-set $c_primary_lightest "#83d0c9"
-set $c_primary_light "#009688"
-set $c_primary_dark "#005555"
-set $c_mono_lightest "#ffffff"
-set $c_mono_light "#cccccc"
-set $c_mono_dark "#555555"
-set $c_darkest "#000000"
-set $c_warning "#ff8800"
-set $c_error "#ff3333"
-
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:Open Sans, FontAwesome 13
@@ -41,11 +30,6 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessUp exec brightnessctl s +5%
 bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
 
-# Bind touchpad controls
-exec xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Tap Action" 0, 0, 0, 0, 1, 3, 2
-exec xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Tap Time" 150
-exec xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Scrolling" 1, 1
-
 # Media player controls
 bindsym XF86AudioPlay exec clementine --play-pause
 bindsym XF86AudioPause exec clementine --pause
@@ -55,34 +39,8 @@ bindsym XF86AudioPrev exec clementine --previous
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# move tiling windows via drag & drop by left-clicking into the title bar,
-# or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag modifier titlebar
-
-# start a terminal
-bindsym $mod+Return exec urxvt
-
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# start dmenu (a program launcher)
-bindsym $mod+d exec \
-        dmenu_run \
-        -nf $c_mono_light \
-        -nb $c_darkest \
-        -sf $c_darkest \
-        -sb $c_primary_lightest \
-        -fn "LiberationMono:pixelsize=48"
-
-# Bind rofi 'windows' menu
-bindsym $mod+z exec \
-        rofi \
-        -show window
-
-# Bind rofi 'run' menu
-bindsym $mod+x exec \
-        rofi \
-        -show run
 
 # change focus
 bindsym $mod+j focus left
@@ -134,49 +92,10 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-# Define names for default workspaces for which we configure key bindings later on.
-# We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: Home"
-set $ws2 "2: People"
-set $ws3 "3: Code"
-set $ws4 "4: Web"
-set $ws5 "5: Files"
-set $ws6 "6: Play"
-set $ws7 "7: Studio"
-set $ws8 "8: Misc"
-set $ws9 "9: Emails"
-set $ws10 "10: Auth"
-
-# switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
-
-# move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7
-bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
-
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -248,82 +167,11 @@ mode $mode_adjust {
 
 bindsym $mod+Shift+p mode $mode_adjust
 
-# Set window colors
-# class                 border                 bgcolor                text               indicator     child_border
-client.focused          $c_primary_light       $c_primary_lightest    $c_darkest         $c_warning    $c_primary_lightest
-client.focused_inactive $c_primary_light       $c_primary_light       $c_darkest         $c_darkest    $c_primary_light
-client.unfocused        $c_darkest             $c_mono_dark           $c_mono_light      $c_darkest    $c_darkest
-client.urgent           $c_darkest             $c_error               $c_mono_lightest   $c_darkest    $c_mono_lightest
-client.placeholder      $c_darkest             $c_darkest             $c_primary_light   $c_darkest    $c_darkest
-client.background       $c_darkest
-
 # Enable focus warping when a window opens, regardless of the workspace
 focus_on_window_activation focus
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status -c ~/.config/i3/i3status-1.conf
-        position top
-        separator_symbol " | "
-        strip_workspace_numbers yes
-
-        colors {
-                background $c_darkest
-                statusline $c_mono_light
-                separator $c_mono_dark
-
-                # class               border                 background             text
-                focused_workspace     $c_primary_lightest    $c_primary_lightest    $c_darkest
-                active_workspace      $c_primary_light       $c_primary_light       $c_darkest
-                inactive_workspace    $c_mono_dark           $c_darkest             $c_mono_light
-                urgent_workspace      $c_mono_lightest       $c_error               $c_mono_lightest
-                binding_mode          $c_darkest             $c_warning             $c_darkest
-        }
-}
-
-bar {
-        status_command i3status -c ~/.config/i3/i3status-2.conf
-        position bottom
-        separator_symbol " | "
-        workspace_buttons no
-        tray_output none
-
-        colors {
-                background $c_darkest
-                statusline $c_mono_light
-                separator $c_mono_dark
-
-                # class               border                 background             text
-                focused_workspace     $c_primary_lightest    $c_primary_lightest    $c_darkest
-                active_workspace      $c_primary_light       $c_primary_light       $c_darkest
-                inactive_workspace    $c_mono_dark           $c_darkest             $c_mono_light
-                urgent_workspace      $c_mono_lightest       $c_error               $c_mono_lightest
-                binding_mode          $c_darkest             $c_warning             $c_darkest
-        }
-}
-
-# Use picom as a compositor
-exec picom -i 0.95 -m 1.0 -D 0
-
 # Set auto back and forth
 workspace_auto_back_and_forth yes
-
-# Assign programs to workspaces
-assign [class="Steam"] $ws1
-assign [class="SchildiChat"] $ws2
-assign [class="Emacs"] $ws3
-assign [class="Brave-browser"] $ws4
-assign [class="Thunar"] $ws5
-assign [class="Clementine"] $ws6
-assign [class="vlc"] $ws6
-assign [class="Darktable"] $ws7
-assign [class="Gimp"] $ws7
-assign [class="Audacity"] $ws7
-assign [class="obs"] $ws7
-assign [class="Blender"] $ws7
-assign [class="Thunderbird"] $ws9
-assign [class="KeePassXC"] $ws10
 
 # Bind mouse events
 bindsym $mod+button1 fullscreen toggle
@@ -333,13 +181,6 @@ bindsym --release $mod+button3 kill
 # Bind moving through workspaces
 bindsym $mod+Control+Right workspace next
 bindsym $mod+Control+Left workspace prev
-
-# Set other key-bindings
-bindsym $mod+Shift+Control+e exec i3-msg exit
-
-# Set key-bindings for flameshot
-bindsym $mod+Shift+comma exec flameshot gui
-bindsym $mod+Shift+period exec flameshot full -p ~/Desktop
 
 # Bind custom switch scripts
 bindsym $mod+Shift+w exec ~/.bin/linux/mt-set-random-wallpaper

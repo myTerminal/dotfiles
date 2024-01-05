@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
-# Pick a random wallpaper from the collection
-fd . ~/_store/Mobile-Media/Wallpapers/ -t f -0 | shuf -n1 -z | xargs -0 feh --bg-fill
+if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+    fd . ~/_store/Mobile-Media/Wallpapers/ -t f -0 | shuf -n1 -z | xargs -0 swaybg -m fill -i
+else
+    fd . ~/_store/Mobile-Media/Wallpapers/ -t f -0 | shuf -n1 -z | xargs -0 feh --bg-fill
+fi

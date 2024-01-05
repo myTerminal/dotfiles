@@ -31,7 +31,7 @@ switch-power-mode-with-systemd () {
             ;;
 
         "quit")
-            i3-msg exit
+            mt-session-quit
             ;;
 
         "sleep" | "suspend")
@@ -80,7 +80,7 @@ switch-power-mode-with-runit () {
             ;;
 
         "quit")
-            i3-msg exit
+            mt-session-quit
             ;;
 
         "sleep" | "suspend")

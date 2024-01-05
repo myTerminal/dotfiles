@@ -1,3 +1,11 @@
 #!/usr/bin/env bash
 
-startx ~/.xinitrc $@
+case "${mt_value=}" in
+    x | x11 | xorg)
+        startx ~/.xinitrc
+        ;;
+
+    *)
+        XDG_SESSION_TYPE=wayland dbus-run-session sway -c ~/.config/wm/sway
+        ;;
+esac

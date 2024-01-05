@@ -1,0 +1,170 @@
+
+@keyframes blink-warning {
+    70% {
+        color: white;
+    }
+
+    to {
+        color: white;
+        background-color: orange;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+      color: white;
+    }
+
+    to {
+        color: white;
+        background-color: red;
+    }
+}
+
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#waybar {
+    background: #000000;
+    color: #dddddd;
+    font-family: "Open Sans";
+    font-size: 13pt;
+}
+
+#user {
+    padding-left: 10px;
+}
+
+#custom-hostname {
+    margin: 3px 0;
+    padding: 0 10px;
+    border-right: 2px solid #323232;
+}
+
+#window {
+    padding: 0 10px;
+}
+
+#idle_inhibitor,
+#network,
+#clock,
+#tray,
+#temperature,
+#cpu,
+#memory,
+#disk,
+#backlight,
+#pulseaudio,
+#battery {
+    border-left: 2px solid #323232;
+}
+
+#idle_inhibitor,
+#network,
+#clock,
+#tray,
+#taskbar,
+#temperature,
+#cpu,
+#memory,
+#disk,
+#backlight,
+#pulseaudio,
+#battery {
+    margin: 3px 0;
+    padding: 0 10px;
+}
+
+#mode {
+    background: #ff8800;
+    color: #ffffff;
+    font-weight: bold;
+    border: 2px solid white;
+    padding: 0 10px;
+}
+
+#window {
+    font-weight: bold;
+}
+
+#workspaces button {
+    border-top: 2px solid transparent;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #323232;
+    color: #cccccc;
+}
+
+#workspaces button.focused {
+    border-color: #83d0c9;
+    background-color: #83d0c9;
+    color: #000000;
+}
+
+#workspaces button.urgent {
+    border-color: #ffffff;
+    background-color: #c9545d;
+    color: #ffffff;
+}
+
+#network.disconnected {
+    color: orange;
+}
+
+#cpu.warning {
+    color: orange;
+}
+
+#cpu.critical {
+    color: red;
+}
+
+#temperature.critical {
+    color: red;
+}
+
+#memory {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#memory.warning {
+    color: orange;
+}
+
+#memory.critical {
+    color: red;
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+#battery {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.warning {
+    color: orange;
+}
+
+#battery.critical {
+    color: red;
+}
+
+#battery.warning.discharging {
+    animation-name: blink-warning;
+    animation-duration: 3s;
+}
+
+#battery.critical.discharging {
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}

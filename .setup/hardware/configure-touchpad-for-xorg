@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Install xinput (just in case)
-sudo xbps-install -Sy xinput
-
 # Enable libinput events for touchpad
 sudo mkdir /etc/X11/xorg.conf.d
 echo "
@@ -20,4 +17,4 @@ xinput set-prop '${1}' 'libinput Accel Speed' ${2}
 xinput set-prop '${1}' 'libinput Click Method Enabled' 0 1
 xinput set-prop '${1}' 'libinput Tapping Enabled' 1
 xinput set-prop '${1}' 'libinput Natural Scrolling Enabled' 1
-" > ~/.device-startup-tweaks
+" >> ~/.configure-input-devices

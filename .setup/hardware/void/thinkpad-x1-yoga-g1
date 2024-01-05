@@ -6,13 +6,15 @@
 # https://wiki.archlinux.org/title/Lenovo_ThinkPad_X1_Yoga_(Gen_1)
 
 # Set display scaling
-. ~/.setup/hardware/configure-dpi 144
+. ~/.setup/hardware/configure-dpi-for-xorg 144
+. ~/.setup/hardware/configure-dpi-for-wayland 1.5
 
 # Fix audio input and output
 sudo xbps-install -Sy alsa-firmware sof-firmware
 
-# Improve touchpad experience for xorg
+# Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "SynPS/2 Synaptics TouchPad" 1.0
+. ~/.setup/hardware/configure-touchpad-for-wayland "2:7:SynPS/2_Synaptics_TouchPad"
 
 # Install tlp and more for power management
 . ~/.setup/hardware/void/other/configure-power-management tlp acpi_call-dkms powertop

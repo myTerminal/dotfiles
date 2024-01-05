@@ -44,6 +44,8 @@
   ("exfat-utils" (:mac))
   ("android-tools" (:cask "android-platform-tools"))
   "rlwrap"
+  ("sed" (:brew "gnu-sed"))
+  "jq"
   "neofetch"
   "wget"
   "curl"
@@ -56,11 +58,22 @@
   ("onboard" (:mac))
   ("picom" (:mac))
   ("i3" (:xbps "i3" "i3status" "i3lock") (:mac))
+  ("sway" (:mac))
+  ("Waybar" (:mac))
+  ("xrandr" (:mac))
+  ("wlr-randr" (:mac))
   ("xss-lock" (:mac))
+  ("swaylock" (:mac))
   ("feh" (:mac))
+  ("swaybg" (:mac))
   ("rofi" (:mac))
+  ("fuzzel" (:mac))
   ("rxvt-unicode" (:cask "alacritty"))
+  ("foot" (:mac))
   ("xsel" (:mac))
+  ("wl-clipboard" (:mac))
+  ("dunst" (:mac))
+  ("mako" (:mac))
   ("udiskie" (:mac))
   ("gparted" (:mac))
   ("thunar" (:xbps "Thunar") (:mac))
@@ -93,6 +106,9 @@
   ("yt-dlp" (:void) (:mac))
   ("kodi" (:cask "kodi"))
   ("flameshot" (:mac))
+  ("grim" (:mac))
+  ("slurp" (:mac))
+  ("swappy" (:mac))
   ("obs" (:cask "obs"))
   ("peek" (:cask "licecap"))
   ("keymon" (:void) (:cask "keycastr"))
@@ -125,7 +141,10 @@
  (
   "Perform a few package-dependent config"
   nil
-  (:void ("sudo usermod -aG libvirt ismail"))
+  (:void ("sudo usermod -aG libvirt ismail"
+          "xfconf-query --channel thunar -p /default-view -s ThunarDetailsView"
+          "xfconf-query --channel thunar -p /last-location-bar -s ThunarLocationButtons"
+          "xfconf-query --channel thunar -p /last-show-hidden -s true"))
   )
  (
   "Set up Docker"
