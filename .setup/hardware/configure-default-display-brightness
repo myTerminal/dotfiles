@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+echo "
+brightnessctl s ${1}
+" >> ~/.configure-output-devices
