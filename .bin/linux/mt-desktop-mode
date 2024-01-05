@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-case "${mt_value=}" in
+case "${1}" in
     x | x11 | xorg)
         startx ~/.xinitrc
         ;;
