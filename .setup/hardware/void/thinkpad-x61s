@@ -8,6 +8,9 @@
 . ~/.setup/hardware/configure-dpi-for-xorg 72
 . ~/.setup/hardware/configure-dpi-for-wayland 0.75
 
+# Configure default screen brightness
+. ~/.setup/hardware/configure-default-display-brightness 100%
+
 # Install tlp and more for power management
 . ~/.setup/hardware/void/other/configure-power-management tlp acpi_call-dkms tp_smapi-dkms powertop
 

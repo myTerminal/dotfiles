@@ -1,16 +1,5 @@
 #!/usr/bin/env bash
 
-# Execute device-specific scripts
-case "${HOSTNAME}" in
-    polaris)
-        brightnessctl s 30%
-        ;;
-
-    *)
-        # Nothing here yet
-        ;;
-esac
-
 ~/.bin/linux/mt-set-random-wallpaper
 
 if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
