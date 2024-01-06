@@ -56,8 +56,7 @@
         "height": 30,
         "spacing": 4,
         "modules-left": [
-            "user",
-            "custom/hostname",
+            "custom/session",
             "wlr/taskbar"
         ],
         "modules-center": [],
@@ -74,12 +73,9 @@
             "battery#bat1",
             "battery#bat2"
         ],
-        "user": {
-            "format": "{user}"
-        },
-        "custom/hostname": {
-            "exec": "cat /etc/hostname",
-            "format": "@ {}"
+        "custom/session": {
+            "exec": "echo ${USER} @ $(cat /etc/hostname)",
+            "format": "{}"
         },
         "wlr/taskbar": {
             "format": "{icon}",

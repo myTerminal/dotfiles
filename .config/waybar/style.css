@@ -36,11 +36,7 @@
     font-size: 13pt;
 }
 
-#user {
-    padding-left: 10px;
-}
-
-#custom-hostname {
+#custom-session {
     margin: 3px 0;
     padding: 0 10px;
     border-right: 2px solid #323232;
