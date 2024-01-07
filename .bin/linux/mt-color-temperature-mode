@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+# Detect display and set prompter
+. ~/.assets/libs/bash/select-prompter
+
+# Check for supplied argument
+if [ "${1}" ]; then
+    # Use the supplied argument
+    mt_mode="${1}"
+else
+    # Prompt for a value
+    mt_mode=$(echo -e "day\nnight" | ${mt_prompter})
+fi
+
+# Execute the appropriate command based on choice
+case "${mt_mode}" in
+    n | night )
+        mt_message="Night mode"
+        echo "${mt_message}"
+        notify-send "${mt_message}"
+        if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+            gammastep -O 4500 &
+        else
+            sct 4500
+        fi
+        ;;
+
+    *)
+        mt_message="Day mode"
+        echo "${mt_message}"
+        notify-send "${mt_message}"
+        if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+            gammastep -x &
+        else
+            sct
+        fi
+        ;;
+esac

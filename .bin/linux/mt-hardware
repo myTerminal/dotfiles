@@ -4,7 +4,7 @@
 . ~/.assets/libs/bash/select-prompter
 
 # Prompt for a choice
-mt_menu=$(echo -e "display orientation\nbluetooth\nbrightness\nproject screen\ngpu" | ${mt_prompter})
+mt_menu=$(echo -e "display orientation\nbluetooth\nbrightness\ncolor-temperature\nproject screen\ngpu" | ${mt_prompter})
 
 # Spawn the appropriate menu based on choice
 case "${mt_menu}" in
@@ -18,6 +18,10 @@ case "${mt_menu}" in
 
     "brightness")
         mt-brightness-mode
+        ;;
+
+    "color-temperature")
+        mt-color-temperature-mode
         ;;
 
     "project screen")
