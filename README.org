@@ -146,6 +146,16 @@ What you see now is an attempt to keep only what is relevant to my primary confi
 
 There still is some inseparable residue related to other platforms. This might either eventually disappear, or otherwise bring in more complexity in the future, leading to another project branching out of this one.
 
+** Open Gaps
+
+- Missing alternative for [[https://github.com/phw/peek][peek]] in Wayland
+- [[https://launchpad.net/onboard][onboard]] doesn't work in Wayland
+- No screen recording tools in Wayland
+- Broken sharing in Wayland
+- No way to set Numlock for Wayland
+- Wallpaper doesn't randomize after Wayland load
+- Need to set shell colors in Wayland?
+
 # Local Variables:
 # eval: (visual-line-mode)
 # End:
