@@ -74,7 +74,7 @@ To start the setup, run the following command in a terminal running bash: (provi
 | Display server           | [[https://www.x.org][Xorg]]                             | --                               | (native)                        |
 | Display drivers          | (machine-dependent)              | (machine-dependent)              | (stock)                         |
 | Display manager          | --                               | --                               | (native)                        |
-| Screen color temperature | [[https://flak.tedunangst.com/post/sct-set-color-temperature][sct]]                              | ??                               | (native)                        |
+| Screen color temperature | [[https://flak.tedunangst.com/post/sct-set-color-temperature][sct]]                              | [[https://gitlab.com/chinstrap/gammastep][gammastep]]                        | (native)                        |
 | Onscreen keyboard        | [[https://launchpad.net/onboard][onboard]]                          | ??                               | --                              |
 | Compositor               | [[https://github.com/yshui/picom][picom]]                            | --                               | (native)                        |
 | Graphical environments   | [[https://github.com/i3/i3][i3]]                               | [[https://swaywm.org][sway]]                             | (native)                        |

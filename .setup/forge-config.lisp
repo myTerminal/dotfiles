@@ -55,6 +55,7 @@
   ("xorg" (:mac))
   ("numlockx" (:mac))
   ("sct" (:mac))
+  ("gammastep" (:mac))
   ("onboard" (:mac))
   ("picom" (:mac))
   ("i3" (:xbps "i3" "i3status" "i3lock") (:mac))
