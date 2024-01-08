@@ -20,6 +20,14 @@ case "${command}" in
         tar -xvzf "${arguments}"
         ;;
 
+    unrar)
+        unrar e "${arguments}"
+        ;;
+
+    un7zip)
+        7zip e "${arguments}"
+        ;;
+
     *)
         echo "Not implemented!"
         ;;
