@@ -23,6 +23,8 @@
   "tig"
   ("zip" (:mac))
   ("unzip" (:mac))
+  "7zip"
+  "unrar"
   "btop"
   ("psmisc" (:mac))
   ("udisks2" (:cask "mounty"))
