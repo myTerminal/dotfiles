@@ -20,6 +20,10 @@ case "${command}" in
         tar -xvzf "${arguments}"
         ;;
 
+    ungzip)
+        gz -dk "${arguments}"
+        ;;
+
     unrar)
         unrar e "${arguments}"
         ;;
