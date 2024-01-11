@@ -28,7 +28,7 @@
   - Element/Schildi
   - Keepass
   - Thunderbird
-  - Thunar
+  - Thunar (may not be needed anymore)
   - Darktable
   - Steam
   - pCloud
