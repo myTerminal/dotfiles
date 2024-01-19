@@ -2,11 +2,10 @@
 
 if ! [[ $DISPLAY ]]; then
     mt_prompter="fzf"
-    exit
-fi
-
-if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
-    mt_prompter="fuzzel -d"
 else
-    mt_prompter="rofi -dmenu"
+    if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+        mt_prompter="fuzzel -d"
+    else
+        mt_prompter="rofi -dmenu"
+    fi
 fi
