@@ -2,3 +2,6 @@
 
 # Set display scaling
 . ~/.setup/hardware/configure-dpi-for-xorg 72
+
+# Install Nvidia drivers
+. ~/.setup/hardware/void/other/nvidia-latest
