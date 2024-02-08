@@ -184,6 +184,10 @@ Add an entry for SWAP
 
 ## Setting up bootloader
 
+### Blacklist nouveau
+
+Add an entry `blacklist nouveau` in file `/usr/lib/modprobe.d/blacklist.conf`
+
 ### Setting up encryption parameters for boot
 
 Create a key
