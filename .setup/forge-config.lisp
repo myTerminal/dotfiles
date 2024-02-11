@@ -324,12 +324,7 @@
   "Create convenience soft-links"
   t
   (:all ("ln -s ~/_workspace/kitchen ~/_kitchen"
-         "ln -s ~/_workspace/github ~/_github"
-         "ln -s ~/_workspace/github/myTerminal.github.io ~/_portfolio-data"
-         "ln -s ~/_workspace/all/myterminal-web-lp ~/_portfolio-lp"
-         "ln -s ~/_store/Documents ~/_documents"
-         "ln -s ~/_store/Documents/notes ~/_notes"
-         "ln -s ~/_store/Mobile-Media ~/_mobile-media"))
+         "ln -s ~/_workspace/github ~/_github"))
   )
  (
   "Re-generate symlinks for binaries"
