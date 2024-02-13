@@ -1,38 +1,54 @@
 #!/usr/bin/env bash
 
 command=${1}
-arguments=${@:2}
 
-case "${command}" in
-    zip)
-        zip -r "${2}.zip" $arguments
-        ;;
+if [ "${command}" == "do" ]; then
+    operation=${2}
+    arguments=${@:3}
+    filename="${arguments%%.*}"
 
-    unzip)
-        unzip "${arguments}"
-        ;;
+    case "${operation}" in
+        zip)
+            zip -r "${filename}.zip" $arguments
+            ;;
 
-    tar)
-        tar -cvzf "${2}.tar.gz" $arguments
-        ;;
+        tar)
+            tar -cvzf "${filename}.tar.gz" $arguments
+            ;;
 
-    untar)
-        tar -xvzf "${arguments}"
-        ;;
+        *)
+            echo "Not implemented!"
+            ;;
+    esac
+elif [ "${command}" == "undo" ]; then
+     arguments=${@:2}
+     extension=${arguments#*.}
 
-    ungzip)
-        gz -dk "${arguments}"
-        ;;
+     case "${extension}" in
+         zip)
+             unzip "${arguments}"
+             ;;
 
-    unrar)
-        unrar e "${arguments}"
-        ;;
+         tar)
+             tar -xvzf "${arguments}"
+             ;;
 
-    un7zip)
-        7zip e "${arguments}"
-        ;;
+         tar.gz)
+             gz -dk "${arguments}"
+             ;;
 
-    *)
-        echo "Not implemented!"
-        ;;
-esac
+         rar)
+             unrar e "${arguments}"
+             ;;
+
+         7z)
+             7zip e "${arguments}"
+             ;;
+
+         *)
+             echo "Not implemented!"
+             ;;
+     esac
+else
+    echo "Not implemented!"
+fi
