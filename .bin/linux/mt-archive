@@ -34,7 +34,11 @@ elif [ "${command}" == "undo" ]; then
              ;;
 
          tar.gz)
-             gz -dk "${arguments}"
+             gzip -dk "${arguments}"
+             ;;
+
+         gz)
+             gzip -dk "${arguments}"
              ;;
 
          rar)
