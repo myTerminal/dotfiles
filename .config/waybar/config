@@ -15,6 +15,7 @@
             "idle_inhibitor",
             "network",
             "clock#kolkata",
+            "clock#chicago",
             "clock",
             "tray"
         ],
@@ -37,13 +38,18 @@
             "format-alt": "{ifname}: {ipaddr}/{cidr}"
         },
         "clock": {
-            "format": "Local  {:%H:%M}",
-            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-            "format-alt": "Local  {:%Y-%m-%d}"
+            "format": "Local  {:%H:%M %Y-%m-%d}",
+            "tooltip-format": "<tt><big>{calendar}</big></tt>"
         },
         "clock#kolkata": {
             "timezone": "Asia/Kolkata",
-            "format": "Kolkata  {:%H:%M}"
+            "format": "K ",
+            "format-alt": "Kolkata  {:%H:%M}"
+        },
+        "clock#chicago": {
+            "timezone": "America/Chicago",
+            "format": "C ",
+            "format-alt": "Chicago  {:%H:%M}"
         },
         "tray": {
             "icon-size": 24,
