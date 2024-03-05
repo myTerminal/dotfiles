@@ -38,7 +38,7 @@
             "format-alt": "{ifname}: {ipaddr}/{cidr}"
         },
         "clock": {
-            "format": "Local  {:%H:%M %Y-%m-%d}",
+            "format": "Local  {:%Y-%m-%d; %H:%M}",
             "tooltip-format": "<tt><big>{calendar}</big></tt>"
         },
         "clock#kolkata": {
