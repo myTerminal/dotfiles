@@ -8,15 +8,15 @@
 . ~/.setup/hardware/configure-dpi-for-xorg 120
 . ~/.setup/hardware/configure-dpi-for-wayland 1.25 eDP-1
 
-# # Fix audio input and output
-# sudo xbps-install -Sy sof-firmware
+# Fix audio input and output
+sudo xbps-install -Sy sof-firmware
 
 # # Improve touchpad experience
-# . ~/.setup/hardware/configure-touchpad-for-xorg "SYNA8004:00 06CB:CD8B Touchpad" 0.75
-# . ~/.setup/hardware/configure-touchpad-for-wayland "2:7:SYNA8004:00 06CB:CD8B Touchpad"
+. ~/.setup/hardware/configure-touchpad-for-xorg "ELAN0670:00 04F3:3150 Touchpad" 1
+. ~/.setup/hardware/configure-touchpad-for-wayland "1267:12624:ELAN0670:00_04F3:3150_Touchpad"
 
-# # Install tlp and more for power management
-# . ~/.setup/hardware/void/other/configure-power-management tlp acpi_call-dkms powertop
+# Install tlp and more for power management
+. ~/.setup/hardware/void/other/configure-power-management tlp acpi_call-dkms powertop
 
-# # Configure fingerprint sensor
-# . ~/.setup/hardware/configure-fingerprints
+# Configure fingerprint sensor
+. ~/.setup/hardware/configure-fingerprints
