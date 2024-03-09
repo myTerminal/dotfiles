@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# This script is an add-on to `~/.setup/forge-config.lisp` containing
+# device-specific setup for 2021 Lenovo ThinkPad X1 Nano Gen 1 and mostly
+# follows steps from https://wiki.archlinux.org/title/Lenovo_ThinkPad_X1_Nano
+
+# Set display scaling for the smaller (but high-res) screen
+. ~/.setup/hardware/configure-dpi-for-xorg 120
+. ~/.setup/hardware/configure-dpi-for-wayland 1.25 eDP-1
+
+# # Fix audio input and output
+# sudo xbps-install -Sy sof-firmware
+
+# # Improve touchpad experience
+# . ~/.setup/hardware/configure-touchpad-for-xorg "SYNA8004:00 06CB:CD8B Touchpad" 0.75
+# . ~/.setup/hardware/configure-touchpad-for-wayland "2:7:SYNA8004:00 06CB:CD8B Touchpad"
+
+# # Install tlp and more for power management
+# . ~/.setup/hardware/void/other/configure-power-management tlp acpi_call-dkms powertop
+
+# # Configure fingerprint sensor
+# . ~/.setup/hardware/configure-fingerprints
