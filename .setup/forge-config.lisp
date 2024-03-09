@@ -252,7 +252,7 @@
           "sudo ln -s /etc/sv/sshd /var/service"
           "sudo ln -s /etc/sv/avahi-daemon /var/service"))
   (:mac ("brew services start syncthing"
-         "brew servies start avahi-daemon"))
+         "brew services start avahi-daemon"))
   )
  (
   "Perform visual tweaks (non-working)"
