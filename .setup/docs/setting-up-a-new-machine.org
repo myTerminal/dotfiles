@@ -8,7 +8,7 @@
   4) /(Optional)/ MSFT Reserved
   5) /(Optional)/ Windows NTFS
 - /(Optional)/ Install Windows with absolute basic settings and minimal software, run updates a few tens of times
-  - Install and configure Brave
+  - Install and configure Firefox
 - Install Linux
   - If installing from within a LIVE environment, create an SSH key and add it to my GitHub and GitLab account
 - Init [[https://github.com/myTerminal/dotfiles][dotfiles]] using [[../../bootstrap][the bootstrap script]] and trigger forge
@@ -24,7 +24,7 @@
 - Configure Syncthing and fetch data
 - Create symlinks from `~/_store/Applications` under `/usr/bin`
 - Configure software and services
-  - Brave
+  - Firefox
   - Element/Schildi
   - Keepass
   - Thunderbird
@@ -39,7 +39,7 @@
   - Home network as a new device
   - GitHub and GitLab (SSH keys)
   - Syncthing as a node
-  - Sync device for Brave
+  - Sync device for Firefox
   - Element/Schildi for Matrix
   - KeePass database as a key
 - Create maintenance tasks in TickTick

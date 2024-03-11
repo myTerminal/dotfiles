@@ -42,7 +42,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 assign [class="Steam"] $ws1
 assign [class="SchildiChat"] $ws2
 assign [class="Emacs"] $ws3
-assign [class="Brave-browser"] $ws4
+assign [class="Firefox"] $ws4
 assign [app_id="[Tt]hunar"] $ws5
 assign [class="Clementine"] $ws6
 assign [class="vlc"] $ws6

@@ -14,7 +14,6 @@
     ("ytdlp" . "*yt-dlp")
     ("balena-etcher" . "*balenaEtcher-*-x64.AppImage")
     ("unetbootin" . "*unetbootin-linux64-*.bin")
-    ("brave-browser" . "*brave-browser/brave")
     ("zulip-desktop" . "*Zulip-*-x86_64.AppImage")
     ("urserver" . "*urserver-*/urserver")
     ("vtm" . "*vtm")

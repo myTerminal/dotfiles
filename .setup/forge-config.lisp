@@ -82,7 +82,7 @@
   ("thunar" (:xbps "Thunar") (:mac))
   ("gvfs" (:mac))
   ("syncthing" (:xbps "syncthing-gtk"))
-  ("brave" (:void) (:cask "brave-browser"))
+  ("firefox" (:cask "firefox"))
   ("keepassxc" (:cask "keepasxc"))
   ("authy" (:void) (:cask "authy"))
   ("thunderbird" (:mac))
@@ -338,12 +338,6 @@
           "xfconf-query --channel thunar -p /default-view -s ThunarDetailsView"
           "xfconf-query --channel thunar -p /last-location-bar -s ThunarLocationButtons"
           "xfconf-query --channel thunar -p /last-show-hidden -s true"))
-  )
- (
-  "Set Brave as the default web-browser"
-  t
-  (:void ("sudo cp ~/.assets/brave.desktop /usr/share/applications"
-          "xdg-settings set default-web-browser brave.desktop"))
   )
  (
   "Tag machine with ~/.mt-tag"

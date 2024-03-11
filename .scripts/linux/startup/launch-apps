@@ -5,8 +5,7 @@ command=$1
 case "${1}" in
     e | express )
         exec emacs & disown
-        exec brave & disown
-        exec brave-browser & disown
+        exec firefox & disown
         exec keepassxc & disown
         ;;
 
@@ -17,8 +16,7 @@ case "${1}" in
     *)
         exec emacs & disown
         exec schildi & disown
-        exec brave & disown
-        exec brave-browser & disown
+        exec firefox & disown
         exec thunar & disown
         exec thunderbird & disown
         exec keepassxc & disown
