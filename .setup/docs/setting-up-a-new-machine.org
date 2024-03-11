@@ -24,9 +24,19 @@
 - Configure Syncthing and fetch data
 - Create symlinks from `~/_store/Applications` under `/usr/bin`
 - Configure software and services
-  - Firefox
-  - Element/Schildi
   - Keepass
+  - Firefox
+    - Login to Firefox account
+    - Configure containers using Multi-account containers extension
+    - Set "Device Name" under "Sync"
+    - Set custom search engine to Brave search
+    - Login to other extensions
+    - Configure toolbar
+    - Restore Cryptowallet on [[https://metamask.io][MetaMask]]
+    - Set up connection with KeePassXC
+    - Restore session from one of the other machines
+    - Login to frequent websites in appropriate containers
+  - Element/Schildi
   - Thunderbird
   - Thunar (may not be needed anymore)
   - Darktable
@@ -39,9 +49,9 @@
   - Home network as a new device
   - GitHub and GitLab (SSH keys)
   - Syncthing as a node
+  - KeePass database as a key
   - Sync device for Firefox
   - Element/Schildi for Matrix
-  - KeePass database as a key
 - Create maintenance tasks in TickTick
 - Add entry in *machines* spreadsheet
 
