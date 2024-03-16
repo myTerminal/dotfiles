@@ -340,6 +340,11 @@
           "xfconf-query --channel thunar -p /last-show-hidden -s true"))
   )
  (
+  "Set Firefox as the default web-browser"
+  t
+  (:void ("xdg-settings set default-web-browser firefox.desktop"))
+  )
+ (
   "Tag machine with ~/.mt-tag"
   t
   (:all ("touch ~/.mt-tag"))
