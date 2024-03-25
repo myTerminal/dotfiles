@@ -112,7 +112,8 @@
   ("grim" (:mac))
   ("slurp" (:mac))
   ("swappy" (:mac))
-  ("obs" (:cask "obs"))
+  ("obs" (:flatpak ("com.obsproject.Studio" "obs")) (:cask "obs"))
+  ("obs-plugin-waveform" (:flatpak ("com.obsproject.Studio.Plugin.waveform" "obs-plugin-waveform")) (:mac))
   ("peek" (:cask "licecap"))
   ("keymon" (:void) (:cask "keycastr"))
   ("balena-etcher" (:void) (:cask "balenaetcher"))
@@ -133,6 +134,7 @@
   nil
   (:void ("~/.bin/linux/mt-flatpak install postman com.getpostman.Postman"
           "~/.bin/linux/mt-flatpak install schildi chat.schildi.desktop"
+          "~/.bin/linux/mt-flatpak install obs-studio com.obsproject.Studio"
           "~/.bin/linux/mt-flatpak install qFlipper one.flipperzero.qFlipper"))
   )
  (
