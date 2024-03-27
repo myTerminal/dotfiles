@@ -2,8 +2,8 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/ismail/.gtkrc-2.0.mine"
-gtk-theme-name="Bazik_Dark_Red"
-gtk-icon-theme-name="Obsidian-Teal"
+gtk-theme-name="Obsidian-2-Gray"
+gtk-icon-theme-name="Obsidian-Sand"
 gtk-font-name="Open Sans Light 11"
 gtk-cursor-theme-name="Bibata-Original-Classic"
 gtk-cursor-theme-size=48

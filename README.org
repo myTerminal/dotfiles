@@ -84,7 +84,7 @@ To start the setup, run the following command in a terminal running bash: (provi
 | Application launcher     | [[https://github.com/davatorium/rofi][Rofi]]                             | [[https://codeberg.org/dnkl/fuzzel][fuzzel]]                           | (native)                        |
 | Dock                     | --                               | --                               | (native)                        |
 | Desktop widgets          | [pending]                        | [pending]                        | (native)                        |
-| Desktop theme            | [[https://www.opencode.net/ju1464/Bazik][Bazik]]                            | [[https://www.opencode.net/ju1464/Bazik][Bazik]]                            | (native)                        |
+| Desktop theme            | [[https://github.com/madmaxms/theme-obsidian-2][Obsidian]]                         | [[https://github.com/madmaxms/theme-obsidian-2][Obsidian]]                         | (native)                        |
 | Icon packs               | [[https://github.com/madmaxms/iconpack-obsidian][Obsidian]]                         | [[https://github.com/madmaxms/iconpack-obsidian][Obsidian]]                         | (native)                        |
 | Mouse cursor             | [[https://github.com/ful1e5/Bibata_Cursor][Bibata]]                           | [[https://github.com/ful1e5/Bibata_Cursor][Bibata]]                           | (native)                        |
 | Lockscreen               | [[https://github.com/i3/i3lock][i3lock]], [[https://bitbucket.org/raymonad/xss-lock][xs-lock]]                  | [[https://github.com/swaywm/swaylock][swaylock]]                         | (native)                        |

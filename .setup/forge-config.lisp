@@ -174,8 +174,9 @@
   "Install Graphical Theming: GTK theme"
   t
   (:void ("mkdir -p ~/.local/share/themes"
-          "git clone https://www.opencode.net/ju1464/Bazik.git ~/_temp"
-          "mv ~/_temp/GTK-Gnome/Bazik* ~/.local/share/themes/"
+          "git clone https://github.com/madmaxms/theme-obsidian-2.git ~/_temp"
+          "git -C ~/_temp checkout gray"
+          "mv ~/_temp/Obsidian-2-Gray ~/.local/share/themes/"
           "rm -rf ~/_temp"))
   )
  (
