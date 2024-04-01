@@ -4,10 +4,6 @@
 # device-specific setup for 2012 Lenovo ThinkPad W530 and mostly follows steps
 # from https://wiki.archlinux.org/title/Lenovo_ThinkPad_W530
 
-# Set display scaling for the smaller screen
-. ~/.setup/hardware/configure-dpi-for-xorg 80
-. ~/.setup/hardware/configure-dpi-for-wayland 0.85 LVDS-2
-
 # Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "SynPS/2 Synaptics TouchPad" 0.5
 . ~/.setup/hardware/configure-touchpad-for-wayland "2:7:SynPS/2_Synaptics_TouchPad"
