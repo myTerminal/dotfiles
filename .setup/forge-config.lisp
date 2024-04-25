@@ -82,6 +82,7 @@
   ("thunar" (:xbps "Thunar") (:mac))
   ("gvfs" (:mac))
   ("syncthing" (:xbps "syncthing-gtk"))
+  ("meld" (:cask "meld"))
   ("firefox" (:cask "firefox"))
   ("keepassxc" (:cask "keepasxc"))
   ("authy" (:void) (:cask "authy"))
