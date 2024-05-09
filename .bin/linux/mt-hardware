@@ -4,7 +4,7 @@
 . ~/.assets/libs/bash/select-prompter
 
 # Prompt for a choice
-mt_menu=$(echo -e "bluetooth\nbrightness\ndisplay orientation\ncolor-temperature\nproject screen\ngpu" | ${mt_prompter})
+mt_menu=$(echo -e "bluetooth\nbrightness\ndisplay orientation\ncolor-temperature\nproject screen\ngpu\nrestart network" | ${mt_prompter})
 
 # Spawn the appropriate menu based on choice
 case "${mt_menu}" in
@@ -30,6 +30,10 @@ case "${mt_menu}" in
 
     "gpu")
         mt-gpu-mode
+        ;;
+
+    "restart network")
+        mt-network-reset
         ;;
 
     *)
