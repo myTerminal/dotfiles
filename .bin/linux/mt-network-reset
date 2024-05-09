@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Detect init system
+. ~/.assets/libs/bash/detect-init-system
+
+# Use the appropriate implementation based on the active init system
+case "${mt_init_system}" in
+    SystemD)
+        sudo systemctl restart NetworkManager.service
+        ;;
+
+    Runit)
+        sudo sv restart NetworkManager
+        ;;
+
+    *)
+        echo "Not implemented!"
+        ;;
+esac
