@@ -113,7 +113,7 @@ switch-power-mode-with-runit () {
     esac
 }
 
-# Use the appropriate implement based on the active init system
+# Use the appropriate implementation based on the active init system
 case "${mt_init_system}" in
     SystemD)
         switch-power-mode-with-systemd
