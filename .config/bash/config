@@ -20,8 +20,16 @@ fi
 alias cl="clear"
 alias gt="clear && git"
 alias mt-sync-github="mt-sync-projects ${MT_PATH_WORKSPACE_GITHUB}"
-alias lo="lsd -l --group-dirs first"
-alias po="bat"
+if [ $(command -v lsd) ]; then
+    alias lo="lsd -l --group-dirs first"
+else
+    alias lo="exa -la --group-directories-first"
+fi
+if [ $(command -v bat) ]; then
+    alias po="bat"
+else
+    alias po="batcat"
+fi
 
 # Load configs for the current OS
 if [ $(uname) = 'Linux' ]; then

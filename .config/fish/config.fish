@@ -27,8 +27,16 @@ end
 alias cl="clear"
 alias gt="clear; git"
 alias mt-sync-github="mt-sync-projects $MT_PATH_WORKSPACE_GITHUB"
-alias lo="lsd -l --group-dirs first"
-alias po="bat"
+if type -q lsd
+   alias lo="lsd -l --group-dirs first"
+else
+   alias lo="exa -la --group-directories-first"
+end
+if type -q bat
+   alias po="bat"
+else
+   alias po="batcat"
+end
 
 # Load configs for the current OS
 if test (uname) = "Linux"
