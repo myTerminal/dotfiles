@@ -7,7 +7,7 @@ case "${mt_platform}" in
         sudo pacman -Syu
         ;;
 
-    Debian)
+    Debian | Pop)
         sudo apt update -y && sudo apt upgrade -y
         ;;
 
