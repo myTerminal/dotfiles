@@ -397,7 +397,6 @@
           "xfconf-query --channel thunar -p /last-location-bar -s ThunarLocationButtons"
           "xfconf-query --channel thunar -p /last-show-hidden -s true"))
   (:pop ("sudo usermod -aG libvirt ismail"
-         "sudo ln -s \"$(which fdfind)\" \"$(which fdfind | xargs readlink -f | xargs dirname)/fd\""
          "sudo ln -s \"$(which batcat)\" \"$(which batcat | xargs readlink -f | xargs dirname)/bat\""))
   )
  (
