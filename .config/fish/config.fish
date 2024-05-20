@@ -7,6 +7,7 @@ and . ~/.scripts/linux/startup/cli
 add-to-path ~/.bin
 
 # Update PATH for cargo(rust)
+add-to-path /usr/lib/cargo/bin
 add-to-path ~/.cargo/bin
 add-to-path ~/.cargo/env
 

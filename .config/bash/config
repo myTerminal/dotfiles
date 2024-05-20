@@ -4,7 +4,7 @@
 export PATH=$PATH:~/.bin
 
 # Update PATH for cargo(rust)
-export PATH=$PATH:$HOME/.cargo/bin:$HOME/.cargo/env
+export PATH=$PATH:/usr/lib/cargo/bin:$HOME/.cargo/bin:$HOME/.cargo/env
 
 # Set custom environment variables
 export MT_PATH_STORE=~/_store
