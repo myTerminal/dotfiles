@@ -171,7 +171,6 @@
   "Install Rust Toolchain"
   t
   (:void ("rustup-init --default-toolchain stable --profile default -y"))
-  (:pop ("rustup-init --default-toolchain stable --profile default -y"))
   (:mac ("rustup-init"))
   )
  (
