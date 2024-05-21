@@ -10,6 +10,8 @@ elif [ $(command -v pacman) ]; then
     mt_platform="Arch"
 elif [ $(command -v dnf) ]; then
     mt_platform="Fedora"
+elif [[ $(cat /etc/os-release | grep '^ID=' | cut -d '=' -f 2 | cut -d '"' -f 2) == "pop" ]]; then
+    mt_platform="Pop"
 elif [ $(command -v apt) ]; then
     mt_platform="Debian"
 fi
