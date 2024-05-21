@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# This script is an add-on to `~/.setup/forge-config.lisp` containing
+# device-specific setup for 2018 Lenovo ThinkPad X1 Tablet Gen 3
+
+# Install tlp and more for power management
+sudo apt install tlp powertop
+~/.bin/linux/mt-battery-set-charge-thresholds
+systemctl start tlp
