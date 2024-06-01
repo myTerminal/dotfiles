@@ -405,6 +405,16 @@
   (:pop ("xdg-settings set default-web-browser firefox.desktop"))
   )
  (
+  "Enable touch scrolling for Firefox"
+  t
+  (:void ("echo \"
+MOZ_USE_XINPUT2 DEFAULT=1
+\" | sudo tee -a /etc/security/pam_env.conf"))
+  (:pop ("echo \"
+MOZ_USE_XINPUT2 DEFAULT=1
+\" | sudo tee -a /etc/security/pam_env.conf"))
+  )
+ (
   "Tag machine with ~/.mt-tag"
   t
   (:all ("touch ~/.mt-tag"))
