@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 
 count=0
+projects=`ls -A $1`
+
+echo "Found $(ls -A $1 | wc -l) projects."
 
 cd $1
 
-for i in `ls -A $1`;
+for i in $projects;
 do
     if [ -d $i ]
     then
@@ -18,5 +21,5 @@ do
 done
 
 echo ""
-echo "Done updating" $count "projects"
+echo "Done updating" $count "projects."
 echo ""
