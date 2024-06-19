@@ -11,7 +11,7 @@
 # Configure default screen brightness
 . ~/.setup/hardware/configure-default-display-brightness 30%
 
-# Improve touchpad experience
+# Improve touchpad and trackpoint experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "SynPS/2 Synaptics TouchPad" 0.5
 . ~/.setup/hardware/configure-trackpoint-for-xorg "TPPS/2 IBM TrackPoint" 1
 . ~/.setup/hardware/configure-touchpad-for-wayland "2:7:SynPS/2_Synaptics_TouchPad"
