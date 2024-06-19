@@ -13,7 +13,9 @@
 
 # Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "SynPS/2 Synaptics TouchPad" 0.5
+. ~/.setup/hardware/configure-trackpoint-for-xorg "TPPS/2 IBM TrackPoint" 1
 . ~/.setup/hardware/configure-touchpad-for-wayland "2:7:SynPS/2_Synaptics_TouchPad"
+. ~/.setup/hardware/configure-trackpoint-for-wayland "2:10:TPPS/2_IBM_TrackPoint"
 
 # Install tlp and more for power management
 . ~/.setup/hardware/void/other/configure-power-management tlp acpi_call-dkms tp_smapi-dkms powertop

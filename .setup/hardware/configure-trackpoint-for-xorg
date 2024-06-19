@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Generate tweaks script
+echo "
+xinput set-prop '${1}' 'libinput Accel Speed' ${2}
+" >> ~/.configure-input-devices

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Generate tweaks script
+echo "
+swaymsg input '${1}' pointer_accel 1
+" >> ~/.configure-input-devices
