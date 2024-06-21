@@ -293,7 +293,11 @@
           "sudo ln -s /etc/sv/virtlogd /var/service"
           "sudo ln -s /etc/sv/bluetoothd /var/service"
           "sudo ln -s /etc/sv/sshd /var/service"
-          "sudo ln -s /etc/sv/avahi-daemon /var/service"))
+          "sudo ln -s /etc/sv/avahi-daemon /var/service"
+          "mkdir ~/.services"
+          "cp -R ~/.assets/services/syncthing ~/.services/"
+          "sudo cp -R ~/.assets/services/runsvdir-ismail /etc/sv/"
+          "sudo ln -s /etc/sv/runsvdir-ismail /var/service"))
   (:pop ("systemctl --user enable syncthing.service"
          "systemctl --user start syncthing.service"
          "systemctl enable libvirtd.service"
