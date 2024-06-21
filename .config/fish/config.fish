@@ -1,7 +1,7 @@
 # Run startup script(s), for a login shell
 status is-login
 and test -f ~/.mt-tag
-and . ~/.scripts/linux/startup/cli
+and ~/.scripts/linux/startup/cli
 
 # Update PATH for custom shell scripts
 add-to-path ~/.bin
