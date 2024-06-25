@@ -45,6 +45,7 @@
   ("mtools" (:mac))
   ("exfat-utils" (:apt "exfatprogs") (:mac))
   ("android-tools" (:apt "android-platform-tools-base") (:cask "android-platform-tools"))
+  ("cronie" (:pop) (:mac))
   "rlwrap"
   ("sed" (:brew "gnu-sed"))
   "jq"
@@ -294,6 +295,7 @@
           "sudo ln -s /etc/sv/bluetoothd /var/service"
           "sudo ln -s /etc/sv/sshd /var/service"
           "sudo ln -s /etc/sv/avahi-daemon /var/service"
+          "sudo ln -s /etc/sv/cronie /var/service"
           "mkdir ~/.services"
           "cp -R ~/.assets/services/syncthing ~/.services/"
           "sudo cp -R ~/.assets/services/runsvdir-ismail /etc/sv/"
