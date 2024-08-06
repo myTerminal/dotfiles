@@ -14,6 +14,7 @@
     ("ytdlp" . "*yt-dlp")
     ("balena-etcher" . "*balenaEtcher-*-x64.AppImage")
     ("unetbootin" . "*unetbootin-linux64-*.bin")
+    ("ollama" . "*ollama")
     ("zulip-desktop" . "*Zulip-*-x86_64.AppImage")
     ("urserver" . "*urserver-*/urserver")
     ("vtm" . "*vtm")
@@ -40,9 +41,9 @@
                                           "sudo ln -s "
                                           "$(find "
                                           root-path
-                                          " -iwholename "
+                                          " -iwholename '"
                                           (cdr pair)
-                                          ")"
+                                          "')"
                                           " "
                                           target-bin
                                           "/"
