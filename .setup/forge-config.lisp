@@ -54,6 +54,7 @@
   "curl"
   ("avahi" (:apt "avahi-daemon"))
   ("openssh" (:apt "ssh") (:mac))
+  ("ollama" (:cask "ollama") (:void) (:pop))
   ("xdg-utils" (:mac))
   ("xorg" (:pop) (:mac))
   ("numlockx" (:pop) (:mac))
@@ -311,7 +312,8 @@
          "systemctl enable avahi-daemon"
          "systemctl start avahi-daemon"))
   (:mac ("brew services start syncthing"
-         "brew services start avahi-daemon"))
+         "brew services start avahi-daemon"
+         "brew services start ollama"))
   )
  (
   "Perform visual tweaks (non-working)"
@@ -393,6 +395,16 @@
   "Re-generate symlinks for binaries"
   t
   (:all ("~/.setup/regenerate-binary-symlinks"))
+  )
+ (
+  "Set up Ollama"
+  nil
+  (:void ("sudo cp -R ~/.assets/services/ollama-runit ~/.services/ollama"
+          "ollama pull zephyr"))
+  (:pop ("sudo cp ~/.assets/services/ollama-systemd /etc/systemd/system/ollama.service"
+         "systemctl enable ollama.service"
+         "systemctl start ollama.service"
+         "ollama pull zephyr"))
   )
  (
   "Perform a few package-dependent config"
