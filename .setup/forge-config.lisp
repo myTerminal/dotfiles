@@ -400,11 +400,11 @@
   "Set up Ollama"
   nil
   (:void ("sudo cp -R ~/.assets/services/ollama-runit ~/.services/ollama"
-          "ollama pull zephyr"))
+          "ollama pull llama3"))
   (:pop ("sudo cp ~/.assets/services/ollama-systemd /etc/systemd/system/ollama.service"
          "systemctl enable ollama.service"
          "systemctl start ollama.service"
-         "ollama pull zephyr"))
+         "ollama pull llama3"))
   )
  (
   "Perform a few package-dependent config"
