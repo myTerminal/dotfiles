@@ -399,7 +399,7 @@
  (
   "Set up Ollama"
   nil
-  (:void ("sudo cp -R ~/.assets/services/ollama-runit ~/.services/ollama"
+  (:void ("cp -R ~/.assets/services/ollama-runit ~/.services/ollama"
           "ollama pull llama3"))
   (:pop ("sudo cp ~/.assets/services/ollama-systemd /etc/systemd/system/ollama.service"
          "systemctl enable ollama.service"
