@@ -30,12 +30,12 @@
             }
         },
         "network": {
-            "format-wifi": " {essid} ({signalStrength}%)   {bandwidthUpBytes},  {bandwidthDownBytes}",
-            "format-ethernet": " {ipaddr}/{cidr}   {bandwidthUpBytes},  {bandwidthDownBytes}",
+            "format-wifi": " {essid} ({signalStrength}%)",
+            "format-ethernet": " {ipaddr}/{cidr}",
             "tooltip-format": " {ifname} via {gwaddr}",
             "format-linked": " {ifname} (No IP)",
             "format-disconnected": "⚠ Disconnected",
-            "format-alt": "{ifname}: {ipaddr}/{cidr}"
+            "format-alt": "{ifname}: {ipaddr}/{cidr}   {bandwidthUpBytes},  {bandwidthDownBytes}"
         },
         "clock": {
             "format": "Local  {:%Y-%m-%d; %H:%M}",
