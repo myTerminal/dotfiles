@@ -4,6 +4,9 @@
 # device-specific setup for 2012 Lenovo ThinkPad W530 and mostly follows steps
 # from https://wiki.archlinux.org/title/Lenovo_ThinkPad_W530
 
+# Set screen temperature for high-GAMUT screen
+. ~/.setup/hardware/configure-screen-color-temp 4500
+
 # Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "SynPS/2 Synaptics TouchPad" 0.5
 . ~/.setup/hardware/configure-touchpad-for-wayland "2:7:SynPS/2_Synaptics_TouchPad"
