@@ -13,8 +13,9 @@
   '(("pCloud" . "*pCloud")
     ("ytdlp" . "*yt-dlp")
     ("balena-etcher" . "*balenaEtcher-*-x64.AppImage")
-    ("unetbootin" . "*unetbootin-linux64-*.bin")
     ("ollama" . "*ollama")
+    ;; Extra software
+    ("unetbootin" . "*unetbootin-linux64-*.bin")
     ("zulip-desktop" . "*Zulip-*-x86_64.AppImage")
     ("urserver" . "*urserver-*/urserver")
     ("vtm" . "*vtm")
