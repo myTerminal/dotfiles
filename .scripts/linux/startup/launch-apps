@@ -5,7 +5,7 @@ command=$1
 case "${1}" in
     e | express )
         exec emacs & disown
-        exec firefox & disown
+        exec chromium & disown
         exec keepassxc & disown
         ;;
 
