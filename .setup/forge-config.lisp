@@ -86,6 +86,7 @@
   ("syncthing" (:xbps "syncthing-gtk") (:apt "syncthing-gtk"))
   ("meld" (:cask "meld"))
   ("firefox" (:cask "firefox"))
+  ("chromium" (:cask "chromium")
   ("keepassxc" (:cask "keepasxc"))
   ("thunderbird" (:mac))
   ("schildi" (:flatpak ("chat.schildi.desktop" "schildi")) (:cask "schildichat"))
