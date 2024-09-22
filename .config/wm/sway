@@ -39,6 +39,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Assign programs to workspaces
+assign [class="Logseq"] $ws1
 assign [class="Steam"] $ws1
 assign [class="SchildiChat"] $ws2
 assign [class="Emacs"] $ws3

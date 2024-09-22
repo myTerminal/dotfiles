@@ -38,6 +38,7 @@
     - Login to frequent websites in appropriate containers
   - Element/Schildi
   - Thunderbird
+  - LogSeq
   - Thunar (may not be needed anymore)
   - Darktable
   - Steam

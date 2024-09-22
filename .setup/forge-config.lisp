@@ -85,6 +85,7 @@
   ("gvfs" (:pop) (:mac))
   ("syncthing" (:xbps "syncthing-gtk") (:apt "syncthing-gtk"))
   ("meld" (:cask "meld"))
+  ("logseq" (:flatpak ("com.logseq.Logseq" "logseq")) (:cask "loqseq")))
   ("firefox" (:cask "firefox"))
   ("chromium" (:cask "chromium")
   ("keepassxc" (:cask "keepasxc"))
@@ -135,11 +136,13 @@
  (
   "Install flatpak packages the conventional way"
   nil
-  (:void ("~/.bin/linux/mt-flatpak install postman com.getpostman.Postman"
+  (:void ("~/.bin/linux/mt-flatpak install logseq com.logseq.Logseq"
+          "~/.bin/linux/mt-flatpak install postman com.getpostman.Postman"
           "~/.bin/linux/mt-flatpak install schildi chat.schildi.desktop"
           "~/.bin/linux/mt-flatpak install obs-studio com.obsproject.Studio"
           "~/.bin/linux/mt-flatpak install qFlipper one.flipperzero.qFlipper"))
-  (:pop ("~/.bin/linux/mt-flatpak install postman com.getpostman.Postman"
+  (:pop ("~/.bin/linux/mt-flatpak install logseq com.logseq.Logseq"
+         "~/.bin/linux/mt-flatpak install postman com.getpostman.Postman"
           "~/.bin/linux/mt-flatpak install schildi chat.schildi.desktop"
           "~/.bin/linux/mt-flatpak install obs-studio com.obsproject.Studio"
           "~/.bin/linux/mt-flatpak install qFlipper one.flipperzero.qFlipper"))
