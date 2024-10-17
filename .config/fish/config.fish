@@ -7,7 +7,6 @@ and ~/.scripts/linux/startup/cli
 add-to-path ~/.bin
 
 # Update PATH for cargo(rust)
-add-to-path /usr/lib/cargo/bin
 add-to-path ~/.cargo/bin
 add-to-path ~/.cargo/env
 
@@ -28,16 +27,8 @@ end
 alias cl="clear"
 alias gt="clear; git"
 alias mt-sync-github="mt-sync-projects $MT_PATH_WORKSPACE_GITHUB"
-if type -q lsd
-   alias lo="lsd -l --group-dirs first"
-else
-   alias lo="exa -la --group-directories-first"
-end
-if type -q bat
-   alias po="bat"
-else
-   alias po="batcat"
-end
+alias lo="lsd -l --group-dirs first"
+alias po="bat"
 
 # Load configs for the current OS
 if test (uname) = "Linux"

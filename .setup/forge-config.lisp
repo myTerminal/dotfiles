@@ -1,15 +1,15 @@
 (
- (:void :pop :mac)
+ (:void :mac)
  (
   ("cryptsetup" (:mac))
   "cryfs"
-  ("polkit" (:pop) (:mac))
-  ("dbus" (:pop) (:mac))
-  ("efibootmgr" (:pop) (:mac))
+  ("polkit" (:mac))
+  ("dbus" (:mac))
+  ("efibootmgr" (:mac))
   "tmux"
   ("fish" (:xbps "fish-shell"))
-  ("fd" (:apt "fd-find"))
-  ("lsd" (:apt "exa"))
+  "fd"
+  "lsd"
   "bat"
   "ncdu"
   "ripgrep"
@@ -29,61 +29,61 @@
   ("psmisc" (:mac))
   ("udisks2" (:cask "mounty"))
   ("network-manager" (:xbps "NetworkManager") (:mac))
-  ("bind-utils" (:apt "dnsutils") (:mac))
+  ("bind-utils" (:mac))
   "weechat"
   ("docker" (:brew "docker" "docker-machine"))
-  ("nodejs" (:apt "npm") (:brew "node"))
+  ("nodejs" (:brew "node"))
   "sbcl"
-  ("rustup" (:apt "cargo") (:brew "rustup-init"))
-  ("brightnessctl" (:pop) (:mac))
+  ("rustup" (:brew "rustup-init"))
+  ("brightnessctl" (:mac))
   ("acpi" (:mac))
   ("fprintd" (:mac))
-  ("chrony" (:pop) (:mac))
+  ("chrony" (:mac))
   ("btrfs-progs" (:mac))
   ("ntfs-3g" (:mac))
   ("dosfstools" (:mac))
   ("mtools" (:mac))
-  ("exfat-utils" (:apt "exfatprogs") (:mac))
-  ("android-tools" (:apt "android-platform-tools-base") (:cask "android-platform-tools"))
-  ("cronie" (:pop) (:mac))
+  ("exfat-utils" (:mac))
+  ("android-tools" (:cask "android-platform-tools"))
+  ("cronie" (:mac))
   "rlwrap"
   ("sed" (:brew "gnu-sed"))
   "jq"
   "neofetch"
   "wget"
   "curl"
-  ("avahi" (:apt "avahi-daemon"))
-  ("openssh" (:apt "ssh") (:mac))
-  ("ollama" (:cask "ollama") (:void) (:pop))
+  "avahi"
+  ("openssh" (:mac))
+  ("ollama" (:cask "ollama") (:void))
   ("xdg-utils" (:mac))
-  ("xorg" (:pop) (:mac))
-  ("numlockx" (:pop) (:mac))
-  ("sct" (:pop) (:mac))
-  ("gammastep" (:pop) (:mac))
-  ("onboard" (:pop) (:mac))
-  ("picom" (:pop) (:mac))
-  ("i3" (:xbps "i3" "i3status" "i3lock") (:pop) (:mac))
-  ("sway" (:pop) (:mac))
-  ("Waybar" (:pop) (:mac))
-  ("xrandr" (:pop) (:mac))
-  ("wlr-randr" (:pop) (:mac))
-  ("xss-lock" (:pop) (:mac))
-  ("swaylock" (:pop) (:mac))
-  ("feh" (:pop) (:mac))
-  ("swaybg" (:pop) (:mac))
+  ("xorg" (:mac))
+  ("numlockx" (:mac))
+  ("sct" (:mac))
+  ("gammastep" (:mac))
+  ("onboard" (:mac))
+  ("picom" (:mac))
+  ("i3" (:xbps "i3" "i3status" "i3lock") (:mac))
+  ("sway" (:mac))
+  ("Waybar" (:mac))
+  ("xrandr" (:mac))
+  ("wlr-randr" (:mac))
+  ("xss-lock" (:mac))
+  ("swaylock" (:mac))
+  ("feh" (:mac))
+  ("swaybg" (:mac))
   ("rofi" (:mac))
-  ("fuzzel" (:pop) (:mac))
-  ("rxvt-unicode" (:pop) (:cask "alacritty"))
-  ("foot" (:pop) (:mac))
+  ("fuzzel" (:mac))
+  ("rxvt-unicode" (:cask "alacritty"))
+  ("foot" (:mac))
   ("xsel" (:mac))
-  ("wl-clipboard" (:pop) (:mac))
-  ("dunst" (:pop) (:mac))
-  ("mako" (:pop) (:mac))
+  ("wl-clipboard" (:mac))
+  ("dunst" (:mac))
+  ("mako" (:mac))
   ("udiskie" (:mac))
   ("gparted" (:mac))
-  ("thunar" (:xbps "Thunar") (:pop) (:mac))
-  ("gvfs" (:pop) (:mac))
-  ("syncthing" (:xbps "syncthing-gtk") (:apt "syncthing-gtk"))
+  ("thunar" (:xbps "Thunar") (:mac))
+  ("gvfs" (:mac))
+  ("syncthing" (:xbps "syncthing-gtk"))
   ("meld" (:cask "meld"))
   ("logseq" (:flatpak ("com.logseq.Logseq" "logseq")) (:cask "loqseq"))
   ("firefox" (:cask "firefox"))
@@ -91,58 +91,53 @@
   ("keepassxc" (:cask "keepasxc"))
   ("thunderbird" (:mac))
   ("schildi" (:flatpak ("chat.schildi.desktop" "schildi")) (:cask "schildichat"))
-  ("pcloud" (:void) (:pop) (:mac))
+  ("pcloud" (:void) (:mac))
   ("transmission" (:xbps "transmission-gtk") (:cask "transmission"))
   ("postman" (:flatpak ("com.getpostman.Postman" "postman")) (:cask "postman"))
   ("virt-manager" (:xbps "qemu" "virt-manager"))
   ("libreoffice" (:cask "libreoffice"))
-  ("blueman" (:pop) (:mac))
+  ("blueman" (:mac))
   ("krita" (:cask "krita"))
   ("shotwell" (:cask "xnviewmp"))
   ("gimp" (:cask "gimp"))
   ("darktable" (:cask "darktable"))
   ("clementine" (:cask "clementine"))
   ("pavucontrol" (:mac))
-  ("gstreamer" (:xbps "gstreamer1") (:pop) (:mac))
-  ("pipewire" (:xbps "pipewire" "alsa-pipewire" "libspa-bluetooth") (:pop) (:mac))
-  ("easyeffects" (:pop) (:mac))
+  ("gstreamer" (:xbps "gstreamer1") (:mac))
+  ("pipewire" (:xbps "pipewire" "alsa-pipewire" "libspa-bluetooth") (:mac))
+  ("easyeffects" (:mac))
   ("audacity" (:mac))
   ("vlc" (:cask "vlc"))
   ("handbrake" (:cask "handbrake"))
   ("blender" (:cask "blender"))
-  ("yt-dlp" (:void) (:pop) (:mac))
+  ("yt-dlp" (:void) (:mac))
   ("kodi" (:cask "kodi"))
-  ("flameshot" (:pop) (:mac))
-  ("grim" (:pop) (:mac))
-  ("slurp" (:pop) (:mac))
-  ("swappy" (:pop) (:mac))
+  ("flameshot" (:mac))
+  ("grim" (:mac))
+  ("slurp" (:mac))
+  ("swappy" (:mac))
   ("obs" (:flatpak ("com.obsproject.Studio" "obs")) (:cask "obs"))
   ("obs-plugin-waveform" (:flatpak ("com.obsproject.Studio.Plugin.waveform" "obs-plugin-waveform")) (:mac))
   ("peek" (:cask "licecap"))
-  ("keymon" (:void) (:pop) (:cask "keycastr"))
-  ("balena-etcher" (:void) (:pop) (:cask "balenaetcher"))
+  ("keymon" (:void) (:cask "keycastr"))
+  ("balena-etcher" (:void) (:cask "balenaetcher"))
   ("steam" (:cask "steam"))
   ("lutris" (:mac))
-  ("origin" (:void) (:pop) (:cask "origin"))
+  ("origin" (:void) (:cask "origin"))
   ("gamehub" (:mac))
-  ("sony-remote-play" (:void) (:pop) (:cask "sony-ps4-remote-play"))
+  ("sony-remote-play" (:void) (:cask "sony-ps4-remote-play"))
   ("qFlipper" (:flatpak ("one.flipperzero.qFlipper" "qFlipper")) (:cask "qflipper"))
-  ("font-open-sans" (:void) (:pop) (:cask "font-open-sans"))
-  ("font-inconsolata" (:void) (:pop) (:cask "font-inconsolata"))
-  ("font-liberation" (:void) (:pop) (:cask "font-liberation"))
-  ("font-roboto-mono" (:void) (:pop) (:cask "font-roboto-mono"))
-  ("font-fira-code" (:void) (:pop) (:cask "font-fira-code"))
+  ("font-open-sans" (:void) (:cask "font-open-sans"))
+  ("font-inconsolata" (:void) (:cask "font-inconsolata"))
+  ("font-liberation" (:void) (:cask "font-liberation"))
+  ("font-roboto-mono" (:void) (:cask "font-roboto-mono"))
+  ("font-fira-code" (:void) (:cask "font-fira-code"))
   )
  (
   "Install flatpak packages the conventional way"
   nil
   (:void ("~/.bin/linux/mt-flatpak install logseq com.logseq.Logseq"
           "~/.bin/linux/mt-flatpak install postman com.getpostman.Postman"
-          "~/.bin/linux/mt-flatpak install schildi chat.schildi.desktop"
-          "~/.bin/linux/mt-flatpak install obs-studio com.obsproject.Studio"
-          "~/.bin/linux/mt-flatpak install qFlipper one.flipperzero.qFlipper"))
-  (:pop ("~/.bin/linux/mt-flatpak install logseq com.logseq.Logseq"
-         "~/.bin/linux/mt-flatpak install postman com.getpostman.Postman"
           "~/.bin/linux/mt-flatpak install schildi chat.schildi.desktop"
           "~/.bin/linux/mt-flatpak install obs-studio com.obsproject.Studio"
           "~/.bin/linux/mt-flatpak install qFlipper one.flipperzero.qFlipper"))
@@ -159,9 +154,6 @@
   (:void ("sudo groupadd docker"
           "sudo gpasswd -a ${USER} docker"
           "sudo ln -s /etc/sv/docker /var/service"))
-  (:pop ("sudo groupadd docker"
-          "sudo gpasswd -a ${USER} docker"
-          "sudo ln -s /etc/sv/docker /var/service"))
   (:mac ("docker-machine create --driver virtualbox default"
          "eval ${docker-machine env default}"))
   )
@@ -169,7 +161,6 @@
   "Change user shell"
   t
   (:void ("sudo usermod -s /bin/fish ismail"))
-  (:pop ("sudo usermod -s /bin/fish ismail"))
   (:mac ("echo \"/opt/homebrew/bin/fish\" | sudo tee -a /etc/shells"
          "chsh -s /opt/homebrew/bin/fish"))
   )
@@ -245,38 +236,6 @@
           "mkdir ~/.local/share/fonts/Liberation"
           "mv ~/_temp/liberation-fonts-ttf-2.1.4/Liberation*  ~/.local/share/fonts/Liberation/"
           "rm -rf ~/_temp"))
-  (:pop ("mkdir -p ~/.local/share/fonts"
-          "git clone https://github.com/FortAwesome/Font-Awesome ~/_temp"
-          "mv ~/_temp/otfs ~/.local/share/fonts/FontAwesome"
-          "rm -rf ~/_temp"
-          "mkdir -p ~/.local/share/fonts"
-          "git clone https://github.com/googlefonts/opensans ~/_temp"
-          "mv ~/_temp/fonts/ttf ~/.local/share/fonts/OpenSans"
-          "rm -rf ~/_temp"
-          "mkdir -p ~/.local/share/fonts"
-          "git clone https://github.com/googlefonts/inconsolata ~/_temp"
-          "mv ~/_temp/fonts/ttf ~/.local/share/fonts/Inconsolata"
-          "rm -rf ~/_temp"
-          "mkdir -p ~/.local/share/fonts"
-          "git clone https://github.com/googlefonts/RobotoMono ~/_temp"
-          "mv ~/_temp/fonts/ttf ~/.local/share/fonts/RobotoMono"
-          "rm -rf ~/_temp"
-          "mkdir -p ~/.local/share/fonts"
-          "git clone https://github.com/grays/droid-fonts ~/_temp"
-          "mv ~/_temp/droid ~/.local/share/fonts/Droid"
-          "rm -rf ~/_temp"
-          "mkdir -p ~/.local/share/fonts"
-          "mkdir ~/_temp"
-          "curl --fail --location --show-error https://github.com/tonsky/FiraCode/releases/download/5.2/Fira_Code_v5.2.zip --output ~/_temp/Fira_Code_v5.2.zip"
-          "unzip -o -q -d ~/_temp ~/_temp/Fira_Code_v5.2.zip"
-          "mv ~/_temp/ttf ~/.local/share/fonts/FiraCode"
-          "rm -rf ~/_temp"
-          "mkdir -p ~/.local/share/fonts"
-          "mkdir ~/_temp"
-          "( cd ~/_temp; wget https://github.com/liberationfonts/liberation-fonts/files/6418984/liberation-fonts-ttf-2.1.4.tar.gz; tar -xvf liberation-fonts-ttf-2.1.4.tar.gz )"
-          "mkdir ~/.local/share/fonts/Liberation"
-          "mv ~/_temp/liberation-fonts-ttf-2.1.4/Liberation*  ~/.local/share/fonts/Liberation/"
-          "rm -rf ~/_temp"))
   )
  (
   "Set up pipewire with wireplumber and pipewire-pulse"
@@ -305,16 +264,6 @@
           "cp -R ~/.assets/services/syncthing ~/.services/"
           "sudo cp -R ~/.assets/services/runsvdir-ismail /etc/sv/"
           "sudo ln -s /etc/sv/runsvdir-ismail /var/service"))
-  (:pop ("systemctl --user enable syncthing.service"
-         "systemctl --user start syncthing.service"
-         "systemctl enable libvirtd.service"
-         "systemctl start libvirtd.service"
-         "systemctl enable virtlogd.service"
-         "systemctl start virtlogd.service"
-         "systemctl enable ssh"
-         "systemctl start ssh"
-         "systemctl enable avahi-daemon"
-         "systemctl start avahi-daemon"))
   (:mac ("brew services start syncthing"
          "brew services start avahi-daemon"
          "brew services start ollama"))
@@ -329,16 +278,12 @@
   t
   (:void ("git clone https://github.com/myTerminal/power-guard.git /tmp/power-guard"
           "( cd /tmp/power-guard; make install )"))
-  (:pop ("git clone https://github.com/myTerminal/power-guard.git /tmp/power-guard"
-         "( cd /tmp/power-guard; make install )"))
   )
  (
   "Install see-link"
   t
   (:void ("git clone https://github.com/myTerminal/see-link.git /tmp/see-link"
           "( cd /tmp/see-link; make install )"))
-  (:pop ("git clone https://github.com/myTerminal/see-link.git /tmp/see-link"
-         "( cd /tmp/see-link; make install )"))
   )
  (
   "Install global NPM packages"
@@ -405,10 +350,6 @@
   t
   (:void ("cp -R ~/.assets/services/ollama-runit ~/.services/ollama"
           "ollama pull llama3"))
-  (:pop ("sudo cp ~/.assets/services/ollama-systemd /etc/systemd/system/ollama.service"
-         "systemctl enable ollama.service"
-         "systemctl start ollama.service"
-         "ollama pull llama3"))
   )
  (
   "Perform a few package-dependent config"
@@ -417,22 +358,16 @@
           "xfconf-query --channel thunar -p /default-view -s ThunarDetailsView"
           "xfconf-query --channel thunar -p /last-location-bar -s ThunarLocationButtons"
           "xfconf-query --channel thunar -p /last-show-hidden -s true"))
-  (:pop ("sudo usermod -aG libvirt ismail"
-         "sudo ln -s \"$(which batcat)\" \"$(which batcat | xargs readlink -f | xargs dirname)/bat\""))
   )
  (
   "Set Firefox as the default web-browser"
   t
   (:void ("xdg-settings set default-web-browser firefox.desktop"))
-  (:pop ("xdg-settings set default-web-browser firefox.desktop"))
   )
  (
   "Enable touch scrolling for Firefox"
   t
   (:void ("echo \"
-MOZ_USE_XINPUT2 DEFAULT=1
-\" | sudo tee -a /etc/security/pam_env.conf"))
-  (:pop ("echo \"
 MOZ_USE_XINPUT2 DEFAULT=1
 \" | sudo tee -a /etc/security/pam_env.conf"))
   )
