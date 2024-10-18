@@ -66,6 +66,7 @@ Create subvolumes for root, home, var and snapshots
     btrfs su cr /mnt/@
     btrfs su cr /mnt/@home
     btrfs su cr /mnt/@var
+    btrfs su cr /mnt/@store
     btrfs su cr /mnt/@snapshots
     
 Unmount the partition
@@ -75,11 +76,12 @@ Unmount the partition
 ### Re-mounting subvolumes as partitions
 
     mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@ /dev/mapper/mirage /mnt
-    mkdir -p /mnt/{boot,home,var,.snapshots}
+    mkdir -p /mnt/{boot,home,var,store,.snapshots}
     mkdir /mnt/boot/efi
     mount /dev/nvme0n1p1 /mnt/boot/efi
     mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@home /dev/mapper/mirage /mnt/home
     mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@var /dev/mapper/mirage /mnt/var
+    mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@store /dev/mapper/mirage /mnt/store
     mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@snapshots /dev/mapper/mirage /mnt/.snapshots
     swapon /dev/nvme0n1p2
 
