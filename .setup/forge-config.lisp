@@ -257,7 +257,8 @@
   (:void ("sudo mkdir /store/ismail"
           "sudo chown -R ismail:ismail /store/ismail"
           "sudo chmod -R g-rwx,o-rwx /store/ismail"
-          "sudo ln -s /store/ismail ~/_store"))
+          "sudo mount --rbind /store/ismail ~/_store"
+          "echo \"/store/ismail /home/ismail/_store none bind 0 0\" | sudo tee -a /etc/fstab"))
   )
  (
   "Set up startup services"
