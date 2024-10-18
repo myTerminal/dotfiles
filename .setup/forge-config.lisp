@@ -252,6 +252,14 @@
           "sudo wget \"https://raw.githubusercontent.com/simmel/urxvt-resize-font/master/resize-font\" -O /usr/lib/urxvt/perl/resize-font"))
   )
  (
+  "Prepare /store/ismail and ~/_store"
+  t
+  (:void ("sudo mkdir /store/ismail"
+          "sudo chown -R ismail:ismail /store/ismail"
+          "sudo chmod -R g-rwx,o-rwx /store/ismail"
+          "sudo ln -s /store/ismail ~/_store"))
+  )
+ (
   "Set up startup services"
   t
   (:void ("sudo ln -s /etc/sv/libvirtd /var/service"
@@ -267,6 +275,12 @@
   (:mac ("brew services start syncthing"
          "brew services start avahi-daemon"
          "brew services start ollama"))
+  )
+ (
+  "Externalize Syncthing to /store/ismail"
+  t
+  (:void ("mv ~/.local/state/syncthing /store/ismail/.syncthing"
+          "ln -s /store/ismail/.syncthing ~/.config/syncthing"))
   )
  (
   "Perform visual tweaks (non-working)"
@@ -299,8 +313,7 @@
   "Create required directories"
   t
   (:all ("mkdir ~/_workspace"
-         "mkdir ~/_workspace/github"
-         "mkdir ~/_store"))
+         "mkdir ~/_workspace/github"))
   )
  (
   "Start X11 to configure SSH keys and Syncthing"
