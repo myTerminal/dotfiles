@@ -278,10 +278,14 @@
          "brew services start ollama"))
   )
  (
-  "Externalize Syncthing to /store/ismail"
+  "Set up new as a new Syncthing device"
   t
-  (:void ("mv ~/.local/state/syncthing /store/ismail/.syncthing"
-          "ln -s /store/ismail/.syncthing ~/.config/syncthing"))
+  (:void ("mv ~/.local/state/syncthing /store/ismail/.syncthing"))
+  )
+ (
+  "Link /store/ismail/.syncthing to ~/.config/syncthing"
+  t
+  (:void ("ln -s /store/ismail/.syncthing ~/.config/syncthing"))
   )
  (
   "Perform visual tweaks (non-working)"
