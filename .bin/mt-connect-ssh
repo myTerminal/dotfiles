@@ -1,0 +1,12 @@
+#!/bin/bash
+
+CONFIG_FILE="/home/ismail/_store/Documents/machines.conf"
+
+# Prompt the user for the machine name
+selected_machine=$(cat $CONFIG_FILE | fzf)
+
+# Fetch the IP address associated with the machine name
+ip_address=$(grep "$selected_machine" "$CONFIG_FILE" | cut -d'=' -f2)
+
+# Connect to the selected machine
+ssh $ip_address
