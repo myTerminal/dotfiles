@@ -48,12 +48,14 @@
 - Test/Improve scripts under [[../hardware][~/.setup/hardware]] and [[../../.bin][~/.bin]]
 - Verify reference of the machine at/under the following:
   - Home network as a new device
+    - Static IP assignment
   - GitHub and GitLab (SSH keys)
   - Syncthing as a node
   - KeePass database as a key
   - Sync device for Firefox
   - Element/Schildi for Matrix
 - Create maintenance tasks in TickTick
+- Add entry in machines.conf
 - Add entry in *machines* spreadsheet
 
 # Local Variables:
