@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+sudo xbps-install -S docker
+sudo groupadd docker
+sudo gpasswd -a ${USER} docker
+sudo ln -s /etc/sv/docker /var/service

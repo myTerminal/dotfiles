@@ -31,7 +31,6 @@
   ("network-manager" (:xbps "NetworkManager") (:mac))
   ("bind-utils" (:mac))
   "weechat"
-  ("docker" (:brew "docker" "docker-machine"))
   ("nodejs" (:brew "node"))
   "sbcl"
   ("rustup" (:brew "rustup-init"))
@@ -147,15 +146,6 @@
   nil
   (:mac ("defaults write com.apple.Finder AppleShowAllFiles YES"
          "killall Finder"))
-  )
- (
-  "Set up Docker"
-  t
-  (:void ("sudo groupadd docker"
-          "sudo gpasswd -a ${USER} docker"
-          "sudo ln -s /etc/sv/docker /var/service"))
-  (:mac ("docker-machine create --driver virtualbox default"
-         "eval ${docker-machine env default}"))
   )
  (
   "Change user shell"
