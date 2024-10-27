@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+sudo xbps-install -S rust
+rustup-init --default-toolchain stable --profile default -y

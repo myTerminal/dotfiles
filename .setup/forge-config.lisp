@@ -33,7 +33,6 @@
   "weechat"
   ("nodejs" (:brew "node"))
   "sbcl"
-  ("rustup" (:brew "rustup-init"))
   ("brightnessctl" (:mac))
   ("acpi" (:mac))
   ("fprintd" (:mac))
@@ -153,12 +152,6 @@
   (:void ("sudo usermod -s /bin/fish ismail"))
   (:mac ("echo \"/opt/homebrew/bin/fish\" | sudo tee -a /etc/shells"
          "chsh -s /opt/homebrew/bin/fish"))
-  )
- (
-  "Install Rust Toolchain"
-  t
-  (:void ("rustup-init --default-toolchain stable --profile default -y"))
-  (:mac ("rustup-init"))
   )
  (
   "Install Mesa Drivers"

@@ -6,10 +6,6 @@ and ~/.scripts/linux/startup/cli
 # Update PATH for custom shell scripts
 add-to-path ~/.bin
 
-# Update PATH for cargo(rust)
-add-to-path ~/.cargo/bin
-add-to-path ~/.cargo/env
-
 # Set custom environment variables
 set -x MT_PATH_STORE ~/_store
 set -x MT_PATH_WORKSPACE ~/_workspace
