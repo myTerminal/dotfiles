@@ -300,12 +300,6 @@
           "( cd /tmp/power-guard; make install )"))
   )
  (
-  "Install see-link"
-  t
-  (:void ("git clone https://github.com/myTerminal/see-link.git /tmp/see-link"
-          "( cd /tmp/see-link; make install )"))
-  )
- (
   "Install global NPM packages"
   t
   (:all ("sudo npm install -g lite-server nano-server stay-with-me git-getter re-write"))
