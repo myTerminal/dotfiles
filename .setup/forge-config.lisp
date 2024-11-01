@@ -235,12 +235,16 @@
           "sudo wget \"https://raw.githubusercontent.com/simmel/urxvt-resize-font/master/resize-font\" -O /usr/lib/urxvt/perl/resize-font"))
   )
  (
-  "Prepare /store/ismail and ~/_store"
+  "Syncthing: Prepare /store/ismail"
   t
   (:void ("sudo mkdir /store/ismail"
           "sudo chown -R ismail:ismail /store/ismail"
-          "sudo chmod -R g-rwx,o-rwx /store/ismail"
-          "mkdir ~/_store"
+          "sudo chmod -R g-rwx,o-rwx /store/ismail"))
+  )
+ (
+  "Syncthing: Prepare ~/_store"
+  t
+  (:void ("mkdir ~/_store"
           "sudo mount --rbind /store/ismail ~/_store"
           "echo \"/store/ismail /home/ismail/_store none bind 0 0\" | sudo tee -a /etc/fstab"))
   )
@@ -262,7 +266,7 @@
          "brew services start ollama"))
   )
  (
-  "Set up new as a new Syncthing device"
+  "Syncthing: Set up new as a new device"
   t
   (:void ("mv ~/.local/state/syncthing /store/ismail/.syncthing"))
   )
