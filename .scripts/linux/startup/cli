@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Start pipewire if not already running
-if [[ ! $(pgrep pipewire) ]]; then
+if [[ ! $(pgrep -u $(id -u) pipewire) ]]; then
     dbus-run-session pipewire &
     sleep 1
 fi
