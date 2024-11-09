@@ -9,7 +9,7 @@
 . ~/.setup/hardware/configure-dpi-for-wayland 2 LVDS-1
 
 # Install Nvidia drivers
-. ~/.setup/hardware/void/other/nvidia-latest
+. ~/.setup/hardware/void/nvidia-latest
 
 # Fix audio input and output
 sudo xbps-install -Sy alsa-firmware sof-firmware
@@ -25,14 +25,14 @@ ctl.!default {
 " > .asoundrc
 
 # Enable Dolby Atmos Effect through pulseeffects
-. ~/.setup/hardware/void/other/configure-pulseeffects
+. ~/.setup/hardware/void/configure-pulseeffects
 
 # Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "Synaptics TM3625-010" 1.0
 . ~/.setup/hardware/configure-touchpad-for-wayland "2:7:Synaptics TM3625-010"
 
 # Install tlp and more for power management
-. ~/.setup/hardware/void/other/configure-power-management tlp acpi_call-dkms powertop
+. ~/.setup/hardware/void/configure-power-management tlp acpi_call-dkms powertop
 
 # TODO: Fix display scaling
 

@@ -156,7 +156,7 @@
  (
   "Install Mesa Drivers"
   t
-  (:void ("~/.setup/hardware/void/other/mesa"))
+  (:void ("~/.setup/hardware/void/mesa"))
   )
  (
   "Install Graphical Theming: GTK theme"

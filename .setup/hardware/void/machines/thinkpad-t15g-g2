@@ -5,20 +5,20 @@
 # steps from https://wiki.archlinux.org/title/Laptop/Lenovo
 
 # Install Nvidia drivers
-. ~/.setup/hardware/void/other/nvidia-latest
+. ~/.setup/hardware/void/nvidia-latest
 
 # Fix audio input and output
 sudo xbps-install -Sy sof-firmware
 
 # Enable Dolby Atmos Effect through pulseeffects
-. ~/.setup/hardware/void/other/configure-pulseeffects
+. ~/.setup/hardware/void/configure-pulseeffects
 
 # Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "SynPS/2 Synaptics TouchPad" 1.0
 . ~/.setup/hardware/configure-touchpad-for-wayland "2:7:SynPS/2_Synaptics_TouchPad"
 
 # Install tlp and more for power management
-. ~/.setup/hardware/void/other/configure-power-management tlp acpi_call-dkms powertop
+. ~/.setup/hardware/void/configure-power-management tlp acpi_call-dkms powertop
 
 # Configure fingerprint sensor
 . ~/.setup/hardware/configure-fingerprints

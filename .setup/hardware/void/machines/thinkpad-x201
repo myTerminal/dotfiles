@@ -18,7 +18,7 @@
 . ~/.setup/hardware/configure-trackpoint-for-wayland "2:10:TPPS/2_IBM_TrackPoint"
 
 # Install tlp and more for power management
-. ~/.setup/hardware/void/other/configure-power-management tlp acpi_call-dkms tp_smapi-dkms powertop
+. ~/.setup/hardware/void/configure-power-management tlp acpi_call-dkms tp_smapi-dkms powertop
 
 # Configure fingerprint sensor
 . ~/.setup/hardware/configure-fingerprints

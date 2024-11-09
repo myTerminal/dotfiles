@@ -12,7 +12,7 @@ sudo xbps-install -Sy sof-firmware
 . ~/.setup/hardware/configure-touchpad-for-wayland "2:7:SYNA8004:00 06CB:CD8B Touchpad"
 
 # Install tlp and more for power management
-. ~/.setup/hardware/void/other/configure-power-management tlp acpi_call-dkms powertop
+. ~/.setup/hardware/void/configure-power-management tlp acpi_call-dkms powertop
 
 # Configure fingerprint sensor
 . ~/.setup/hardware/configure-fingerprints

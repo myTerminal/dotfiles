@@ -9,7 +9,7 @@
 . ~/.setup/hardware/configure-touchpad-for-wayland "2:7:Synaptics TM3289-002"
 
 # Install tlp and more for power management
-. ~/.setup/hardware/void/other/configure-power-management tlp acpi_call-dkms powertop
+. ~/.setup/hardware/void/configure-power-management tlp acpi_call-dkms powertop
 
 # Configure fingerprint sensor
 . ~/.setup/hardware/configure-fingerprints

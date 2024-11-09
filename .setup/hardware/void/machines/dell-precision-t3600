@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 # Install Nvidia drivers
-. ~/.setup/hardware/void/other/nvidia-latest
+. ~/.setup/hardware/void/nvidia-latest
