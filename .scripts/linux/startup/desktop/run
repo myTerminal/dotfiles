@@ -1,12 +1,6 @@
 #!/usr/bin/env bash
 
-# Set base path for all modules
 BASE_PATH=~/.scripts/linux/startup/desktop
-
-${BASE_PATH}/display &
-${BASE_PATH}/input &
-${BASE_PATH}/audio &
-${BASE_PATH}/apps &
 
 if [ -f ~/.configure-input-devices ]; then
     . ~/.configure-input-devices
@@ -15,3 +9,8 @@ fi
 if [ -f ~/.configure-output-devices ]; then
     . ~/.configure-output-devices
 fi
+
+${BASE_PATH}/display &
+${BASE_PATH}/input &
+${BASE_PATH}/audio &
+${BASE_PATH}/apps &
