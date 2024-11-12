@@ -3,11 +3,7 @@
 # Start pipewire if not already running
 if [[ ! $(pgrep -u $(id -u) pipewire) ]]; then
     dbus-run-session pipewire &
-    sleep 1
 fi
-
-# Set volume to 70%
-pactl set-sink-volume @DEFAULT_SINK@ 70%
 
 # Start applications
 udiskie &
