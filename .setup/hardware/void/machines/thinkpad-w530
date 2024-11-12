@@ -4,6 +4,9 @@
 # device-specific setup for 2012 Lenovo ThinkPad W530 and mostly follows steps
 # from https://wiki.archlinux.org/title/Lenovo_ThinkPad_W530
 
+# Configure startup sound volume
+. ~/.setup/hardware/configure-default-sound-volume 70%
+
 # Set screen temperature for high-GAMUT screen
 . ~/.setup/hardware/configure-screen-color-temp 4500
 

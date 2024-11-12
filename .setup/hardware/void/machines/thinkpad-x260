@@ -8,6 +8,9 @@
 . ~/.setup/hardware/configure-dpi-for-xorg 72
 . ~/.setup/hardware/configure-dpi-for-wayland 0.75 LVDS-1
 
+# Configure startup sound volume
+. ~/.setup/hardware/configure-default-sound-volume 70%
+
 # Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "SynPS/2 Synaptics TouchPad" 0.5
 . ~/.setup/hardware/configure-touchpad-for-wayland "2:7:SynPS/2_Synaptics_TouchPad"

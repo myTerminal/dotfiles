@@ -27,6 +27,9 @@ ctl.!default {
 # Enable Dolby Atmos Effect through pulseeffects
 . ~/.setup/hardware/void/configure-pulseeffects
 
+# Configure startup sound volume
+. ~/.setup/hardware/configure-default-sound-volume 70%
+
 # Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "Synaptics TM3625-010" 1.0
 . ~/.setup/hardware/configure-touchpad-for-wayland "2:7:Synaptics TM3625-010"

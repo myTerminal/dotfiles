@@ -11,7 +11,10 @@
 # Fix audio input and output
 sudo xbps-install -Sy sof-firmware
 
-# # Improve touchpad experience
+# Configure startup sound volume
+. ~/.setup/hardware/configure-default-sound-volume 70%
+
+# Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "ELAN0670:00 04F3:3150 Touchpad" 1
 . ~/.setup/hardware/configure-touchpad-for-wayland "1267:12624:ELAN0670:00_04F3:3150_Touchpad"
 

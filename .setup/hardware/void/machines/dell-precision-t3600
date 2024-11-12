@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
+# Configure startup sound volume
+. ~/.setup/hardware/configure-default-sound-volume 70%
+
 # Install Nvidia drivers
 . ~/.setup/hardware/void/nvidia-latest

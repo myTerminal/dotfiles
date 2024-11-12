@@ -4,6 +4,9 @@
 # device-specific setup for 2017 Lenovo ThinkPad X1 Carbon and mostly follows
 # steps from https://wiki.archlinux.org/title/Laptop/Lenovo
 
+# Configure startup sound volume
+. ~/.setup/hardware/configure-default-sound-volume 70%
+
 # Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "Synaptics TM3289-002" 0.75
 . ~/.setup/hardware/configure-touchpad-for-wayland "2:7:Synaptics TM3289-002"

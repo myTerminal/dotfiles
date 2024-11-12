@@ -4,6 +4,9 @@
 # device-specific setup for 2008 Lenovo ThinkPad T61p and mostly follows steps
 # from https://wiki.archlinux.org/title/Laptop/Lenovo
 
+# Configure startup sound volume
+. ~/.setup/hardware/configure-default-sound-volume 70%
+
 # Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "SynPS/2 Synaptics TouchPad" 0.5
 . ~/.setup/hardware/configure-touchpad-for-wayland "2:7:SynPS/2_Synaptics_TouchPad"

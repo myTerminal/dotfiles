@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+echo "
+pactl set-sink-volume @DEFAULT_SINK@ ${1}
+" >> ~/.configure-output-devices
