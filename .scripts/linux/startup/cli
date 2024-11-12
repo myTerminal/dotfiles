@@ -2,7 +2,7 @@
 
 # Start pipewire if not already running
 if [[ ! $(pgrep -u $(id -u) pipewire) ]]; then
-    dbus-run-session pipewire &
+    dbus-run-session pipewire &> /dev/null &
 fi
 
 # Start applications
