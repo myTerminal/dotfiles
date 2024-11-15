@@ -32,7 +32,7 @@ ctl.!default {
 
 # Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "Synaptics TM3625-010" 1.0
-. ~/.setup/hardware/configure-touchpad-for-wayland "2:7:Synaptics TM3625-010"
+. ~/.setup/hardware/configure-touchpad-for-wayland "2:7:Synaptics TM3625-010" 1
 
 # Install tlp and more for power management
 . ~/.setup/hardware/void/configure-power-management tlp acpi_call-dkms powertop

@@ -16,7 +16,7 @@ sudo xbps-install -Sy sof-firmware
 
 # Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "ELAN0670:00 04F3:3150 Touchpad" 1
-. ~/.setup/hardware/configure-touchpad-for-wayland "1267:12624:ELAN0670:00_04F3:3150_Touchpad"
+. ~/.setup/hardware/configure-touchpad-for-wayland "1267:12624:ELAN0670:00_04F3:3150_Touchpad" 1
 
 # Install tlp and more for power management
 . ~/.setup/hardware/void/configure-power-management tlp acpi_call-dkms powertop

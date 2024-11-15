@@ -12,7 +12,7 @@ sudo xbps-install -Sy sof-firmware
 
 # Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "SYNA8004:00 06CB:CD8B Touchpad" 0.75
-. ~/.setup/hardware/configure-touchpad-for-wayland "2:7:SYNA8004:00 06CB:CD8B Touchpad"
+. ~/.setup/hardware/configure-touchpad-for-wayland "2:7:SYNA8004:00 06CB:CD8B Touchpad" 1
 
 # Install tlp and more for power management
 . ~/.setup/hardware/void/configure-power-management tlp acpi_call-dkms powertop
