@@ -2,5 +2,5 @@
 
 # Generate tweaks script
 echo "
-swaymsg input '${1}' pointer_accel 1
+swaymsg input '${1}' pointer_accel ${2}
 " >> ~/.configure-input-devices
