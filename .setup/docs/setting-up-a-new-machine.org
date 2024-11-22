@@ -21,8 +21,6 @@
   - Test/Fix mouse and trackpad
   - Test/Fix camera
   - Configure power management
-- Configure Syncthing and fetch data
-- Create symlinks from `~/_store/Applications` under `/usr/bin`
 - Configure software and services
   - Keepass
   - Firefox
