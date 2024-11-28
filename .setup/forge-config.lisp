@@ -305,7 +305,7 @@
  (
   "Start X11 to configure SSH keys and Syncthing"
   t
-  (:void ("~/.scripts/linux/startup/cli && startx"))
+  (:void ("~/.scripts/linux/startup/cli && pkill syncthing && startx"))
   )
  (
   "Next steps depend on SSH keys and Syncthing setup"
