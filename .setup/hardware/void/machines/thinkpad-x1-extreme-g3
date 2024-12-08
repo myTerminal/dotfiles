@@ -8,6 +8,9 @@
 . ~/.setup/hardware/configure-dpi-for-xorg 192
 . ~/.setup/hardware/configure-dpi-for-wayland 2 eDP-1
 
+# Configure default screen brightness
+. ~/.setup/hardware/configure-default-display-brightness 30%
+
 # Install Nvidia drivers
 . ~/.setup/hardware/void/nvidia-latest
 
