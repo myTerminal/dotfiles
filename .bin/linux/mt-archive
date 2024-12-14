@@ -33,6 +33,10 @@ elif [ "${command}" == "undo" ]; then
              tar -xvzf "${arguments}"
              ;;
 
+         tar.xz)
+             tar -xvf "${arguments}"
+             ;;
+
          tar.gz)
              gzip -dk "${arguments}"
              ;;
