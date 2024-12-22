@@ -65,6 +65,7 @@
   ("Waybar" (:mac))
   ("xrandr" (:mac))
   ("wlr-randr" (:mac))
+  ("wdisplays" (:mac))
   ("xss-lock" (:mac))
   ("swaylock" (:mac))
   ("feh" (:mac))
