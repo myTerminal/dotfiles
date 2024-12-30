@@ -40,12 +40,12 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Assign programs to workspaces
 assign [class="Logseq"] $ws1
-assign [class="Steam"] $ws1
 assign [class="SchildiChat"] $ws2
 assign [class="Emacs"] $ws3
 assign [class="Firefox"] $ws4
 assign [class="Chromium"] $ws4
 assign [class="Thunar"] $ws5
+assign [class="Steam"] $ws6
 assign [class="Clementine"] $ws6
 assign [class="vlc"] $ws6
 assign [class="Darktable"] $ws7
