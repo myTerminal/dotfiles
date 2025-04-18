@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# This script is an add-on to `~/.setup/forge-config.lisp` containing
+# device-specific setup for 2013 Lenovo ThinkPad T440p and mostly follows steps
+# from https://wiki.archlinux.org/title/Lenovo_ThinkPad_T440p
+
+# Configure startup sound volume
+. ~/.setup/hardware/configure-default-sound-volume 70%
+
+# Improve touchpad and trackpoint experience
+. ~/.setup/hardware/configure-touchpad-for-xorg "Synaptics TM3053-003" 0.5
+. ~/.setup/hardware/configure-trackpoint-for-xorg "TPPS/2 IBM TrackPoint" 0.25
+. ~/.setup/hardware/configure-touchpad-for-wayland "1739:0:Synaptics_TM3053-003" 1
+. ~/.setup/hardware/configure-trackpoint-for-wayland "2:10:TPPS\/2_IBM_TrackPoint" 0.25
+
+# Install tlp and more for power management
+. ~/.setup/hardware/void/configure-power-management tlp acpi_call-dkms tp_smapi-dkms powertop
+
+# Configure fingerprint sensor
+. ~/.setup/hardware/configure-fingerprints
