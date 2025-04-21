@@ -28,6 +28,7 @@
   "btop"
   ("psmisc" (:mac))
   ("udisks2" (:cask "mounty"))
+  "smartmontools"
   ("network-manager" (:xbps "NetworkManager") (:mac))
   ("bind-utils" (:mac))
   "weechat"
