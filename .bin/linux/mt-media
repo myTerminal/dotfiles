@@ -24,6 +24,10 @@ case "${1}" in
         udisksctl power-off -b $2
         ;;
 
+    a | analyze )
+        sudo smartctl -A -d sat $2
+        ;;
+
     *)
         echo "Not implemented!"
         ;;
