@@ -20,6 +20,10 @@ case "${1}" in
         sudo rm -rf /run/media/${USER}/$3
         ;;
 
+    p | poweroff | r | remove)
+        udisksctl power-off -b $2
+        ;;
+
     *)
         echo "Not implemented!"
         ;;
