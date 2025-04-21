@@ -81,6 +81,7 @@
   ("mako" (:mac))
   ("udiskie" (:mac))
   ("gparted" (:mac))
+  "gsmartcontrol"
   ("thunar" (:xbps "Thunar") (:mac))
   ("gvfs" (:mac))
   ("syncthing" (:xbps "syncthing-gtk"))
