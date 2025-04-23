@@ -270,11 +270,6 @@
          "brew services start ollama"))
   )
  (
-  "Syncthing: Set up new as a new device (TODO: Fix)"
-  t
-  (:void ("mv ~/.local/state/syncthing /store/ismail/.syncthing"))
-  )
- (
   "Link /store/ismail/.syncthing to ~/.config/syncthing"
   t
   (:void ("ln -s /store/ismail/.syncthing ~/.config/syncthing"))
@@ -315,6 +310,11 @@
   "Next steps depend on SSH keys and Syncthing setup"
   t
   (:all ("echo \"Continuing...\""))
+  )
+ (
+  "Syncthing: Move Syncthing config over to /store/ismail (Needed for first-time setup)"
+  t
+  (:void ("mv ~/.local/state/syncthing /store/ismail/.syncthing"))
   )
  (
   "Clone public GitHub source projects for myTerminal"
