@@ -54,6 +54,7 @@
   "avahi"
   ("openssh" (:mac))
   ("ollama" (:cask "ollama") (:void))
+  ("fabric" (:mac) (:void))
   ("xdg-utils" (:mac))
   ("xorg" (:mac))
   ("numlockx" (:mac))
@@ -352,7 +353,12 @@
   "Set up Ollama"
   t
   (:void ("cp -R ~/.assets/services/ollama-runit ~/.services/ollama"
-          "ollama pull llama3"))
+          "~/_store/Applications/ollama pull llama3"))
+  )
+ (
+  "Set up Fabric Framework"
+  t
+  (:void ("~/_store/Applications/fabric --setup"))
   )
  (
   "Perform a few package-dependent config"
