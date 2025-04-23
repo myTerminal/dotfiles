@@ -270,7 +270,7 @@
          "brew services start ollama"))
   )
  (
-  "Syncthing: Set up new as a new device"
+  "Syncthing: Set up new as a new device (TODO: Fix)"
   t
   (:void ("mv ~/.local/state/syncthing /store/ismail/.syncthing"))
   )
