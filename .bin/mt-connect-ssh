@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONFIG_FILE="/home/ismail/_store/Documents/machines.conf"
+CONFIG_FILE="/home/ismail/_store/Vault/machines.conf"
 
 # Prompt the user for the machine name
 selected_machine=$(cat $CONFIG_FILE | fzf)

@@ -13,5 +13,5 @@
     (load "zone-quotes-masseffect"))
 (if (featurep 'perspective)
     (customize-set-variable 'persp-state-default-file
-                            (concat "~/_store/Documents/"
+                            (concat "~/_store/Vault/"
                                     "super-emacs-persp-session-file")))
