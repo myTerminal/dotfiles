@@ -6,7 +6,7 @@
 
 ;; Define constants
 (defconstant root-path
-  "~/_store/Applications")
+  "~/_store/Vault/binaries")
 
 ;; Define application info
 (defvar *apps-info*

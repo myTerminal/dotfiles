@@ -6,7 +6,7 @@ StartLimitIntervalSec=0
 User=ismail
 Restart=always
 RestartSec=1
-ExecStart=/home/ismail/_store/Applications/ollama serve
+ExecStart=/home/ismail/_store/Vault/binaries/ollama serve
 
 [Install]
 WantedBy=default.target

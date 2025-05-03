@@ -353,12 +353,12 @@
   "Set up Ollama"
   t
   (:void ("cp -R ~/.assets/services/ollama-runit ~/.services/ollama"
-          "~/_store/Applications/ollama pull llama3"))
+          "~/_store/Vault/binaries/ollama pull llama3"))
   )
  (
   "Set up Fabric Framework"
   t
-  (:void ("~/_store/Applications/fabric --setup"))
+  (:void ("~/_store/Vault/binaries/fabric --setup"))
   )
  (
   "Perform a few package-dependent config"
