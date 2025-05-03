@@ -3,8 +3,8 @@
 # Enable session lock and lock instantly
 
 if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
-    fd . ~/_store/Mobile-Media/Lockscreens/ -t f -0 | shuf -n1 -z | xargs -0 swaylock -t -i
+    fd . ~/_store/Vault/media/lockscreens/ -t f -0 | shuf -n1 -z | xargs -0 swaylock -t -i
 else
     mt-session-lock enable &
-    fd . ~/_store/Mobile-Media/Lockscreens/ -t f -0 | shuf -n1 -z | xargs -0 i3lock -t -i
+    fd . ~/_store/Vault/media/lockscreens/ -t f -0 | shuf -n1 -z | xargs -0 i3lock -t -i
 fi
