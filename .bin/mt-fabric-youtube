@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Prompt the user for a pattern
+pattern_to_use=$(fabric -l | fzf)
+
+# Run fabric
+fabric -y "$1" -s -p "$pattern_to_use"
