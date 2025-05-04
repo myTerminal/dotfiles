@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Read input either from a file or from stdin
+if [ -n "$1" ]; then
+    # Read from file
+    input=$(cat "$1")
+else
+    # Read from stdin
+    input=$(cat -)
+fi
+
+# Prompt the user for a pattern
+pattern_to_use=$(fabric -l | fzf)
+
+# Run fabric
+echo "$input" | fabric -s -p "$pattern_to_use"
