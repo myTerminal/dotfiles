@@ -124,6 +124,10 @@
     color: red;
 }
 
+#taskbar > * {
+    padding: 0 5px;
+}
+
 #temperature.critical {
     color: red;
 }
