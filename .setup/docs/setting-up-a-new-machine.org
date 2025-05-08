@@ -35,6 +35,7 @@
     - Restore session from one of the other machines
     - Login to frequent websites in appropriate containers
   - Element/Schildi
+  - Signal Messenger
   - Thunderbird
   - LogSeq
   - Thunar (may not be needed anymore)
@@ -52,6 +53,7 @@
   - KeePass database as a key
   - Sync device for Firefox
   - Element/Schildi for Matrix
+  - Signal Messenger as a linked device
 - Create maintenance tasks in TickTick
 - Add entry in machines.conf
 - Add entry in *machines* spreadsheet

@@ -18,6 +18,7 @@ case "${1}" in
         exec logseq & disown
         exec emacs & disown
         exec schildi & disown
+        exec signal-desktop & disown
         exec firefox & disown
         exec thunar & disown
         exec thunderbird & disown

@@ -93,6 +93,7 @@
   ("keepassxc" (:cask "keepasxc"))
   ("thunderbird" (:mac))
   ("schildi" (:flatpak ("chat.schildi.desktop" "schildi")) (:cask "schildichat"))
+  ("signal-messenger" (:xbps "Signal-Desktop") (:cask "signal"))
   ("pcloud" (:void) (:mac))
   ("transmission" (:xbps "transmission-gtk") (:cask "transmission"))
   ("postman" (:flatpak ("com.getpostman.Postman" "postman")) (:cask "postman"))

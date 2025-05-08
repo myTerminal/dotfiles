@@ -11,6 +11,7 @@ efibootmgr -Bb <four-digit-numeric-identifier>
 - Remove references from the following:
   - KeePass database as a key
   - Element/Schildi for Matrix
+  - Linked device with Signal Messenger
   - Sync device in Firefox
   - Syncthing as a node
   - GitHub and GitLab (SSH keys)
