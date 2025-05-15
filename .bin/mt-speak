@@ -1,6 +1,14 @@
 #!/bin/bash
 
-if [ -f "$1" ]; then
+if [ $# -eq 0 ]; then
+    # Print accepted syntax
+    echo -e "Please provide an input either as a file, arbitrary text, or through stdin.
+Examples:
+1) mt-speak ./filename.txt
+2) mt-speak Hello!
+3) echo \"Here, take this.\" | mt-speak"
+    exit 0
+elif [ -f "$1" ]; then
     # Read from specified file
     input=$(cat "$1")
 elif [ -n "$1" ]; then
