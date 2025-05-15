@@ -1,11 +1,11 @@
 #!/bin/bash
 
-if [ $# -eq 0 ]; then
+if [ $# -eq 0 ] || [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
     # Print accepted syntax
     echo -e "Please provide an input either as a file, arbitrary text, or through stdin.
 Examples:
 1) mt-speak ./filename.txt
-2) mt-speak Hello!
+2) mt-speak Hello! How are you?
 3) echo \"Here, take this.\" | mt-speak"
     exit 0
 elif [ -f "$1" ]; then
@@ -13,7 +13,7 @@ elif [ -f "$1" ]; then
     input=$(cat "$1")
 elif [ -n "$1" ]; then
     # User the arbitrary text from argument
-    input="$1"
+    input="$@"
 else
     # Read from stdin
     input=$(cat -)
