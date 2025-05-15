@@ -1,13 +1,15 @@
 #!/bin/bash
 
-# Read input either from a file or from stdin
-if [ -n "$1" ]; then
-    # Read from file
+if [ -f "$1" ]; then
+    # Read from specified file
     input=$(cat "$1")
+elif [ -n "$1" ]; then
+    # User the arbitrary text from argument
+    input="$1"
 else
     # Read from stdin
     input=$(cat -)
 fi
 
-# Run piper over the text
+# Run piper over the input text
 echo "$input" | ~/_store/Vault/binaries/piper/piper --model ~/_store/Vault/binaries/piper/voices/en_US-bryce-medium.onnx --output_file - | mpv -
