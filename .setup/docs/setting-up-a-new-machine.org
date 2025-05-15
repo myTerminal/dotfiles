@@ -43,6 +43,7 @@
   - Steam
   - pCloud
   - Bluetooth
+  - Calibre?
 - Verify software packages
 - Test/Improve scripts under [[../hardware][~/.setup/hardware]] and [[../../.bin][~/.bin]]
 - Verify reference of the machine at/under the following:

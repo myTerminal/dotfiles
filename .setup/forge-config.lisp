@@ -92,6 +92,7 @@
   ("chromium" (:cask "chromium"))
   ("keepassxc" (:cask "keepasxc"))
   ("thunderbird" (:mac))
+  ("calibre" (:cask "calibre"))
   ("schildi" (:flatpak ("chat.schildi.desktop" "schildi")) (:cask "schildichat"))
   ("signal-messenger" (:xbps "Signal-Desktop") (:cask "signal"))
   ("pcloud" (:void) (:mac))
