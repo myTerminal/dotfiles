@@ -1,0 +1,29 @@
+#!/bin/bash
+
+if [ ! -t 0 ]; then
+    # Read from stdin
+    input=$(cat -)
+elif [ $# -eq 0 ] || [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+    # Print accepted syntax
+    echo -e "Please provide an input either as a file, arbitrary text, or through stdin.
+Examples:
+1) mt-fabric-text ./filename.txt
+2) mt-fabric-text Is the earth flat?
+3) echo \"Divide infinity by zero.\" | mt-fabric-text"
+    exit 0
+elif [ -f "$1" ]; then
+    # Read from specified file
+    input=$(cat "$1")
+else [ -n "$1" ];
+     # User the arbitrary text from argument
+     input="$@"
+fi
+
+# Prompt the user for a pattern
+pattern_to_use=$(fabric -l | fzf)
+
+# Prompt for the output file location
+read -p "File to store result:" output_file_path
+
+# Run fabric
+echo "$input" | fabric -p "$pattern_to_use" > $output_file_path
