@@ -1,6 +1,9 @@
 #!/bin/bash
 
-if [ $# -eq 0 ] || [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+if [ ! -t 0 ]; then
+    # Read from stdin
+    input=$(cat -)
+elif [ $# -eq 0 ] || [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
     # Print accepted syntax
     echo -e "Please provide an input either as a file, arbitrary text, or through stdin.
 Examples:
@@ -11,12 +14,9 @@ Examples:
 elif [ -f "$1" ]; then
     # Read from specified file
     input=$(cat "$1")
-elif [ -n "$1" ]; then
-    # User the arbitrary text from argument
-    input="$@"
-else
-    # Read from stdin
-    input=$(cat -)
+else [ -n "$1" ];
+     # User the arbitrary text from argument
+     input="$@"
 fi
 
 # Run piper over the input text
