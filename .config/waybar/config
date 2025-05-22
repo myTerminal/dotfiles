@@ -114,12 +114,14 @@
         },
         "disk#root": {
             "interval": 30,
-            "format": " {path}: {percentage_used}% (Free: {free})",
+            "format": " {path}: {percentage_used}%",
+            "format-alt": " {path}: {percentage_used}% (Free: {free})",
             "path": "/"
         },
         "disk#home": {
             "interval": 30,
-            "format": " {path}: {percentage_used}% (Free: {free})",
+            "format": " {path}: {percentage_used}%",
+            "format-alt": " {path}: {percentage_used}% (Free: {free})",
             "path": "/home"
         },
         "backlight": {
