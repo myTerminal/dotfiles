@@ -71,7 +71,8 @@
             "cpu#load",
             "cpu#usage",
             "memory",
-            "disk",
+            "disk#root",
+            "disk#home",
             "backlight",
             "keyboard-state",
             "pulseaudio",
@@ -111,10 +112,15 @@
         "memory": {
             "format": " {}%"
         },
-        "disk": {
+        "disk#root": {
             "interval": 30,
             "format": " {path}: {percentage_used}% (Free: {free})",
-	    "path": "/"
+            "path": "/"
+        },
+        "disk#home": {
+            "interval": 30,
+            "format": " {path}: {percentage_used}% (Free: {free})",
+            "path": "/home"
         },
         "backlight": {
             // "device": "acpi_video1",
