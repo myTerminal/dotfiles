@@ -349,7 +349,7 @@
  (
   "Re-generate symlinks for binaries"
   t
-  (:all ("~/.setup/regenerate-binary-symlinks"))
+  (:all ("~/_store/Vault/binaries/_regenerate-binary-symlinks"))
   )
  (
   "Set up Ollama"

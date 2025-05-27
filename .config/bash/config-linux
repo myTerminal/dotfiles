@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 
-# Add generic Linux scripts
-export PATH=$PATH:~/.bin/linux
-
 # Configure prompt
 PS1='\u@\h:\w\$ '
 
 # Update PATH
+export PATH=$PATH:~/.bin/linux
 export PATH=$PATH:$HOME/.local/bin:$HOME/bin
+export PATH=$PATH:$HOME/_store/Vault/binaries/_links
 
 # Set up aliases
 alias mt-copy="xsel --clipboard --input"

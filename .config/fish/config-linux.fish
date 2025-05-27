@@ -1,9 +1,8 @@
-# Add generic Linux scripts
-add-to-path ~/.bin/linux
-
 # Update PATH
+add-to-path ~/.bin/linux
 add-to-path $HOME/bin
 add-to-path $HOME/.local/bin
+add-to-path $HOME/_store/Vault/binaries/_links
 
 # Set up aliases
 alias mt-copy="xsel --clipboard --input"
