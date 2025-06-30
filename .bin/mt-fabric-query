@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Detect display and set prompter
+. ~/.assets/libs/bash/select-prompter
+
 if [ ! -t 0 ]; then
     # Read from stdin
     input=$(cat -)
@@ -20,7 +23,7 @@ else [ -n "$1" ];
 fi
 
 # Prompt the user for a pattern
-pattern_to_use=$(fabric -l | fzf)
+pattern_to_use=$(fabric -l | ${mt_prompter})
 
 # Run fabric
 echo "$input" | fabric -s -p "$pattern_to_use"

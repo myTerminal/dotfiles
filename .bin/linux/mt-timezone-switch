@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
+# Detect display and set prompter
+. ~/.assets/libs/bash/select-prompter
+
 # Prompt for a timezone and set it
-sudo ln -sf $(find /usr/share/zoneinfo | fzf --prompt "Choose a location: ") /etc/localtime
+sudo ln -sf $(find /usr/share/zoneinfo | ${mt_prompter} --prompt "Choose a location: ") /etc/localtime

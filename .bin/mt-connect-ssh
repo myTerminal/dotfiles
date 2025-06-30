@@ -2,8 +2,11 @@
 
 CONFIG_FILE="/home/ismail/_store/Vault/machines.conf"
 
+# Detect display and set prompter
+. ~/.assets/libs/bash/select-prompter
+
 # Prompt the user for the machine name
-selected_machine=$(cat $CONFIG_FILE | fzf)
+selected_machine=$(cat $CONFIG_FILE | ${mt_prompter})
 
 # Fetch the IP address associated with the machine name
 ip_address=$(grep "$selected_machine" "$CONFIG_FILE" | cut -d'=' -f2)
