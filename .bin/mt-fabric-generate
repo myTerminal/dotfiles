@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Detect display and set prompter
 . ~/.assets/libs/bash/select-prompter
