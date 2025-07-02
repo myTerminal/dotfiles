@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+if [[ $# -lt 2 ]]; then
+    echo "Usage: mt-repeat <interval-in-seconds> <command...>"
+    exit 1
+fi
+
+interval="$1"
+shift
+
+while true; do
+    clear
+    "${@}"
+    sleep "$interval"
+done
