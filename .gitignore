@@ -19,6 +19,7 @@
 !/.config/emacs/user.el
 !/.config/emacs/zone-quotes-masseffect.el
 !/.config/emacs/snippets
+!/.config/emacs/ellama-sessions
 !/.config/foot
 /.config/foot/*
 !/.config/foot/foot.ini
