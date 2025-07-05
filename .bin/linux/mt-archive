@@ -3,6 +3,12 @@
 command=${1}
 
 if [ "${command}" == "do" ]; then
+
+    if [[ $# -lt 3 ]]; then
+        echo "Usage: mt-archive do <compression-type> <files...>"
+        exit 1
+    fi
+
     operation=${2}
     arguments=${@:3}
     filename="${arguments%%.*}"
@@ -21,42 +27,48 @@ if [ "${command}" == "do" ]; then
             ;;
     esac
 elif [ "${command}" == "undo" ]; then
-     arguments=${@:2}
-     extension=${arguments#*.}
 
-     case "${extension}" in
-         zip)
-             unzip "${arguments}"
-             ;;
+    if [[ $# -lt 2 ]]; then
+        echo "Usage: mt-archive undo <files...>"
+        exit 1
+    fi
 
-         tar)
-             tar -xvzf "${arguments}"
-             ;;
+    arguments=${@:2}
+    extension=${arguments#*.}
 
-         tar.xz)
-             tar -xvf "${arguments}"
-             ;;
+    case "${extension}" in
+        zip)
+            unzip "${arguments}"
+            ;;
 
-         tar.gz)
-             tar -xvzf "${arguments}"
-             ;;
+        tar)
+            tar -xvzf "${arguments}"
+            ;;
 
-         gz)
-             gzip -dk "${arguments}"
-             ;;
+        tar.xz)
+            tar -xvf "${arguments}"
+            ;;
 
-         rar)
-             unrar e "${arguments}"
-             ;;
+        tar.gz)
+            tar -xvzf "${arguments}"
+            ;;
 
-         7z)
-             7zip e "${arguments}"
-             ;;
+        gz)
+            gzip -dk "${arguments}"
+            ;;
 
-         *)
-             echo "Not implemented!"
-             ;;
-     esac
+        rar)
+            unrar e "${arguments}"
+            ;;
+
+        7z)
+            7zip e "${arguments}"
+            ;;
+
+        *)
+            echo "Not implemented!"
+            ;;
+    esac
 else
-    echo "Not implemented!"
+    echo "Usage: mt-archive <operation>"
 fi

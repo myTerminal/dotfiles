@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [[ $# -lt 1 ]]; then
+    echo "Usage: mt-sync-projects <directory>"
+    exit 1
+fi
+
 count=0
 projects=`ls -A $1`
 

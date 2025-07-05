@@ -1,7 +1,17 @@
 #!/usr/bin/env bash
 
+if [[ $# -lt 2 ]]; then
+    echo "Usage: mt-media <operation> <device> [path]"
+    exit 1
+fi
+
 case "${1}" in
     m | mount)
+        if [[ $# -lt 3 ]]; then
+            echo "Usage: mt-media (m|mount) <device> <path>"
+            exit 1
+        fi
+
         # Create media directory for user
         sudo mkdir /run/media/${USER}/$3
 
@@ -13,6 +23,11 @@ case "${1}" in
         ;;
 
     u | unmount)
+        if [[ $# -lt 3 ]]; then
+            echo "Usage: mt-media (m|mount) <device> <path>"
+            exit 1
+        fi
+
         # Unmount media
         sudo umount $2
 

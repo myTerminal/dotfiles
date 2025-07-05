@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [[ $# -lt 1 ]]; then
+    echo "Usage: mt-power-mode <mode>"
+    exit 1
+fi
+
 case "${1}" in
     "shutdown" | "poweroff" )
         sudo shutdown
