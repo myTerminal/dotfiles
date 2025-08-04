@@ -18,7 +18,7 @@ elif [ -f "$1" ]; then
     # Read from specified file
     input=$(cat "$1")
 else [ -n "$1" ];
-     # User the arbitrary text from argument
+     # Use the arbitrary text from argument
      input="$@"
 fi
 
