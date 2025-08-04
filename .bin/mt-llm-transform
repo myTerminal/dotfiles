@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# Detect display and set prompter
+. ~/.assets/libs/bash/select-prompter
+
+# Validate input from std
+if [ ! -t 0 ]; then
+    # Read from stdin
+    input=$(cat -)
+fi
+
+if [ $# -eq 0 ] || [ -z "$input" ] || [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+    # Print accepted syntax
+    echo -e "Please provide a transform, either as a file, or arbitrary text. A query can needs to be provided through stdin.
+Examples:
+1) echo \"...super long text...\" mt-llm-transform ./transform.txt
+2) echo \"...super long text...\" | mt-llm-transform \"Make concise\""
+    exit 0
+elif [ -f "$1" ]; then
+    # Read from specified file
+    prompt=$(cat "$1")
+else [ -n "$1" ];
+     # Use the arbitrary text from argument
+     prompt="$@"
+fi
+
+# Run fabric
+fabric -p "raw_query" "${prompt}: ${input}"
