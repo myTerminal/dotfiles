@@ -31,3 +31,8 @@ fi
 if [[ ! "screen eterm-color dumb" =~ "${TERM}" ]]; then
     tmux
 fi
+
+# Define functions
+cx() {
+    clear && cd "$1" && lo .
+}
