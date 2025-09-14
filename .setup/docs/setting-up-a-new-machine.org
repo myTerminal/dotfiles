@@ -37,6 +37,9 @@
   - Element/Schildi
   - Signal Messenger
   - Thunderbird
+    - Configure Email
+    - Configure Calendars
+    - Configure Addressbooks
   - LogSeq
   - Thunar (may not be needed anymore)
   - Darktable
