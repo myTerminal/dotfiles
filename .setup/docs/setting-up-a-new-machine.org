@@ -63,6 +63,7 @@
   - Sync device for Firefox
   - Element/Schildi for Matrix
   - Signal Messenger as a linked device
+  - Telegram
 - Create maintenance tasks in TickTick
 - Add entry in machines.conf
 - Add entry in *machines* spreadsheet

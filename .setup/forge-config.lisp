@@ -95,6 +95,7 @@
   ("calibre" (:cask "calibre"))
   ("schildi" (:flatpak ("chat.schildi.desktop" "schildi")) (:cask "schildichat"))
   ("signal-messenger" (:xbps "Signal-Desktop") (:cask "signal"))
+  ("telegram" (:xbps "telegram-desktop") (:cask "telegram-desktop"))
   ("pcloud" (:void) (:mac))
   ("transmission" (:xbps "transmission-gtk") (:cask "transmission"))
   ("postman" (:flatpak ("com.getpostman.Postman" "postman")) (:cask "postman"))

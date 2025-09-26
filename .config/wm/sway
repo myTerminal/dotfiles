@@ -41,6 +41,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # Assign programs to workspaces
 assign [class="SchildiChat"] $ws2
 assign [class="Signal"] $ws2
+assign [class="TelegramDesktop"] $ws2
 assign [class="Emacs"] $ws3
 assign [class="Firefox"] $ws4
 assign [class="Chromium"] $ws4
