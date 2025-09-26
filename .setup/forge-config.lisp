@@ -14,8 +14,8 @@
   "ncdu"
   "ripgrep"
   "fzf"
-  ("vim" (:mac))
   ("emacs" (:xbps "emacs-gtk3") (:cask "emacs"))
+  ("vim" (:mac))
   "mpv"
   ("aspell" (:xbps "aspell" "aspell-en") (:mac))
   "make"
@@ -45,19 +45,18 @@
   ("exfat-utils" (:mac))
   ("android-tools" (:cask "android-platform-tools"))
   ("cronie" (:mac))
+  ("ollama" (:cask "ollama") (:void))
+  ("fabric" (:mac) (:void))
   "rlwrap"
   ("sed" (:brew "gnu-sed"))
   "jq"
   "neofetch"
   "wget"
   "curl"
-  "avahi"
   ("openssh" (:mac))
-  ("ollama" (:cask "ollama") (:void))
-  ("fabric" (:mac) (:void))
+  "avahi"
   ("xdg-utils" (:mac))
   ("xorg" (:mac))
-  ("numlockx" (:mac))
   ("sct" (:mac))
   ("gammastep" (:mac))
   ("onboard" (:mac))
@@ -131,12 +130,13 @@
   ("origin" (:void) (:cask "origin"))
   ("gamehub" (:mac))
   ("sony-remote-play" (:void) (:cask "sony-ps4-remote-play"))
+  ("numlockx" (:mac))
   ("qFlipper" (:flatpak ("one.flipperzero.qFlipper" "qFlipper")) (:cask "qflipper"))
   ("font-open-sans" (:void) (:cask "font-open-sans"))
   ("font-inconsolata" (:void) (:cask "font-inconsolata"))
-  ("font-liberation" (:void) (:cask "font-liberation"))
   ("font-roboto-mono" (:void) (:cask "font-roboto-mono"))
   ("font-fira-code" (:void) (:cask "font-fira-code"))
+  ("font-liberation" (:void) (:cask "font-liberation"))
   )
  (
   "Install flatpak packages the conventional way"
