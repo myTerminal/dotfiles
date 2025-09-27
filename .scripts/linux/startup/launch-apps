@@ -22,7 +22,7 @@ case "${1}" in
         exec telegram-desktop & disown
         exec firefox & disown
         exec thunar & disown
-        exec thunderbird & disown
+        exec better-bird & disown
         exec keepassxc & disown
         ;;
 esac

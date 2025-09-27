@@ -90,7 +90,7 @@
   ("firefox" (:cask "firefox"))
   ("chromium" (:cask "chromium"))
   ("keepassxc" (:cask "keepasxc"))
-  ("thunderbird" (:mac))
+  ("betterbird" (:flatpak ("eu.betterbird.Betterbird" "logseq")) (:mac))
   ("calibre" (:cask "calibre"))
   ("schildi" (:flatpak ("chat.schildi.desktop" "schildi")) (:cask "schildichat"))
   ("signal-messenger" (:xbps "Signal-Desktop") (:cask "signal"))

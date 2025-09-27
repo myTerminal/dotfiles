@@ -36,7 +36,7 @@
     - Login to frequent websites in appropriate containers
   - Element/Schildi
   - Signal Messenger
-  - Thunderbird
+  - Betterbird
     - Configure Email
     - Configure Calendars
     - Configure Addressbooks

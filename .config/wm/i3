@@ -54,7 +54,7 @@ assign [class="Audacity"] $ws7
 assign [class="obs"] $ws7
 assign [class="Blender"] $ws7
 assign [class="Logseq"] $ws8
-assign [class="Thunderbird"] $ws9
+assign [class="eu.betterbird.Betterbird"] $ws9
 assign [class="KeePassXC"] $ws10
 
 # Define colors
