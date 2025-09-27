@@ -369,7 +369,8 @@
   (:void ("sudo usermod -aG libvirt ismail"
           "xfconf-query --channel thunar -p /default-view -s ThunarDetailsView"
           "xfconf-query --channel thunar -p /last-location-bar -s ThunarLocationButtons"
-          "xfconf-query --channel thunar -p /last-show-hidden -s true"))
+          "xfconf-query --channel thunar -p /last-show-hidden -s true"
+          "flatpak override --user eu.betterbird.Betterbird --filesystem=home"))
   )
  (
   "Set Firefox as the default web-browser"
