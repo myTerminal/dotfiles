@@ -12,4 +12,5 @@
     sd = "!f() { git status; read -n1 -r -p \"Continue to diffs...\"; git diff; }; f"
     ad = "!f() { git add \"$@\"; git status; }; f"
     lg = "log --format=\"%as %Cgreen%h%Creset %Cblue%s%Creset (by %Cred%cN%Creset, %ar)\" -n 20"
+    find = "!f() { git log --all --grep \"$@\"; }; f"
     overwrite = "!f() { git reset HEAD~\"$@\"; git checkout .; git pull; }; f"
