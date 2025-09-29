@@ -44,6 +44,7 @@ assign [class="Signal"] $ws2
 assign [class="TelegramDesktop"] $ws2
 assign [class="Emacs"] $ws3
 assign [class="Firefox"] $ws4
+assign [class="Mullvad Browser"] $ws4
 assign [class="Chromium"] $ws4
 assign [app_id="[Tt]hunar"] $ws5
 assign [class="Steam"] $ws6

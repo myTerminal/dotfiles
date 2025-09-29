@@ -88,6 +88,8 @@
   ("meld" (:cask "meld"))
   ("logseq" (:flatpak ("com.logseq.Logseq" "logseq")) (:cask "loqseq"))
   ("firefox" (:cask "firefox"))
+  ("mullvad-browser" (:void) (:mac))
+  ("tor-browser" (:void) (:mac))
   ("chromium" (:cask "chromium"))
   ("keepassxc" (:cask "keepasxc"))
   ("betterbird" (:flatpak ("eu.betterbird.Betterbird" "logseq")) (:mac))
@@ -373,9 +375,10 @@
           "flatpak override --user eu.betterbird.Betterbird --filesystem=home"))
   )
  (
-  "Set Firefox as the default web-browser"
+  "Set Mullvad as the default web browser"
   t
-  (:void ("xdg-settings set default-web-browser firefox.desktop"))
+  (:void ("sudo cp ~/.assets/mullvad-browser.desktop /usr/share/applications"
+          "xdg-settings set default-web-browser mullvad-browser.desktop"))
   )
  (
   "Enable touch scrolling for Firefox"

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Mullvad Web Browser
+GenericName=Web Browser
+Type=Application
+Categories=Network;WebBrowser;
+Icon=/home/ismail/_store/Vault/binaries/mullvad-browser/Browser/browser/chrome/icons/default/about-logo.svg
+Exec=mullvad-browser %u
+MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;
