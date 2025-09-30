@@ -41,21 +41,21 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # Assign programs to workspaces
 assign [class="SchildiChat"] $ws2
 assign [class="Signal"] $ws2
-assign [class="TelegramDesktop"] $ws2
+assign [app_id="org.telegram.desktop"] $ws2
 assign [class="Emacs"] $ws3
-assign [class="Firefox"] $ws4
+assign [app_id="Firefox"] $ws4
 assign [class="Mullvad Browser"] $ws4
 assign [class="Chromium"] $ws4
 assign [app_id="[Tt]hunar"] $ws5
-assign [class="Steam"] $ws6
-assign [class="Clementine"] $ws6
+assign [class="steam"] $ws6
+assign [app_id="org.clementine_player.Clementine"] $ws6
 assign [class="Darktable"] $ws7
-assign [class="Gimp"] $ws7
+assign [app_id="gimp"] $ws7
 assign [class="Audacity"] $ws7
-assign [class="obs"] $ws7
-assign [class="Blender"] $ws7
+assign [app_id="com.obsproject.Studio"] $ws7
+assign [app_id="blender"] $ws7
 assign [class="Logseq"] $ws8
-assign [class="eu.betterbird.Betterbird"] $ws9
+assign [app_id="eu.betterbird.Betterbird"] $ws9
 assign [app_id="org.keepassxc.KeePassXC"] $ws10
 
 # Define colors
