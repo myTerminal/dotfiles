@@ -19,7 +19,7 @@ case "${1}" in
         exec emacs & disown
         exec schildi & disown
         exec signal-desktop & disown
-        exec telegram-desktop & disown
+        exec Telegram & disown
         exec firefox & disown
         exec thunar & disown
         exec better-bird & disown
