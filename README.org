@@ -71,7 +71,7 @@ To start the setup, run the following command in a terminal running bash: (provi
 
 |                          | Void (Xorg)                                     | Void (Wayland)                                  | macOS                                           |
 |--------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------|
-| Desktop utils            | [[https://www.freedesktop.org/wiki/Software/xdg-utils][xdg-utils]]                                       | [[https://www.freedesktop.org/wiki/Software/xdg-utils][xdg-utils]]                                       | --                                              |
+| Desktop utils            | [[https://www.freedesktop.org/wiki/Software/xdg-utils][xdg-utils]], [[https://github.com/flatpak/xdg-desktop-portal][xdg-desktop-portal]]                   | [[https://www.freedesktop.org/wiki/Software/xdg-utils][xdg-utils]], [[https://github.com/flatpak/xdg-desktop-portal][xdg-desktop-portal]]                   | --                                              |
 | Display server           | [[https://www.x.org][Xorg]]                                            | --                                              | (native)                                        |
 | Display drivers          | (machine-dependent)                             | (machine-dependent)                             | (native)                                        |
 | Display manager          | --                                              | --                                              | (native)                                        |

@@ -100,5 +100,10 @@ bindsym $mod+Shift+period exec grim - | swappy -f -
 # Set other key-bindings
 bindsym $mod+Shift+Control+e exec sway exit
 
+# Start xdg-desktop-portal and company
+exec --no-startup-id /usr/libexec/xdg-desktop-portal &
+exec --no-startup-id /usr/libexec/xdg-desktop-portal-gnome &
+exec --no-startup-id /usr/libexec/xdg-desktop-portal-gtk &
+
 # Run desktop startup scripts
 exec_always bash ~/.scripts/linux/startup/desktop/run
