@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-exists_p=$(pgrep ${1})
+cmd="$1"
 
-if ! [ ${exists_p} ]; then
-    ${1} &
+if ! pgrep -x "$cmd" > /dev/null; then
+    "$cmd" &
 fi
