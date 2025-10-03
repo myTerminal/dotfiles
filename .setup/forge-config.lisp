@@ -31,6 +31,7 @@
   "smartmontools"
   ("network-manager" (:xbps "NetworkManager") (:mac))
   ("bind-utils" (:mac))
+  "tailscale"
   "weechat"
   ("nodejs" (:brew "node"))
   "sbcl"
@@ -261,7 +262,8 @@
  (
   "Set up startup services"
   t
-  (:void ("sudo ln -s /etc/sv/libvirtd /var/service"
+  (:void ("sudo ln -s /etc/sv/tailscale /var/service"
+          "sudo ln -s /etc/sv/libvirtd /var/service"
           "sudo ln -s /etc/sv/virtlogd /var/service"
           "sudo ln -s /etc/sv/bluetoothd /var/service"
           "sudo ln -s /etc/sv/sshd /var/service"
