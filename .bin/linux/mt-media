@@ -24,7 +24,7 @@ case "${1}" in
 
     u | unmount)
         if [[ $# -lt 3 ]]; then
-            echo "Usage: mt-media (m|mount) <device> <path>"
+            echo "Usage: mt-media (u|unmount) <device> <path>"
             exit 1
         fi
 
