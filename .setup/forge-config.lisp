@@ -51,7 +51,7 @@
   "rlwrap"
   ("sed" (:brew "gnu-sed"))
   "jq"
-  "neofetch"
+  "fastfetch"
   "wget"
   "curl"
   ("openssh" (:mac))
