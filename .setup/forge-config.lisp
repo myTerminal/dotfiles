@@ -132,7 +132,6 @@
   ("steam" (:cask "steam"))
   ("lutris" (:mac))
   ("origin" (:void) (:cask "origin"))
-  ("gamehub" (:mac))
   ("sony-remote-play" (:void) (:cask "sony-ps4-remote-play"))
   ("numlockx" (:mac))
   ("qFlipper" (:flatpak ("one.flipperzero.qFlipper" "qFlipper")) (:cask "qflipper"))
