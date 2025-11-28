@@ -4,9 +4,9 @@ command=$1
 
 case "${1}" in
     e | express )
-        exec logseq & disown
         exec emacs & disown
         exec chromium & disown
+        exec logseq & disown
         exec keepassxc & disown
         ;;
 
@@ -15,13 +15,11 @@ case "${1}" in
         ;;
 
     *)
-        exec logseq & disown
-        exec emacs & disown
-        exec schildi & disown
         exec signal-desktop & disown
         exec Telegram & disown
+        exec emacs & disown
         exec firefox & disown
-        exec thunar & disown
+        exec logseq & disown
         exec better-bird & disown
         exec keepassxc & disown
         ;;
