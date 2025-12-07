@@ -46,6 +46,7 @@
   ("exfat-utils" (:mac))
   ("android-tools" (:cask "android-platform-tools"))
   ("cronie" (:mac))
+  ("piper" (:mac) (:void))
   ("ollama" (:cask "ollama") (:void))
   ("fabric" (:mac) (:void))
   "rlwrap"
