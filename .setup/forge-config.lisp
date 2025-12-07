@@ -391,6 +391,12 @@ MOZ_USE_XINPUT2 DEFAULT=1
 \" | sudo tee -a /etc/security/pam_env.conf"))
   )
  (
+  "Set up echonet service"
+  t
+  (:void ("ls /sys/class/net | fzf --prompt=\"Select an interface: \" > ~/.mt-network-interface"
+          "cp -R ~/.assets/services/echonet-runit ~/.services/echonet"))
+  )
+ (
   "Tag machine with ~/.mt-tag"
   t
   (:all ("touch ~/.mt-tag"))
