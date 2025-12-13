@@ -262,7 +262,7 @@
  (
   "Set up startup services"
   t
-  (:void ("sudo ln -s /etc/sv/tailscale /var/service"
+  (:void ("sudo ln -s /etc/sv/tailscaled /var/service"
           "sudo ln -s /etc/sv/libvirtd /var/service"
           "sudo ln -s /etc/sv/virtlogd /var/service"
           "sudo ln -s /etc/sv/bluetoothd /var/service"
