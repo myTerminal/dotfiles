@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# This script is an add-on to `~/.setup/forge-config.lisp` containing
+# device-specific setup for 2007 Lenovo ThinkPad T60 and mostly follows steps
+# from https://wiki.archlinux.org/title/Laptop/Lenovo
+
+# Configure default screen brightness
+. ~/.setup/hardware/configure-default-display-brightness 100%
+
+# Configure startup sound volume
+. ~/.setup/hardware/configure-default-sound-volume 70%
+
+# Install tlp and more for power management
+. ~/.setup/hardware/void/configure-power-management tlp acpi_call-dkms tp_smapi-dkms powertop
+
+# Configure fingerprint sensor
+. ~/.setup/hardware/configure-fingerprints
