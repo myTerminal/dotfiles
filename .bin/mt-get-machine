@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CONFIG_FILE="/home/ismail/_store/Vault/machines.conf"
+CONFIG_FILE="/home/ismail/_store/Vault/assets/network-map.conf"
 
 # Detect display and set prompter
 . ~/.assets/libs/bash/select-prompter
