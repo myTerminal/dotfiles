@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+machine_reach=$(echo "${1}" | cut -d'|' -f1)
+machine_name=$(echo "${1}" | cut -d'|' -f3)
+machine_ip=$(echo "${1}" | cut -d'|' -f4)
+
+if [ "$machine_reach" == "+" ]; then
+    echo $machine_name
+else
+    echo $machine_ip
+fi

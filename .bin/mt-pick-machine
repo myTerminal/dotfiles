@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
-CONFIG_FILE="/home/ismail/_store/Vault/assets/network-map.conf"
+MAP_FILE="/home/ismail/_store/Vault/assets/network-map.conf"
 
 # Detect display and set prompter
 . ~/.assets/libs/bash/select-prompter
 
 # Prompt the user for the machine name
-selected_machine=$(cat $CONFIG_FILE | ${mt_prompter})
+selected_machine=$(cat $MAP_FILE | ${mt_prompter})
 
 # Fetch the IP address associated with the machine name
-ip_address=$(grep "$selected_machine" "$CONFIG_FILE" | cut -d'=' -f2)
+machine_ref=$(/home/ismail/.assets/libs/bash/get-machine-ref $selected_machine)
 
 # Return the IP addres of the selected machine
-echo $ip_address
+echo $machine_ref
