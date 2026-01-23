@@ -5,7 +5,7 @@
          2)
       (let ((shipping-cost (parse-integer (car args) :junk-allowed t))
             (max-budget (parse-integer (cadr args) :junk-allowed t))
-            (sales-tax 0.07))
+            (sales-tax 0.08))
         (princ (round (- (/ max-budget (+ 1 sales-tax))
                          shipping-cost))))
       (princ "Need shipping cost and max budget!")))
