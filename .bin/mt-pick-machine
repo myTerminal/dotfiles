@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 MAP_FILE="/home/ismail/_store/Vault/assets/network-map.conf"
+LIBS_DIR=/home/ismail/.assets/libs
 
 # Detect display and set prompter
 . ~/.assets/libs/bash/select-prompter
@@ -9,7 +10,7 @@ MAP_FILE="/home/ismail/_store/Vault/assets/network-map.conf"
 selected_machine=$(cat $MAP_FILE | ${mt_prompter})
 
 # Fetch the IP address associated with the machine name
-machine_ref=$(/home/ismail/.assets/libs/bash/get-machine-ref $selected_machine)
+machine_ref=$($LIBS_DIR/bash/get-machine-ref $selected_machine)
 
 # Return the IP addres of the selected machine
 echo $machine_ref
