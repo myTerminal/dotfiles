@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+PIPER_DIR=~/_store/Vault/binaries/piper
+
 if [ ! -t 0 ]; then
     # Read from stdin
     input=$(cat -)
@@ -20,4 +22,4 @@ else [ -n "$1" ];
 fi
 
 # Run piper over the input text
-echo "$input" | ~/_store/Vault/binaries/piper/piper --model ~/_store/Vault/binaries/piper/voices/en_US-bryce-medium.onnx --output_file - | mpv -
+echo "$input" | $PIPER_DIR/piper --model $PIPER_DIR/voices/en_US-bryce-medium.onnx --output_file - | mpv -
