@@ -7,6 +7,9 @@
 # Configure startup sound volume
 . ~/.setup/hardware/configure-default-sound-volume 70%
 
+# Configure default screen brightness
+. ~/.setup/hardware/configure-default-display-brightness 30%
+
 # Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "SynPS/2 Synaptics TouchPad" 0.5
 . ~/.setup/hardware/configure-touchpad-for-wayland "2:7:SynPS/2_Synaptics_TouchPad" 1

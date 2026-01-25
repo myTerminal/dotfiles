@@ -7,6 +7,9 @@
 # Fix audio input and output
 sudo xbps-install -Sy sof-firmware
 
+# Configure default screen brightness
+. ~/.setup/hardware/configure-default-display-brightness 30%
+
 # Configure startup sound volume
 . ~/.setup/hardware/configure-default-sound-volume 70%
 

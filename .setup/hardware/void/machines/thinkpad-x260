@@ -8,6 +8,9 @@
 . ~/.setup/hardware/configure-dpi-for-xorg 72
 . ~/.setup/hardware/configure-dpi-for-wayland 0.75 LVDS-1
 
+# Configure default screen brightness
+. ~/.setup/hardware/configure-default-display-brightness 30%
+
 # Configure startup sound volume
 . ~/.setup/hardware/configure-default-sound-volume 70%
 

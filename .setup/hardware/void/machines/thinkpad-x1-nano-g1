@@ -8,6 +8,9 @@
 . ~/.setup/hardware/configure-dpi-for-xorg 120
 . ~/.setup/hardware/configure-dpi-for-wayland 1.25 eDP-1
 
+# Configure default screen brightness
+. ~/.setup/hardware/configure-default-display-brightness 20%
+
 # Fix audio input and output
 sudo xbps-install -Sy sof-firmware
 

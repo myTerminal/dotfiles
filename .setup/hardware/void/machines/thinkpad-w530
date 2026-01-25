@@ -7,6 +7,9 @@
 # Configure startup sound volume
 . ~/.setup/hardware/configure-default-sound-volume 70%
 
+# Configure default screen brightness
+. ~/.setup/hardware/configure-default-display-brightness 50%
+
 # Set screen temperature for high-GAMUT screen
 . ~/.setup/hardware/configure-screen-color-temp 4500
 
