@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+.scripts/linux/startup/desktop/display
