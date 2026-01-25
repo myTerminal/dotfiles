@@ -85,6 +85,12 @@ Unmount the partition
     mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@snapshots /dev/mapper/mirage /mnt/.snapshots
     swapon /dev/nvme0n1p2
 
+Choose compression depending on the machine:
+
+- Modern: `compress-force=zstd:3`
+- Mid-level: `compress=zstd:2`
+- Legacy: `compress=zstd:1` or `compress=lzo`
+
 ## Base installation
 
 ### Setting `REPO` and `ARCH`
