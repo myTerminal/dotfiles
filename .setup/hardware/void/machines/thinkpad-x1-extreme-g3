@@ -39,7 +39,7 @@ ctl.!default {
 # Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "Synaptics TM3625-010" 1.0
 . ~/.setup/hardware/configure-trackpoint-for-xorg "TPPS/2 Elan TrackPoint" 1
-. ~/.setup/hardware/configure-touchpad-for-wayland "2:7:Synaptics TM3625-010" 1
+. ~/.setup/hardware/configure-touchpad-for-wayland "1739:0:Synaptics_TM3625-010" 1
 . ~/.setup/hardware/configure-trackpoint-for-wayland "2:10:TPPS/2_Elan_TrackPoint" 0.5
 
 # Install tlp and more for power management
