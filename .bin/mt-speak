@@ -22,4 +22,4 @@ else [ -n "$1" ];
 fi
 
 # Run piper over the input text
-echo "$input" | $PIPER_DIR/piper --model $PIPER_DIR/voices/en_US-bryce-medium.onnx --output_file - | mpv -
+echo "$input" | $PIPER_DIR/piper --model $PIPER_DIR/voices/en_US-glados-medium.onnx --output_file - | mpv -
