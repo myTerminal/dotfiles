@@ -55,6 +55,7 @@
   "fastfetch"
   "wget"
   "curl"
+  "socat"
   ("openssh" (:mac))
   "avahi"
   ("xdg-utils" (:mac))
