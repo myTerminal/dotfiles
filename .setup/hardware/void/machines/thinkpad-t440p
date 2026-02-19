@@ -4,6 +4,9 @@
 # device-specific setup for 2013 Lenovo ThinkPad T440p and mostly follows steps
 # from https://wiki.archlinux.org/title/Lenovo_ThinkPad_T440p
 
+# Configure default screen brightness
+. ~/.setup/hardware/configure-default-display-brightness 30%
+
 # Configure startup sound volume
 . ~/.setup/hardware/configure-default-sound-volume 70%
 
