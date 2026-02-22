@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sudo strings /sys/firmware/acpi/tables/MSDM
