@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+TOPIC="$1"
+HOST="ntfy.sh"
+
+echo "Listening for notifications on $TOPIC..."
+
+curl -s -N "https://$HOST/$TOPIC/raw" | while read -r message; do
+    if [ -n "$message" ]; then
+        notify-send "ntfy.sh" "$message" \
+                    --icon=network-transmit-receive \
+                    --urgency=normal
+    fi
+done
