@@ -3,16 +3,16 @@ include ~/.config/wm/common
 set $mod Mod4
 
 # Define names for default workspaces for which we configure key bindings later on
-set $ws1 "1: Home"
-set $ws2 "2: People"
-set $ws3 "3: Code"
-set $ws4 "4: Web"
-set $ws5 "5: Files"
-set $ws6 "6: Play"
-set $ws7 "7: Studio"
-set $ws8 "8: Notes"
-set $ws9 "9: Emails"
-set $ws10 "10: Auth"
+set $ws1 "1)  Home"
+set $ws2 "2)  Code"
+set $ws3 "3)  Studio"
+set $ws4 "4)  Play"
+set $ws5 "5)  Notes"
+set $ws6 "6)  Writing"
+set $ws7 "7)  People"
+set $ws8 "8)  Emails"
+set $ws9 "9)  Web"
+set $ws0 "10)  Auth"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -24,7 +24,7 @@ bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
+bindsym $mod+0 workspace $ws0
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -36,27 +36,27 @@ bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+Shift+0 move container to workspace $ws0
 
 # Assign programs to workspaces
-assign [class="SchildiChat"] $ws2
-assign [class="Signal"] $ws2
-assign [app_id="org.telegram.desktop"] $ws2
-assign [class="Emacs"] $ws3
-assign [app_id="Firefox"] $ws4
-#assign [class="Mullvad Browser"] $ws4
-#assign [class="Chromium"] $ws4
-#assign [app_id="[Tt]hunar"] $ws5
-assign [class="steam"] $ws6
-assign [app_id="org.clementine_player.Clementine"] $ws6
-assign [class="Darktable"] $ws7
-assign [app_id="gimp"] $ws7
-assign [class="Audacity"] $ws7
-assign [app_id="com.obsproject.Studio"] $ws7
-assign [app_id="blender"] $ws7
-assign [class="Logseq"] $ws8
-assign [app_id="eu.betterbird.Betterbird"] $ws9
-assign [app_id="org.keepassxc.KeePassXC"] $ws10
+#assign [app_id="[Tt]hunar"] $ws1
+assign [class="Emacs"] $ws2
+assign [class="Darktable"] $ws3
+assign [app_id="gimp"] $ws3
+assign [class="Audacity"] $ws3
+assign [app_id="com.obsproject.Studio"] $ws3
+assign [app_id="blender"] $ws3
+assign [class="steam"] $ws4
+assign [app_id="org.clementine_player.Clementine"] $ws4
+assign [class="Logseq"] $ws5
+assign [class="SchildiChat"] $ws7
+assign [class="Signal"] $ws7
+assign [app_id="org.telegram.desktop"] $ws7
+assign [app_id="eu.betterbird.Betterbird"] $ws8
+assign [app_id="Firefox"] $ws9
+#assign [class="Mullvad Browser"] $ws9
+#assign [class="Chromium"] $ws9
+assign [app_id="org.keepassxc.KeePassXC"] $ws0
 
 # Define colors
 set $c_primary_lightest "#83d0c9"
