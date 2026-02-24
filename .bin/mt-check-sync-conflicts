@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+SEARCH_DIR="$HOME/_store/"
+
+CONFLICTS=$(fd .sync-conflict "$SEARCH_DIR")
+
+if [ -n "$CONFLICTS" ]; then
+    COUNT=$(echo "$CONFLICTS" | wc -l)
+
+    echo "Sync Conflict Detected!"
+    echo "$COUNT conflict(s) found in $SEARCH_DIR"
+    notify-send "Sync Conflict Detected!" "$COUNT conflict(s) found in $SEARCH_DIR" --urgency=critical
+else
+    echo "No Sync Conflict Found!"
+    notify-send "No Sync Conflict Found!" --urgency=low
+fi
