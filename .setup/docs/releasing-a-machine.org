@@ -13,7 +13,6 @@ efibootmgr -Bb <four-digit-numeric-identifier>
   - Element/Schildi for Matrix
   - Linked device with Signal Messenger
   - Linked device from Telegram
-  - Sync device in Firefox
   - Syncthing as a node
   - GitHub and GitLab (SSH keys)
   - Home network as a known device

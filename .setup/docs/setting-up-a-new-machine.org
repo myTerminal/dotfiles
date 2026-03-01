@@ -8,7 +8,7 @@
   4) /(Optional)/ MSFT Reserved
   5) /(Optional)/ Windows NTFS
 - /(Optional)/ Install Windows with absolute basic settings and minimal software, run updates a few tens of times
-  - Install and configure Firefox
+  - (Optional) Install and configure LibreWolf
 - Install Linux
   - If installing from within a LIVE environment, create an SSH key and add it to my GitHub and GitLab account
 - Init [[https://github.com/myTerminal/dotfiles][dotfiles]] using [[../../bootstrap][the bootstrap script]] and trigger forge
@@ -23,17 +23,25 @@
   - Configure power management
 - Configure software and services
   - Keepass
-  - Firefox
-    - Login to Firefox account
-    - Configure containers using Multi-account containers extension
-    - Set "Device Name" under "Sync"
-    - Set custom search engine to Brave search
-    - Login to other extensions
-    - Configure toolbar
-    - Restore Cryptowallet on [[https://metamask.io][MetaMask]]
-    - Set up connection with KeePassXC
-    - Restore session from one of the other machines
-    - Login to frequent websites in appropriate containers
+  - LibreWolf
+    - Uncheck "Delete cookies and site data when LibreWolf is closed"
+    - Set Brave Search as the search engine
+    - Configure behavior around tab cycling
+    - Switch to dark color theme
+    - Switch to Vertical Tabs
+    - Create tab containers
+    - Installing web extensions
+      - uBlock Origin
+      - Spoof Timezone
+      - Dark Reader
+      - KeePassXC-Browser
+      - Raindrop.io
+      - Temporary Containers
+      - Grammarly
+      - Emoji
+      - Tab Renamer
+    - Set up pinned tabs, logins, etc.
+    - Customizing the toolbar
   - Element/Schildi
   - Signal Messenger
   - Betterbird
@@ -60,7 +68,6 @@
   - GitHub and GitLab (SSH keys)
   - Syncthing as a node
   - KeePass database as a key
-  - Sync device for Firefox
   - Element/Schildi for Matrix
   - Signal Messenger as a linked device
   - Telegram
