@@ -3,10 +3,11 @@
 
 - Re-partition the storage drive with a GPT partition table and the following high-level partitions:
   1) EFI (FAT32)
-  2) SWAP
-  3) Linux (BTRFS)
-  4) /(Optional)/ MSFT Reserved
-  5) /(Optional)/ Windows NTFS
+  2) BOOT (EXT4)
+  3) SWAP
+  4) Linux (BTRFS)
+  5) /(Optional)/ MSFT Reserved
+  6) /(Optional)/ Windows NTFS
 - /(Optional)/ Install Windows with absolute basic settings and minimal software, run updates a few tens of times
   - (Optional) Install and configure LibreWolf
 - Install Linux

@@ -34,23 +34,19 @@ Format the first partition as EFI
 
     mkfs.fat -F32 /dev/nvme0n1p1
 
-Format the second partition as boot
-
-    mkfs.ext4 /dev/nvme0n1p2
-
 Create a swap partition
 
-    mkswap /dev/nvme0n1p3
+    mkswap /dev/nvme0n1p2
 
 Prepare the main encrypted partition
 
-    cryptsetup -y -v luksFormat --type luks1 /dev/nvme0n1p4
+    cryptsetup -y -v luksFormat --type luks1 /dev/nvme0n1p3
 
 Respond with a "YES" and enter a passphrase twice.
 
 Open the main partition with the name "mirage"
 
-    cryptsetup open /dev/nvme0n1p4 mirage
+    cryptsetup open /dev/nvme0n1p3 mirage
     <passphrase>
 
 Format the main partition as `btrfs`
@@ -67,7 +63,7 @@ Mount main partition temporarily
 
 Create subvolumes for root, home, var and snapshots
 
-    btrfs su cr /mnt/@root
+    btrfs su cr /mnt/@
     btrfs su cr /mnt/@home
     btrfs su cr /mnt/@var
     btrfs su cr /mnt/@store
@@ -79,16 +75,15 @@ Unmount the partition
     
 ### Re-mounting subvolumes as partitions
 
-    mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@root /dev/mapper/mirage /mnt
+    mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@ /dev/mapper/mirage /mnt
     mkdir -p /mnt/{boot,home,var,store,.snapshots}
-    mount /dev/nvme0n1p2 /mnt/boot
     mkdir /mnt/boot/efi
     mount /dev/nvme0n1p1 /mnt/boot/efi
     mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@home /dev/mapper/mirage /mnt/home
     mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@var /dev/mapper/mirage /mnt/var
     mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@store /dev/mapper/mirage /mnt/store
     mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@snapshots /dev/mapper/mirage /mnt/.snapshots
-    swapon /dev/nvme0n1p3
+    swapon /dev/nvme0n1p2
 
 Choose compression depending on the machine:
 
@@ -209,7 +204,7 @@ Create a key
 
 Add the key for the encrypted volume
 
-    cryptsetup luksAddKey /dev/nvme0n1p4 /boot/volume.key
+    cryptsetup luksAddKey /dev/nvme0n1p3 /boot/volume.key
 
 Restrict access to the key (and `/boot`)
 
@@ -220,7 +215,7 @@ Use `blkid` to get the `UUID` of the encrypted partition
 
 Create an entry in the `/etc/crypttab` file
 
-    mirage <tab> UUID=[uuid-of-encrypted-partition] <tab> none <tab> luks
+    mirage <tab> UUID=[uuid-of-encrypted-partition] <tab> /boot/volume.key <tab> luks
 
 Make GRUB aware of the encrypted partition
 
@@ -228,13 +223,15 @@ Make GRUB aware of the encrypted partition
 
 Set `GRUB_CMDLINE_LINUX` = "rd.luks=1 rd.luks.uuid=[UUID-of-encrypted-partition] root=/dev/mapper/mirage rootflags=subvol=@"
 
+Also, set `GRUB_ENABLE_CRYPTODISK=y` to allow us to install GRUB on an encrytped boot.
+
 To enable `os-prober` (could be temporary), add the following
 
     GRUB_DISABLE_OS_PROBER=FALSE
 
 Add an entry in `/etc/dracut.conf.d/10-crypt.conf
 
-    install_items+=" /etc/crypttab "
+    install_items+=" /boot/volume.key /etc/crypttab "
 
 ### Running a `grub-install`
 
