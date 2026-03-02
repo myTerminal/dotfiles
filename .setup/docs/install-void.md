@@ -105,7 +105,7 @@ Choose compression depending on the machine:
 
 ### Bootstrapping a base-system
 
-    XBPS_ARCH=$ARCH xbps-install -S -r /mnt -R "$REPO" base-system elogind polkit dbus chrony grub-x86_64-efi cryptsetup vim git wget curl make
+    XBPS_ARCH=$ARCH xbps-install -S -r /mnt -R "$REPO" base-system elogind polkit dbus chrony grub-x86_64-efi cryptsetup plymouth vim git wget curl make
 
 ### Mounting the pseudo-filesystems for chroot
 
@@ -226,6 +226,12 @@ Make GRUB aware of the encrypted partition
 
     vim /etc/default/grub
 
+Set `GRUB_CMDLINE_LINUX_DEFAULT` = "quite splash plymouth.enable=1"
+
+Add another line
+
+    GRUB_GFXPAYLOAD_LINUX=keep
+
 Set `GRUB_CMDLINE_LINUX` = "rd.luks=1 rd.luks.uuid=[UUID-of-encrypted-partition] root=/dev/mapper/mirage rootflags=subvol=@"
 
 To enable `os-prober` (could be temporary), add the following
@@ -236,6 +242,14 @@ Add an entry in `/etc/dracut.conf.d/10-crypt.conf
 
     install_items+=" /etc/crypttab "
 
+Add an entry in `/etc/dracut.conf.d/20-plymouth.conf`
+
+    add_dracutmodules+=" plymouth "
+
+Add an entry in `/etc/rc.local`
+
+    plymouth quit
+
 ### Running a `grub-install`
 
     grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=VOID
@@ -244,7 +258,11 @@ Add an entry in `/etc/dracut.conf.d/10-crypt.conf
 
     update-grub
 
-### Update `initramfs`
+### Set Plymouth theme
+
+    plymouth-set-default-theme -R spinfinity
+
+### Update `initramfs` (Should be taken care of by plymouth)
 
     xbps-reconfigure -fa
 
