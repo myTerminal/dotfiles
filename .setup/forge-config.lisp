@@ -289,7 +289,7 @@
   (:void ("wget -O - https://github.com/shvchk/fallout-grub-theme/raw/master/install.sh | bash"))
   )
  (
-  "Install power-guard"
+  "Install power-guard (need to press RET)"
   t
   (:void ("git clone https://github.com/myTerminal/power-guard.git /tmp/power-guard"
           "( cd /tmp/power-guard; make install )"))
