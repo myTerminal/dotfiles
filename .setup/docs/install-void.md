@@ -232,7 +232,7 @@ Add another line
 
     GRUB_GFXPAYLOAD_LINUX=keep
 
-Set `GRUB_CMDLINE_LINUX` = "rd.luks=1 rd.luks.uuid=[UUID-of-encrypted-partition] root=/dev/mapper/mirage rootflags=subvol=@"
+Set `GRUB_CMDLINE_LINUX` = "rd.luks=1 rd.luks.uuid=[UUID-of-encrypted-partition] rd.luks.name=[UUID-of-encrypted-partition]=mirage root=/dev/mapper/mirage rootflags=subvol=@root"
 
 To enable `os-prober` (could be temporary), add the following
 
