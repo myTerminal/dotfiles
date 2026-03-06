@@ -40,6 +40,7 @@ bindsym $mod+Shift+0 move container to workspace $ws0
 
 # Assign programs to workspaces
 #assign [app_id="[Tt]hunar"] $ws1
+assign [class="Chromium"] $ws1
 assign [class="Emacs"] $ws2
 assign [class="Darktable"] $ws3
 assign [app_id="gimp"] $ws3
@@ -55,7 +56,6 @@ assign [app_id="org.telegram.desktop"] $ws7
 assign [app_id="eu.betterbird.Betterbird"] $ws8
 assign [app_id="librewolf"] $ws9
 #assign [class="Mullvad Browser"] $ws9
-#assign [class="Chromium"] $ws9
 assign [app_id="org.keepassxc.KeePassXC"] $ws0
 
 # Define colors
