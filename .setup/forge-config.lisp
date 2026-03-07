@@ -240,13 +240,6 @@
           "sudo ln -s /usr/share/examples/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/"))
   )
  (
-  "Fetch perl extensions for for rxvt"
-  t
-  (:void ("sudo xbps-install -Sy xclip"
-          "sudo wget \"https://pastebin.com/raw/QHk1NyPS\" -O /usr/lib/urxvt/perl/clipboard"
-          "sudo wget \"https://raw.githubusercontent.com/simmel/urxvt-resize-font/master/resize-font\" -O /usr/lib/urxvt/perl/resize-font"))
-  )
- (
   "Syncthing: Prepare /store/ismail"
   t
   (:void ("sudo mkdir /store/ismail"
@@ -372,23 +365,27 @@
  (
   "Perform a few package-dependent config"
   nil
-  (:void ("sudo usermod -aG libvirt ismail"
+  (:void ("echo Fetching perl extensions for rxvt..."
+          "sudo xbps-install -Sy xclip"
+          "sudo wget \"https://pastebin.com/raw/QHk1NyPS\" -O /usr/lib/urxvt/perl/clipboard"
+          "sudo wget \"https://raw.githubusercontent.com/simmel/urxvt-resize-font/master/resize-font\" -O /usr/lib/urxvt/perl/resize-font"
+          "echo Configuring Thunar..."
           "xfconf-query --channel thunar -p /default-view -s ThunarDetailsView"
           "xfconf-query --channel thunar -p /last-location-bar -s ThunarLocationButtons"
           "xfconf-query --channel thunar -p /last-show-hidden -s true"
-          "flatpak override --user eu.betterbird.Betterbird --filesystem=home"))
+          "echo Enabling touch scrolling in Firefox..."
+          "echo \"
+MOZ_USE_XINPUT2 DEFAULT=1
+\" | sudo tee -a /etc/security/pam_env.conf"
+          "echo Setting permissions for Betterbird..."
+          "flatpak override --user eu.betterbird.Betterbird --filesystem=home"
+          "echo Setting user permissions for virt-manager..."
+          "sudo usermod -aG libvirt ismail"))
   )
  (
   "Set Mullvad as the default web browser"
   t
   (:void ("xdg-settings set default-web-browser mullvad-browser.desktop"))
-  )
- (
-  "Enable touch scrolling for Firefox"
-  t
-  (:void ("echo \"
-MOZ_USE_XINPUT2 DEFAULT=1
-\" | sudo tee -a /etc/security/pam_env.conf"))
   )
  (
   "Set up echonet service"
