@@ -381,8 +381,7 @@
  (
   "Set Mullvad as the default web browser"
   t
-  (:void ("sudo cp ~/.assets/mullvad-browser.desktop /usr/share/applications"
-          "xdg-settings set default-web-browser mullvad-browser.desktop"))
+  (:void ("xdg-settings set default-web-browser mullvad-browser.desktop"))
   )
  (
   "Enable touch scrolling for Firefox"
