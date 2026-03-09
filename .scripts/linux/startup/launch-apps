@@ -19,7 +19,7 @@ case "${1}" in
         exec signal-desktop & disown
         exec Telegram & disown
         exec emacs & disown
-        exec LibreWolf & disown
+        exec libre-wolf & disown
         exec logseq & disown
         exec better-bird & disown
         exec keepassxc & disown
