@@ -155,11 +155,11 @@ There still is some inseparable residue related to other platforms. This might e
 
 This setup also follows the following principles:
 
-1. *Lean*: It should contain only the software that I need, with minimal to no tolerance for bloat. There’s only one software for one thing, with exceptions, of course, and I run regular optimizations to make sure that is the case. It could be either replacing a tool with a better alternative, or one from within the operating system itself, or dropping it altogether.
+1. *Lean*: It should contain only the software that I need, with minimal to no tolerance for bloat. There’s only one software for one thing, with exceptions, of course, and I run regular optimizations to make sure that is still the case. These changes could be either replacing a tool with a better alternative, or one from within the operating system itself, or dropping it altogether.
 2. *Reproducible*: I should be able to reproduce the same setup on as many machines as I need to, at any point in time, as many times as I need or want, with minimal to no manual configuration. This means not only the fetching of software is scripted, but also configuration and often execution.
 3. *Composable*: The elements of the setup should be interchangeable with other alternatives when a better-suited one is identified. Usually, following the UNIX philosophy (which is to have a tool for one job only) helps, with exceptions like Emacs.
 4. *Portable*: The setup should be portable such that (a) it should self-contain all other assets like code libraries, multimedia files, etc., with minimal to no external dependency, and (b) it should not contain elements bound to a particular Linux distribution, potentially preventing it from working elsewhere.
-5. *Well-Documented*: The entire setup should contain sufficient documentation for my future self.
+5. *Well-Documented*: The entire setup should contain sufficient documentation for my future self, because my older self has always had trouble aligning with my younger self from the past.
 
 ** Open Gaps
 
