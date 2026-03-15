@@ -98,8 +98,6 @@
   ("keepassxc" (:cask "keepasxc"))
   ("betterbird" (:flatpak ("eu.betterbird.Betterbird" "logseq")) (:mac))
   ("calibre" (:cask "calibre"))
-  ("schildi" (:flatpak ("chat.schildi.desktop" "schildi")) (:cask "schildichat"))
-  ("signal-messenger" (:xbps "Signal-Desktop") (:cask "signal"))
   ("telegram" (:xbps "telegram-desktop") (:cask "telegram-desktop"))
   ("pcloud" (:void) (:mac))
   ("transmission" (:xbps "transmission-gtk") (:cask "transmission"))
@@ -148,7 +146,6 @@
   nil
   (:void ("~/.bin/linux/mt-flatpak install logseq com.logseq.Logseq"
           "~/.bin/linux/mt-flatpak install better-bird eu.betterbird.Betterbird"
-          "~/.bin/linux/mt-flatpak install schildi chat.schildi.desktop"
           "~/.bin/linux/mt-flatpak install postman com.getpostman.Postman"
           "~/.bin/linux/mt-flatpak install obs-studio com.obsproject.Studio"
           "~/.bin/linux/mt-flatpak install qFlipper one.flipperzero.qFlipper"))
