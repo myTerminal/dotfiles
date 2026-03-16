@@ -132,7 +132,10 @@
         "keyboard-state": {
             "numlock": true,
             "capslock": true,
-            "format": "{icon} {name}",
+            "format": {
+                "numlock": " {icon} ",
+                "capslock": " {icon}  "
+            },
             "format-icons": {
                 "locked": "",
                 "unlocked": ""

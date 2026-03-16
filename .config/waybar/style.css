@@ -57,7 +57,7 @@
 #backlight,
 #pulseaudio,
 #battery {
-    border-left: 2px solid #323232;
+    border-left: 2px solid #303030;
 }
 
 #idle_inhibitor,
@@ -73,7 +73,7 @@
 #pulseaudio,
 #battery {
     margin: 3px 0;
-    padding: 0 10px;
+    padding: 0 5px 0 10px;
 }
 
 #mode {
