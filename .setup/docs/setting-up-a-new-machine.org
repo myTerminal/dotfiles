@@ -40,7 +40,7 @@
       - Temporary Containers
       - Grammarly
       - Emoji
-      - Tab Renamer
+      - Rename Tabs
     - Set up pinned tabs, logins, etc.
     - Customizing the toolbar
   - Betterbird
@@ -69,7 +69,7 @@
   - KeePass database as a key
   - Telegram
 - Create maintenance tasks in TickTick
-- Add entry in machines.conf
+- Add entry in network-map.conf
 - Add entry in *machines* spreadsheet
 
 # Local Variables:

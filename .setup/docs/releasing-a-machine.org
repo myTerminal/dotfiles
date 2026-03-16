@@ -16,7 +16,7 @@ efibootmgr -Bb <four-digit-numeric-identifier>
   - Home network as a known device
     - Static IP assignment
 - Remove maintenance tasks from TickTick
-- Remove entry from machines.conf
+- Remove entry from network-map.conf
 - Update entry in *machines* spreadsheet
 
 # Local Variables:
