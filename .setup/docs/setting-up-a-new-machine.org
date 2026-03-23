@@ -4,11 +4,11 @@
 - Re-partition the storage drive with a GPT partition table and the following high-level partitions:
 
   | Volume    | Size | Type  | BIOS (SATA) | UEFI (SATA) | UEFI (NVMe) |
-  | BIOS BOOT | 1M   | --    | sda1        |             |             |
+  | BIOS BOOT | 1M   | --    | sda1        | --          | --          |
   | EFI       | 512M | FAT32 |             | sda1        | nvme0n1p1   |
-  | SWAP      | ?    |       | sda2        | sda2        | nvme0n1p2   |
-  | Boot      | 1G   |       | sda3        | sda3        | nvme0n1p3   |
-  | Root      | ?    |       | sda4        | sda4        | nvme0n1p4   |
+  | SWAP      | ?    | SWAP  | sda2        | sda2        | nvme0n1p2   |
+  | Boot      | 1G   | EXT4  | sda3        | sda3        | nvme0n1p3   |
+  | Root      | ?    | LUKS  | sda4        | sda4        | nvme0n1p4   |
 
 - /(Optional)/ Install Windows with absolute basic settings and minimal software, run updates a few tens of times
   - (Optional) Install and configure LibreWolf
