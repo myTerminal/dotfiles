@@ -33,9 +33,6 @@ ctl.!default {
 # Configure startup sound volume
 . ~/.setup/hardware/configure-default-sound-volume 70%
 
-# Configure default screen brightness
-. ~/.setup/hardware/configure-default-display-brightness 5%
-
 # Improve touchpad experience
 . ~/.setup/hardware/configure-touchpad-for-xorg "Synaptics TM3625-010" 1.0
 . ~/.setup/hardware/configure-trackpoint-for-xorg "TPPS/2 Elan TrackPoint" 1
