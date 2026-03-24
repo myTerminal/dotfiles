@@ -34,13 +34,13 @@ Format the first partition as EFI
 
     mkfs.fat -F32 /dev/nvme0n1p1
 
-Format the second partition as boot
-
-    mkfs.ext4 /dev/nvme0n1p2
-
 Create a swap partition
 
-    mkswap /dev/nvme0n1p3
+    mkswap /dev/nvme0n1p2
+
+Format a partition as boot
+
+    mkfs.ext4 /dev/nvme0n1p3
 
 Prepare the main encrypted partition
 
@@ -81,14 +81,14 @@ Unmount the partition
 
     mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@root /dev/mapper/mirage /mnt
     mkdir -p /mnt/{boot,home,var,store,.snapshots}
-    mount /dev/nvme0n1p2 /mnt/boot
+    mount /dev/nvme0n1p3 /mnt/boot
     mkdir /mnt/boot/efi
     mount /dev/nvme0n1p1 /mnt/boot/efi
     mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@home /dev/mapper/mirage /mnt/home
     mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@var /dev/mapper/mirage /mnt/var
     mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@store /dev/mapper/mirage /mnt/store
     mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@snapshots /dev/mapper/mirage /mnt/.snapshots
-    swapon /dev/nvme0n1p3
+    swapon /dev/nvme0n1p2
 
 Choose compression depending on the machine:
 
