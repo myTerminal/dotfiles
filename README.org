@@ -3,6 +3,24 @@
 
 My replicable personal computing setup
 
+** Background
+
+What started as [[https://github.com/myTerminal/dotfiles/tree/b384107562817ef181111c8c27bccaaa47614975][a home for my Emacs config]], collided with a spreadsheet containing a collection of software packages, [[https://github.com/myTerminal/dotfiles/tree/6bec073e40d7a1065b8c871f2158afb5b2a3debc][quickly began to shift its shape]], soon turning into a comprehensive *dotfiles* project to host configuration for much more than just Emacs. The majority of it [[https://github.com/myTerminal/dotfiles/tree/v1.0.0][still mostly comprised of Emacs configuration]], so to make things simpler, I decided to extract it into [[https://github.com/myTerminal/.emacs.d][an independent project of its own]]. At one point, I even extracted the setup scripts into their separate projects [[https://github.com/myTerminal/forge-legacy][here]] and then later [[https://github.com/myTerminal/forge][here]]. Maintaining it was still tricky with its [[https://github.com/myTerminal/dotfiles/tree/v2.0.0][complex arrangement of configuration files for four operating platforms]] at once at one point in time! What you see now is an attempt to keep only what is relevant to my primary setup across all my active workstation. This helps make updates less painful and effortless.
+
+I still keep scripts around macOS around as it gave me a fresh perspective during my four years exclusively using an Apple computer. It also serves as a reference for work computers that barely align with my preferred setup. Finally, it also allows me to continuously compare my custom setup with a fully functional operating system like macOS and fill in the gaps iteratively.
+
+There still is some inseparable residue related to other platforms. This might either eventually disappear, or otherwise bring in more complexity in the future, leading to another project branching out of this one.
+
+** Design Principles
+
+This setup also follows the following principles:
+
+1. *Lean*: It should contain only the software that I need, with minimal to no tolerance for bloat. There’s only one software for one thing, with exceptions, of course, and I run regular optimizations to make sure that is still the case. These changes could be either replacing a tool with a better alternative, or one from within the operating system itself, or dropping it altogether.
+2. *Reproducible*: I should be able to reproduce the same setup on as many machines as I need to, at any point in time, as many times as I need or want, with minimal to no manual configuration. This means not only the fetching of software is scripted, but also configuration and often execution.
+3. *Composable*: The elements of the setup should be interchangeable with other alternatives when a better-suited one is identified. Usually, following the UNIX philosophy (which is to have a tool for one job only) helps, with exceptions like Emacs.
+4. *Portable*: The setup should be portable such that (a) it should self-contain all other assets like code libraries, multimedia files, etc., with minimal to no external dependency, and (b) it should not contain elements bound to a particular Linux distribution, potentially preventing it from working elsewhere.
+5. *Well-Documented*: The entire setup should contain sufficient documentation for my future self, because my older self has always had trouble aligning with my younger self from the past.
+
 ** Init
 
 Simply run the below command on the new computer to be adopted:
@@ -143,33 +161,15 @@ To start the setup, run the following command in a terminal running bash: (provi
 
 =*= - in-built, =**= - through web-client, =^= - through XWayland
 
-** Background
+** Open Gaps in Wayland
 
-What started as [[https://github.com/myTerminal/dotfiles/tree/b384107562817ef181111c8c27bccaaa47614975][a home for my Emacs config]], collided with a spreadsheet containing a collection of software packages, [[https://github.com/myTerminal/dotfiles/tree/6bec073e40d7a1065b8c871f2158afb5b2a3debc][quickly began to shift its shape]], soon turning into a comprehensive *dotfiles* project to host configuration for much more than just Emacs. The majority of it [[https://github.com/myTerminal/dotfiles/tree/v1.0.0][still mostly comprised of Emacs configuration]], so to make things simpler, I decided to extract it into [[https://github.com/myTerminal/.emacs.d][an independent project of its own]]. At one point, I even extracted the setup scripts into their separate projects [[https://github.com/myTerminal/forge-legacy][here]] and then later [[https://github.com/myTerminal/forge][here]]. Maintaining it was still tricky with its [[https://github.com/myTerminal/dotfiles/tree/v2.0.0][complex arrangement of configuration files for four operating platforms]] at once at one point in time! What you see now is an attempt to keep only what is relevant to my primary setup across all my active workstation. This helps make updates less painful and effortless.
-
-I still keep scripts around macOS around as it gave me a fresh perspective during my four years exclusively using an Apple computer. It also serves as a reference for work computers that barely align with my preferred setup. Finally, it also allows me to continuously compare my custom setup with a fully functional operating system like macOS and fill in the gaps iteratively.
-
-There still is some inseparable residue related to other platforms. This might either eventually disappear, or otherwise bring in more complexity in the future, leading to another project branching out of this one.
-
-** Design Principles
-
-This setup also follows the following principles:
-
-1. *Lean*: It should contain only the software that I need, with minimal to no tolerance for bloat. There’s only one software for one thing, with exceptions, of course, and I run regular optimizations to make sure that is still the case. These changes could be either replacing a tool with a better alternative, or one from within the operating system itself, or dropping it altogether.
-2. *Reproducible*: I should be able to reproduce the same setup on as many machines as I need to, at any point in time, as many times as I need or want, with minimal to no manual configuration. This means not only the fetching of software is scripted, but also configuration and often execution.
-3. *Composable*: The elements of the setup should be interchangeable with other alternatives when a better-suited one is identified. Usually, following the UNIX philosophy (which is to have a tool for one job only) helps, with exceptions like Emacs.
-4. *Portable*: The setup should be portable such that (a) it should self-contain all other assets like code libraries, multimedia files, etc., with minimal to no external dependency, and (b) it should not contain elements bound to a particular Linux distribution, potentially preventing it from working elsewhere.
-5. *Well-Documented*: The entire setup should contain sufficient documentation for my future self, because my older self has always had trouble aligning with my younger self from the past.
-
-** Open Gaps
-
-- Missing alternative for [[https://github.com/phw/peek][peek]] in Wayland
-- [[https://launchpad.net/onboard][onboard]] doesn't work in Wayland
-- No screen recording tools in Wayland
-- Broken sharing in Wayland
-- No way to set Numlock for Wayland
-- Wallpaper doesn't randomize after Wayland load
-- Need to set shell colors in Wayland?
+- Missing alternative for [[https://github.com/phw/peek][peek]]
+- [[https://launchpad.net/onboard][onboard]] doesn't work
+- No screen recording tools
+- Broken sharing
+- No way to set Numlock
+- Wallpaper doesn't randomize after first load
+- Need to set shell colors?
 
 # Local Variables:
 # eval: (visual-line-mode)
