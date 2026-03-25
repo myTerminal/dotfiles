@@ -6,7 +6,8 @@ git init
 git remote add origin https://github.com/myTerminal/dotfiles.git
 git fetch --all
 rm .bash*
-git checkout master
+git checkout -f master
+git checkout .
 
 # Fetch/update twiner
 if [ -d ~/.twiner ]; then
@@ -17,6 +18,10 @@ fi
 
 # Start twiner in debug mode
 ~/.twiner/start debug
+
+# Pause
+echo "Press ANY key to start forge..."
+read -r
 
 # Fetch/update forge
 if [ -d ~/.forge ]; then
