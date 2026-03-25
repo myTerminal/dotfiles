@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# TODO: Add Telegram, Logseq, BetterBird, and KeepassXC
+
+# Install apps
+sudo dnf install -y emacs
+sudo dnf config-manager addrepo --from-repofile=https://repo.librewolf.net/librewolf.repo
+sudo dnf install -y librewolf
+
+# Create directories
+mkdir -p ~/_store
+mkdir -p ~/_workspace
+mkdir -p ~/.config/emacs
+mkdir -p ~/.librewolf
+mkdir -p ~/.cache/librewolf
