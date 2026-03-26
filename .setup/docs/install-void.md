@@ -158,6 +158,13 @@ Configure `iwd` as the backend for `NetworkManager` in `/etc/NetworkManager/Netw
     [device]
     wifi.backend=iwd
 
+Configure `iwlwifi` parameters in `/etc/modprobe.d/iwlwifi.conf`
+
+    options iwlwifi uapsd_disable=3
+    options iwlwifi power_save=0
+    options iwlwifi swcrypto=1
+    options iwlmvm power_scheme=1
+
 ## Creating users and groups
 
 ### Setting root password
