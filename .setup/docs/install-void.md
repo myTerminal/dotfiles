@@ -151,7 +151,12 @@ Place below content in the file `/etc/hosts`
 
 ### Installing network-related packages
 
-    xbps-install -Sy NetworkManager
+    xbps-install -Sy NetworkManager iwd
+
+Configure `iwd` as the backend for `NetworkManager` in `/etc/NetworkManager/NetworkManager.conf`
+
+    [device]
+    wifi.backend=iwd
 
 ## Creating users and groups
 
@@ -288,7 +293,7 @@ Reboot
 
 ### Enabling network-related services
 
-    ln -s /etc/sv/{dhcpcd,NetworkManager} /var/service/
+    ln -s /etc/sv/{dhcpcd,NetworkManager,iwd} /var/service/
 
 ### Enabling services for seat
 

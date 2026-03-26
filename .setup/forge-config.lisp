@@ -30,6 +30,7 @@
   ("udisks2" (:cask "mounty"))
   "smartmontools"
   ("network-manager" (:xbps "NetworkManager") (:mac))
+  ("iwd" (:mac))
   ("bind-utils" (:mac))
   "tailscale"
   "weechat"
