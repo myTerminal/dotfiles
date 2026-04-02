@@ -346,9 +346,14 @@
          "ln -s ~/_workspace/github ~/_github"))
   )
  (
+  "Install unsynced local binaries"
+  t
+  (:all ("~/_store/Vault/binaries/install-unsynced-local-binaries"))
+  )
+ (
   "Re-generate symlinks for binaries"
   t
-  (:all ("~/_store/Vault/binaries/_regenerate-binary-symlinks"))
+  (:all ("~/_store/Vault/binaries/regenerate-binary-symlinks"))
   )
  (
   "Set up Ollama"
