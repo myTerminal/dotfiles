@@ -92,7 +92,7 @@
   ("syncthing" (:xbps "syncthing-gtk"))
   ("meld" (:cask "meld"))
   ("logseq" (:flatpak ("com.logseq.Logseq" "logseq")) (:cask "loqseq"))
-  ("librewolf" (:void) (:cask "librewolf"))
+  ("waterfox" (:void) (:cask "waterfox"))
   ("chromium" (:cask "chromium"))
   ("mullvad-browser" (:void) (:mac))
   ("tor-browser" (:void) (:mac))

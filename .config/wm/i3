@@ -51,8 +51,7 @@ assign [class="Clementine"] $ws4
 assign [class="Logseq"] $ws5
 assign [class="TelegramDesktop"] $ws7
 assign [class="eu.betterbird.Betterbird"] $ws8
-assign [class="Chromium"] $ws9
-assign [class="librewolf"] $ws9
+assign [class="waterfox"] $ws9
 #assign [class="Mullvad Browser"] $ws9
 assign [class="KeePassXC"] $ws0
 

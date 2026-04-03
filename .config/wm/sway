@@ -51,8 +51,7 @@ assign [app_id="org.clementine_player.Clementine"] $ws4
 assign [class="Logseq"] $ws5
 assign [app_id="org.telegram.desktop"] $ws7
 assign [app_id="eu.betterbird.Betterbird"] $ws8
-assign [class="Chromium"] $ws9
-assign [app_id="librewolf"] $ws9
+assign [app_id="waterfox"] $ws9
 #assign [class="Mullvad Browser"] $ws9
 assign [app_id="org.keepassxc.KeePassXC"] $ws0
 

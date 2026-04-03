@@ -20,14 +20,10 @@ safe_bind() {
 safe_bind /mnt/vault/@store/ismail ~/_store
 safe_bind /mnt/vault/@home/ismail/_workspace ~/_workspace
 safe_bind /mnt/vault/@home/ismail/.config/emacs ~/.config/emacs
-safe_bind /mnt/vault/@home/ismail/.librewolf ~/.librewolf
-safe_bind /mnt/vault/@home/ismail/.cache/librewolf ~/.cache/librewolf
 
 # Start bridge apps
 emacs &
 EMACS_PID=$!
-librewolf &
-LW_PID=$!
 
 # Pause
 echo "------------------------------------------------"
@@ -38,15 +34,13 @@ read -r  # Waits for any keypress
 
 # Start cleanup
 echo "Cleaning up..."
-kill $EMACS_PID $LW_PID 2>/dev/null
+kill $EMACS_PID 2>/dev/null
 sleep 2
 
 # Unmount binds first (Reverse order is safest)
 sudo umount ~/_store
 sudo umount ~/_workspace
 sudo umount ~/.config/emacs
-sudo umount ~/.librewolf
-sudo umount ~/.cache/librewolf
 
 # Unmount the main vault
 sudo umount /mnt/vault

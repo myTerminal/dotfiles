@@ -17,8 +17,7 @@ case "${1}" in
     *)
         exec Telegram & disown
         exec emacs & disown
-        exec chromium & disown
-        exec libre-wolf & disown
+        exec water-fox & disown
         exec logseq & disown
         exec better-bird & disown
         exec keepassxc & disown
