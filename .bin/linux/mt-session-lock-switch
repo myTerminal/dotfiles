@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
 if [[ $# -lt 1 ]]; then
-    echo "Usage: mt-session-lock <enable/disable>"
+    echo "Usage: mt-session-lock-switch <enable/disable>"
     exit 1
 fi
 
 case "${1}" in
     enable | activate)
         # Start xss-lock
-        xss-lock --transfer-sleep-lock -- mt-session-lock-desktop --nofork &
+        xss-lock --transfer-sleep-lock -- mt-session-lock-now --nofork &
         ;;
 
     disable | deactivate)

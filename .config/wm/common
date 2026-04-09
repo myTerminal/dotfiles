@@ -183,9 +183,9 @@ bindsym $mod+Control+Right workspace next
 bindsym $mod+Control+Left workspace prev
 
 # Bind custom switch scripts
-bindsym $mod+Shift+w exec ~/.bin/linux/mt-set-random-wallpaper
-bindsym $mod+Shift+x exec ~/.bin/linux/mt-power-mode
-bindsym $mod+Shift+z exec ~/.bin/linux/mt-hardware
+bindsym $mod+Shift+w exec ~/.bin/linux/mt-wallpaper-set-random
+bindsym $mod+Shift+x exec ~/.bin/linux/mt-session-menu
+bindsym $mod+Shift+z exec ~/.bin/linux/mt-hardware-menu
 
 # Bind session lock
-bindsym Control+Shift+l exec mt-session-lock-desktop
+bindsym Control+Shift+l exec mt-session-lock-now

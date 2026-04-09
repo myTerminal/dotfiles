@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-~/.bin/linux/mt-set-random-wallpaper
+~/.bin/linux/mt-wallpaper-set-random
 
 if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
     gsettings set org.gnome.desktop.interface gtk-theme 'Obsidian-2-Gray'

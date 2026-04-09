@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-# Start pulseeffects
-pulseeffects --gapplication-service &

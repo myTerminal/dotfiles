@@ -4,7 +4,7 @@
 sudo xbps-install -Sy $@
 
 # Set battery charge/discharge thresholds
-~/.bin/linux/mt-battery-set-charge-thresholds
+~/.bin/linux/mt-battery-charge-thresholds-set
 
 # Start tlp service
 sudo ln -s /etc/sv/tlp /var/service
