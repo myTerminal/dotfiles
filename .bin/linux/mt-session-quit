@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 
 if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+    notify-send "Closing all applications..." --urgency=low
+    swaymsg [class=".*"] kill
+    swaymsg [app_id=".*"] kill
+    sleep 2
     sway exit
 else
+    notify-send "Closing all applications..." --urgency=low
+    i3-msg "[class=.*] kill"
+    sleep 2
     i3-msg exit
 fi
