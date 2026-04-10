@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+
+# Detect display and set prompter
+. ~/.assets/libs/bash/select-prompter
+
+# Detect init system
+. ~/.assets/libs/bash/detect-init-system
+
+# Check for supplied argument
+if [ "${1}" ]; then
+    # Use the supplied argument
+    mt_mode="${1}"
+else
+    # Prompt for a choice
+    mt_mode=$(echo -e "suspend\nhibernate\nshutdown\nrestart" | ${mt_prompter})
+fi
+
+# Function to power off or reboot after a brief wait
+wait-and-proceed-with-power-off-or-reboot () {
+    echo "Preparing to $mt_mode... Press [ENTER] to $mt_mode immediately."
+
+    # Wait for 5 seconds, but allow to skip by hitting Enter
+    read -t 5 -n 1 -s user_input
+
+    case "${mt_mode}" in
+        "shutdown" | "poweroff")
+            $SESSION_CONTROLLER poweroff
+            ;;
+
+        "restart" | "reboot")
+            $SESSION_CONTROLLER reboot
+            ;;
+    esac
+}
+
+# Determine appropriate session controller
+case "${mt_init_system}" in
+    SystemD)
+        SESSION_CONTROLLER=systemctl
+        ;;
+
+    Runit)
+        SESSION_CONTROLLER=loginctl
+        ;;
+esac
+
+# Execute the appropriate command
+case "${mt_mode}" in
+    "sleep" | "suspend")
+        $SESSION_CONTROLLER suspend
+        ;;
+
+    "hibernate")
+        $SESSION_CONTROLLER hibernate
+        ;;
+
+    "shutdown" | "poweroff" | "restart" | "reboot")
+        wait-and-proceed-with-power-off-or-reboot
+        ;;
+
+    *)
+        echo "Not implemented!"
+        ;;
+esac
