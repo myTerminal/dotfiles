@@ -4,13 +4,26 @@ SEARCH_DIR="$HOME/_store/"
 
 CONFLICTS=$(fd .sync-conflict "$SEARCH_DIR")
 
+show-message() {
+    if [[ -n "$DISPLAY" ]]; then
+        notify-send "$1" --urgency=low
+    else
+        echo "$1"
+    fi
+}
+
+show-error() {
+    if [[ -n "$DISPLAY" ]]; then
+        notify-send "$1" --urgency=critical
+    else
+        echo "$1"
+    fi
+}
+
 if [ -n "$CONFLICTS" ]; then
     COUNT=$(echo "$CONFLICTS" | wc -l)
 
-    echo "Sync Conflict Detected!"
-    echo "$COUNT conflict(s) found in $SEARCH_DIR"
-    notify-send "Sync Conflict Detected!" "$COUNT conflict(s) found in $SEARCH_DIR" --urgency=critical
+    show-error "$COUNT conflict(s) found in $SEARCH_DIR"
 else
-    echo "No Sync Conflict Found!"
-    notify-send "No Sync Conflict Found!" --urgency=low
+    show-message "No Sync Conflict Found!"
 fi
