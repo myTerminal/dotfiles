@@ -9,3 +9,11 @@ case "${1}" in
         XDG_SESSION_TYPE=wayland dbus-run-session sway -c ~/.config/wm/sway
         ;;
 esac
+
+echo -e "\n\nPower-off the machine? (Y/n)"
+read -n 1 -s user_input
+case "$user_input" in
+    [yY])
+        mt-power-mode shutdown
+        ;;
+esac
