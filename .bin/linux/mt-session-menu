@@ -15,96 +15,51 @@ else
     mt_mode=$(echo -e "lock\nindoor\noutdoor\nquit\nsuspend\nhibernate\nshutdown\nrestart" | ${mt_prompter})
 fi
 
-# Function to switch power using systemd
-switch-power-mode-with-systemd () {
-    case "${mt_mode}" in
-        "lock")
-            mt-session-lock-now
-            ;;
-
-        "indoor")
-            mt-session-lock-switch disable
-            ;;
-
-        "outdoor")
-            mt-session-lock-switch enable
-            ;;
-
-        "quit")
-            mt-session-quit
-            ;;
-
-        "sleep" | "suspend")
-            systemctl suspend
-            ;;
-
-        "hibernate")
-            systemctl hibernate
-            ;;
-
-        "shutdown" | "poweroff")
-            systemctl poweroff
-            ;;
-
-        "restart" | "reboot")
-            systemctl reboot
-            ;;
-
-        *)
-            echo "Not implemented!"
-            ;;
-    esac
-}
-
-# Function to switch power using runit
-switch-power-mode-with-runit () {
-    case "${mt_mode}" in
-        "lock")
-            mt-session-lock-now
-            ;;
-
-        "indoor")
-            mt-session-lock-switch disable
-            ;;
-
-        "outdoor")
-            mt-session-lock-switch enable
-            ;;
-
-        "quit")
-            mt-session-quit
-            ;;
-
-        "sleep" | "suspend")
-            loginctl suspend
-            ;;
-
-        "hibernate")
-            loginctl hibernate
-            ;;
-
-        "shutdown" | "poweroff")
-            loginctl poweroff
-            ;;
-
-        "restart" | "reboot")
-            loginctl reboot
-            ;;
-
-        *)
-            echo "Not implemented!"
-            ;;
-    esac
-}
-
-# Use the appropriate implementation based on the active init system
+# Determine appropriate session controller
 case "${mt_init_system}" in
     SystemD)
-        switch-power-mode-with-systemd
+        SESSION_CONTROLLER=systemctl
         ;;
 
     Runit)
-        switch-power-mode-with-runit
+        SESSION_CONTROLLER=loginctl
+        ;;
+esac
+
+# Execute the appropriate command
+case "${mt_mode}" in
+    "lock")
+        mt-session-lock-now
+        ;;
+
+    "indoor")
+        mt-session-lock-switch disable
+        ;;
+
+    "outdoor")
+        mt-session-lock-switch enable
+        ;;
+
+    "quit")
+        mt-session-quit
+        ;;
+
+    "sleep" | "suspend")
+        $SESSION_CONTROLLER suspend
+        ;;
+
+    "hibernate")
+        $SESSION_CONTROLLER hibernate
+        ;;
+
+    "shutdown" | "poweroff")
+        notify-send "Power-off has been disabled from within a graphical session." --urgency=low
+        # $SESSION_CONTROLLER poweroff
+        ;;
+
+    "restart" | "reboot")
+        notify-send "Reboot has been disabled from within a graphical session." --urgency=low
+        # $SESSION_CONTROLLER reboot
         ;;
 
     *)
