@@ -12,7 +12,7 @@ if [ "${1}" ]; then
     mt_mode="${1}"
 else
     # Prompt for a choice
-    mt_mode=$(echo -e "lock\nindoor\noutdoor\nquit\nsuspend\nhibernate\nshutdown\nrestart\nawake\nsleepy" | ${mt_prompter})
+    mt_mode=$(echo -e "lock\nindoor\noutdoor\nquit\nsuspend\nhibernate\nshutdown\nrestart" | ${mt_prompter})
 fi
 
 # Function to switch power using systemd
@@ -48,14 +48,6 @@ switch-power-mode-with-systemd () {
 
         "restart" | "reboot")
             systemctl reboot
-            ;;
-
-        "awake")
-            systemctl mask sleep.target suspend.target
-            ;;
-
-        "sleepy")
-            systemctl unmask sleep.target suspend.target
             ;;
 
         *)
@@ -97,14 +89,6 @@ switch-power-mode-with-runit () {
 
         "restart" | "reboot")
             loginctl reboot
-            ;;
-
-        "awake")
-            echo "Not implemented!"
-            ;;
-
-        "sleepy")
-            echo "Not implemented!"
             ;;
 
         *)
