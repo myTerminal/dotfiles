@@ -36,6 +36,7 @@
       - uBlock Origin
       - KeePassXC-Browser
       - Raindrop.io
+      - Firefox Multi-Account Containers
       - Temporary Containers Plus
       - Emoji
     - Set up pinned tabs, logins, etc.
