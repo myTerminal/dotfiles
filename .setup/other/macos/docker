@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-brew install docker docker-machine
+brew install docker docker-machine docker-compose
 docker-machine create --driver virtualbox default
 eval ${docker-machine env default}
