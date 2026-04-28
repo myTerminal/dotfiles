@@ -10,10 +10,16 @@ case "${1}" in
         ;;
 esac
 
-echo -e "\n\nPower-off the machine? (Y/n)"
+echo -e "\n\nPower-off or Reboot the machine?"
+echo -e "s: Power-off"
+echo -e "r: Reboot"
 read -n 1 -s user_input
 case "$user_input" in
-    [yY])
+    [sS])
         mt-power-mode shutdown
+        ;;
+
+    [rR])
+        mt-power-mode reboot
         ;;
 esac
