@@ -2,7 +2,7 @@
 
 SEARCH_DIR="$HOME/_store/"
 
-CONFLICTS=$(fd .sync-conflict "$SEARCH_DIR")
+CONFLICTS=$(fd -H .sync-conflict "$SEARCH_DIR")
 
 show-message() {
     if [[ -n "$DISPLAY" ]]; then
