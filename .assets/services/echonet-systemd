@@ -6,7 +6,7 @@ StartLimitIntervalSec=0
 User=ismail
 Restart=always
 RestartSec=1
-ExecStart=/home/ismail/_store/Vault/media/echonet
+ExecStart=/home/ismail/_store/Vault/scripts/echonet
 
 [Install]
 WantedBy=default.target
