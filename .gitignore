@@ -30,6 +30,11 @@
 /.config/gtk-3.0/*
 !/.config/gtk-3.0/bookmarks
 !/.config/gtk-3.0/settings.ini
+!/docker
+/docker/*
+!/docker/homeassistant
+/docker/homeassistant/*
+!/docker/homeassistant/compose.yaml
 !/.waterfox
 /.waterfox/*
 !/.waterfox/native-messaging-hosts
