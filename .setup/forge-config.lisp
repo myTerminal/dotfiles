@@ -358,7 +358,8 @@
  (
   "Set up Ollama"
   t
-  (:void ("cp -R ~/.assets/services/ollama-runit ~/.services/ollama"
+  (:void ("curl -fsSL https://ollama.com/install.sh | sh"
+          "cp -R ~/.assets/services/ollama-runit ~/.services/ollama"
           "~/_store/Vault/binaries/synced/ollama pull llama3"))
   )
  (
