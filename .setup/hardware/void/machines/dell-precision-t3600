@@ -4,4 +4,4 @@
 . ~/.setup/hardware/configure-default-sound-volume 70%
 
 # Install Nvidia drivers
-. ~/.setup/hardware/void/nvidia-latest
+. ~/.setup/hardware/void/nvidia-legacy-580
