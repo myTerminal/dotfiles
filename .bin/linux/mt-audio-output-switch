@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+# Detect display and set prompter
+. ~/.assets/libs/bash/select-prompter
+
+show-message() {
+    if [[ -n "$DISPLAY" ]]; then
+        notify-send "$1" --urgency=low
+    else
+        echo "$1"
+    fi
+}
+
+# Prompt for an audio output device
+selected_sink=$(wpctl status | awk '
+    /Sinks:/ {flag=1; next}
+    /Sources:/ || /Filters:/ || /Streams:/ {flag=0}
+    flag && /[0-9]+\./ {
+        # Strip tree borders and the active item asterisk
+        gsub(/[│├─└*]/, "", $0);
+        # Remove leading spaces
+        sub(/^[ \t]+/, "", $0);
+        print $0;
+    }
+' | $mt_prompter)
+
+# Extract the device id and name
+sink_id=$(echo "$selected_sink" | grep -oE '[0-9]+' | head -n1)
+sink_name=$(echo "$selected_sink" | awk -F'([0-9]+\\.\\s*|\\s*\\[vol:)' '{print $2}')
+
+# Perform the switch, if possible
+if [[ -n "$sink_id" ]]; then
+    wpctl set-default "$sink_id"
+    show-message "Default sink set to: $sink_name"
+else
+    show-message "Error: Could not find the specified device."
+    exit 1
+fi
