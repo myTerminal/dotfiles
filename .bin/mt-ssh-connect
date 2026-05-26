@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
-ssh $(mt-pick-machine)
+if [ -z "$1" ]; then
+    ssh $(mt-pick-machine)
+else
+    ssh "$1"
+fi
