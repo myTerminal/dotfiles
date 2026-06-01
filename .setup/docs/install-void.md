@@ -79,15 +79,15 @@ Unmount the partition
     
 ### Re-mounting subvolumes as partitions
 
-    mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@root /dev/mapper/mirage /mnt
+    mount -o noatime,compress-force=ztsd:3,space_cache=v2,subvol=@root /dev/mapper/mirage /mnt
     mkdir -p /mnt/{boot,home,var,store,.snapshots}
     mount /dev/nvme0n1p3 /mnt/boot
     mkdir /mnt/boot/efi
     mount /dev/nvme0n1p1 /mnt/boot/efi
-    mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@home /dev/mapper/mirage /mnt/home
-    mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@var /dev/mapper/mirage /mnt/var
-    mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@store /dev/mapper/mirage /mnt/store
-    mount -o noatime,nodiratime,compress=lzo,space_cache=v2,subvol=@snapshots /dev/mapper/mirage /mnt/.snapshots
+    mount -o noatime,compress-force=ztsd:3,space_cache=v2,subvol=@home /dev/mapper/mirage /mnt/home
+    mount -o noatime,compress-force=ztsd:3,space_cache=v2,subvol=@var /dev/mapper/mirage /mnt/var
+    mount -o noatime,compress-force=ztsd:3,space_cache=v2,subvol=@store /dev/mapper/mirage /mnt/store
+    mount -o noatime,compress-force=ztsd:3,space_cache=v2,subvol=@snapshots /dev/mapper/mirage /mnt/.snapshots
     swapon /dev/nvme0n1p2
 
 Choose compression depending on the machine:
