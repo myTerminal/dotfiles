@@ -23,7 +23,7 @@ end
 alias cl="clear"
 alias gt="clear; git"
 alias mt-sync-github="mt-sync-projects $MT_PATH_WORKSPACE_GITHUB"
-alias lo="lsd -l --group-dirs first"
+alias lo="eza -l --group-directories-first --git"
 alias po="bat"
 
 # Load configs for the current OS

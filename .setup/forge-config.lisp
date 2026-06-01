@@ -9,7 +9,7 @@
   "tmux"
   ("fish" (:xbps "fish-shell"))
   "fd"
-  "lsd"
+  "eza"
   "bat"
   "ncdu"
   "ripgrep"
