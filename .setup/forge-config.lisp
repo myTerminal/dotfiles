@@ -3,6 +3,7 @@
  (
   ("cryptsetup" (:mac))
   "cryfs"
+  ("elogind" (:mac))
   ("polkit" (:mac))
   ("dbus" (:mac))
   ("efibootmgr" (:mac))

@@ -57,6 +57,7 @@ To start the setup, run the following command in a terminal running bash: (provi
 | Package managers      | [[https://docs.voidlinux.org/xbps/index.html][xbps]], [[https://flatpak.org][flatpak]]                                             | (native), [[https://brew.sh][Homebrew]], [[https://github.com/Homebrew/homebrew-cask][Cask]]                       |
 | Bootloader            | [[https://www.gnu.org/software/grub][grub]], [[https://joeyh.name/code/os-prober][os-prober]]                                           | (native)                                       |
 | Encryption            | [[https://gitlab.com/cryptsetup/cryptsetup][cryptsetup]], [[https://www.cryfs.org][cryfs]]                                         | --, [[https://www.cryfs.org][cryfs]]                                      |
+| Session manager       | [[https://github.com/elogind/elogind][elogind]]                                                   | --                                             |
 | Process authorization | [[https://gitlab.freedesktop.org/polkit/polkit][polkit]]                                                    | (native)                                       |
 | Message bus system    | [[https://wiki.freedesktop.org/www/Software/dbus][dbus]]                                                      | --                                             |
 | UEFI management       | [[https://github.com/rhboot/efibootmgr][efibootmgr]]                                                | --                                             |
