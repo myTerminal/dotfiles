@@ -11,11 +11,11 @@ case "${1}" in
 esac
 
 echo -e "\n\nPower-off or Reboot the machine?"
-echo -e "s: Power-off"
-echo -e "r: Reboot"
+echo -e "Power-off (s|p|o)"
+echo -e "Reboot (r)"
 read -n 1 -s user_input
 case "$user_input" in
-    [sS])
+    [sSpPoO])
         mt-power-mode shutdown
         ;;
 
