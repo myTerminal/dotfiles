@@ -396,8 +396,7 @@ MOZ_USE_XINPUT2 DEFAULT=1
  (
   "Set up echonet service"
   t
-  (:void ("ls /sys/class/net | fzf --prompt=\"Select an interface: \" > ~/.mt-network-interface"
-          "cp -R ~/.assets/services/echonet-runit ~/.services/echonet"))
+  (:void ("cp -R ~/.assets/services/echonet-runit ~/.services/echonet"))
   )
  (
   "Tag machine with ~/.mt-tag"
