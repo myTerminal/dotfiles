@@ -19,6 +19,7 @@ case "${1}" in
         exec emacs & disown
         exec water-fox & disown
         exec logseq & disown
+        exec obsidian & disown
         exec better-bird & disown
         exec keepassxc & disown
         ;;

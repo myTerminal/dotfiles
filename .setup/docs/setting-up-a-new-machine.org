@@ -47,6 +47,7 @@
     - Configure Calendars
     - Configure Addressbooks
   - LogSeq
+  - Obsidian
   - Thunar (may not be needed anymore)
   - Darktable
   - Steam

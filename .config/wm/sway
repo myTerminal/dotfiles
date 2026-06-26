@@ -49,6 +49,7 @@ assign [app_id="blender"] $ws3
 assign [class="steam"] $ws4
 assign [app_id="org.clementine_player.Clementine"] $ws4
 assign [class="Logseq"] $ws5
+assign [app_id="obsidian"] $ws6
 assign [app_id="org.telegram.desktop"] $ws7
 assign [app_id="eu.betterbird.Betterbird"] $ws8
 assign [app_id="waterfox"] $ws9

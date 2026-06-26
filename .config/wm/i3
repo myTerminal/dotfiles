@@ -49,6 +49,7 @@ assign [class="Blender"] $ws3
 assign [class="Steam"] $ws4
 assign [class="Clementine"] $ws4
 assign [class="Logseq"] $ws5
+assign [class="obsidian"] $ws6
 assign [class="TelegramDesktop"] $ws7
 assign [class="eu.betterbird.Betterbird"] $ws8
 assign [class="waterfox"] $ws9
