@@ -189,3 +189,6 @@ bindsym $mod+Shift+z exec ~/.bin/linux/mt-hardware-menu
 
 # Bind session lock
 bindsym Control+Shift+l exec mt-session-lock-now
+
+# Force D-Bus to synchronize with active session
+exec --no-startup-id dbus-update-activation-environment --all
