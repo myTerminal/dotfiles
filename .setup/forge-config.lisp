@@ -33,6 +33,7 @@
   ("network-manager" (:xbps "NetworkManager") (:mac))
   ("iwd" (:mac))
   ("bind-utils" (:mac))
+  ("nfs-utils" (:mac))
   "tailscale"
   "weechat"
   ("nodejs" (:brew "node"))
@@ -368,6 +369,14 @@
   "Set up Fabric Framework"
   t
   (:void ("~/_store/Vault/binaries/synced/fabric --setup"))
+  )
+ (
+  "Share /store with NFS"
+  t
+  (:void ("echo /store  192.168.50.0/24(ro,sync,no_subtree_check) | sudo tee -a /etc/exports"
+          "sudo ln -s /etc/sv/rpcbind /var/service"
+          "sudo ln -s /etc/sv/nfs-server /var/service"
+          "sudo exportfs -ra"))
   )
  (
   "Perform a few package-dependent config"
