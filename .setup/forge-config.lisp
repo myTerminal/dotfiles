@@ -34,6 +34,7 @@
   ("iwd" (:mac))
   ("bind-utils" (:mac))
   ("nfs-utils" (:mac))
+  ("sv-netmount" (:mac))
   "tailscale"
   "weechat"
   ("nodejs" (:brew "node"))
@@ -265,6 +266,7 @@
           "sudo ln -s /etc/sv/sshd /var/service"
           "sudo ln -s /etc/sv/avahi-daemon /var/service"
           "sudo ln -s /etc/sv/cronie /var/service"
+          "sudo ln -s /etc/sv/netmount /var/service"
           "mkdir ~/.services"
           "cp -R ~/.assets/services/syncthing ~/.services/"
           "sudo cp -R ~/.assets/services/runsvdir-ismail /etc/sv/"
