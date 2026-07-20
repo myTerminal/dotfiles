@@ -375,7 +375,7 @@
  (
   "Share /store with NFS"
   t
-  (:void ("echo /store  192.168.50.0/24(ro,sync,no_subtree_check) | sudo tee -a /etc/exports"
+  (:void ("echo /store  192.168.50.0/24(ro,sync,no_subtree_check,no_root_squash) | sudo tee -a /etc/exports"
           "sudo ln -s /etc/sv/rpcbind /var/service"
           "sudo ln -s /etc/sv/nfs-server /var/service"
           "sudo exportfs -ra"))
