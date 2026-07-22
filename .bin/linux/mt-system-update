@@ -14,6 +14,7 @@ case "${mt_platform}" in
     Void)
         sudo xbps-install -Syu xbps
         sudo xbps-install -Syu
+        sudo vkpurge rm all
         ;;
 esac
 
