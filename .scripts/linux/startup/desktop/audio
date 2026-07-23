@@ -6,4 +6,4 @@ if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
 fi
 
 # Play startup sound
-mpv ~/.assets/sounds/car-revving-sound.mp3 &
+mpv ~/.assets/sounds/I-have-the-power.mp3 &
