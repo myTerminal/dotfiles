@@ -6,4 +6,5 @@ if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
 fi
 
 # Play startup sound
-mpv ~/.assets/sounds/I-have-the-power.mp3 &
+STARTUP_SOUNDS_DIR=~/_store/Vault-Mobile/media/startup-sounds
+fd . $STARTUP_SOUNDS_DIR -t f -0 | shuf -n1 -z | xargs -0 mpv &
