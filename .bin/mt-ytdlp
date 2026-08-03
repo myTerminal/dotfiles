@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+yt-dlp -f "bv*+ba/b" $1
