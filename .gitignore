@@ -30,6 +30,9 @@
 /.config/gtk-3.0/*
 !/.config/gtk-3.0/bookmarks
 !/.config/gtk-3.0/settings.ini
+!/.config/xdg-desktop-portal
+/.config/xdg-desktop-portal/*
+!/.config/xdg-desktop-portal/portals.conf
 !/.waterfox
 /.waterfox/*
 !/.waterfox/native-messaging-hosts
