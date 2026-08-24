@@ -1,14 +1,27 @@
 #+TITLE: Setting up a new machine
 #+AUTHOR: Mohammed Ismail Ansari
+#+OPTIONS: ^:{}
 
-- Re-partition the storage drive with a GPT partition table and the following high-level partitions:
+* Choice of Operating System
+
+  | Purpose                          | Operating System |
+  | Gaming with proprietary hardware | Windows          |
+  | Gaming with hybrid graphics      | Pop!_OS          |
+  | Secondary travel setup           | Nobara           |
+  | Primary setup                    | Void Linux       |
+
+* Storage Drive Partition Map
+
+Partition Table Type: GPT
 
   | Volume    | Size | Type  | BIOS (SATA) | UEFI (SATA) | UEFI (NVMe) |
   | BIOS BOOT | 1M   | --    | sda1        | --          | --          |
-  | EFI       | 512M | FAT32 |             | sda1        | nvme0n1p1   |
+  | EFI       | 1G   | FAT32 |             | sda1        | nvme0n1p1   |
   | SWAP      | ?    | SWAP  | sda2        | sda2        | nvme0n1p2   |
-  | Boot      | 1G   | EXT4  | sda3        | sda3        | nvme0n1p3   |
+  | Boot      | 2G   | EXT4  | sda3        | sda3        | nvme0n1p3   |
   | Root      | ?    | LUKS  | sda4        | sda4        | nvme0n1p4   |
+
+* Steps
 
 - /(Optional)/ Install Windows with absolute basic settings and minimal software, run updates a few tens of times
   - (Optional) Install and configure Waterfox
