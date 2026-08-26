@@ -1,4 +1,4 @@
-#+TITLE: Setting up a new machine
+#+TITLE: Setting Up a New Machine
 #+AUTHOR: Mohammed Ismail Ansari
 #+OPTIONS: ^:{}
 

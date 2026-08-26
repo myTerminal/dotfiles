@@ -1,4 +1,4 @@
-#+TITLE: Switching to a new platform
+#+TITLE: Switching To a New Platform
 #+AUTHOR: Mohammed Ismail Ansari
 
 - Create installation instructions as [[https://gist.github.com/myTerminal][a GitHub Gist]]

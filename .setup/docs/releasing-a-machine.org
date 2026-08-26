@@ -1,4 +1,4 @@
-#+TITLE: Releasing a machine
+#+TITLE: Releasing a Machine
 #+AUTHOR: Mohammed Ismail Ansari
 
 - Disable battery charge thresholds
