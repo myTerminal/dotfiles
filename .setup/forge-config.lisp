@@ -1,15 +1,15 @@
 (
- (:void :mac)
+ (:void :fedora :mac)
  (
   ("cryptsetup" (:mac))
   "cryfs"
-  ("elogind" (:mac))
-  ("polkit" (:mac))
-  ("dbus" (:mac))
+  ("elogind" (:fedora) (:mac))
+  ("polkit" (:fedora) (:mac))
+  ("dbus" (:fedora) (:mac))
   ("efibootmgr" (:mac))
   "tmux"
   ("fish" (:xbps "fish-shell"))
-  "fd"
+  ("fd" (:dnf "fd-find"))
   "eza"
   "bat"
   "ncdu"
@@ -18,7 +18,7 @@
   ("emacs" (:xbps "emacs-gtk3") (:cask "emacs"))
   ("vim" (:mac))
   "mpv"
-  ("aspell" (:xbps "aspell" "aspell-en") (:mac))
+  ("aspell" (:xbps "aspell" "aspell-en") (:dnf "aspell" "aspell-en") (:mac))
   "make"
   "git"
   "tig"
@@ -27,32 +27,32 @@
   "7zip"
   "unrar"
   "btop"
-  ("psmisc" (:mac))
-  ("udisks2" (:cask "mounty"))
+  ("psmisc" (:fedora) (:mac))
+  ("udisks2" (:fedora) (:cask "mounty"))
   "smartmontools"
-  ("network-manager" (:xbps "NetworkManager") (:mac))
-  ("iwd" (:mac))
-  ("bind-utils" (:mac))
+  ("network-manager" (:fedora) (:xbps "NetworkManager") (:mac))
+  ("iwd" (:fedora) (:mac))
+  ("bind-utils" (:fedora) (:mac))
   ("nfs-utils" (:mac))
-  ("sv-netmount" (:mac))
+  ("sv-netmount" (:fedora) (:mac))
   "tailscale"
   "weechat"
   ("nodejs" (:brew "node"))
   "sbcl"
-  ("brightnessctl" (:mac))
-  ("acpi" (:mac))
-  ("fprintd" (:mac))
-  ("chrony" (:mac))
+  ("brightnessctl" (:fedora) (:mac))
+  ("acpi" (:fedora) (:mac))
+  ("fprintd" (:fedora) (:mac))
+  ("chrony" (:fedora) (:mac))
   ("btrfs-progs" (:mac))
   ("ntfs-3g" (:mac))
   ("dosfstools" (:mac))
   ("mtools" (:mac))
-  ("exfat-utils" (:mac))
+  ("exfat-utils" (:dnf "exfat-progs") (:mac))
   ("android-tools" (:cask "android-platform-tools"))
   ("cronie" (:mac))
-  ("piper" (:mac) (:void))
-  ("ollama" (:cask "ollama") (:void))
-  ("fabric" (:mac) (:void))
+  ("piper" (:void) (:fedora) (:mac))
+  ("ollama" (:void) (:cask "ollama"))
+  ("fabric" (:void) (:fedora) (:mac))
   "rlwrap"
   ("sed" (:brew "gnu-sed"))
   "jq"
@@ -64,92 +64,97 @@
   "avahi"
   ("xdg-utils" (:mac))
   ("xdg-desktop-portal" (:xbps "xdg-desktop-portal" "xdg-desktop-portal-gnome") (:mac))
-  ("xorg" (:mac))
-  ("sct" (:mac))
-  ("gammastep" (:mac))
-  ("onboard" (:mac))
-  ("picom" (:mac))
-  ("i3" (:xbps "i3" "i3status" "i3lock") (:mac))
-  ("sway" (:mac))
-  ("Waybar" (:mac))
-  ("xrandr" (:mac))
-  ("wlr-randr" (:mac))
-  ("wdisplays" (:mac))
-  ("xss-lock" (:mac))
-  ("swaylock" (:mac))
-  ("feh" (:mac))
-  ("swaybg" (:mac))
-  ("rofi" (:mac))
-  ("fuzzel" (:mac))
-  ("rxvt-unicode" (:cask "alacritty"))
-  ("foot" (:mac))
-  ("xsel" (:mac))
-  ("wl-clipboard" (:mac))
-  ("dunst" (:mac))
-  ("mako" (:mac))
-  ("udiskie" (:mac))
+  ("xorg" (:fedora) (:mac))
+  ("sct" (:fedora) (:mac))
+  ("gammastep" (:fedora) (:mac))
+  ("onboard" (:fedora) (:mac))
+  ("picom" (:fedora) (:mac))
+  ("i3" (:xbps "i3" "i3status" "i3lock") (:fedora) (:mac))
+  ("sway" (:fedora) (:mac))
+  ("Waybar" (:fedora) (:mac))
+  ("xrandr" (:fedora) (:mac))
+  ("wlr-randr" (:fedora) (:mac))
+  ("wdisplays" (:fedora) (:mac))
+  ("xss-lock" (:fedora) (:mac))
+  ("swaylock" (:fedora) (:mac))
+  ("feh" (:fedora) (:mac))
+  ("swaybg" (:fedora) (:mac))
+  ("rofi" (:fedora) (:mac))
+  ("fuzzel" (:fedora) (:mac))
+  ("rxvt-unicode" (:fedora) (:cask "alacritty"))
+  ("foot" (:fedora) (:mac))
+  ("xsel" (:fedora) (:mac))
+  ("wl-clipboard" (:fedora) (:mac))
+  ("dunst" (:fedora) (:mac))
+  ("mako" (:fedora) (:mac))
+  ("udiskie" (:fedora) (:mac))
   ("gparted" (:mac))
   "gsmartcontrol"
-  ("thunar" (:xbps "Thunar") (:mac))
-  ("gvfs" (:mac))
+  ("thunar" (:xbps "Thunar") (:fedora) (:mac))
+  ("gvfs" (:fedora) (:mac))
   ("syncthing" (:xbps "syncthing-gtk"))
   ("meld" (:cask "meld"))
   ("logseq" (:flatpak ("com.logseq.Logseq" "logseq")) (:cask "loqseq"))
-  ("obsidian" (:void) (:cask "obsidian"))
-  ("waterfox" (:void) (:cask "waterfox"))
+  ("obsidian" (:void) (:fedora) (:cask "obsidian"))
+  ("waterfox" (:void) (:fedora) (:cask "waterfox"))
   ("chromium" (:cask "chromium"))
-  ("mullvad-browser" (:void) (:mac))
-  ("tor-browser" (:void) (:mac))
+  ("mullvad-browser" (:void) (:fedora) (:mac))
+  ("tor-browser" (:void) (:fedora) (:mac))
   ("keepassxc" (:cask "keepasxc"))
   ("betterbird" (:flatpak ("eu.betterbird.Betterbird" "logseq")) (:mac))
   ("calibre" (:cask "calibre"))
-  ("telegram" (:xbps "telegram-desktop") (:cask "telegram-desktop"))
-  ("pcloud" (:void) (:mac))
+  ("telegram" (:xbps "telegram-desktop") (:fedora) (:cask "telegram-desktop"))
+  ("pcloud" (:void) (:fedora) (:mac))
   ("transmission" (:xbps "transmission-gtk") (:cask "transmission"))
   ("postman" (:flatpak ("com.getpostman.Postman" "postman")) (:cask "postman"))
   ("virt-manager" (:xbps "qemu" "virt-manager"))
   ("libreoffice" (:cask "libreoffice"))
-  ("blueman" (:mac))
+  ("blueman" (:fedora) (:mac))
   ("krita" (:cask "krita"))
-  ("shotwell" (:cask "xnviewmp"))
+  ("shotwell" (:fedora) (:cask "xnviewmp"))
   ("gimp" (:cask "gimp"))
   ("darktable" (:cask "darktable"))
   ("clementine" (:cask "clementine"))
-  ("pavucontrol" (:mac))
-  ("gstreamer" (:xbps "gstreamer1") (:mac))
-  ("pipewire" (:xbps "pipewire" "alsa-pipewire" "libspa-bluetooth") (:mac))
-  ("easyeffects" (:mac))
+  ("pavucontrol" (:fedora) (:mac))
+  ("gstreamer" (:xbps "gstreamer1") (:fedora) (:mac))
+  ("pipewire" (:xbps "pipewire" "alsa-pipewire" "libspa-bluetooth") (:fedora) (:mac))
+  ("easyeffects" (:fedora) (:mac))
   ("audacity" (:mac))
   ("vlc" (:cask "vlc"))
   ("handbrake" (:cask "handbrake"))
   ("blender" (:cask "blender"))
-  ("yt-dlp" (:void) (:mac))
+  ("yt-dlp" (:void) (:fedora) (:mac))
   ("kodi" (:cask "kodi"))
-  ("flameshot" (:mac))
-  ("grim" (:mac))
-  ("slurp" (:mac))
-  ("swappy" (:mac))
-  ("obs" (:flatpak ("com.obsproject.Studio" "obs")) (:cask "obs"))
-  ("obs-plugin-waveform" (:flatpak ("com.obsproject.Studio.Plugin.waveform" "obs-plugin-waveform")) (:mac))
-  ("peek" (:cask "licecap"))
-  ("keymon" (:void) (:cask "keycastr"))
-  ("balena-etcher" (:void) (:cask "balenaetcher"))
+  ("flameshot" (:fedora) (:mac))
+  ("grim" (:fedora) (:mac))
+  ("slurp" (:fedora) (:mac))
+  ("swappy" (:fedora) (:mac))
+  ("obs" (:fedora) (:flatpak ("com.obsproject.Studio" "obs")) (:cask "obs"))
+  ("obs-plugin-waveform" (:fedora) (:flatpak ("com.obsproject.Studio.Plugin.waveform" "obs-plugin-waveform")) (:mac))
+  ("peek" (:fedora) (:cask "licecap"))
+  ("keymon" (:void) (:fedora) (:cask "keycastr"))
+  ("balena-etcher" (:void) (:fedora) (:cask "balenaetcher"))
   ("steam" (:cask "steam"))
   ("lutris" (:mac))
-  ("origin" (:void) (:cask "origin"))
-  ("sony-remote-play" (:void) (:cask "sony-ps4-remote-play"))
-  ("numlockx" (:mac))
+  ("origin" (:void) (:fedora) (:cask "origin"))
+  ("sony-remote-play" (:void) (:fedora) (:cask "sony-ps4-remote-play"))
+  ("numlockx" (:fedora) (:mac))
   ("qFlipper" (:flatpak ("one.flipperzero.qFlipper" "qFlipper")) (:cask "qflipper"))
-  ("font-open-sans" (:void) (:cask "font-open-sans"))
-  ("font-inconsolata" (:void) (:cask "font-inconsolata"))
-  ("font-roboto-mono" (:void) (:cask "font-roboto-mono"))
-  ("font-fira-code" (:void) (:cask "font-fira-code"))
-  ("font-liberation" (:void) (:cask "font-liberation"))
+  ("font-open-sans" (:void) (:fedora) (:cask "font-open-sans"))
+  ("font-inconsolata" (:void) (:fedora) (:cask "font-inconsolata"))
+  ("font-roboto-mono" (:void) (:fedora) (:cask "font-roboto-mono"))
+  ("font-fira-code" (:void) (:fedora) (:cask "font-fira-code"))
+  ("font-liberation" (:void) (:fedora) (:cask "font-liberation"))
   )
  (
   "Install flatpak packages the conventional way"
   nil
   (:void ("~/.bin/linux/mt-flatpak install logseq com.logseq.Logseq"
+          "~/.bin/linux/mt-flatpak install better-bird eu.betterbird.Betterbird"
+          "~/.bin/linux/mt-flatpak install postman com.getpostman.Postman"
+          "~/.bin/linux/mt-flatpak install obs-studio com.obsproject.Studio"
+          "~/.bin/linux/mt-flatpak install qFlipper one.flipperzero.qFlipper"))
+  (:fedora ("~/.bin/linux/mt-flatpak install logseq com.logseq.Logseq"
           "~/.bin/linux/mt-flatpak install better-bird eu.betterbird.Betterbird"
           "~/.bin/linux/mt-flatpak install postman com.getpostman.Postman"
           "~/.bin/linux/mt-flatpak install obs-studio com.obsproject.Studio"
@@ -165,6 +170,7 @@
   "Change user shell"
   t
   (:void ("sudo usermod -s /bin/fish ismail"))
+  (:fedora ("sudo usermod -s /bin/fish ismail"))
   (:mac ("echo \"/opt/homebrew/bin/fish\" | sudo tee -a /etc/shells"
          "chsh -s /opt/homebrew/bin/fish"))
   )
@@ -271,6 +277,8 @@
           "cp -R ~/.assets/services/syncthing ~/.services/"
           "sudo cp -R ~/.assets/services/runsvdir-ismail /etc/sv/"
           "sudo ln -s /etc/sv/runsvdir-ismail /var/service"))
+  (:fedora ("sudo systemctl enable tailscaled --now"
+            "sudo systemctl enable sshd --now"))
   (:mac ("brew services start syncthing"
          "brew services start avahi-daemon"
          "brew services start ollama"))
@@ -284,6 +292,7 @@
   "Perform visual tweaks (non-working)"
   t
   (:void ("wget -O - https://github.com/shvchk/fallout-grub-theme/raw/master/install.sh | bash"))
+  (:fedora ("wget -O - https://github.com/shvchk/fallout-grub-theme/raw/master/install.sh | bash"))
   )
  (
   "Install power-guard (need to press RET)"
@@ -371,6 +380,7 @@
   "Set up Fabric Framework"
   t
   (:void ("~/_store/Vault/binaries/synced/fabric --setup"))
+  (:fedora ("~/_store/Vault/binaries/synced/fabric --setup"))
   )
  (
   "Share /store with NFS"
@@ -396,6 +406,10 @@
 MOZ_USE_XINPUT2 DEFAULT=1
 \" | sudo tee -a /etc/security/pam_env.conf"
           "echo Setting permissions for Betterbird..."
+          "flatpak override --user eu.betterbird.Betterbird --filesystem=home"
+          "echo Setting user permissions for virt-manager..."
+          "sudo usermod -aG libvirt ismail"))
+  (:fedora ("echo Setting permissions for Betterbird..."
           "flatpak override --user eu.betterbird.Betterbird --filesystem=home"
           "echo Setting user permissions for virt-manager..."
           "sudo usermod -aG libvirt ismail"))
