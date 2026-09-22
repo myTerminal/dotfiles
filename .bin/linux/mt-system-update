@@ -11,6 +11,10 @@ case "${mt_platform}" in
         sudo apt update -y && sudo apt upgrade -y
         ;;
 
+    Fedora | Nobara)
+        sudo dnf update
+        ;;
+
     Void)
         sudo xbps-install -Syu xbps
         sudo xbps-install -Syu
