@@ -6,12 +6,14 @@ if [[ -f /bedrock/etc/bedrock-release ]]; then
     mt_platform="Bedrock"
 elif [ $(command -v xbps-query) ]; then
     mt_platform="Void"
-elif [ $(command -v pacman) ]; then
-    mt_platform="Arch"
+elif [[ $(cat /etc/os-release | grep '^ID=' | cut -d '=' -f 2 | cut -d '"' -f 2) == "nobara" ]]; then
+    mt_platform="Nobara"
 elif [ $(command -v dnf) ]; then
     mt_platform="Fedora"
 elif [[ $(cat /etc/os-release | grep '^ID=' | cut -d '=' -f 2 | cut -d '"' -f 2) == "pop" ]]; then
     mt_platform="Pop"
 elif [ $(command -v apt) ]; then
     mt_platform="Debian"
+elif [ $(command -v pacman) ]; then
+    mt_platform="Arch"
 fi
