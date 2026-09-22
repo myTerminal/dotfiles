@@ -261,6 +261,7 @@
   (:void ("mkdir ~/_store"
           "sudo mount --rbind /store/ismail ~/_store"
           "echo \"/store/ismail /home/ismail/_store none bind 0 0\" | sudo tee -a /etc/fstab"))
+  (:fedora ("mkdir ~/_store"))
   )
  (
   "Set up startup services"
@@ -278,7 +279,8 @@
           "sudo cp -R ~/.assets/services/runsvdir-ismail /etc/sv/"
           "sudo ln -s /etc/sv/runsvdir-ismail /var/service"))
   (:fedora ("sudo systemctl enable tailscaled --now"
-            "sudo systemctl enable sshd --now"))
+            "sudo systemctl enable sshd --now"
+            "sudo systemctl enable syncthing --user --now"))
   (:mac ("brew services start syncthing"
          "brew services start avahi-daemon"
          "brew services start ollama"))
