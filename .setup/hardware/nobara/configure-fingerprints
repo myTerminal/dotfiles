@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Enable service
+sudo systemctl enable --now fprintd
+
+# Enable fingerprint in system-auth
+sudo authselect enable-feature with-fingerprint
+
+# Enroll finger
+fprintd-enroll
