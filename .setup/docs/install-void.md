@@ -44,7 +44,7 @@ Format a partition as boot
 
 Prepare the main encrypted partition
 
-    cryptsetup -y -v luksFormat --type luks1 /dev/nvme0n1p4
+    cryptsetup -y -v /dev/nvme0n1p4
 
 Respond with a "YES" and enter a passphrase twice.
 
