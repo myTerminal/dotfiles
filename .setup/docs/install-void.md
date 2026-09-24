@@ -44,7 +44,7 @@ Format a partition as boot
 
 Prepare the main encrypted partition
 
-    cryptsetup -y -v /dev/nvme0n1p4
+    cryptsetup -y -v luksFormat /dev/nvme0n1p4
 
 Respond with a "YES" and enter a passphrase twice.
 
@@ -305,3 +305,4 @@ Reboot
 ### Enabling services for seat
 
     ln -srf /etc/sv/{dbus,polkitd,elogind} /var/service
+'
