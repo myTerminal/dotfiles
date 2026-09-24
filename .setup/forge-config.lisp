@@ -63,7 +63,7 @@
   ("openssh" (:mac))
   "avahi"
   ("xdg-utils" (:mac))
-  ("xdg-desktop-portal" (:xbps "xdg-desktop-portal" "xdg-desktop-portal-gnome") (:mac))
+  ("xdg-desktop-portal" (:xbps "xdg-desktop-portal" "xdg-desktop-portal-gnome") (:fedora) (:mac))
   ("xorg" (:fedora) (:mac))
   ("sct" (:fedora) (:mac))
   ("gammastep" (:fedora) (:mac))
