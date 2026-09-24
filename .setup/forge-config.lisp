@@ -278,9 +278,9 @@
           "cp -R ~/.assets/services/syncthing ~/.services/"
           "sudo cp -R ~/.assets/services/runsvdir-ismail /etc/sv/"
           "sudo ln -s /etc/sv/runsvdir-ismail /var/service"))
-  (:fedora ("sudo systemctl enable tailscaled --now"
-            "sudo systemctl enable sshd --now"
-            "sudo systemctl enable syncthing --user --now"))
+  (:fedora ("systemctl enable tailscaled --now"
+            "systemctl enable sshd --now"
+            "systemctl enable syncthing --user --now"))
   (:mac ("brew services start syncthing"
          "brew services start avahi-daemon"
          "brew services start ollama"))
