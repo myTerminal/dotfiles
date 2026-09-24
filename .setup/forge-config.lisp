@@ -178,7 +178,6 @@
   t
   (:void ("mkdir -p ~/.local/share/themes"
           "git clone https://github.com/madmaxms/theme-obsidian-2.git ~/_temp"
-          "git -C ~/_temp checkout gray"
           "mv ~/_temp/Obsidian-2-Gray ~/.local/share/themes/"
           "rm -rf ~/_temp"))
   )
