@@ -154,6 +154,11 @@
           "~/.bin/linux/mt-flatpak install postman com.getpostman.Postman"
           "~/.bin/linux/mt-flatpak install obs-studio com.obsproject.Studio"
           "~/.bin/linux/mt-flatpak install qFlipper one.flipperzero.qFlipper"))
+  (:opensuse ("~/.bin/linux/mt-flatpak install logseq com.logseq.Logseq"
+              "~/.bin/linux/mt-flatpak install better-bird eu.betterbird.Betterbird"
+              "~/.bin/linux/mt-flatpak install postman com.getpostman.Postman"
+              "~/.bin/linux/mt-flatpak install obs-studio com.obsproject.Studio"
+              "~/.bin/linux/mt-flatpak install qFlipper one.flipperzero.qFlipper"))
   )
  (
   "Enable hidden items in Finder"
@@ -165,6 +170,7 @@
   "Change user shell"
   t
   (:void ("sudo usermod -s /bin/fish ismail"))
+  (:opensuse ("sudo usermod -s /usr/bin/fish ismail"))
   (:mac ("echo \"/opt/homebrew/bin/fish\" | sudo tee -a /etc/shells"
          "chsh -s /opt/homebrew/bin/fish"))
   )
@@ -254,6 +260,7 @@
   (:void ("mkdir ~/_store"
           "sudo mount --rbind /store/ismail ~/_store"
           "echo \"/store/ismail /home/ismail/_store none bind 0 0\" | sudo tee -a /etc/fstab"))
+  (:opensuse ("mkdir ~/_store"))
   )
  (
   "Set up startup services"
@@ -270,6 +277,9 @@
           "cp -R ~/.assets/services/syncthing ~/.services/"
           "sudo cp -R ~/.assets/services/runsvdir-ismail /etc/sv/"
           "sudo ln -s /etc/sv/runsvdir-ismail /var/service"))
+  (:opensuse ("systemctl enable tailscaled --now"
+              "systemctl enable sshd --now"
+              "systemctl enable syncthing --user --now"))
   (:mac ("brew services start syncthing"
          "brew services start avahi-daemon"
          "brew services start ollama"))
@@ -283,6 +293,7 @@
   "Perform visual tweaks (non-working)"
   t
   (:void ("wget -O - https://github.com/shvchk/fallout-grub-theme/raw/master/install.sh | bash"))
+  (:opensuse ("wget -O - https://github.com/shvchk/fallout-grub-theme/raw/master/install.sh | bash"))
   )
  (
   "Install power-guard (need to press RET)"
@@ -370,6 +381,7 @@
   "Set up Fabric Framework"
   t
   (:void ("~/_store/Vault/binaries/synced/fabric --setup"))
+  (:opensuse ("~/_store/Vault/binaries/synced/fabric --setup"))
   )
  (
   "Share /store with NFS"
@@ -398,6 +410,10 @@ MOZ_USE_XINPUT2 DEFAULT=1
           "flatpak override --user eu.betterbird.Betterbird --filesystem=home"
           "echo Setting user permissions for virt-manager..."
           "sudo usermod -aG libvirt ismail"))
+  (:opensuse ("echo Setting permissions for Betterbird..."
+              "flatpak override --user eu.betterbird.Betterbird --filesystem=home"
+              "echo Setting user permissions for virt-manager..."
+              "sudo usermod -aG libvirt ismail"))
   )
  (
   "Set Mullvad as the default web browser"
