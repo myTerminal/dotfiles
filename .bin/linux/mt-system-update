@@ -3,18 +3,26 @@
 # Run update through the primary package manager
 . ~/.assets/libs/bash/detect-platform
 case "${mt_platform}" in
+    Void)
+        sudo xbps-install -Syu xbps
+        sudo xbps-install -Syu
+        sudo vkpurge rm all
+        ;;
+
+    openSUSE)
+        sudo zypper refresh && sudo zypper --non-interactive dup
+        ;;
+
+    Fedora | Nobara)
+        sudo dnf update
+        ;;
+
     Arch)
         sudo pacman -Syu
         ;;
 
     Debian | Pop)
         sudo apt update -y && sudo apt upgrade -y
-        ;;
-
-    Void)
-        sudo xbps-install -Syu xbps
-        sudo xbps-install -Syu
-        sudo vkpurge rm all
         ;;
 esac
 
