@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Enable and start the fprintd service
+sudo systemctl enable --now fprintd
+
+# Enable fingerprint authentication via pam-config
+sudo pam-config --add --fprintd
+
+# Register fingerprints for the current user
+fprintd-enroll
