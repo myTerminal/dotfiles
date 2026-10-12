@@ -3,9 +3,9 @@
  (
   ("cryptsetup" (:mac))
   "cryfs"
-  ("elogind" (:mac))
+  ("elogind" (:opensuse) (:mac))
   ("polkit" (:mac))
-  ("dbus" (:mac))
+  ("dbus" (:opensuse) (:mac))
   ("efibootmgr" (:mac))
   "tmux"
   ("fish" (:xbps "fish-shell"))
@@ -140,11 +140,11 @@
   ("sony-remote-play" (:void) (:opensuse) (:cask "sony-ps4-remote-play"))
   ("numlockx" (:opensuse) (:mac))
   ("qFlipper" (:flatpak ("one.flipperzero.qFlipper" "qFlipper")) (:cask "qflipper"))
-  ("font-open-sans" (:void) (:cask "font-open-sans"))
-  ("font-inconsolata" (:void) (:cask "font-inconsolata"))
-  ("font-roboto-mono" (:void) (:cask "font-roboto-mono"))
-  ("font-fira-code" (:void) (:cask "font-fira-code"))
-  ("font-liberation" (:void) (:cask "font-liberation"))
+  ("font-open-sans" (:void) (:opensuse) (:cask "font-open-sans"))
+  ("font-inconsolata" (:void) (:opensuse) (:cask "font-inconsolata"))
+  ("font-roboto-mono" (:void) (:opensuse) (:cask "font-roboto-mono"))
+  ("font-fira-code" (:void) (:opensuse) (:cask "font-fira-code"))
+  ("font-liberation" (:void) (:opensuse) (:cask "font-liberation"))
   )
  (
   "Install flatpak packages the conventional way"
