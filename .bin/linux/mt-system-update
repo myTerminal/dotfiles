@@ -10,7 +10,7 @@ case "${mt_platform}" in
         ;;
 
     openSUSE)
-        sudo zypper refresh && sudo zypper dup -y
+        sudo zypper refresh && sudo zypper --non-interactive dup
         ;;
 
     Fedora | Nobara)
