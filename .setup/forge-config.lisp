@@ -121,7 +121,7 @@
   ("easyeffects" (:opensuse) (:mac))
   ("audacity" (:mac))
   ("vlc" (:cask "vlc"))
-  ("handbrake" (:zipper "handbrake-gtk") (:cask "handbrake"))
+  ("handbrake" (:zypper "handbrake-gtk") (:cask "handbrake"))
   ("blender" (:cask "blender"))
   ("yt-dlp" (:void) (:opensuse) (:mac))
   ("kodi" (:cask "kodi"))
