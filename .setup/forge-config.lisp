@@ -47,7 +47,7 @@
   ("ntfs-3g" (:mac))
   ("dosfstools" (:mac))
   ("mtools" (:mac))
-  ("exfat-utils" (:mac))
+  ("exfat-utils" (:opensuse) (:mac))
   ("android-tools" (:cask "android-platform-tools"))
   ("cronie" (:mac))
   ("piper" (:void) (:opensuse) (:mac))
