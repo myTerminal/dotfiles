@@ -47,4 +47,4 @@ ctl.!default {
 # TODO: Fix display flickering on integrated mode
 
 # Configure fingerprint sensor
-. ~/.setup/hardware/configure-fingerprints
+. ~/.setup/hardware/void/configure-fingerprints

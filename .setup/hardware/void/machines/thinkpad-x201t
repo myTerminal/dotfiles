@@ -40,4 +40,4 @@ ln -s /etc/sv/inputattach /var/service/
 . ~/.setup/hardware/void/configure-power-management tlp acpi_call-dkms tp_smapi-dkms powertop
 
 # Configure fingerprint sensor
-. ~/.setup/hardware/configure-fingerprints
+. ~/.setup/hardware/void/configure-fingerprints

@@ -25,4 +25,4 @@ sudo xbps-install -Sy sof-firmware
 . ~/.setup/hardware/void/configure-power-management tlp acpi_call-dkms powertop
 
 # Configure fingerprint sensor
-. ~/.setup/hardware/configure-fingerprints
+. ~/.setup/hardware/void/configure-fingerprints

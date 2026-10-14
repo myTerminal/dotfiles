@@ -27,4 +27,4 @@ sudo ln -s /etv/sv/iio-sensor-proxy /var/service
 
 # Configure fingerprint sensor
 # TODO: Fix this
-. ~/.setup/hardware/configure-fingerprints
+. ~/.setup/hardware/void/configure-fingerprints

@@ -25,4 +25,4 @@
 
 # Configure fingerprint sensor
 # TODO: Fix
-. ~/.setup/hardware/configure-fingerprints
+. ~/.setup/hardware/void/configure-fingerprints
