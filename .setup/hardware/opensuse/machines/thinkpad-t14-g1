@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Fix microphone issues
+sudo zypper install alsa-ucm-conf
+sudo ln -s /usr/share/alsa/ucm2/conf.d/sof-hda-dsp /usr/share/alsa/ucm2/conf.d/sofhdadsp
+systemctl --user stop wireplumber
+rm -rf ~/.local/state/wireplumber/
+systemctl --user start wireplumber
+
+# Configure fingerprint sensor
+. ~/.setup/hardware/opensuse/configure-fingerprints
