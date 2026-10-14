@@ -51,7 +51,7 @@ To start the setup, run the following command in a terminal running bash: (provi
 
 *** Core packages
 
-| Use-Case              | Void                                                               | openSUSE                                                       | macOS                                          |
+| Use-Case              | Void                                                               | openSUSE Tumbleweed (GNOME)                                    | macOS                                          |
 |-----------------------+--------------------------------------------------------------------+----------------------------------------------------------------+------------------------------------------------|
 | Base                  | [[https://voidlinux.org][Void]]                                                               | [[https://www.opensuse.org][openSUSE]]                                                       | [[https://en.wikipedia.org/wiki/MacOS][macOS]]                                          |
 | Package managers      | [[https://docs.voidlinux.org/xbps/index.html][xbps]], [[https://flatpak.org][flatpak]]                                                      | [[https://doc.opensuse.org/documentation/tumbleweed/zypper][zypper]], [[https://flatpak.org][flatpak]]*                                               | (native), [[https://brew.sh][Homebrew]], [[https://github.com/Homebrew/homebrew-cask][Cask]]                       |
@@ -89,7 +89,7 @@ To start the setup, run the following command in a terminal running bash: (provi
 
 *** Graphical packages
 
-| Use-Case                 | Void (Xorg)                                      | Void (Wayland)                                   | openSUSE (Wayland)                               | macOS                                            |
+| Use-Case                 | Void (Xorg)                                      | Void (Wayland)                                   | openSUSE Tumbleweed (GNOME Wayland)              | macOS                                            |
 |--------------------------+--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+--------------------------------------------------|
 | Desktop utils            | [[https://www.freedesktop.org/wiki/Software/xdg-utils][xdg-utils]], [[https://github.com/flatpak/xdg-desktop-portal][xdg-desktop-portal]]                    | [[https://www.freedesktop.org/wiki/Software/xdg-utils][xdg-utils]], [[https://github.com/flatpak/xdg-desktop-portal][xdg-desktop-portal]]                    | [[https://www.freedesktop.org/wiki/Software/xdg-utils][xdg-utils]]*, [[https://github.com/flatpak/xdg-desktop-portal][xdg-desktop-portal]]*                  | --                                               |
 | Display server           | [[https://www.x.org][Xorg]]                                             | --                                               | --                                               | (native)                                         |
