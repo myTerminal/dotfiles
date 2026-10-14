@@ -4,11 +4,12 @@
 
 * Choice of Operating System
 
-  | Purpose                          | Operating System |
-  | Gaming with proprietary hardware | Windows          |
-  | Gaming with hybrid graphics      | Pop!_OS          |
-  | Secondary travel setup           | Nobara           |
-  | Primary setup                    | Void Linux       |
+  | Purpose                          | Operating System    |
+  | Gaming with proprietary hardware | Windows             |
+  | Gaming with hybrid graphics      | Pop!_OS             |
+  | Ternary setup                    | BunsenLabs          |
+  | Secondary (travel) setup         | openSUSE Tumbleweed |
+  | Primary setup                    | Void Linux          |
 
 * Storage Drive Partition Map
 
@@ -61,7 +62,7 @@ Partition Table Type: GPT
     - Configure Addressbooks
   - LogSeq
   - Obsidian
-  - Thunar (may not be needed anymore)
+  - Thunar (or other relevant file browser)
   - Darktable
   - Steam
   - pCloud
