@@ -6,11 +6,12 @@
 
   | Purpose                          | Operating System    |
   |----------------------------------+---------------------|
-  | Gaming with proprietary hardware | Windows             |
-  | Gaming with hybrid graphics      | Pop!_OS             |
-  | Ternary setup                    | BunsenLabs          |
+  | Primary (main) setup             | Void Linux          |
   | Secondary (travel) setup         | openSUSE Tumbleweed |
-  | Primary setup                    | Void Linux          |
+  | Ternary (lightweight) setup      | BunsenLabs          |
+  | Gaming with hybrid graphics      | Pop!_OS             |
+  | Gaming with proprietary hardware | Windows             |
+  | Single-Board Computers           | DietPi              |
 
 * Storage Drive Partition Map
 
@@ -24,7 +25,7 @@ Partition Table Type: GPT
   | Boot      | 2G                  | EXT4  | sda3        | sda3        | nvme0n1p3   |
   | Root      | (machine-dependent) | LUKS  | sda4        | sda4        | nvme0n1p4   |
 
-* Steps
+* Setup Steps for a Daily Driver
 
 - /(Optional)/ Install Windows with absolute basic settings and minimal software, run updates a few tens of times
   - (Optional) Install and configure Waterfox
