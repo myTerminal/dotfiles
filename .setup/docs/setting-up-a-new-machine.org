@@ -5,6 +5,7 @@
 * Choice of Operating System
 
   | Purpose                          | Operating System    |
+  |----------------------------------+---------------------|
   | Gaming with proprietary hardware | Windows             |
   | Gaming with hybrid graphics      | Pop!_OS             |
   | Ternary setup                    | BunsenLabs          |
@@ -15,12 +16,13 @@
 
 Partition Table Type: GPT
 
-  | Volume    | Size | Type  | BIOS (SATA) | UEFI (SATA) | UEFI (NVMe) |
-  | BIOS BOOT | 1M   | --    | sda1        | --          | --          |
-  | EFI       | 1G   | FAT32 |             | sda1        | nvme0n1p1   |
-  | SWAP      | ?    | SWAP  | sda2        | sda2        | nvme0n1p2   |
-  | Boot      | 2G   | EXT4  | sda3        | sda3        | nvme0n1p3   |
-  | Root      | ?    | LUKS  | sda4        | sda4        | nvme0n1p4   |
+  | Volume    | Size                | Type  | BIOS (SATA) | UEFI (SATA) | UEFI (NVMe) |
+  |-----------+---------------------+-------+-------------+-------------+-------------|
+  | BIOS BOOT | 1M                  | --    | sda1        | --          | --          |
+  | EFI       | 1G                  | FAT32 |             | sda1        | nvme0n1p1   |
+  | SWAP      | (machine-dependent) | SWAP  | sda2        | sda2        | nvme0n1p2   |
+  | Boot      | 2G                  | EXT4  | sda3        | sda3        | nvme0n1p3   |
+  | Root      | (machine-dependent) | LUKS  | sda4        | sda4        | nvme0n1p4   |
 
 * Steps
 
