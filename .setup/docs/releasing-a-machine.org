@@ -13,6 +13,7 @@ efibootmgr -Bb <four-digit-numeric-identifier>
   - Linked device from Telegram
   - Syncthing as a node
   - GitHub and GitLab (SSH keys)
+  - Tailscale as a device
   - Home network as a known device
     - Static IP assignment
 - Remove maintenance tasks from TickTick
