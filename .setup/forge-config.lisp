@@ -101,7 +101,7 @@
   ("mullvad-browser" (:void) (:opensuse) (:mac))
   ("tor-browser" (:void) (:opensuse) (:mac))
   ("keepassxc" (:cask "keepasxc"))
-  ("betterbird" (:flatpak ("eu.betterbird.Betterbird" "logseq")) (:mac))
+  ("betterbird" (:flatpak ("eu.betterbird.Betterbird" "betterbird")) (:mac))
   ("calibre" (:cask "calibre"))
   ("telegram" (:xbps "telegram-desktop") (:zypper "telegram-desktop") (:cask "telegram-desktop"))
   ("pcloud" (:void) (:opensuse) (:mac))
