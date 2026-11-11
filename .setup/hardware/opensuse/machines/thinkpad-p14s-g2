@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Configure fingerprint sensor
+. ~/.setup/hardware/opensuse/configure-fingerprints
