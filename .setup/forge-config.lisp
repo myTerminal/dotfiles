@@ -387,6 +387,10 @@
   "Share /store with NFS"
   t
   (:void ("echo /store  192.168.50.0/24(ro,sync,no_subtree_check,no_root_squash) | sudo tee -a /etc/exports"
+          "echo /home/ismail/_store  192.168.50.0/24(ro,sync,no_subtree_check,no_root_squash) | sudo tee -a /etc/exports"
+          "echo /home/ismail/_store/Lab  192.168.50.0/24(rw,sync,no_subtree_check,no_root_squash) | sudo tee -a /etc/exports"
+          "echo /aux/library  192.168.50.0/24(ro,sync,no_subtree_check,no_root_squash) | sudo tee -a /etc/exports"
+          "echo /aux/storage  192.168.50.0/24(rw,sync,no_subtree_check,no_root_squash) | sudo tee -a /etc/exports"
           "sudo ln -s /etc/sv/rpcbind /var/service"
           "sudo ln -s /etc/sv/nfs-server /var/service"
           "sudo exportfs -ra"))
